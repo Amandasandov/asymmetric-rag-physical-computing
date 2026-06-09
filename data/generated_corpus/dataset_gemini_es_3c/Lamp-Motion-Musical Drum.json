@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión Sensible al Movimiento",
+    "originalIdeaDescription": "Un dispositivo que funciona como una maraca digital. Cuando el usuario agita el dispositivo, este emite un sonido de caja de batería y la lámpara parpadea en diferentes colores, creando un efecto visual y auditivo sincronizado con el movimiento físico.",
+    "transformedIdeaTitle": "La Maraca Digital del Futuro",
+    "transformedIdeaDescription": "¡Crea tu propio instrumento musical invisible! Los estudiantes programarán el dispositivo para que cada vez que lo agiten, suene un golpe de batería y brille una luz de color aleatorio. El desafío es ajustar la sensibilidad para que siga el ritmo perfecto.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN MusicalDrum.play('Snare') AND Lamp.setColor('Random')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad contra Intrusos",
+    "originalIdeaDescription": "Un sistema de seguridad portátil que se activa cuando detecta cualquier movimiento. Al detectar vibración o desplazamiento, la lámpara parpadea en rojo intensamente y la batería reproduce un ritmo rápido y fuerte simulando una sirena.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Secreto",
+    "transformedIdeaDescription": "Protege tus galletas o tus juguetes. Los estudiantes diseñarán una trampa que detecte si alguien mueve su caja fuerte secreta. Si el sensor de movimiento detecta actividad, se activará una 'alarma' de luces rojas y tambores frenéticos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isMoved() THEN LOOP(MusicalDrum.play('Bass', Fast) AND Lamp.blink('Red'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Efectos de Tormenta",
+    "originalIdeaDescription": "Un dispositivo narrativo que simula el clima. Movimientos suaves generan sonidos de lluvia ligera y luz azul tenue, mientras que sacudidas fuertes provocan un estruendo de bombo (trueno) y un destello blanco brillante.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Conviértete en el dios del clima. Programa el dispositivo para contar una historia: si lo mueves suavemente, llueve; si lo agitas con fuerza, ¡cae un rayo! Aprende a usar condiciones 'if/else' para diferenciar la intensidad del movimiento.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.intensity < 5 THEN Play('HiHat') & Lamp('Blue') ELSE Play('BassDrum') & Lamp('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Boxeo Interactivo",
+    "originalIdeaDescription": "Un wearable que se coloca en la muñeca o mano. Detecta cuando el usuario lanza un puñetazo hacia adelante (eje Z). Al detectar el golpe, reproduce un sonido de impacto y enciende la luz verde para confirmar el movimiento correcto.",
+    "transformedIdeaTitle": "Puños de Fuego: Entrenamiento Heroico",
+    "transformedIdeaDescription": "Entrena como un superhéroe. Programa tu guante para que reconozca cuando lanzas un golpe al aire. Cada golpe exitoso debe sonar poderoso y encender tu puño de luz. ¿Puedes programarlo para contar 10 golpes seguidos?",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.accelerationZ > Threshold THEN MusicalDrum.play('Crash') AND Lamp.flash('Green')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Podómetro con Retroalimentación Rítmica",
+    "originalIdeaDescription": "Un contador de pasos que ayuda a mantener el ritmo al caminar o correr. Cada vez que detecta el impacto de un paso, suena un bombo grave y la luz cambia de color, ayudando al usuario a mantener una cadencia constante.",
+    "transformedIdeaTitle": "Zapatillas Musicales Mágicas",
+    "transformedIdeaDescription": "Haz que caminar sea un baile. Programa el sensor para detectar cada paso que das. Con cada paso, debe sonar un ritmo base y la luz debe cambiar, creando una discoteca ambulante mientras caminas por el aula.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Motion.stepDetected() DO MusicalDrum.play('Bass') AND Lamp.nextColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio y Estabilidad",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo perfectamente plano. La luz está verde. Si se inclina o mueve demasiado (ejes X o Y), suena un platillo 'crash' y la luz se pone roja, indicando que ha perdido el equilibrio.",
+    "transformedIdeaTitle": "El Camarero Robot",
+    "transformedIdeaDescription": "¡No derrames la sopa digital! Mantén el dispositivo plano como una bandeja. Si te inclinas demasiado, el plato se romperá (sonido de crash) y la luz roja te avisará. El reto es caminar de un lado a otro sin activar la alarma.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tilt > 15 degrees THEN MusicalDrum.play('Crash') AND Lamp.setColor('Red') ELSE Lamp.setColor('Green')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos",
+    "originalIdeaDescription": "Al realizar un movimiento brusco específico (como un 'flick' de muñeca), el dispositivo activa un efecto de sonido místico usando percusión aguda y la lámpara realiza un efecto de respiración en color violeta.",
+    "transformedIdeaTitle": "Academia de Magia: Varita Codificada",
+    "transformedIdeaDescription": "Programa tu propia varita mágica. Define un movimiento especial para lanzar un hechizo. Cuando agites la varita correctamente, debe sonar un tintineo mágico y brillar con luz violeta. ¡Cuidado con no lanzar el hechizo por error!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.gesture('Flick') THEN MusicalDrum.play('Cymbal') AND Lamp.fadeEffect('Purple')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Luz de Baile Automática",
+    "originalIdeaDescription": "Un dispositivo para fiestas que detecta si la gente está bailando (movimiento constante). Mientras hay movimiento, reproduce un ritmo de batería y luces estroboscópicas. Si el movimiento cesa, la música y las luces se apagan.",
+    "transformedIdeaTitle": "Fiesta Congelada",
+    "transformedIdeaDescription": "¡Que no pare la fiesta! Pero si tú paras, la fiesta también. Programa el sistema para que lance luces y ritmos mientras te mueves. En el momento en que te quedes quieto como una estatua, todo debe apagarse. ¡Es como el juego de las estatuas al revés!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Motion.isActive() DO MusicalDrum.loop('Beat1') AND Lamp.strobe() ELSE StopAll()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Impactos para Experimentos",
+    "originalIdeaDescription": "Dispositivo para experimentos de física. Se lanza o deja caer sobre una superficie blanda. Al detectar el pico de desaceleración (impacto), enciende una luz roja y suena un golpe seco para marcar el momento exacto del choque.",
+    "transformedIdeaTitle": "Cran Dummies: Prueba de Choque",
+    "transformedIdeaDescription": "Vamos a probar la resistencia. Coloca el sensor en un vehículo de juguete o lánzalo (con cuidado) sobre un cojín. Programa el sensor para que registre el momento exacto del impacto con un sonido fuerte y una luz de alerta.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.impactForce > MaxValue THEN MusicalDrum.play('Snare') AND Lamp.setOn('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Latido Cardíaco por Esfuerzo",
+    "originalIdeaDescription": "Cuanto más rápido se agita el dispositivo, más rápido se reproduce un sonido de bombo (simulando un corazón) y la luz pulsa en rojo. Si el movimiento es lento, el ritmo cardíaco disminuye.",
+    "transformedIdeaTitle": "El Corazón Biónico",
+    "transformedIdeaDescription": "Crea un corazón artificial que reacciona al ejercicio. Si estás tranquilo, el corazón late lento y suave. Si corres o agitas el dispositivo, ¡el corazón se acelera! Aprende a mapear la velocidad del movimiento con la velocidad del sonido.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET RhythmSpeed = Map(Motion.speed, 0, 100, 60bpm, 180bpm); MusicalDrum.playLoop('Heartbeat', RhythmSpeed); Lamp.pulse('Red', RhythmSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea Direccional",
+    "originalIdeaDescription": "Divide el espacio en zonas. Mover a la izquierda reproduce un sonido (Hit-Hat) y luz amarilla. Mover a la derecha reproduce otro (Tom) y luz azul. Mover al centro reproduce la caja y luz blanca.",
+    "transformedIdeaTitle": "Baterista Invisible 3D",
+    "transformedIdeaDescription": "Convierte el aire en una batería. Programa zonas en el aire: izquierda para platillos, derecha para toms, centro para la caja. Los estudiantes deben usar lógica condicional para detectar la dirección del movimiento y asignar el sonido y color correcto.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.X < -5 THEN Play('HiHat', 'Yellow') ELSE IF Motion.X > 5 THEN Play('Tom', 'Blue') ELSE Play('Snare', 'White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Cargador de Energía Cinética Virtual",
+    "originalIdeaDescription": "Un juego donde el usuario debe agitar el dispositivo para 'cargar' una batería virtual. La luz va de tenue a brillante. Al llegar al máximo, suena un redoble de batería victorioso.",
+    "transformedIdeaTitle": "Recarga la Nave Espacial",
+    "transformedIdeaDescription": "¡La nave se ha quedado sin energía! Los estudiantes deben crear un programa que acumule energía al agitar el dispositivo. La luz debe hacerse más brillante poco a poco. Cuando la energía esté al 100%, ¡suena el despegue!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR energy = energy + Motion.shakeAmount; Lamp.brightness(energy); IF energy >= 100 THEN MusicalDrum.play('Roll')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Semáforo Gestual para Juegos",
+    "originalIdeaDescription": "Utiliza gestos para controlar el flujo de un juego. Movimiento vertical (sí) pone luz verde y sonido suave. Movimiento horizontal (no) pone luz roja y sonido de bloqueo.",
+    "transformedIdeaTitle": "El Policía de Tráfico Robot",
+    "transformedIdeaDescription": "Dirige el tráfico con gestos. Si mueves el dispositivo de arriba a abajo, das paso (Verde). Si lo mueves de lado a lado, detienes el tráfico (Rojo y sonido de alto). Un ejercicio perfecto para entender los ejes X e Y.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.axisY > threshold THEN Lamp('Green') & Play('Tap') ELSE IF Motion.axisX > threshold THEN Lamp('Red') & Play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Caminar como Robot",
+    "originalIdeaDescription": "Se fija a la pierna. Detecta el movimiento brusco de dar un paso rígido. Reproduce un sonido mecánico/industrial de batería y un parpadeo gris/blanco, simulando un robot pesado.",
+    "transformedIdeaTitle": "Traje de Robot Gigante",
+    "transformedIdeaDescription": "Diseña los efectos especiales para una película de robots. Programa el sensor para que cada vez que des un paso fuerte, suene un golpe metálico y la luz parpadee. ¡Aprende a sincronizar el mundo físico con el digital!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN MusicalDrum.play('ElectronicTom') AND Lamp.blink('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente Sensible",
+    "originalIdeaDescription": "Un temporizador oculto corre. Los jugadores se pasan el dispositivo. Si se detecta un lanzamiento (movimiento parabólico/flotante) hace un sonido de 'whoosh'. Al acabar el tiempo, vibra con luz roja y sonido de explosión.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Digital",
+    "transformedIdeaDescription": "El clásico juego de la patata caliente, pero programado por ti. Crea un temporizador aleatorio. Mientras se pasan el dispositivo, este hace ruidos divertidos. Cuando el tiempo se acaba... ¡BOOM! Luz roja y sonido de explosión para quien lo tenga en la mano.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE timer > 0 DO IF Motion.isThrown() Play('Whoosh'); END; MusicalDrum.play('Blast') AND Lamp.setOn('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batuta de Director de Orquesta",
+    "originalIdeaDescription": "El dispositivo actúa como una batuta. La velocidad del movimiento controla el 'tempo' de un redoble de batería continuo. Movimientos amplios aumentan el brillo de la lámpara.",
+    "transformedIdeaTitle": "El Maestro de la Percusión",
+    "transformedIdeaDescription": "Dirige tu propia sección de percusión. Mueve la 'batuta' suavemente para un ritmo lento y luz tenue. Muévela frenéticamente para un redoble rápido y luz brillante. Un desafío de variables y control continuo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET speed = Motion.velocity; MusicalDrum.setTempo(speed); Lamp.setBrightness(speed)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector Sísmico Casero",
+    "originalIdeaDescription": "Se coloca el dispositivo en una mesa. Si alguien golpea la mesa, el sensor detecta la micro-vibración, enciende una luz amarilla de advertencia y toca un golpe de aro (rimshot).",
+    "transformedIdeaTitle": "Detector de Terremotos",
+    "transformedIdeaDescription": "Construye un sismógrafo. Coloca el dispositivo sobre la mesa y prográmalo para ser ultra-sensible. Si alguien da un golpe en la mesa o camina fuerte cerca, debe activar la alerta sísmica con luz y sonido.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.vibration > SensitiveThreshold THEN Lamp.setColor('Yellow') AND MusicalDrum.play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Lazo de Vaquero",
+    "originalIdeaDescription": "Detecta el movimiento circular continuo (rotación en ejes X/Y). Mientras se mantiene el giro, reproduce sonido de galope (toms). Si se detiene o lanza, suena un 'crack' y destello.",
+    "transformedIdeaTitle": "Rodeo Digital",
+    "transformedIdeaDescription": "¡Yee-haw! Mueve el dispositivo en círculos sobre tu cabeza como si fuera un lazo. Mientras mantengas el movimiento circular, escucharás el galope del caballo. Si lanzas el lazo (movimiento hacia adelante), ¡atrapa al objetivo!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.isRotating() THEN Play('TomTom') ELSE IF Motion.isThrust() THEN Play('Snare') & Flash()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Sigilo Ninja",
+    "originalIdeaDescription": "El objetivo es mover el dispositivo de un punto A a un punto B sin activar el sensor. Si la aceleración supera un umbral mínimo, suena un gong de fallo y luz roja. Si llega en silencio, luz verde.",
+    "transformedIdeaTitle": "Desafío Ninja Silencioso",
+    "transformedIdeaDescription": "¿Puedes moverte sin ser detectado? Programa el sensor para que sea extremadamente sensible. Tu misión es levantar el dispositivo y moverlo lentamente. Si te mueves muy rápido, ¡te descubrirán con luces y sonidos!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration > 0.5 THEN Lamp('Red') & Play('Gong') ELSE Lamp('Green')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Celebración de Gol o Victoria",
+    "originalIdeaDescription": "Al detectar un movimiento de 'manos arriba' o salto (eje Y positivo rápido), el dispositivo entra en modo celebración: luces multicolor cambiando rápidamente y ritmo festivo de batería.",
+    "transformedIdeaTitle": "El Detector de Victorias",
+    "transformedIdeaDescription": "¡Goooool! Crea un dispositivo que sepa cuándo has ganado. Programa el sensor para detectar cuando saltas de alegría o levantas los brazos. Al hacerlo, debe lanzar un espectáculo de luces y sonido de estadio.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.upwardGesture() THEN Loop(MusicalDrum.play('Beat') AND Lamp.cycleColors())"
+  }]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Acústica Simple",
+    "originalIdeaDescription": "Un sistema de seguridad básico donde el usuario activa la vigilancia mediante el interruptor. Una vez activado, si el sensor de ruido detecta un sonido por encima de un umbral específico, la batería comienza a tocar un ritmo rápido y fuerte simulando una sirena.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "¡Protege tu tesoro de los piratas! Programa el sistema para que, al activar el 'Modo Guardia' (Interruptor), escuche atentamente. Si un pirata intenta acercarse haciendo ruido (Sensor de Ruido), el sistema debe tocar tambores de batalla (Batería) para alertar a la tripulación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > 50 THEN Drum.play(Snare_Roll)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Ritmo por Aplausos",
+    "originalIdeaDescription": "Un dispositivo interactivo donde el interruptor enciende el sistema. Cada vez que el sensor detecta un pico de ruido corto (como un aplauso), la batería toca un golpe de bombo, permitiendo al usuario crear ritmos con sus manos.",
+    "transformedIdeaTitle": "El Baterista Invisible",
+    "transformedIdeaDescription": "Conviértete en un mago de la música. Activa tu varita mágica (Interruptor) y programa tu batería invisible. Cada vez que des una palmada mágica al aire, tu asistente robótico tocará el bombo instantáneamente, siguiéndote el ritmo perfectamente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.peakDetected() THEN Drum.play(Kick)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo y Silencio",
+    "originalIdeaDescription": "Un juego donde la batería toca un ritmo constante mientras el interruptor está apagado. Al encender el interruptor, el juego comienza: el usuario debe moverse sin hacer ruido. Si el ruido supera un nivel, la batería toca un sonido de 'platillo' indicando error.",
+    "transformedIdeaTitle": "Entrenamiento de Ninjas",
+    "transformedIdeaDescription": "Los aprendices de ninja deben cruzar la habitación sin ser detectados. Activa el 'Sensor del Templo' (Interruptor). Si haces el más mínimo ruido al caminar, sonará el Gong de la Vergüenza (Platillo de Batería) y tendrás que volver a empezar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > 20 THEN Drum.play(Cymbal_Crash)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Intensidad de Gritos",
+    "originalIdeaDescription": "Una herramienta para medir el volumen de la voz. El interruptor cambia entre dos modos de batería (ej. caja o tom). Cuanto más fuerte es el ruido detectado, más rápido toca la batería, dando retroalimentación auditiva del volumen.",
+    "transformedIdeaTitle": "El Acelerador de Cohetes",
+    "transformedIdeaDescription": "Tu voz es el combustible. Usa el interruptor para encender los motores. Grita fuerte frente al sensor para que los tambores del motor (Batería) suenen más rápido y el cohete despegue. Si susurras, el motor apenas se moverá.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Drum.setTempo(Noise.level); Drum.playLoop(Tom)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Voz",
+    "originalIdeaDescription": "El usuario utiliza el interruptor para seleccionar entre diferentes patrones de batería predefinidos. La reproducción del patrón solo se activa y se mantiene mientras el usuario mantenga un nivel de ruido constante (como cantar una nota larga).",
+    "transformedIdeaTitle": "La Banda de Rock Automática",
+    "transformedIdeaDescription": "Eres el vocalista y la banda te sigue. Elige el estilo de música con el interruptor. La banda (Batería) solo tocará cuando tú cantes en el micrófono. Si dejas de cantar para respirar, la batería se detiene esperando tu voz.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.state == 1 THEN pattern = Rock ELSE pattern = Jazz; IF Noise.level > 30 THEN Drum.play(pattern)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Ronquidos Burlón",
+    "originalIdeaDescription": "Un dispositivo de broma que se activa con el interruptor antes de dormir. Si detecta un patrón de ruido rítmico y grave (ronquido), toca un redoble de tambores para despertar a la persona.",
+    "transformedIdeaTitle": "El Despertador de Osos",
+    "transformedIdeaDescription": "Hay un oso durmiendo en la cueva (tu habitación). Activa la trampa (Interruptor). Si el oso empieza a roncar (Ruido), la batería tocará un redoble militar para despertarlo antes de que hiberne todo el invierno.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.isRhythmic() THEN Drum.play(Snare_Roll)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Eco de Percusión",
+    "originalIdeaDescription": "El sistema escucha el entorno. Cuando detecta un sonido fuerte, espera un segundo y luego reproduce un golpe de batería, creando un efecto de eco artificial. El interruptor sirve para activar o desactivar este efecto.",
+    "transformedIdeaTitle": "La Cueva del Eco Tambor",
+    "transformedIdeaDescription": "Estás en una cueva mágica. Cuando gritas '¡Hola!', la cueva no repite tu voz, ¡sino que te responde con tambores! Usa el interruptor para entrar a la cueva y prueba a dar palmadas para escuchar cómo te responden los espíritus de la percusión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.peakDetected() THEN Wait(1s); Drum.play(Tom_High)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Fiesta",
+    "originalIdeaDescription": "El interruptor actúa como un control maestro. Cuando está encendido, el sensor de ruido modula el tipo de instrumento de percusión que suena (ruido bajo = hi-hat, ruido alto = bombo).",
+    "transformedIdeaTitle": "DJ Mezclador de Sonidos",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Enciende la mesa de mezclas (Interruptor). Controla la música con el ambiente: si la gente susurra, suena un platillo suave; si la gente grita y salta, ¡suena el bombo a toda potencia!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Noise < 40 THEN Drum.play(HiHat) ELSE Drum.play(Kick))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Sensible al Entorno",
+    "originalIdeaDescription": "Un metrónomo que marca el paso con la batería. El interruptor inicia el metrónomo. Si el ruido ambiental aumenta, el volumen o la intensidad del golpe de batería aumenta para asegurarse de que se escuche sobre el ruido.",
+    "transformedIdeaTitle": "El Director de Orquesta Firme",
+    "transformedIdeaDescription": "Programa un director de orquesta que no se deja intimidar. Actívalo con el interruptor para marcar el ritmo. Si la clase empieza a hablar fuerte, el director debe tocar el tambor más fuerte para imponer orden y mantener el ritmo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Drum.setVolume(Noise.level + 20); Drum.playInterval(Click, 500ms)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Genera sonidos de lluvia usando redobles suaves de batería. Cuando el sensor de ruido detecta un sonido fuerte (como un trueno real o un aplauso fuerte), el sistema añade un golpe de platillo fuerte. El interruptor apaga la simulación.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Vamos a crear una atmósfera de lluvia. Enciende la máquina de clima (Interruptor) para escuchar las gotas caer (redobles suaves). Si das un aplauso fuerte, simularás un trueno y la máquina responderá con un estruendo de platillos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Drum.playLoop(SoftRoll); IF Noise.peak > 80 THEN Drum.play(Crash)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Código Morse de Percusión",
+    "originalIdeaDescription": "El usuario utiliza el interruptor para poner el sistema en modo 'Escucha'. Golpes cortos en la mesa (detectados por el sensor de ruido) se traducen en golpes de caja, y golpes largos o más fuertes en golpes de bombo.",
+    "transformedIdeaTitle": "Telégrafo de la Selva",
+    "transformedIdeaDescription": "Envía mensajes secretos a través de la selva. Activa el transmisor (Interruptor) y golpea la mesa. Un golpe suave enviará una señal aguda (Caja) y un golpe fuerte enviará una señal grave (Bombo). ¡Crea tu propio código!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Noise.type == 'Short' THEN Drum.play(Snare) ELSE Drum.play(Kick))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inverso",
+    "originalIdeaDescription": "La batería toca música mientras hay ruido en la habitación. Si el ruido cesa (silencio), la batería se detiene. El interruptor se usa para reiniciar el juego o cambiar la canción de fondo.",
+    "transformedIdeaTitle": "Baila para que Suene",
+    "transformedIdeaDescription": "Al contrario del juego de las sillas, aquí la música solo suena si ustedes hacen ruido y bailan. Si se quedan quietos y en silencio, la fiesta se acaba. Usen el interruptor para elegir el siguiente ritmo de baile.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 10 THEN Drum.playLoop(Beat) ELSE Drum.stop(); IF Switch.pressed THEN Drum.nextTrack()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Efectos de Comedia",
+    "originalIdeaDescription": "Un dispositivo para contar chistes. El interruptor arma el sistema. Cuando el sensor detecta una pausa en el ruido (después del chiste) seguida de una risa (ruido alto), toca un 'Ba Dum Tss'.",
+    "transformedIdeaTitle": "El Comediante Robótico",
+    "transformedIdeaDescription": "Ayuda a tu robot a entender cuándo ha contado un buen chiste. Activa el modo 'Show' (Interruptor). Cuando el robot detecte risas fuertes en el público (Sensor de Ruido), deberá tocar el clásico final de batería '¡Ba Dum Tss!'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.riseDetected() THEN Drum.play(BaDumTss)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Secretos",
+    "originalIdeaDescription": "El interruptor activa un modo de alta sensibilidad. Si el sensor de ruido detecta susurros (nivel de ruido muy bajo pero mayor a cero), la batería toca un sonido misterioso o de intriga.",
+    "transformedIdeaTitle": "Cazador de Susurros",
+    "transformedIdeaDescription": "Alguien está contando secretos en clase. Activa tu gadget de espía (Interruptor). Si detecta un sonido muy bajito, como un susurro, hará sonar un tambor misterioso para alertarte de que hay información confidencial cerca.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND (Noise > 5 AND Noise < 30) THEN Drum.play(MysterySound)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Rebotes",
+    "originalIdeaDescription": "Se usa para contar cuántas veces rebota una pelota. El interruptor reinicia el contador. Cada impacto (pico de ruido) hace que la batería suene, ayudando a llevar la cuenta auditivamente.",
+    "transformedIdeaTitle": "Entrenador de Baloncesto",
+    "transformedIdeaDescription": "Mejora tu dribbling. Presiona el botón para empezar el entrenamiento. Cada vez que el balón golpee el suelo, el sistema tocará un 'Hi-Hat'. Intenta mantener un ritmo constante con el sonido del balón.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.wasPressed() THEN Count=0; IF Noise.peakDetected() THEN Drum.play(HiHat)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "El interruptor activa el modo aleatorio. Cada vez que se detecta un sonido fuerte, la batería reproduce un componente de percusión elegido al azar, creando ritmos caóticos e impredecibles.",
+    "transformedIdeaTitle": "La Lotería Musical",
+    "transformedIdeaDescription": "¡Crea música loca! Enciende el generador de caos (Interruptor). Da palmadas o golpes en la mesa; cada golpe generará un sonido de batería diferente al azar. ¿Podrás crear una canción con sonidos sorpresa?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.peakDetected() THEN Drum.play(Random_Instrument)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo Sonoro de Aula",
+    "originalIdeaDescription": "Monitorea el nivel de ruido de una clase. Si el interruptor está activo y el ruido supera el límite permitido, la batería empieza a tocar un ritmo molesto hasta que el ruido baje.",
+    "transformedIdeaTitle": "El Monitor de la Biblioteca",
+    "transformedIdeaDescription": "Ayuda a mantener el silencio en la biblioteca. Si activas el monitor y los estudiantes hablan demasiado fuerte (Ruido alto), la batería tocará un ritmo de advertencia para recordarles que deben bajar la voz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > Threshold THEN Drum.playLoop(WarningBeat)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Grabadora de Ritmos Simple",
+    "originalIdeaDescription": "Estado 1 (Switch Off): Escucha golpes y los guarda temporalmente. Estado 2 (Switch On): Reproduce la secuencia de ritmos detectada usando la batería en bucle.",
+    "transformedIdeaTitle": "Clonador de Ritmos",
+    "transformedIdeaDescription": "Primero, con el interruptor apagado, golpea un ritmo en la mesa. El sistema memorizará tus golpes. Luego, enciende el interruptor y ¡escucha cómo el sistema repite tu ritmo una y otra vez con sonidos de batería profesional!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOff() THEN Record(Noise); ELSE Drum.playSequence(RecordedPattern)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulación de Latidos Cardíacos",
+    "originalIdeaDescription": "La batería reproduce un sonido de latido (bombo suave). El sensor de ruido actúa como un sensor de 'adrenalina': si hay mucho ruido ambiente, el ritmo de los latidos se acelera. El interruptor detiene la simulación.",
+    "transformedIdeaTitle": "Corazón Digital",
+    "transformedIdeaDescription": "Crea un corazón artificial. El bombo simula el latido. Si el ambiente está tranquilo, el corazón late despacio. Si hay mucho ruido y caos alrededor, el corazón se pone nervioso y late muy rápido. Usa el interruptor para 'dormir' al corazón.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN BPM = Map(Noise.level); Drum.playLoop(Heartbeat, BPM)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Sorpresas de Halloween",
+    "originalIdeaDescription": "El dispositivo está en silencio. Si el interruptor se activa (trampa armada) y se detecta un ruido repentino (alguien acercándose), la batería suelta un golpe fuerte y repentino para asustar.",
+    "transformedIdeaTitle": "La Casa Embrujada",
+    "transformedIdeaDescription": "Prepara un susto para Halloween. Esconde el dispositivo y activa el interruptor. Cuando alguien pase cerca y haga ruido con sus pasos, ¡BUM! La batería soltará un estruendo fantasmal para darle un buen susto.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.peakDetected() THEN Drum.play(ScaryCrash)"
+  }
+]

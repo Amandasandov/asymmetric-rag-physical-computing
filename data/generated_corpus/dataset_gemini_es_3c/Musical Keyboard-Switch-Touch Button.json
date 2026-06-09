@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Octavas Musicales",
+    "originalIdeaDescription": "Un sistema donde el interruptor cambia el registro de octava del teclado (alto o bajo) y el botón táctil actúa como una tecla para reproducir una nota específica en la octava seleccionada, permitiendo explorar rangos tonales.",
+    "transformedIdeaTitle": "El Traductor de Voz Alienígena",
+    "transformedIdeaDescription": "¡Estás contactando a dos especies alienígenas diferentes! Usa el interruptor para seleccionar entre la especie de 'Voz Aguda' y la de 'Voz Grave'. Cuando presiones el botón táctil, tu comunicador emitirá el saludo en la frecuencia correcta para que te entiendan.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN Note = High_C ELSE Note = Low_C; IF Button == Pressed THEN Play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Pedal de Sustain para Piano",
+    "originalIdeaDescription": "Esta configuración simula un piano digital donde el botón táctil toca una nota musical y el interruptor funciona como un pedal de sostenido (sustain), haciendo que la nota dure más tiempo cuando el interruptor está activado.",
+    "transformedIdeaTitle": "Explorador de la Cueva del Eco",
+    "transformedIdeaDescription": "Eres un explorador en una cueva inmensa. Si activas el interruptor 'Modo Cueva', tus gritos (notas musicales activadas por el botón) tendrán un eco largo y misterioso. Si lo apagas, el sonido será corto y seco.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Duration = 2000ms ELSE Duration = 500ms; IF Button == Pressed THEN Play(Note, Duration)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Armable",
+    "originalIdeaDescription": "Un sistema de seguridad básico donde el interruptor 'arma' la alarma. Si el sistema está armado y se presiona el botón táctil (simulando un intruso), el teclado reproduce una secuencia de alerta sonora repetitiva.",
+    "transformedIdeaTitle": "El Guardián del Tesoro del Dragón",
+    "transformedIdeaDescription": "Protege el oro del dragón. Usa el interruptor para activar el escudo mágico (armar sistema). Si un ladrón toca el tesoro (botón táctil) mientras el escudo está activo, ¡haz sonar la sirena de advertencia inmediatamente!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Button == Pressed THEN Play(Alarm_Sequence)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre con Modo No Molestar",
+    "originalIdeaDescription": "Un timbre de puerta inteligente. El botón táctil activa una melodía agradable, pero solo si el interruptor (Modo No Molestar) está desactivado. Si el interruptor está activado, el botón no produce sonido.",
+    "transformedIdeaTitle": "La Puerta de la Torre del Mago",
+    "transformedIdeaDescription": "El Mago está estudiando hechizos y no quiere interrupciones. Programa el timbre de su torre para que solo suene la melodía de bienvenida al presionar el botón si el interruptor de 'Privacidad' está apagado.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == OFF THEN (IF Button == Pressed THEN Play(Melody))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Código Morse Sonoro",
+    "originalIdeaDescription": "El interruptor define la velocidad de transmisión (lento/rápido) y el botón táctil actúa como el manipulador telegráfico. Al presionar el botón, suena una nota en el teclado cuya duración depende de la presión manual, pero el tono varía según el interruptor.",
+    "transformedIdeaTitle": "Telégrafo de Espías Secretos",
+    "transformedIdeaDescription": "Envía mensajes secretos a la base. Usa el interruptor para cambiar entre el canal 'Seguro' (tono grave) y el canal 'Público' (tono agudo). Usa el botón para enviar los puntos y rayas del código Morse usando sonidos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Set Tone based on Switch; WHILE Button == Pressed DO Play(Tone)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Instrumentos Virtual",
+    "originalIdeaDescription": "El interruptor alterna entre dos 'instrumentos' (representados por diferentes tonos o formas de onda). El botón táctil reproduce una escala corta predefinida utilizando el sonido del instrumento seleccionado por el interruptor.",
+    "transformedIdeaTitle": "La Banda de Un Solo Robot",
+    "transformedIdeaDescription": "¡Eres el DJ robot! Si el interruptor está arriba, eres una Flauta (sonidos suaves). Si está abajo, eres una Trompeta (sonidos fuertes). Presiona el botón para tocar un solo musical con el instrumento que hayas elegido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Instrument = Flute ELSE Instrument = Trumpet; IF Button == Pressed THEN PlayScale(Instrument)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Auditiva",
+    "originalIdeaDescription": "El sistema reproduce un sonido aleatorio después de un tiempo. El usuario debe activar el interruptor para 'preparar' y presionar el botón lo más rápido posible tras oír el sonido. El teclado da feedback de éxito.",
+    "transformedIdeaTitle": "Duelo de Reflejos Galácticos",
+    "transformedIdeaDescription": "Prepara tus motores (activa el interruptor). Espera a que la computadora inicie la cuenta regresiva. En cuanto suene el tono de 'YA', presiona el botón de despegue. Si lo haces rápido, sonará una fanfarria de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN (Wait(Random); Play(Go_Sound); StartTimer; IF Button == Pressed THEN StopTimer AND Play(Victory))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música de Cuerda",
+    "originalIdeaDescription": "El interruptor simula la llave de cuerda. Debe estar activado para que haya energía. Mientras esté activado, presionar el botón táctil permite avanzar nota por nota en una canción pregrabada.",
+    "transformedIdeaTitle": "La Caja Musical Encantada",
+    "transformedIdeaDescription": "Esta caja musical solo funciona si le das cuerda mágica (activa el interruptor). Una vez con energía, cada vez que presiones el botón mágico, la caja tocará la siguiente nota de la canción secreta.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON AND Button == Pressed THEN Play(Next_Note_In_Song)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Tono de Referencia",
+    "originalIdeaDescription": "Dispositivo para músicos. El interruptor selecciona entre 440Hz (A4) y 442Hz. El botón táctil reproduce el tono continuo mientras se mantenga presionado para afinar instrumentos.",
+    "transformedIdeaTitle": "Sincronizador de Cristales de Energía",
+    "transformedIdeaDescription": "Debes sintonizar los cristales de la nave. Usa el interruptor para elegir el modo 'Cristal Rojo' o 'Cristal Azul'. Mantén presionado el botón para emitir la frecuencia de resonancia y estabilizar el núcleo de energía.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Freq = 440 ELSE Freq = 442; WHILE Button == Pressed DO Play(Freq)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador Binario Sonoro",
+    "originalIdeaDescription": "El interruptor representa el valor de un bit (0 o 1). El botón confirma la entrada. Al confirmar, el teclado reproduce un número de beeps equivalente al valor acumulado o al estado actual.",
+    "transformedIdeaTitle": "La Calculadora del Robot Matemático",
+    "transformedIdeaDescription": "Enseña al robot a contar. El interruptor decide si sumas 0 o 1 a su memoria. Presiona el botón para 'ingresar' el dato. El robot responderá con sonidos: un tono agudo para 1 y un tono grave para 0.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Value = SwitchState; IF Button == Pressed THEN (PlaySoundFor(Value); AddToMemory(Value))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo con Acento",
+    "originalIdeaDescription": "El interruptor enciende o apaga el metrónomo. El botón táctil se usa para marcar el primer tiempo del compás (acento), haciendo que el teclado reproduzca un sonido más fuerte o agudo en ese instante.",
+    "transformedIdeaTitle": "Director de Orquesta Digital",
+    "transformedIdeaDescription": "Mantén el ritmo de la banda. Enciende la batuta electrónica con el interruptor para iniciar el ritmo base. Presiona el botón táctil justo al inicio de cada ciclo para marcar el acento fuerte con un platillo sonoro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Loop(Play(Tick)); IF Button == Pressed THEN Play(Cymbal_Crash)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Marcha de Auto",
+    "originalIdeaDescription": "El interruptor actúa como la llave de encendido. El botón táctil es el acelerador. Si el auto está encendido y se presiona el botón, el teclado reproduce un sonido de motor que sube de tono (aceleración).",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula Code",
+    "transformedIdeaDescription": "¡Prepárate para la carrera! Primero, gira la llave (interruptor) para encender el motor. Luego, pisa el acelerador (botón táctil) para escuchar cómo ruge el motor subiendo de tono. ¡Si apagas la llave, el acelerador no funcionará!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON AND Button == Pressed THEN Play(Rising_Pitch_Scale)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado de Preguntas y Respuestas",
+    "originalIdeaDescription": "El interruptor selecciona entre 'Verdadero' y 'Falso'. El botón táctil envía la respuesta. Si la configuración coincide con la respuesta correcta preprogramada, suena un sonido de éxito, si no, de error.",
+    "transformedIdeaTitle": "El Gran Quiz de la Selva",
+    "transformedIdeaDescription": "¿Los elefantes vuelan? Usa el interruptor para elegir Verdadero o Falso. Presiona el botón para enviar tu respuesta. Si aciertas, escucharás una melodía alegre; si fallas, escucharás un sonido triste.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Answer = SwitchState; IF Button == Pressed THEN (IF Answer == Correct THEN Play(Win) ELSE Play(Fail))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Creador de Acordes Mayores/Menores",
+    "originalIdeaDescription": "El botón táctil toca la nota fundamental. El interruptor modifica la armonía: en una posición se reproduce el acorde mayor y en la otra el acorde menor asociado a esa nota.",
+    "transformedIdeaTitle": "El Compositor de Emociones",
+    "transformedIdeaDescription": "Crea la banda sonora de una película. Presiona el botón para tocar música. Usa el interruptor para cambiar el ambiente: 'Feliz' (Acorde Mayor) para escenas de día, o 'Triste' (Acorde Menor) para escenas de lluvia.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN Mode = Major ELSE Mode = Minor; IF Button == Pressed THEN PlayChord(Root, Mode)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Errores de Secuencia",
+    "originalIdeaDescription": "El sistema espera una secuencia específica (Interruptor ON, luego Botón). Si se hace en orden incorrecto (Botón primero), suena una alarma de error.",
+    "transformedIdeaTitle": "Protocolo de Despegue Espacial",
+    "transformedIdeaDescription": "Para lanzar el cohete, debes seguir el protocolo estricto: Primero activa los sistemas principales (Interruptor ON), y SOLO después presiona el botón de inyección. Si presionas el botón con los sistemas apagados, sonará la alarma de fallo.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button == Pressed THEN (IF Switch == OFF THEN Play(Error) ELSE Play(Launch))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Arpegiador Automático",
+    "originalIdeaDescription": "El interruptor activa el modo de bucle (loop). El botón táctil define la velocidad (tap tempo) o dispara el arpegio una sola vez si el interruptor está apagado.",
+    "transformedIdeaTitle": "Máquina de Ritmos Cyberpunk",
+    "transformedIdeaDescription": "Crea música futurista. Si activas el interruptor 'Loop', el teclado tocará una secuencia repetitiva sin parar. Usa el botón táctil para añadir efectos de sonido sobre la base rítmica.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN PlayLoop(Arpeggio); IF Button == Pressed THEN Play(SFX_Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Signos Vitales Simulado",
+    "originalIdeaDescription": "El interruptor cambia el estado del paciente (Estable/Crítico). El botón táctil inicia el escaneo. Dependiendo del estado, el teclado reproduce un beep lento y regular o uno rápido y agudo.",
+    "transformedIdeaTitle": "Doctor Bot al Rescate",
+    "transformedIdeaDescription": "Eres un médico robot. Escanea a tu paciente presionando el botón. Usa el interruptor para simular si el paciente está 'Sano' (suena un latido tranquilo) o 'Enfermo' (suena una alarma rápida). ¡Diagnostica correctamente!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button == Pressed THEN (IF Switch == Critical THEN PlayLoop(FastBeep) ELSE PlayLoop(SlowHeartbeat))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de Tráfico Ferroviario",
+    "originalIdeaDescription": "El interruptor cambia las vías (Izquierda/Derecha). El botón señala la llegada del tren. Se reproduce un sonido diferente (silbato grave o agudo) indicando hacia dónde se dirigió el tren.",
+    "transformedIdeaTitle": "Jefe de la Estación de Trenes",
+    "transformedIdeaDescription": "Un tren se acerca. Decide su destino con la palanca de cambio de vías (interruptor). Cuando presiones el botón para dar la salida, escucharás un silbato distinto según si el tren se fue a la montaña o a la playa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button == Pressed THEN (IF Switch == Left THEN Play(Whistle_A) ELSE Play(Whistle_B))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Votación Electrónica",
+    "originalIdeaDescription": "El interruptor selecciona el candidato A o B. El botón confirma el voto. El teclado emite un sonido distintivo para confirmar por quién se votó.",
+    "transformedIdeaTitle": "Elecciones en el Reino Animal",
+    "transformedIdeaDescription": "Elige al nuevo Rey de la Selva. Usa el interruptor para votar por el León o por el Tigre. Presiona el botón para depositar tu voto en la urna. Escucharás un rugido diferente confirmando tu elección.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button == Pressed THEN (IF Switch == Lion THEN Play(Roar_A) ELSE Play(Roar_B))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Inversa",
+    "originalIdeaDescription": "El teclado reproduce una nota alta o baja. El usuario debe colocar el interruptor en la posición correspondiente (Alta/Baja) y presionar el botón para confirmar. Si coincide, gana.",
+    "transformedIdeaTitle": "Desactivador de Bombas Sónico",
+    "transformedIdeaDescription": "Escucha atentamente el tono del explosivo. Si es agudo, mueve el interruptor a ARRIBA. Si es grave, muévelo a ABAJO. Luego, corta el cable presionando el botón. ¡Si te equivocas de posición, BOOM!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Random(High, Low); Play(Target); IF Button == Pressed THEN (IF SwitchPos matches Target THEN Play(Safe) ELSE Play(Explosion))"
+  }
+]

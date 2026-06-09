@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alerta para Bibliotecas Silenciosas",
+    "originalIdeaDescription": "Un dispositivo diseñado para mantener el silencio en una biblioteca. El sensor de ruido monitorea el ambiente constantemente. Si el nivel de ruido supera un umbral establecido, la lámpara parpadea en rojo y el teclado emite una secuencia suave de notas de advertencia.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Dormido",
+    "transformedIdeaDescription": "¡Eres el guardián de un dragón dormido! Debes programar un sistema que vigile la cueva. Si los aventureros hacen demasiado ruido (sensor de ruido > 50), la cueva debe iluminarse de rojo (lámpara) y el dragón gruñirá (notas graves en el teclado) para asustarlos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.value > 50 THEN Lamp.setColor(Red) AND Keyboard.play(C2, E2)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de Intensidad Vocal Musical",
+    "originalIdeaDescription": "Una herramienta para cantantes que visualiza la potencia de la voz. Cuanto más fuerte canta el usuario detectado por el sensor, más brillante se vuelve la lámpara y el teclado acompaña con un acorde armónico para verificar la afinación.",
+    "transformedIdeaTitle": "La Varita Mágica de Cristal",
+    "transformedIdeaDescription": "Crea una varita mágica que reacciona a tus hechizos verbales. Programa la varita para que, al gritar un hechizo fuerte, la gema brille intensamente y suene un acorde triunfal. Si susurras, la luz debe ser tenue y el sonido misterioso.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.brightness = Noise.value; IF Noise.value > 80 THEN Keyboard.playChord(C_Major) ELSE Keyboard.playNote(A3)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz por Aplausos con Feedback",
+    "originalIdeaDescription": "Un sistema domótico simple donde un aplauso fuerte detectado por el sensor de ruido enciende o apaga la lámpara. Cada vez que el estado cambia, el teclado reproduce una nota aguda para confirmar la acción al usuario.",
+    "transformedIdeaTitle": "El Mayordomo Robot",
+    "transformedIdeaDescription": "Programa a tu asistente robótico para que controle las luces de la mansión. Cuando el robot escuche un aplauso fuerte, debe encender la luz y decir 'A su servicio' (usando una melodía de tres notas en el teclado).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.peakDetected() THEN Lamp.toggle() AND Keyboard.play(G4, E4, C4)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Ambiental",
+    "originalIdeaDescription": "Un dispositivo ambiental que simula una tormenta. Cuando el sensor de ruido detecta un sonido fuerte (como un trueno simulado), la lámpara emite un flash blanco y el teclado reproduce notas graves y caóticas para imitar el retumbar.",
+    "transformedIdeaTitle": "Creador de Efectos Especiales de Cine",
+    "transformedIdeaDescription": "Eres el ingeniero de sonido de una película de terror. Tu misión es programar los efectos especiales: cuando el actor grite de miedo, debe caer un rayo (flash de lámpara) y sonar una música terrorífica en el piano.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WAIT UNTIL Noise.value > 90; Lamp.flash(White, 0.2s); Keyboard.playSequnece(DiminishedChord)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Respiración para Meditación",
+    "originalIdeaDescription": "Ayuda a la meditación guiada. El usuario exhala cerca del sensor; el ruido del aire mantiene la lámpara en un color azul suave y el teclado sostiene una nota relajante. Si el ruido cesa, la luz se apaga gradualmente.",
+    "transformedIdeaTitle": "El Espíritu del Viento",
+    "transformedIdeaDescription": "Da vida a un espíritu elemental. Mientras soples suavemente hacia el sensor (como si fueras el viento), el espíritu brillará en azul y cantará una nota larga. Si dejas de soplar, el espíritu se duerme y apaga su luz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise.value > 10 AND Noise.value < 40 DO Lamp.setColor(Blue) AND Keyboard.startNote(A4); ELSE Lamp.off() AND Keyboard.stopNote()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo y Movimiento",
+    "originalIdeaDescription": "Un juego donde los participantes deben moverse sin hacer ruido. Si el sensor detecta sonido por encima del ambiente, la lámpara se pone roja y suena una alarma en el teclado, indicando que han perdido.",
+    "transformedIdeaTitle": "Misión Imposible: El Museo Láser",
+    "transformedIdeaDescription": "¡Eres un espía intentando robar un diamante! Programa el sistema de seguridad láser. Si el sensor detecta el más mínimo ruido de tus pasos, las alarmas (teclado) deben sonar y los láseres (lámpara roja) se activarán. ¡Mantente en silencio!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.value > Threshold THEN Lamp.setColor(Red) AND Keyboard.playLoop(AlarmPattern)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Música Activada por Voz",
+    "originalIdeaDescription": "Una caja de música moderna que solo funciona cuando se le habla o canta. El nivel de ruido impulsa la progresión de la melodía en el teclado y cambia el color de la lámpara según el volumen.",
+    "transformedIdeaTitle": "La Planta Cantarina",
+    "transformedIdeaDescription": "Has descubierto una planta alienígena que se alimenta de sonido. Programa la planta para que, cuando le cantes, florezca con colores (Lámpara) y te responda imitando tu canción (Teclado). Si te callas, se marchita (luz apagada).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.value > 20 THEN Lamp.setColor(Random) AND Keyboard.playNextNoteInMelody()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Analizador de Emociones por Tono de Voz",
+    "originalIdeaDescription": "Un prototipo que intenta adivinar la emoción basándose en el volumen. Gritos fuertes activan luz roja y notas disonantes (ira); susurros activan luz verde y notas suaves (calma).",
+    "transformedIdeaTitle": "El Robot Empático",
+    "transformedIdeaDescription": "Tu robot necesita aprender a entender a los humanos. Prográmalo para que si le gritas, se asuste (luz roja, notas agudas y rápidas), pero si le hablas suaveito, se ponga feliz (luz verde, melodía dulce).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.value > 80 THEN Lamp(Red) + Keys(Dissonant) ELSE IF Noise.value > 10 THEN Lamp(Green) + Keys(Major)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Temporizador de Lavado de Manos Musical",
+    "originalIdeaDescription": "Para fomentar la higiene, el sensor de ruido detecta el agua corriendo. Esto activa la lámpara en color jabón (blanco/cian) y reproduce una canción de 20 segundos en el teclado para cronometrar el lavado.",
+    "transformedIdeaTitle": "El Desafío de las Manos Limpias",
+    "transformedIdeaDescription": "Crea un gadget para el baño escolar. Cuando el sensor escuche el agua del grifo, debe iniciar una 'fiesta de espuma': luces parpadeantes y una canción pegadiza de 20 segundos para asegurar que todos se laven las manos el tiempo correcto.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.value > WaterSoundThreshold THEN Lamp.blink(Cyan) AND Keyboard.playSong(20s)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fiestas Automático",
+    "originalIdeaDescription": "El sistema detecta niveles de ruido constantes y altos (música ambiente o gente hablando). Si se mantiene por 10 segundos, activa el modo 'Disco': luces estroboscópicas y acompañamiento de percusión en el teclado.",
+    "transformedIdeaTitle": "El DJ Automático",
+    "transformedIdeaDescription": "¡La fiesta está aburrida! Programa un sistema que detecte cuando la gente empiece a animarse y hacer ruido. Si el ruido sube, ¡lanza automáticamente las luces de discoteca y añade un ritmo de fondo con el teclado!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Average(Noise.value, 10s) > High THEN Lamp.strobe() AND Keyboard.playBeat()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Instrumento de Theremin por Volumen",
+    "originalIdeaDescription": "Un instrumento experimental donde el volumen de entrada controla el tono (pitch) del teclado. El color de la lámpara cambia a través del espectro del arcoíris a medida que las notas suben de tono.",
+    "transformedIdeaTitle": "Escalera Musical de Colores",
+    "transformedIdeaDescription": "Construye un instrumento invisible. Debes programarlo para que, al subir el volumen de tu voz, el piano toque notas más agudas y la luz cambie de color como un arcoíris. ¡Intenta tocar una canción solo con la fuerza de tu voz!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Noise.value, 0, 100, C3, C6); Keyboard.play(Note); Lamp.setColor(Map(Note))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo Acústico Educativo",
+    "originalIdeaDescription": "Herramienta para el aula. Verde (silencio) = Lámpara verde. Amarillo (ruido medio) = Lámpara amarilla + nota de advertencia. Rojo (ruido alto) = Lámpara roja + sonido de sirena.",
+    "transformedIdeaTitle": "El Semáforo de la Clase",
+    "transformedIdeaDescription": "Ayuda a tu profesor a mantener el orden. Crea un semáforo inteligente. Si la clase está en silencio, luz verde. Si empiezan a hablar, luz amarilla y un 'ding'. Si gritan, luz roja y sonido de alarma.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < 30 THEN Green ELSE IF Noise < 70 THEN Yellow + Ding ELSE Red + Siren"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Repetición de Patrones (Simón Dice)",
+    "originalIdeaDescription": "El sistema reproduce una nota y un color. El usuario debe hacer un ruido (aplauso/voz) de duración similar para 'acertar', tras lo cual el sistema valida con una luz verde y sonido de éxito.",
+    "transformedIdeaTitle": "Duelo de Ecos",
+    "transformedIdeaDescription": "Desafía a la computadora a un duelo. La computadora tocará una nota y encenderá una luz. Tú debes responder haciendo un sonido inmediatamente después. Si reaccionas a tiempo, ganas un punto (luz verde y fanfarria).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Keyboard.play(Note); Lamp.on(); WAIT FOR Noise; IF Noise detected within 1s THEN Success() ELSE Fail()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luz Nocturna con Canción de Cuna",
+    "originalIdeaDescription": "Dispositivo para bebés. Si el sensor de ruido detecta llanto (ruido alto repentino), enciende una luz cálida y reproduce una melodía suave en el teclado para calmar al bebé.",
+    "transformedIdeaTitle": "La Nana Automática",
+    "transformedIdeaDescription": "Diseña un invento para ayudar a los padres. Si el bebé empieza a llorar en la noche (ruido alto), tu invento debe encender suavemente una luz naranja y tocar 'Estrellita, dónde estás' para que se vuelva a dormir.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.value > CryThreshold THEN Lamp.fadeOn(Orange) AND Keyboard.playLullaby()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "Un sistema para juzgar concursos. Mide el nivel de ruido de los aplausos. El ganador se decide por quién enciende la lámpara al máximo brillo y genera la escala musical más alta en el teclado.",
+    "transformedIdeaTitle": "El Jurado Digital",
+    "transformedIdeaDescription": "¡Organiza un concurso de talentos! Programa al 'Jurado Digital'. Cuando el público aplauda, el jurado debe mostrar cuánto les gustó: muchos aplausos = luz muy brillante y sonido agudo; pocos aplausos = luz tenue y sonido grave.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.brightness = Noise.value; Keyboard.playNote(Map(Noise.value, Min, Max, LowNote, HighNote))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Código Morse Acústico",
+    "originalIdeaDescription": "Convierte golpes en la mesa (ruido) en señales visuales (lámpara) y auditivas (teclado). Un golpe corto es un punto, un golpe mantenido o doble rápido es una raya, permitiendo enviar mensajes secretos.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Crea un sistema para enviar mensajes secretos a otro espía. Da golpes en la mesa: el sistema debe detectar el sonido y convertirlo en destellos de luz y pitidos del teclado para transmitir tu código Morse.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.duration < Short THEN Lamp.flashShort() + Key.beep() ELSE Lamp.flashLong() + Key.beeeep()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Mascotas Virtual",
+    "originalIdeaDescription": "El sistema reacciona a comandos de voz cortos. Un sonido corto ('Sit') enciende luz amarilla y nota media. Un sonido largo ('Stay') enciende luz roja y nota baja. Fomenta la consistencia en los comandos.",
+    "transformedIdeaTitle": "Entrenando a tu Mascota Digital",
+    "transformedIdeaDescription": "Tu mascota digital no tiene oídos, pero 'siente' el sonido. Prográmala para que obedezca: un grito corto hace que se siente (luz amarilla + pitido), y un grito largo hace que se acueste (luz azul + tono grave).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Measure Noise.duration; IF duration < 0.5s THEN Action1() ELSE Action2()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas de Juguete",
+    "originalIdeaDescription": "Un juguete que simula detectar actividad paranormal. Usa el sensor de ruido para captar 'psicofonías'. Pequeñas variaciones de ruido hacen parpadear la lámpara y tocar notas aleatorias espeluznantes.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Construye un detector de fantasmas. El sensor es muy sensible; si detecta cualquier ruidito en una habitación vacía, debe hacer parpadear la luz erráticamente y tocar notas misteriosas para avisar que hay un fantasma cerca.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.value > BackgroundNoise + 5 THEN Lamp.flicker() AND Keyboard.playRandomScaryNote()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Apagado de Velas Virtual",
+    "originalIdeaDescription": "Simula una vela de cumpleaños. La lámpara está encendida (fuego) y el teclado toca 'Cumpleaños Feliz'. Al soplar fuerte en el sensor, la música se detiene y la luz se apaga.",
+    "transformedIdeaTitle": "La Vela que Nunca se Gasta",
+    "transformedIdeaDescription": "¡Es tu cumpleaños digital! Programa una vela electrónica. La luz debe estar encendida y sonar música de fiesta. Cuando alguien sople fuerte cerca del sensor, la vela debe apagarse y la música detenerse con un efecto de final.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.on(Orange); Keyboard.play(BirthdaySong); WAIT UNTIL Noise > BlowLevel; Lamp.off(); Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inverso",
+    "originalIdeaDescription": "La música suena y la luz brilla mientras haya ruido en la habitación (gente bailando/hablando). Si todos se quedan callados (nivel de ruido baja), la música y la luz se cortan abruptamente.",
+    "transformedIdeaTitle": "Fiesta Impulsada por Energía",
+    "transformedIdeaDescription": "La energía de esta fiesta viene del ruido de la gente. Programa el salón: mientras haya ruido y risas, la música y las luces funcionan. ¡Si todos se callan, se corta la energía! Mantengan el ruido para seguir bailando.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.value > ActiveThreshold THEN Lamp.on() AND Keyboard.play() ELSE Lamp.off() AND Keyboard.pause()"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica Interactiva con Luz y Sonido",
+    "originalIdeaDescription": "Un dispositivo que simula una varita mágica. Al detectar un movimiento brusco o agitación, se ilumina con un color específico y reproduce una secuencia de notas mágicas para simular el lanzamiento de un hechizo.",
+    "transformedIdeaTitle": "El Desafío del Hechicero Supremo",
+    "transformedIdeaDescription": "¡Conviértete en un aprendiz de mago! Tu misión es programar tu varita para que responda a tus gestos. Cuando agites la varita hacia adelante, debe brillar en azul intenso y sonar un arpegio ascendente para lanzar el hechizo 'Lumos Musicalis'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake detected THEN Lamp.setColor(Blue) AND Keyboard.playNotes(C, E, G)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Sismos con Alarma",
+    "originalIdeaDescription": "Un sistema de alerta temprana que utiliza el sensor de movimiento para detectar vibraciones del suelo. Si la vibración supera un umbral, enciende una luz roja parpadeante y toca una nota de alarma grave.",
+    "transformedIdeaTitle": "Estación Sismológica de Alerta Temprana",
+    "transformedIdeaDescription": "Diseña un sistema de seguridad para una ciudad construida sobre una falla geológica. Debes programar el sensor para que ignore vibraciones pequeñas (camiones pasando) pero active sirenas y luces rojas de emergencia si detecta un movimiento fuerte de terremoto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.intensity > 50 THEN Lamp.flash(Red) AND Keyboard.playNote(C2, duration=1s)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Espada Láser con Efectos de Choque",
+    "originalIdeaDescription": "Juguete que simula una espada de energía. Mantiene una luz constante encendida, pero cambia de color y emite un sonido disonante cuando el sensor de movimiento detecta un impacto o desaceleración brusca.",
+    "transformedIdeaTitle": "Entrenamiento Jedi: Sable de Luz Reactivo",
+    "transformedIdeaDescription": "Construye tu propio sable de luz para la academia galáctica. El sable debe tener un zumbido de luz verde constante, pero si golpeas un objeto (detectado por un cambio brusco en el movimiento), debe destellar en blanco y emitir un sonido de choque.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.on(Green); IF Motion.impact detected THEN Lamp.flash(White, 0.2s) AND Keyboard.playNote(F#4)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin Visual",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la inclinación del dispositivo controla el tono de la nota musical y el color de la lámpara cambia según el eje de rotación, creando una experiencia audiovisual.",
+    "transformedIdeaTitle": "Compositor de Música Espacial",
+    "transformedIdeaDescription": "Crea un instrumento musical del futuro que se toca sin botones. Al inclinar el dispositivo hacia la derecha, las notas deben ser más agudas y la luz más brillante. ¡Intenta tocar una melodía alienígena moviendo el dispositivo en el aire!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Variable pitch = Map(Motion.TiltX, 0, 100, Note.C3, Note.C6); Keyboard.play(pitch); Lamp.setBrightness(Motion.TiltY)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio y Postura",
+    "originalIdeaDescription": "Dispositivo para practicar yoga o equilibrio. Si el usuario se mantiene estable, la luz es verde y suena música suave. Si se tambalea, la luz se pone roja y suena una nota de error.",
+    "transformedIdeaTitle": "El Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Ayuda a los monjes a mantener su postura perfecta. Programa el dispositivo para que, mientras esté quieto sobre la cabeza del estudiante, emita una luz verde relajante. Si detecta cualquier inclinación, debe avisar con luz roja y un tono grave para corregir la postura.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isStable() THEN Lamp.setColor(Green) ELSE Lamp.setColor(Red) AND Keyboard.playNote(D2)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Zapatillas de Baile Interactivas",
+    "originalIdeaDescription": "Un accesorio que se coloca en el pie. Al detectar el impacto de un paso o salto, enciende la lámpara y reproduce una nota de percusión o piano, permitiendo crear música al bailar.",
+    "transformedIdeaTitle": "Zapatos Mágicos de Tap",
+    "transformedIdeaDescription": "¡Convierte tus pies en instrumentos musicales! Programa un sensor para tus zapatillas que detecte cuando pisas fuerte. Cada pisotón debe iluminar el suelo y tocar una nota, permitiéndote componer una canción simplemente caminando o saltando.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.accelerationZ > threshold THEN Lamp.flash(RandomColor) AND Keyboard.playNextNoteInScale()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Guardián del Tesoro (Alarma de Caja)",
+    "originalIdeaDescription": "Dispositivo para proteger objetos valiosos. Se coloca dentro de una caja o cajón. Si detecta que la caja se abre o mueve, activa una alarma sonora y luces estroboscópicas.",
+    "transformedIdeaTitle": "La Trampa del Cofre Pirata",
+    "transformedIdeaDescription": "Protege tu botín de los ladrones. Esconde el dispositivo en tu cofre del tesoro. Si alguien intenta moverlo o levantarlo, debe sonar una sirena ruidosa y la luz debe parpadear rápidamente para asustar al intruso.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.movement detected THEN REPEAT(Keyboard.playNote(A5) AND Lamp.toggleState())"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Batuta de Director de Orquesta Digital",
+    "originalIdeaDescription": "Una batuta que controla el tempo de una melodía pregrabada. Cuanto más rápido se agite la batuta, más rápido se reproducen las notas y más intensa se vuelve la luz.",
+    "transformedIdeaTitle": "Director de la Orquesta Robótica",
+    "transformedIdeaDescription": "Toma el control de la sinfonía. Programa tu batuta para controlar la velocidad de la música. Si mueves la mano suavemente, las notas suenan lentas y la luz es tenue. Si la agitas con energía, ¡la música acelera a un ritmo frenético!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = Motion.speed; FOREACH note IN melody DO Keyboard.play(note, duration=1/Tempo); Lamp.intensity(Tempo)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente",
+    "originalIdeaDescription": "Un temporizador aleatorio que requiere pasar el dispositivo. Mientras está 'seguro' emite luz verde. Cuando el tiempo se agota, detecta si se está moviendo (pasando) y explota con luz roja y sonido.",
+    "transformedIdeaTitle": "Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "Crea el juego definitivo para fiestas. El dispositivo hace tic-tac y brilla en amarillo. Los jugadores deben pasárselo con cuidado. Cuando el temporizador interno llegue a cero, si detecta movimiento, ¡BOOM! Luces rojas y sonido de explosión.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "While timer > 0: Lamp(Yellow); IF timer == 0 AND Motion > 0 THEN Lamp(Red) AND Keyboard.playChord(Dissonant)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Luces Direccionales para Bicicleta",
+    "originalIdeaDescription": "Sistema de seguridad para ciclistas. Al inclinar el cuerpo o el manillar hacia la izquierda o derecha, se enciende la luz correspondiente y suena un intermitente sonoro.",
+    "transformedIdeaTitle": "Chaleco Inteligente para Ciclistas",
+    "transformedIdeaDescription": "Mejora la seguridad vial inventando un chaleco inteligente. Si te inclinas a la izquierda para girar, el chaleco debe hacer parpadear una luz amarilla y hacer un sonido de 'tic-tac' para avisar a los coches. Lo mismo para la derecha.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltLeft THEN Lamp.blink(Yellow) AND Keyboard.play(Click); ELSE IF Motion.tiltRight THEN Lamp.blink(Yellow) AND Keyboard.play(Click)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores y Sonidos",
+    "originalIdeaDescription": "Un dispositivo estilo coctelera. Al agitarlo, cambia el color de la luz aleatoriamente y reproduce notas rápidas, simulando que se están mezclando ingredientes en su interior.",
+    "transformedIdeaTitle": "La Coctelera Mágica de Pociones",
+    "transformedIdeaDescription": "Eres un alquimista creando una nueva poción. Debes agitar tu frasco vigorosamente. Cuanto más fuerte agites, más cambiarán los colores y más agudos serán los sonidos burbujeantes, hasta que la poción esté lista y se ponga verde brillante.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shakeStrength > high THEN Lamp.setColor(Random) AND Keyboard.playRandomNote() ELSE Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Herramienta de juego de rol. El dispositivo escanea el entorno. Si se mueve hacia una dirección específica (simulada) o detecta vibraciones sutiles, la luz parpadea y aumenta la frecuencia del sonido.",
+    "transformedIdeaTitle": "Cazafantasmas: El Rastreador Ectoplásmico",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Camina con tu sensor. Programa el dispositivo para que, al detectar pequeños movimientos (como tu mano temblando de miedo), la luz parpadee erráticamente y el sonido suba de tono, indicando que el espectro está cerca.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Frequency = 100 + (Motion.magnitude * 50); Keyboard.playTone(Frequency); Lamp.flicker()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Tamagotchi Físico de Mascota",
+    "originalIdeaDescription": "Una mascota virtual representada por luz. Necesita ser 'mecida' suavemente para dormir (luz tenue, canción de cuna). Si se agita fuerte, se 'marea' (luz verde, sonido feo).",
+    "transformedIdeaTitle": "Cuida a tu Huevo de Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. Debes mantenerlo caliente y tranquilo. Si lo meces suavemente, brilla en naranja cálido y ronronea. ¡Cuidado! Si lo agitas muy fuerte, se pondrá verde y chillará porque se marea.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.gentleRock THEN Lamp(Orange) + Melody(Lullaby); IF Motion.hardShake THEN Lamp(Green) + Note(HighPitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Cubo de Emociones",
+    "originalIdeaDescription": "Un objeto que cambia su 'estado de ánimo' según cómo se coloque. Cada cara (orientación del sensor) dispara un color de luz y un acorde musical diferente (triste, feliz, enojado).",
+    "transformedIdeaTitle": "El Cubo de la Empatía",
+    "transformedIdeaDescription": "Crea un cubo que expresa sentimientos. Si pones el cubo boca arriba, debe ponerse amarillo y sonar alegre. Si lo pones boca abajo, debe ponerse azul y tocar una melodía triste. Si lo pones de lado, ¡se pone rojo y suena enfadado!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SWITCH(Motion.orientation): CASE Up: Lamp(Yellow), Play(MajorChord); CASE Down: Lamp(Blue), Play(MinorChord)..."
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Estatua Musical Inversa",
+    "originalIdeaDescription": "Juego donde el usuario debe quedarse totalmente inmóvil. Si el sensor detecta movimiento, la música se detiene abruptamente y la luz se apaga, indicando eliminación.",
+    "transformedIdeaTitle": "Desafío de los Maniquíes Vivientes",
+    "transformedIdeaDescription": "El museo cobra vida de noche, pero los guardias vigilan. Debes programar el sistema para que toque música y luces festivas mientras detecte movimiento (baile). Pero si dejas de moverte (te conviertes en estatua), ¡todo debe apagarse para esconderse!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isMoving THEN Lamp.on() AND Keyboard.playMelody() ELSE Lamp.off() AND Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo como un avión. Al inclinar hacia arriba/abajo (pitch) o lados (roll), el sonido del motor cambia de tono y las luces de las alas cambian de color.",
+    "transformedIdeaTitle": "Piloto de Pruebas: Avión Supersónico",
+    "transformedIdeaDescription": "¡Despegue inmediato! Usa el sensor como la palanca de mando de tu jet. Al inclinar el morro hacia arriba (subir), el motor debe rugir más agudo y las luces traseras brillar más intenso para simular los postquemadores.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pitch = Map(Motion.Y); Lamp.brightness(Pitch); Keyboard.playTone(BaseFreq + Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escáner Médico de Juguete",
+    "originalIdeaDescription": "Dispositivo para 'escanear' pacientes. Se pasa lentamente sobre el cuerpo. Detecta movimiento suave y reproduce un sonido de escaneo futurista con una luz azul de barrido.",
+    "transformedIdeaTitle": "Doctor del Futuro: El Sanador Holográfico",
+    "transformedIdeaDescription": "Diseña una herramienta para curar alienígenas. Pasa el sensor sobre el 'paciente'. Mientras muevas la mano lentamente y constante, debe emitir una luz azul sanadora y un sonido pulsante. Si te detienes, el escáner se apaga.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.speed > 0 AND Motion.speed < 5 THEN Lamp.color(Blue) AND Keyboard.playPulsingSound()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Virtual",
+    "originalIdeaDescription": "Simula el golpe de una raqueta. Un movimiento rápido de 'swing' activa un flash de luz blanca y un sonido de golpe seco.",
+    "transformedIdeaTitle": "Wimbledon Virtual: El Saque Perfecto",
+    "transformedIdeaDescription": "Entrena tu saque de tenis sin pelota. Programa tu dispositivo para detectar un 'swing' rápido. Justo en el momento de máxima velocidad, debe destellar una luz blanca y sonar un 'PUM' musical para indicar que golpeaste la pelota virtual.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration > StrikeThreshold THEN Lamp.flash(White, 0.1s) AND Keyboard.playNote(C3, short)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Cantarín",
+    "originalIdeaDescription": "Herramienta de construcción divertida. Cuando el dispositivo está perfectamente nivelado (horizontal), se enciende en verde y canta una nota armoniosa. Si está inclinado, se pone rojo y suena desafinado.",
+    "transformedIdeaTitle": "El Constructor de Torres Perfectas",
+    "transformedIdeaDescription": "Ayuda a los arquitectos a que su torre no se caiga. Crea un nivel digital. Si el sensor está perfectamente plano, debe brillar en verde y tocar un acorde de triunfo. Si se inclina un poco, debe avisar con luz amarilla y notas de advertencia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.tiltX == 0 AND Motion.tiltY == 0 THEN Lamp(Green) + Chord(C_Major) ELSE Lamp(Red) + Note(B_Flat)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música Giratoria",
+    "originalIdeaDescription": "Simula una caja de música clásica de cuerda. Solo reproduce la melodía y enciende una luz cálida mientras el usuario esté rotando el dispositivo continuamente.",
+    "transformedIdeaTitle": "La Caja de Música Encantada",
+    "transformedIdeaDescription": "Recupera la magia de los juguetes antiguos. Para que la canción de cuna suene y la luz cálida se encienda, el usuario debe girar el dispositivo suavemente en círculos, como si le diera cuerda. Si deja de girar, la magia se desvanece.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.rotationSpeed > 0 THEN Keyboard.playNextNote() AND Lamp.on(WarmWhite) ELSE Keyboard.stop()"
+  }
+]

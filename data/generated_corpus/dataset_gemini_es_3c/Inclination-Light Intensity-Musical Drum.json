@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Movement and Light Controlled Rhythm Generator",
+    "originalIdeaDescription": "A system where the rhythm of a drum beat changes speed based on the ambient light intensity, while the specific type of drum sound (snare, kick, cymbal) is selected by tilting the device in different directions.",
+    "transformedIdeaTitle": "The Solar Powered DJ",
+    "transformedIdeaDescription": "You are a DJ at an outdoor festival powered by the sun! Create a program where the brightness of the sun (Light Intensity) controls how fast your beat plays. Then, tilt your controller left for a Kick drum or right for a Snare to mix the track live.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET speed = LightIntensity; IF Inclination.X < -10 THEN Play(Kick, speed) ELSE IF Inclination.X > 10 THEN Play(Snare, speed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Interactive Spooky Cave Soundscape",
+    "originalIdeaDescription": "A sound effect device for storytelling. When the environment is dark, spooky drum echoes play. Tilting the device mimics walking, triggering footstep-like percussion sounds to simulate exploring a cave.",
+    "transformedIdeaTitle": "Haunted House Explorer",
+    "transformedIdeaDescription": "Design a spooky sound system for a haunted house game. When the lights go out (Low Light), a heartbeat drum plays automatically. To escape, the player must tilt the device forward to 'run', which triggers rapid footstep percussion sounds.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 20 THEN Loop(Heartbeat); IF Inclination.Y > 15 THEN Play(Footsteps)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Anti-Theft Cookie Jar Alarm",
+    "originalIdeaDescription": "A security device designed to be placed inside a box or drawer. If the drawer is opened (detecting light) or the box is moved (detecting inclination), a loud drum roll alarm is triggered.",
+    "transformedIdeaTitle": "The Cookie Jar Guardian",
+    "transformedIdeaDescription": "Protect your snacks from cookie thieves! Build a trap that stays silent when it is dark and still inside the jar. If someone opens the lid (Light increases) or tries to carry the jar away (Tilt changes), sound the drum alarm!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 10 OR Inclination.Changes() THEN Play(Snare_Roll)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Construction Level with Audio Feedback",
+    "originalIdeaDescription": "A tool for builders that uses the drum sound to indicate if a surface is level. It only works during daylight hours; if the light is too low, it plays a different sound to indicate 'unsafe working conditions'.",
+    "transformedIdeaTitle": "Robot Builder's Level",
+    "transformedIdeaDescription": "Help the construction robot build a straight wall. If the brick is perfectly flat (No Tilt), play a happy Cymbal sound. If it's tilted, stay silent. However, if it's too dark to work, the robot must bang the drum to signal 'Stop Work'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN Play(BassDrum) ELSE IF Inclination.X == 0 THEN Play(Cymbal)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Gestural Percussion Theremin",
+    "originalIdeaDescription": "A musical instrument played without touching. The user creates shadows over the light sensor to trigger beats, and tilts the device to modulate the pitch or select different percussion kits.",
+    "transformedIdeaTitle": "The Shadow Drummer",
+    "transformedIdeaDescription": "Create an invisible drum kit! Wave your hand over the sensor (lowering Light Intensity) to hit the drum. Tilt the device backward to switch from a rock kit to an electronic kit. Can you play a beat just using shadows?",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < Threshold THEN Play(Selected_Kit); IF Inclination.Y > 20 THEN Selected_Kit = Electronic ELSE Selected_Kit = Rock"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Solar Powered Space Rover Simulation",
+    "originalIdeaDescription": "A simulation where a rover moves (drum sounds representing engine) only when there is enough light. Inclination controls the steering direction, changing the panning of the sound.",
+    "transformedIdeaTitle": "Mars Rover Solar Rescue",
+    "transformedIdeaDescription": "Your Mars Rover needs sunlight to move! Program the rover to make engine sounds (Drums) only when the sun shines (High Light). If the rover tilts left or right (climbing a rock), change the drum rhythm to 'Heavy Load' mode.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 THEN { Play(Engine_Beat); IF Inclination.X != 0 THEN Play(Heavy_Beat) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sunrise Yoga Meditation Timer",
+    "originalIdeaDescription": "A wellness device that plays a soft gong (Drum) when the light level reaches a 'sunrise' threshold. The user must tilt the device to acknowledge and stop the sound.",
+    "transformedIdeaTitle": "Zen Master's Gong",
+    "transformedIdeaDescription": "Create a meditation assistant. When the room gets bright enough (morning arrives), the device should gently play a Gong sound. To finish the meditation session, the user must slowly tilt the device forward to bow.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 60 AND !Acknowledged THEN Play(Gong); IF Inclination.Y > 30 THEN Stop(Gong)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Flashlight Tag Target Vest",
+    "originalIdeaDescription": "A wearable game element. If a beam of light hits the sensor, a 'hit' sound plays (Drum). The player tilts their body to 'reload' or reset the shield after being hit.",
+    "transformedIdeaTitle": "Laser Tag Defender",
+    "transformedIdeaDescription": "Build your own laser tag vest! If a flashlight hits your sensor (High Light), play a loud Snare sound to show you've been tagged. To respawn and play again, you have to do a 'dodge' move by tilting your body sharply to the left.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 90 THEN Play(Hit_Sound); IF Inclination.X < -45 THEN Reset_Game()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Digital Pet Happiness Monitor",
+    "originalIdeaDescription": "A virtual pet that requires light to be happy (plays a happy beat). If it's dark, it gets sad. Tilting the device 'feeds' the pet, producing a chewing drum sound.",
+    "transformedIdeaTitle": "Feed the Light Monster",
+    "transformedIdeaDescription": "Your digital pet, the Light Monster, loves sunshine. If it's bright, it hums a happy beat. If it gets dark, it stops singing. When it gets hungry, tilt the device to toss it a treat, and hear it crunch (Drum sound)!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 40 THEN Play(Happy_Beat); IF Inclination.Change THEN Play(Crunch_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Bicycle Safety Turn Signal",
+    "originalIdeaDescription": "A bike attachment where tilting the handlebars left or right triggers a rhythmic clicking (Drum) turn signal. The volume or intensity adjusts based on ambient light (louder at night).",
+    "transformedIdeaTitle": "Smart Bike Blinker",
+    "transformedIdeaDescription": "Prototype a safety device for cyclists. When you tilt the handle to turn, play a 'Click-Clack' drum rhythm so pedestrians hear you. Make the sound louder if the Light Sensor detects it is nighttime for extra safety.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X != 0 THEN { Volume = (100 - LightIntensity); Play(Click_Clack, Volume) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Thunderstorm Simulator",
+    "originalIdeaDescription": "An environmental simulator. Tilting creates wind sounds (cymbal swells), while covering the light sensor (clouds) triggers thunderclaps (bass drums).",
+    "transformedIdeaTitle": "The Weather Wizard",
+    "transformedIdeaDescription": "You control the weather! Create a storm by covering the light sensor with your hand to simulate heavy clouds—this triggers a Bass Drum thunderclap. Tilt the device back and forth to simulate the wind hitting the trees (Cymbals).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 10 THEN Play(Thunder); IF Inclination.Changes() THEN Play(Wind_Cymbal)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Secret Agent Safe Cracker",
+    "originalIdeaDescription": "A game where the user must tilt the device to find a specific angle. When the angle is correct, a light must be shined on the sensor to 'unlock' the safe, indicated by a drum roll.",
+    "transformedIdeaTitle": "Mission Impossible: The Vault",
+    "transformedIdeaDescription": "Crack the safe code! You must hold the device perfectly flat (Tilt = 0). While holding it steady, shine a flashlight on the sensor to activate the laser drill. If you do both correctly, the vault opens with a victory drum roll!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X == 0 AND Inclination.Y == 0 AND LightIntensity > 80 THEN Play(Victory_Roll)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sleepwalker Warning System",
+    "originalIdeaDescription": "A monitoring device for a bedside table. If it's dark (nighttime) and the device is knocked over (tilt), it plays a gentle drum alarm to wake the user.",
+    "transformedIdeaTitle": "Nightwatch Guard",
+    "transformedIdeaDescription": "Design a guard for your room at night. The system activates only when the lights are off. If an intruder (or a sleepwalking sibling) knocks over the device (Tilt), it plays a drum alarm to wake you up.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 10 AND Inclination.Total > 45 THEN Play(Alarm_Drum)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Cooking Pan Simulator",
+    "originalIdeaDescription": "Simulates cooking popcorn. The light sensor represents the stove heat (brighter = hotter). Tilting the device shakes the pan. The drums play popping sounds that speed up with light and tilt.",
+    "transformedIdeaTitle": "Popcorn Chef",
+    "transformedIdeaDescription": "Let's cook popcorn! The brighter the light, the hotter the stove. Shake the pan by tilting the device back and forth. If the heat is high and you are shaking, play 'Pop' drum sounds. Don't stop shaking or it will burn!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 AND Inclination.Shaking == True THEN Play(Pop_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Morse Code Communicator",
+    "originalIdeaDescription": "A communication device where tilting selects a 'Dot' or 'Dash' sound (different drums), and covering/uncovering the light sensor sends the message.",
+    "transformedIdeaTitle": "Secret Spy Telegraph",
+    "transformedIdeaDescription": "Send secret messages to your friends. Tilt left to prepare a 'Dot' (Snare) and right for a 'Dash' (Bass). Tap the light sensor (cover/uncover) to send the sound. Can you spell S-O-S?",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SELECT_DRUM = (Inclination.X < 0 ? Snare : Bass); IF LightIntensity.Change(Dark_To_Bright) THEN Play(SELECT_DRUM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Interactive Audiobook Companion",
+    "originalIdeaDescription": "Enhances reading. The user tilts the device to turn the 'page' (plays a page-turn sound). If the room is too dark to read, it plays a warning drum beat.",
+    "transformedIdeaTitle": "Smart Reading Light Buddy",
+    "transformedIdeaDescription": "Encourage healthy reading habits! Create a device that checks your environment. If you tilt it to mimic turning a page, it makes a 'Whoosh' cymbal sound. But if it's too dark to read safely, it plays a 'Bong' sound to tell you to turn on a lamp.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Change THEN Play(Cymbal_Whoosh); IF LightIntensity < 15 THEN Play(Warning_Bong)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rhythm Accuracy Game",
+    "originalIdeaDescription": "A game where a light flashes at a specific tempo. The user must tilt the device to the beat. If they are in sync (tilt happens when light is high), a rewarding drum sound plays.",
+    "transformedIdeaTitle": "Beat Catcher",
+    "transformedIdeaDescription": "Test your rhythm! Watch the Light Intensity value on screen pulse like a beat. You must tilt your controller exactly when the light is brightest. If your timing is perfect, you earn a cool Drum Fill sound!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Change AND LightIntensity == Peak THEN Play(Reward_Drum) ELSE Play(Fail_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Bat Sonar Navigation",
+    "originalIdeaDescription": "Simulates being a bat. The darker it is, the more sensitive the sonar (drums) becomes. Tilting steers the flight. If light hits the bat (sunlight), the drums stop (sleeping).",
+    "transformedIdeaTitle": "The Night Bat Flight",
+    "transformedIdeaDescription": "Fly like a bat! You only fly in the dark. If the light sensor is covered (Dark), the drums beat faster as you tilt forward (diving). If bright light hits the sensor, the bat goes to sleep and the sound stops.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 THEN { Speed = Inclination.Y; Play(Sonar_Beat, Speed) } ELSE Stop_Sound()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mining Cart Adventure",
+    "originalIdeaDescription": "Simulates a mine cart ride. Darkness triggers 'underground' echo effects on the drums. Tilting leans the cart on the tracks to avoid obstacles, triggering metal clank sounds.",
+    "transformedIdeaTitle": "Escape the Mine Shaft",
+    "transformedIdeaDescription": "You are in a runaway mine cart! When you enter a tunnel (Low Light), the background rumble gets louder. You must tilt left or right to keep the cart on the rails—if you tilt too far, hear the 'Clang' of the cart hitting the wall!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN Play(Rumble); IF Abs(Inclination.X) > 40 THEN Play(Metal_Clang)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Plant Growth Time-Lapse Music",
+    "originalIdeaDescription": "An art installation concept. Slowly changes a drum beat based on light cycles (day/night) over time. Tilt is used to 'water' the plant, adding a rain-stick sound.",
+    "transformedIdeaTitle": "The Musical Garden",
+    "transformedIdeaDescription": "Code a musical plant. When the sun is out (High Light), it plays a fast, happy beat. When the sun goes down (Low Light), it plays a slow, sleeping beat. Tilt the device to 'pour water' and add a shaker sound to help it grow.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN Play(Fast_Beat) ELSE Play(Slow_Beat); IF Inclination.Y > 45 THEN Play(Shaker)"
+  }
+]

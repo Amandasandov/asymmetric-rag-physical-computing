@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Sonido Radar Giratorio",
+    "originalIdeaDescription": "Un sistema que actúa como un radar. El usuario gira el dispositivo 360 grados. La matriz LED muestra una línea de barrido que rota según la brújula. Si el sensor de ruido detecta un sonido fuerte en una dirección específica, marca un punto ('blip') en la matriz LED indicando la ubicación de la fuente de ruido.",
+    "transformedIdeaTitle": "Radar de Invasión Alienígena",
+    "transformedIdeaDescription": "¡Los extraterrestres se acercan! Eres el operador del radar de defensa. Debes girar tu estación (el dispositivo) para escanear el horizonte. Si escuchas un ruido fuerte, significa que hay una nave enemiga. El sistema mostrará la posición del enemigo en la pantalla para que puedas alertar a la base.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "heading = Compass.getHeading(); IF NoiseLevel > 70 THEN LEDMatrix.drawDot(heading) ELSE LEDMatrix.drawLine(heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Direccional Activada por Voz",
+    "originalIdeaDescription": "Un mecanismo de seguridad que requiere dos factores para desbloquearse: orientar el dispositivo hacia un punto cardinal específico (Norte, Sur, Este u Oeste) y emitir un nivel de ruido específico (como un aplauso o contraseña hablada) simultáneamente para mostrar un ícono de candado abierto.",
+    "transformedIdeaTitle": "La Bóveda del Espía Secreto",
+    "transformedIdeaDescription": "Tienes que abrir la bóveda secreta del banco, pero el sistema es muy avanzado. Solo se abre si apuntas el dispositivo exactamente al Norte y das una palmada fuerte y seca. Si te equivocas de dirección o haces poco ruido, ¡la alarma visual (una X roja) se activará!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isNorth() AND NoiseLevel > 80 THEN LEDMatrix.show('OpenLock') ELSE LEDMatrix.show('X')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Meditación Orientado al Este",
+    "originalIdeaDescription": "Una herramienta para mindfulness que guía al usuario a mirar hacia el Este (salida del sol). Una vez orientado, el usuario debe mantener el silencio absoluto. La Matriz LED se va llenando poco a poco (barra de progreso) mientras se mantenga la orientación y el silencio.",
+    "transformedIdeaTitle": "El Templo del Silencio",
+    "transformedIdeaDescription": "Eres un monje en entrenamiento buscando la paz interior. Debes mirar hacia el sol naciente (Este) y mantenerte tan quieto y silencioso como una estatua. Si logras mantener el silencio, una flor digital florecerá en tu pantalla píxel por píxel.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isEast() AND NoiseLevel < 10 THEN LEDMatrix.fillProgress() ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Direccional",
+    "originalIdeaDescription": "El dispositivo detecta hacia dónde mira el usuario. Si mira hacia una dirección predefinida como 'zona de tormenta', el sensor de ruido controla la intensidad de un rayo animado en la matriz LED. Cuanto más fuerte sople el usuario (ruido), más grande es el rayo.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "¡Estás persiguiendo un tornado! Gira tu vehículo hacia el Oeste donde está la tormenta. Una vez allí, simula el viento soplando fuerte hacia el micrófono. Cuanto más fuerte soples, más intenso será el relámpago que verás en tu pantalla de navegación.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'West' THEN { intensity = NoiseLevel; LEDMatrix.animateLightning(intensity) }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Brújula de Animales Ruidosos",
+    "originalIdeaDescription": "Al apuntar el dispositivo a los cuatro puntos cardinales, el sistema espera un sonido. Dependiendo de la dirección, la matriz LED muestra un animal diferente, pero solo si el niño hace el ruido correspondiente al animal (detectado por umbral de volumen).",
+    "transformedIdeaTitle": "El Zoológico Mágico",
+    "transformedIdeaDescription": "El zoológico está a oscuras y necesitas encontrar a los animales. Si apuntas al Norte, despierta al León con un rugido fuerte para ver su cara. Si apuntas al Sur, despierta al ratón con un sonido muy suave. ¡Aprende a controlar tu voz y tu dirección!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.isNorth() AND NoiseLevel > 90 THEN LEDMatrix.show('Lion'); IF Compass.isSouth() AND NoiseLevel < 20 THEN LEDMatrix.show('Mouse')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "El usuario debe navegar un laberinto físico girando el dispositivo para seguir direcciones indicadas en la Matriz LED (flechas). Sin embargo, debe hacerlo moviéndose tan silenciosamente que el sensor de ruido no supere un umbral bajo, o perderá el juego.",
+    "transformedIdeaTitle": "Escape del Castillo Ninja",
+    "transformedIdeaDescription": "Eres un ninja escapando de un castillo enemigo. La pantalla te mostrará una flecha hacia dónde debes girar (Norte, Sur, Este, Oeste). Debes girar tu cuerpo hacia esa dirección sin hacer NINGÚN ruido. Si tus pasos suenan, ¡los guardias te atraparán!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = randomDirection(); LEDMatrix.showArrow(target); IF Compass.matches(target) AND NoiseLevel > Threshold THEN LEDMatrix.show('GameOver')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Durmiente",
+    "originalIdeaDescription": "Una cara en la matriz LED que 'duerme' (ojos cerrados). Si se detecta ruido fuerte, la mascota se despierta asustada. Si se gira el dispositivo suavemente (cambio de brújula lento) mientras se le canta (ruido medio constante), la mascota sonríe.",
+    "transformedIdeaTitle": "El Huevo de Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. No le gustan los ruidos fuertes o se asustará. Para hacerlo feliz y que nazca, debes mecerlo suavemente (girando despacio de izquierda a derecha) mientras le tarareas una canción de cuna suavemente.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN LEDMatrix.show('Scared'); IF Compass.isRocking() AND NoiseLevel.isMedium() THEN LEDMatrix.show('HappyDragon')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "El dispositivo escanea el entorno. Cuando la brújula apunta a una dirección aleatoria 'embrujada' generada por el código, la matriz LED parpadea. El usuario debe gritar '¡FUERA!' (ruido alto) para exorcizar esa dirección y limpiar la matriz.",
+    "transformedIdeaTitle": "Cazafantasmas: Misión Nocturna",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Gira lentamente con tu sensor. Cuando la pantalla empiece a parpadear con estática, ¡has encontrado al fantasma! Para atraparlo, debes apuntar fijo ahí y gritar fuerte para activar la trampa de luz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ghostDir = random(); IF Compass == ghostDir THEN { LEDMatrix.flicker(); IF NoiseLevel > 85 THEN LEDMatrix.show('GhostCaught') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Control de Tráfico Aéreo",
+    "originalIdeaDescription": "El usuario actúa como una torre de control. La matriz LED muestra un avión. El usuario debe girar hacia la pista de aterrizaje (Norte) y hacer ruido de motor para guiar el avión. Si la dirección es incorrecta o hay mucho silencio, el avión muestra señal de error.",
+    "transformedIdeaTitle": "Piloto de Aterrizaje Forzoso",
+    "transformedIdeaDescription": "¡Mayday! Eres un piloto en medio de la niebla. Tienes que encontrar la pista de aterrizaje que está al Norte. Gira tu volante hasta encontrar el Norte y mantén los motores encendidos (haz ruido constante con la boca) para poder ver las luces de la pista en tu pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isNorth() AND NoiseLevel > 40 THEN LEDMatrix.show('Runway') ELSE LEDMatrix.show('Fog')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos",
+    "originalIdeaDescription": "El dispositivo funciona como una varita. Para lanzar un hechizo de 'Fuego', el usuario debe apuntar al Sur y gritar. Para 'Hielo', apuntar al Norte y soplar suavemente. La matriz LED muestra el elemento correspondiente.",
+    "transformedIdeaTitle": "Escuela de Magia: Duelo de Elementos",
+    "transformedIdeaDescription": "¡Bienvenido a la clase de duelos! Tu varita reacciona a la dirección y a tu voz. Para lanzar una bola de fuego, apunta al Sur y grita '¡INCENDIO!'. Para crear un escudo de hielo, apunta al Norte y sopla suavemente. ¡Mira la pantalla para ver tu magia!",
+    "minAge": 8,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isSouth() AND NoiseLevel > 80 THEN LEDMatrix.show('Fire'); IF Compass.isNorth() AND NoiseLevel < 40 THEN LEDMatrix.show('Ice')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Brújula de Fiesta Musical",
+    "originalIdeaDescription": "Un visualizador de música que cambia el patrón visual según la dirección cardinal hacia la que se apunta el dispositivo, mientras que la altura de las barras del ecualizador en la LED Matrix depende del nivel de ruido ambiental de la música.",
+    "transformedIdeaTitle": "DJ de la Disco Giratoria",
+    "transformedIdeaDescription": "¡Eres el DJ y las luces dependen de ti! Pon música en tu habitación. Si apuntas tu dispositivo al Norte, verás barras de ecualizador saltando. Si giras al Este, verás círculos pulsando al ritmo de la música. ¡Gira y baila para cambiar el show de luces!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pattern = Compass.getCardinalDir(); height = map(NoiseLevel, 0, 100, 0, 7); LEDMatrix.showPattern(pattern, height)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de Rescate en Montaña",
+    "originalIdeaDescription": "Simula una baliza de emergencia. El usuario debe orientar el dispositivo hacia el Norte (señal más fuerte) y silbar o gritar en intervalos regulares. La matriz LED muestra SOS solo si la orientación es correcta y el patrón de ruido es detectado.",
+    "transformedIdeaTitle": "Perdidos en el Everest",
+    "transformedIdeaDescription": "Estás atrapado en una tormenta de nieve y necesitas pedir ayuda. Tu radio solo funciona si apuntas hacia la base (Norte). Gira hasta encontrar el Norte y luego envía el código Morse de SOS haciendo tres ruidos cortos, tres largos y tres cortos.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.isNorth() THEN { IF detectMorseSOS(NoiseLevel) THEN LEDMatrix.scroll('HELP SENT') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de 'Simón Dice' Direccional",
+    "originalIdeaDescription": "El sistema da una instrucción visual (ej. Letra 'N' + ícono de altavoz). El usuario debe girar al Norte y hacer ruido. Si sale 'S' + ícono de silencio, debe girar al Sur y callarse. La matriz LED muestra acierto o error.",
+    "transformedIdeaTitle": "El Comandante Robot Dice...",
+    "transformedIdeaDescription": "Sigue las órdenes del Comandante Robot. Si en la pantalla aparece una 'N' y una boca, gira al Norte y grita. Si aparece una 'E' y un dedo en los labios, gira al Este y quédate callado. ¡Cada vez va más rápido!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.matches(targetDir) AND NoiseLevel.matches(targetSound) THEN Score++ ELSE GameOver"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fugas de Tubería",
+    "originalIdeaDescription": "Simulación de mantenimiento. El usuario usa el dispositivo para escanear una 'pared' virtual (girando 360). En cierto ángulo, el sensor de ruido simula escuchar agua (feedback visual). El usuario debe encontrar el ángulo donde el 'ruido' visual es mayor y mantenerlo.",
+    "transformedIdeaTitle": "Fontanero del Futuro",
+    "transformedIdeaDescription": "Hay una fuga de agua invisible en la estación espacial. Gira tu escáner alrededor de la habitación. Cuando te acerques a la dirección correcta (definida por el programa), la pantalla empezará a llenarse como si fuera agua. Haz ruido de 'shhhh' para sellar la fuga cuando la encuentres.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "dist = abs(Compass.heading - leakAngle); LEDMatrix.showWaterLevel(dist); IF dist < 10 AND NoiseLevel > 50 THEN LEDMatrix.show('Fixed')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Viento para Vela",
+    "originalIdeaDescription": "El usuario actúa como el viento. Debe orientarse hacia donde quiere que vaya el barco (brújula) y soplar (ruido). La matriz LED muestra una vela inflándose y la velocidad del barco basada en la intensidad del soplido.",
+    "transformedIdeaTitle": "Regata de Veleros Virtual",
+    "transformedIdeaDescription": "¡Capitán, necesitamos viento! Gira tu cuerpo para dirigir el barco hacia la meta (Oeste). Luego, sopla fuerte en el micrófono para inflar las velas. Si dejas de soplar o cambias de dirección, el barco en la pantalla se detendrá.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.isWest() THEN speed = NoiseLevel; LEDMatrix.animateBoat(speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Explorador de Cuevas con Eco",
+    "originalIdeaDescription": "El dispositivo simula estar en una cueva oscura. La matriz está apagada. El usuario debe hacer un ruido fuerte (sonar) para ver brevemente las paredes de la cueva en la LED Matrix. La forma de las paredes cambia según la dirección de la brújula.",
+    "transformedIdeaTitle": "El Murciélago Ciego",
+    "transformedIdeaDescription": "Eres un murciélago volando en la oscuridad total. Para ver, debes usar la ecolocalización. Gira la cabeza y emite un chillido corto. El sonido rebotará y la pantalla se iluminará por un segundo mostrándote si hay obstáculos en esa dirección.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Trigger THEN { wallType = map(Compass.heading, 0, 360); LEDMatrix.flash(wallType) } ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Guardián de la Biblioteca",
+    "originalIdeaDescription": "Un sistema de monitoreo que divide la sala en 4 zonas (N, S, E, O). El usuario apunta a una zona y la matriz muestra un gráfico de barras del ruido actual en tiempo real, alertando si supera el límite permitido.",
+    "transformedIdeaTitle": "Policía del Silencio",
+    "transformedIdeaDescription": "Eres el encargado de mantener el silencio en la biblioteca galáctica. Gira tu detector hacia las diferentes mesas (Norte, Sur, Este, Oeste). Si detectas que alguien está hablando (el nivel de ruido sube en la pantalla), ¡haz parpadear la luz de advertencia!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "level = NoiseLevel; LEDMatrix.showBarGraph(level); IF level > Max THEN LEDMatrix.blink('SILENCE')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Música Giratoria",
+    "originalIdeaDescription": "Al girar el dispositivo como si fuera una manivela (cambio constante de brújula), si el usuario canta o tararea, la matriz LED muestra notas musicales animadas. Si deja de girar o de cantar, la animación se detiene.",
+    "transformedIdeaTitle": "La Caja Musical Encantada",
+    "transformedIdeaDescription": "Esta caja de música no funciona con cuerda, sino con movimiento y voz. Tienes que girar sobre ti mismo constantemente (como una bailarina) mientras cantas. Si haces ambas cosas a la vez, verás notas musicales bailando en la pantalla.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isRotating() AND NoiseLevel > 30 THEN LEDMatrix.animateNotes() ELSE LEDMatrix.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Brújula de Emociones",
+    "originalIdeaDescription": "Asigna una emoción a cada punto cardinal. Norte=Feliz, Sur=Triste, etc. El usuario gira a la emoción deseada y usa el nivel de ruido para indicar la intensidad de esa emoción (grito=muy feliz, susurro=poco feliz). La LED Matrix muestra un emoji escalado.",
+    "transformedIdeaTitle": "El Espejo de las Emociones",
+    "transformedIdeaDescription": "¿Cómo te sientes hoy? Gira hacia el Norte si estás feliz o al Sur si estás enfadado. Luego, expresa cuánto lo sientes usando tu voz. Si gritas mirando al Norte, aparecerá una cara sonriente gigante. Si susurras, será pequeñita.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "emotion = getEmotionFromCompass(); size = map(NoiseLevel); LEDMatrix.drawEmoji(emotion, size)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Buscador de Señales Espaciales",
+    "originalIdeaDescription": "El usuario debe buscar una frecuencia específica. La matriz muestra estática. Al girar lentamente, si la dirección es correcta, la estática disminuye. Para 'sintonizar' y ver el mensaje alienígena, el usuario debe hacer un zumbido constante.",
+    "transformedIdeaTitle": "Hacker de Satélites",
+    "transformedIdeaDescription": "Debes interceptar un mensaje secreto del espacio. Gira tu antena parabólica hasta que la 'nieve' en la pantalla desaparezca. Cuando tengas la señal clara, haz un sonido de 'biiiiiip' continuo para descargar y decodificar el mensaje secreto en la pantalla.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.isTarget() THEN { LEDMatrix.clearStatic(); IF NoiseLevel.isConstantTone() THEN LEDMatrix.scroll('HELLO WORLD') }"
+  }
+]

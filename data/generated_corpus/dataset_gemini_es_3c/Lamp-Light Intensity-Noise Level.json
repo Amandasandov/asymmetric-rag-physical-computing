@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Farola Urbana Inteligente",
+    "originalIdeaDescription": "Un sistema de iluminación pública que ahorra energía. La lámpara se enciende tenue si es de noche (Luz baja). Si detecta ruido de coches o pasos, aumenta el brillo al máximo.",
+    "transformedIdeaTitle": "Ingeniero de la Ciudad Ecológica",
+    "transformedIdeaDescription": "Diseña las luces del futuro. Para ahorrar electricidad, la farola debe estar apagada de día (Luz > 50). De noche, se enciende en modo ahorro (Brillo bajo). Sin embargo, si escuchas un coche acercarse (Ruido > 60), ¡enciende la lámpara al 100% para evitar accidentes!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 50: IF Noise.level > 60 THEN Lamp.brightness(100) ELSE Lamp.brightness(30)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Vela Mágica Recargable",
+    "originalIdeaDescription": "La lámpara imita una vela. Para encenderla, se acerca una 'cerilla' (linterna al sensor). Para apagarla, se sopla fuerte (ruido).",
+    "transformedIdeaTitle": "La Vela Eterna",
+    "transformedIdeaDescription": "Crea una vela digital. Está apagada. Para encenderla, acerca otra luz al sensor (simula prender la mecha). La lámpara brillará en naranja. Para apagarla, tienes que soplar fuerte al micrófono (Ruido alto). Si soplas suave, solo parpadea.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.peak(): Lamp.on(Orange); IF Noise.blow(): Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Monitor de Biblioteca",
+    "originalIdeaDescription": "Dispositivo para mantener el silencio. Si hay luz (biblioteca abierta) y el ruido supera el límite, la lámpara se pone roja.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Ayuda a la bibliotecaria. El dispositivo vigila. Si la luz está encendida (es horario de apertura) y los estudiantes gritan (Ruido > 70), la Lámpara se pondrá Roja para pedir silencio. Si están callados, se mantendrá en Verde suave.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.on AND Noise.level > 70 THEN Lamp.color(Red) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Cajón Secreto",
+    "originalIdeaDescription": "Protege un cajón. Si está oscuro y en silencio, está armado. Si entra luz (abrir) o hay ruido, parpadea una alarma.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tus secretos. Esconde el dispositivo en un cajón. Si tu hermano lo abre (el sensor detecta Luz) o hace ruido al rebuscar, la Lámpara debe parpadear en Azul y Rojo como la policía para asustarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 10 OR Noise.level > 30 THEN Lamp.strobe(Red, Blue)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Luciérnaga Tímida",
+    "originalIdeaDescription": "La lámpara pulsa suavemente en la oscuridad y silencio. Si hay luz o ruido fuerte, se 'asusta' y se apaga.",
+    "transformedIdeaTitle": "Cazador de Hadas",
+    "transformedIdeaDescription": "Encuentra al hada del bosque. Ve a un lugar oscuro y quédate muy quieto. La Lámpara empezará a pulsar en color rosa. Pero ten cuidado: si enciendes la luz o haces el menor ruido, el hada se asustará y la luz se apagará inmediatamente.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.low AND Noise.low THEN Lamp.breathe(Pink) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Luz de Discoteca Automática",
+    "originalIdeaDescription": "Solo funciona de noche (luz baja). La lámpara cambia de color al ritmo de la música (ruido).",
+    "transformedIdeaTitle": "DJ Party Mode",
+    "transformedIdeaDescription": "¡Monta una fiesta! Baja las persianas para que esté oscuro. Pon tu canción favorita. La Lámpara escuchará el ritmo (picos de Ruido) y cambiará de color con cada golpe de batería. Si enciendes la luz de la sala, la fiesta se acaba (Lámpara apagada).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.beat() THEN Lamp.color(Random)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Monstruo de las Sombras",
+    "originalIdeaDescription": "Vive en la oscuridad. Si haces ruido, se enfada (luz roja). Si le iluminas con linterna, huye (luz se apaga).",
+    "transformedIdeaTitle": "La Bestia de la Cueva",
+    "transformedIdeaDescription": "Hay un monstruo en la cueva oscura. Si haces ruido, sus ojos se iluminan de Rojo amenazante. Para vencerlo, tienes que apuntarle con una linterna potente (Luz alta) directo a los ojos (sensor), lo que hará que desaparezca (Lámpara apagada).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.high THEN Lamp.off(); ELSE IF Noise.high THEN Lamp.set(Red)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Tráfico por Voz",
+    "originalIdeaDescription": "Semáforo manual. Luz roja por defecto. Si el usuario pita un silbato (ruido) y es de día, cambia a verde.",
+    "transformedIdeaTitle": "Agente de Tránsito",
+    "transformedIdeaDescription": "Dirige el tráfico. El semáforo está en Rojo (Lámpara Roja). Si es de día (Luz alta) y hay un atasco, toca tu silbato fuertemente (Ruido agudo) para cambiar la luz a Verde y dejar pasar a los coches.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.set(Red); IF Light.high AND Noise.whistle() THEN Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Luz de Lectura Inteligente",
+    "originalIdeaDescription": "Se enciende si está oscuro. Si hay mucho ruido (no es ambiente de lectura), parpadea para avisar.",
+    "transformedIdeaTitle": "Rincón de Lectura Perfecto",
+    "transformedIdeaDescription": "Diseña una lámpara para leer. Si la habitación se oscurece, la Lámpara se enciende en blanco cálido automáticamente. Pero si hay mucho alboroto alrededor (Ruido alto), la luz parpadeará suavemente para recordarte que busques un lugar más tranquilo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.low: Lamp.on(); IF Noise.high THEN Lamp.pulse()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Comunicador Morse Secreto",
+    "originalIdeaDescription": "El usuario envía señales de luz con una linterna al sensor. La lámpara del dispositivo repite el mensaje o confirma con un sonido (simulado visualmente).",
+    "transformedIdeaTitle": "Repetidor de Señales Espía",
+    "transformedIdeaDescription": "Establece una línea de comunicación. Envía código Morse con tu linterna hacia el sensor. El dispositivo debe detectar los flashes y repetirlos con su propia Lámpara en color Verde para confirmar que recibió el mensaje sin hacer ruido.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Signal = Read(Light.sensor); Lamp.replay(Signal, Color=Green)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Detecta un flash de luz (rayo). Espera el sonido (trueno). Si coinciden, la lámpara simula lluvia (azul parpadeante).",
+    "transformedIdeaTitle": "Meteorólogo Interactivo",
+    "transformedIdeaDescription": "Analiza la tormenta. Si el sensor detecta un flash repentino de luz (Rayo) y poco después un ruido fuerte (Trueno/Aplauso), la Lámpara se pondrá Azul y parpadeará simulando que empieza a llover fuerte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.flash(): WaitFor(Noise.clap); IF Success THEN Lamp.strobe(Blue)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Mascota Planta Virtual",
+    "originalIdeaDescription": "Necesita luz para vivir. Si se le habla (ruido), crece más rápido (lámpara cambia de color verde a flor).",
+    "transformedIdeaTitle": "La Flor Cantarina",
+    "transformedIdeaDescription": "Cultiva una flor mágica. Ponla al sol (Luz alta) para que esté sana (Lámpara Verde). Si además le cantas o le hablas con cariño (Ruido moderado), la Lámpara cambiará a Rosa, indicando que la flor ha florecido.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.high THEN Color=Green; IF Noise.voice() THEN Color=Pink; Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Despertador Amanecer",
+    "originalIdeaDescription": "Cuando sale el sol (luz aumenta), la lámpara se enciende gradualmente. Para apagarla (snooze), hay que hacer ruido.",
+    "transformedIdeaTitle": "Despertar Natural",
+    "transformedIdeaDescription": "Programa un despertador suave. Cuando la luz natural de la habitación aumente, la Lámpara debe ir encendiéndose poco a poco en tonos amarillos. Si quieres dormir 5 minutos más, da una palmada (Ruido) para apagarla temporalmente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Brightness = Map(Light.level); Lamp.set(Yellow, Brightness); IF Noise.clap() THEN Lamp.off(300s)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo: Museo",
+    "originalIdeaDescription": "El jugador debe robar el diamante. Si la linterna del guardia lo ilumina (Luz) o hace ruido (pasos), la alarma roja se dispara.",
+    "transformedIdeaTitle": "Misión Imposible",
+    "transformedIdeaDescription": "Estás en el museo de noche. Todo está oscuro. Si un guardia te apunta con su linterna (Luz > 20) O haces ruido al caminar (Ruido > 15), la Lámpara parpadeará en Rojo y perderás la misión. Quédate quieto y en silencio.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 OR Noise.level > 15 THEN Lamp.strobe(Red)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "En la oscuridad, si se detecta un susurro o ruido extraño, la lámpara parpadea en blanco para indicar presencia.",
+    "transformedIdeaTitle": "Cazafantasmas",
+    "transformedIdeaDescription": "Busca entes paranormales. Entra en una habitación oscura (Luz < 5). Mantente en silencio. Si el sensor capta un sonido repentino (Ruido), la Lámpara emitirá un flash blanco espectral, indicando que el fantasma está justo ahí.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.low AND Noise.spike() THEN Lamp.flash(White)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Luz de Humor Ambiental",
+    "originalIdeaDescription": "El color de la lámpara depende del nivel de ruido de la habitación. Silencio = Azul, Ruido = Rojo.",
+    "transformedIdeaTitle": "El Aura de la Clase",
+    "transformedIdeaDescription": "Visualiza la energía del grupo. Si todos están tranquilos y hablando bajito, la Lámpara brilla en Azul relajante. Si la clase se alborota y grita, la luz cambia gradualmente a Violeta y finalmente a Rojo intenso.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Hue = Map(Noise.level, 0, 100, Blue, Red); Lamp.set(Hue)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Gritos de Terror",
+    "originalIdeaDescription": "En la oscuridad, el usuario debe gritar lo más fuerte posible. La lámpara mide la intensidad (brillo) del grito.",
+    "transformedIdeaTitle": "Medidor de Sustos",
+    "transformedIdeaDescription": "Prepara tu mejor grito de película de terror. Apaga las luces. Grita fuerte al micrófono. La Lámpara se iluminará proporcionalmente al volumen de tu grito. ¡Intenta alcanzar el brillo máximo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.low: Lamp.brightness(Noise.level)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Asistente de Meditación",
+    "originalIdeaDescription": "Guía de respiración. Si hay silencio y luz tenue, la lámpara pulsa rítmicamente para inhalar/exhalar.",
+    "transformedIdeaTitle": "Respiración Zen",
+    "transformedIdeaDescription": "Relájate. Si bajas la luz y estás en silencio, el dispositivo entra en 'Modo Zen'. La Lámpara se encenderá y apagará suavemente en ciclos de 4 segundos. Sigue la luz para respirar: Luz sube = Inhala, Luz baja = Exhala.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.dim AND Noise.quiet THEN Lamp.breathe(Cyan, 4s)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Caja de Seguridad Fotosensible",
+    "originalIdeaDescription": "La caja solo se abre (luz verde) si se ilumina con un patrón específico de linterna y silencio.",
+    "transformedIdeaTitle": "La Llave de Luz",
+    "transformedIdeaDescription": "Abre el cerrojo digital. El sistema requiere una 'llave' de luz. Haz tres flashes con tu linterna sobre el sensor manteniendo silencio absoluto. Si el patrón es correcto, la Lámpara se pondrá Verde indicando acceso concedido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level < 10 AND Light.pattern([1,1,1]) THEN Lamp.green()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Pez de Profundidad (Señuelo)",
+    "originalIdeaDescription": "Simula un pez abisal. En oscuridad total, enciende una luz para atraer presas. Si oye ruido (depredador), se apaga.",
+    "transformedIdeaTitle": "Supervivencia en el Abismo",
+    "transformedIdeaDescription": "Eres un pez linterna. Vives en la oscuridad absoluta. Si el sensor detecta oscuridad, enciende tu señuelo (Lámpara Amarilla) para comer. Pero cuidado, si escuchas un ruido fuerte, apaga la luz inmediatamente para que no te coman a ti.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5: Lamp.on(); IF Noise.spike() THEN Lamp.off()"
+  }
+]

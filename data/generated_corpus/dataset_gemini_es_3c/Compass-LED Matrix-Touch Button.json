@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros con Dirección Asistida",
+    "originalIdeaDescription": "Un dispositivo que guía al usuario hacia un punto geográfico predeterminado. La brújula determina la orientación actual y la Matriz LED muestra una flecha indicando hacia dónde girar. El botón táctil se utiliza para 'excavar' o confirmar que se ha llegado al destino, revelando una animación de tesoro si la ubicación es correcta.",
+    "transformedIdeaTitle": "La Búsqueda del Tesoro del Capitán Byte",
+    "transformedIdeaDescription": "¡Eres un pirata buscando el oro perdido! Tu dispositivo es un mapa mágico. La pantalla te mostrará flechas direccionales. Debes girar tu cuerpo hasta que la brújula apunte al Norte verdadero. Una vez alineado, presiona el botón mágico para cavar. Si lo haces bien, ¡verás las joyas brillar en la pantalla!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND TouchButton.isPressed() THEN LEDMatrix.show('Treasure') ELSE LEDMatrix.show('Arrow')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Digital con Combinación Direccional",
+    "originalIdeaDescription": "Un sistema de seguridad simulado donde la 'llave' es una secuencia de orientaciones físicas. El usuario debe girar el dispositivo a grados específicos (ej. 90° Este, luego 180° Sur) y presionar el botón táctil para confirmar cada número de la combinación. La matriz muestra un candado cerrado o abierto.",
+    "transformedIdeaTitle": "El Desafío de la Bóveda Secreta",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una bóveda de alta seguridad. La combinación no son números, ¡son direcciones! Gira el dispositivo hacia el Este y presiona el botón, luego busca el Sur y confirma. Si aciertas la secuencia secreta, el candado de la pantalla se abrirá.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.degrees == TargetAngle AND TouchButton.pressed THEN UnlockStep() ELSE ShowError()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Radar de Detección de Fantasmas",
+    "originalIdeaDescription": "Juego de realidad aumentada de audio/video simple. Al girar el dispositivo, la brújula escanea el entorno. En una dirección aleatoria generada por el código, la Matriz LED parpadea indicando una 'presencia'. El usuario debe presionar el botón rápidamente para capturar al fantasma virtual.",
+    "transformedIdeaTitle": "Cazadores de Ectoplasma",
+    "transformedIdeaDescription": "¡Hay fantasmas invisibles a tu alrededor! Usa tu radar espectral girando lentamente en círculo. Cuando la pantalla de luces parpadee frenéticamente, significa que has encontrado uno. ¡Rápido! Presiona el botón táctil para atraparlo antes de que escape a otra dimensión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == GhostLocation THEN LEDMatrix.flash(); IF TouchButton.pressed THEN CatchGhost()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Simón Dice Direccional",
+    "originalIdeaDescription": "Una variante del clásico juego de memoria. La Matriz LED muestra una letra cardinal (N, S, E, O). El usuario debe girar físicamente hacia esa dirección y presionar el botón táctil para confirmar. La secuencia se hace más larga y rápida con cada acierto.",
+    "transformedIdeaTitle": "Simón Navegante",
+    "transformedIdeaDescription": "Simón es el capitán de tu barco y te da órdenes. Si la pantalla muestra una 'N', gira al Norte y presiona el botón. Si muestra 'E', gira al Este. ¡Ten cuidado! Debes memorizar la secuencia de rumbos y repetirla perfectamente para no hundir el barco.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Show Sequence; IF UserOrientation == Target AND Button.pressed THEN NextLevel() ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alineador de Antena Satelital",
+    "originalIdeaDescription": "Herramienta educativa que simula la búsqueda de señal. El usuario debe encontrar un ángulo específico (azimut) usando la brújula. La matriz muestra barras de señal que aumentan al acercarse al ángulo correcto. El botón se usa para 'conectar' una vez que la señal es máxima.",
+    "transformedIdeaTitle": "Misión: Conexión Espacial",
+    "transformedIdeaDescription": "Hemos perdido contacto con la Estación Espacial Internacional. Necesitamos que alinees la antena de tierra manualmente. Gira lentamente hasta que las barras de señal en tu pantalla estén llenas. Cuando tengas la señal máxima, presiona el botón para restablecer la comunicación con los astronautas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Signal = 100 - abs(TargetAngle - Compass.degrees); LEDMatrix.showGraph(Signal); IF Signal > 90 AND Button.pressed THEN Connect()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de la Fortuna Digital",
+    "originalIdeaDescription": "Un juego de azar digital. El usuario gira físicamente sobre sí mismo con el dispositivo. La Matriz LED muestra una animación de giro. Al presionar el botón táctil, se 'congela' la dirección actual y la brújula determina un premio o castigo basado en el ángulo final (ej. 0-90° gana, 91-180° pierde).",
+    "transformedIdeaTitle": "La Ruleta Humana",
+    "transformedIdeaDescription": "¡Tú eres la ruleta! Gira sobre tu propio eje mientras la pantalla hace luces locas. Cuando tu amigo presione el botón, detente inmediatamente. Dependiendo de hacia dónde estés mirando (Norte, Sur, Este u Oeste), el juego te dirá qué premio has ganado o qué reto divertido debes hacer.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "While NOT Button.pressed DO LEDMatrix.animate(); FinalHeading = Compass.heading; ShowPrize(FinalHeading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Simulador donde la matriz muestra un avión acercándose. El usuario debe usar la brújula para apuntar a la 'pista de aterrizaje' correcta (una dirección cardinal específica) y presionar el botón para autorizar el aterrizaje. Si el ángulo es incorrecto, el avión se desvía.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "Un avión necesita aterrizar y hay mucha niebla. Tú eres el controlador. La pista está exactamente al Oeste. Gira tu cuerpo hasta apuntar al Oeste perfecto. Cuando estés alineado, presiona el botón para encender las luces de la pista y guiar al piloto a salvo a tierra.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Button.pressed THEN LEDMatrix.show('PlaneLanded') ELSE LEDMatrix.show('CrashWarning')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Espía",
+    "originalIdeaDescription": "Herramienta de criptografía simple. Cada dirección cardinal (N, NE, E, SE, etc.) corresponde a una letra o símbolo en la Matriz LED. El usuario gira para seleccionar la letra deseada y presiona el botón para 'escribir' o revelar parte de un mensaje secreto.",
+    "transformedIdeaTitle": "El Enigma de la Brújula",
+    "transformedIdeaDescription": "Tienes un mensaje codificado que salvará el mundo. Para escribir la contraseña, debes apuntar el dispositivo hacia diferentes rincones de la habitación. El Norte es la 'A', el Este es la 'B', etc. Encuentra las letras girando y usa el botón para ingresarlas en la computadora central.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Letter = Map(Compass.degrees, 0, 360, 'A', 'Z'); LEDMatrix.show(Letter); IF Button.pressed THEN AddToMessage(Letter)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Invisible",
+    "originalIdeaDescription": "Juego donde el usuario navega un mapa virtual invisible. La matriz muestra paredes o caminos libres. El usuario se orienta con la brújula para elegir una dirección de movimiento y presiona el botón para 'avanzar' un paso en esa dirección virtual.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto oscuro. No puedes ver las paredes, pero tu sensor sí. Gira hacia una dirección; si la pantalla muestra una 'X', hay una pared. Si muestra una flecha, el camino está libre. Presiona el botón para dar un paso. ¿Podrás encontrar la salida?",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == ValidDirection THEN show('Go'); IF Button.pressed THEN MovePlayer() ELSE show('Wall')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Swing de Golf",
+    "originalIdeaDescription": "Aplicación deportiva simple. El usuario se alinea con la brújula hacia el 'hoyo' objetivo. La precisión de la alineación determina la dirección de la bola. Al presionar el botón, se golpea la bola y la matriz muestra si fue un 'Hit' o 'Miss' basado en la desviación angular.",
+    "transformedIdeaTitle": "Torneo de Golf Digital",
+    "transformedIdeaDescription": "¡Es el hoyo final del torneo! El viento sopla fuerte. Debes apuntar tu golpe con precisión. El hoyo está exactamente a 270 grados. Gira tu cuerpo con cuidado para alinear tu tiro. Mantén el pulso firme y presiona el botón para golpear la pelota. ¡Hoyo en uno!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Accuracy = abs(TargetAngle - Compass.degrees); IF Accuracy < 5 AND Button.pressed THEN LEDMatrix.show('HoleInOne') ELSE LEDMatrix.show('Miss')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Rastreador de Constelaciones",
+    "originalIdeaDescription": "Herramienta astronómica simplificada. El usuario apunta el dispositivo hacia diferentes direcciones en el cielo nocturno (simulado horizontalmente por la brújula). Al llegar a ciertos grados, la matriz dibuja una constelación simple. El botón muestra el nombre o información.",
+    "transformedIdeaTitle": "Planetario de Bolsillo",
+    "transformedIdeaDescription": "Convierte tu habitación en un observatorio. Gira lentamente sosteniendo tu dispositivo. Cuando apuntes hacia donde debería estar la Osa Mayor o Orión, la pantalla dibujará las estrellas por ti. Presiona el botón para 'descubrir' la estrella y añadirla a tu colección.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.degrees > 40 AND Compass.degrees < 50 THEN LEDMatrix.show('Orion'); IF Button.pressed THEN CollectStar()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Bola 8 Mágica Direccional",
+    "originalIdeaDescription": "Dispositivo de adivinación. El usuario hace una pregunta, gira sobre sí mismo para mezclar la 'suerte' y presiona el botón para detenerse. La respuesta (Sí, No, Tal vez) se genera dependiendo del cuadrante de la brújula (Norte, Sur, Este, Oeste) en el que termina.",
+    "transformedIdeaTitle": "El Oráculo de los Puntos Cardinales",
+    "transformedIdeaDescription": "Haz una pregunta sobre tu futuro. Ahora, cierra los ojos y gira varias veces para invocar a los espíritus de la brújula. Cuando sientas que es el momento, detente y presiona el botón. Si miras al Norte, la respuesta es SÍ; si miras al Sur, es NO. ¿Qué dirá el destino?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait for Button.press; IF Compass.heading == 'North' THEN LEDMatrix.show('Yes') ELSE LEDMatrix.show('No')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Pasos de Baile",
+    "originalIdeaDescription": "Juego de ritmo y orientación. La matriz indica una dirección (flecha izquierda/derecha/arriba/abajo que mapea a O/E/N/S). El usuario debe girar el cuerpo hacia esa dirección y tocar el botón al ritmo de la música imaginaria o un metrónomo visual.",
+    "transformedIdeaTitle": "Academia de Baile Robótico",
+    "transformedIdeaDescription": "¡Aprende los pasos del futuro! La pantalla te mostrará hacia dónde mirar. Si sale una flecha derecha, ¡gira rápido al Este! Si sale arriba, ¡mira al Norte! Tienes que girar y presionar el botón justo a tiempo para mantener el ritmo y ganar puntos de estilo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Show TargetDirection; IF Compass.heading == TargetDirection AND Button.pressedWithinTime() THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instalador de Paneles Solares",
+    "originalIdeaDescription": "Simulación de ingeniería ecológica. El objetivo es encontrar la orientación óptima para generar energía (usualmente Sur o Norte dependiendo del hemisferio). La matriz muestra un sol brillante cuando la orientación es correcta. El botón 'instala' el panel y suma puntos de eficiencia.",
+    "transformedIdeaTitle": "Ingeniero de Energía Solar",
+    "transformedIdeaDescription": "Tu ciudad necesita energía limpia. Debes instalar paneles solares en los techos. Usa tu brújula para encontrar el lugar donde el sol pega más fuerte (hacia el Sur). Cuando la pantalla muestre un sol gigante, significa que estás en la posición perfecta. ¡Presiona el botón para instalar el panel!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Efficiency = CalculateSunExposure(Compass.heading); LEDMatrix.showLevel(Efficiency); IF Efficiency == MAX AND Button.pressed THEN BuildPanel()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Piloto de Cohete Espacial",
+    "originalIdeaDescription": "Juego de simulación de vuelo. El usuario debe mantener el cohete en curso recto (Norte) mientras 'vientos' aleatorios (indicaciones en matriz) lo empujan. Debe corregir el rumbo girando y pulsando el botón para activar propulsores de corrección.",
+    "transformedIdeaTitle": "Despegue a la Luna",
+    "transformedIdeaDescription": "Estás pilotando un cohete hacia la Luna, pero hay mucha turbulencia. Tu nave debe apuntar siempre al Norte (0 grados). Si te desvías, la alarma sonará en la pantalla. Gira tu cuerpo para corregir el rumbo y pulsa el botón para activar los turbo-propulsores y estabilizar la nave.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Drift = random(); IF (Compass.degrees + Drift) != 0 THEN LEDMatrix.show('Warning'); IF Button.pressed THEN CorrectCourse()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cuento Interactivo de Aventuras",
+    "originalIdeaDescription": "Historia tipo 'Elige tu propia aventura'. En puntos de decisión, la matriz muestra opciones como flechas (Izquierda=Oeste, Derecha=Este). El usuario elige girando físicamente hacia la dirección y presionando el botón para continuar la historia en esa rama.",
+    "transformedIdeaTitle": "El Sendero del Bosque Encantado",
+    "transformedIdeaDescription": "Estás en un cruce de caminos en un bosque mágico. Al Norte se oye un rugido, al Este se ve una luz brillante. ¿Qué harás? Gira tu cuerpo hacia el camino que quieras tomar y presiona el botón para caminar. ¡Tus decisiones cambiarán el final de la historia!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ShowOptions(); Wait Button; IF Compass.heading == 'North' THEN LoadChapter('Dragon') ELSE LoadChapter('Fairy')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Rastreador de Migración de Aves",
+    "originalIdeaDescription": "Actividad educativa de biología. Los estudiantes actúan como aves migratorias. Deben mantener un rumbo constante (ej. Sur) durante un tiempo. Si se desvían, la matriz muestra una advertencia. El botón se usa para 'descansar' en paradas seguras.",
+    "transformedIdeaTitle": "El Gran Viaje de las Aves",
+    "transformedIdeaDescription": "El invierno se acerca y eres un ganso volando hacia el calor del Sur. Debes mantener tu vuelo siempre hacia el Sur usando la brújula. Si te desvías, te perderás en la tormenta. Cuando encuentres un lago seguro (indicado en pantalla), presiona el botón para aterrizar y descansar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading != 'South' THEN LEDMatrix.show('Lost'); IF SafeZone == True AND Button.pressed THEN ScorePoints()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Buscador de Qibla / Lugares Sagrados",
+    "originalIdeaDescription": "Aplicación cultural/geográfica. Ayuda a encontrar la dirección hacia un punto de referencia global específico. La matriz muestra flechas de corrección hasta que la brújula se alinea con el grado objetivo. El botón guarda la ubicación o confirma el hallazgo.",
+    "transformedIdeaTitle": "Explorador de Maravillas del Mundo",
+    "transformedIdeaDescription": "Vamos a encontrar dónde están las Pirámides de Egipto desde nuestra clase. Calcula el ángulo geográfico y gira. La pantalla te dirá 'Izquierda' o 'Derecha' hasta que estés mirando exactamente hacia las Pirámides. ¡Presiona el botón cuando las encuentres para viajar virtualmente allí!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = 135; Diff = Target - Compass.degrees; IF Diff > 0 THEN Show('Right') ELSE Show('Left'); IF Diff == 0 AND Button.pressed THEN Win()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Viento Virtual",
+    "originalIdeaDescription": "Herramienta de simulación meteorológica. El usuario actúa como una veleta. La matriz muestra direcciones de viento cambiantes. El usuario debe alinear la brújula con la dirección del viento mostrada para 'medir' su velocidad, presionando el botón para registrar datos.",
+    "transformedIdeaTitle": "Cazadores de Tornados",
+    "transformedIdeaDescription": "Eres una estación meteorológica móvil. El viento cambia de dirección constantemente. La pantalla te mostrará de dónde viene el viento. Gira rápido para encarar el viento (alinear la brújula) y presiona el botón para medir su fuerza. ¡Recopila datos para predecir el próximo tornado!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WindDir = Random(); LEDMatrix.show(WindDir); IF Compass.heading == WindDir AND Button.pressed THEN DataCollected++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Defensa de Torre 360 Grados",
+    "originalIdeaDescription": "Juego de acción. Enemigos se acercan desde diferentes ángulos (mostrados en la matriz como puntos en los bordes). El usuario gira para alinear su 'cañón' (brújula) con el enemigo y usa el botón para disparar y eliminar la amenaza.",
+    "transformedIdeaTitle": "Defensor del Castillo 360",
+    "transformedIdeaDescription": "¡Tu castillo está rodeado! Los enemigos vienen por el Norte, el Sur y el Este. Tu pantalla es el radar que muestra por dónde atacan. Gira rápidamente tu cañón hacia la dirección del ataque y presiona el botón para lanzar bolas de fuego y proteger tu fortaleza.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "EnemyAngle = SpawnEnemy(); IF Compass.degrees == EnemyAngle AND Button.pressed THEN DestroyEnemy() ELSE DamageCastle()"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Faro de Niebla Interactivo",
+    "originalIdeaDescription": "Simula un faro marítimo. La luz gira según la brújula. Si el sensor de ruido detecta niebla (simulado por ruido blanco o soplar), la luz cambia de haz continuo a parpadeo de emergencia.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Guía a los barcos en la tormenta. Gira tu cuerpo (Compass) para barrer el horizonte con el haz de luz (Lámpara Blanca). Si escuchas viento fuerte o niebla (sopla al micrófono/Ruido), cambia el modo de la luz a Amarillo Parpadeante para advertir del peligro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Direction = Compass.heading; IF Noise.level > 50 THEN Lamp.strobe(Yellow) ELSE Lamp.on(White)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Varita de Elementos Mágicos",
+    "originalIdeaDescription": "La dirección cardinal selecciona el elemento (Norte=Fuego, Sur=Hielo). El usuario debe gritar el hechizo para que la varita se ilumine del color correspondiente.",
+    "transformedIdeaTitle": "Aprendiz de Hechicero",
+    "transformedIdeaDescription": "Lanza hechizos elementales. Apunta al Norte para Fuego. Apunta al Sur para Hielo. La varita está apagada hasta que grites '¡ACTIVATE!' (Ruido). Si miras al Norte y gritas, la Lámpara brilla Roja. Si miras al Sur, brilla Azul.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.peak(): IF Compass.heading == North THEN Lamp.color(Red) ELSE Lamp.color(Blue)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Caja Fuerte de Voz y Giro",
+    "originalIdeaDescription": "Sistema de seguridad de dos factores. Girar a la posición correcta (Compass) y susurrar la contraseña (Ruido bajo) para encender la luz verde de apertura.",
+    "transformedIdeaTitle": "El Espía Sigiloso",
+    "transformedIdeaDescription": "Infiltrese en la base. Para abrir la puerta, alinea el dispositivo exactamente al Este (90 grados). Una vez alineado, susurra la clave muy bajito (Ruido < 20). Si gritas, la Lámpara se pondrá Roja (Alarma). Si susurras, Verde (Abierto).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 90: IF Noise.level < 20 THEN Lamp.green() ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Dragón Defensor",
+    "originalIdeaDescription": "El usuario actúa como un dragón. La brújula apunta la cabeza. Si alguien hace ruido, el dragón escupe fuego (Luz roja) en esa dirección.",
+    "transformedIdeaTitle": "La Guarida del Dragón",
+    "transformedIdeaDescription": "Eres Smaug vigilando tu oro. Gira para vigilar la entrada (Norte). Si escuchas el más mínimo ruido de un ladrón (Sensor de Ruido), tu garganta se ilumina y lanzas fuego (Lámpara Roja Intensa) hacia donde estés mirando.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "GuardDir = Compass.heading; IF Noise.level > 15 THEN Lamp.effect('Fire', GuardDir)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Ritual del Amanecer",
+    "originalIdeaDescription": "El usuario debe mirar al Este (salida del sol) y hacer un sonido de 'Omm' o cantar para que la lámpara se encienda gradualmente como el sol.",
+    "transformedIdeaTitle": "Invocador del Sol",
+    "transformedIdeaDescription": "Haz que salga el sol. Busca el Este con tu brújula. Una vez allí, empieza a cantar una nota constante (Ruido). La Lámpara empezará a brillar en naranja suave y subirá de intensidad hasta ser blanca y brillante mientras mantengas el canto.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == East AND Noise.level > 30 THEN Lamp.brightness++"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras Direccional",
+    "originalIdeaDescription": "Apunta a una persona. Si habla (Ruido) y el volumen es alto (nervios), la luz se pone roja. Si habla suave, verde.",
+    "transformedIdeaTitle": "Robot Interrogador",
+    "transformedIdeaDescription": "Interroga al sospechoso. Apunta el sensor hacia él (Compass). Haz una pregunta. Si responde gritando o alterado (Ruido alto), la Lámpara se pone Roja: ¡MENTIRA! Si responde tranquilo (Ruido medio), Lámpara Verde: ¡VERDAD!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Compass.heading; IF Noise.level > 70 THEN Lamp.set(Red) ELSE Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Vela en el Viento",
+    "originalIdeaDescription": "La lámpara imita una vela. La brújula determina de dónde viene el 'viento'. Si el usuario sopla (Ruido) mirando en esa dirección, la vela se apaga.",
+    "transformedIdeaTitle": "Apaga la Llama Mágica",
+    "transformedIdeaDescription": "La vela mágica solo se apaga si el viento viene del Norte. Gira el dispositivo. Si miras al Sur y soplas (Ruido), la llama (Lámpara Naranja) resiste. Si miras al Norte y soplas, ¡la apagas!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.set(Orange); IF Compass.heading == North AND Noise.blow() THEN Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Francotirador de Aliento",
+    "originalIdeaDescription": "Apuntar a un objetivo específico (grados). Contener la respiración (silencio total) para que la mira (luz) se estabilice y se ponga verde.",
+    "transformedIdeaTitle": "El Arquero Zen",
+    "transformedIdeaDescription": "Apunta tu arco al blanco (Oeste). Tu pulso es inestable si respiras fuerte. Mantén la dirección fija y contén la respiración (Ruido < 5). Cuando logres silencio y dirección perfecta, la Lámpara cambiará de Amarillo a Verde. ¡Dispara!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.targetReached() AND Noise.level < 5 THEN Lamp.color(Green) ELSE Lamp.color(Yellow)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Comunicador Alienígena",
+    "originalIdeaDescription": "Buscar la señal girando (Compass). Cuando se encuentra, hablar (Ruido) hace que la lámpara pulse traduciendo la voz a luz.",
+    "transformedIdeaTitle": "Mensajero Galáctico",
+    "transformedIdeaDescription": "Busca el planeta hogar. Gira hasta que encuentres la coordenada 180. Ahora, transmite tu mensaje: habla al micrófono. El dispositivo convertirá el volumen de tu voz en pulsos de luz violeta para enviarlos al espacio.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 180: Lamp.brightness = Map(Noise.level)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Cazafantasmas con Radar",
+    "originalIdeaDescription": "La luz indica proximidad (color). La brújula dirección. El fantasma es invisible y solo reacciona si hay silencio.",
+    "transformedIdeaTitle": "Buscador de Espectros",
+    "transformedIdeaDescription": "El fantasma está en una dirección fija. Gira para buscarlo. La Lámpara cambia de Azul (Frío) a Rojo (Caliente) al acercarte. Pero cuidado: si haces ruido (Noise > 20), el fantasma se asusta y la luz se apaga.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Dist = Abs(Compass.heading - GhostDir); Lamp.color(Map(Dist)); IF Noise.level > 20 THEN Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Semáforo de Tráfico Policial",
+    "originalIdeaDescription": "El usuario apunta a un coche imaginario. Toca el silbato (Ruido agudo) para cambiar la luz de rojo a verde.",
+    "transformedIdeaTitle": "Agente de Tráfico",
+    "transformedIdeaDescription": "Dirige el cruce. Apunta al Norte (Coches viniendo). La luz está Roja. Toca tu silbato fuertemente (Ruido alto y repentino) para cambiar la Lámpara a Verde y dejar pasar el tráfico. Luego gira al Este y repite.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Target = Compass.heading; Lamp.set(Red); IF Noise.whistle() THEN Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Fuegos Artificiales",
+    "originalIdeaDescription": "Apuntar al cielo en diferentes direcciones. Hacer sonido de explosión 'Pum' para que la lámpara estalle en colores.",
+    "transformedIdeaTitle": "Show Pirotécnico Manual",
+    "transformedIdeaDescription": "Crea un espectáculo. Apunta al Este y haz '¡Boom!': la Lámpara hace un flash Rojo. Apunta al Oeste y haz '¡Pshhh!': Lámpara flash Azul con desvanecimiento. Tú controlas dónde y cuándo explotan los cohetes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Color = Map(Compass.heading); IF Noise.peak() THEN Lamp.flash(Color)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "Moverse hacia el objetivo (Norte). Si el usuario hace ruido, la luz parpadea alertando a los guardias.",
+    "transformedIdeaTitle": "Misión Infiltración",
+    "transformedIdeaDescription": "Tu objetivo está al Norte. Camina hacia allá. La Lámpara está apagada (sigilo). Si pisas una rama o respiras fuerte (Noise > 10), la Lámpara parpadeará en Blanco delatando tu posición. ¡Mantén el silencio!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == North AND Noise.level > 10 THEN Lamp.strobe(White)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Mezclador de Color por Voz",
+    "originalIdeaDescription": "Norte selecciona componente Rojo, Este Verde, Oeste Azul. El volumen de la voz determina la intensidad de ese color.",
+    "transformedIdeaTitle": "Pintor de Luz",
+    "transformedIdeaDescription": "Crea colores personalizados. Gira al Norte (Rojo) y canta suave para un rojo tenue, o grita para rojo intenso. Gira al Este (Azul) y añade azul gritando. La Lámpara mostrará la mezcla final de los colores que has 'cantado'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Channel = Map(Compass.heading); Value = Noise.level; Lamp.setChannel(Channel, Value)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Linterna de Murciélago (Ecolocación)",
+    "originalIdeaDescription": "La lámpara solo se enciende si el usuario hace un chirrido, iluminando la dirección hacia la que apunta.",
+    "transformedIdeaTitle": "Visión de Sonar",
+    "transformedIdeaDescription": "Estás ciego en la oscuridad. Para ver, emite un chasquido con la lengua (Ruido corto). La Lámpara iluminará brevemente hacia donde estés mirando (Compass), simulando cómo un murciélago 've' con sonido.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.off(); IF Noise.click() THEN Lamp.flash(White, 0.5s)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Gallo al Amanecer",
+    "originalIdeaDescription": "Orientarse al Este. Cuando el usuario hace 'Kikiriki', la luz se enciende. Si no es Este, no funciona.",
+    "transformedIdeaTitle": "Despertador de Granja",
+    "transformedIdeaDescription": "Eres el gallo. Busca por dónde sale el sol (Este). Cuando lo encuentres, canta '¡Kikirikí!' (Ruido fuerte) para despertar a la granja. Si aciertas la dirección y el volumen, la Lámpara se encenderá en amarillo brillante.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == East AND Noise.crow() THEN Lamp.on(Yellow)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Volcán Activo",
+    "originalIdeaDescription": "La brújula selecciona qué volcán monitorear. El ruido del suelo (golpes en la mesa) hace que la luz cambie de verde a rojo (erupción).",
+    "transformedIdeaTitle": "Sismógrafo Volcánico",
+    "transformedIdeaDescription": "Monitorea la montaña al Oeste. Golpea la mesa rítmicamente (simulando temblores). La Lámpara empieza Verde. A medida que golpeas más fuerte (Noise aumenta), cambia a Naranja y finalmente Rojo explosivo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == West: Lamp.color(Gradient(Green, Red, Noise.level))"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Luz de Concierto",
+    "originalIdeaDescription": "El usuario apunta al escenario. Al gritar o cantar, la luz se enciende al ritmo de la voz.",
+    "transformedIdeaTitle": "Fanático en el Estadio",
+    "transformedIdeaDescription": "Apoya a tu banda. Apunta al escenario (Norte). Cuando grites o cantes la canción (Ruido), la Lámpara de tu móvil (dispositivo) se encenderá. Crea una ola de luz con tus amigos sincronizando los gritos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == StageDir THEN Lamp.brightness(Noise.level)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Búsqueda y Rescate (Helicóptero)",
+    "originalIdeaDescription": "El usuario es el piloto. Gira para buscar. Si escucha un grito de ayuda (Ruido), enciende el foco (Lámpara) en esa dirección.",
+    "transformedIdeaTitle": "Rescate Aéreo Nocturno",
+    "transformedIdeaDescription": "Patrulla el mar. Gira buscando náufragos. Mantén la luz apagada para ahorrar. Si escuchas '¡AYUDA!' (Ruido > 60), enciende inmediatamente el foco (Lámpara Blanca) en la dirección que estás mirando para marcar el objetivo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.off(); IF Noise.shoutDetected() THEN Lamp.on(White)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Brújula de Emociones",
+    "originalIdeaDescription": "Norte = Feliz, Sur = Triste. El usuario hace sonidos (risas/llanto) y la lámpara cambia de color según la dirección.",
+    "transformedIdeaTitle": "Teatro de Emociones",
+    "transformedIdeaDescription": "Actúa según la dirección. Gira al Norte (Alegría) y ríe: Lámpara Amarilla. Gira al Sur (Tristeza) y llora: Lámpara Azul. El dispositivo evalúa si estás en la dirección correcta para el sonido que haces.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Emotion = Map(Compass); IF Noise.matches(Emotion) THEN Lamp.set(Emotion.Color)"
+  }
+]

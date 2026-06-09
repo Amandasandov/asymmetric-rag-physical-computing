@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de DJ con Efectos de Movimiento",
+    "originalIdeaDescription": "Un dispositivo que permite mezclar música donde la inclinación altera la velocidad o el tono, y el interruptor activa un efecto de sonido especial tipo 'drop'.",
+    "transformedIdeaTitle": "El DJ del Futuro: Mezcla con Gravedad",
+    "transformedIdeaDescription": "Conviértete en un DJ superestrella. Programa tu dispositivo para que al inclinarlo hacia adelante la música se acelere, y hacia atrás se ralentice. Usa el interruptor para soltar un efecto de sonido explosivo en el momento perfecto de la fiesta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isON() THEN Audio.playEffect('Drop') ELSE Audio.setSpeed(Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Volante de Carreras con Claxon",
+    "originalIdeaDescription": "Un simulador de volante donde inclinar a la izquierda o derecha reproduce sonidos de derrape panorámico y el interruptor sirve como claxon.",
+    "transformedIdeaTitle": "Gran Premio de Fórmula Sonido",
+    "transformedIdeaDescription": "Diseña el volante de tu propio coche de carreras. Al girarlo a la izquierda o derecha, el sonido del motor debe cambiar de altavoz para simular el movimiento. ¡No olvides programar el interruptor para pitarle a los coches lentos!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X < -20 THEN Audio.panLeft() ELSE IF Inclination.X > 20 THEN Audio.panRight(); IF Switch.pressed THEN Audio.play('Horn')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "Una varita que debe ser levantada a un ángulo específico para 'cargar' energía y el interruptor libera el sonido del hechizo.",
+    "transformedIdeaTitle": "Academia de Magia: El Hechizo Perfecto",
+    "transformedIdeaDescription": "Eres un aprendiz de mago. Para lanzar el hechizo 'Leviosa', debes inclinar tu varita hacia arriba exactamente a 45 grados. Solo entonces, al presionar el botón mágico, se escuchará el encantamiento exitoso.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 40 AND Inclination.Y < 50 AND Switch.pressed THEN Audio.play('MagicSpell') ELSE Audio.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad Portátil",
+    "originalIdeaDescription": "Un dispositivo que se coloca sobre un objeto valioso; si se detecta inclinación (robo) mientras el interruptor está activado, suena una alarma.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Secreto",
+    "transformedIdeaDescription": "Protege tu diario o tu caja de ahorros. Crea un sistema que, al activar el interruptor de 'Vigilancia', detecte si alguien intenta mover o inclinar tu objeto. Si lo hacen, ¡debe sonar una sirena policial a todo volumen!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn AND (ABS(Inclination.X) > 5 OR ABS(Inclination.Y) > 5) THEN Audio.play('Siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de Cuerda Floja",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el dispositivo plano; inclinarse demasiado reproduce sonidos de caída, el interruptor reinicia el juego.",
+    "transformedIdeaTitle": "El Equilibrista en las Alturas",
+    "transformedIdeaDescription": "Imagina que caminas por una cuerda floja. Debes mantener tu dispositivo perfectamente plano. Si te inclinas a un lado, escucharás el viento soplar fuerte; si no corriges rápido, caerás. Usa el botón para intentar cruzar de nuevo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 15 THEN Audio.play('WindRight') ELSE IF Inclination.X < -15 THEN Audio.play('WindLeft'); IF Switch.pressed THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Despegue de Avión",
+    "originalIdeaDescription": "El sonido del motor aumenta de intensidad al inclinar el dispositivo hacia arriba (despegue) y el interruptor activa el aviso de cinturones.",
+    "transformedIdeaTitle": "Capitán de Vuelo: Despegue Inminente",
+    "transformedIdeaDescription": "Toma el control de un jet comercial. Activa la señal de cinturones con el interruptor y luego tira de la palanca (inclina el dispositivo hacia atrás) para aumentar la potencia de los motores auditivos y elevarte hacia las nubes.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn THEN Audio.play('SeatbeltChime'); Audio.setVolume(Map(Inclination.Y, 0, 60, 20, 100))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivel de Burbuja Parlante",
+    "originalIdeaDescription": "Una herramienta de construcción que dice 'Nivelado' cuando la inclinación es cero y emite pitidos si está chueco, activada por el interruptor.",
+    "transformedIdeaTitle": "El Constructor Ciego: Paredes Rectas",
+    "transformedIdeaDescription": "Ayuda a un constructor que no puede ver a saber si una estantería está recta. Programa la herramienta para que haga un sonido agudo continuo si está inclinada, y diga '¡Perfecto!' solo cuando esté totalmente plana al presionar el botón de verificación.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed THEN (IF Inclination.X == 0 THEN Audio.play('Perfect') ELSE Audio.play('Beep'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin Digital",
+    "originalIdeaDescription": "Un instrumento donde el eje X controla el tono musical y el interruptor activa o desactiva la salida de audio.",
+    "transformedIdeaTitle": "Violín Espacial Invisible",
+    "transformedIdeaDescription": "Crea un instrumento musical futurista que no necesita cuerdas. Mantén presionado el botón para activar el arco láser y mueve el dispositivo en el aire. La inclinación cambiará las notas musicales. ¿Puedes tocar una melodía sencilla?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isHeld() DO Audio.playTone(Map(Inclination.X, -90, 90, 200, 800))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas Sí/No",
+    "originalIdeaDescription": "Un juguete que responde 'Sí' si se inclina hacia adelante y 'No' si se inclina hacia atrás cuando se presiona el interruptor.",
+    "transformedIdeaTitle": "Robo-Consejero: El Oráculo Binario",
+    "transformedIdeaDescription": "Construye un robot que responda preguntas. Hazle una pregunta, presiona su nariz (interruptor) e inclínalo sutilmente: hacia adelante para que diga 'Sí' y hacia atrás para que diga 'No'. Úsalo para hacer trucos de magia a tus amigos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed THEN (IF Inclination.Y > 20 THEN Audio.play('Yes') ELSE IF Inclination.Y < -20 THEN Audio.play('No'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca",
+    "originalIdeaDescription": "Sonido de agua tranquilo hasta que el interruptor (picar) se activa, luego inclinar hacia atrás 'tira' del pez con sonido de carrete.",
+    "transformedIdeaTitle": "Torneo de Pesca en Alta Mar",
+    "transformedIdeaDescription": "Estás en un bote. El sonido del mar es relajante. Cuando sientas que el pez pica (presiona el botón), debes tirar de la caña hacia atrás (inclinar rápido) para sacarlo del agua y escuchar el sonido de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Ocean'); IF Switch.pressed AND Inclination.Change.Y > Fast THEN Audio.play('CatchFish')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Dispositivo que cuenta repeticiones de ejercicio; suena un timbre cuando la inclinación indica una sentadilla profunda y el interruptor reinicia el contador.",
+    "transformedIdeaTitle": "Entrenador Personal de Bolsillo",
+    "transformedIdeaDescription": "¡Ponte en forma! Programa tu dispositivo para sujetarlo en tu pecho. Cuando hagas una sentadilla y tu cuerpo se incline correctamente, el dispositivo te animará con un '¡Uno más!'. Usa el botón para empezar una nueva serie.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < 10 (Vertical) THEN State=Stand; IF Inclination.Y > 60 (Squat) AND State==Stand THEN Audio.play('Count'); State=Squat"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Espada Láser Interactiva",
+    "originalIdeaDescription": "Genera un zumbido constante activado por el interruptor, y sonidos de choque (clash) cuando el sensor detecta cambios bruscos de inclinación.",
+    "transformedIdeaTitle": "Caballero Galáctico: Duelo de Sables",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. Al encender el interruptor, debe sonar el zumbido de energía. Si agitas la espada fuertemente (cambio rápido de inclinación), debe sonar como si chocara contra otra espada. ¡Que la fuerza te acompañe!",
+    "minAge": 8,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn THEN Audio.playLoop('Hum'); IF Abs(Inclination.Change) > Threshold THEN Audio.play('Clash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Explorador de Cuevas por Sonar",
+    "originalIdeaDescription": "El tono del audio cambia según la inclinación para simular un radar de profundidad, el interruptor enciende el 'sonar'.",
+    "transformedIdeaTitle": "Murciélago Ciego: Ecolocalización",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Usa tu dispositivo como un sonar. Activa el interruptor y barre el área inclinando el dispositivo. Los sonidos graves indican camino libre, los agudos indican paredes cercanas. ¡Encuentra la salida!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn THEN Audio.playTone(Map(Inclination.X, -90, 90, 100, 1000))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sartén de Cocina Virtual",
+    "originalIdeaDescription": "Sonido de fritura constante; al hacer un gesto de salteado (inclinación brusca hacia arriba), suena el efecto de comida moviéndose.",
+    "transformedIdeaTitle": "Master Chef: ¡Saltea esos Vegetales!",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una sartén caliente. Enciende la estufa con el interruptor (sonido de aceite friendo). Para ganar puntos, debes hacer el gesto de 'saltear' la comida inclinando la sartén hacia arriba rápidamente sin que se caiga nada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn THEN Audio.playLoop('Sizzle'); IF Inclination.Y_Acceleration > High THEN Audio.play('TossFood')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Acelerador de Motocicleta",
+    "originalIdeaDescription": "El interruptor arranca el motor, y la inclinación del puño (dispositivo) controla las revoluciones por minuto del sonido del motor.",
+    "transformedIdeaTitle": "Motocross Extremo: Acelerador a Fondo",
+    "transformedIdeaDescription": "Siente la adrenalina. Gira la llave (interruptor) para encender tu moto. Ahora, inclina el dispositivo hacia atrás como si fuera el puño del acelerador. Cuanto más lo inclines, más agudo y rápido debe sonar el motor.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed THEN Audio.play('StartEngine'); LOOP: Audio.setPitch(Map(Inclination.Y, 0, 90, 1.0, 3.0))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Desactivación de Bomba",
+    "originalIdeaDescription": "Un temporizador de audio corre. El usuario debe mantener el dispositivo perfectamente quieto; si tiembla (inclinación varía), explota. El interruptor corta el cable.",
+    "transformedIdeaTitle": "Escuadrón Antibombas: Pulso de Acero",
+    "transformedIdeaDescription": "El reloj corre (tic-tac, tic-tac). Tienes que llevar el explosivo a una zona segura sin que tiemble tu mano. Si la inclinación cambia bruscamente, ¡BOOM! Si logras mantenerlo estable, presiona el interruptor para desactivarla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('TickTock'); IF Abs(Inclination.Change) > Sensitivity THEN Audio.play('Explosion'); IF Switch.pressed THEN Audio.play('Defused')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Brújula Auditiva para Invidentes",
+    "originalIdeaDescription": "El dispositivo reproduce un sonido específico cuando se apunta (inclina/orienta) hacia el Norte, activado por un interruptor.",
+    "transformedIdeaTitle": "El Explorador del Norte Magnético",
+    "transformedIdeaDescription": "Crea una herramienta de navegación que no necesite ojos. Mantén presionado el botón y gira sobre ti mismo. El dispositivo debe quedarse en silencio excepto cuando apuntes exactamente al Norte (inclinación/orientación específica), donde emitirá un sonido de campana.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isHeld() AND (Inclination.CompassHeading > 350 OR Inclination.CompassHeading < 10) THEN Audio.play('Bell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo",
+    "originalIdeaDescription": "El audio cuenta una historia y se detiene en bifurcaciones. El usuario inclina a la izquierda o derecha para elegir el camino y confirma con el interruptor.",
+    "transformedIdeaTitle": "Cuentos de la Cripta Giratoria",
+    "transformedIdeaDescription": "Escribe una historia de terror donde tú decides el final. El audio te preguntará: '¿Entras a la cueva o huyes?'. Inclina a la izquierda para entrar, a la derecha para huir, y presiona el botón para confirmar tu destino y escuchar qué sucede.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Choice'); WAIT Switch; IF Inclination.X < 0 THEN Audio.play('CaveScene') ELSE Audio.play('RunAwayScene')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Detecta si el dispositivo (en la cuna) se mueve por inclinación. Si se mueve, reproduce una canción de cuna; el interruptor apaga el sistema.",
+    "transformedIdeaTitle": "La Nana Automática Inteligente",
+    "transformedIdeaDescription": "Inventa un dispositivo para ayudar a los padres. Si el bebé se mueve en la cuna (detectado por cambios en la inclinación), el sistema debe tocar automáticamente una canción de cuna suave. Usa el interruptor para apagarlo cuando el bebé despierte.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn AND Abs(Inclination.Change) > 5 THEN Audio.play('Lullaby')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escáner de Fantasmas",
+    "originalIdeaDescription": "Sonido de estática que cambia de frecuencia con la inclinación, simulando sintonizar una señal paranormal, el interruptor captura el fantasma.",
+    "transformedIdeaTitle": "Cazafantasmas: Sintonizando el Más Allá",
+    "transformedIdeaDescription": "Busca señales paranormales en tu habitación. Inclina el dispositivo lentamente para 'sintonizar' la frecuencia correcta a través del ruido estático. Cuando escuches una voz clara entre el ruido, ¡presiona rápidamente el interruptor para atrapar al fantasma!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Static'); IF Inclination.X > 40 AND Inclination.X < 50 THEN Audio.play('GhostVoice'); IF Switch.pressed THEN Audio.play('TrapSound')"
+  }
+]

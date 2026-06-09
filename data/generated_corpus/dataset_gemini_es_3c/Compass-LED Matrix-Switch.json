@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Brújula digital básica con interruptor de encendido",
+    "originalIdeaDescription": "Un dispositivo simple de orientación donde la Matriz LED muestra la letra del punto cardinal (N, S, E, O) hacia el que apunta el usuario. El interruptor sirve para activar o desactivar la visualización para ahorrar batería.",
+    "transformedIdeaTitle": "El Explorador Perdido",
+    "transformedIdeaDescription": "¡Estás perdido en la selva! Crea una herramienta de supervivencia. Programa la brújula para que, al encender el interruptor, la Matriz LED te muestre una flecha apuntando siempre al Norte, ayudándote a encontrar el camino a casa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (Read Compass; IF angle < 45 OR angle > 315 THEN LED.show('N')) ELSE LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de búsqueda del tesoro direccional",
+    "originalIdeaDescription": "El sistema guía al usuario hacia una dirección específica preprogramada. La matriz muestra una flecha si el usuario debe girar a la izquierda o derecha. El interruptor se usa para confirmar que se ha llegado al destino.",
+    "transformedIdeaTitle": "El Radar del Tesoro Pirata",
+    "transformedIdeaDescription": "Eres un pirata buscando un cofre enterrado. El tesoro está al Este. Programa tu radar para que muestre una flecha giratoria en la Matriz LED hasta que estés mirando al Este. Cuando la encuentres, presiona el interruptor para 'cavar' y ver una animación de monedas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: Read Compass; IF angle != 90 THEN LED.showArrowTo(90) ELSE LED.show('Check'); IF Switch.pressed AND angle == 90 THEN LED.animate('Coins')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja fuerte con combinación basada en orientación",
+    "originalIdeaDescription": "Un sistema de seguridad que requiere que el dispositivo se gire a ángulos específicos en una secuencia. El interruptor funciona como el botón de 'Enter' para validar cada posición de la secuencia de desbloqueo.",
+    "transformedIdeaTitle": "La Bóveda del Agente Secreto",
+    "transformedIdeaDescription": "Debes abrir una bóveda de alta seguridad. La combinación no son números, ¡son direcciones! Gira al Norte y presiona el interruptor, luego al Oeste y presiona de nuevo. Si la secuencia es correcta, la Matriz LED mostrará un candado abierto.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR stage = 0; IF Switch.pressed THEN { IF stage == 0 AND Compass.isNorth() THEN stage = 1; ELSE IF stage == 1 AND Compass.isWest() THEN LED.show('Unlock') ELSE LED.show('Error') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de fantasmas o campos magnéticos simulados",
+    "originalIdeaDescription": "El dispositivo actúa como un escáner. Al girar 360 grados, la Matriz LED se ilumina más intensamente o muestra patrones cuando apunta a una 'dirección embrujada' generada aleatoriamente. El interruptor reinicia la ubicación del fantasma.",
+    "transformedIdeaTitle": "Cazafantasmas Digital",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Gira lentamente con tu dispositivo. Programa la Matriz LED para que parpadee más rápido cuando te acerques a la dirección donde se esconde el espectro. Usa el interruptor para atraparlo cuando la señal sea máxima.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR ghostAngle = Random(0, 360); Loop: dist = abs(Compass.angle - ghostAngle); LED.blinkSpeed(dist); IF Switch.pressed AND dist < 20 THEN LED.show('GhostCaptured')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ruleta de la fortuna controlada por giro",
+    "originalIdeaDescription": "El usuario gira físicamente con el dispositivo. Al presionar el interruptor, la lectura de la brújula se congela y la Matriz LED muestra un premio o símbolo basado en el ángulo en el que se detuvo.",
+    "transformedIdeaTitle": "La Ruleta Mágica Humana",
+    "transformedIdeaDescription": "¡Tú eres la ruleta! Gira sobre ti mismo. Cuando tus amigos griten '¡YA!', presiona el interruptor. Dependiendo de hacia dónde estés mirando (Norte, Sur, Este u Oeste), la Matriz LED mostrará un premio diferente o un reto divertido.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed THEN { angle = Compass.getHeading(); IF angle < 90 THEN LED.show('Prize1') ELSE IF angle < 180 THEN LED.show('Prize2')... }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Navegación por laberinto virtual ciego",
+    "originalIdeaDescription": "El usuario navega un mapa virtual invisible. Dependiendo de la orientación de la brújula, el usuario 'mira' hacia una pared o un camino. La Matriz muestra un muro o un pasillo. El interruptor permite avanzar un paso.",
+    "transformedIdeaTitle": "Escape del Laberinto Invisible",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto que no puedes ver. Gira tu dispositivo para encontrar la salida. Si miras hacia una pared, la Matriz muestra una 'X'. Si el camino está libre, muestra una flecha. Presiona el interruptor para dar un paso adelante hacia la libertad.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR position = [0,0]; CheckMap(position, Compass.heading); IF pathClear AND Switch.pressed THEN MoveForward()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simón dice con direcciones cardinales",
+    "originalIdeaDescription": "Juego de memoria y reflejos. La Matriz LED muestra una letra (N, S, E, O) y el usuario debe girar el dispositivo hacia esa dirección y presionar el interruptor antes de que se acabe el tiempo.",
+    "transformedIdeaTitle": "Capitán Brújula Manda",
+    "transformedIdeaDescription": "El Capitán Brújula te da órdenes. La pantalla te mostrará una dirección (Norte, Sur...). ¡Gira rápido hacia allá y presiona el botón! Si lo haces a tiempo y en la dirección correcta, ganas puntos. Si fallas, ¡el barco se hunde!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR target = RandomDirection(); LED.show(target); Wait(3s); IF Switch.pressed AND Compass.matches(target) THEN Score++ ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Planetario de bolsillo interactivo",
+    "originalIdeaDescription": "Dependiendo de la dirección hacia la que apunte la brújula, la matriz LED dibuja una constelación simple que sería visible en esa dirección del cielo. El interruptor cambia entre modo estrellas y modo planetas.",
+    "transformedIdeaTitle": "Explorador del Cielo Nocturno",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un telescopio mágico. Al apuntar al Norte, la Matriz LED dibujará la Osa Menor; al Sur, la Cruz del Sur. Usa el interruptor para cambiar la vista y buscar planetas ocultos en direcciones específicas.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR mode = Switch.state; IF mode == STARS { IF Compass.isNorth() THEN LED.draw('UrsaMinor') } ELSE { IF Compass.isEast() THEN LED.draw('Venus') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de vuelo para avión virtual",
+    "originalIdeaDescription": "Simulador de cabina. La brújula determina el rumbo del avión. La matriz muestra el horizonte artificial o la desviación del rumbo. El interruptor activa el piloto automático para mantener el rumbo actual.",
+    "transformedIdeaTitle": "Piloto de Avión de Rescate",
+    "transformedIdeaDescription": "Tienes que volar a través de una tormenta. Mantén tu avión derecho. Si te desvías del rumbo 0 grados, la Matriz LED mostrará flechas de advertencia para corregir. Presiona el interruptor para activar los propulsores turbo cuando el rumbo sea perfecto.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR heading = Compass.getDegree(); IF heading > 5 THEN LED.show('TurnLeft') ELSE IF heading < 355 THEN LED.show('TurnRight') ELSE LED.show('Straight'); IF Switch.pressed AND heading == 0 THEN Turbo()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Codificador de mensajes semáforo",
+    "originalIdeaDescription": "Herramienta para enviar mensajes secretos. Cada punto cardinal (o subdivisión de 45 grados) corresponde a un símbolo o letra en la matriz. El usuario selecciona girando y confirma la letra con el interruptor.",
+    "transformedIdeaTitle": "Máquina de Enigmas",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Gira el dispositivo: el Norte es 'A', el Este es 'B', el Sur es 'C', etc. Cuando tengas la letra que quieres en la pantalla, presiona el interruptor para escribirla y formar tu código secreto.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR alphabet = ['A','B','C','D'...]; VAR index = Map(Compass.angle, 0, 360, 0, 26); LED.show(alphabet[index]); IF Switch.pressed THEN Message.add(alphabet[index])"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Rastreador de 'punto de retorno' para caminatas",
+    "originalIdeaDescription": "Al iniciar una caminata, se guarda el rumbo. La matriz muestra constantemente una flecha que apunta hacia el punto de origen relativo al movimiento. El interruptor establece el nuevo punto de origen.",
+    "transformedIdeaTitle": "El Hilo de Ariadna Digital",
+    "transformedIdeaDescription": "No te pierdas en el bosque. Al comenzar tu aventura, presiona el interruptor para 'guardar' tu casa. Mientras caminas, la Matriz LED siempre mostrará una flecha indicando hacia atrás, para que sepas cómo regresar al punto de partida.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR homeHeading; IF Switch.pressed THEN homeHeading = Compass.heading; VAR returnDir = (homeHeading + 180) % 360; LED.showArrowFor(returnDir - Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de equilibrio y postura Feng Shui",
+    "originalIdeaDescription": "Dispositivo para alinear objetos. Mide si un objeto está perfectamente orientado a un punto cardinal deseado. La matriz muestra una cara feliz si la alineación es exacta y el interruptor congela la lectura.",
+    "transformedIdeaTitle": "El Maestro de la Alineación",
+    "transformedIdeaDescription": "Ayuda a construir una ciudad perfecta. Los edificios deben mirar exactamente al Este para recibir sol. Coloca el sensor y gíralo. Si la alineación es perfecta (90 grados exactos), la Matriz sonreirá. Usa el interruptor para fijar el edificio.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 88 AND Compass.heading < 92 THEN LED.show('HappyFace') ELSE LED.show('SadFace'); IF Switch.pressed THEN LockPosition()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de tiro con arco virtual",
+    "originalIdeaDescription": "El usuario debe 'apuntar' con el cuerpo hacia un objetivo virtual que se mueve. La matriz muestra qué tan cerca está del centro de la diana. El interruptor dispara la flecha.",
+    "transformedIdeaTitle": "Arquero Olímpico",
+    "transformedIdeaDescription": "El viento cambia la dirección de tu objetivo. La Matriz LED muestra un punto que se mueve. Gira tu cuerpo para mantener el punto en el centro de la matriz (alineando la brújula con el objetivo). ¡Presiona el interruptor en el momento justo para disparar!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR targetAngle = MoveTarget(); VAR aim = Compass.heading; VAR offset = targetAngle - aim; LED.plotPixelFromOffset(offset); IF Switch.pressed AND offset == 0 THEN LED.show('Bullseye')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caleidoscopio de direcciones",
+    "originalIdeaDescription": "Generación de patrones artísticos en la Matriz LED que cambian y rotan según el ángulo de la brújula. El interruptor cambia la 'paleta' de patrones o formas utilizadas.",
+    "transformedIdeaTitle": "Arte Giratorio",
+    "transformedIdeaDescription": "Crea arte moviéndote. Mientras giras con el dispositivo, la Matriz LED genera patrones geométricos que rotan contigo. Presiona el interruptor para cambiar las figuras y crea tu propia exposición de arte digital bailando.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "VAR pattern = Switch.count % 3; LED.drawPattern(pattern, rotation=Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de velocidad de giro (Spin Speed)",
+    "originalIdeaDescription": "Mide qué tan rápido el usuario puede dar vueltas sobre sí mismo. La brújula detecta el cambio de ángulo en el tiempo. La matriz muestra una barra de potencia. El interruptor inicia/detiene el cronómetro.",
+    "transformedIdeaTitle": "Torbellino Humano",
+    "transformedIdeaDescription": "¿Qué tan rápido puedes girar sin marearte? Presiona el interruptor y da una vuelta completa lo más rápido posible. La brújula medirá tu velocidad y la Matriz LED se llenará como una barra de energía. ¡Intenta llenar toda la pantalla!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { oldAng = angle; angle = Compass.read(); speed = abs(angle - oldAng); LED.showBarGraph(speed); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Localizador de Qibla o Lugares Importantes",
+    "originalIdeaDescription": "Calcula y apunta hacia una ubicación geográfica fija predefinida (ej. La Meca, o el centro de la ciudad). La matriz muestra la dirección a corregir. El interruptor alterna entre diferentes destinos guardados.",
+    "transformedIdeaTitle": "Guía Turístico Automático",
+    "transformedIdeaDescription": "Programa tu dispositivo con las coordenadas de tu escuela o parque favorito. La Matriz LED te mostrará una flecha indicando hacia dónde caminar para llegar allí, sin importar dónde estés. Usa el interruptor para cambiar de destino.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR destination = Destinations[Switch.count]; VAR bearing = CalculateBearing(GPS, destination); LED.showArrow(bearing - Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Estación meteorológica de viento simulada",
+    "originalIdeaDescription": "El usuario actúa como una veleta. La matriz muestra animaciones de viento (nubes moviéndose) en la dirección opuesta a la que apunta la brújula. El interruptor cambia la 'velocidad' del viento simulado.",
+    "transformedIdeaTitle": "El Señor de los Vientos",
+    "transformedIdeaDescription": "Controla el clima. Apunta hacia el Norte y verás en la pantalla cómo el viento sopla hacia el Sur. Gira para cambiar la dirección de la tormenta. Presiona el interruptor para convertir una brisa suave en un huracán en la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "VAR windSpeed = Switch.isOn() ? FAST : SLOW; LED.animateWind(direction=Compass.heading + 180, speed=windSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escáner de seguridad tipo aeropuerto",
+    "originalIdeaDescription": "Juego de rol donde un estudiante escanea a otro. Al pasar el dispositivo cerca y girarlo, si apunta a cierto ángulo 'sospechoso' aleatorio, la matriz parpadea. El interruptor reinicia el escáner.",
+    "transformedIdeaTitle": "Detector de Metales Espacial",
+    "transformedIdeaDescription": "Estás buscando rocas espaciales raras en el bolsillo de un astronauta. Pasa el sensor alrededor. Si el sensor se inclina o gira hacia un ángulo específico (simulando detección), la Matriz parpadea 'ALERTA'. Presiona el interruptor para escanear al siguiente astronauta.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR secretAngle = Random(); IF abs(Compass.heading - secretAngle) < 10 THEN LED.flash('ALERT') ELSE LED.clear(); IF Switch.pressed THEN secretAngle = Random()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de DJ direccional",
+    "originalIdeaDescription": "Instrumento musical experimental. Diferentes orientaciones (N, S, E, O) seleccionan diferentes pistas de ritmo visuales en la matriz. El interruptor hace 'drop the beat' (activa la animación principal).",
+    "transformedIdeaTitle": "DJ Brújula Mix",
+    "transformedIdeaDescription": "¡Eres el DJ! Si apuntas al Norte, seleccionas el ritmo de Tambores (visual). Al Sur, el ritmo de Bajos. Gira para elegir tu mezcla y presiona el interruptor para lanzar el espectáculo de luces al ritmo de la música.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR track = Map(Compass.heading, 0, 360, 0, 4); LED.showIcon(track); IF Switch.pressed THEN LED.playAnimation(track)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de rol de tanque o torreta",
+    "originalIdeaDescription": "El usuario controla una torreta defensiva. La brújula controla la rotación del cañón en la pantalla. Enemigos aparecen en los bordes de la matriz. El interruptor dispara.",
+    "transformedIdeaTitle": "Defensor de la Torre",
+    "transformedIdeaDescription": "Defiende tu base en el centro de la pantalla. Los puntos enemigos se acercan desde los bordes. Gira físicamente para apuntar tu cañón hacia ellos y presiona el interruptor para disparar láseres antes de que toquen el centro.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SpawnEnemies(); Aim = Compass.heading; LED.drawLineFromCenter(Aim); IF Switch.pressed THEN DestroyEnemyAt(Aim)"
+  }
+]

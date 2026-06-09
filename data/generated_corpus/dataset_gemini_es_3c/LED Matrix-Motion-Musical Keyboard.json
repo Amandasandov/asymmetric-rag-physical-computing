@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Sonidos",
+    "originalIdeaDescription": "Un dispositivo que detecta movimientos bruscos y reproduce un sonido mágico mientras muestra destellos en la pantalla LED, simulando el lanzamiento de un hechizo.",
+    "transformedIdeaTitle": "Escuela de Hechicería Digital",
+    "transformedIdeaDescription": "¡Conviértete en un mago! Programa tu dispositivo para que, al agitarlo como una varita, lance un 'hechizo sónico'. Deberás configurar el acelerómetro para detectar el movimiento de 'lanzamiento' y hacer que suenen notas agudas y brillantes mientras la matriz LED muestra estrellas parpadeantes.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.magnitude > threshold THEN MusicalKeyboard.play(C6, E6, G6) AND LEDMatrix.showAnimation('sparkles')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Pasos Musical",
+    "originalIdeaDescription": "Un podómetro simple que reproduce una nota musical y actualiza un contador en la matriz LED cada vez que el usuario da un paso o salta.",
+    "transformedIdeaTitle": "Zapatos Musicales de Gigante",
+    "transformedIdeaDescription": "Imagina que cada paso que das hace temblar la tierra con música. Crea un programa que detecte el impacto de tus pies contra el suelo (eje Z) para tocar notas graves de piano y mostrar una huella de pie en la pantalla LED cada vez que caminas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.z > 1.5g THEN MusicalKeyboard.play(C3) AND LEDMatrix.showIcon('footprint')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos de Galletas",
+    "originalIdeaDescription": "Un sistema de seguridad para colocar sobre una caja que suena una alarma y muestra una señal de advertencia si alguien intenta moverla.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tus secretos o tus dulces. Diseña una alarma que, al detectar cualquier movimiento en la caja fuerte, active una sirena ruidosa (notas repetitivas rápidas) y muestre una calavera parpadeante en la matriz LED para asustar al ladrón.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.isShaken() THEN loop(MusicalKeyboard.play(A5, C6)) AND LEDMatrix.blink('skull')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Sensible",
+    "originalIdeaDescription": "Una mascota digital que muestra una cara feliz y ronronea con notas musicales suaves cuando se le mece suavemente, pero se marea si se agita fuerte.",
+    "transformedIdeaTitle": "Cuida a tu Robot-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital necesita cariño. Si la meces suavemente (movimiento lento), tocará una melodía dulce y sonreirá. Pero cuidado, si la agitas demasiado fuerte, se mareará, tocará notas disonantes y mostrará una cara de vómito en los LEDs. ¡Programa las condiciones correctas!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.smooth THEN (LED.smile, Music.play(E4, G4)) ELSE IF motion.shake THEN (LED.dizzy, Music.play(C2, F#2))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Aire Theremin",
+    "originalIdeaDescription": "Un instrumento musical donde la inclinación del dispositivo controla qué nota suena y la visualización de la altura de la nota en la matriz LED.",
+    "transformedIdeaTitle": "El Violín Invisible",
+    "transformedIdeaDescription": "Crea un instrumento que se toca en el aire sin tocar cuerdas. Inclina el dispositivo hacia la derecha para notas agudas y hacia la izquierda para graves. La matriz LED debe mostrar una barra que sube y baja según la nota que estás tocando.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "note = map(motion.tiltX, -90, 90, C3, C6); MusicalKeyboard.play(note); LEDMatrix.plotBar(note)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Un dispositivo para ejercicio que detecta el movimiento vertical, tocando una escala ascendente al subir y descendente al bajar, contando las repeticiones.",
+    "transformedIdeaTitle": "Juego de Salto y Agachada",
+    "transformedIdeaDescription": "¡Haz ejercicio jugando! Programa el sensor para detectar cuando te agachas (movimiento eje Y negativo) tocando notas graves y mostrando una flecha abajo, y cuando saltas (eje Y positivo) tocando notas agudas y mostrando una flecha arriba.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.accelY < -5 THEN (Music.play(C3), LED.arrowDown) ELSE IF motion.accelY > 5 THEN (Music.play(C5), LED.arrowUp)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Dado Electrónico Musical",
+    "originalIdeaDescription": "Al agitar el dispositivo, se genera un número aleatorio del 1 al 6, se muestra en la pantalla y se toca ese número de 'bips' musicales.",
+    "transformedIdeaTitle": "Dados Mágicos de la Suerte",
+    "transformedIdeaDescription": "Ya no necesitas dados físicos para tus juegos de mesa. Agita tu dispositivo con fuerza para 'lanzar' el dado. Cuando te detengas, la pantalla mostrará un número al azar y el teclado tocará una fanfarria de victoria correspondiente al número obtenido.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF shakeEnd THEN num = random(1,6); LEDMatrix.show(num); repeat(num) { MusicalKeyboard.play(C5) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Sonoro",
+    "originalIdeaDescription": "Herramienta de construcción que ayuda a nivelar superficies. Si está plano, muestra un check y suena armonioso; si está inclinado, muestra la dirección y suena discordante.",
+    "transformedIdeaTitle": "El Constructor Equilibrista",
+    "transformedIdeaDescription": "Ayuda al arquitecto a poner el suelo recto. Si el dispositivo está perfectamente plano, muestra una cara feliz y toca un acorde mayor. Si se inclina hacia un lado, muestra hacia dónde se cae y toca un tono de advertencia que cambia de agudo a grave según la inclinación.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.isLevel() THEN (LED.check, Music.chord(Cmaj)) ELSE (LED.showDirection(motion.tilt), Music.play(WarningTone))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente",
+    "originalIdeaDescription": "Un temporizador invisible que suena música rápida. Al agitarlo se 'pasa' y reinicia el tiempo. Si la música para en tu mano, pierdes y sale una 'X'.",
+    "transformedIdeaTitle": "Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "Juega con tus amigos. La música suena cada vez más rápido (tempo acelerado). Debes agitar el dispositivo para 'pasar la bomba' y reiniciar el contador de la explosión. Si la música se detiene mientras lo tienes, la pantalla muestra una explosión y suena un 'BOOM'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE timer > 0 DO (Music.playTick(), LED.animate); IF shake THEN resetTimer(); IF timer == 0 THEN (Music.play(Boom), LED.explosion)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Espada Láser de Juguete",
+    "originalIdeaDescription": "Simulador que produce un zumbido constante y sonidos de choque al detectar desaceleraciones bruscas, con una línea de luz en la matriz.",
+    "transformedIdeaTitle": "Caballero Galáctico",
+    "transformedIdeaDescription": "Transforma tu dispositivo en una espada de luz. Mientras lo mueves suavemente, suena un zumbido bajo y la matriz muestra una línea vertical. Si golpeas algo (frenado brusco), debe sonar un choque fuerte y la luz debe parpadear como un impacto de energía.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.magnitude < impact_threshold THEN (Music.play(Hum), LED.line) ELSE (Music.play(Clash), LED.flash)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual",
+    "originalIdeaDescription": "Mover el dispositivo en 4 direcciones diferentes (arriba, abajo, izquierda, derecha) activa 4 sonidos de percusión/notas distintas y símbolos visuales.",
+    "transformedIdeaTitle": "Batería Aérea 4D",
+    "transformedIdeaDescription": "Crea tu propio kit de batería invisible. Configura el código para que un golpe al aire hacia la izquierda sea un bombo (nota grave), a la derecha una caja (nota media), y arriba un platillo (nota aguda). La pantalla debe mostrar flechas indicando el golpe.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.dir == LEFT THEN Music.play(C2); IF motion.dir == UP THEN Music.play(G5); LEDMatrix.showArrow(motion.dir)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simón Dice con Movimiento",
+    "originalIdeaDescription": "El juego muestra una flecha en la matriz LED y el usuario debe inclinar el dispositivo en esa dirección para ganar un punto y escuchar un sonido de éxito.",
+    "transformedIdeaTitle": "Desafío de Reflejos Ninja",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos. La pantalla te mostrará una dirección aleatoria y tendrás 1 segundo para mover el dispositivo hacia allí. Si aciertas, suena una campanada victoriosa; si fallas, suena un error y pierdes una vida.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = random(dir); LED.show(target); wait(1s); IF motion.dir == target THEN Music.play(Win) ELSE Music.play(Lose)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Rastreador de Fantasmas",
+    "originalIdeaDescription": "Un 'radar' que emite pitidos que se vuelven más agudos y rápidos cuanto más se agita el dispositivo, simulando cercanía a una entidad, con un gráfico de radar.",
+    "transformedIdeaTitle": "Cazadores de Misterios",
+    "transformedIdeaDescription": "Busca entes invisibles en tu habitación. Camina despacio; si el sensor de movimiento detecta vibraciones sutiles, haz que la música aumente de tono (pitch) y la matriz LED muestre un punto acercándose al centro, como un radar detectando algo paranormal.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "proximity = motion.magnitude; Music.setPitch(proximity * 100); LEDMatrix.drawRadar(proximity)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Director de Orquesta",
+    "originalIdeaDescription": "El ritmo de una melodía pre-programada se controla mediante la velocidad a la que el usuario agita el dispositivo (BPM variable).",
+    "transformedIdeaTitle": "Maestro de la Sinfonía",
+    "transformedIdeaDescription": "Toma la batuta. Tienes una canción programada, pero no suena a menos que muevas la mano. Si mueves la mano rápido, la canción se acelera (tempo alto) y la matriz muestra un conejo. Si vas lento, la canción se ralentiza y sale una tortuga.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "bpm = map(motion.averageMagnitude, 0, 10, 60, 200); MusicalKeyboard.setTempo(bpm); IF bpm > 120 THEN LED.show(Rabbit)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo",
+    "originalIdeaDescription": "Usar el dispositivo como un timón de avión. La inclinación gira el avión en la matriz LED y el sonido del motor cambia de tono según la inclinación 'picada' o 'ascenso'.",
+    "transformedIdeaTitle": "Piloto Acrobático",
+    "transformedIdeaDescription": "Pilota tu avión a través de las nubes. Inclina el dispositivo hacia adelante para bajar (tonos graves de motor) y hacia atrás para subir (tonos agudos). La matriz LED actúa como tu horizonte artificial, mostrando la inclinación de las alas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch_tone = map(motion.tiltY, -45, 45, LowNote, HighNote); MusicalKeyboard.play(pitch_tone); LEDMatrix.showHorizon(motion.tiltX)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Musical de Bailarina",
+    "originalIdeaDescription": "Una caja que solo reproduce una canción de cuna y muestra una animación giratoria mientras se está girando el dispositivo lentamente sobre su eje Z.",
+    "transformedIdeaTitle": "La Cajita de Música Mágica",
+    "transformedIdeaDescription": "Recrea una caja de música antigua. Para que suene la melodía y la bailarina (pixelada) gire en la pantalla, debes rotar el dispositivo continuamente y con suavidad. Si paras de girar, la música se detiene y la bailarina se congela.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.rotationZ > threshold THEN (Music.playNextNote(Lullaby), LED.rotateAnimation()) ELSE Music.stop()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Un sismógrafo casero que dibuja una línea quebrada en la LED y toca notas graves y fuertes cuando la mesa se mueve.",
+    "transformedIdeaTitle": "Estación Sismológica",
+    "transformedIdeaDescription": "Convierte tu mesa en un laboratorio científico. Deja el dispositivo quieto. Si golpeas la mesa simulando un terremoto, el dispositivo debe detectar la vibración, mostrar la magnitud del sismo en barras LED y tocar un sonido de 'ruido subterráneo' proporcional a la fuerza.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.magnitude > 0.1 THEN (LED.showBarGraph(motion.magnitude), Music.playNote(C2, duration=motion.magnitude))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego del Laberinto Sonoro",
+    "originalIdeaDescription": "Guiar un punto por un laberinto en la matriz LED usando la inclinación. Chocar con las paredes produce un sonido de error.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Guía al punto de luz hacia la salida inclinando el dispositivo. Ten cuidado, las paredes son invisibles hasta que chocas con ellas. Si te inclinas hacia una pared prohibida, sonará un 'BZZT' y la pared se iluminará momentáneamente. Encuentra el camino por el sonido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pos = updatePos(motion.tilt); IF collision(pos) THEN (Music.play(Error), LED.flashWall) ELSE LED.showPoint(pos)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Bola 8 Mágica Cantarina",
+    "originalIdeaDescription": "Hacer una pregunta, agitar el dispositivo, y recibir una respuesta 'Si', 'No' o 'Quizás' en la pantalla con un sonido asociado (alegre, triste, confuso).",
+    "transformedIdeaTitle": "El Oráculo del Futuro",
+    "transformedIdeaDescription": "Hazle una pregunta al oráculo sobre tu futuro. Agita el dispositivo mientras piensas la pregunta. Al detenerte, el oráculo decidirá: una cara feliz con música triunfal (SÍ), una cara triste con música dramática (NO), o una interrogación con música misteriosa (QUIZÁS).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF shakeStop THEN ans = random(); IF ans==1 THEN (LED.smile, Music.major) ELSE IF ans==2 THEN (LED.frown, Music.minor)..."
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Palo de Lluvia Digital",
+    "originalIdeaDescription": "Simulación del sonido de lluvia cayendo. Al inclinar el dispositivo, píxeles caen en la pantalla y suenan muchas notas rápidas y aleatorias como gotas.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Relájate con el sonido del agua. Inclina el dispositivo verticalmente para que las 'gotas' (píxeles) caigan de arriba a abajo. Cuanto más inclines, más rápido caerán y más notas de piano aleatorias (como gotas de lluvia) sonarán simultáneamente creando una atmósfera zen.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "dropSpeed = motion.tiltY; LED.animateRain(dropSpeed); IF dropMoved THEN Music.playRandomNote(PentatonicScale)"
+  }]

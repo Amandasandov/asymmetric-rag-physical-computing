@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luz de Bicicleta Inteligente",
+    "originalIdeaDescription": "Una luz trasera que se enciende automáticamente cuando entra en un túnel o anochece (sensor de luz). Si la bicicleta frena bruscamente (sensor de movimiento detecta desaceleración), la luz se pone roja intensa para avisar.",
+    "transformedIdeaTitle": "Seguridad Ciclista Automatizada",
+    "transformedIdeaDescription": "Programad el sistema de seguridad definitivo para ciclistas. Si el sensor de luz detecta oscuridad (nivel < 30), la Lámpara se enciende en modo posición (brillo medio). Si el acelerómetro detecta un frenazo brusco (Motion), la Lámpara debe brillar al 100% en rojo como luz de freno.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 30 THEN Lamp.on(50%); IF Motion.brakeDetected() THEN Lamp.color(Red, 100%)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Linterna de Dinamo Infinita",
+    "originalIdeaDescription": "La lámpara simula una linterna sin pilas. Para que alumbre, el usuario debe agitarla constantemente (cargando energía). Si hay mucha luz ambiental, se apaga sola para ahorrar.",
+    "transformedIdeaTitle": "Explorador de Cuevas Ecológico",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Tu linterna funciona con movimiento. Agita el dispositivo (Motion) para cargar la batería virtual. La Lámpara brillará según la carga. Si sales al exterior (Sensor de Luz detecta sol), la linterna se apaga automáticamente para no gastar energía.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge += Motion.shake; Lamp.brightness = Charge; IF Light.level > 80 THEN Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Alarma de Cajón de Secretos",
+    "originalIdeaDescription": "Dispositivo para pillar intrusos. Se arma en la oscuridad. Si entra luz (abren el cajón) y se mueve el dispositivo, la lámpara parpadea en rojo policial.",
+    "transformedIdeaTitle": "La Trampa para Hermanos",
+    "transformedIdeaDescription": "Protege tu diario. Esconde el dispositivo en el cajón. Cuando está oscuro y quieto, está 'Armado'. Si tu hermano abre el cajón (entra Luz) o mueve tus cosas (Motion), la Lámpara parpadeará en rojo y azul como la policía para asustarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 OR Motion.magnitude > 5 THEN Lamp.strobe(Red, Blue)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Mascota: Planta Fotosintética",
+    "originalIdeaDescription": "Una planta virtual. Necesita luz para comer y movimiento (viento) para fortalecerse. La lámpara indica su estado de salud (Verde=Bien, Rojo=Mal).",
+    "transformedIdeaTitle": "Jardín Botánico Espacial",
+    "transformedIdeaDescription": "Cuida una planta alienígena. Ponla bajo una lámpara para alimentarla (Luz) y simula el viento agitándola suavemente (Motion). Si recibe ambos, la Lámpara brillará en Verde feliz. Si le falta luz o aire, se pondrá Amarilla o Roja.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Health = Light.level + Motion.shake; Color = Map(Health, RedToGreen); Lamp.setColor(Color)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Juego del Vampiro Fotosensible",
+    "originalIdeaDescription": "El usuario es un vampiro. Si le da la luz, se quema (lámpara roja). Debe correr (motion) hacia la sombra para curarse (lámpara verde).",
+    "transformedIdeaTitle": "Drácula contra el Sol",
+    "transformedIdeaDescription": "¡El sol te quema! Si el sensor detecta luz fuerte, tu vida baja y la Lámpara se pone Roja. Debes correr (agitar dispositivo) hacia un lugar oscuro. Cuando el sensor detecte oscuridad, la Lámpara se pondrá Verde indicando que estás a salvo y recuperándote.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 THEN Health-- AND Lamp.set(Red); IF Light.level < 10 THEN Health++ AND Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luciérnagas en un Frasco",
+    "originalIdeaDescription": "Al agitar el dispositivo en la oscuridad, la lámpara parpadea suavemente como luciérnagas. Si hay luz, se esconden (apagan).",
+    "transformedIdeaTitle": "Coleccionista de Insectos Mágicos",
+    "transformedIdeaDescription": "Captura la magia. Ve a un cuarto oscuro. Agita el frasco (dispositivo) suavemente. La Lámpara emitirá pulsos de luz amarilla simulando luciérnagas despertando. Si enciendes la luz de la habitación, las luciérnagas se asustan y la Lámpara se apaga.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 15 AND Motion.shake() THEN Lamp.pulse(Yellow) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luz de Lectura Automática",
+    "originalIdeaDescription": "Lámpara que se enciende sola al levantar el dispositivo (Motion) si el ambiente es oscuro. Ajusta el brillo para no deslumbrar.",
+    "transformedIdeaTitle": "Linterna de Libro Inteligente",
+    "transformedIdeaDescription": "Crea la mejor luz para leer. Si levantas el dispositivo (Motion detecta inclinación/movimiento) y la habitación está oscura (Luz baja), la Lámpara se enciende automáticamente. Además, regula la intensidad inversamente a la luz ambiental.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.lifted() AND Light.level < 40 THEN Lamp.on(); Lamp.brightness = 100 - Light.level"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Semáforo de Ruido (Visual)",
+    "originalIdeaDescription": "Juego donde el movimiento genera 'calor'. Si se mueve mucho, la lámpara pasa de verde a rojo. La luz ambiental resetea el sistema.",
+    "transformedIdeaTitle": "Reactor Nuclear Inestable",
+    "transformedIdeaDescription": "Controla el núcleo. Si agitas el dispositivo, generas energía y la Lámpara pasa de Verde a Amarillo y Rojo (Peligro). Para enfriar el reactor, debes dejar de moverte y exponer el sensor a una luz fuerte (Refrigerante) hasta que vuelva a Verde.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Heat += Motion.shake; IF Light.level > 80 THEN Heat--; Color = Map(Heat, GreenToRed); Lamp.setColor(Color)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "En la oscuridad, si el sensor de movimiento detecta vibraciones sutiles (el usuario simula temblor), la lámpara parpadea indicando presencia.",
+    "transformedIdeaTitle": "Cazafantasmas: El Rastreador",
+    "transformedIdeaDescription": "Busca actividad paranormal. Entra en una zona oscura (Luz < 10). Mantén el pulso firme. Si el sensor de movimiento detecta una vibración repentina (sacudida), la Lámpara debe parpadear en blanco estroboscópico indicando que has encontrado un espectro.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.vibration > Threshold THEN Lamp.strobe(White)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Caja de Música Visual (Bailarina)",
+    "originalIdeaDescription": "La lámpara gira colores solo si la caja está abierta (luz) y se le ha dado cuerda (motion).",
+    "transformedIdeaTitle": "Joyero Musical de Luces",
+    "transformedIdeaDescription": "Para ver el espectáculo de luces, debes 'dar cuerda' girando el dispositivo (Motion). Luego, abre la caja (permite que entre Luz). Si hay cuerda y luz, la Lámpara hará una secuencia de arcoíris. Si se cierra (Oscuridad), se apaga.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Energy += Motion.rotation; IF Light.exposed() AND Energy > 0 THEN Lamp.rainbow() AND Energy--"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Huevo de Dragón",
+    "originalIdeaDescription": "Necesita calor (luz) y rotación suave para incubar. La lámpara cambia de color indicando el progreso.",
+    "transformedIdeaTitle": "Incubadora Mística",
+    "transformedIdeaDescription": "El huevo está frío (Lámpara Azul). Acércalo a una bombilla (Luz) para calentarlo; la lámpara pasará a Naranja. Gíralo suavemente (Motion) para que el dragón se acomode. Cuando la Lámpara se ponga Roja brillante y parpadee, ¡está naciendo!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Warmth = Light.level; IF Warmth > 60 AND Motion.gentle() THEN Progress++; Lamp.color(Map(Progress))"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Comunicador Espía de Luz",
+    "originalIdeaDescription": "Recibe mensajes (flashes de luz). El usuario responde agitando el dispositivo para enviar destellos con la lámpara.",
+    "transformedIdeaTitle": "Telégrafo Óptico",
+    "transformedIdeaDescription": "Estás en una misión secreta. Tu compañero te envía señales con una linterna. El sensor de Luz lee los flashes. Para responder 'Entendido', agita el dispositivo una vez: la Lámpara lanzará un flash verde. Agita dos veces para 'Peligro' (flash rojo).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.signalDetected(): Record(); IF Motion.shakeCount == 1 THEN Lamp.flash(Green) ELSE Lamp.flash(Red)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Pez Abisal (Señuelo)",
+    "originalIdeaDescription": "Simula un pez de las profundidades. Solo enciende su luz en oscuridad total. El movimiento simula el nado.",
+    "transformedIdeaTitle": "Criatura de la Fosa de las Marianas",
+    "transformedIdeaDescription": "Eres un pez monstruoso. Vives en la oscuridad total (tapa el sensor). Si detectas oscuridad, enciende tu señuelo (Lámpara). Cuando nades (Motion tilt), la luz debe cambiar de color para atraer presas. Si llega la luz del sol, apágate para esconderte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 THEN Lamp.on(); Lamp.hue = Motion.tilt; ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Bola de Disco de Bolsillo",
+    "originalIdeaDescription": "Agitar cambia los colores. El sensor de luz detecta el 'ritmo' de luces externas (estrobos) para sincronizar.",
+    "transformedIdeaTitle": "Fiesta Portátil",
+    "transformedIdeaDescription": "¡A bailar! Agita el dispositivo para que la Lámpara cambie de colores aleatorios. Si el sensor de Luz detecta que las luces de la habitación parpadean (modo estroboscópico), tu Lámpara debe intentar sincronizarse y parpadear al mismo ritmo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.changeRate > Fast THEN Lamp.sync(Light); ELSE Lamp.setColor(Random) ON Motion.shake"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Simulador de Vela en el Viento",
+    "originalIdeaDescription": "La lámpara imita una llama. Si se agita (viento) o hay mucha luz (sol), la llama es menos visible o se apaga.",
+    "transformedIdeaTitle": "La Llama Olímpica",
+    "transformedIdeaDescription": "Lleva la antorcha. La Lámpara parpadea en naranja. Camina suavemente. Si corres demasiado rápido (Motion alto = viento), la llama se debilita (baja brillo). Si entras en un túnel oscuro, la llama brilla más fuerte para iluminar el camino.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wind = Motion.speed; Brightness = (100 - Wind) + (100 - Light.level); Lamp.set(Orange, Brightness)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Camaleón Robótico",
+    "originalIdeaDescription": "Intenta copiar el entorno. Lee la luz (intensidad) y se ajusta. Si se siente amenazado (agitar), se pone rojo.",
+    "transformedIdeaTitle": "Camuflaje Animal",
+    "transformedIdeaDescription": "Eres un camaleón. Si estás en un lugar con luz tenue, ponte Azul. Si hay luz fuerte, ponte Amarillo. Pero si un depredador te agarra (Motion sacudida fuerte), ¡ponte Rojo brillante para asustarlo!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN Lamp.set(Red); ELSE Color = Map(Light.level, BlueToYellow); Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Juego de Reacción: Disparo Rápido",
+    "originalIdeaDescription": "El usuario tapa el sensor (enfunda). Al destapar (desenfunda), debe 'disparar' (agitar) antes de que la lámpara se ponga roja.",
+    "transformedIdeaTitle": "Duelo al Sol",
+    "transformedIdeaDescription": "Enfunda tu arma (tapa el sensor de luz). Espera... ¡YA! Destapa el sensor (desenfunda) y haz el gesto de disparo (Motion) lo más rápido posible. Si tardas menos de 0.5 segundos, la Lámpara parpadea verde (Ganaste). Si tardas más, roja (Perdiste).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(Light.exposed); Timer.start(); Wait(Motion.jerk); IF Timer < 0.5 THEN Lamp.green() ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Coche Solar de Carreras",
+    "originalIdeaDescription": "La luz es gasolina. Motion es el volante (inclinación). La lámpara son los faros o el turbo.",
+    "transformedIdeaTitle": "Rally del Desierto Solar",
+    "transformedIdeaDescription": "Conduce tu coche solar. Necesitas luz directa para avanzar (Motor activado). Inclina para girar. Si pasas por un túnel (Oscuridad), se encienden los faros (Lámpara Blanca) automáticamente. Si agitas, usas el turbo (Lámpara Azul).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 50 THEN Move(); IF Light < 20 THEN Lamp.on(White); IF Motion.shake() THEN Lamp.on(Blue)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Asistente de Meditación",
+    "originalIdeaDescription": "Ayuda a respirar. Si hay quietud (no motion) y luz suave, la lámpara pulsa lentamente para guiar la respiración.",
+    "transformedIdeaTitle": "Respiración Zen",
+    "transformedIdeaDescription": "Relájate. Siéntate quieto (Motion 0) y baja las luces. El dispositivo detectará la calma y la Lámpara empezará a pulsar suavemente en azul cian: inspira cuando brille, espira cuando se apague. Si te mueves, se detiene.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.still() AND Light.dim() THEN Lamp.breathe(Cyan, Speed=Slow)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Minero en Peligro",
+    "originalIdeaDescription": "Lámpara de casco. Se enciende al caminar (Motion). Si hay un derrumbe (oscuridad total repentina + golpe), parpadea SOS.",
+    "transformedIdeaTitle": "Rescate en la Mina",
+    "transformedIdeaDescription": "Trabajas en la mina. Tu casco se enciende al caminar (Motion). Si de repente todo se vuelve negro (Luz = 0) y hubo un golpe fuerte (Impacto), el sistema asume que estás atrapado y la Lámpara empieza a emitir S.O.S. en código Morse automáticamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.walking() THEN Lamp.on(); IF Light.zero() AND Motion.impact() THEN Lamp.emitMorse('SOS')"
+  }
+]

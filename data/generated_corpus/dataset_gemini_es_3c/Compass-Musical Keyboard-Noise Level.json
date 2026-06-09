@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Caja Fuerte de Viento y Dirección",
+    "originalIdeaDescription": "Un sistema de seguridad donde la combinación implica girar el dispositivo a un punto cardinal específico, soplar al micrófono (nivel de ruido) y tocar una tecla de confirmación.",
+    "transformedIdeaTitle": "La Bóveda de los Cuatro Vientos",
+    "transformedIdeaDescription": "Eres un explorador antiguo. Para abrir el templo, debes mirar al Norte y soplar suavemente (simulando el viento del norte). Luego mira al Este y sopla fuerte. Finalmente, toca la tecla 'Do' para abrir la puerta. Si te equivocas, el teclado emite un tono de error.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Noise.level > 20 THEN step1 = TRUE; IF step1 AND Compass.heading == 'East' AND Noise.level > 60 THEN step2 = TRUE; IF step2 AND Keyboard.key('C') THEN unlock()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Detector de Sigilo Ninja",
+    "originalIdeaDescription": "El usuario debe navegar un laberinto virtual girando (brújula) mientras mantiene silencio absoluto. Si hace ruido, suena una alarma en el teclado.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Pasos de Sombra",
+    "transformedIdeaDescription": "Debes infiltrarte en el palacio. Gira tu cuerpo para elegir el camino seguro (Norte o Sur). ¡Pero cuidado! El suelo cruje. Si el sensor de ruido detecta que respiras fuerte o caminas pesado (Ruido > 10), el teclado tocará una alarma aguda y los guardias te atraparán.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE GameActive: IF Noise.level > 10 THEN Keyboard.playTone('HighC'); GameOver(); IF Compass.heading == targetDir THEN Score++"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Instrumento de Viento Direccional",
+    "originalIdeaDescription": "Un instrumento donde el usuario sopla al micrófono para producir sonido (activación por ruido) y la dirección de la brújula selecciona la escala musical o el tono.",
+    "transformedIdeaTitle": "La Flauta Panorámica",
+    "transformedIdeaDescription": "Crea melodías con el aire y el espacio. Sopla al micrófono para activar el sonido. Si miras al Norte, el teclado tocará notas agudas automáticamente. Si giras al Sur mientras soplas, las notas se volverán graves. Toca las teclas para añadir armonías manuales.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 40 THEN soundOn = TRUE; scale = map(Compass.heading, [High, Mid, Low]); IF soundOn THEN Keyboard.playRandom(scale)"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Cazador de Ecos",
+    "originalIdeaDescription": "El usuario apunta a una dirección y hace un ruido fuerte (aplauso). Si la dirección es correcta (donde está el objetivo virtual), el teclado reproduce un 'eco' melódico.",
+    "transformedIdeaTitle": "Murciélago Ciego",
+    "transformedIdeaDescription": "Estás en una cueva oscura y buscas la salida. Gira (Brújula) y da un aplauso seco (Ruido). Si estás mirando hacia la salida, el teclado responderá con un acorde armonioso (el eco). Si miras a una pared, sonará una nota disonante.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.peakDetected() THEN IF Compass.heading == ExitDir THEN Keyboard.playChord('Major') ELSE Keyboard.playNote('Diminished')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Simón Dice: Orientación y Gritos",
+    "originalIdeaDescription": "Juego de ritmo donde las instrucciones son visuales (en pantalla) y requieren: girar a una dirección, gritar, o tocar una nota.",
+    "transformedIdeaTitle": "El Capitán Ruidoso",
+    "transformedIdeaDescription": "Sigue las órdenes en pantalla. Si aparece 'NORTE', gira rápido. Si aparece 'GRITA', haz ruido fuerte. Si aparece 'PIANO', toca una tecla. El teclado sonará con una fanfarria si completas la secuencia a tiempo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "target = Random(['North', 'Shout', 'Key']); WAIT(3s); IF input == target THEN Keyboard.playMelody('Win') ELSE Keyboard.playTone('Fail')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Explorador de Selva Ruidosa",
+    "originalIdeaDescription": "Navegar hacia coordenadas. Si hay mucho ruido ambiental, los 'animales virtuales' se asustan y no se pueden encontrar. El usuario debe pedir silencio a la clase.",
+    "transformedIdeaTitle": "Fotógrafo de Naturaleza",
+    "transformedIdeaDescription": "Busca el León Raro. El radar te dice que está al Noroeste. Gira hacia allá (Compass). Pero el León es tímido: si tus compañeros de clase hacen ruido (Nivel de Ruido > 30), el León huirá. Pide silencio, apunta y presiona una tecla para 'tomar la foto' (suena obturador).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == Target AND Noise.level < 30 AND Keyboard.pressed() THEN Success() ELSE IF Noise.level > 30 THEN Warning()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Hechicero Elemental",
+    "originalIdeaDescription": "Seleccionar un hechizo con la dirección (Norte=Hielo, Sur=Fuego). Cargar el poder con ruido (gritando '¡Ahhh!'). Disparar con el teclado.",
+    "transformedIdeaTitle": "Academia de Magia Elemental",
+    "transformedIdeaDescription": "Prepara tu varita. Apunta al Norte para seleccionar 'Hielo'. Carga tu maná haciendo un sonido continuo 'Ommm' (Nivel de Ruido constante). Cuando la barra esté llena, presiona la tecla final para lanzar el hechizo y escuchar el sonido mágico.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "element = GetDirection(Compass.heading); WHILE Noise.level > 20: charge++; IF charge == 100 AND Keyboard.pressed() THEN CastSpell(element)"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo a Ciegas",
+    "originalIdeaDescription": "El usuario escucha (imaginariamente o por instrucciones) la ubicación de un avión. Debe girar hacia él y usar el teclado para comunicarse. El ruido ambiental simula tormenta.",
+    "transformedIdeaTitle": "Torre de Control en Tormenta",
+    "transformedIdeaDescription": "Un avión se acerca desde el Este. Debes guiarlo. Gira al Este (Compass). Si hay mucho ruido en el aula (tormenta), la señal falla. Espera a que baje el ruido y transmite el código de aterrizaje 'Do-Re-Mi' en el teclado.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'East': IF Noise.level < 40 AND Keyboard.sequence('C-D-E') THEN LandPlane() ELSE SignalLost()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Afinador de Entorno",
+    "originalIdeaDescription": "La dirección determina una nota objetivo. El usuario debe cantar esa nota (ruido constante) y tocarla en el teclado para verificar si coinciden (juego conceptual de tono).",
+    "transformedIdeaTitle": "La Brújula Cantarina",
+    "transformedIdeaDescription": "Apunta al Norte: eso corresponde a la nota 'Do'. Canta o tararea fuerte para activar el sistema (Noise Level). Mientras cantas, toca la tecla 'Do'. Si la dirección, tu voz y la tecla coinciden, desbloqueas el siguiente nivel.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetNote = Map(Compass.heading); IF Noise.active() AND Keyboard.key(targetNote) THEN Score++"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Juego de la Estatua con Dirección",
+    "originalIdeaDescription": "Cuando el ruido para, el usuario debe congelarse mirando hacia una dirección específica indicada previamente. El teclado inicia la ronda.",
+    "transformedIdeaTitle": "Estatuas Cardinales",
+    "transformedIdeaDescription": "Baila y haz ruido mientras tocas teclas al azar. De repente, la pantalla dice '¡NORTE!'. Debes callarte inmediatamente (Noise Level 0) y mirar al Norte (Compass). Si lo logras en 2 segundos, el teclado toca una melodía de victoria.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait(Random); Display('North'); WAIT(2s); IF Noise.level < 10 AND Compass.heading == 'North' THEN Keyboard.play('Win')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras",
+    "originalIdeaDescription": "El interrogador apunta el dispositivo al sospechoso. Si el sospechoso habla (ruido) y la brújula se mueve (nerviosismo), el teclado suena alarma.",
+    "transformedIdeaTitle": "El Robot Interrogador",
+    "transformedIdeaDescription": "Sostén el dispositivo apuntando a tu amigo (Norte). Hazle una pregunta. Si responde gritando (Ruido alto) o si tú tiemblas y desvías la brújula (Compass inestable), la máquina detecta 'Mentira' y debes tocar una tecla grave para sentenciarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 70 OR Abs(Compass.delta) > 15 THEN LieDetected = TRUE; IF LieDetected AND Keyboard.pressed() THEN Keyboard.playTone('Low')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Aplausos Direccional",
+    "originalIdeaDescription": "Competencia de popularidad. Apuntar a un grupo de alumnos, medir ruido de aplausos, registrar puntuación con teclado.",
+    "transformedIdeaTitle": "El Aplausómetro 360",
+    "transformedIdeaDescription": "Divide la clase en 4 equipos (Norte, Sur, Este, Oeste). Gira hacia el equipo Norte y pídeles que aplaudan. El sensor mide el nivel máximo. Toca una tecla para guardar su puntaje. Gira al Sur y repite. ¿Quién ganó?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "team = GetDirection(Compass.heading); maxNoise = Noise.peak(); IF Keyboard.pressed('Enter') THEN SaveScore(team, maxNoise)"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Navegación por Sonar de Murciélago",
+    "originalIdeaDescription": "El usuario debe 'ver' el mapa emitiendo sonidos. Si hace ruido y apunta a una pared virtual, el teclado suena grave. Si apunta al camino libre, suena agudo.",
+    "transformedIdeaTitle": "Escape de la Caverna",
+    "transformedIdeaDescription": "Estás a oscuras. Para ver si hay pared, haz un chasquido (Ruido). Si miras al Este y es el camino correcto, el teclado hará 'Ding' (agudo). Si miras al Norte y hay pared, hará 'Bong' (grave). Navega hasta encontrar la salida.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.trigger() THEN IF Map.isWall(Compass.heading) THEN Keyboard.play('Low') ELSE Keyboard.play('High')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Mezclador de DJ Humano",
+    "originalIdeaDescription": "La dirección selecciona la pista base (virtual). El ruido (beatbox) añade ritmo. El teclado añade efectos.",
+    "transformedIdeaTitle": "Estación de Beatbox Giratoria",
+    "transformedIdeaDescription": "Crea música. Mira al Norte para el bajo, al Este para los sintetizadores. Haz ritmo con tu boca (Beatbox al micrófono) para marcar el tempo. Usa las teclas negras del teclado para insertar efectos de 'scratch' sobre tu mezcla.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Track = Map(Compass.heading); Tempo = Analyze(Noise.rhythm); IF Keyboard.key('Black') THEN PlayEffect()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Bebé a Bordo",
+    "originalIdeaDescription": "Simulador de llevar un bebé en coche. La brújula es el volante. Si hay mucho ruido (bocinazos), el bebé llora (teclado suena triste).",
+    "transformedIdeaTitle": "Conductor de Autobús Escolar",
+    "transformedIdeaDescription": "Conduce el autobús girando la brújula. Mantén el rumbo recto. Si los pasajeros (tus amigos) gritan demasiado (Ruido alto), te distraes. Si te distraes, el autobús se sale del carril y debes tocar la bocina (Teclado) para pedir orden.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > Threshold THEN Distracted = TRUE; IF Distracted AND Keyboard.pressed() THEN PlayHorn() AND ResetDistraction()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Guardián de la Puerta Secreta",
+    "originalIdeaDescription": "Para entrar, el usuario debe orientarse correctamente, decir la contraseña (nivel de volumen específico, ni muy bajo ni muy alto) y tocar el timbre.",
+    "transformedIdeaTitle": "La Contraseña Perfecta",
+    "transformedIdeaDescription": "La puerta mágica es exigente. 1) Mira al Oeste. 2) Di 'Ábrete Sésamo' con un volumen medio (si gritas no funciona, si susurras tampoco). 3) Toca la secuencia 'Sol-Mi' en el teclado. Solo así se abrirá.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND (Noise.level > 40 AND Noise.level < 70) AND Keyboard.sequence('G-E') THEN Unlock()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Francotirador de Sonido",
+    "originalIdeaDescription": "Buscar un objetivo invisible girando. El ruido ambiente ayuda a triangular (más ruido = más cerca). Teclado para disparar.",
+    "transformedIdeaTitle": "Rescate en la Niebla",
+    "transformedIdeaDescription": "Busca la señal de socorro. Gira lentamente (Compass). Pide a un amigo que haga ruido constante mientras se mueve alrededor de ti. Cuando el sensor de ruido marque el máximo, significa que estás apuntando a él. ¡Presiona la tecla para lanzar la cuerda de rescate!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetSignal = Noise.level; IF Compass.scan() finds Max(targetSignal) AND Keyboard.pressed() THEN Rescue()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Meditación Guiada por Elementos",
+    "originalIdeaDescription": "El usuario se orienta a los puntos cardinales. En cada uno debe hacer un sonido vocal específico (Omm, Ahh) y tocar una campana (teclado).",
+    "transformedIdeaTitle": "Ritual de los Cuatro Elementos",
+    "transformedIdeaDescription": "Completa el ritual. Mira al Norte (Tierra) y haz un sonido grave y constante. Toca una tecla grave. Gira al Este (Aire), sopla suavemente y toca una tecla aguda. El sistema verificará tu orientación y volumen para validar cada paso.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Check(North, Noise.LowPitch, Key.Low); Check(East, Noise.Blow, Key.High); ..."
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Carrera de Relevos Ruidosa",
+    "originalIdeaDescription": "Correr hacia un punto cardinal. Al llegar, gritar '¡Llegué!' para activar el siguiente punto. El teclado se usa para registrar tiempos.",
+    "transformedIdeaTitle": "Gymkana de Orientación",
+    "transformedIdeaDescription": "Corre al extremo Norte del patio. Al llegar, grita fuerte al micrófono para que el sensor detecte tu llegada. El dispositivo te mostrará la siguiente dirección (Sur). Al terminar el circuito, toca el teclado para parar el cronómetro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == target AND Noise.level > 80 THEN target = nextTarget; IF target == Finish AND Keyboard.pressed() THEN StopTimer()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Bomba de Tiempo con Cables",
+    "originalIdeaDescription": "El usuario debe 'cortar cables' (teclas) según la dirección de la brújula, mientras mantiene el ruido bajo para no activar el sensor de vibración acústica.",
+    "transformedIdeaTitle": "Desactivación de Emergencia",
+    "transformedIdeaDescription": "El reloj corre. Mira la pantalla: si dice 'Cable Norte', gira al Norte y presiona la tecla Roja. ¡Pero cuidado! Debes hacerlo en silencio absoluto. Si alguien habla o grita (Ruido detectado), el temporizador se acelera o explota (Teclado hace 'Boom').",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = RandomDir(); IF Compass.heading == target AND Keyboard.correctKey() AND Noise.level < 10 THEN Score++ ELSE Explode()"
+  }
+]

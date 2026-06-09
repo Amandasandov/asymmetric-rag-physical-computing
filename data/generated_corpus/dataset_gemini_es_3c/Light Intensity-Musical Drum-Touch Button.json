@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Caja de Seguridad Sensible a la Luz",
+    "originalIdeaDescription": "Un sistema diseñado para proteger objetos de valor dentro de una caja o cajón. El sensor de intensidad de luz detecta cuando la caja se abre (cambio de oscuridad a luz). Al detectar luz, la batería musical comienza a sonar como una alarma rítmica fuerte. El botón táctil se utiliza como un mecanismo oculto para desactivar o reiniciar el sistema de alarma una vez que se ha disparado.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu botín! Los estudiantes programarán un cofre del tesoro inteligente. Si un ladrón abre el cofre (permitiendo que entre la luz), sonará una alarma de tambores tribales para alertar a la tripulación. Solo el capitán (el estudiante) conoce el botón secreto para silenciar la alarma y reclamar el oro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN MusicalDrum.play('AlarmLoop'); IF TouchButton.isPressed() THEN MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Ritmo Basado en Sombras",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la velocidad del ritmo de la batería cambia según la cantidad de sombra proyectada sobre el sensor. Al cubrir el sensor con la mano (menos luz), el ritmo se ralentiza; al dejar pasar luz, se acelera. El botón táctil se usa para iniciar o pausar la reproducción del bucle de batería base.",
+    "transformedIdeaTitle": "DJ Sombra: El Maestro del Tiempo",
+    "transformedIdeaDescription": "Conviértete en un DJ que controla la música sin tocar nada. Mueve tu mano sobre el sensor para cambiar mágicamente la velocidad de la batería. Los estudiantes aprenderán a mapear valores de sensores a variables de tiempo, creando una pista de baile interactiva que responde a sus movimientos aéreos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN togglePlay(); IF isPlaying THEN { speed = map(LightIntensity, 0, 100, 200, 1000); MusicalDrum.play('Beat', speed) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción de Puntería con Linterna",
+    "originalIdeaDescription": "Un juego interactivo donde el usuario debe apuntar una linterna al sensor de luz lo más rápido posible. El sistema espera en oscuridad; cuando el botón se presiona, comienza una cuenta regresiva. Si el sensor detecta un pico de luz (la linterna) dentro del tiempo límite, la batería toca una fanfarria de victoria. Si no, toca un sonido de fallo.",
+    "transformedIdeaTitle": "Cazadores de Fotones: Francotirador de Luz",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! El sistema te desafiará a disparar un rayo de luz (usando una linterna) al objetivo en el momento exacto. Presiona el botón para armar el objetivo y, cuando estés listo, ¡dispara luz! Si aciertas, escucharás el redoble de la victoria; si fallas, un triste tambor indicará tu derrota.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { timerStart(); armed = true }; IF armed AND LightIntensity > 80 THEN { MusicalDrum.play('Victory'); armed = false }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Ambiental",
+    "originalIdeaDescription": "Un dispositivo para contar historias o crear ambiente. El sensor de luz monitorea cambios repentinos (como el apagado de luces o flashes). Cuando la luz fluctúa rápidamente, se simula un trueno usando la batería. El botón táctil se usa para cambiar la intensidad de la tormenta (suave a fuerte) o para activar un sonido de lluvia constante de fondo.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Trae el clima extremo a tu aula. Usarás el sensor de luz para detectar 'relámpagos' (flashes de luz) y programarás la batería para que responda instantáneamente con un 'trueno'. Usa el botón para cambiar entre una llovizna suave y un huracán furioso. ¡Perfecto para acompañar historias de miedo!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "diff = abs(LightIntensity - lastLight); IF diff > 30 THEN MusicalDrum.play('Thunder'); IF TouchButton.isPressed() THEN changeMode()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería Solar Ecológica",
+    "originalIdeaDescription": "Un concepto educativo sobre energía renovable. La batería musical solo funciona si hay suficiente luz ambiental ('energía solar'). Si el nivel de luz cae por debajo de un umbral, la batería se 'apaga' o suena muy débil. El botón táctil actúa como el gatillo para tocar el tambor, pero su función depende totalmente del nivel de luz disponible.",
+    "transformedIdeaTitle": "El Robot que Teme a la Oscuridad",
+    "transformedIdeaDescription": "Ayuda a 'DrumBot' a mantenerse con energía. Este robot musical solo tiene fuerza para tocar sus tambores cuando brilla el sol. Los estudiantes programarán una condición lógica: el botón solo hace ruido si la habitación está iluminada. Si está oscuro, el robot se queda sin batería y en silencio.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF LightIntensity > 40 THEN MusicalDrum.play('Snare') ELSE MusicalDrum.play('LowPower') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Auditivo Ajustable",
+    "originalIdeaDescription": "Una herramienta para músicos donde el botón táctil se usa para establecer el primer tiempo del compás (tap tempo). Sin embargo, el tipo de sonido de percusión cambia según la luz ambiental: luz brillante produce sonidos agudos (hi-hat), luz tenue produce sonidos graves (bombo). Esto permite ajustar el carácter del metrónomo sin botones extra.",
+    "transformedIdeaTitle": "El Director de Orquesta Camaleónico",
+    "transformedIdeaDescription": "Crea un metrónomo que cambia de personalidad según el ambiente. Marca el ritmo con el botón, pero observa cómo cambia el instrumento: acerca una sombra para escuchar un bombo profundo, o ilumínalo para platillos brillantes. Aprende sobre variables y condicionales anidados mientras mantienes el ritmo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF LightIntensity < 30 THEN MusicalDrum.play('Kick') ELSE MusicalDrum.play('HiHat') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación por Ecolocalización Inversa",
+    "originalIdeaDescription": "Inspirado en los murciélagos, pero usando luz. El dispositivo emite sonidos de batería con una frecuencia que depende de la oscuridad. Cuanto más oscuro (más cerca de un obstáculo o dentro de un túnel), más rápido es el redoble. El botón táctil activa o desactiva este modo de sonar, permitiendo al usuario 'escuchar' la oscuridad.",
+    "transformedIdeaTitle": "Visión de Murciélago",
+    "transformedIdeaDescription": "¡Navega en las sombras! Construye un dispositivo que te guíe en la oscuridad total. A medida que entras en zonas más oscuras, los tambores sonarán más rápido, advirtiéndote del peligro. Usa el botón para activar tu 'sonar' y explora cuevas (debajo de las mesas) sin usar tus ojos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF sonarModeOn THEN { delayTime = LightIntensity * 10; MusicalDrum.play('Tom'); wait(delayTime) }; IF TouchButton.isPressed() THEN toggleSonar()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Óptico",
+    "originalIdeaDescription": "Un dispositivo que traduce destellos de luz en sonidos. El usuario puede enviar señales con una linterna (largo o corto). El sensor lee la duración de la luz y la batería reproduce un 'golpe' corto o largo correspondiente. El botón táctil borra el mensaje o reinicia el sistema de escucha para una nueva transmisión.",
+    "transformedIdeaTitle": "Telégrafo de Espías Luminosos",
+    "transformedIdeaDescription": "Envía mensajes secretos a través de la habitación usando una linterna. Tu programa detectará los destellos de luz y los convertirá instantáneamente en sonidos de tambor para que tu aliado los escuche. Un destello corto es un 'bip' de caja, uno largo es un 'bop' de bombo. ¡Usa el botón para borrar la línea!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN { duration++; } ELSE { IF duration > 0 AND duration < 5 THEN MusicalDrum.play('Short'); IF duration >= 5 THEN MusicalDrum.play('Long'); duration = 0 }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Escondite del Dispositivo Ruidoso",
+    "originalIdeaDescription": "El dispositivo se esconde en una habitación. Si detecta oscuridad (está escondido), se queda en silencio o hace ruidos muy tenues. Si detecta luz (alguien lo encuentra o enciende la luz), comienza a tocar un ritmo de batería frenético. El botón táctil es la única forma de 'atraparlo' y detener el ruido una vez encontrado.",
+    "transformedIdeaTitle": "Atrápame si Puedes: Edición Ruidosa",
+    "transformedIdeaDescription": "Programa un 'bicho digital' que se esconde en la oscuridad. Escóndelo en un cajón o bajo una caja. Si alguien lo descubre (le da la luz), el bicho entrará en pánico y tocará la batería a todo volumen. El buscador debe presionar el botón rápidamente para calmarlo y ganar el juego.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 20 AND NOT caught THEN MusicalDrum.play('PanicLoop'); IF TouchButton.isPressed() THEN { caught = TRUE; MusicalDrum.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Instrumentos por Intensidad Lumínica",
+    "originalIdeaDescription": "Una interfaz musical donde el botón táctil dispara una nota, pero el instrumento seleccionado depende de en qué zona de luz se encuentre el dispositivo. Zona oscura = Bombo, Zona media = Caja, Zona brillante = Platillo. Permite crear un kit de batería virtual moviendo el dispositivo hacia y desde una fuente de luz.",
+    "transformedIdeaTitle": "La Batería Aérea Mágica",
+    "transformedIdeaDescription": "Convierte el aire y la luz en una batería completa. Si tocas el botón en la sombra, suena un bombo pesado. Si lo tocas bajo una lámpara, suena un platillo brillante. Los estudiantes crearán rangos lógicos (IF/ELSE IF) para asignar diferentes sonidos a diferentes niveles de luz, creando un instrumento invisible.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Light < 30 THEN play('Kick') ELSE IF Light < 70 THEN play('Snare') ELSE play('Cymbal') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma Despertador de Amanecer Progresivo",
+    "originalIdeaDescription": "Un despertador que monitorea la luz natural. Cuando comienza a amanecer (la luz sube gradualmente), el dispositivo empieza a tocar un ritmo de batería muy suave que aumenta de volumen o complejidad. El botón táctil funciona como la función de 'snooze' (posponer) o apagado total.",
+    "transformedIdeaTitle": "Despertador Solar Inteligente",
+    "transformedIdeaDescription": "¿Odias los despertadores ruidosos? Crea uno que te despierte con el sol. A medida que entra luz por la ventana, tu programa tocará ritmos suaves que se vuelven más animados. Aprende a monitorear cambios graduales en los sensores. ¡Usa el botón para pedir '5 minutos más'!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > alarmThreshold THEN { volume = LightIntensity / 10; MusicalDrum.setVolume(volume); MusicalDrum.play('MorningBeat') }; IF TouchButton.isPressed() THEN snooze()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos/Objetos en Cinta Transportadora",
+    "originalIdeaDescription": "Un sistema para simular una línea de fábrica. Una luz brilla sobre el sensor. Cada vez que un objeto pasa y bloquea la luz (baja intensidad), suena un golpe de batería (conteo auditivo) y se incrementa un contador interno. El botón táctil sirve para reiniciar el contador a cero o pausar la cinta.",
+    "transformedIdeaTitle": "Fábrica de Ritmos",
+    "transformedIdeaDescription": "Simula una línea de montaje moderna. Pasa objetos sobre el sensor para bloquear la luz; cada objeto genera un sonido de percusión satisfactorio, ¡creando un ritmo industrial! Los estudiantes aprenderán a detectar 'flancos' (cambios de estado) para contar objetos con precisión y usar el botón para reiniciar el turno de trabajo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 AND NOT objectDetected THEN { objectDetected = TRUE; MusicalDrum.play('Clank'); count++ }; IF LightIntensity > 20 THEN objectDetected = FALSE"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "Un generador de música aleatoria. El usuario presiona el botón para solicitar un nuevo ritmo. El algoritmo lee el valor actual exacto de la intensidad de luz (que fluctúa mínimamente) y lo usa como una 'semilla' para generar un patrón de batería único e irrepetible. La luz aporta la entropía necesaria.",
+    "transformedIdeaTitle": "El Compositor del Caos",
+    "transformedIdeaDescription": "La luz nunca es constante, ¡y tu música tampoco debería serlo! Usa las pequeñas variaciones de la luz ambiental para generar ritmos de batería totalmente únicos. Presiona el botón para 'tirar los dados' y deja que la luz decida si escucharás rock, jazz o tecno. Una introducción divertida a la aleatoriedad y los datos.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN { seed = LightIntensity; pattern = generatePattern(seed); MusicalDrum.play(pattern) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Simón Dice (Luz y Sonido)",
+    "originalIdeaDescription": "El juego da una secuencia de sonidos de batería. El jugador debe replicar la secuencia cubriendo el sensor de luz (para notas graves) o dejándolo descubierto (para notas agudas) y confirmando cada paso con el botón táctil. Es una variante física del clásico juego de memoria.",
+    "transformedIdeaTitle": "Desafío de Memoria: Luz vs. Sombra",
+    "transformedIdeaDescription": "Entrena tu cerebro con este juego musical. El ordenador tocará una secuencia de tambores. Tú debes repetirla: si el sonido fue grave, cubre el sensor y pulsa el botón; si fue agudo, destápalo y pulsa. ¡La secuencia se hace más larga cada vez! ¿Hasta dónde puedes llegar?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF gameState == 'PLAYER_TURN' AND TouchButton.pressed() THEN { input = (Light < 50) ? 'Low' : 'High'; checkSequence(input) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Contaminación Lumínica Auditivo",
+    "originalIdeaDescription": "Una herramienta de concienciación científica. Se coloca el sensor apuntando al cielo o ambiente. El botón inicia la medición. El resultado no es un número, sino un ritmo de batería: lento y calmado para poca luz (bueno para dormir/estrellas), rápido y caótico para mucha luz artificial (contaminación).",
+    "transformedIdeaTitle": "Detector de Estrellas Perdidas",
+    "transformedIdeaDescription": "¿Está tu cielo demasiado brillante? Conviértete en un científico ciudadano. Usa tu dispositivo para 'escuchar' la contaminación lumínica. Presiona el botón para tomar una muestra: un ritmo de tambor relajado significa que podrías ver estrellas; un ritmo frenético indica demasiada luz artificial. ¡Ideal para explorar el patio escolar!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN { level = LightIntensity; bpm = map(level, 0, 100, 60, 180); MusicalDrum.playLoop('Beat', bpm) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Candado Rítmico Secreto",
+    "originalIdeaDescription": "Un sistema de seguridad lúdico. Para 'desbloquear' una función (que suena un redoble especial), el usuario debe realizar una combinación específica: tapar el sensor de luz, presionar el botón, destapar el sensor, presionar el botón dos veces. El sistema valida la secuencia de estados de luz y pulsaciones.",
+    "transformedIdeaTitle": "La Llave Maestra del Agente Secreto",
+    "transformedIdeaDescription": "Protege tus secretos con una contraseña que nadie puede ver, solo hacer. Programarás una secuencia compleja: 'Sombra, Botón, Luz, Botón'. Si alguien intenta pulsar el botón sin cubrir el sensor en el orden correcto, sonará una alarma. Si lo hacen bien, ¡el redoble de acceso concedido sonará!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF state == 0 AND Light < 20 AND Button.pressed THEN state = 1; ELSE IF state == 1 AND Light > 80 AND Button.pressed THEN unlock()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo Cardíaco (Biofeedback Simulado)",
+    "originalIdeaDescription": "Simula un monitor cardíaco. El botón se usa para 'inyectar adrenalina' (aumentar el ritmo). El sensor de luz se usa para 'relajar' (cubrir el sensor simula cerrar los ojos/descanso). La batería toca un latido constante que se acelera con el botón y se ralentiza al reducir la luz.",
+    "transformedIdeaTitle": "Doctor Corazón: Operación Ritmo",
+    "transformedIdeaDescription": "Simula un corazón digital latiendo con un tambor. Aprende cómo el cuerpo reacciona al estrés y la calma. Presiona el botón para simular ejercicio (¡el corazón se acelera!), luego cubre el sensor para simular descanso y oscuridad (¡el corazón se relaja!). Mantén al paciente estable.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "heartRate += (TouchButton.isPressed() ? 5 : -1); IF LightIntensity < 20 THEN heartRate -= 2; MusicalDrum.play('Heartbeat', heartRate)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Estacionamiento de Garaje",
+    "originalIdeaDescription": "Ayuda a estacionar un coche de juguete o robot. El sensor de luz detecta la sombra del vehículo acercándose. A medida que la luz disminuye (el coche se acerca a la pared), los golpes de batería se vuelven más frecuentes (como un sensor de parking real). El botón reinicia el sistema para el siguiente coche.",
+    "transformedIdeaTitle": "Radar de Estacionamiento Sónico",
+    "transformedIdeaDescription": "¡No choques el rover! Diseña un sistema de seguridad para vehículos. A medida que tu mano (o un coche de juguete) se acerca al sensor y bloquea la luz, los tambores deben sonar más rápido: 'Pum... Pum.. Pum. PumPumPum!'. Usa el botón para reiniciar el radar una vez que hayas estacionado perfectamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "distance = LightIntensity; IF distance < 40 THEN { interval = distance * 10; MusicalDrum.play('Beep'); wait(interval) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música de Viento Virtual",
+    "originalIdeaDescription": "Simula un carillón de viento. El sensor de luz detecta variaciones rápidas (como hojas moviéndose o sombras de viento). Estas variaciones disparan notas aleatorias de percusión suave. El botón cambia el 'material' del carillón (sonidos de madera vs. metálicos).",
+    "transformedIdeaTitle": "El Carrillón de Viento Digital",
+    "transformedIdeaDescription": "Crea una atmósfera zen. Usando el sensor de luz para detectar el movimiento de las sombras (simulando el viento), programarás sonidos relajantes de percusión. Si agitas tu mano frente al sensor, sonará como si el viento moviera las campanas. Usa el botón para cambiar entre sonidos de bambú o metal.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Light - lastLight) > sensitivity THEN MusicalDrum.playRandom(selectedKit); IF TouchButton.pressed() THEN switchKit()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de Cocina para Huevos (Luz y Sonido)",
+    "originalIdeaDescription": "Un temporizador simple pero interactivo. El usuario presiona el botón tantas veces como minutos quiera cronometrar. La batería confirma cada minuto con un golpe. Luego, el dispositivo debe colocarse en un lugar oscuro (cajón/armario). Cuando el tiempo termina, si detecta luz (se abre el cajón), suena la alarma final.",
+    "transformedIdeaTitle": "La Bomba de Tiempo de la Despensa",
+    "transformedIdeaDescription": "Programa un temporizador para un juego de cocina. Configura los minutos pulsando el botón (cada pulsación es un 'bip'). Luego, esconde el dispositivo en un lugar oscuro. Cuando el tiempo llegue a cero, el dispositivo se armará. ¡El siguiente que abra la puerta y deje entrar la luz activará la explosión de tambores!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.pressed() THEN minutes++; IF timeUp AND LightIntensity > 50 THEN MusicalDrum.play('Explosion')"
+  }
+]

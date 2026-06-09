@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita mágica con efectos de sonido y luz",
+    "originalIdeaDescription": "Un dispositivo que actúa como una varita mágica interactiva. Utiliza el sensor de movimiento para detectar gestos específicos de la mano. Cuando se realiza un movimiento brusco o un patrón definido, el sistema reproduce un sonido mágico a través del reproductor de audio y muestra destellos o estrellas en la matriz LED, simulando el lanzamiento de un hechizo visual y auditivo.",
+    "transformedIdeaTitle": "Escuela de Hechicería: Programa tu Varita",
+    "transformedIdeaDescription": "Los estudiantes se convierten en aprendices de mago y deben programar su propia varita mágica. El desafío consiste en asignar diferentes hechizos a distintos movimientos físicos. Por ejemplo, agitar la varita hacia arriba crea una luz brillante (hechizo 'Lumos') y un sonido ascendente, mientras que un movimiento circular activa un sonido de torbellino y una espiral en la pantalla. Aprenderán sobre condicionales y eventos de movimiento.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.gesture == 'shake' THEN Audio.play('spell.mp3') AND Matrix.showAnimation('sparkles')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mascota virtual que reacciona al movimiento físico",
+    "originalIdeaDescription": "Creación de una mascota digital tipo Tamagotchi que vive dentro del dispositivo. La mascota requiere actividad física para mantenerse feliz. Si el dispositivo se mueve suavemente (se mece), la mascota se duerme y se reproduce una nana. Si se agita demasiado fuerte, la mascota se marea (cara en LED) y emite sonidos de queja. El objetivo es cuidarla mediante el movimiento.",
+    "transformedIdeaTitle": "Cuida al Huevo de Dragón",
+    "transformedIdeaDescription": "Los alumnos deben cuidar un huevo de dragón digital que está a punto de eclosionar. Deben programar la lógica para mantener al huevo caliente y seguro. Si el huevo se queda quieto mucho tiempo, se enfría (LED azul, sonido de viento). Deben moverlo suavemente para arrullarlo (cara feliz, ronroneo). Si lo agitan, el dragón se enfada. Introduce el concepto de rangos de valores en sensores.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.intensity < 10 THEN Matrix.show('sad') ELSE IF motion.intensity > 50 THEN Audio.play('roar') ELSE Matrix.show('heart')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de alarma portátil contra intrusos",
+    "originalIdeaDescription": "Un dispositivo de seguridad personal diseñado para proteger objetos valiosos. Cuando el dispositivo se activa y se deja sobre un objeto (como un diario o una caja), cualquier movimiento detectado por el sensor disparará una sirena ruidosa desde el reproductor de audio y mostrará una señal de advertencia parpadeante en la matriz LED para asustar al intruso.",
+    "transformedIdeaTitle": "Misión Espía: La Caja Fuerte Inteligente",
+    "transformedIdeaDescription": "¡Top Secret! Los estudiantes deben proteger documentos confidenciales. Su misión es programar un sistema de defensa para una caja fuerte. El sistema debe tener un tiempo de espera para 'armarse' y luego monitorear constantemente el acelerómetro. Al detectar cualquier cambio en los ejes X, Y o Z, debe activar el protocolo de intrusión: luces rojas parpadeantes y una sirena de emergencia.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WAIT 5s; LOOP: IF motion.detected() THEN Audio.play('siren') AND Matrix.blink('X', red)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de ritmo y baile interactivo",
+    "originalIdeaDescription": "Un juego que motiva a los usuarios a bailar. La matriz LED muestra flechas o indicaciones de dirección y el reproductor de audio toca una base rítmica. El usuario debe mover el dispositivo en la dirección indicada al ritmo de la música. Si el movimiento coincide con el ritmo y la dirección, se suman puntos y se reproduce un sonido de éxito.",
+    "transformedIdeaTitle": "Revolución de Baile Robot",
+    "transformedIdeaDescription": "Los estudiantes programan su propio juego de baile. El dispositivo reproducirá un ritmo constante ('beat'). La matriz LED mostrará aleatoriamente una dirección (Arriba, Abajo, Izquierda, Derecha). El jugador debe mover el dispositivo en esa dirección rápidamente. Si acierta, el dispositivo celebra con un sonido y una carita feliz; si falla, suena un error. Ideal para enseñar coordinación y lógica de juegos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Time.beat() AND motion.direction == targetDirection THEN Score++ AND Audio.play('win') ELSE Audio.play('fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de nave espacial con efectos",
+    "originalIdeaDescription": "Simulador de vuelo de una nave espacial. Al inclinar el dispositivo hacia adelante, atrás o los lados, la posición de un punto (la nave) en la matriz LED cambia. Simultáneamente, el reproductor de audio modifica el sonido del motor: tono bajo para estable, tono agudo para aceleración o inclinación pronunciada, creando una experiencia inmersiva de pilotaje.",
+    "transformedIdeaTitle": "Piloto Galáctico: Navegando el Asteroide",
+    "transformedIdeaDescription": "Los estudiantes crean el panel de control de una nave. Deben mapear la inclinación (Roll y Pitch) del sensor de movimiento a las coordenadas X e Y de un píxel en la matriz LED. El reto es mantener la nave en el centro mientras atraviesan una turbulencia imaginaria. Deben programar el audio para que el motor 'ruja' más fuerte cuanto más se incline la nave.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Set LED.pixel(map(motion.x, -90, 90, 0, 6), map(motion.y, -90, 90, 0, 6)); Audio.setVolume(motion.tilt)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Podómetro motivacional con recompensas sonoras",
+    "originalIdeaDescription": "Un dispositivo para contar pasos o saltos. Cada vez que el sensor de movimiento detecta un impacto vertical (paso), incrementa un contador visual en la matriz LED. Al llegar a ciertos hitos (por ejemplo, cada 10 pasos), el reproductor de audio lanza una frase motivadora o una fanfarria musical para animar al usuario a seguir moviéndose.",
+    "transformedIdeaTitle": "Olimpiadas de Salto: El Contador Inteligente",
+    "transformedIdeaDescription": "Los estudiantes diseñan un dispositivo para entrenamiento deportivo. El objetivo es crear un algoritmo que distinga un salto real de un simple movimiento. Deben contar los saltos y mostrarlos en la pantalla. El desafío final es programar una celebración (música de victoria y fuegos artificiales en LED) cuando el atleta alcance los 20 saltos. Fomenta la actividad física y la lógica de contadores.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.shake > threshold THEN steps = steps + 1; Matrix.print(steps); IF steps == 20 THEN Audio.play('victory')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento musical de aire tipo Theremin",
+    "originalIdeaDescription": "Un instrumento musical experimental donde no se toca nada físico. La inclinación del dispositivo en el eje X selecciona la pista de instrumento (batería, piano, bajo), y la inclinación en el eje Y controla el volumen o la velocidad de reproducción. La matriz LED muestra una visualización abstracta de las ondas sonoras que cambia con el movimiento.",
+    "transformedIdeaTitle": "Compositor de Movimiento: DJ en el Aire",
+    "transformedIdeaDescription": "¡Convierte tu cuerpo en un instrumento! Los estudiantes explorarán cómo las variables continuas (como la inclinación) pueden controlar parámetros de sonido. Programarán el dispositivo para que al inclinarlo a la derecha suene música rápida y alegre con luces brillantes, y al inclinarlo a la izquierda, música lenta y luces tenues. Es una excelente introducción a variables y mapeo de datos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = map(motion.tiltX, -90, 90, 0.5, 2.0); Audio.setSpeed(speed); Matrix.setBrightness(motion.tiltX)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de equilibrio y laberinto sonoro",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener un 'pixel' (bola) dentro de una zona segura en la matriz LED inclinando el dispositivo. Si la inclinación es excesiva y la bola toca las paredes del borde, se reproduce un sonido de choque o explosión y el juego termina, mostrando una 'X' grande en la pantalla.",
+    "transformedIdeaTitle": "Desafío de Equilibrio: ¡No Toques la Lava!",
+    "transformedIdeaDescription": "El suelo es lava (los bordes de la matriz). Los estudiantes deben programar un juego de física simple. Un píxel representa al jugador. Usando el acelerómetro, deben mover el píxel por la pantalla. El reto lógico es detectar las colisiones: si la coordenada del píxel llega a 0 o 6 (bordes), se activa el sonido de 'quemadura' y el juego se reinicia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlayerX += motion.x; IF PlayerX < 0 OR PlayerX > 6 THEN Audio.play('lava_hiss') AND Matrix.show('Game Over')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Dado electrónico con efectos de sonido",
+    "originalIdeaDescription": "Un reemplazo digital para los dados tradicionales. El usuario agita el dispositivo como si tuviera un cubilete. Mientras se agita, se escucha un sonido de dados chocando. Al detenerse el movimiento, el sistema elige un número aleatorio del 1 al 6, lo muestra en la matriz LED y anuncia el número o reproduce un sonido de confirmación.",
+    "transformedIdeaTitle": "Casino Matemático: El Dado Aleatorio",
+    "transformedIdeaDescription": "Los alumnos crearán su propio dado digital para juegos de mesa. Aprenderán sobre la generación de números aleatorios y disparadores de eventos. Deberán programar el dispositivo para que detecte el gesto de 'agitar', reproduzca un sonido de redoble de tambores mientras se agita, y finalmente muestre un número aleatorio estático cuando el movimiento se detenga.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake THEN Audio.play('rattle'); ON release: num = random(1,6); Matrix.show(num)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de terremotos o vibraciones",
+    "originalIdeaDescription": "Un sismógrafo simplificado para uso educativo. El dispositivo se coloca sobre una mesa. Muestra una línea plana en la matriz LED mientras está quieto. Al detectar vibraciones (golpes en la mesa), la línea se vuelve irregular en la pantalla y el dispositivo emite un sonido de alerta cuya intensidad depende de la fuerza de la vibración detectada.",
+    "transformedIdeaTitle": "Laboratorio de Ciencias: Sismógrafo Digital",
+    "transformedIdeaDescription": "Los estudiantes se convierten en geólogos. Deben construir un dispositivo que monitoree la estabilidad del suelo. Programarán el sistema para visualizar la magnitud de las vibraciones en la Matriz LED (como barras de altura variable). Si la vibración supera un umbral crítico (un 'terremoto'), debe sonar una alarma de evacuación. Ideal para entender sensores y umbrales.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "magnitude = abs(motion.x); Matrix.graph(magnitude); IF magnitude > dangerLevel THEN Audio.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Libro de cuentos con efectos de sonido por gestos",
+    "originalIdeaDescription": "Un compañero para la hora del cuento. El dispositivo detecta cuando el niño realiza acciones que coinciden con la historia. Por ejemplo, inclinar el dispositivo hacia un lado simula 'abrir una puerta' (sonido de chirrido), y agitarlo simula 'correr' (sonido de pasos). La matriz muestra iconos relacionados con la acción actual.",
+    "transformedIdeaTitle": "Cuentacuentos FX: La Historia Viva",
+    "transformedIdeaDescription": "En esta actividad de narrativa y lógica, los niños eligen un cuento corto y lo 'animan'. Deben identificar 3 momentos clave de la historia (ej: el lobo sopla, el caballo galopa, la puerta se abre) y programar el dispositivo para que, al hacer el gesto correspondiente, suene el efecto de sonido adecuado y aparezca un icono en la matriz LED.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.gesture == 'tilt_left' THEN Audio.play('door_creak') AND Matrix.show('door_icon')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simón dice versión movimiento",
+    "originalIdeaDescription": "Una variante del clásico juego de memoria. El reproductor de audio da una instrucción verbal (ej: 'Izquierda', 'Derecha', 'Agita'). El jugador tiene un tiempo limitado para realizar el movimiento con el dispositivo. La matriz LED muestra una cuenta regresiva visual. Si el movimiento es correcto, se pasa de nivel; si no, suena un timbre de error.",
+    "transformedIdeaTitle": "Entrenador de Reflejos: ¡Escucha y Actúa!",
+    "transformedIdeaDescription": "Los estudiantes programan un juego de retos. El dispositivo debe seleccionar una instrucción al azar, decirla por el altavoz y esperar la entrada del sensor de movimiento. El reto de pensamiento computacional es gestionar el tiempo de espera: el programa debe comprobar si el movimiento correcto ocurre dentro de los 2 segundos siguientes a la orden.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "command = random('left', 'right'); Audio.say(command); WAIT_FOR_INPUT; IF input == command THEN Score++ ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Rastreador de 'Fantasmas' o señales electromagnéticas",
+    "originalIdeaDescription": "Un juguete de exploración. El usuario camina con el dispositivo. El programa utiliza variaciones sutiles y aleatorias simuladas en el sensor de movimiento o inclinación para 'detectar' señales invisibles. A medida que el usuario se mueve más, el sonido de estática aumenta y la matriz LED parpadea más rápido, simulando un contador Geiger o detector de fantasmas.",
+    "transformedIdeaTitle": "Cazadores de Señales: El Radar Invisible",
+    "transformedIdeaDescription": "Los estudiantes crean un juego de exploración. Deben programar una lógica de 'búsqueda'. Como no hay fantasmas reales, usarán la acumulación de movimiento para simular la cercanía. Cuanto más caminen (acumulen movimiento), más rápido debe parpadear la luz y más agudo debe ser el sonido, indicando que están 'cerca' del objetivo. Fomenta la imaginación y el uso de variables acumulativas.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "energy += motion.magnitude; IF energy > target THEN Audio.play('ping') AND Matrix.blinkFast()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Temporizador de lavado de manos o cepillado",
+    "originalIdeaDescription": "Un dispositivo de higiene. Se coloca en el cepillo o cerca del lavabo. Al detectar el movimiento rítmico del cepillado o lavado, inicia una canción que dura exactamente 2 minutos. La matriz LED muestra una barra de progreso o una carita sonriente que se va llenando para indicar cuánto tiempo falta para terminar.",
+    "transformedIdeaTitle": "El Reto de los 2 Minutos: Higiene Divertida",
+    "transformedIdeaDescription": "Diseñar un asistente de salud. Los estudiantes deben programar un temporizador que solo avance si detecta movimiento (cepillado). Si el niño deja de cepillarse, la música y el temporizador se pausan (lógica de estado). Al completar el tiempo, el dispositivo celebra. Esto enseña a los estudiantes sobre bucles condicionales y temporizadores.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE time < 120s: IF motion.isActive() THEN time++ AND Audio.playMusic() AND Matrix.showProgress(time) ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja de efectos de sonido para Kung Fu",
+    "originalIdeaDescription": "Dispositivo portátil para juegos de rol. Se sujeta al brazo o pierna. Detecta movimientos rápidos y secos (puñetazos o patadas al aire). Inmediatamente reproduce sonidos de acción ('Swish', 'Pow', 'Bam') y muestra onomatopeyas visuales o explosiones en la matriz LED, haciendo que el usuario se sienta en una película de acción.",
+    "transformedIdeaTitle": "Héroe de Acción: Efectos Especiales en Vivo",
+    "transformedIdeaDescription": "Los estudiantes se convierten en ingenieros de sonido para una película. Deben calibrar el sensor para distinguir entre un movimiento normal y un 'golpe de karate' (alta aceleración repentina). Asignarán diferentes sonidos a diferentes ejes de movimiento. Es una práctica excelente para entender la sensibilidad de los sensores y la respuesta inmediata (baja latencia).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF acceleration.total > 2.5g THEN Audio.play('punch_sound') AND Matrix.showAnimation('pow')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Nivel de burbuja parlante para construcción",
+    "originalIdeaDescription": "Una herramienta útil y accesible. Funciona como un nivel de burbuja tradicional usando la matriz LED para mostrar el centro. Además, proporciona retroalimentación auditiva: un tono continuo que cambia de frecuencia según la inclinación. Cuando está perfectamente nivelado, reproduce un sonido de 'ding' o una voz que dice 'Nivelado'.",
+    "transformedIdeaTitle": "El Constructor Ciego: Herramienta Accesible",
+    "transformedIdeaDescription": "Desafío de diseño inclusivo. Los estudiantes deben crear una herramienta que ayude a una persona con discapacidad visual a saber si una superficie está plana. Programarán el audio para que el tono sea más agudo si está inclinado a la derecha y más grave a la izquierda, y un sonido especial cuando el sensor de inclinación marque 0 grados en ambos ejes.",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = map(inclination.x, -45, 45, 200Hz, 1000Hz); Audio.tone(pitch); IF inclination == 0 THEN Audio.play('success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de caídas para robots o personas",
+    "originalIdeaDescription": "Un sistema de seguridad pasiva. El dispositivo monitorea constantemente la orientación vertical (eje Z). Si detecta un cambio brusco de orientación seguido de un impacto (pico de aceleración) y luego inmovilidad, asume una caída. Activa una alarma sonora y muestra 'SOS' en la matriz LED para pedir ayuda.",
+    "transformedIdeaTitle": "Robot de Rescate: Protocolo de Emergencia",
+    "transformedIdeaDescription": "Los estudiantes programan la unidad de seguridad de un robot explorador. El reto es lógico: detectar una secuencia de eventos. No basta con agitarlo; debe ser una caída (gravedad cero momentánea) seguida de impacto. Si esto ocurre, el robot entra en 'Modo Emergencia', enviando señales de luz y sonido hasta que un humano presione un botón para reiniciarlo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF motion.freefall() AND THEN motion.impact() THEN state = 'EMERGENCY'; WHILE state == 'EMERGENCY' DO Audio.alarm() AND Matrix.text('SOS')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Batería aérea invisible (Air Drums)",
+    "originalIdeaDescription": "Simulación de tocar la batería sin instrumento. El usuario sostiene el dispositivo y realiza movimientos de golpeo en el aire. Un movimiento brusco hacia abajo en el eje Y activa el sonido del bombo, mientras que un movimiento hacia la derecha activa el platillo. La matriz LED se ilumina al ritmo de cada golpe detectado.",
+    "transformedIdeaTitle": "Banda de Rock: Percusión Digital",
+    "transformedIdeaDescription": "Creación de un instrumento virtual. Los estudiantes deben asignar sonidos específicos a gestos específicos. El desafío es evitar falsos positivos (que suene sin querer). Deben programar umbrales de aceleración para que solo los movimientos fuertes y deliberados activen el sonido de la caja o el bombo, y mostrar un destello visual sincronizado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.forceY < -2g THEN Audio.play('snare') AND Matrix.flash(White); IF motion.forceX > 2g THEN Audio.play('cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Comunicador Alienígena basado en gestos",
+    "originalIdeaDescription": "Un dispositivo de 'traducción' de ciencia ficción. El usuario realiza gestos extraños en el aire (círculos, ochos, sacudidas). El dispositivo interpreta estos patrones y genera 'frases' alienígenas (sonidos sintetizados o extraños) acompañados de glifos crípticos en la matriz LED, como si estuviera intentando comunicarse.",
+    "transformedIdeaTitle": "Primer Contacto: Decodificador Alien",
+    "transformedIdeaDescription": "Actividad de creatividad y codificación. Los estudiantes inventan un lenguaje. Deben programar el dispositivo para que una inclinación lenta signifique 'Hola' (sonido suave, cara feliz) y una sacudida rápida signifique 'Peligro' (sonido grave, equis roja). Esto enseña sobre la comunicación hombre-máquina y la consistencia en el diseño de interfaces.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.gesture == 'tilt_up' THEN Audio.play('alien_hello') AND Matrix.showSymbol('#')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de meditación y respiración",
+    "originalIdeaDescription": "Un dispositivo para ayudar a la calma. El usuario coloca el dispositivo sobre su abdomen mientras está acostado. El sensor detecta el ascenso y descenso suave de la respiración. El audio reproduce sonidos relajantes de naturaleza que se sincronizan con el movimiento, y la matriz LED muestra un círculo que se expande y contrae suavemente.",
+    "transformedIdeaTitle": "Tecnología Zen: El Arte de la Calma",
+    "transformedIdeaDescription": "Los estudiantes diseñan una aplicación de bienestar. El objetivo es detectar movimientos muy sutiles y lentos (la respiración). Deben programar la matriz LED para que pulse (brillo sube y baja) en sincronía con la inclinación suave del dispositivo sobre el pecho. Si el movimiento es demasiado rápido (estrés), la música debe cambiar para guiar al usuario a ir más despacio.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "breathRate = analyze(motion.y); Matrix.pulse(breathRate); IF breathRate > fast THEN Audio.play('slow_down') ELSE Audio.play('river_sounds')"
+  }
+]

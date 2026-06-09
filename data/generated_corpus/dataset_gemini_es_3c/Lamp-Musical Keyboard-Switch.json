@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Visual y Auditivo",
+    "originalIdeaDescription": "Un sistema de notificación para el hogar que ayuda a personas con dificultades auditivas. Al presionar el interruptor, suena una melodía de dos notas y la lámpara parpadea en color verde simultáneamente para alertar visualmente.",
+    "transformedIdeaTitle": "El Timbre Inclusivo",
+    "transformedIdeaDescription": "¡Diseña un timbre inteligente para una casa moderna! Tu misión es crear un sistema que avise a todos cuando alguien llega. Deberás programar el interruptor para que, al ser presionado, active una luz verde parpadeante y toque 'Ding-Dong' en el teclado, asegurando que tanto las personas que escuchan como las que no, sepan que hay visitas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.blink('Green'); Keyboard.play('E4', 'C4'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "Un dispositivo de seguridad que se activa mediante un interruptor. Cuando el interruptor está encendido (armado), la lámpara parpadea en rojo intenso y el teclado emite un sonido de sirena repetitivo para disuadir intrusos.",
+    "transformedIdeaTitle": "La Trampa del Tesoro",
+    "transformedIdeaDescription": "¡Protege el cofre del tesoro pirata! Debes crear una trampa para que nadie robe el oro. Programa el sistema para que, si un ladrón activa el interruptor de la trampa, una luz roja de emergencia comience a girar y suene una alarma muy fuerte para despertar a la tripulación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.setColor('Red'); Keyboard.play('A5'); wait(0.5); Lamp.off(); Keyboard.play('F5'); wait(0.5); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Luz Nocturna con Canción de Cuna",
+    "originalIdeaDescription": "Una lámpara de noche para niños. Al activar el interruptor, la lámpara se enciende en un tono cálido y suave, mientras el teclado reproduce lentamente una melodía relajante para ayudar a dormir.",
+    "transformedIdeaTitle": "El Sueño del Bebé Robot",
+    "transformedIdeaDescription": "El pequeño Bebé Robot necesita dormir para recargar sus baterías. Tu tarea es programar su modo de descanso: cuando presiones el botón de 'Dormir' (Interruptor), sus ojos (Lámpara) deben ponerse de color naranja suave y debe sonar una canción de cuna lenta.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Orange', brightness=50); Keyboard.playSequence('Lullaby'); } ELSE { Lamp.off(); Keyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Semáforo Musical Interactivo",
+    "originalIdeaDescription": "Un simulador de semáforo controlado manualmente. El interruptor cambia el estado. Si está encendido, la luz es verde y suena música rápida; si está apagado, la luz es roja y la música se detiene.",
+    "transformedIdeaTitle": "La Pista de Baile Congelada",
+    "transformedIdeaDescription": "¡Vamos a jugar a las estatuas musicales! Eres el DJ. Programa el juego para que cuando actives el interruptor, la luz de la pista sea verde y suene música de fiesta para que todos bailen. Pero cuidado, cuando apagues el interruptor, la luz debe ponerse roja y la música parar al instante. ¡Quien se mueva pierde!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Green'); Keyboard.playLoop('DanceBeat'); } ELSE { Lamp.setColor('Red'); Keyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse",
+    "originalIdeaDescription": "Un dispositivo para enviar mensajes secretos. Cada vez que se presiona el interruptor momentáneamente, la lámpara se enciende en blanco y el teclado emite un tono agudo, permitiendo enviar puntos y rayas.",
+    "transformedIdeaTitle": "El Telégrafo del Espía",
+    "transformedIdeaDescription": "Eres un agente secreto en una misión encubierta. Necesitas enviar un mensaje a tu base sin hablar. Configura tu equipo para que cada vez que toques el botón, se envíe una señal de luz y sonido simultánea. ¡Así podrás transmitir códigos secretos usando el alfabeto Morse!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.on('White'); Keyboard.playNote('C5'); } ELSE { Lamp.off(); Keyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "Un dispositivo que cambia el ambiente según la posición del interruptor. Posición 1: Luz amarilla y acorde mayor (alegre). Posición 0: Luz azul y acorde menor (triste).",
+    "transformedIdeaTitle": "El Teatro de las Emociones",
+    "transformedIdeaDescription": "Estás a cargo de los efectos especiales de una obra de teatro. Tienes que programar el escenario: si el director activa el interruptor, la escena es 'Feliz' (luz amarilla y música alegre). Si lo desactiva, la escena se vuelve 'Triste' (luz azul y música melancólica).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Yellow'); Keyboard.playChord('C_Major'); } ELSE { Lamp.setColor('Blue'); Keyboard.playChord('A_Minor'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Sonoro",
+    "originalIdeaDescription": "Una herramienta para músicos. Al encender el interruptor, el sistema marca el tempo con un parpadeo de luz y un sonido de 'clic' corto a intervalos regulares.",
+    "transformedIdeaTitle": "El Director de Orquesta Digital",
+    "transformedIdeaDescription": "La banda necesita ayuda para mantener el ritmo. Crea un metrónomo digital que, al encenderse, marque el compás perfectamente. Haz que la luz parpadee y suene un 'tik' cada segundo para que todos los músicos toquen sincronizados.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.flash('White', 0.1); Keyboard.play('Click'); wait(0.9); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas y Respuestas",
+    "originalIdeaDescription": "Sistema para concursos. El interruptor funciona como pulsador de respuesta. Al presionarlo, la lámpara se pone verde y suena una fanfarria de victoria.",
+    "transformedIdeaTitle": "El Botón de la Victoria",
+    "transformedIdeaDescription": "¡Estás en un concurso de televisión! Tu equipo sabe la respuesta correcta. Programa tu pulsador para que, en el momento exacto en que lo presiones, se ilumine de verde brillante y suene una melodía de triunfo para reclamar tu punto antes que los oponentes.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.setColor('Green'); Keyboard.playSequence('VictoryFanfare'); wait(2); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Efecto ambiental activado por interruptor. Genera destellos aleatorios (luz blanca) acompañados de notas graves y fuertes (truenos) en el teclado.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Eres un científico loco controlando el clima. Crea un programa que, al activar tu palanca maestra (interruptor), desate una tormenta eléctrica. Necesitas generar relámpagos (flashes blancos) y truenos (notas graves y fuertes) de forma aleatoria mientras la palanca esté activada.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.flash('White', random(0.1, 0.3)); Keyboard.play('C2', duration=1); wait(random(1, 3)); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Indicador de Nivel de Batería",
+    "originalIdeaDescription": "Simulación de carga. Al mantener el interruptor, la luz cambia de Rojo a Amarillo y luego Verde, subiendo el tono de la nota musical progresivamente para indicar carga completa.",
+    "transformedIdeaTitle": "Recargando la Nave Espacial",
+    "transformedIdeaDescription": "La nave está sin energía. Debes mantener presionado el interruptor de recarga. Programa la secuencia para que la luz pase de Rojo a Verde y el sonido se vuelva más agudo a medida que la energía se llena. ¡Suelta el botón solo cuando el sistema diga que está al 100%!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Red'); Keyboard.play('C3'); wait(1); Lamp.setColor('Yellow'); Keyboard.play('E3'); wait(1); Lamp.setColor('Green'); Keyboard.play('G3'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Máquina de Ritmos Disco",
+    "originalIdeaDescription": "Al activar el interruptor, se inicia un bucle. La lámpara cambia de colores aleatoriamente (disco) y el teclado toca una línea de bajo funky repetitiva.",
+    "transformedIdeaTitle": "Fiesta Robot",
+    "transformedIdeaDescription": "¡Es hora de celebrar! Los robots quieren bailar. Programa el 'Modo Fiesta': cuando se active el interruptor, la lámpara debe volverse una bola de disco cambiando de colores rápidamente y el teclado debe tocar un ritmo funky en bucle sin parar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.setColor(randomColor()); Keyboard.play('BassLine'); wait(0.5); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Errores",
+    "originalIdeaDescription": "Simulación de fallo de sistema. Si el interruptor se apaga inesperadamente, la luz parpadea en rojo y suena un tono de error grave descendente.",
+    "transformedIdeaTitle": "Alerta de Fusión del Núcleo",
+    "transformedIdeaDescription": "Estás monitoreando una planta de energía. El interruptor debe estar siempre encendido para que todo funcione bien (Luz Verde). Si alguien apaga el interruptor por error, debes programar una alerta crítica: luz roja parpadeante y un sonido de 'apagado' para avisar del peligro inminente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Green'); } ELSE { Lamp.blink('Red'); Keyboard.play('GlissandoDown'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Piano de Colores (Escala)",
+    "originalIdeaDescription": "Modo educativo. El interruptor inicia una demostración automática donde se toca la escala de Do Mayor, y para cada nota, la lámpara muestra un color diferente del arcoíris.",
+    "transformedIdeaTitle": "El Maestro de Música Mágico",
+    "transformedIdeaDescription": "Vamos a enseñar música a los niños pequeños. Crea un programa donde, al presionar el interruptor, el piano toque solo las notas musicales (Do, Re, Mi...) y la lámpara enseñe un color para cada nota (Rojo para Do, Naranja para Re...). ¡Es una sinestesia digital!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.setColor('Red'); Keyboard.play('C'); wait(1); Lamp.setColor('Orange'); Keyboard.play('D'); wait(1); ... }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva de Despegue",
+    "originalIdeaDescription": "Secuencia automática iniciada por interruptor. La luz parpadea 3 veces (3, 2, 1) con tonos cortos, y al final luz blanca fija y sonido largo de despegue.",
+    "transformedIdeaTitle": "Misión a Marte",
+    "transformedIdeaDescription": "Eres el comandante de la NASA. Al presionar el botón de lanzamiento, debes iniciar la secuencia automática. Programa tres parpadeos rojos con 'beeps' cortos (3... 2... 1...) y finalmente una luz blanca brillante con un sonido largo de propulsores para el despegue.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { REPEAT 3 TIMES { Lamp.blink('Red'); Keyboard.play('Beep'); wait(1); } Lamp.on('White'); Keyboard.play('Rumble'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Latidos del Corazón",
+    "originalIdeaDescription": "Dispositivo médico simulado. Mientras el interruptor está encendido, la lámpara pulsa suavemente en rojo y suena un ritmo de latido 'lub-dub' constante.",
+    "transformedIdeaTitle": "El Corazón Biónico",
+    "transformedIdeaDescription": "Estás construyendo un robot médico. Necesitas programar el monitor de signos vitales. Mientras el interruptor esté activado, el sistema debe simular un corazón sano: un doble sonido rítmico acompañado de una pulsación de luz roja que se desvanece suavemente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.fadeInOut('Red', 0.8); Keyboard.play('Heartbeat'); wait(1); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Musical Inversa",
+    "originalIdeaDescription": "Curiosidad interactiva. La música suena y la luz brilla solo cuando el interruptor NO está presionado. Al presionarlo, todo se detiene (oscuridad y silencio).",
+    "transformedIdeaTitle": "No Toques el Botón",
+    "transformedIdeaDescription": "Un reto psicológico: Crea una caja que siempre está feliz, tocando música y brillando con colores. Pero, si alguien se atreve a tocar el botón prohibido (Switch), todo debe morir instantáneamente: luz apagada y silencio total. ¡Programa esta reacción inversa!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NOT Switch.isPressed() THEN { Lamp.setColor('Rainbow'); Keyboard.play('HappyTune'); } ELSE { Lamp.off(); Keyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Memoria (Simón Dice Simple)",
+    "originalIdeaDescription": "El sistema reproduce una nota y un color al azar cuando se toca el interruptor, desafiando al usuario a recordar la secuencia (lógica simplificada para un solo paso).",
+    "transformedIdeaTitle": "El Oráculo Aleatorio",
+    "transformedIdeaDescription": "Crea una máquina adivinadora. Cada vez que el usuario presione el interruptor, la máquina debe generar una profecía diferente: un color al azar y una nota musical al azar. ¿Podrá el usuario encontrar algún patrón en el caos?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN { randomVal = random(); Lamp.setColor(randomColor(randomVal)); Keyboard.playNote(randomNote(randomVal)); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Luz de Lectura Temporizada",
+    "originalIdeaDescription": "Al activar el interruptor, la luz se enciende por un tiempo fijo para leer, y al finalizar suena una pequeña alarma suave para indicar el fin del tiempo.",
+    "transformedIdeaTitle": "El Temporizador de Estudio",
+    "transformedIdeaDescription": "Ayuda a los estudiantes a concentrarse. Programa un temporizador de estudio: al presionar el botón, la lámpara se enciende en blanco brillante para leer. Después de un tiempo simulado (ej. 10 segundos para la prueba), la luz debe apagarse y sonar un timbre suave indicando '¡Descanso!'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.on('White'); wait(10); Lamp.off(); Keyboard.play('Chime'); }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Puerta Abierta de Refrigerador",
+    "originalIdeaDescription": "Si el interruptor (sensor de puerta) se mantiene 'abierto' (estado específico) por más de cierto tiempo, comienza a parpadear la luz y sonar un pitido molesto.",
+    "transformedIdeaTitle": "¡Cierra la Nevera!",
+    "transformedIdeaDescription": "¡Alguien dejó la nevera abierta y el helado se derrite! Simula este escenario: El interruptor representa la puerta. Si el interruptor se queda en estado 'Abierto' por mucho tiempo (usa una espera), haz que la lámpara parpadee y el teclado pite insistentemente hasta que la cierren.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOpen() THEN { wait(5); IF Switch.isOpen() THEN { Lamp.blink('Yellow'); Keyboard.playLoop('Beep'); } }"
+  },
+  {
+    "componentUsed": [
+      "Switch",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Encendido de Motor de Coche",
+    "originalIdeaDescription": "Simulación mecánica. Al girar el interruptor, suena un sonido de arranque incrementando en velocidad y la luz aumenta de intensidad gradualmente.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Estás en la línea de salida. Programa el botón de arranque de tu coche de carreras. Al mantener presionado el interruptor, el motor debe 'arrancar': las luces deben ir subiendo de intensidad poco a poco y el sonido del motor (notas bajas) debe acelerar hasta estabilizarse.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isPressed() DO { increaseBrightness(); increasePitch(); wait(0.1); }"
+  }
+]

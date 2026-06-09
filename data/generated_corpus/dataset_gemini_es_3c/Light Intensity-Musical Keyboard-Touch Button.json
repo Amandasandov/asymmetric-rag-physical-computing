@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin Óptico Controlado",
+    "originalIdeaDescription": "Un instrumento musical electrónico que se toca sin contacto físico. El sensor de intensidad de luz controla la altura de la nota musical (pitch) basándose en la sombra de la mano, mientras que el botón táctil se utiliza para activar o silenciar el sonido, permitiendo crear ritmos entre las notas sostenidas por la luz.",
+    "transformedIdeaTitle": "El Theremin del Mago Espacial",
+    "transformedIdeaDescription": "¡Conviértete en un mago del espacio! Crearás un instrumento invisible que suena al mover tu mano en el aire sobre el sensor. Cuanta más luz tapes, más grave será el sonido. Usa el botón mágico para 'congelar' el sonido o disparar notas rítmicas mientras mueves tu mano hechicera.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton == Pressed THEN PlayNote(Map(LightIntensity, 0, 100, C3, C5)) ELSE StopSound()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma para Cajones Seguros",
+    "originalIdeaDescription": "Un dispositivo de seguridad para proteger objetos de valor en un cajón. El sistema permanece en silencio mientras está oscuro (cajón cerrado). Si detecta luz repentina (cajón abierto), activa una melodía de alarma ruidosa. El botón táctil sirve como un código de seguridad oculto para desactivar la alarma.",
+    "transformedIdeaTitle": "La Caja Fuerte Anti-Espías",
+    "transformedIdeaDescription": "Protege tus secretos. Programarás una alarma que detecta cuando tu hermano o hermana abre tu cajón secreto. Si entra luz (¡intruso!), sonará una sirena de policía. Solo tú sabes que presionando el botón secreto puedes apagar la alarma y reiniciar el sistema.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN PlayAlarm() UNTIL TouchButton == Pressed"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Automática Interactiva",
+    "originalIdeaDescription": "Una recreación moderna de una caja de música. Al detectar luz (abrir la tapa), comienza a reproducir una melodía suave. El botón táctil permite al usuario cambiar entre diferentes canciones o modos de reproducción almacenados en la memoria lógica del programa.",
+    "transformedIdeaTitle": "El Cofre del Tesoro Cantarín",
+    "transformedIdeaDescription": "Imagina que encuentras un cofre antiguo. Al abrirlo (y dejar entrar la luz), este empieza a cantar una canción mágica. Tu misión es programarlo para que suene al abrirse, y usar el botón para cambiar el 'hechizo' musical (la canción) cada vez que lo presiones.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN PlayMelody(SongIndex); IF TouchButton == Pressed THEN SongIndex = SongIndex + 1"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Salud para Plantas",
+    "originalIdeaDescription": "Un dispositivo que monitorea si una planta está recibiendo suficiente luz solar. Si la intensidad de luz es baja durante mucho tiempo, reproduce tonos tristes o graves. El botón táctil se usa para 'regar' (resetear el temporizador) y reproducir un sonido de felicidad.",
+    "transformedIdeaTitle": "Tamagotchi Fotosintético",
+    "transformedIdeaDescription": "¡Tu planta mascota necesita sol para cantar! Si la dejas en la oscuridad, empezará a llorar con notas tristes. Llévala a la luz para que se calle. Presiona el botón para darle 'agua virtual' y escuchar una fanfarria de victoria y felicidad vegetal.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < LowLevel THEN PlaySadTune(); IF TouchButton == Pressed THEN PlayHappyTune() AND ResetTimer()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja Nocturno",
+    "originalIdeaDescription": "Un juego donde el usuario debe realizar acciones en la oscuridad. El teclado emite sonidos solo si se presiona el botón mientras el sensor de luz detecta oscuridad total. Si hay luz, presionar el botón provoca un sonido de 'fallo' o error.",
+    "transformedIdeaTitle": "Operación Ninja en la Sombra",
+    "transformedIdeaDescription": "Eres un ninja en una misión nocturna. Debes enviar un código secreto (presionando el botón) pero solo funciona si estás en total oscuridad. Si alguien enciende la luz y tocas el botón, ¡sonará la alarma de error y te descubrirán! Programa tu herramienta de espionaje.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton == Pressed AND LightIntensity < 10 THEN PlaySecretNote() ELSE IF TouchButton == Pressed THEN PlayErrorSound()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ritmos Solares",
+    "originalIdeaDescription": "Una caja de ritmos donde la velocidad (BPM) de la percusión o la secuencia de notas depende de la intensidad de la luz ambiental. El botón táctil se utiliza para iniciar o detener la secuencia rítmica, actuando como un control de transporte.",
+    "transformedIdeaTitle": "DJ de Energía Solar",
+    "transformedIdeaDescription": "¡La fiesta depende del sol! Eres el DJ y tu música va más rápido cuanta más luz haya. Usa una linterna para acelerar el ritmo hasta la locura o tapa el sensor para hacerlo lento y pesado. El botón es tu control maestro para iniciar o pausar la mezcla.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Playing == True THEN PlayBeat(Tempo = Map(LightIntensity, 0, 100, 60, 180)); IF TouchButton == Pressed THEN Toggle(Playing)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Murciélagos (Simulador)",
+    "originalIdeaDescription": "Simula la ecolocalización. El sistema emite un 'ping' musical constante. Si el sensor de luz detecta que algo está cerca (bloqueando la luz, simulando un obstáculo), el tono del ping cambia a uno más agudo y rápido. El botón cambia el modo de detección.",
+    "transformedIdeaTitle": "El Murciélago Ciego",
+    "transformedIdeaDescription": "Ayuda al murciélago a volar en la cueva. El murciélago canta constantemente. Cuando acercas tu mano (bloqueando la luz), significa que hay una pared cerca y el murciélago debe gritar más agudo para avisar. Usa el botón para 'despertar' al murciélago.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < ObstacleDistance THEN PlayHighPitch() ELSE PlayLowPitch(); IF TouchButton == Pressed THEN TogglePower()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Arpa Láser de Una Cuerda",
+    "originalIdeaDescription": "Un instrumento donde un haz de luz (o luz ambiental focalizada) actúa como una cuerda. Al 'cortar' el haz (bajar la intensidad bruscamente), suena una nota. El botón táctil cicla a través de diferentes escalas musicales (mayor, menor, pentatónica).",
+    "transformedIdeaTitle": "El Arpa de Rayos Láser",
+    "transformedIdeaDescription": "Construye un arpa futurista que no tiene cuerdas, ¡sino rayos de luz! Cuando pasas tu dedo rápidamente sobre el sensor (cortando la luz), suena una nota mágica. Usa el botón para cambiar el estilo de música de 'Feliz' a 'Misterioso'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensityDrop > Sensitivity THEN PlayNextNote(Scale); IF TouchButton == Pressed THEN ChangeScale()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Despertador Inteligente con Snooze",
+    "originalIdeaDescription": "Un reloj despertador que detecta el amanecer. Cuando la luz ambiental supera un umbral, comienza a reproducir una escala ascendente suavemente. El botón táctil funciona como función de 'snooze' (posponer), deteniendo la música por 5 minutos.",
+    "transformedIdeaTitle": "El Gallo Robot Despertador",
+    "transformedIdeaDescription": "Crea un gallo robótico que cante cuando salga el sol (o enciendas la luz de tu cuarto). Si hay mucha luz, la música empieza suave y sube de volumen. ¿Tienes sueño? ¡Programa el botón para pedirle al gallo 5 minutos más de silencio!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > SunriseLevel AND !Snooze THEN PlayWakeUpScale(); IF TouchButton == Pressed THEN ActivateSnooze(300s)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Comunicador de Código Morse Óptico",
+    "originalIdeaDescription": "Un dispositivo para practicar código Morse. El usuario usa una linterna sobre el sensor para ingresar puntos (luz corta) y rayas (luz larga). El teclado reproduce el tono correspondiente. El botón táctil borra el mensaje o reinicia la línea.",
+    "transformedIdeaTitle": "Mensajes Secretos con Linternas",
+    "transformedIdeaDescription": "Eres un espía enviando mensajes desde una montaña lejana. Usa tu linterna contra el sensor: un destello corto es un 'bip' agudo, un destello largo es un 'boop' grave. ¡Transmite tu clave! Si te equivocas, presiona el botón de autodestrucción (borrar).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity > High AND Duration < Short THEN PlayDot() ELSE IF LightIntensity > High THEN PlayDash(); IF TouchButton == Pressed THEN Clear()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Meditación Zen",
+    "originalIdeaDescription": "Herramienta para relajación. Requiere que el usuario mantenga el sensor en una oscuridad casi total (cubriéndolo con las manos) para escuchar sonidos relajantes. Si entra luz, el sonido se detiene o se vuelve disonante. El botón inicia la sesión de 1 minuto.",
+    "transformedIdeaTitle": "El Santuario Zen",
+    "transformedIdeaDescription": "¿Puedes quedarte totalmente quieto? Cubre el sensor con tus manos con mucho cuidado. Si logras oscuridad total, escucharás una melodía relajante. Si te mueves y entra un rayito de luz, la música parará. Usa el botón para empezar el reto de 60 segundos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF SessionActive AND LightIntensity < 5 THEN PlayZenMusic() ELSE StopMusic(); IF TouchButton == Pressed THEN StartTimer(60)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cazafantasmas de Sombras",
+    "originalIdeaDescription": "Juego activo. El dispositivo reproduce un sonido de fondo inquietante. El objetivo es encontrar zonas oscuras en la habitación. Cuando la luz baja de cierto nivel, suena un efecto de 'captura'. El botón guarda la cantidad de 'fantasmas' capturados.",
+    "transformedIdeaTitle": "Cazadores de Fantasmas",
+    "transformedIdeaDescription": "Hay fantasmas escondidos en las sombras de tu cuarto. Camina con tu sensor; cuando entres en una zona oscura, el sensor detectará al fantasma y sonará una alarma especial. ¡Rápido! Presiona el botón para atraparlo y sumarlo a tu colección.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < DarkThreshold THEN PlayGhostSound(); IF TouchButton == Pressed AND LightIntensity < DarkThreshold THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Quiz Show de Respuestas Ocultas",
+    "originalIdeaDescription": "Juego de preguntas. Las opciones de respuesta están representadas por niveles de luz (tapar sensor = A, luz ambiente = B, linterna = C). El usuario modula la luz para seleccionar, y el botón confirma la respuesta, reproduciendo sonido de victoria o derrota.",
+    "transformedIdeaTitle": "Concurso de Preguntas Iluminado",
+    "transformedIdeaDescription": "¡Bienvenido al Quiz Show! Para responder la opción A, tapa el sensor. Para la opción B, déjalo normal. Para la opción C, ilumínalo con una linterna. Cuando tengas tu respuesta, presiona el botón para ver si ganaste el premio musical.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton == Pressed: IF LightIntensity matches CorrectRange THEN PlayWin() ELSE PlayLose()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Piano de Sostenido Inverso",
+    "originalIdeaDescription": "Un piano experimental donde las notas se generan aleatoriamente o en secuencia, pero solo suenan mientras el botón táctil esté presionado. La intensidad de la luz controla el volumen o la octava de esas notas.",
+    "transformedIdeaTitle": "La Flauta Mágica de Viento Solar",
+    "transformedIdeaDescription": "Crea un instrumento que necesita 'viento' (tu dedo en el botón) y 'sol' (el sensor de luz) para funcionar. Mantén presionado el botón para soplar, y mueve el sensor hacia la luz para que las notas suban hasta el cielo, o a la sombra para que bajen.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton == Pressed THEN PlayNote(Map(LightIntensity, 0, 100, LowOctave, HighOctave))"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Un juego de rol. Se le dice al 'sospechoso' que ponga el dedo sobre el sensor de luz. Si el dedo tiembla o se mueve (dejando pasar luz), el teclado emite un sonido de 'MENTIRA'. El botón reinicia el interrogatorio.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus amigos. Pídeles que tapen el sensor con el dedo y juren decir la verdad. Si mueven el dedo aunque sea un poquito por los nervios (y entra luz), la máquina gritará ¡MENTIRA! Usa el botón para preparar la siguiente pregunta.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > ToleranceThreshold THEN PlayBuzzer(); IF TouchButton == Pressed THEN ResetThreshold()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros Submarinos",
+    "originalIdeaDescription": "Simulación de buceo. La luz disminuye a medida que se 'baja' (se simula tapando el sensor). Al llegar a oscuridad total (fondo del mar), el botón táctil activa el sonar para encontrar el tesoro (sonido de monedas). Si hay mucha luz, estás en la superficie.",
+    "transformedIdeaTitle": "Buceo en la Fosa de las Marianas",
+    "transformedIdeaDescription": "Vamos a bucear. Tapa el sensor poco a poco para descender a las profundidades. Escucharás burbujas. Cuando esté totalmente oscuro, habrás llegado al fondo. Presiona el botón para encavar y... ¡escucha si encuentras el tesoro pirata!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 5 THEN (PlayBubbles; IF TouchButton == Pressed THEN PlayTreasureSound()) ELSE PlaySurfaceWind()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Musical para Juegos",
+    "originalIdeaDescription": "Juego tipo 'Luz Roja, Luz Verde'. El sistema lee tarjetas de colores (basado en reflectividad/intensidad). Tarjeta clara (luz alta) = Música rápida/Correr. Tarjeta oscura (luz baja) = Música se detiene. El botón penaliza a quien se mueve.",
+    "transformedIdeaTitle": "Estatua Musical: Luz y Sombra",
+    "transformedIdeaDescription": "Juega a las estatuas. Si el sensor ve luz, suena música de fiesta y todos bailan. Si tapas el sensor (sombra), la música para y todos deben congelarse. Usa el botón para eliminar al jugador que se mueva durante el silencio.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN PlayDanceMusic() ELSE StopMusic(); IF TouchButton == Pressed THEN PlayEliminationSound()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos/Repeticiones con Luz",
+    "originalIdeaDescription": "Dispositivo para ejercicio. El usuario pasa la mano frente al sensor rítmicamente. Cada paso de luz a sombra cuenta como una repetición y toca una nota de una escala. Al completar una octava (8 reps), el botón permite subir de nivel (tempo más rápido).",
+    "transformedIdeaTitle": "Entrenador Personal Musical",
+    "transformedIdeaDescription": "¿Cuántas flexiones puedes hacer? Coloca el sensor bajo tu pecho. Cada vez que bajas y tapas la luz, suena una nota musical. ¡Completa la escala musical haciendo 8 repeticiones! Presiona el botón para empezar una nueva serie más difícil.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity crosses LowThreshold THEN PlayNextNote() AND Count++; IF Count == 8 THEN PlayVictory(); IF TouchButton == Pressed THEN ResetCount()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Emociones (Mood Synth)",
+    "originalIdeaDescription": "Sintetizador atmosférico. La intensidad de luz selecciona el acorde (Mayor para luz, Menor para sombra). El botón táctil arpegia el acorde seleccionado. Sirve para ambientar historias de terror o cuentos de hadas.",
+    "transformedIdeaTitle": "Narrador de Cuentos Sonoro",
+    "transformedIdeaDescription": "Eres el encargado de los efectos de sonido de una obra de teatro. Si la escena es feliz y soleada, deja el sensor libre y presiona el botón para música alegre. Si el villano entra en la oscuridad, tapa el sensor y presiona el botón para música de miedo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 THEN SetMode(Major) ELSE SetMode(Minor); IF TouchButton == Pressed THEN PlayArpeggio(Mode)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Duelo de Magos con Varitas",
+    "originalIdeaDescription": "Juego para dos personas. Cada uno tiene un dispositivo. El botón 'lanza' un hechizo (sonido). El sensor de luz detecta si fuiste 'golpeado' por la linterna del oponente. Al recibir luz intensa, suena un tono de daño.",
+    "transformedIdeaTitle": "Batalla de Hechiceros de Luz",
+    "transformedIdeaDescription": "¡Duelo mágico! Tu botón es tu varita: presiónalo para lanzar hechizos sonoros. Pero cuidado, si la linterna de tu enemigo ilumina tu sensor, recibirás daño y tu dispositivo gritará. ¡Protégete en la sombra y ataca con luz!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton == Pressed THEN PlayCastSound(); IF LightIntensity > HitThreshold THEN PlayDamageSound()"
+  }
+]

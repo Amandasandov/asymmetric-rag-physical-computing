@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz Nocturna Automática con Interruptor Manual",
+    "originalIdeaDescription": "Un sistema de iluminación inteligente que enciende la lámpara automáticamente cuando el sensor detecta oscuridad (baja intensidad de luz). El botón táctil sirve como un interruptor manual para apagar la luz forzosamente incluso si está oscuro, ahorrando energía cuando no hay nadie.",
+    "transformedIdeaTitle": "El Guardián del Sueño",
+    "transformedIdeaDescription": "¡Crea un compañero nocturno inteligente! Los estudiantes programarán una lámpara que 'despierta' (se enciende en luz suave) cuando la habitación se oscurece para espantar a los monstruos. Sin embargo, deben programar el 'Botón de Dormir' para que, al tocarlo, el guardián descanse y apague su luz, enseñando lógica condicional anidada.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 30 THEN (IF Button is Pressed THEN Lamp.off() ELSE Lamp.on()) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Eficiencia de Panel Solar",
+    "originalIdeaDescription": "Un dispositivo que simula la carga de un panel solar. La lámpara indica el estado de carga (rojo bajo, verde alto) basándose en la intensidad de luz recibida. El botón se usa para 'capturar' la energía cuando la luz es óptima.",
+    "transformedIdeaTitle": "Misión: Recarga Espacial",
+    "transformedIdeaDescription": "Tu nave espacial se ha quedado sin energía. Debes orientar tus sensores hacia una fuente de luz (el sol). Cuando la intensidad de luz sea alta (el sensor detecte brillo), la lámpara se pondrá verde. En ese momento exacto, ¡presiona el botón para recargar las baterías y salvar la misión!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 80 THEN Lamp.color(Green); IF Button.Pressed() AND LightIntensity > 80 THEN Score = Score + 1"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Bóveda Secreta",
+    "originalIdeaDescription": "Un mecanismo de seguridad que requiere oscuridad total para abrirse. Si el sensor detecta luz, la lámpara parpadea en rojo (alarma). Si hay oscuridad y se presiona el botón, la lámpara se enciende en verde (acceso concedido).",
+    "transformedIdeaTitle": "La Bóveda del Vampiro",
+    "transformedIdeaDescription": "Estás protegiendo el tesoro de un vampiro que odia la luz. Diseña una trampa: si alguien ilumina el sensor con una linterna, la alarma (Lámpara Roja) se dispara. Para abrir la bóveda de forma segura, debes cubrir el sensor con la mano (oscuridad total) y presionar el botón secreto al mismo tiempo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 THEN Lamp.blink(Red); IF LightIntensity < 10 AND Button.Pressed() THEN Lamp.on(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Regulador de Brillo Inverso",
+    "originalIdeaDescription": "La lámpara ajusta su intensidad inversamente a la luz ambiental para mantener una iluminación constante. El botón táctil se utiliza para cambiar el color de la luz (blanco, cálido, azul) según la preferencia del usuario.",
+    "transformedIdeaTitle": "El Camaleón de Contraste",
+    "transformedIdeaDescription": "Programa un camaleón mágico que quiere destacar. Si hay mucha luz en el ambiente, su luz debe ser tenue. Si está oscuro, debe brillar intensamente. Usa el botón para cambiar el color de piel (luz) del camaleón según su estado de ánimo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.brightness(100 - LightIntensity); IF Button.Pressed() THEN CycleNextColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción a la Penumbra",
+    "originalIdeaDescription": "Un juego donde la lámpara está apagada. Cuando el usuario cubre el sensor de luz (bajando la intensidad), la lámpara se enciende en un color aleatorio y el usuario debe presionar el botón rápidamente para 'atrapar' el color.",
+    "transformedIdeaTitle": "Cazadores de Sombras",
+    "transformedIdeaDescription": "El juego comienza en luz. Al pasar la mano sobre el sensor (creando una sombra), aparece un fantasma de color (Lámpara encendida). ¡Rápido! Tienes que tocar el botón antes de que quites la mano para atrapar al fantasma. Si lo logras, la luz parpadeará en victoria.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 THEN Lamp.color(Random); IF Button.Pressed() AND LightIntensity < 20 THEN WinEffect()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna de Código Morse Óptico",
+    "originalIdeaDescription": "Utiliza el botón para enviar señales de luz (Morse). El sensor de luz verifica si el ambiente es lo suficientemente oscuro para que el mensaje sea visible. Si hay mucha luz, la lámpara no se enciende para ahorrar batería.",
+    "transformedIdeaTitle": "Telégrafo de Espías Nocturnos",
+    "transformedIdeaDescription": "Eres un espía enviando mensajes secretos. Tu transmisor solo funciona de noche para no ser detectado. Programa el sistema para que el botón solo encienda la lámpara si el sensor de luz indica que es de noche (oscuridad). ¡Envía tu código SOS!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 40 THEN (IF Button.Pressed() THEN Lamp.on() ELSE Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Cultivo de Plantas",
+    "originalIdeaDescription": "La lámpara representa la salud de una planta. Necesita ciclos de luz (detectados por el sensor) y agua (presionar el botón). Si recibe luz y agua, la lámpara se pone verde. Si falta algo, se pone amarilla o roja.",
+    "transformedIdeaTitle": "Jardín Digital",
+    "transformedIdeaDescription": "¡Cuida tu planta digital! Tu planta necesita luz del sol (acerca una linterna al sensor) y agua (presiona el botón táctil). Si recibe ambos al mismo tiempo, florecerá con una luz verde brillante. Si le falta luz o agua, se marchitará con una luz roja triste.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 60 AND Button.Pressed() THEN Lamp.color(Green) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Objetos en Caja",
+    "originalIdeaDescription": "Dispositivo para detectar si una caja está cerrada o abierta. Si el sensor detecta luz (abierta), la lámpara ilumina el interior. El botón sirve para reiniciar el sistema o apagar la luz para mantenimiento.",
+    "transformedIdeaTitle": "El Cofre del Tesoro Mágico",
+    "transformedIdeaDescription": "Programa un cofre del tesoro que brille doradamente (Lámpara Amarilla) solo cuando alguien abre la tapa (el sensor detecta luz). Para evitar que los piratas te roben la magia, añade un botón oculto que apague la luz inmediatamente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 10 AND NOT Button.Pressed() THEN Lamp.color(Yellow) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Calibrador de Color Ambiental",
+    "originalIdeaDescription": "El sistema lee la intensidad de luz ambiental. Al presionar el botón, captura ese valor y ajusta el color de la lámpara para complementar el ambiente (ej. luz baja = color cálido, luz alta = color frío).",
+    "transformedIdeaTitle": "El Pintor de Ambientes",
+    "transformedIdeaDescription": "Conviértete en un artista de la luz. Usa el sensor para 'leer' la habitación. Cuando encuentres la iluminación perfecta, toca el botón para 'pintar' la lámpara: si la habitación está oscura, pinta de naranja (acogedor); si está brillante, pinta de azul (fresco).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.Pressed() THEN (IF LightIntensity < 50 THEN Lamp.color(Orange) ELSE Lamp.color(Blue))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma Silenciosa de Linterna",
+    "originalIdeaDescription": "Un sistema antirrobo que detecta cambios bruscos en la intensidad de luz (como una linterna de un ladrón en la oscuridad). Al detectar el pico de luz, la lámpara parpadea y el botón debe presionarse para desactivar la alarma.",
+    "transformedIdeaTitle": "Trampa de Rayos Láser",
+    "transformedIdeaDescription": "Protege el museo. La sala está oscura. Si un ladrón usa su linterna y el sensor detecta un aumento repentino de luz, ¡activa la sirena policial (Lámpara azul y roja)! El guardia de seguridad (tú) debe presionar el botón para resetear el sistema.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN AlarmState = True; IF AlarmState THEN Lamp.blink(Red/Blue); IF Button.Pressed() THEN AlarmState = False"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luciérnaga Interactiva",
+    "originalIdeaDescription": "Simulación biológica. La lámpara pulsa suavemente. Si hay mucha luz ambiental, la luciérnaga se 'esconde' (apaga). El botón sirve para 'llamarla' y hacer que brille intensamente por unos segundos sin importar la luz.",
+    "transformedIdeaTitle": "La Luciérnaga Tímida",
+    "transformedIdeaDescription": "Crea una mascota digital. Tu luciérnaga es tímida y solo brilla cuando está oscuro. Si enciendes la luz de la habitación, se apaga. Pero si eres su amigo, puedes tocar el botón para animarla a brillar fuerte incluso de día.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.Pressed() THEN Lamp.brightness(100) ELSE (IF LightIntensity < 20 THEN Lamp.pulse() ELSE Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria de Luz",
+    "originalIdeaDescription": "La lámpara muestra una secuencia de parpadeos. El usuario debe replicar la intensidad (cubriendo el sensor) y confirmando con el botón. (Simplificado: Lámpara ON = Cubrir sensor + Botón).",
+    "transformedIdeaTitle": "Simón Dice: Edición Luz",
+    "transformedIdeaDescription": "Simón dice: '¡Noche!'. La lámpara se enciende en azul. Tú debes cubrir el sensor para hacer 'noche' y tocar el botón. Simón dice: '¡Día!'. La lámpara se pone amarilla. Debes descubrir el sensor y tocar el botón. ¡No te equivoques!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "TargetState = Random(Dark, Bright); Lamp.indicate(TargetState); IF SensorMatches(TargetState) AND Button.Pressed() THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Farol de Navegación",
+    "originalIdeaDescription": "Un faro que gira (cambia colores). Si la intensidad de luz baja (niebla/noche), la rotación se detiene y emite pulsos de advertencia. El botón cambia el modo entre 'Automático' y 'Mantenimiento' (apagado).",
+    "transformedIdeaTitle": "El Faro del Fin del Mundo",
+    "transformedIdeaDescription": "Eres el farero. Cuando hay niebla espesa (baja luz en el sensor), tu faro debe dejar de girar y lanzar destellos rojos de emergencia para avisar a los barcos. Usa el botón para apagar el faro cuando salga el sol y te vayas a dormir.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.State == ON THEN (IF LightIntensity < 30 THEN Lamp.blink(Red) ELSE Lamp.cycleColors()) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de Lectura",
+    "originalIdeaDescription": "Al presionar el botón, la lámpara se enciende por un tiempo determinado. El sensor de luz monitorea el ambiente; si se vuelve demasiado oscuro (dañino para la vista), la lámpara aumenta su brillo o parpadea para avisar.",
+    "transformedIdeaTitle": "Asistente de Biblioteca",
+    "transformedIdeaDescription": "Diseña una lámpara para leer bajo las sábanas. Presiona el botón para encenderla. Si el sensor detecta que afuera de las sábanas está muy oscuro, la lámpara debe brillar al máximo para que no fuerces la vista. Si hay luz externa, ahorra energía bajando el brillo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Pressed() THEN TimerStart(); IF TimerRunning AND LightIntensity < 10 THEN Lamp.brightness(100) ELSE Lamp.brightness(50)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Probador de Transparencia de Materiales",
+    "originalIdeaDescription": "Herramienta científica. La lámpara se enciende al máximo. El usuario coloca un material sobre el sensor y presiona el botón. La lámpara cambia de color según cuánta luz pasó a través del material (Opaco, Translúcido, Transparente).",
+    "transformedIdeaTitle": "El Laboratorio de Materiales",
+    "transformedIdeaDescription": "¡Eres un científico! Coloca papel, tela o plástico sobre el sensor. Presiona el botón para analizar. Si pasa mucha luz, la lámpara se pone Verde (Transparente). Si pasa poca luz, Azul (Translúcido). Si no pasa nada, Rojo (Opaco).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.Pressed() THEN (Val = ReadLight(); IF Val > 80 THEN Lamp.Green() ELSE IF Val > 20 THEN Lamp.Blue() ELSE Lamp.Red())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Peatonal Sensible a la Luz",
+    "originalIdeaDescription": "Simulación de tráfico. La lámpara actúa como semáforo. De noche (baja luz), el semáforo se pone en modo preventivo (amarillo intermitente). El botón actúa como solicitador de paso peatonal (rojo para autos).",
+    "transformedIdeaTitle": "Ciudad Segura",
+    "transformedIdeaDescription": "Controlas el tráfico. Si es de noche (sensor oscuro), pon el semáforo en amarillo parpadeante para precaución. Pero si un peatón toca el botón (sin importar la hora), ¡pon la luz Roja inmediatamente para que crucen seguros!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Pressed() THEN Lamp.color(Red) ELSE (IF LightIntensity < 20 THEN Lamp.blink(Yellow) ELSE Lamp.color(Green))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras (Juguete)",
+    "originalIdeaDescription": "Juego de fiesta. El usuario pone el dedo sobre el sensor (bloqueando luz). Al presionar el botón para 'responder', el sistema lee micro-variaciones (simuladas o reales) y la lámpara se enciende Verde (Verdad) o Roja (Mentira) aleatoriamente o por umbral.",
+    "transformedIdeaTitle": "El Detector de la Verdad",
+    "transformedIdeaDescription": "Haz una pregunta a tu amigo: '¿Te gusta el brócoli?'. Haz que ponga el dedo sobre el sensor y presione el botón. Si su dedo tiembla y deja entrar luz (o aleatoriamente), la lámpara se pondrá Roja (¡MENTIRA!). Si no, Verde (VERDAD).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.Pressed() THEN (IF LightIntensity < 5 THEN Lamp.color(Green) ELSE Lamp.color(Red))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Interruptor Crepuscular con Retardo",
+    "originalIdeaDescription": "Automatización del hogar. Cuando la luz baja de un umbral, la lámpara espera 5 segundos y se enciende (evita falsos positivos). El botón cancela el encendido automático.",
+    "transformedIdeaTitle": "La Cueva del Oso",
+    "transformedIdeaDescription": "El oso hiberna en su cueva. Cuando el sol se pone (sensor oscuro), cuenta hasta 5 antes de encender la antorcha (Lámpara), para asegurarse de que es realmente de noche. Si el oso se despierta y toca el botón, apaga la antorcha inmediatamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 20 THEN Wait(5); IF LightIntensity < 20 AND NOT Button.Pressed() THEN Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Comunicador Binario de Luz",
+    "originalIdeaDescription": "Sistema para introducir datos. Cubrir el sensor = 0, Descubrir = 1. El botón confirma el bit. La lámpara muestra el estado actual o el resultado acumulado.",
+    "transformedIdeaTitle": "Código Secreto Alienígena",
+    "transformedIdeaDescription": "Los aliens se comunican con luz y sombra. Sombra (tapa el sensor) es 'A', Luz (destapa el sensor) es 'B'. Usa el botón para enviar cada letra. La lámpara parpadeará en Morado cada vez que envíes una letra correctamente.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.Pressed() THEN (IF LightIntensity < 50 THEN Send('A') ELSE Send('B')); Lamp.blink(Purple)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Analizador de Contaminación Lumínica",
+    "originalIdeaDescription": "Herramienta educativa. Mide la luz ambiental. Si es demasiado alta (contaminación), la lámpara se pone roja. Si es baja (cielo oscuro), se pone verde. El botón registra la medición.",
+    "transformedIdeaTitle": "Protector de Estrellas",
+    "transformedIdeaDescription": "Ayuda a los astrónomos a encontrar lugares oscuros para ver estrellas. Camina por la habitación con tu sensor. Si la lámpara se pone Roja, hay demasiada luz (mala para ver estrellas). Si se pone Verde, ¡es perfecto! Presiona el botón para marcar ese lugar en tu mapa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 40 THEN Lamp.color(Red) ELSE Lamp.color(Green); IF Button.Pressed() THEN LogData()"
+  }
+]

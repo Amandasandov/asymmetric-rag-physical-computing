@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Digital Spirit Level Tool",
+    "originalIdeaDescription": "A tool that helps users determine if a surface is perfectly horizontal. The lamp changes color based on the tilt: red if tilted left, blue if tilted right, and bright green when perfectly balanced.",
+    "transformedIdeaTitle": "The Space Station Stabilizer",
+    "transformedIdeaDescription": "You are a space engineer responsible for stabilizing a new satellite. If the satellite tilts too much to one side, the solar panels won't charge! Program the system to show a Red warning light if it tilts left, Blue if it tilts right, and a steady Green light only when it is perfectly level.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.x < -5 THEN Lamp.color(Red) ELSE IF inclination.x > 5 THEN Lamp.color(Blue) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Tilt-Based Color Mixing",
+    "originalIdeaDescription": "An artistic tool where tilting the device mixes digital light colors. Tilting forward adds red intensity, while tilting sideways adds blue intensity, allowing the user to create custom shades of purple and magenta.",
+    "transformedIdeaTitle": "The Magic Potion Brewer",
+    "transformedIdeaDescription": "Become a master alchemist mixing a magical potion. The cauldron's glow changes based on how you pour your ingredients. Tilt forward to add 'Dragon Fire' (Red) and sideways to add 'Mermaid Tears' (Blue). Can you find the perfect angle to create the legendary Purple Elixir?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setRGB(inclination.y * 2, 0, inclination.x * 2)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Bicycle Turn Signal Vest",
+    "originalIdeaDescription": "A wearable safety device for cyclists. When the cyclist leans their body to the left, the lamp blinks yellow on the left side (simulated), and vice versa for the right, acting as an automatic turn signal.",
+    "transformedIdeaTitle": "Smart Armor: The Auto-Signal",
+    "transformedIdeaDescription": "Design a suit of high-tech armor for a futuristic courier. To keep the courier safe in traffic, the armor must automatically signal turns. Write code that makes the light blink Yellow repeatedly when the wearer leans left or right to turn, but stays off when they are riding straight.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ABS(inclination.x) > 20 THEN Lamp.blink(Yellow, 500ms) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Interactive Sunrise Simulator",
+    "originalIdeaDescription": "A lamp that simulates the sun's brightness based on the angle of the device. Holding it flat (horizon) starts a dim red glow, and tilting it to 90 degrees (noon) makes it shine bright white.",
+    "transformedIdeaTitle": "God of the Sun Challenge",
+    "transformedIdeaDescription": "You control the daylight cycle of a new planet. Create a program where the sun's position is controlled by your hand. As you raise the device from flat to upright, the light must transition smoothly from a dim dawn Orange to a blinding midday White.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "brightness = map(inclination.y, 0, 90, 10, 100); Lamp.setBrightness(brightness); Lamp.setColor(White)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Secret Safe Combination Lock",
+    "originalIdeaDescription": "A security game where the user must find a specific 'hidden' angle. The light stays red until the device is tilted to the exact secret degree coordinates, turning green to indicate the safe is open.",
+    "transformedIdeaTitle": "Mission Impossible: Cracking the Vault",
+    "transformedIdeaDescription": "You are a secret agent trying to open a laser-locked vault. The lock requires a precise alignment invisible to the naked eye. Gently tilt your decoding device until you find the exact 'Sweet Spot' (e.g., 45 degrees). The light stays Red to warn you, but turns Green instantly when you crack the code.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.x > 40 AND inclination.x < 50 THEN Lamp.color(Green) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Night Light with Sleep Mode",
+    "originalIdeaDescription": "A smart lamp that automatically turns off when the device is placed face down on a table, and turns on with a soft warm color when turned face up or tilted upright.",
+    "transformedIdeaTitle": "The Polite Pet Robot",
+    "transformedIdeaDescription": "Program a robot pet that knows when it's time to sleep. If the robot is placed face-down (upside down), it should turn its lights off to save battery. If it is upright or face-up, it should glow a soft, warm Yellow to keep you company.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.z < 0 THEN Lamp.off() ELSE Lamp.color(WarmYellow)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Earthquake Intensity Visualizer",
+    "originalIdeaDescription": "A device that monitors stability. If the device remains still, the light is green. If it detects rapid changes in inclination (shaking), it flashes red to simulate an alarm.",
+    "transformedIdeaTitle": "Seismologist's Early Warning System",
+    "transformedIdeaDescription": "Build a detector for a volcano research lab. The ground is usually stable (Green light), but if tremors start, the device must warn the scientists immediately. Program it to detect if the tilt changes rapidly (shaking) and flash a Red strobe light to signal an evacuation.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF variance(inclination.last5seconds) > threshold THEN Lamp.blink(Red, 100ms) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "RGB Color Wheel Controller",
+    "originalIdeaDescription": "A controller that cycles through the hue spectrum based on the rotation of the device. Rotating it like a steering wheel changes the light color through the entire rainbow.",
+    "transformedIdeaTitle": "The Chameleon Suit",
+    "transformedIdeaDescription": "You are designing a camouflage suit that changes colors to match different environments. As you rotate your controller 360 degrees, the suit should cycle through every color of the rainbow. Map the angle of rotation directly to the color hue.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "hue = map(inclination.roll, -180, 180, 0, 360); Lamp.setColor(HSV(hue, 100, 100))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Flight Landing Assistant",
+    "originalIdeaDescription": "A simulator for airplane landing gear. If the nose (pitch) is too high or too low, the light warns the pilot with red. If the pitch is perfectly level for landing, the light turns white.",
+    "transformedIdeaTitle": "Pilot Academy: The Perfect Landing",
+    "transformedIdeaDescription": "Cadet, it's time to land the jet! You need to approach the runway with the nose perfectly level. If you pitch up too much (Stall Warning) or down too much (Crash Warning), the cockpit light turns Red. Keep the nose between -5 and 5 degrees to get the White landing clearance light.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch > 5 OR inclination.pitch < -5 THEN Lamp.color(Red) ELSE Lamp.color(White)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Digital Candle Flame",
+    "originalIdeaDescription": "A simulated candle where the light flickers. If the device is tilted excessively, the 'flame' (light) simulates being blown by wind by dimming or turning blue, and eventually extinguishing if tilted too far.",
+    "transformedIdeaTitle": "Keep the Flame Alive",
+    "transformedIdeaDescription": "You are an explorer in a dark cave carrying a digital torch. The wind is strong! If you hold the torch upright, the fire burns bright Orange. If you tilt it, the wind catches it—the light must dim and turn Blue. If you drop it (tilt flat), the fire goes out completely.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.uprightness < 45 THEN Lamp.off() ELSE IF inclination.uprightness < 80 THEN Lamp.color(DimBlue) ELSE Lamp.color(BrightOrange)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Acceleration Brake Light",
+    "originalIdeaDescription": "Using tilt to simulate acceleration and braking in a car. Tilting forward (accelerating) turns the light green, while tilting backward (braking) turns the light bright red.",
+    "transformedIdeaTitle": "Future Racer Dashboard",
+    "transformedIdeaDescription": "Design the dashboard for a futuristic hover-car. The driver controls speed by tilting the controller. Program the rear lights to communicate with other drivers: Tilt forward for 'Go' (Green Light), but if the driver tilts back to brake, the light must immediately turn bright Red.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.y > 10 THEN Lamp.color(Green) ELSE IF inclination.y < -10 THEN Lamp.color(Red) ELSE Lamp.color(Yellow)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mood Ring Simulator",
+    "originalIdeaDescription": "A toy that changes color based on how 'agitated' the user is. Smooth, slow movements produce cool colors (blue/purple), while erratic or sharp tilts produce warm colors (orange/red).",
+    "transformedIdeaTitle": "The Emotional Robot Core",
+    "transformedIdeaDescription": "Your robot has feelings! It stays calm (Blue Light) when you handle it gently. But if you move it around roughly or tilt it sharply, it gets stressed (Red Light). Create a program that monitors how fast the angle changes to determine the robot's mood.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "speed = delta(inclination); IF speed > high THEN Lamp.color(Red) ELSE Lamp.color(Blue)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Virtual Liquid Container",
+    "originalIdeaDescription": "Simulates a glass of liquid. When the device is upright, the light is full brightness. As it is tilted 'to pour', the light dims as if the liquid is emptying out.",
+    "transformedIdeaTitle": "The Glowing Elixir Vial",
+    "transformedIdeaDescription": "You have a vial of glowing magical liquid. When the vial is upright, it is full and shines brightly. As you tilt it to pour the potion out, the glow should fade away until it is empty (dark). Map the brightness of the lamp to the tilt angle.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "brightness = map(inclination.y, 90, 0, 100, 0); Lamp.setBrightness(brightness)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Hot or Cold Treasure Hunter",
+    "originalIdeaDescription": "A game where a hidden target angle is set. As the user tilts the device closer to the target angle, the light gets brighter and warmer. As they tilt away, it gets dimmer and colder (blue).",
+    "transformedIdeaTitle": "Deep Sea Treasure Radar",
+    "transformedIdeaDescription": "You are searching for sunken gold in a submarine. The radar detects the signal based on your depth (tilt angle). Pick a secret angle. Program the light to turn bright Red (Hot) when the player tilts close to that angle, and dim Blue (Cold) when they are far away.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "distance = abs(target_angle - current_angle); Lamp.color(mix(Red, Blue, distance))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Directional Flashlight",
+    "originalIdeaDescription": "A smart flashlight that only turns on when pointed in specific directions. For example, it only illuminates when pointed downwards to see the path, saving battery when carried horizontally.",
+    "transformedIdeaTitle": "The Spelunker's Smart Helmet",
+    "transformedIdeaDescription": "Cave explorers need to save battery. Create a smart helmet light that only turns on when the explorer looks down at their feet to walk. If they look straight ahead or up, the light should automatically turn off.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch < -30 THEN Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Disco Party Wristband",
+    "originalIdeaDescription": "A wearable device for dancing. Every time the user changes the tilt of their arm past a certain threshold (a dance move), the light changes to a random new color.",
+    "transformedIdeaTitle": "Super Dance Party 3000",
+    "transformedIdeaDescription": "Get ready to dance! Create a wristband that reacts to your moves. Every time you punch the air or wave your hand (large tilt change), the light must switch to a random, crazy color. If you stop moving, the light turns off.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF change(inclination) > threshold THEN Lamp.color(Random) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Incline Gradient Warning",
+    "originalIdeaDescription": "A safety tool for wheelchair users or hikers. If the slope (incline) becomes too steep for safety, the light flashes red. On safe, gentle slopes, it remains steady green.",
+    "transformedIdeaTitle": "Mars Rover Cliff Detector",
+    "transformedIdeaDescription": "You are programming the Curiosity Rover on Mars. It needs to navigate rocky terrain. If the Rover drives onto a slope that is too steep (> 30 degrees), it might flip over! Program a safety alarm that turns the light Red if the angle is dangerous, and Green if the path is safe.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch > 30 THEN Lamp.color(Red) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Police Siren Simulator",
+    "originalIdeaDescription": "Simulates a police car light bar. Tilting the device left makes it flash blue, tilting right makes it flash red, simulating the alternating strobe effect of emergency vehicles.",
+    "transformedIdeaTitle": "Emergency Rescue Dispatch",
+    "transformedIdeaDescription": "Turn your device into a Rescue Vehicle siren. To get through traffic, you need flashing lights! Create a loop where tilting the device Left turns the light Blue, and tilting it Right turns it Red. By rocking the device back and forth, you create the emergency strobe effect.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.x < 0 THEN Lamp.color(Blue) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Binary Decision Maker",
+    "originalIdeaDescription": "A 'Magic 8 Ball' style tool. The user asks a question, shakes the device, and tilts it. Positive tilt yields a green light (Yes), negative tilt yields a red light (No).",
+    "transformedIdeaTitle": "The Oracle of Light",
+    "transformedIdeaDescription": "Build a mystical device that answers Yes or No questions. Ask a question, close your eyes, and tilt the device randomly. If you land on a positive angle, the Oracle glows Green (Yes). If you land on a negative angle, it glows Red (No).",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.y > 0 THEN Lamp.color(Green) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Plant Sunlight Monitor Sim",
+    "originalIdeaDescription": "Simulates a plant tracking the sun. The user must tilt the device to 'follow' a virtual sun. If the device is angled correctly towards the 'sun' (upward), the light turns yellow (photosynthesis). If it droops, the light turns brown (wilting).",
+    "transformedIdeaTitle": "The Happy Sunflower",
+    "transformedIdeaDescription": "You are a sunflower that needs light to grow. You must keep your face pointed at the sky! Write a program that makes the light glow a happy Yellow when the device is facing up. If the device tilts down (droops), the flower is sad and the light turns Brown.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.z > 0 (facing up) THEN Lamp.color(Yellow) ELSE Lamp.color(Brown)"
+  }
+]

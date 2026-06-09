@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Disparador de Bombo Simple",
+    "originalIdeaDescription": "Un sistema básico donde al presionar el botón táctil se activa el sonido de un bombo (Bass Drum). Se utiliza para probar la respuesta táctil y la salida de audio de baja frecuencia.",
+    "transformedIdeaTitle": "El Corazón del Gigante",
+    "transformedIdeaDescription": "Imagina que estás dentro de un gigante dormido y tienes el control de su corazón. Tu misión es mantener al gigante vivo presionando el botón rítmicamente para simular los latidos. Si te detienes, el gigante se despierta.",
+    "minAge": 6,
+    "maxAge": 8,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('BassDrum')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Platillos de Choque",
+    "originalIdeaDescription": "Configuración del botón táctil para reproducir un sonido de platillo 'crash' con una caída larga. Ideal para marcar el final de una secuencia o un evento importante.",
+    "transformedIdeaTitle": "¡Rompe el Cristal!",
+    "transformedIdeaDescription": "Eres un actor de doblaje en una película de acción. En la pantalla (imaginaria), el héroe salta por una ventana. Debes presionar el botón en el momento exacto para crear el sonido del cristal rompiéndose con un gran platillazo.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('CrashCymbal')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Manual (Snare)",
+    "originalIdeaDescription": "Uso del botón táctil para activar el sonido de una caja (Snare Drum). Permite al usuario crear patrones rítmicos simples mediante pulsaciones repetidas.",
+    "transformedIdeaTitle": "La Marcha de los Soldados",
+    "transformedIdeaDescription": "Eres el líder de una banda de marcha. Tus soldados de juguete necesitan seguir tu ritmo para no perderse. Usa el botón para tocar el tambor (caja) y guiar el desfile: izquierda, derecha, izquierda, derecha.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('SnareDrum')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Efectos de Comedia",
+    "originalIdeaDescription": "El sistema reproduce un 'Rimshot' (golpe en el borde del tambor) al presionar el botón. Se utiliza comúnmente para acentuar chistes o situaciones cómicas.",
+    "transformedIdeaTitle": "El Club de la Comedia",
+    "transformedIdeaDescription": "Tus amigos están contando chistes (algunos muy malos). Tu trabajo es ser el baterista del show. Cada vez que alguien termine un chiste, presiona el botón para hacer el clásico sonido 'Ba-dum-tss'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Percusión de Tono Alto",
+    "originalIdeaDescription": "Utiliza un Tom agudo o un Cencerro activado por el botón táctil para funcionar como un dispositivo de señalización o llamada de atención en un entorno ruidoso.",
+    "transformedIdeaTitle": "El Telégrafo de la Jungla",
+    "transformedIdeaDescription": "Estás perdido en la selva y necesitas enviar un mensaje a la tribu vecina. Usa el botón para tocar un código secreto con los tambores tribales (Toms) y pedir rescate.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('HighTom')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Táctil Asistido",
+    "originalIdeaDescription": "El usuario marca el tiempo manualmente presionando el botón, lo que genera un sonido de 'Hi-Hat' cerrado. Sirve para establecer o seguir un tempo musical.",
+    "transformedIdeaTitle": "Entrenador de Robots Bailarines",
+    "transformedIdeaDescription": "Los robots no tienen ritmo y necesitan tu ayuda. Presiona el botón constantemente como un reloj (tic-tac, tic-tac) usando el sonido del platillo cerrado para que los robots puedan bailar sincronizados.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('ClosedHiHat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Intrusos Auditivo",
+    "originalIdeaDescription": "Al detectar una pulsación en el botón (simulando un sensor de presión en el suelo), se dispara un sonido fuerte y repetitivo de tambores para alertar.",
+    "transformedIdeaTitle": "Trampa para Zombis",
+    "transformedIdeaDescription": "Has colocado una placa de presión en la entrada de tu fuerte. Programa el sistema para que, cuando un zombi pise el botón, suenen tambores fuertes y lo ahuyenten antes de que entre.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isPressed() DO MusicalDrum.play('FloorTom')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Truenos",
+    "originalIdeaDescription": "Uso de tambores graves (Floor Tom) con reverberación (si disponible) o repetición rápida al presionar el botón para imitar el sonido de una tormenta.",
+    "transformedIdeaTitle": "El Dios del Trueno",
+    "transformedIdeaDescription": "Tienes el martillo de Thor. Cada vez que tocas el botón, debes invocar una tormenta. Crea un sonido retumbante y profundo que haga temblar la tierra (usando el tambor base o tom de piso).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('FloorTom')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Interfaz de Código Morse Auditivo",
+    "originalIdeaDescription": "Permite al usuario ingresar puntos y rayas. Un toque breve activa un sonido de caja seca, un toque largo (simulado por el usuario) activa un tom más resonante.",
+    "transformedIdeaTitle": "Espía Secreto",
+    "transformedIdeaDescription": "Eres un espía en una misión encubierta. No puedes hablar, solo puedes golpear la mesa. Usa el botón para enviar 'S.O.S' usando sonidos cortos (Caja) y largos (Tom) para que te rescaten.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Snare') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Aplausos Percusiva",
+    "originalIdeaDescription": "Simulación de aplausos o redoble de tambores. Al mantener presionado el botón, se reproduce una secuencia rápida de notas de caja para crear un efecto de redoble.",
+    "transformedIdeaTitle": "El Gran Redoble de Circo",
+    "transformedIdeaDescription": "El trapecista está a punto de realizar el salto mortal. Mantén presionado el botón para hacer un redoble de tambores (trrrrrr) que genere suspenso hasta que el trapecista aterrice.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isPressed() DO MusicalDrum.play('Snare', speed='fast')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Sonoro",
+    "originalIdeaDescription": "Cada vez que se presiona el botón, suena un golpe seco de madera (Woodblock o Rimshot), simulando el sonido de pasos o de un reloj avanzando.",
+    "transformedIdeaTitle": "Caballo al Galope",
+    "transformedIdeaDescription": "Estás montando un caballo en una carrera. Tienes que presionar el botón al ritmo del galope 'ta-ca-tá, ta-ca-tá' usando el sonido de madera para que tu caballo corra más rápido y gane la copa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Woodblock')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería de Doble Pedal",
+    "originalIdeaDescription": "Configuración para tocar notas de bombo muy rápidas. Requiere que el usuario presione el botón con alta frecuencia para probar la latencia del sistema.",
+    "transformedIdeaTitle": "Carrera de Autos Dragster",
+    "transformedIdeaDescription": "Tu dedo es el motor de un auto de carreras. Cuanto más rápido presiones el botón (bombo), más rápido rugirá el motor y acelerará el coche. ¡No dejes que el motor se apague!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('BassDrum')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Error de Sistema",
+    "originalIdeaDescription": "Reproduce un sonido disonante o un 'Clap' fuerte cuando se presiona el botón, indicando una acción inválida o un error en una interfaz de usuario.",
+    "transformedIdeaTitle": "Cazador de Mosquitos",
+    "transformedIdeaDescription": "¡Hay un mosquito molesto en la habitación! Espera a verlo (imagínalo) y presiona el botón rápidamente para aplastarlo con un sonido de palmada (Clap) fuerte y seco.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('HandClap')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Goteo de Agua",
+    "originalIdeaDescription": "Usa un sonido de percusión muy agudo y corto (como un triángulo o un Hi-Hat abierto breve) activado por el botón para simular gotas cayendo.",
+    "transformedIdeaTitle": "La Cueva de las Estalactitas",
+    "transformedIdeaDescription": "Estás explorando una cueva húmeda y oscura. Todo está en silencio, excepto por las gotas de agua que caen del techo. Presiona el botón suavemente para crear el ambiente sonoro de las gotas cayendo en un charco.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('OpenHiHat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Rítmico",
+    "originalIdeaDescription": "Al presionar el botón, no suena un solo golpe, sino una pequeña secuencia predefinida (ej. dos golpes de Tom) para simular alguien tocando una puerta.",
+    "transformedIdeaTitle": "¿Quién es? El Lobo Feroz",
+    "transformedIdeaDescription": "Eres el Cerdito en su casa de ladrillo. El Lobo Feroz está afuera. Programa el botón para que cuando el lobo toque, suenen tres golpes fuertes en la puerta (Tom-Tom-Tom).",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { MusicalDrum.play('MidTom'); wait(0.2); MusicalDrum.play('MidTom'); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Banda Sonora de Suspenso",
+    "originalIdeaDescription": "Utiliza el botón para activar un 'Ride Cymbal' de forma lenta y constante, creando una atmósfera de fondo para situaciones de tensión.",
+    "transformedIdeaTitle": "Detectives en la Noche",
+    "transformedIdeaDescription": "Estás investigando un misterio en un callejón oscuro. Presiona el botón lentamente para hacer sonar el platillo (Ride) como si fuera el jazz de una película de detectives antigua mientras buscas pistas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('RideCymbal')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Disparador de Efecto de Explosión",
+    "originalIdeaDescription": "Combina un Bombo y un Platillo Crash simultáneamente al presionar el botón para maximizar el impacto auditivo, simulando una detonación.",
+    "transformedIdeaTitle": "Director de Fuegos Artificiales",
+    "transformedIdeaDescription": "Es Año Nuevo y tú controlas el espectáculo pirotécnico. Cada vez que presiones el botón, lanzarás un cohete que explotará en el cielo con un gran estruendo (Bombo + Platillo).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { MusicalDrum.play('BassDrum'); MusicalDrum.play('CrashCymbal'); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Prueba de Reflejos Auditivos",
+    "originalIdeaDescription": "El sistema espera una entrada. Al presionar el botón, se reproduce un sonido de 'Cowbell' (Cencerro). Diseñado para medir la velocidad de pulsación del usuario.",
+    "transformedIdeaTitle": "La Vaca Perdida",
+    "transformedIdeaDescription": "Es de noche en la granja y no encuentras a tu vaca favorita. Presiona el botón mientras caminas (imaginariamente) para hacer sonar su cencerro y guiarla de vuelta al granero.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Cowbell')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Martillo Neumático",
+    "originalIdeaDescription": "Mientras el botón se mantiene presionado, se repite un sonido de caja (Snare) a muy alta velocidad, simulando maquinaria de construcción.",
+    "transformedIdeaTitle": "Obras en la Ciudad",
+    "transformedIdeaDescription": "Eres un trabajador de la construcción arreglando la calle. Mantén presionado el botón para activar tu taladro neumático (martillo) y romper el pavimento virtual con un sonido rápido y fuerte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isPressed() DO MusicalDrum.play('Snare', delay=50ms)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Salto para Videojuego",
+    "originalIdeaDescription": "Un botón físico que, al ser presionado, emite un sonido corto y ascendente (o un Tom agudo) para proporcionar retroalimentación auditiva de un personaje saltando.",
+    "transformedIdeaTitle": "Mario Saltador",
+    "transformedIdeaDescription": "Estás diseñando tu propio videojuego. Programa el botón para que, cada vez que quieras que tu personaje salte un obstáculo, suene un tambor agudo que le dé impulso.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('HighTom')"
+  }
+]

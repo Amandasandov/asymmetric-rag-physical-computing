@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Monitoreo de Sueño y Relajación",
+    "originalIdeaDescription": "Esta idea consiste en crear un dispositivo que detecta cuando el usuario se ha ido a la cama para reproducir sonidos relajantes. Utiliza el sensor de inclinación para saber si el dispositivo está sobre una superficie plana (la mesa de noche) y el sensor de intensidad de luz para confirmar que la habitación está oscura. Si ambas condiciones se cumplen, el reproductor de audio inicia una lista de reproducción de ruido blanco o lluvia suave para inducir el sueño.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "¡Construye una máquina inteligente que sabe cuándo es hora de dormir! Los estudiantes programarán una 'caja de sueños' que solo activa su magia cuando las luces se apagan y la caja está perfectamente quieta y plana. Aprenderán a usar operadores lógicos 'Y' (AND) para asegurar que se cumplan dos condiciones antes de activar la recompensa sonora.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 AND Inclination.isFlat() THEN Audio.play('Lullaby') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Sonido para Teatro",
+    "originalIdeaDescription": "Un dispositivo manual para técnicos de sonido en obras escolares. Permite controlar el volumen de la música ambiental tapando o destapando el sensor de luz (como un fader manual) y cambiar entre diferentes pistas de audio inclinando el dispositivo hacia la izquierda o derecha. Esto elimina la necesidad de pantallas táctiles complejas en la oscuridad, ofreciendo un control físico e intuitivo basado en gestos y sombras.",
+    "transformedIdeaTitle": "La Varita del Director de Orquesta",
+    "transformedIdeaDescription": "Conviértete en un director de orquesta futurista. Los estudiantes crearán un instrumento que cambia de canción al mover la mano (inclinación) y controla el volumen mágicamente acercando la mano al sensor de luz. Es un desafío excelente para entender el mapeo de variables continuas (luz) a propiedades de salida (volumen).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.setVolume(Light.value); IF Inclination.X > 50 THEN Audio.nextTrack() ELSE IF Inclination.X < -50 THEN Audio.prevTrack()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Exploración de Cuevas Subterráneas",
+    "originalIdeaDescription": "Esta aplicación simula una aventura espeleológica. El audio reproduce sonidos de gotas de agua y ecos solo cuando el sensor de luz detecta oscuridad total (simulando estar dentro de la cueva). El sensor de inclinación modifica el tipo de sonido: si se inclina hacia abajo, se escuchan pasos descendentes; si se inclina hacia arriba, se escucha el esfuerzo de escalar, creando una narrativa inmersiva sin pantalla.",
+    "transformedIdeaTitle": "Expedición a la Cueva Misteriosa",
+    "transformedIdeaDescription": "¡Atrapados en la oscuridad! Los estudiantes deben programar un juego donde el jugador debe esconder el dispositivo (oscuridad) para entrar al juego. Luego, inclinando el dispositivo, deben 'navegar' por túneles sonoros. Si entra luz, el juego se pausa porque 'el sol ha salido'. Introduce el concepto de estados del juego basados en sensores ambientales.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 20 THEN { IF Inclination.Y < -30 THEN Audio.play('Climbing') ELSE Audio.play('CaveAmbience') } ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad con Combinación Sensorial",
+    "originalIdeaDescription": "Un juego de rompecabezas donde el usuario debe desbloquear un archivo de audio secreto. Para lograrlo, debe colocar el dispositivo en un ángulo de inclinación muy específico (como la combinación de una caja fuerte) y simultáneamente iluminar el sensor con una linterna para 'escanear' el código. Solo cuando la inclinación y la luz coinciden con los valores preestablecidos, se reproduce el mensaje de 'Acceso Concedido'.",
+    "transformedIdeaTitle": "El Desafío del Agente Secreto",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda digital. Los estudiantes programarán un candado lógico que requiere precisión: el dispositivo debe estar inclinado exactamente a 45 grados Y recibir una luz brillante al mismo tiempo para liberar el mensaje secreto. Enseña precisión en condicionales y rangos de valores.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Inclination.X > 40 AND Inclination.X < 50) AND Light > 200 THEN Audio.play('SecretMessage') ELSE Audio.play('ErrorBeep')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Tamagotchi Sonora",
+    "originalIdeaDescription": "Una mascota virtual sin pantalla que reacciona al entorno físico. Si hay mucha luz, la mascota 'despierta' y hace ruidos felices. Si se inclina el dispositivo suavemente, se arrulla a la mascota. Si se agita o inclina bruscamente con mucha luz, la mascota se marea y emite sonidos de queja. Si no hay luz, la mascota duerme y ronca suavemente.",
+    "transformedIdeaTitle": "Tu Monstruito de Bolsillo",
+    "transformedIdeaDescription": "Crea una criatura que vive dentro del microcontrolador. Los estudiantes definen la personalidad del monstruo: ¿Le gusta la luz o la oscuridad? ¿Le gusta que lo mecen? Programarán reacciones emocionales a través de sonidos basándose en cómo tratan físicamente al dispositivo (luz y movimiento).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light < 10 THEN Audio.play('Snore') ELSE IF Inclination.isShaking() THEN Audio.play('Dizzy') ELSE Audio.play('Happy')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Guía de Meditación con Biofeedback Simulado",
+    "originalIdeaDescription": "Una herramienta para sesiones de mindfulness. El usuario se acuesta y coloca el dispositivo sobre su pecho. El sensor de inclinación detecta el ritmo de la respiración (subida y bajada del pecho) para modular el ritmo de la música. El sensor de luz asegura que el ambiente sea tenue; si hay mucha luz, una voz suave sugiere apagar las luces para mejorar la concentración.",
+    "transformedIdeaTitle": "El Maestro Zen",
+    "transformedIdeaDescription": "Diseña un compañero de relajación. Los estudiantes usarán el sensor de inclinación para detectar movimientos sutiles y la luz para verificar el ambiente. El desafío es crear un algoritmo que detecte la calma: luz baja y movimiento rítmico lento, recompensando al usuario con sonidos de la naturaleza.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light > 50 THEN Audio.play('DimLightsPrompt'); IF Inclination.changeRate() < LowThreshold THEN Audio.play('OceanWaves')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma Antirrobo para Mochilas",
+    "originalIdeaDescription": "Un sistema de seguridad para proteger pertenencias personales. El dispositivo se activa cuando se detecta oscuridad (dentro de la mochila cerrada). Si la mochila se abre (entra luz repentina) o si la mochila se levanta/inclina (movimiento) sin desactivar el sistema previamente, el reproductor de audio emite una sirena de alarma fuerte para alertar al dueño.",
+    "transformedIdeaTitle": "Trampa para Ladrones de Mochilas",
+    "transformedIdeaDescription": "¡Protege tus cosas! Los estudiantes programarán una alarma inteligente. La lógica es inversa a lo habitual: el estado seguro es oscuro y quieto. Si detecta luz (alguien abre la mochila) O movimiento (alguien se la lleva), ¡suena la alarma! Una gran lección sobre lógica booleana negativa y sistemas de seguridad.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > Threshold OR ABS(Inclination.Y) > Threshold THEN Audio.play('AlarmSiren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin Solar",
+    "originalIdeaDescription": "Un instrumento musical experimental donde no se toca nada físico. La inclinación del dispositivo controla la nota musical o la frecuencia del sonido (eje X para graves/agudos). La intensidad de la luz que incide sobre el sensor controla el volumen o la distorsión del sonido. El usuario puede crear música moviendo el dispositivo bajo una lámpara o tapando el sensor con la mano.",
+    "transformedIdeaTitle": "Sintetizador Espacial",
+    "transformedIdeaDescription": "Crea música extraña y maravillosa moviendo el dispositivo en el aire. Los estudiantes mapearán el ángulo de inclinación a diferentes notas musicales y usarán la sombra de su mano para controlar el volumen. Explorarán conceptos de variables continuas y mapeo de datos de entrada a salida.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tone = Map(Inclination.X, -90, 90, 200Hz, 800Hz); Volume = Map(Light, 0, 100, 0, 10); Audio.playTone(Tone, Volume)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Narrador de Historias de Terror Interactivo",
+    "originalIdeaDescription": "Un dispositivo para contar historias de miedo en campamentos. La historia avanza solo si hay poca luz (ambiente adecuado). En momentos clave de la narración, el usuario debe inclinar el dispositivo hacia la izquierda o derecha para elegir qué camino toma el protagonista, disparando diferentes clips de audio con efectos de sonido terroríficos según la decisión tomada.",
+    "transformedIdeaTitle": "Cuentos de la Cripta Interactivos",
+    "transformedIdeaDescription": "Los estudiantes se convierten en escritores y programadores. Deben crear una historia ramificada (Elige tu propia aventura) que se narra por audio. La condición principal es que debe estar oscuro para funcionar. Usarán condicionales anidados para gestionar las diferentes ramas de la historia basadas en la inclinación del dispositivo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 THEN { IF Inclination.X > 30 THEN Audio.play('PathA') ELSE IF Inclination.X < -30 THEN Audio.play('PathB') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de Entrenamiento para Sentadillas",
+    "originalIdeaDescription": "Un entrenador personal automatizado. El usuario sujeta el dispositivo contra su pecho. El sensor de luz detecta si el usuario está cubriendo el dispositivo (posición correcta). El sensor de inclinación mide la profundidad de la sentadilla. Si baja lo suficiente (cambio en el eje Y) y vuelve a subir, el audio cuenta '¡Uno!', '¡Dos!' y ofrece palabras de aliento.",
+    "transformedIdeaTitle": "El Entrenador Robot",
+    "transformedIdeaDescription": "¡A moverse! Los estudiantes programan un dispositivo que cuenta ejercicios. Deben detectar una secuencia: comenzar de pie, inclinarse (bajar) y volver a la posición original, todo mientras se asegura que el dispositivo esté bien sujeto (sensor de luz cubierto). Introduce el concepto de máquinas de estados finitos (esperando -> bajando -> subiendo -> contado).",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light < 20 AND Inclination.Y < -45 THEN { Audio.play('GoodRep'); Count = Count + 1 }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Aterrizaje Lunar a Ciegas",
+    "originalIdeaDescription": "Un juego de simulación donde el usuario es un piloto aterrizando una nave. El sensor de luz representa la altitud (más luz = más cerca de la superficie brillante/fuego de retrocohetes). La inclinación controla el equilibrio de la nave. El objetivo es mantener el dispositivo perfectamente plano mientras se aumenta la luz gradualmente (acercando una lámpara) hasta aterrizar, guiado por sonidos de propulsores que cambian de tono.",
+    "transformedIdeaTitle": "Piloto de Nave Espacial",
+    "transformedIdeaDescription": "Los estudiantes simulan un alunizaje. El reto es mantener la nave nivelada (inclinación = 0) mientras la 'altitud' cambia. Usarán el audio para dar feedback: si se inclinan demasiado, suena una alarma de accidente. Si la luz es adecuada y están planos, suena el éxito del aterrizaje. Enseña control de retroalimentación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ABS(Inclination.X) > 10 OR ABS(Inclination.Y) > 10 THEN Audio.play('CrashAlarm') ELSE IF Light > 80 THEN Audio.play('LandingSuccess')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Fugas de Agua Simulado",
+    "originalIdeaDescription": "Una herramienta educativa para simular reparaciones. El dispositivo se usa como un escáner sobre una superficie. Al inclinarlo como buscando en una tubería, si el sensor de luz detecta una sombra específica (marcador puesto en la mesa), reproduce el sonido de agua goteando, indicando que se ha encontrado la 'fuga'. Ayuda a gamificar tareas de búsqueda y localización.",
+    "transformedIdeaTitle": "El Plomero Detectivesco",
+    "transformedIdeaDescription": "Crea un juego de búsqueda del tesoro. Los estudiantes esconden 'fugas' (zonas oscuras o sombreadas en una mesa) y programan el dispositivo para que actúe como un escáner. Al pasar el dispositivo inclinado sobre la zona oscura, debe sonar el agua. Combina la exploración física con la lógica de sensores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 20 AND Light < Threshold THEN Audio.play('WaterDrip') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Tarjeta de Felicitación Cantarina Sensible",
+    "originalIdeaDescription": "Un prototipo de tarjeta inteligente. El dispositivo se coloca dentro de una tarjeta doblada. Cuando la tarjeta está cerrada (oscuridad), está en silencio. Al abrir la tarjeta (luz), comienza la música. Si el usuario inclina la tarjeta abierta hacia sí mismo, el audio cambia de la melodía a un mensaje de voz personalizado grabado previamente.",
+    "transformedIdeaTitle": "La Tarjeta Mágica de Cumpleaños",
+    "transformedIdeaDescription": "¡Sorprende a tus amigos! Los estudiantes diseñarán una tarjeta que reacciona al abrirse. No solo toca música con la luz, sino que al inclinarla para leerla mejor, te habla. Aprenderán a anidar condiciones: Primero verificar si está abierta (Luz), luego verificar la posición (Inclinación) para decidir qué sonido reproducir.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light > 50 THEN { IF Inclination.Y > 45 THEN Audio.play('VoiceMessage') ELSE Audio.play('Music') } ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Motocicleta",
+    "originalIdeaDescription": "El dispositivo actúa como el manillar de una moto. La inclinación hacia los lados simula las curvas, reproduciendo sonidos de neumáticos derrapando. El sensor de luz actúa como el acelerador: cuanto más luz recibe (destapando el sensor con la mano), más acelera el sonido del motor (sube el tono/pitch y volumen).",
+    "transformedIdeaTitle": "Carrera de Motos GP",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una moto de carreras. Los estudiantes deben programar el acelerador usando la luz y el viraje usando la inclinación. El desafío es mezclar dos entradas simultáneas para generar una salida de audio dinámica (ruido de motor constante que varía con la luz, más ruidos de derrape al inclinar).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "EngineSpeed = Map(Light, 0, 100, Idle, Fast); Audio.play(EngineSpeed); IF ABS(Inclination.X) > 45 THEN Audio.playOverlay('Skid')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Brújula Sonora para Invidentes (Simulada)",
+    "originalIdeaDescription": "Un dispositivo de asistencia que ayuda a navegar hacia una fuente de luz (como una ventana o puerta abierta) mediante audio. Si el dispositivo se inclina hacia adelante y la intensidad de luz aumenta, el tono del audio se vuelve más agudo y rápido, indicando 'camino correcto'. Si la luz disminuye, el tono baja, indicando que se aleja del objetivo.",
+    "transformedIdeaTitle": "Navegador por Sonido",
+    "transformedIdeaDescription": "Diseña tecnología para ayudar a otros. Los estudiantes crearán un dispositivo que guía al usuario hacia la luz usando solo sonido. Es un reto de accesibilidad: ¿Cómo traducir la intensidad de la luz y la dirección del movimiento (inclinación) en pistas auditivas claras sin usar palabras?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y > 10 THEN { Pitch = Map(Light, 0, 100, Low, High); Audio.playTone(Pitch) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Sombra",
+    "originalIdeaDescription": "Una máquina de percusión donde el usuario crea ritmos moviendo sus manos sobre el dispositivo. Diferentes ángulos de inclinación seleccionan diferentes kits de batería (Rock, Jazz, Techno), y pasar la mano sobre el sensor de luz (creando sombra momentánea) actúa como el gatillo para disparar el bombo o la caja.",
+    "transformedIdeaTitle": "Batería Invisible del Futuro",
+    "transformedIdeaDescription": "¡Haz música sin tocar nada! Los estudiantes configuran el dispositivo para que un cambio rápido en la luz (un 'tap' en el aire) dispare un sonido de tambor. Usarán la inclinación para cambiar entre platillos, cajas y bombos. Requiere lógica para detectar cambios bruscos (flancos) en la señal de luz.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Kit = SelectKit(Inclination.X); IF Light.DropDetected() THEN Audio.playSample(Kit)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de la 'Bomba de Luz'",
+    "originalIdeaDescription": "Un juego de fiesta tenso. El dispositivo emite un sonido de mecha quemándose. Los jugadores deben pasarse el dispositivo. Si el dispositivo se inclina más allá de cierto umbral O si el sensor de luz se cubre completamente, la 'bomba' explota (sonido de explosión). El objetivo es pasarlo manteniéndolo plano y expuesto a la luz.",
+    "transformedIdeaTitle": "Papa Caliente Explosiva",
+    "transformedIdeaDescription": "Un juego multijugador emocionante. Los estudiantes programan una 'bomba' sensible. Deben establecer límites estrictos: 'Si te inclinas más de 10 grados, ¡BOOM!' o 'Si tapas la luz, ¡BOOM!'. Es perfecto para entender operadores lógicos 'OR' (O) y umbrales de sensibilidad.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ABS(Inclination.X) > 15 OR Light < 10 THEN Audio.play('Explosion') ELSE Audio.play('TickTock')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Traductor de Emociones Robóticas",
+    "originalIdeaDescription": "Un juguete que simula tener sentimientos. El dispositivo interpreta su entorno: Mucha luz + Inclinación hacia arriba = 'Euforia' (sonidos agudos y rápidos). Oscuridad + Inclinación hacia abajo = 'Tristeza' (sonidos graves y lentos). Luz media + Plano = 'Calma'. Permite a los niños rolear con el dispositivo como si fuera un personaje.",
+    "transformedIdeaTitle": "El Robot Emocional",
+    "transformedIdeaDescription": "Dale vida y sentimientos a tu código. Los estudiantes definen qué combinaciones de sensores representan alegría, tristeza o miedo. Deben programar una matriz de decisiones que combine luz e inclinación para seleccionar el archivo de audio adecuado que exprese esa 'emoción'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 80 AND Inclination.Y > 30 THEN Audio.play('Happy') ELSE IF Light < 20 AND Inclination.Y < -30 THEN Audio.play('Sad')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura Nocturna",
+    "originalIdeaDescription": "Un dispositivo que ayuda a mantener buenos hábitos de lectura. Se engancha al libro. Si la inclinación indica una buena postura de lectura pero la luz es insuficiente, reproduce un aviso de audio: 'Por favor, enciende una luz para proteger tus ojos'. Si la luz es buena, permanece en silencio o reproduce música de fondo muy suave.",
+    "transformedIdeaTitle": "El Bibliotecario Inteligente",
+    "transformedIdeaDescription": "Crea un gadget para lectores. Los estudiantes programan un monitor de salud visual. La lógica debe detectar si el usuario está intentando leer (inclinación de lectura) pero en malas condiciones (poca luz). Es una aplicación práctica de la tecnología para el bienestar personal.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y == ReadingAngle AND Light < SafeLimit THEN Audio.play('WarningLowLight')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Una aplicación de juego de rol (LARP). El dispositivo emite estática de radio. La inclinación actúa como una antena direccional; al apuntar a ciertas áreas, la estática cambia. Si hay fluctuaciones rápidas en la intensidad de la luz (como pasar bajo sombras de árboles o luces parpadeantes), el audio reproduce voces de 'fantasmas' captadas en la frecuencia.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "¡Sal a cazar fantasmas! Los estudiantes crean un dispositivo que reacciona a cambios sutiles en el ambiente. Programarán el audio para que sea una estática constante que se rompe con 'voces' solo cuando los sensores detectan anomalías (cambios de luz o inclinaciones específicas). Fomenta la narrativa creativa y el ajuste fino de sensores.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('Static'); IF Light.Fluctuating() AND Inclination.isPointingUp() THEN Audio.playOverlay('GhostVoice')"
+  }
+]

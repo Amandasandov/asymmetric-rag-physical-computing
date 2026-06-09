@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Navegador de Exploración Todo Terreno",
+    "originalIdeaDescription": "Un dispositivo que muestra la dirección cardinal actual en la matriz LED. Si el usuario inclina el dispositivo hacia abajo, la pantalla cambia para mostrar el ángulo exacto de la pendiente, ayudando a los excursionistas a evaluar la dificultad del terreno.",
+    "transformedIdeaTitle": "La Brújula del Explorador Perdido",
+    "transformedIdeaDescription": "Estás perdido en una selva densa y necesitas encontrar el camino al campamento base. Debes programar tu dispositivo para que muestre una flecha apuntando al Norte para orientarte, pero si detecta una colina muy empinada (inclinación > 30°), debe mostrar un símbolo de 'Peligro' para evitar caídas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination > 30 THEN LED.show('X') ELSE LED.showArrow(Compass.heading)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Rastreador de Constelaciones Astronómicas",
+    "originalIdeaDescription": "Una herramienta que ayuda a localizar estrellas específicas. El usuario gira (Brújula) y eleva el dispositivo (Inclinación). Cuando las coordenadas coinciden con una estrella en la base de datos, la Matriz LED muestra la forma de la constelación.",
+    "transformedIdeaTitle": "Cazador de Estrellas Galáctico",
+    "transformedIdeaDescription": "Eres un astrónomo buscando una nueva galaxia. Tu misión es mover tu telescopio digital girando hacia el Este (90°) y apuntando hacia arriba (45°). Cuando logres la posición exacta, la matriz LED se iluminará con la estrella descubierta.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Compass == 90 AND Inclination.Y == 45) THEN LED.showIcon('Star')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Nivelador de Construcción Solar",
+    "originalIdeaDescription": "Un sistema para instalar paneles solares. Usa la brújula para asegurar que el panel mire al sur y el sensor de inclinación para encontrar el ángulo óptimo para la captación de luz, mostrando la eficiencia en la matriz.",
+    "transformedIdeaTitle": "Ingeniero de Energía Ecológica",
+    "transformedIdeaDescription": "Debes instalar paneles solares en una base lunar para obtener máxima energía. Programa el asistente para que indique 'OK' solo cuando el panel mire exactamente al Sur y tenga una inclinación de 20 grados respecto al suelo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass.isSouth() AND Inclination.X == 20) THEN LED.show('OK') ELSE LED.show('No')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Controlador de Vuelo de Dron",
+    "originalIdeaDescription": "Un control remoto gestual donde la inclinación maneja el avance y retroceso del dron, y la brújula determina la orientación de la nariz del dron, visualizando el estado en la matriz LED.",
+    "transformedIdeaTitle": "Academia de Pilotos de Drones",
+    "transformedIdeaDescription": "¡Aprende a volar! Crea un simulador donde inclinar el dispositivo hacia adelante haga que el 'dron' (un punto en la matriz) avance, y girar tu cuerpo cambie la dirección de vuelo en la pantalla. Evita estrellarte contra los bordes.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Heading = Compass.get(); Speed = Inclination.X; LED.movePixel(Heading, Speed)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Juego de Laberinto Rotatorio",
+    "originalIdeaDescription": "Un juego donde una bola virtual se mueve por inclinación, pero la gravedad del laberinto cambia según la orientación cardinal del jugador, obligándolo a girar físicamente para resolver el puzzle.",
+    "transformedIdeaTitle": "El Laberinto del Minotauro Giratorio",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto mágico. Para mover la bola de luz hacia la salida, debes inclinar el tablero, pero cuidado: ¡las paredes del laberinto rotan cada vez que cambias tu dirección cardinal (Norte, Sur, Este, Oeste)!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "MapRotation = Compass.heading; BallPos += Inclination.vector; LED.drawMap(MapRotation, BallPos)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Detector de Metales Simulado",
+    "originalIdeaDescription": "Simulación de búsqueda de tesoros. Se definen coordenadas virtuales (dirección e inclinación del brazo). Al acercarse al 'objetivo', la matriz parpadea más rápido.",
+    "transformedIdeaTitle": "Buscador de Tesoros Piratas",
+    "transformedIdeaDescription": "El mapa del tesoro indica que el cofre está enterrado 30 grados al Oeste y requiere cavar en un ángulo profundo. Mueve tu detector; la matriz LED parpadeará más rápido cuanto más cerca estés de la ubicación y ángulo correctos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Distance = abs(TargetDir - Compass) + abs(TargetTilt - Inclination); LED.blink(1/Distance)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Sistema de Seguridad de Caja Fuerte",
+    "originalIdeaDescription": "Una cerradura digital que requiere una combinación específica de orientación y giros. Ejemplo: Girar al Norte, inclinar izquierda, girar al Oeste, inclinar derecha para desbloquear la matriz.",
+    "transformedIdeaTitle": "El Agente Secreto: Misión Desbloqueo",
+    "transformedIdeaDescription": "Para abrir la bóveda del banco y recuperar los documentos secretos, debes realizar la secuencia de seguridad: Mira al Norte, inclina el dispositivo a la izquierda, luego mira al Este. Si fallas, la matriz mostrará una alarma.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Sequence([North, TiltLeft, East]) == True THEN LED.show('Unlock') ELSE LED.show('Lock')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Monitor de Postura para Yoga",
+    "originalIdeaDescription": "Dispositivo para asistir en ejercicios. Verifica si el usuario está mirando en la dirección correcta para el saludo al sol y si su inclinación corporal es la adecuada para la pose, dando feedback visual.",
+    "transformedIdeaTitle": "Maestro de Yoga Robot",
+    "transformedIdeaDescription": "Programa tu entrenador personal. Para completar la pose 'El Guerrero', debes mirar hacia el Este (según la brújula) y mantener tus brazos (el dispositivo) perfectamente horizontales. La matriz te sonreirá si mantienes el equilibrio.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass.isEast() AND Inclination.isFlat()) THEN LED.showFace('Happy')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Radar de Barcos en Niebla",
+    "originalIdeaDescription": "Herramienta para navegación marítima simulada. La brújula indica el rumbo del barco y la inclinación simula el oleaje. La matriz alerta si el oleaje es peligroso para el rumbo actual.",
+    "transformedIdeaTitle": "Capitán de Alta Mar",
+    "transformedIdeaDescription": "Navegas en medio de una tormenta. Tu radar (Matriz) muestra hacia dónde vas. Si las olas (Inclinación) son muy altas (> 45°) y vas contra el viento (Norte), la matriz debe mostrar una alerta de 'SOS' para que cambies el rumbo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Inclination > 45 AND Compass.isNorth()) THEN LED.scroll('SOS')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Varita Mágica Direccional",
+    "originalIdeaDescription": "Juguete interactivo donde los 'hechizos' se lanzan apuntando a direcciones cardinales específicas y realizando gestos de inclinación (golpes) para activar patrones de luz.",
+    "transformedIdeaTitle": "Duelo de Magos en Hogwarts",
+    "transformedIdeaDescription": "¡Aprende el hechizo 'Lumos Maxima'! Debes apuntar tu varita al Oeste y hacer un movimiento rápido hacia abajo (inclinación brusca). Si lo haces bien, la matriz explotará en luz; si no, permanecerá oscura.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (Compass.isWest() AND Inclination.change > Threshold) THEN LED.brightness(100)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Nivel de Burbuja 3D",
+    "originalIdeaDescription": "Una herramienta de nivelación avanzada que muestra una burbuja en la matriz. La brújula rota la interfaz para que la 'burbuja' siempre se mueva de manera lógica respecto al usuario, no al dispositivo.",
+    "transformedIdeaTitle": "Constructor de Torres en Marte",
+    "transformedIdeaDescription": "Estás construyendo una torre en un planeta alienígena. Necesitas que el suelo esté plano. La matriz muestra una burbuja que se mueve si inclinas el dispositivo. Usa la brújula para saber qué lado de la torre (Norte, Sur, Este, Oeste) necesita ajustarse.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PixelX = map(Inclination.Roll); PixelY = map(Inclination.Pitch); LED.plot(PixelX, PixelY)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Rastreador de Satélites",
+    "originalIdeaDescription": "Herramienta educativa que simula buscar la señal de un satélite. Requiere apuntar a un azimut (brújula) y elevación (inclinación) específicos para llenar una barra de señal en la matriz.",
+    "transformedIdeaTitle": "Técnico de Comunicaciones Espaciales",
+    "transformedIdeaDescription": "Hemos perdido contacto con la Estación Espacial. Tienes que alinear la antena terrestre. Busca la señal girando a 180° y elevando la antena 60°. La matriz mostrará barras de señal que se llenan a medida que te acercas a la posición perfecta.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Signal = CalculateSignal(Compass, Inclination); LED.showBarGraph(Signal)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Cámara Panorámica Virtual",
+    "originalIdeaDescription": "Simula una ventana a un mundo virtual. Al girar (panorámica) e inclinar (tilt), la matriz muestra diferentes partes de una imagen grande o escena almacenada en memoria.",
+    "transformedIdeaTitle": "Ventana al Mundo Virtual",
+    "transformedIdeaDescription": "Tu dispositivo es una ventana mágica. Si lo giras a la derecha o lo inclinas hacia arriba, la matriz muestra diferentes partes de un paisaje pixelado oculto (montañas, sol, lago). ¡Explora todo el paisaje moviendo el dispositivo!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ViewX = Compass.heading; ViewY = Inclination.pitch; LED.showImageSegment(ViewX, ViewY)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Entrenador de Golf Digital",
+    "originalIdeaDescription": "Analizador de swing. La brújula verifica la alineación con el hoyo y la inclinación mide la amplitud del 'backswing' y el 'follow-through', mostrando la potencia resultante en la matriz.",
+    "transformedIdeaTitle": "Torneo de Golf del Futuro",
+    "transformedIdeaDescription": "Prepárate para el golpe perfecto. Alíneate con el hoyo (Norte). Luego, inclina el dispositivo hacia atrás para tomar impulso y hacia adelante para golpear. La matriz te mostrará qué tan lejos llegó tu bola basándose en la velocidad de tu inclinación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isNorth() THEN Power = abs(Inclination.Max - Inclination.Min); LED.showNumber(Power)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Brújula de Equilibrio",
+    "originalIdeaDescription": "Un juego de habilidad donde el usuario debe caminar en línea recta (mismo rumbo de brújula) mientras mantiene una 'gota de agua' virtual centrada en la matriz mediante el sensor de inclinación.",
+    "transformedIdeaTitle": "El Camarero sobre la Cuerda Floja",
+    "transformedIdeaDescription": "Eres un camarero llevando una bandeja (tu dispositivo) cruzando una cuerda floja hacia el Norte. Si te desvías del rumbo o inclinas la bandeja, los vasos (píxeles) se caerán. Mantén el punto en el centro mientras giras tu cuerpo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass != North OR Inclination != Flat) THEN LED.showAnimation('Crash') ELSE LED.show('Dot')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Mapeador de Cuevas",
+    "originalIdeaDescription": "Herramienta para espeleología básica. Permite al usuario registrar la dirección y la pendiente de un túnel. La matriz dibuja un segmento de línea representando la morfología del túnel.",
+    "transformedIdeaTitle": "Explorador de Cavernas Profundas",
+    "transformedIdeaDescription": "Estás mapeando una cueva inexplorada. Apunta hacia la oscuridad. El dispositivo leerá la dirección y si el túnel baja o sube. La matriz dibujará una línea que representa el camino para que otros exploradores puedan seguirte.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Slope = Inclination.Y; Direction = Compass.Heading; LED.drawLine(Direction, Slope)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Grúa de Construcción",
+    "originalIdeaDescription": "Simulador de maquinaria pesada. La brújula rota la cabina de la grúa y la inclinación sube o baja el brazo. La matriz muestra la altura de la carga.",
+    "transformedIdeaTitle": "Operador de Grúa Rascacielos",
+    "transformedIdeaDescription": "Controlas una grúa gigante. Gira tu cuerpo para mover el brazo de la grúa sobre el edificio (Oeste). Inclina el mando hacia adelante para bajar el gancho. La matriz te muestra la altura actual para que no golpees el suelo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BoomAngle = Inclination.X; CabRotation = Compass.Heading; LED.showHeight(BoomAngle)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Cañón de Agua de Bomberos",
+    "originalIdeaDescription": "Simulador de extinción de incendios. El fuego aparece en coordenadas aleatorias. El usuario debe apuntar (brújula) y ajustar la altura del chorro (inclinación) para apagar los píxeles encendidos.",
+    "transformedIdeaTitle": "Héroe Bombero al Rescate",
+    "transformedIdeaDescription": "¡Hay un incendio en el edificio! El fuego está al Este y en el segundo piso. Gira hacia el Este y ajusta la inclinación de la manguera a 20 grados. Cuando aciertes, la matriz mostrará agua cayendo y el fuego apagándose.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass == FireDir AND Inclination == FireHeight) THEN LED.animate('Water')"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Veleta Digital",
+    "originalIdeaDescription": "Instrumento meteorológico. Se coloca fijo. La brújula calibra el norte. La inclinación detecta la fuerza del viento (al empujar una placa unida). La matriz muestra dirección e intensidad.",
+    "transformedIdeaTitle": "Cazador de Tornados",
+    "transformedIdeaDescription": "Construye una estación meteorológica. Colócala afuera. Si el viento empuja el sensor inclinándolo mucho (>45°) y viene del Norte, ¡es una tormenta polar! La matriz debe mostrar un copo de nieve y una alerta parpadeante.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WindForce = Inclination.Angle; WindDir = Compass.Heading; LED.displayWeather(WindDir, WindForce)"
+  },
+  {
+    "componentUsed": ["Compass", "Inclination", "LED Matrix"],
+    "originalIdeaTitle": "Controlador de Robot Espía",
+    "originalIdeaDescription": "Interfaz para controlar un robot imaginario. Inclinación controla velocidad/freno, Brújula controla hacia dónde mira la cámara del robot, mostrando 'obstáculos' en la matriz.",
+    "transformedIdeaTitle": "Misión: Robot Espía Infiltrado",
+    "transformedIdeaDescription": "Controlas un robot a distancia en una base enemiga. Inclina suavemente para avanzar sigilosamente. Usa la brújula para escanear el área. Si detectas una guardia (lógica aleatoria al mirar al Sur), la matriz muestra un 'OJO' vigilando.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass.isSouth() AND Random() > 0.8) THEN LED.showIcon('Eye')"
+  }
+]

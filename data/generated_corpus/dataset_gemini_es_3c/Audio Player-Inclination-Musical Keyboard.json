@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Theremin Digital",
+    "originalIdeaDescription": "Se utiliza el sensor de inclinación para simular el funcionamiento de un Theremin. Al inclinar el dispositivo hacia adelante o hacia atrás, se selecciona una octava o tono base, mientras que el teclado musical se usa para tocar notas específicas dentro de ese rango. El reproductor de audio proporciona un sonido de fondo atmosférico y etéreo para completar la experiencia musical.",
+    "transformedIdeaTitle": "El Hechicero de los Sonidos Espaciales",
+    "transformedIdeaDescription": "¡Conviértete en un hechicero del espacio! Los estudiantes crearán un instrumento mágico invisible. Deberán programar el dispositivo para que, al inclinar su 'varita' (el dispositivo), cambie la magia del ambiente, y al pulsar las teclas, lancen hechizos sonoros. El objetivo es crear una melodía que suene como una película de ciencia ficción antigua.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('space_drone'); IF Inclination.X > 20 THEN Keyboard.setOctave(High) ELSE Keyboard.setOctave(Low); ON KeyPress play Note"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Conducción Musical",
+    "originalIdeaDescription": "Un sistema que simula un coche en movimiento. El reproductor de audio emite el sonido constante del motor. La inclinación del dispositivo actúa como el volante para dirigir el vehículo imaginario. El teclado musical funciona como el claxon o la radio del coche, permitiendo al usuario interactuar con el entorno sonoro mientras 'conduce'.",
+    "transformedIdeaTitle": "Carrera de Autos Locos y Ruidosos",
+    "transformedIdeaDescription": "Los estudiantes diseñarán el volante del futuro. Tendrán que programar el sonido del motor para que suene siempre, pero si giran (inclinan) el volante demasiado a la derecha o izquierda, el coche debe tocar una nota de advertencia en el teclado para no salirse de la pista. ¡Es una carrera contra el ruido!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('engine_loop'); IF Inclination.Y < -30 THEN Keyboard.play('C4'); IF Inclination.Y > 30 THEN Keyboard.play('D4')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivelador de Construcción Sonoro",
+    "originalIdeaDescription": "Esta herramienta ayuda a verificar si una superficie está plana. El reproductor de audio emite música de construcción de fondo. Si el dispositivo detecta una inclinación (no está plano), el teclado musical reproduce notas disonantes que varían según la gravedad de la inclinación, guiando al usuario hacia el equilibrio perfecto.",
+    "transformedIdeaTitle": "El Arquitecto de la Torre Equilibrista",
+    "transformedIdeaDescription": "¡La torre se va a caer! En este desafío, los estudiantes son arquitectos que deben mantener los cimientos rectos. Si su dispositivo se inclina, deben hacer sonar una alarma (teclado) urgentemente. Si logran mantenerlo perfectamente plano durante 10 segundos, suena una fanfarria de victoria desde el reproductor de audio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X == 0 AND Inclination.Y == 0 THEN AudioPlayer.play('fanfare') ELSE Keyboard.play('Alert_Note')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Cuentos Interactiva",
+    "originalIdeaDescription": "Un dispositivo para contar historias donde la inclinación determina el giro de la trama. Inclinar a la izquierda selecciona un camino de la historia (audio 1), a la derecha otro (audio 2). El teclado musical se utiliza para agregar efectos de sonido puntuales (pasos, puertas, truenos) que el usuario debe tocar en el momento adecuado.",
+    "transformedIdeaTitle": "Crea tu Propia Aventura Narrada",
+    "transformedIdeaDescription": "Los estudiantes se convierten en directores de cine sonoro. Deben programar una historia donde, al girar el 'libro' (dispositivo), la narración cambie de escenario (bosque o castillo). Ellos mismos deben tocar el teclado para añadir los efectos especiales en los momentos de suspenso de la historia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X < -15 THEN AudioPlayer.play('Story_Part_A'); IF Inclination.X > 15 THEN AudioPlayer.play('Story_Part_B'); ON KeyPress play SFX"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura Yoga",
+    "originalIdeaDescription": "Ayuda a mantener posturas de yoga o ejercicio. El reproductor de audio pone música relajante. El sensor de inclinación monitorea la estabilidad del usuario. Si el usuario se tambalea o pierde la postura correcta más allá de un umbral, el teclado emite un suave 'ding' para avisar que debe corregir la posición.",
+    "transformedIdeaTitle": "El Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "¡Hora de relajarse! Los estudiantes programarán un asistente de meditación. El dispositivo se coloca sobre la espalda o la cabeza. Debe tocar música suave, pero si el estudiante se mueve y rompe la concentración (inclinación), el asistente debe tocar una nota suave para recordarle que se quede quieto como una estatua.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('relaxing_music'); IF abs(Inclination.X) > 10 THEN Keyboard.play('E5')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezcladora de DJ Gestual",
+    "originalIdeaDescription": "Una mesa de mezclas donde el ritmo base suena en el reproductor de audio. La inclinación del dispositivo controla el 'crossfader' o filtros de sonido, y el teclado musical se utiliza para lanzar 'samples' o melodías improvisadas sobre la base rítmica, permitiendo una performance dinámica.",
+    "transformedIdeaTitle": "La Superestrella DJ del Futuro",
+    "transformedIdeaDescription": "¿Listos para la fiesta? Los estudiantes crearán una controladora de DJ que no necesita manos para los efectos. Al mover el cuerpo (inclinando el dispositivo), aplicarán efectos al ritmo de fondo, y usarán el teclado para soltar los mejores 'beats' y animar al público virtual.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('techno_beat'); FilterValue = map(Inclination.Y, -90, 90, 0, 100); ON KeyPress play 'Vocal_Chops'"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo con Efectos",
+    "originalIdeaDescription": "Simula la cabina de un avión. El audio reproduce el sonido del viento y las turbinas. La inclinación controla el cabeceo y el alabeo de la nave imaginaria. El teclado musical actúa como el panel de control, donde cada tecla activa sonidos de comunicación con la torre, tren de aterrizaje o avisos de cinturón.",
+    "transformedIdeaTitle": "Capitán Aéreo: Misión Rescate",
+    "transformedIdeaDescription": "¡Mayday! Los estudiantes deben pilotar un avión en una tormenta. Inclinar el dispositivo controla el avión para mantenerlo nivelado contra el viento (sonido de fondo). Deben usar el teclado para enviar códigos morse (notas musicales) a la base y pedir permiso para aterrizar a salvo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('wind_noise'); IF Inclination.Z > 45 THEN AudioPlayer.volume(100); ON KeyPress play 'Morse_Code_Tone'"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "Un dispositivo educativo que simula un sismógrafo. El audio reproduce sonido ambiente de una ciudad tranquila. Cuando se agita el dispositivo (cambios rápidos en inclinación), el audio cambia a sonido de estruendo y el teclado toca notas graves y fuertes automáticamente para representar el movimiento de la tierra.",
+    "transformedIdeaTitle": "Cazadores de Temblores",
+    "transformedIdeaDescription": "Construyamos un sismógrafo inteligente. Todo está tranquilo (música suave), pero si alguien golpea la mesa o mueve el dispositivo bruscamente, el sistema debe detectarlo. Al detectar el 'terremoto', la música debe detenerse y el teclado debe tocar notas graves de alerta máxima.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF delta(Inclination) > Threshold THEN AudioPlayer.stop() AND Keyboard.play('Low_C') ELSE AudioPlayer.play('City_Ambience')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "La Varita Mágica Musical",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Movimientos específicos de inclinación (arriba, abajo) cambian el 'hechizo' activo (pista de audio de fondo mágica). El teclado musical se usa para 'lanzar' el hechizo, tocando una escala ascendente o descendente brillante dependiendo de la posición de la varita.",
+    "transformedIdeaTitle": "Academia de Magia: Clase de Encantamientos",
+    "transformedIdeaDescription": "¡Wingardium Leviosa! Los estudiantes programan su varita. Si apuntan hacia arriba (inclinación positiva), preparan un hechizo de luz (música celestial). Si apuntan abajo, un hechizo de oscuridad. Deben pulsar el botón mágico (tecla) para liberar el poder con una nota musical que combine con el hechizo elegido.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 0 THEN AudioPlayer.track('Light_Magic') ELSE AudioPlayer.track('Dark_Magic'); ON KeyPress play 'Sparkle_Sound'"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "Un juego donde el usuario debe caminar sosteniendo el dispositivo plano. El audio reproduce sonidos de grillos nocturnos. Si la inclinación varía demasiado (pasos fuertes o torpes), el teclado emite un sonido de 'cuerda rota' o alerta, indicando que el ninja ha sido descubierto por los guardias.",
+    "transformedIdeaTitle": "El Ninja Silencioso",
+    "transformedIdeaDescription": "El objetivo es cruzar la habitación sin ser detectado. Los estudiantes programan el dispositivo para que sea ultra sensible. Si mantienen el equilibrio perfecto, solo se oyen grillos. Si fallan y lo inclinan al caminar, ¡ZAS! suena una tecla de piano fuerte y pierden la partida. ¿Quién tiene el mejor pulso?",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('crickets'); IF abs(Inclination.X) > 5 OR abs(Inclination.Y) > 5 THEN Keyboard.play('Gong_Note')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Un juego de puzzle donde se debe girar (inclinar) el dispositivo para encontrar el punto exacto. El audio emite un zumbido de tensión. Al llegar al grado de inclinación correcto, el teclado toca una nota 'clic'. El usuario debe encontrar tres puntos 'clic' para ganar.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Los estudiantes deben programar una caja fuerte digital. Deben definir un 'número secreto' (un ángulo de inclinación). Sus compañeros deben girar el dispositivo lentamente escuchando el suspenso; cuando encuentren el ángulo exacto, el teclado debe hacer '¡Cling!' para indicar que la caja se abrió.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('suspense'); targetAngle = 45; IF Inclination.X == targetAngle THEN Keyboard.play('Unlock_Note')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Pintura Musical Abstracta",
+    "originalIdeaDescription": "Una experiencia artística donde la inclinación controla el 'color' del sonido (cambiando pistas de acompañamiento de diferentes estilos). El teclado permite al usuario añadir 'pinceladas' (notas puntuales) sobre el lienzo sonoro que cambia según cómo sostienen el dispositivo.",
+    "transformedIdeaTitle": "Pintando con Música",
+    "transformedIdeaDescription": "Imagina que el aire es tu lienzo. Los estudiantes crean una herramienta artística donde inclinar el dispositivo hacia la izquierda pone música triste (azul) y a la derecha música alegre (amarillo). Deben usar el teclado para poner los detalles finales a su obra de arte sonora improvisada.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < 0 THEN AudioPlayer.play('Sad_Violin') ELSE AudioPlayer.play('Happy_Pop'); ON KeyPress play Note"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Traductor de Idioma Alienígena",
+    "originalIdeaDescription": "Dispositivo de juego de rol. Se inclina el dispositivo para sintonizar diferentes frecuencias de radio (audio con estática y voces raras). Cuando se encuentra una señal clara, el usuario usa el teclado para repetir la secuencia de tonos que escucha y 'comunicarse' con los alienígenas.",
+    "transformedIdeaTitle": "Contacto Extraterrestre",
+    "transformedIdeaDescription": "¡Hemos recibido una señal! Los estudiantes deben sintonizar la radio intergaláctica inclinando el dispositivo hasta que la estática (audio) desaparezca y se oiga una voz clara. Luego, deben usar el teclado como un traductor universal para responder con una melodía de paz a los visitantes.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "StaticVol = abs(Inclination.X - Target); AudioPlayer.setVolume(StaticVol); IF StaticVol < 5 THEN Keyboard.enable()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Lluvia y Truenos",
+    "originalIdeaDescription": "Crea un ambiente climático. El audio reproduce sonido de viento. Al inclinar el dispositivo hacia adelante, la intensidad de la lluvia (simulada con notas rápidas y aleatorias en el teclado) aumenta. Una inclinación brusca provoca un trueno (sonido grave o efecto de audio).",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "¿Puedes controlar el clima? Los estudiantes programarán una nube portátil. Si el dispositivo está plano, hace sol. Al inclinarlo, empieza a llover (el teclado toca notas rápidas como gotas). Cuanto más lo inclinen, más fuerte llueve, hasta que el audio suelta un trueno enorme.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RainSpeed = map(Inclination.Y); Loop: Keyboard.play('drop', speed=RainSpeed); IF Inclination.Y > 80 THEN AudioPlayer.play('thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escalera Musical Infinita",
+    "originalIdeaDescription": "Un experimento auditivo (Efecto Shepard). El audio reproduce una base rítmica de hip-hop. Al inclinar el dispositivo hacia arriba, las notas del teclado suben de tono automáticamente en arpegio. Al bajarlo, descienden, creando la ilusión de que la música siempre sube o baja.",
+    "transformedIdeaTitle": "Escalando la Montaña Rítmica",
+    "transformedIdeaDescription": "Los estudiantes deben crear una canción que sube y baja con ellos. Con una base de batería de fondo, deben programar el teclado para que toque notas más agudas cuanto más alto apunten con el dispositivo, y más graves al apuntar al suelo, aprendiendo sobre escalas musicales y variables.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('beat'); Note = map(Inclination.Y, -90, 90, 48, 72); Keyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "El Robot Mascota Emocional",
+    "originalIdeaDescription": "Simula una mascota virtual. El audio hace sonidos de ronroneo o gruñidos. Si se acaricia (inclina suavemente) hace sonidos felices. Si se agita o pone boca abajo (inclinación extrema), el teclado toca notas agudas de 'miedo' y el audio cambia a quejidos.",
+    "transformedIdeaTitle": "Cuida a tu Robot-Mascota",
+    "transformedIdeaDescription": "¡Tu mascota digital necesita cariño! Los estudiantes programan las emociones del robot. Si lo mecen suavemente (inclinación lenta), el audio ronronea. Pero cuidado, si lo ponen boca abajo, el robot se asusta y deben programar el teclado para que 'grite' pidiendo ayuda.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 160 THEN Keyboard.play('Scream') ELSE IF delta(Inclination) < 5 THEN AudioPlayer.play('Purr')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Pinball Virtual Sonoro",
+    "originalIdeaDescription": "Simula la física de una mesa de pinball. El audio pone sonidos de arcade clásicos. La inclinación del dispositivo mueve la 'bola' imaginaria. Cuando la inclinación supera cierto punto (golpe con bumper), el teclado dispara un acorde específico, sumando puntos imaginarios.",
+    "transformedIdeaTitle": "Pinball Humano Arcade",
+    "transformedIdeaDescription": "Transforma tu clase en un salón de arcade. Los estudiantes diseñan la lógica de un Pinball. Tienen que mover la bola imaginaria inclinando el tablero. Deben programar que, al hacer un movimiento rápido a la derecha (golpear la bola), el teclado suene como un rebote y el audio celebre con sonidos de 8-bits.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('arcade_bg'); IF delta(Inclination.X) > ImpulseForce THEN Keyboard.play('Bumper_Chord')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Biónico",
+    "originalIdeaDescription": "Permite al usuario dirigir el tempo de una pieza clásica. El audio contiene la pieza musical segmentada. La velocidad de inclinación (batuta) controla la velocidad de reproducción. El teclado se usa para acentuar los finales o iniciar secciones de instrumentos específicos.",
+    "transformedIdeaTitle": "Maestro de la Orquesta Digital",
+    "transformedIdeaDescription": "¡Todos a sus puestos! El estudiante es el director. Debe programar el sistema para que la música (Audio Player) vaya más rápido si agita la batuta (dispositivo) rápidamente, y lento si lo hace suave. Con el teclado, dará la entrada a los tambores y platillos en el momento culminante.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = map(Gyro.Speed); AudioPlayer.setPlaybackRate(Tempo); ON KeyPress play 'Cymbal_Crash'"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Juego de búsqueda. El audio emite ruido blanco. A medida que el usuario se acerca a una orientación específica (donde está el 'fantasma'), el ruido baja y el teclado empieza a tocar una melodía misteriosa, que se vuelve más rápida cuanto más cerca se está de la inclinación objetivo.",
+    "transformedIdeaTitle": "Cazafantasmas: La Búsqueda Espectral",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Los estudiantes crean un sensor paranormal. Deben girar el dispositivo buscando la señal. Cuando apunten a la dirección correcta (inclinación secreta), el ruido estático debe desaparecer y el teclado debe tocar la melodía de '¡Te encontré!'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Distance = abs(Inclination.X - GhostAngle); AudioPlayer.setVolume(Distance); IF Distance < 5 THEN Keyboard.play('Spooky_Melody')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Skateboarding Sónico",
+    "originalIdeaDescription": "Simulación de trucos de skate. El audio reproduce el sonido de ruedas sobre asfalto. Al inclinar el dispositivo (hacer un 'ollie' o girar), el audio cambia momentáneamente y el teclado reproduce un sonido de éxito si el movimiento se completa y se vuelve a la posición plana rápidamente.",
+    "transformedIdeaTitle": "Patineta Sónica Pro",
+    "transformedIdeaDescription": "¡A patinar con los dedos! Los estudiantes programan una patineta virtual. El sonido de rodar siempre está activo. El reto es detectar cuando se hace un truco (inclinación rápida hacia arriba y vuelta a plano). Si aterrizan el truco correctamente, el teclado debe tocar un acorde de rock triunfal.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('skate_rolling'); IF Inclination.Y > 45 AND wait(0.5) AND Inclination.Y < 5 THEN Keyboard.play('Rock_Chord')"
+  }
+]

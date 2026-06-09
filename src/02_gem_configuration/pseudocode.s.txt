@@ -1,0 +1,568 @@
+Example 1:
+START
+  // First Repetition
+  Set color of [Lamp 1] to hex value #ff0000
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+  Wait 40 milliseconds
+  Set color of [Lamp 1] to hex value #3366ff
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+  Wait 40 milliseconds
+
+  // Second Repetition
+  Set color of [Lamp 1] to hex value #ff0000
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+  Wait 40 milliseconds
+  Set color of [Lamp 1] to hex value #3366ff
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+  Wait 40 milliseconds
+
+  // Third Repetition
+  Set color of [Lamp 1] to hex value #ff0000
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+  Wait 40 milliseconds
+  Set color of [Lamp 1] to hex value #3366ff
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 1]
+END
+________________________________________
+Example 2:
+START
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait 400 milliseconds
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait 200 milliseconds
+  Execute play on [Musical Keyboard 1] with note value 62
+  Wait 600 milliseconds
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait 600 milliseconds
+  Execute play on [Musical Keyboard 1] with note value 65
+  Wait 600 milliseconds
+  Execute play on [Musical Keyboard 1] with note value 64
+  Wait 600 milliseconds
+  Execute stop on [Musical Keyboard 1]
+END
+________________________________________
+Example 3:
+START
+  Set variable 'tempo' = 200
+
+  Set color of Lamp2 to hex value #339999
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait for (get variable 'tempo' * 2) milliseconds
+
+  Set color of Lamp2 to hex value #33cc00
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait for (get variable 'tempo') milliseconds
+
+  Set color of Lamp2 to hex value #cc0000
+  Execute play on [Musical Keyboard 1] with note value 62
+  Wait for (get variable 'tempo' * 3) milliseconds
+
+  Set color of Lamp2 to hex value #ffff33
+  Execute play on [Musical Keyboard 1] with note value 60
+  Wait for (get variable 'tempo' * 3) milliseconds
+
+  Set color of Lamp2 to hex value #3366ff
+  Execute play on [Musical Keyboard 1] with note value 65
+  Wait for (get variable 'tempo' * 3) milliseconds
+
+  Set color of Lamp2 to hex value #cc66cc
+  Execute play on [Musical Keyboard 1] with note value 64
+  Wait for (get variable 'tempo' * 3) milliseconds
+  
+  Execute stop on [Musical Keyboard 1]
+  Execute turnOff on [Lamp 2]
+END
+________________________________________
+Example 4:
+START
+  MAIN LOOP:
+    Set color of [Lamp 1] to hex value #33cc00
+    Wait 6 seconds
+    Set color of [Lamp 1] to hex value #ffff00
+    Wait 1 second
+    Set color of [Lamp 1] to hex value #ff0000
+    Wait 6 seconds
+  END MAIN LOOP
+END
+________________________________________
+Example 5:
+START
+  MAIN LOOP:
+    Set color of [Lamp 1] to hex value #33cc00
+    Wait 6 seconds
+
+    REPEAT 4 TIMES:
+      Execute turnOff on [Lamp 1]
+      Wait 400 milliseconds
+      Set color of [Lamp 1] to hex value #ffff00
+      Wait 400 milliseconds
+    END REPEAT
+
+    Set color of [Lamp 1] to hex value #ff0000
+    Wait 6 seconds
+  END MAIN LOOP
+END
+
+________________________________________
+Example 6:
+START
+  MAIN LOOP:
+    IF (get property 'movimiento' from [Camera [Motion 1]) > 40 THEN
+      Execute play on [Audio Player 2]
+    END IF
+  END MAIN LOOP
+END
+________________________________________
+Example 7:
+START
+  MAIN LOOP:
+    IF (get property 'habilitado' from [Switch 2]) is TRUE THEN
+      Set color of [Lamp 1] to hex value #ffffff
+    ELSE
+      Execute turnOff on [Lamp 1]
+    END IF
+  END MAIN LOOP
+END
+________________________________________
+Example 8:
+START
+  ON EVENT change of [Switch 1]:
+    IF (get property 'enabled' from [Switch 1]) is TRUE THEN
+      Execute play on [Audio Player 2]
+    ELSE
+      Execute stop on [Audio Player 2]
+    END IF
+  END EVENT
+END
+
+
+________________________________________
+Example 9:
+START
+  Execute play on [Audio Player 1]
+
+  MAIN LOOP:
+    Set volume of [Audio Player 1] = (get property 'rotation' from [Knob 1])
+  END MAIN LOOP
+END
+________________________________________
+Example 10:
+START
+  ON EVENT change of [Knob 1]:
+    Let rotationValue = get property 'rotation' from [Knob 1]
+    Set color of [Lamp 1] to RGB(rotationValue, rotationValue, rotationValue)
+  END EVENT
+END
+________________________________________
+Example 11:
+START
+  MAIN LOOP:
+    Let redValue = get property 'rotation' from [Knob 1]
+    Let greenValue = get property 'rotation' from [Knob 2]
+    Let blueValue = get property 'rotation' from [Knob 3]
+    
+    Set color of [Lamp 4] to RGB(redValue, greenValue, blueValue)
+  END MAIN LOOP
+END
+________________________________________
+Example 12:
+START
+  MAIN LOOP:
+    Let tiltValue = absolute value of (get property 'incY' from [Inclination 2])
+    
+    IF tiltValue < 6 THEN
+      Set color of [Lamp 1] to hex value #33cc00
+    ELSE IF tiltValue < 20 THEN
+      Set color of [Lamp 1] to hex value #ffff00
+    ELSE IF tiltValue < 40 THEN
+      Set color of [Lamp 1] to hex value #ff9900
+    ELSE
+      Set color of [Lamp 1] to hex value #ff0000
+    END IF
+  END MAIN LOOP
+END
+________________________________________
+Example 13:
+START
+  ON EVENT change of Motion1:
+    IF (get property 'totalMotion' from Motion1) > 150 THEN
+      Execute play on [Audio Player 2]
+    END IF
+  END EVENT
+END
+
+
+________________________________________
+Example 14:
+START
+  MAIN LOOP:
+    IF (get property 'enabled' from [Switch 1]) is TRUE THEN
+      // Fade In
+      FOR variable 'i' FROM 0 TO 100 STEP 1:
+        Set color of [Lamp 2] to RGB(i, i, i)
+        Wait 10 milliseconds
+      END FOR
+      // Fade Out
+      FOR variable 'i' FROM 100 TO 0 STEP -1:
+        Set color of [Lamp 2] to RGB(i, i, i)
+        Wait 10 milliseconds
+      END FOR
+    ELSE
+      Execute turnOff on [Lamp 2]
+    END IF
+  END MAIN LOOP
+
+  ON EVENT change of [Switch 1]:
+    Restart main loop
+  END EVENT
+END
+________________________________________
+Example 15:
+DEFINE PROCEDURE signal(color):
+  Set color of [Lamp 3] to value of 'color'
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 3]
+  Wait 100 milliseconds
+  Set color of [Lamp 3] to value of 'color'
+  Wait 100 milliseconds
+  Execute turnOff on [Lamp 3]
+  Wait 500 milliseconds
+END PROCEDURE
+
+START
+  ON EVENT change of [Touch Button 1]:
+    WHILE (get property 'touched' from [Touch Button 1]) is TRUE:
+      CALL procedure signal(color: #33ff33)
+    END WHILE
+  END EVENT
+
+  ON EVENT change of [Touch Button 2]:
+    WHILE (get property 'touched' from [Touch Button 2]) is TRUE:
+      CALL procedure signal(color: #ff0000)
+    END WHILE
+  END EVENT
+END
+
+
+___________________________
+
+Example 16:
+START
+  // on_start block
+  Draw on [LED Matrix 1] with 7x7 pattern:
+    0,0,0,0,0,0,0
+    0,1,1,1,1,1,0
+    0,1,0,1,1,1,0
+    0,1,0,1,1,1,0
+    0,1,0,1,1,1,0
+    0,1,1,1,1,1,0
+    0,0,0,0,0,0,0
+  with color #2277aa
+
+  // Main loop
+  MAIN LOOP:
+    IF (get property 'oriX' from [Inclination 1]) > 20 THEN
+      Draw on [LED Matrix 1] with 7x7 pattern:
+        0,0,0,0,0,0,0
+        0,1,0,0,1,1,0
+        0,0,1,0,1,0,0
+        0,0,0,1,0,0,0
+        0,1,0,1,0,0,0
+        0,1,0,0,1,1,0
+        0,0,0,0,0,0,0
+      with color #2277aa
+      Execute play on [Sound Player 3] with sound 'fireAlarm.mp3'
+      Wait 6 seconds
+      Execute clear on [Led Matrix 2]
+      Execute stop on [Sound Player 3]
+    END IF
+  END MAIN LOOP
+END
+
+________________________________________
+Example 17:
+START
+  MAIN LOOP:
+    Draw on [LED Matrix 1] with 7x7 pattern (large heart):
+      0,1,0,0,0,1,0
+      1,1,1,0,1,1,1
+      1,1,1,1,1,1,1
+      1,1,1,1,1,1,1
+      0,1,1,1,1,1,0
+      0,0,1,1,1,0,0
+      0,0,0,1,0,0,0
+    with color #ff0000
+    Execute play on [Musical Drum 2] with drum value 1
+    Wait 300 milliseconds
+    Execute play on [Musical Drum 2] with drum value 1
+
+    REPEAT 4 TIMES:
+      Draw on [LED Matrix 1] with 7x7 pattern (small heart):
+        0,0,0,0,0,0,0
+        0,1,0,1,0,0,0
+        1,1,1,1,1,0,0
+        1,1,1,1,1,0,0
+        0,1,1,1,0,0,0
+        0,0,1,0,0,0,0
+        0,0,0,0,0,0,0
+      with color #ff0000
+      Wait 100 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (medium heart):
+        0,0,0,0,0,0,0
+        0,1,0,1,0,0,0
+        1,0,1,0,1,0,0
+        1,0,0,0,1,0,0
+        0,1,0,1,0,0,0
+        0,0,1,0,0,0,0
+        0,0,0,0,0,0,0
+      with color #ff0000
+      Wait 100 milliseconds
+    END REPEAT
+  END MAIN LOOP
+END
+________________________________________
+Example 18:
+START
+  // on_start block
+  Set variable 'latidoGrande' = 500
+  Set variable 'latidoPequeño' = 150
+
+  // Event handlers
+  ON EVENT faceUp of Inclinación3:
+    Set variable 'latidoGrande' = 500
+    Set variable 'latidoPequeño' = 150
+  END EVENT
+  ON EVENT side of Inclinación3:
+    Set variable 'latidoGrande' = 250
+    Set variable 'latidoPequeño' = 80
+  END EVENT
+
+  // Main loop
+  MAIN LOOP:
+    Draw large heart pattern...
+    Execute play on [Musical Drum 2] with drum value 1
+    Wait (get variable 'latidoGrande') milliseconds
+    Execute play on [Musical Drum 2] with drum value 1
+    REPEAT 4 TIMES:
+      Draw small heart pattern...
+      Wait (get variable 'latidoPequeño') milliseconds
+      Draw medium heart pattern...
+      Wait (get variable 'latidoPequeño') milliseconds
+    END REPEAT
+  END MAIN LOOP
+END
+________________________________________
+Example 19:
+START
+  MAIN LOOP:
+    IF (get property 'lightIntensity' from [Light Intensity 1]) > 50 THEN
+      Execute play on [Sound Player 3] with sound 'shortMelody.mp3'
+      Draw on [LED Matrix 1] with 7x7 pattern (face):
+        1,0,0,1,0,0,1
+        0,1,0,1,0,1,0
+        0,1,1,1,0,1,1
+        1,1,1,1,1,1,0
+        0,1,1,1,0,0,0
+        1,0,1,0,1,0,1
+        0,0,1,0,0,1,0
+      with color #ff0000
+    ELSE
+      Execute stop on [Sound Player 3]
+      Execute clear on [Led Matrix 2]
+    END IF
+  END MAIN LOOP
+END
+________________________________________
+Example 20:
+START
+  // on_start block
+  Set variable 'flama' = TRUE
+
+  // Event handler
+  ON EVENT suddenIncrease of [Noise Level 2]:
+    Set variable 'flama' = NOT (get variable 'flama')
+  END EVENT
+
+  // Main loop
+  MAIN LOOP:
+    IF (get variable 'flama') is TRUE THEN
+      Draw on [LED Matrix 1] with 7x7 pattern (candle base)...
+      Let randomX = random integer from 3 to 5
+      Draw pixel on [LED Matrix 1] at (randomX, 2) with color #ff0000
+      Wait 200 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (candle base)...
+      Draw pixel on [LED Matrix 1] at (4, 2) with color #ff0000
+      Wait 200 milliseconds
+    ELSE
+      Execute clear on [LED Matrix 1]
+    END IF
+  END MAIN LOOP
+END
+
+________________________________________
+Example 21:
+START
+  MAIN LOOP:
+    IF (get property 'lightIntensity' from [Light Intensity 2]) < 30 THEN
+      Draw on [LED Matrix 1] with 7x7 pattern (closed eyes)...
+      Wait 200 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (half-open eyes)...
+      Wait 200 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (open eyes)...
+      Wait 200 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (half-open eyes)...
+      Wait 200 milliseconds
+    ELSE
+      Draw on [LED Matrix 1] with 7x7 pattern (all zeros)...
+    END IF
+  END MAIN LOOP
+END
+________________________________________
+Example 22:
+START
+  MAIN LOOP:
+    Let noiseValue = get property 'noise' from [Noise Level 1]
+    Let dynamicColor = RGB(noiseValue, 0, 0)
+    Draw on [LED Matrix 1] with 7x7 pattern:
+      0,1,0,1,0,1,0
+      1,0,1,0,1,0,1
+      0,1,0,1,0,1,0
+      1,0,1,0,1,0,1
+      0,1,0,1,0,1,0
+      1,0,1,0,1,0,1
+      0,1,0,1,0,1,0
+    with color dynamicColor
+  END MAIN LOOP
+END
+________________________________________
+Example 23:
+START
+  // on_start block
+  Set variable 'estado' = FALSE
+  Execute clear on [LED Matrix 1]
+
+  // Event handler
+  ON EVENT suddenIncrease of [Noise Level 1]:
+    Set variable 'estado' = NOT (get variable 'estado')
+    IF (get variable 'estado') is TRUE THEN
+      Draw on [LED Matrix 1] with 7x7 pattern (all ones) with color #ff0000
+    ELSE
+      Execute clear on [LED Matrix 1]
+    END IF
+  END EVENT
+END
+________________________________________
+Example 24:
+START
+  // on_start block
+  Set variable 'estado' = FALSE
+  Execute clear on [LED Matrix 1]
+
+  // Event handler
+  ON EVENT suddenIncrease of [Noise Level 1]:
+    Set variable 'estado' = NOT (get variable 'estado')
+    IF (get variable 'estado') is TRUE THEN
+      // Animate ON
+      FOR 'lineas' FROM 1 TO 7 STEP 1:
+        FOR 'columnas' FROM 1 TO 7 STEP 1:
+          Draw pixel at ('lineas', 'columnas') with color #ff4444 on [LED Matrix 1]
+          Wait 10 milliseconds
+        END FOR
+      END FOR
+    ELSE
+      // Animate OFF
+      FOR 'lineas' FROM 7 TO 1 STEP -1:
+        FOR 'columnas' FROM 7 TO 1 STEP -1:
+          Draw pixel at ('lineas', 'columnas') with color #000000 on [LED Matrix 1]
+          Wait 10 milliseconds
+        END FOR
+      END FOR
+    END IF
+  END EVENT
+END
+
+________________________________________
+Example 25:
+START
+  // on_start block
+  Set variable 'sonidoFijo' = TRUE
+
+  // Main loop
+  MAIN LOOP:
+    Set background of [Led Matrix 2] to #cccccc
+    Let posX = 4 + (-1 * (get property 'oriX' from [Inclination 1]))
+    Let posY = 4 + (get property 'oriY' from [Inclination 1])
+
+    IF (posX > -2 AND posX < 2) AND (posY > -2 AND posY < 2) THEN
+      // In target
+      Draw pixel on [Led Matrix 2] at (posX, posY) with color #33cc00
+      IF (get variable 'sonidoFijo') is TRUE THEN
+        Execute play on [Musical Keyboard 3] with note value 60
+        Set variable 'sonidoFijo' = FALSE
+      END IF
+    ELSE
+      // Out of target
+      Let constrainedX = constrain(posX, between 1 and 7)
+      Let constrainedY = constrain(posY, between 1 and 7)
+      Draw pixel at (constrainedX, constrainedY) with color #ff4444
+      Set variable 'sonidoFijo' = TRUE
+      Execute stop on [Musical Keyboard 3]
+      Wait 100 milliseconds
+      Execute play on [Musical Keyboard 3] with note value 79
+    END IF
+  END MAIN LOOP
+END
+
+________________________________________
+Example 26:
+START
+  // on_start block
+  Draw on [LED Matrix 1] with 7x7 pattern (neutral face)...
+
+  // Event handler
+  ON EVENT suddenIncrease of [Noise Level 1]:
+    Execute play on [Sound Player 3] with sound 'creatureLaugh.mp3'
+    REPEAT 8 TIMES:
+      Draw on [LED Matrix 1] with 7x7 pattern (neutral face)...
+      Wait 200 milliseconds
+      Draw on [LED Matrix 1] with 7x7 pattern (open mouth)...
+      Wait 200 milliseconds
+    END REPEAT
+    Execute stop on [Sound Player 3]
+    Draw on [LED Matrix 1] with 7x7 pattern (neutral face)...
+  END EVENT
+END
+________________________________________
+Example 27:
+START
+  MAIN LOOP:
+    Let yTilt = get property 'oriY' from [Inclination 2]
+    Let noteValue = 60 + yTilt
+    Execute play on [Musical Keyboard 1] with note 'noteValue'
+    Wait 100 milliseconds
+  END MAIN LOOP
+END
+________________________________________
+Example 28:
+START
+  MAIN LOOP:
+    Execute clear on [LED Matrix 4]
+    
+    Let yTilt = get property 'oriY' from [Inclination 2]
+    Let roundedTilt = round(yTilt / 5)
+    
+    Let pixelY = 4 + roundedTilt
+    Draw pixel on [LED Matrix 4] at (4, pixelY) with color #ff4444
+
+    Let noteValue = 60 + roundedTilt
+    Execute play on [Musical Keyboard 1] with note 'noteValue'
+    
+    Wait 100 milliseconds
+  END MAIN LOOP
+END

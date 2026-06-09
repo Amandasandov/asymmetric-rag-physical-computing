@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Navegación Sonora Direccional",
+    "originalIdeaDescription": "Un sistema de guía que reproduce diferentes pistas de audio o efectos de sonido dependiendo de la dirección cardinal hacia la que el usuario está caminando, intensificando el volumen con la velocidad del movimiento.",
+    "transformedIdeaTitle": "El Explorador del Polo Norte",
+    "transformedIdeaDescription": "¡Eres un explorador en una tormenta de nieve! Debes encontrar el campamento base. Si caminas hacia el Norte (la dirección correcta) y te mueves constantemente, escucharás música triunfal. Si te desvías, escucharás solo el viento aullando.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Motion.isActive THEN Audio.play('victory') ELSE Audio.play('wind')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ 360 Grados",
+    "originalIdeaDescription": "Una herramienta musical donde el usuario selecciona diferentes pistas base girando su cuerpo (orientación de la brújula) y añade efectos de sonido de 'scratch' o percusión agitando el dispositivo.",
+    "transformedIdeaTitle": "Fiesta de Baile Galáctica",
+    "transformedIdeaDescription": "Conviértete en el mejor DJ de la galaxia. Gira hacia el Este para poner música Techno, o al Oeste para Rock. ¡Agita tu dispositivo al ritmo de la música para añadir efectos láser y animar a la multitud alienígena!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East' THEN Audio.playTrack('Techno'); IF Motion.shakeDetected THEN Audio.playEffect('Laser')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Simulador que emite ruido blanco. El ruido cambia a una señal clara cuando el usuario apunta a una dirección específica y se mueve lentamente hacia ella, simulando la detección de una entidad.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Usa tu dispositivo para encontrar fantasmas ocultos en el aula. Escucha la estática; si apuntas hacia el Sur y caminas muy despacio (sigilo), escucharás la risa del fantasma. ¡No corras o se escapará!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Motion.acceleration < 2 THEN Audio.play('ghost_laugh') ELSE Audio.play('static')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "El usuario controla una orquesta. Apuntar a diferentes direcciones activa diferentes secciones (cuerdas, vientos), y la intensidad del movimiento de la mano controla el volumen o tempo.",
+    "transformedIdeaTitle": "El Maestro de la Sinfonía Mágica",
+    "transformedIdeaDescription": "Dirige una orquesta invisible. Apunta al Norte para despertar a los violines y agita tu 'varita' (dispositivo) suavemente para que toquen. Gira al Sur para los tambores y agita fuerte para un final explosivo.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.degrees < 90 THEN Audio.setTrack('violins'); Audio.setVolume(Motion.intensity * 10)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Narrativa de Elige tu Propia Aventura",
+    "originalIdeaDescription": "Una historia de audio interactiva donde el usuario toma decisiones girando físicamente hacia una dirección y 'caminando' (agitando el dispositivo) para confirmar la elección y avanzar el capítulo.",
+    "transformedIdeaTitle": "Escape del Laberinto del Minotauro",
+    "transformedIdeaDescription": "Escucha al narrador: 'Llegas a una bifurcación'. Gira a la izquierda (Oeste) para ir al río o a la derecha (Este) para entrar a la cueva. Camina en tu lugar para confirmar tu decisión y descubrir tu destino.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Motion.stepCount > 3 THEN Audio.play('chapter_river')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Ejercicios Cardio",
+    "originalIdeaDescription": "Aplicación de fitness que instruye al usuario a realizar movimientos específicos (saltos, sentadillas) mientras mira hacia puntos cardinales específicos, proporcionando retroalimentación de audio.",
+    "transformedIdeaTitle": "Campamento de Entrenamiento de Superhéroes",
+    "transformedIdeaDescription": "¡Entrena para salvar el mundo! La computadora te ordenará: '¡Mira al Norte y corre!' o '¡Mira al Sur y salta!'. Si lo haces bien, escucharás sonidos de poder; si fallas, un sonido de error.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Audio.instruction == 'North' AND Compass.heading == 'North' AND Motion.isActive THEN Audio.play('power_up')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo a Ciegas",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo como un avión. La brújula determina el rumbo y el movimiento la turbulencia/velocidad. El audio proporciona instrucciones de la torre de control y ruido del motor.",
+    "transformedIdeaTitle": "Piloto de Niebla",
+    "transformedIdeaDescription": "No puedes ver nada por la niebla espesa. Confía en tus instrumentos. Escucha a la torre de control: 'Gire al rumbo 270'. Inclina tu avión y mantén el rumbo mientras los motores rugen. ¡Cuidado con las turbulencias!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.degrees == 270 THEN Audio.play('stable_engine') ELSE Audio.play('warning_alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin Direccional",
+    "originalIdeaDescription": "Un instrumento musical experimental donde el tono cambia según la orientación de la brújula y la distorsión o vibrato se controla agitando el dispositivo.",
+    "transformedIdeaTitle": "Compositor Alienígena",
+    "transformedIdeaDescription": "Crea música de otro planeta. Gira lentamente en círculo para cambiar la nota musical que suena. Agita el dispositivo para añadir un efecto vibrante 'wobble-wobble' a tu extraña melodía.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setPitch(Compass.degrees); IF Motion.isShaking THEN Audio.addEffect('vibrato')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo 'Luz Roja, Luz Verde'",
+    "originalIdeaDescription": "Juego donde el audio indica cuándo moverse. La brújula asegura que el jugador se mantenga en una trayectoria recta hacia la meta, y el sensor de movimiento detecta si se mueven cuando deberían estar congelados.",
+    "transformedIdeaTitle": "Estatuas Ninja",
+    "transformedIdeaDescription": "Debes infiltrarte en el palacio mirando siempre al Norte. Cuando la música suene, avanza sigilosamente. Cuando la música pare, ¡congélate! Si te mueves o te desvías del Norte, sonará la alarma.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Audio.isPlaying == FALSE AND (Motion.isActive OR Compass.heading != 'North') THEN Audio.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Guía de Meditación Zen",
+    "originalIdeaDescription": "Una aplicación que reproduce sonidos relajantes de la naturaleza solo cuando el usuario está orientado hacia el Este (salida del sol) y mantiene el dispositivo perfectamente quieto.",
+    "transformedIdeaTitle": "El Templo del Silencio",
+    "transformedIdeaDescription": "Encuentra tu paz interior. Busca el Este, por donde sale el sol. Sostén tu 'vela' (dispositivo) con total quietud. Solo entonces escucharás el canto de los pájaros y el fluir del río.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Motion.acceleration == 0 THEN Audio.play('nature_sounds')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Salvajes",
+    "originalIdeaDescription": "Simulación educativa donde diferentes direcciones emiten sonidos de animales lejanos. El usuario debe 'caminar' hacia el sonido para encontrar al animal virtual.",
+    "transformedIdeaTitle": "Safari Sonoro",
+    "transformedIdeaDescription": "Escucha atentamente. ¿Oyes el rugido del león? Gira hasta que el sonido sea más fuerte y camina (agita el dispositivo) hacia él. ¡Ten cuidado de no acercarte demasiado rápido o lo asustarás!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == targetDirection AND Motion.isActive THEN Audio.increaseVolume() ELSE Audio.decreaseVolume()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Castillo de Hechizos Elementales",
+    "originalIdeaDescription": "El usuario lanza hechizos realizando gestos de movimiento específicos mientras mira hacia direcciones cardinales asociadas a elementos (Norte=Hielo, Sur=Fuego, etc.), activando efectos de sonido.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Duelos",
+    "transformedIdeaDescription": "Para lanzar una Bola de Fuego, mira al Sur y haz un movimiento rápido de empuje. Para invocar un Muro de Hielo, mira al Norte y mantén el dispositivo firme. ¡El sonido te dirá si el hechizo funcionó!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Motion.gesture == 'punch' THEN Audio.play('fireball')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "El usuario actúa como un radar humano. Al girar, escanea diferentes sectores. Si detecta un 'avión' (audio), debe agitar el dispositivo para señalarle que aterrice.",
+    "transformedIdeaTitle": "Radar Humano",
+    "transformedIdeaDescription": "Eres la torre de control. Gira 360 grados para escanear el cielo. Cuando escuches el 'bip-bip' de un avión, detente en esa dirección y agita tus luces de aterrizaje para guiarlo a la pista.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.degrees == planeLocationDegrees THEN Audio.play('beep'); IF Motion.isShaking THEN Audio.play('landing_success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "La Brújula del Tiempo",
+    "originalIdeaDescription": "Moverse hacia el Norte adelanta el tiempo en una narración de audio (futuro), y hacia el Sur lo retrocede (pasado). El movimiento controla la velocidad de la transición temporal.",
+    "transformedIdeaTitle": "Viajeros del Tiempo",
+    "transformedIdeaDescription": "Tu dispositivo es una máquina del tiempo. Camina hacia el Norte para escuchar cómo sonará la ciudad en el año 3000. Camina hacia el Sur para oír dinosaurios. ¡Corre para viajar más rápido a través de los años!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Audio.play('sci_fi_city', speed=Motion.intensity)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta en el Mar",
+    "originalIdeaDescription": "El usuario debe equilibrar un barco virtual. El audio reproduce olas. La brújula indica la dirección de la ola y el usuario debe inclinarse (movimiento) en contra para no volcar.",
+    "transformedIdeaTitle": "Capitán de Alta Mar",
+    "transformedIdeaDescription": "¡Tormenta a la vista! Si escuchas que la ola viene del Oeste, inclina tu barco hacia el Oeste para cortarla. Si te mueves demasiado bruscamente, el barco se volcará y oirás un chapuzón.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Audio.waveDirection == 'West' AND Compass.tiltX < 0 THEN Audio.play('wave_crash') ELSE Audio.play('splash_game_over')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Física",
+    "originalIdeaDescription": "Para desbloquear un sonido de premio, el usuario debe girar a una secuencia de rumbos de brújula (ej. Norte, luego Este) y realizar un 'golpe' (movimiento) en cada punto para ingresar el código.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Abre la caja fuerte gigante. La combinación es: Norte, Golpe, Oeste, Golpe. Gira tu cuerpo a la dirección exacta y da un golpe seco al aire. Escucha el 'clic' de los cerrojos abriéndose.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == sequence[step] AND Motion.impactDetected THEN step++ AND Audio.play('click')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Paseo por el Museo Sonoro",
+    "originalIdeaDescription": "Diferentes orientaciones de la brújula corresponden a diferentes exhibiciones. Caminar (movimiento) activa la audioguía para esa exhibición específica.",
+    "transformedIdeaTitle": "Museo de Historia Invisible",
+    "transformedIdeaDescription": "Convierte tu habitación en un museo. Mira al Norte y camina para oír sobre el T-Rex. Mira al Sur y camina para aprender sobre las Pirámides. Si te detienes, la guía se pausa.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isActive THEN Audio.play(Exhibit[Compass.heading]) ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Buscaminas Acústico",
+    "originalIdeaDescription": "El usuario navega un campo minado virtual. La brújula orienta el movimiento. Si el sensor de movimiento detecta un paso y la ubicación virtual es una mina, suena una explosión.",
+    "transformedIdeaTitle": "Desactivador de Bombas",
+    "transformedIdeaDescription": "Estás en un campo minado. Escucha el sonar. Si el pitido es rápido, ¡no camines en esa dirección! Gira hasta que el pitido sea lento y da pasos suaves para cruzar a salvo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == DangerZone AND Motion.stepDetected THEN Audio.play('explosion')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio",
+    "originalIdeaDescription": "El usuario debe sostener una pose de yoga o equilibrio mirando a una dirección fija. Si la brújula se desvía o el sensor de movimiento detecta temblores, el audio reproduce un sonido de caída.",
+    "transformedIdeaTitle": "El Maestro del Kung Fu",
+    "transformedIdeaDescription": "Demuestra tu equilibrio. Párate en un pie mirando al Este. Mantén la postura perfecta. Si te tambaleas (movimiento) o giras, el gong sonará indicando que has fallado la prueba.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading != 'East' OR Motion.isShaking THEN Audio.play('gong_fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Carrera de Autos Ciega",
+    "originalIdeaDescription": "Juego de carreras sin pantalla. El audio indica curvas. El usuario usa la brújula como volante girando el cuerpo y el movimiento (agitar) como acelerador.",
+    "transformedIdeaTitle": "Corredor de Fórmula Ciega",
+    "transformedIdeaDescription": "Cierra los ojos. Escucha al copiloto: '¡Curva a la derecha!'. Gira tu cuerpo a la derecha rápidamente. Agita el dispositivo para acelerar en las rectas. ¡Siente la velocidad con el sonido del motor!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Audio.instruction == 'Right' AND Compass.rotation > 0 AND Motion.isActive THEN Audio.play('engine_rev')"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Farola Urbana Musical",
+    "originalIdeaDescription": "Un sistema de iluminación público que se enciende cuando oscurece. Además, la farola reproduce música ambiental suave si es de noche para calmar a los peatones.",
+    "transformedIdeaTitle": "Ingeniero de Ciudad Sostenible",
+    "transformedIdeaDescription": "Diseña la ciudad del futuro. Programa la farola (Lámpara) para que se encienda automáticamente cuando el sol se ponga (Sensor de Luz < 30). Cuando se encienda, el sistema debe tocar una melodía de 'Buenas Noches' en el teclado para avisar a los ciudadanos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 30 THEN Lamp.on(White) AND Keyboard.play('NightMelody') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Alarma de Cajón Secreto",
+    "originalIdeaDescription": "Dispositivo para proteger objetos de valor. Si se abre el cajón (entra luz), la lámpara parpadea en rojo y el teclado suena como una sirena.",
+    "transformedIdeaTitle": "La Trampa del Tesoro",
+    "transformedIdeaDescription": "Protege tu diario. Esconde el dispositivo en un cajón oscuro. Si tu hermano lo abre y entra la luz, la trampa se activa: la Lámpara parpadea en Rojo policial y el Teclado toca una sirena repetitiva. Para desactivarla, debes cerrar el cajón rápidamente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 THEN Lamp.strobe(Red) AND Keyboard.loop('Siren') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Piano de Sombras (Theremin)",
+    "originalIdeaDescription": "El usuario mueve la mano sobre el sensor de luz para crear sombras. La cantidad de luz determina qué nota suena en el teclado y el color de la lámpara.",
+    "transformedIdeaTitle": "El Instrumento Invisible",
+    "transformedIdeaDescription": "Crea música sin tocar teclas. Mueve tu mano arriba y abajo sobre el sensor de luz. Cuanta más luz entre, más aguda será la nota y la Lámpara brillará más fuerte. Si tapas el sensor (sombra), la nota será grave y la luz tenue.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Light.level); Color = Map(Light.level); Keyboard.play(Note); Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Despertador Amanecer",
+    "originalIdeaDescription": "Simula el amanecer. Cuando detecta luz natural, la lámpara se enciende gradualmente y el teclado empieza a tocar sonidos de pájaros.",
+    "transformedIdeaTitle": "Despertar en el Bosque",
+    "transformedIdeaDescription": "Programa un despertador natural. Cuando el sensor detecte que ha salido el sol (Luz > 50), la Lámpara debe encenderse en amarillo suave y el Teclado debe empezar a tocar una secuencia de notas que imiten el canto de los pájaros.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 THEN Lamp.fadeIn(Yellow) AND Keyboard.play('Birds')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego del Vampiro",
+    "originalIdeaDescription": "El usuario es un vampiro. Si el sensor recibe mucha luz, se 'quema' (Lámpara roja y sonido de grito). Debe buscar la oscuridad.",
+    "transformedIdeaTitle": "Escape del Castillo de Drácula",
+    "transformedIdeaDescription": "Eres un vampiro huyendo del sol. Si el sensor detecta luz fuerte, la Lámpara se pone Roja y el Teclado toca un acorde disonante de daño. Corre a esconderte bajo una mesa (Oscuridad) para que la luz se ponga Verde y suene una melodía de curación.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 THEN Lamp.set(Red) AND Keyboard.play('Scream'); ELSE Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Mascota Planta Virtual",
+    "originalIdeaDescription": "Una planta que necesita luz. Si recibe suficiente, la lámpara se pone verde y toca música feliz. Si no, se pone roja y toca música triste.",
+    "transformedIdeaTitle": "Botánico Espacial",
+    "transformedIdeaDescription": "Cuida tu flor alienígena. Acércala a una bombilla. Si recibe suficiente energía (Luz alta), la Lámpara brillará en Verde y tocará una escala ascendente (crecimiento). Si la dejas en la sombra, la luz se pondrá Roja y sonarán notas graves.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 70 THEN Lamp.color(Green) AND Keyboard.play('Happy'); ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Sensor de Aparcamiento (Marcha Atrás)",
+    "originalIdeaDescription": "Al acercar la mano al sensor (hacer sombra), la lámpara cambia de verde a rojo y el teclado pita más rápido, simulando un sensor de coche.",
+    "transformedIdeaTitle": "Asistente de Estacionamiento",
+    "transformedIdeaDescription": "Ayuda a aparcar el coche. Mueve tu mano lentamente hacia el sensor. A medida que te acercas (menos luz/más sombra), la Lámpara cambia de Verde a Amarillo y a Rojo. El Teclado debe hacer 'Beep' cada vez más rápido hasta llegar a un tono continuo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Distance = Light.level; BeepRate = Map(Distance); Lamp.color(Distance); Keyboard.beep(BeepRate)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Varita Mágica de Carga",
+    "originalIdeaDescription": "Acercar el sensor a una luz para 'cargar maná'. La lámpara se llena de brillo. Al pulsar una tecla, dispara el hechizo sonoro.",
+    "transformedIdeaTitle": "Duelo de Hechiceros",
+    "transformedIdeaDescription": "Recarga tu varita. Apunta a una lámpara para absorber energía (Luz alta). La Lámpara del dispositivo se irá iluminando. Cuando esté al máximo, presiona una tecla para lanzar el hechizo 'Rayo' con un sonido estruendoso.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana += Light.level; Lamp.brightness(Mana); IF Key.pressed() AND Mana==Max THEN Keyboard.play('Zap')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Cueva de los Murciélagos",
+    "originalIdeaDescription": "Entorno oscuro. Si el usuario ilumina el sensor (linterna), los murciélagos se asustan (sonido de aleteo y chillidos en teclado).",
+    "transformedIdeaTitle": "Exploración de la Gruta",
+    "transformedIdeaDescription": "Entra en la cueva oscura. Todo está en silencio. Si enciendes tu linterna y le das al sensor (Luz alta), despertarás a los murciélagos. La Lámpara parpadeará caóticamente y el Teclado reproducirá sonidos agudos y rápidos de huida.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.change(LowToHigh) THEN Lamp.strobe(White) AND Keyboard.play('BatsFX')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Sintonizador de Radio de Luz",
+    "originalIdeaDescription": "Diferentes niveles de luz sintonizan diferentes 'emisoras' (melodías en el teclado) y cambian el color de la lámpara.",
+    "transformedIdeaTitle": "Radio Galáctica",
+    "transformedIdeaDescription": "Busca señales del espacio. Pasa tu mano sobre el sensor para cambiar la intensidad de luz. Sombra total = Estática. Media luz = Melodía Alienígena 1 (Lámpara Verde). Mucha luz = Melodía Alienígena 2 (Lámpara Azul).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Station = Map(Light.level); IF Station == 1 THEN Play('Song1') ELSE Play('Static'); Lamp.color(StationColor)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Sigilo: El Museo",
+    "originalIdeaDescription": "El usuario debe robar el diamante. Si la linterna del guardia (luz externa) lo toca, suena la alarma.",
+    "transformedIdeaTitle": "Misión Imposible",
+    "transformedIdeaDescription": "Infíltrate en el museo oscuro. Muévete con el dispositivo. Si el haz de luz del guardia (una linterna que mueve un amigo) toca tu sensor, la Lámpara se pondrá Roja y el Teclado tocará la marcha fúnebre. ¡Has perdido!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Status = (Light.level > 10) ? 'Caught' : 'Safe'; IF Status=='Caught' THEN Lamp.red() AND Keyboard.play('Lose')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Metrónomo Visual",
+    "originalIdeaDescription": "El usuario marca el tempo tapando y destapando el sensor de luz. El teclado toca notas a ese ritmo y la lámpara parpadea.",
+    "transformedIdeaTitle": "Director de Orquesta de Luz",
+    "transformedIdeaDescription": "Dirige la orquesta. Pasa tu mano rítmicamente sobre el sensor (Luz/Sombra). El dispositivo calculará tu velocidad (BPM) y empezará a tocar una escala musical y a parpadear la Lámpara siguiendo exactamente tu ritmo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = CalculateTempo(Light.changes); Keyboard.playScale(BPM); Lamp.blink(BPM)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja de Música Mecánica",
+    "originalIdeaDescription": "Solo suena si hay luz. La velocidad de la melodía depende de la intensidad de la luz (más luz = más rápido).",
+    "transformedIdeaTitle": "Bailarina de Energía Solar",
+    "transformedIdeaDescription": "Esta caja de música funciona con sol. Si la pones en la sombra, la música va muy lenta y grave, y la luz es tenue. Si la acercas a una lámpara, la música se acelera y se vuelve alegre, y la Lámpara brilla intensamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Light.level; Keyboard.setTempo(Speed); Lamp.setBrightness(Speed); Keyboard.play('Waltz')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Funciona en la oscuridad. Si detecta un 'flash' paranormal (linterna breve), la lámpara se pone azul y el teclado emite un sonido misterioso.",
+    "transformedIdeaTitle": "Cazafantasmas",
+    "transformedIdeaDescription": "Entra en la habitación oscura (Luz < 5). Mantente alerta. Si el sensor detecta un pico repentino de luz (un orbe espiritual), la Lámpara parpadeará en Azul Espectral y el Teclado tocará un sonido de '¡Boo!' para avisarte.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 AND Light.spike() THEN Lamp.flash(Blue) AND Keyboard.play('GhostFX')"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Semáforo para Ciegos",
+    "originalIdeaDescription": "Lámpara cambia de color según la luz ambiental (Día/Noche). Teclado emite sonido rápido (cruce seguro) o lento.",
+    "transformedIdeaTitle": "Cruce Peatonal Inteligente",
+    "transformedIdeaDescription": "Ayuda a cruzar la calle. Si es de día (Luz alta), el semáforo activa el modo sonoro: Lámpara Verde y Teclado emitiendo pitidos rápidos. Si se hace de noche o se tapa el sensor (simulando botón de espera), Lámpara Roja y pitido lento.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.high THEN Lamp.green() AND Keyboard.beep(Fast) ELSE Lamp.red() AND Keyboard.beep(Slow)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Cuarto Oscuro de Fotografía",
+    "originalIdeaDescription": "Simula el revelado de fotos. La lámpara debe ser roja. Si entra luz blanca (sensor), suena alarma de error en el teclado.",
+    "transformedIdeaTitle": "Laboratorio de Fotos Secreto",
+    "transformedIdeaDescription": "Revela las fotos del espía. Debes trabajar con luz roja (Lámpara Roja encendida). Si alguien abre la puerta y entra luz blanca (Sensor detecta aumento de luz), suena la alarma del Teclado y la Lámpara se apaga para salvar las fotos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.set(Red); IF Light.increase() THEN Keyboard.play('Alarm') AND Lamp.off()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Afinador de Ambiente",
+    "originalIdeaDescription": "El teclado toca un acorde. El usuario debe ajustar la luz (dimmer) hasta que el acorde sea consonante y la lámpara verde.",
+    "transformedIdeaTitle": "El Buscador de la Armonía",
+    "transformedIdeaDescription": "Encuentra el equilibrio. El teclado toca un sonido disonante y la luz es Roja. Mueve el dispositivo buscando la intensidad de luz 'perfecta' (ni mucha ni poca). Cuando la encuentres, el sonido se volverá armonioso y la luz Verde.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Distance = Abs(Light.level - Target); Harmony = Map(Distance); Keyboard.play(Harmony); Lamp.color(Harmony)"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Luciérnaga en un Frasco",
+    "originalIdeaDescription": "En la oscuridad, la lámpara parpadea y el teclado hace sonidos de campanillas. Con luz, se apaga.",
+    "transformedIdeaTitle": "Hada Mágica",
+    "transformedIdeaDescription": "Captura un hada. Apaga las luces. La Lámpara empezará a pulsar suavemente en rosa y el Teclado tocará notas mágicas aleatorias. Si enciendes la luz, el hada se asusta, se apaga y se queda en silencio.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.low THEN Lamp.pulse(Pink) AND Keyboard.playRandom('Chimes') ELSE Stop()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Código de Acceso Lumínico",
+    "originalIdeaDescription": "Para desbloquear, el usuario debe hacer una secuencia de sombras sobre el sensor. El teclado confirma cada paso.",
+    "transformedIdeaTitle": "La Bóveda de Sombras",
+    "transformedIdeaDescription": "Abre la caja fuerte. El código es: Sombra-Luz-Sombra. Pasa la mano sobre el sensor siguiendo el patrón. Cada paso correcto hace sonar una nota musical ascendente (Do-Mi-Sol) y cambia el color de la Lámpara. ¡Secuencia completa abre la puerta!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Input = ReadLightSequence(); IF Input == [Low, High, Low] THEN Keyboard.play('Fanfare') AND Lamp.green()"
+  },
+  {
+    "componentUsed": ["Lamp", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Monitor de Sueño de Bebé",
+    "originalIdeaDescription": "Si está oscuro (noche), el teclado toca una nana muy suave y la lámpara actúa como luz nocturna tenue.",
+    "transformedIdeaTitle": "Dulces Sueños",
+    "transformedIdeaDescription": "Ayuda al bebé a dormir. Si el sensor detecta que las luces se han apagado, activa el 'Modo Noche': La Lámpara se enciende en naranja muy tenue y el Teclado reproduce 'Estrellita dónde estás' en bucle a volumen bajo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 THEN Lamp.set(Orange, 10%) AND Keyboard.playLoop('Lullaby', Vol=Low)"
+  }
+]

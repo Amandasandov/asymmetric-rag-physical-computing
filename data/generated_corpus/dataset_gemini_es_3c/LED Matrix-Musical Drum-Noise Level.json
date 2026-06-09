@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de intensidad sonora con alerta visual y auditiva",
+    "originalIdeaDescription": "Un sistema que utiliza el sensor de ruido para monitorear el volumen ambiental en tiempo real. La matriz LED muestra una barra de progreso que sube o baja según la intensidad, y la batería toca un platillo fuerte cuando se alcanza el nivel máximo permitido.",
+    "transformedIdeaTitle": "El Termómetro de Gritos",
+    "transformedIdeaDescription": "¡Vamos a medir qué tan fuerte puedes gritar sin romper el sistema! Los estudiantes crearán un medidor donde cada fila de luces se enciende con tu voz. Si gritas demasiado fuerte y llenas la pantalla, ¡Cuidado! Sonará un choque de platillos indicando que has 'sobrecalentado' la máquina. Aprenderán sobre rangos de entrada y condicionales.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "nivel = leer(Noise); mostrarBarra(LED, nivel); SI nivel > 90 ENTONCES tocar(Drum.Crash)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monstruo digital que reacciona al ruido ambiental",
+    "originalIdeaDescription": "Creación de un personaje en la matriz LED que cambia de expresión facial basándose en el sensor de ruido. Si hay silencio, duerme; si hay ruido repentino, se despierta asustado y la batería emite un sonido de sobresalto.",
+    "transformedIdeaTitle": "¡No Despiertes al Monstruo!",
+    "transformedIdeaDescription": "Programarás a 'Gruñón', un monstruo que ama dormir. Mientras la clase esté en silencio, la Matriz LED mostrará una cara durmiendo (Zzz). Pero si el sensor de ruido detecta un sonido fuerte, Gruñón abrirá los ojos en la pantalla y la batería tocará un sonido de alerta. El reto es mantener a Gruñón dormido el mayor tiempo posible.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Noise < 20 ENTONCES LED.mostrar(Dormido) SINO { LED.mostrar(Despierto); Drum.tocar(Snare) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de fuegos artificiales activados por voz",
+    "originalIdeaDescription": "El usuario debe hacer un sonido de 'explosión' o aplauso fuerte. El sensor lo detecta y dispara una animación de fuegos artificiales en la matriz LED, sincronizada con un sonido de bombo o tom de la batería musical.",
+    "transformedIdeaTitle": "Show de Pirotecnia Vocal",
+    "transformedIdeaDescription": "Conviértete en un maestro de los fuegos artificiales usando solo tu voz. Los estudiantes programarán el sistema para que, al detectar un aplauso fuerte, una luz suba por la matriz LED y 'explote' en colores justo cuando la batería toca un sonido grave de explosión. Coordinarán la animación visual con el efecto de sonido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Noise > umbral ENTONCES { LED.animar(Cohete); esperar(0.5s); LED.animar(Explosion); Drum.tocar(BassDrum) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de ritmos controlada por umbrales de sonido",
+    "originalIdeaDescription": "Un dispositivo que convierte diferentes niveles de voz en diferentes instrumentos de percusión. Sonidos bajos activan el bombo y una luz roja; sonidos altos activan la caja y una luz azul en la matriz.",
+    "transformedIdeaTitle": "Beatboxer Biónico",
+    "transformedIdeaDescription": "¡Haz música sin tocar nada! En este desafío, los estudiantes configurarán rangos de sonido. Si susurras, la máquina tocará un ritmo suave y encenderá luces tenues. Si hablas fuerte, tocará un ritmo de rock con luces brillantes. Es una introducción perfecta a las declaraciones 'Si-Sino-Si' (If-Else-If).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Noise < 30 ENTONCES { Drum.HiHat; LED.Low } SINO SI Noise < 70 { Drum.Snare; LED.Med } SINO { Drum.Kick; LED.High }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de seguridad de biblioteca con advertencia",
+    "originalIdeaDescription": "Un monitor de silencio para bibliotecas. Muestra una cara sonriente si el ruido es bajo. Si el ruido supera el límite, cambia a una cara de 'shhh' y la batería emite un toque suave de advertencia rítmica.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Ayuda a la bibliotecaria a mantener el orden. Los niños diseñarán un sistema que premia el silencio con una carita feliz en la Matriz LED. Si alguien habla, la cara se pone seria. Si alguien grita, la cara se enoja y la batería toca un ritmo de '¡Silencio por favor!'. Aprenderán sobre monitoreo continuo de sensores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Noise > limite ENTONCES { LED.mostrar(Enojado); Drum.tocar(Rimshot) } SINO LED.mostrar(Feliz)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de música con percusión de acompañamiento",
+    "originalIdeaDescription": "Un visualizador que usa la matriz LED para mostrar ondas basadas en el ruido ambiental (música externa) y agrega ritmos de batería automáticamente cuando detecta picos de volumen altos (el 'beat').",
+    "transformedIdeaTitle": "DJ Robot Automático",
+    "transformedIdeaDescription": "¡Crea un robot que baila y toca contigo! Pon tu canción favorita. El sensor de ruido escuchará la música. Los estudiantes programarán la Matriz LED para que las luces salten al ritmo y harán que la batería añada sus propios efectos de percusión automáticamente cuando la canción llegue a su parte más intensa.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP { nivel = leer(Noise); LED.graficar(nivel); SI cambio_brusco(nivel) ENTONCES Drum.tocar(Aleatorio) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta eléctrica interactiva",
+    "originalIdeaDescription": "Utiliza el sensor de ruido para detectar soplidos (viento). Al detectar viento fuerte, la matriz LED simula lluvia y rayos, y la batería reproduce sonidos graves simulando truenos.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Usa tu aliento para invocar una tormenta. Los estudiantes programarán el sensor para detectar cuando soplan sobre él. Un soplido suave hará caer 'gotas de lluvia' en la Matriz LED. Un soplido fuerte provocará un 'relámpago' visual y un fuerte sonido de trueno usando los tambores graves de la batería.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "viento = leer(Noise); SI viento > fuerte ENTONCES { LED.flash(); Drum.Bass } SINO SI viento > suave { LED.lluvia() }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota virtual que baila con aplausos",
+    "originalIdeaDescription": "Una mascota digital en la matriz LED que realiza una animación de baile diferente cada vez que detecta un patrón de sonido específico, como dos aplausos, acompañado de un redoble de batería.",
+    "transformedIdeaTitle": "Pixel, la Mascota Bailarina",
+    "transformedIdeaDescription": "Conoce a Pixel. Le encanta bailar, pero es tímido. Solo baila si le aplaudes. Los estudiantes deben crear un algoritmo que cuente los aplausos. Un aplauso hace que Pixel salte (Matriz LED) y suene un platillo. Dos aplausos hacen que Pixel gire y suene un ritmo funky. ¡Enséñale a bailar!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI detectar_aplauso() ENTONCES { cuenta++; SI cuenta == 2 { LED.animar(Giro); Drum.beat() } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo acústico para control de tráfico",
+    "originalIdeaDescription": "Simulación de un semáforo donde el ruido de 'autos' (ruido ambiental) hace cambiar la luz en la matriz LED de verde a rojo, activando un sonido de batería para indicar a los peatones que pueden cruzar.",
+    "transformedIdeaTitle": "Semáforo Inteligente de la Ciudad",
+    "transformedIdeaDescription": "En esta ciudad futurista, los semáforos escuchan a los autos. Si el sensor de ruido detecta mucho tráfico (ruido constante), el semáforo en la Matriz LED cambiará a Rojo para detener los autos y la batería emitirá un sonido de 'bip-bip-bip' para que los peatones sepan que es seguro cruzar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI promedio(Noise, 5s) > alto ENTONCES { LED.color(Rojo); Drum.tocar(Claves) } SINO LED.color(Verde)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de ritmo y aplausos",
+    "originalIdeaDescription": "El sistema reproduce un patrón en la batería y muestra una cuenta regresiva en la matriz LED. El usuario debe aplaudir (ruido) en el momento exacto. Si acierta, aparece un check verde; si falla, una X roja.",
+    "transformedIdeaTitle": "Maestro del Ritmo",
+    "transformedIdeaDescription": "¡Sigue el ritmo si puedes! La computadora tocará un ritmo de batería y mostrará una cuenta atrás en la pantalla LED. Tu misión es aplaudir justo cuando la cuenta llegue a cero. Si lo logras, la pantalla brillará celebrando tu precisión. Si fallas, ¡inténtalo de nuevo! Un juego genial para entender la temporización.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Drum.tocar(Ritmo); esperar(tiempo); SI Noise > umbral ENTONCES LED.mostrar(Bien) SINO LED.mostrar(Mal)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulación de eco en cueva con visualización",
+    "originalIdeaDescription": "Al detectar un sonido fuerte, el sistema espera un segundo y luego reproduce un sonido de batería más suave (eco) mientras muestra ondas que se desvanecen en la matriz LED.",
+    "transformedIdeaTitle": "Exploradores de la Cueva del Eco",
+    "transformedIdeaDescription": "Estás en una cueva inmensa y oscura. Los estudiantes programarán un efecto de eco: cuando gritan '¡HOLA!', el sistema debe esperar un momento y responder con un sonido de tambor lejano y ondas de luz en la Matriz LED que se van haciendo más pequeñas, simulando cómo viaja el sonido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Noise > umbral ENTONCES { esperar(1s); Drum.tocar(VolumenBajo); LED.animar(Desvanecer) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de sigilo ninja",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse (haciendo poco ruido). Si el nivel de ruido supera un umbral muy bajo, se activa una alarma en la matriz y tambores de 'game over'.",
+    "transformedIdeaTitle": "Entrenamiento Ninja Silencioso",
+    "transformedIdeaDescription": "¿Puedes ser tan silencioso como un ninja? El sensor de ruido es el guardia. Debes realizar tareas cerca del sensor sin activarlo. Si haces el más mínimo ruido, la Matriz LED mostrará una 'X' gigante y la batería sonará una alarma. Los estudiantes ajustarán la sensibilidad para hacer el juego más difícil.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Noise > sensibilidad_ninja ENTONCES { LED.mostrar(X); Drum.tocar(Alarma); FinJuego() }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de voz a símbolos alienígenas",
+    "originalIdeaDescription": "El usuario habla al sensor. Dependiendo de la duración y el volumen del sonido, la matriz genera símbolos aleatorios 'alienígenas' y la batería toca una secuencia de tonos percusivos extraños.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "¡Hemos recibido un mensaje del espacio! Habla al micrófono y mira cómo tu voz se traduce al idioma alienígena. Los estudiantes crearán un código donde sonidos cortos generan puntos y sonidos largos generan rayas en la pantalla, acompañados de sonidos de tambores misteriosos para 'hablar' con los extraterrestres.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "duracion = medir_duracion(Noise); SI duracion > largo { LED.simbolo(A); Drum.tocar(Tom1) } SINO { LED.simbolo(B); Drum.tocar(Tom2) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Vela digital sensible al viento",
+    "originalIdeaDescription": "La matriz LED muestra una llama oscilante. Si el sensor de ruido detecta un soplido fuerte y sostenido, la llama se 'apaga' (la matriz se oscurece) y suena un platillo final.",
+    "transformedIdeaTitle": "La Vela Mágica Irrompible",
+    "transformedIdeaDescription": "Crea una vela que nunca se gasta, pero que puedes apagar. La Matriz LED mostrará una llama parpadeante. El desafío es programar el sensor de ruido para distinguir entre hablar y soplar. Si soplas fuerte directo al sensor, la luz debe apagarse lentamente y la batería hará un sonido mágico de desaparición.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "mientras(Noise < soplo) { LED.animar(Fuego) }; LED.apagar(); Drum.tocar(Campana)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de alarma de intrusos por vibración/sonido",
+    "originalIdeaDescription": "Se coloca el dispositivo en una puerta. Si alguien toca o abre la puerta (ruido/vibración), la matriz parpadea como luces policiales y la batería suena como una sirena rítmica.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "¡Protege tu habitación de espías! Coloca el dispositivo cerca de la puerta. Los estudiantes programarán una 'trampa': el sistema esperará en silencio y oscuridad. Al detectar el sonido del picaporte o la puerta abriéndose, activará luces policiales (Azul/Rojo) en la Matriz LED y una sirena rítmica con la batería.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "esperar_hasta(Noise > umbral); REPETIR { LED.flash(RojoAzul); Drum.tocar(Sirena) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Director de orquesta robótico",
+    "originalIdeaDescription": "El usuario tararea o canta un tono constante. La matriz LED muestra la altura del tono (volumen) como una batuta subiendo, y la batería marca el tiempo. Si el usuario para, la música para.",
+    "transformedIdeaTitle": "Tú eres el Director de Orquesta",
+    "transformedIdeaDescription": "Controla la banda con tu voz. Si cantas una nota larga y fuerte, la 'batuta' en la Matriz LED sube y la batería toca rápido. Si cantas suave, la batuta baja y la batería toca lento. Si te callas, la orquesta se detiene. Aprenderás a controlar la velocidad de un bucle usando datos de sensores en tiempo real.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "velocidad = map(Noise, 0, 100, lento, rapido); SI Noise > 0 { Drum.play(ritmo, velocidad); LED.nivel(Noise) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de latidos simulado por pulsos",
+    "originalIdeaDescription": "El usuario golpea rítmicamente la mesa. El sensor de ruido capta el ritmo, la matriz muestra un corazón latiendo en sincronía y la batería reproduce un sonido de latido 'tump-tump'.",
+    "transformedIdeaTitle": "Corazón Digital",
+    "transformedIdeaDescription": "Vamos a dar vida a una máquina. Golpea la mesa con un ritmo constante: pum, pum, pum. El sistema detectará tus golpes y mostrará un corazón en la pantalla LED que late exactamente al mismo tiempo que tú, acompañado de un sonido profundo de batería. Es un reto de sincronización entrada-salida.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI pico(Noise) detectado ENTONCES { LED.mostrar(CorazonGrande); Drum.tocar(Bombo); esperar(0.2); LED.mostrar(CorazonPequeño) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de disparos sónico",
+    "originalIdeaDescription": "Un juego estilo arcade donde el personaje en la matriz se mueve solo, y el usuario debe gritar '¡Bang!' para que el personaje dispare un proyectil, acompañado de un sonido de caja de batería.",
+    "transformedIdeaTitle": "Cañón de Voz Arcade",
+    "transformedIdeaDescription": "Un juego clásico de naves espaciales, ¡pero tu voz es el botón de disparo! La nave se mueve de lado a lado en la Matriz LED. Cuando veas un enemigo y grites '¡Fuego!', el sensor detectará el comando, la nave disparará un láser de luz y la batería sonará como un cañón. ¡Afina tus reflejos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "MoverNave(); SI Noise > disparo ENTONCES { LED.proyectil(); Drum.tocar(Snare); VerificarImpacto() }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luces de fiesta rítmicas",
+    "originalIdeaDescription": "Modo fiesta donde la matriz LED muestra patrones aleatorios de discoteca. El cambio de patrones se acelera con el ruido ambiental (música de fondo) y la batería agrega percusión extra aleatoria.",
+    "transformedIdeaTitle": "La Bola de Disco Inteligente",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Convierte tu kit en el centro de la pista de baile. Los estudiantes crearán luces que cambian de color y forma en la Matriz LED. El truco es que, cuanto más fuerte sea la música en la habitación (detectada por el sensor), más rápido cambiarán las luces y más tambores sonarán para animar el ambiente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ritmo = leer(Noise); LED.patron(Aleatorio, velocidad=ritmo); SI ritmo > muy_alto ENTONCES Drum.redoble()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Contador de pasos ruidosos (pisotones)",
+    "originalIdeaDescription": "Un podómetro para gigantes. El usuario camina fuerte o pisa. Cada pico de ruido cuenta como un paso, incrementa el número en la matriz y suena un bombo pesado.",
+    "transformedIdeaTitle": "El Gigante Camina",
+    "transformedIdeaDescription": "Imagina que eres un gigante de 10 metros. Cada vez que das un paso fuerte (pisotón), el sensor de ruido debe detectarlo. La Matriz LED contará tus pasos gigantes (1, 2, 3...) y la batería hará un sonido de '¡BOOM!' con cada paso para que la tierra tiemble. ¡Aprende a contar eventos con sensores!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Noise > umbral_pisotón ENTONCES { pasos = pasos + 1; LED.mostrar(pasos); Drum.tocar(BomboGrave) }"
+  }
+]

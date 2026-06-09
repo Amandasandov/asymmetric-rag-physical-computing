@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Pistas de Acompañamiento con Percusión",
+    "originalIdeaDescription": "Un sistema donde el usuario puede iniciar y detener una pista de audio de fondo utilizando un botón táctil. Mientras la música suena, el usuario puede tocar libremente el tambor para acompañar el ritmo, creando una experiencia de improvisación musical básica. Si se vuelve a presionar el botón, la música se detiene, permitiendo practicar en silencio o reiniciar la sesión.",
+    "transformedIdeaTitle": "¡El DJ de la Fiesta Escolar!",
+    "transformedIdeaDescription": "Conviértete en el DJ principal de la fiesta. Tu misión es mantener a la gente bailando. Programa el botón táctil para lanzar la pista de baile más popular. Mientras suena la música, usa el tambor digital para agregar tus propios ritmos de percusión en vivo y animar a la multitud. ¡Si la fiesta se sale de control, usa el botón para pausar la música instantáneamente!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Toggle(AudioPlayer); IF Drum.isHit() THEN Play(DrumSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Auditiva y Rítmica",
+    "originalIdeaDescription": "Esta actividad consiste en que el reproductor de audio emite una secuencia de sonidos o palabras rítmicas. El usuario debe escuchar atentamente y repetir el patrón golpeando el tambor el número correcto de veces. El botón táctil se utiliza para confirmar que el usuario ha terminado su turno y verificar si la secuencia fue correcta.",
+    "transformedIdeaTitle": "El Código Secreto del Espía",
+    "transformedIdeaDescription": "Eres un agente secreto recibiendo mensajes codificados de la base. El comunicador (Audio Player) te enviará una serie de pitidos rítmicos. Debes responder tocando el mismo patrón en tu transmisor (Musical Drum) para demostrar que entendiste el mensaje. Cuando termines de transmitir tu código, presiona el botón de seguridad para enviar la señal. ¡No te equivoques o la misión fallará!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(AudioSequence); WAIT FOR DrumInputs; IF TouchButton.Pressed() THEN CheckPattern()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Efectos de Sonido Narrativo",
+    "originalIdeaDescription": "Un sistema diseñado para acompañar la lectura de cuentos. El reproductor de audio narra una historia de fondo o ambiente. El botón táctil sirve para cambiar entre diferentes escenas (bosque, ciudad, espacio), cambiando el audio de fondo. El tambor se utiliza para insertar efectos de sonido puntuales, como pasos, golpes o truenos, en momentos clave de la narración.",
+    "transformedIdeaTitle": "Director de Cine Sonoro",
+    "transformedIdeaDescription": "¡Luces, cámara, acción! Eres el encargado de los efectos de sonido de una nueva película. Usa el botón para cambiar el ambiente de la escena: de una ciudad ruidosa a una casa embrujada. Mientras la escena corre (Audio Player), debes golpear el tambor en el momento exacto en que el personaje principal tropieza o cierra una puerta para darle realismo a la película.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.Pressed() THEN AudioPlayer.NextTrack(); IF Drum.Hit() THEN Play(FoleySound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Interactivo con Marcador de Tiempo",
+    "originalIdeaDescription": "Una herramienta para estudiantes de música. El reproductor de audio emite un 'click' constante de metrónomo. El usuario debe golpear el tambor sincronizado con el click. El botón táctil se utiliza para aumentar o disminuir la velocidad del metrónomo, permitiendo al usuario desafiarse a sí mismo con ritmos más rápidos progresivamente.",
+    "transformedIdeaTitle": "Entrenamiento de Baterista Legendario",
+    "transformedIdeaDescription": "Tu banda tiene un gran concierto y necesitas tener el ritmo perfecto. El entrenador digital (Audio Player) te marcará el paso con un sonido constante. Debes golpear tu tambor exactamente al mismo tiempo. Si sientes que ya dominas el ritmo, presiona el botón 'Turbo' para acelerar el tempo y demostrar que eres el baterista más rápido del oeste.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP AudioClick; IF Drum.Hit() THEN CheckTiming(); IF TouchButton.Pressed() THEN IncreaseTempo()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Ambiental",
+    "originalIdeaDescription": "Un creador de ambientes naturales. El audio reproduce sonido de lluvia y viento constante. El botón táctil alterna la intensidad de la lluvia (suave o fuerte). El tambor musical se programa con un sonido grave para simular truenos, que el usuario puede activar aleatoriamente para crear una tormenta realista.",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima en tu ciudad. Usa el botón mágico para traer la lluvia y el viento (Audio Player) para regar los cultivos. Pero cuidado, si presionas el tambor, invocarás poderosos truenos. Crea una tormenta equilibrada para que la naturaleza florezca sin asustar a todos los habitantes.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(RainSound); IF TouchButton.Pressed() THEN ChangeVolume(); IF Drum.Hit() THEN Play(ThunderSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Quiz Musical de Adivinanzas",
+    "originalIdeaDescription": "El reproductor de audio reproduce un fragmento muy corto de una canción famosa o un sonido de animal. El usuario tiene un tiempo limitado para adivinar. Si sabe la respuesta, golpea el tambor como si fuera un pulsador de concurso. El botón táctil se usa para revelar la respuesta correcta mediante el audio completo.",
+    "transformedIdeaTitle": "Concurso: ¡Adivina ese Sonido!",
+    "transformedIdeaDescription": "Bienvenidos al programa de juegos más famoso de la TV. Escucha atentamente la pista misteriosa que suena. En cuanto sepas qué es (un elefante, un coche, una canción), ¡golpea tu tambor lo más rápido posible para ganar el turno! Luego, presiona el botón para confirmar si tu respuesta es correcta y ganar puntos para tu equipo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(MysterySound); IF Drum.Hit() THEN StopAudio() AND LightUp(); IF TouchButton.Pressed() THEN Play(Answer)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Looper de Capas de Sonido Manual",
+    "originalIdeaDescription": "El usuario utiliza el botón táctil para iniciar la grabación de un bucle de audio base. Luego, utiliza el tambor para añadir una capa rítmica sobre ese audio. El botón sirve nuevamente para borrar la capa o detener la reproducción, permitiendo construir una canción simple por partes.",
+    "transformedIdeaTitle": "Estudio de Grabación Beatbox",
+    "transformedIdeaDescription": "Eres un productor musical creando el próximo gran éxito. Primero, presiona el botón para establecer la base melódica de fondo. Ahora, usa el tambor para grabar el ritmo de hip-hop perfecto encima de la melodía. Si no te gusta cómo quedó el ritmo, mantén presionado el botón para borrarlo y empezar de nuevo hasta que suene genial.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.Click() THEN ToggleBackingTrack(); IF Drum.Hit() THEN AddSoundToLoop(); IF TouchButton.LongPress() THEN ClearLoop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma con Desactivación Rítmica",
+    "originalIdeaDescription": "Una alarma sonora suena a través del reproductor de audio. Para desactivarla, el botón táctil no funciona por sí solo; el usuario debe golpear el tambor una cantidad específica de veces (ej. 5 veces) antes de poder presionar el botón para apagar finalmente el sonido.",
+    "transformedIdeaTitle": "Desactiva la Bomba de Ruido",
+    "transformedIdeaDescription": "¡Emergencia! Una alarma ruidosa se ha activado en la nave espacial y no deja dormir a la tripulación. Para apagarla, el sistema de seguridad requiere un código físico. Debes golpear el tambor exactamente 5 veces para desbloquear el sistema y luego presionar rápidamente el botón rojo para cortar el sonido. ¡Hazlo rápido antes de que despierte al capitán!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(AlarmLoop); count = 0; ON Drum.Hit increment(count); IF count >= 5 AND Button.Pressed() THEN Stop(Alarm)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narración Interactiva de 'Elige tu Propia Aventura'",
+    "originalIdeaDescription": "El reproductor de audio cuenta una historia que llega a una bifurcación. Se le pide al usuario que tome una decisión. Golpear el tambor selecciona la opción A (acción/lucha), mientras que presionar el botón táctil selecciona la opción B (sigilo/inteligencia), desencadenando diferentes pistas de audio.",
+    "transformedIdeaTitle": "El Caballero y el Dragón",
+    "transformedIdeaDescription": "Estás frente a la cueva del dragón y el narrador te pregunta qué hacer. ¿Quieres luchar valientemente? ¡Golpea el tambor con fuerza para sacar tu espada! ¿Prefieres entrar a escondidas? Presiona suavemente el botón táctil para usar tu capa de invisibilidad. La historia cambiará dependiendo de la acción que elijas. ¡Tú decides el final!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(StoryIntro); IF Drum.Hit() THEN Play(ActionPath); ELSE IF Button.Pressed() THEN Play(StealthPath)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Latidos y Estado Físico",
+    "originalIdeaDescription": "El audio reproduce un sonido de latido de corazón constante. El botón táctil cambia el 'estado' del paciente (dormido, corriendo, asustado), lo que altera la velocidad del audio. El tambor se usa como desfibrilador; si el audio se detiene (paro cardíaco), se debe golpear el tambor para reiniciar el ritmo.",
+    "transformedIdeaTitle": "Doctor de Urgencias",
+    "transformedIdeaDescription": "Eres el médico de turno. El monitor cardíaco (Audio) suena constante. Usa el botón para revisar los signos vitales del paciente en diferentes situaciones. ¡Oh no! Si el sonido se detiene y se vuelve una línea plana, debes usar el desfibrilador (Tambor) inmediatamente para salvar al paciente y recuperar el ritmo cardíaco. ¡Cada segundo cuenta!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop(Heartbeat); IF Button.Pressed() THEN ChangeRate(); IF Heartbeat.Stopped() AND Drum.Hit() THEN Restart(Heartbeat)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos con Cambio de Kit",
+    "originalIdeaDescription": "El tambor reproduce un sonido de percusión. El botón táctil funciona como un selector de 'kit'. Al presionarlo, cambia el archivo de audio que dispara el tambor (ej. de caja acústica a platillo electrónico). El Audio Player reproduce un loop de bajo para dar contexto.",
+    "transformedIdeaTitle": "La Banda de un Solo Hombre",
+    "transformedIdeaDescription": "No necesitas una banda completa, tú eres la orquesta. El bajo suena de fondo automáticamente. Tu tambor puede ser lo que tú quieras. Toca el ritmo, y cuando quieras cambiar de estilo, presiona el botón mágico para transformar tu tambor de una caja militar a un platillo láser espacial. ¡Crea una canción evolutiva!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(BassLoop); ON Button.Press NextDrumSound(); ON Drum.Hit Play(CurrentDrumSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Inverso",
+    "originalIdeaDescription": "El audio reproduce música alegre. El usuario debe mantener un ritmo constante en el tambor para que la música siga sonando. Si deja de tocar el tambor, la música se detiene. El botón táctil se usa para reiniciar el juego o cambiar la canción.",
+    "transformedIdeaTitle": "Energía Musical Cinética",
+    "transformedIdeaDescription": "La fiesta se está apagando y la música funciona con energía cinética. ¡Tienes que generar energía! Mientras golpees el tambor constantemente, la música seguirá sonando y la gente bailará. Si te cansas y paras, la música se apagará tristemente. Usa el botón para cambiar de canción si el público se aburre.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Drum.HitRecently() THEN Audio.Play() ELSE Audio.Pause(); IF Button.Pressed() THEN Audio.NextTrack()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Intrusos con Contraseña Sonora",
+    "originalIdeaDescription": "El sistema está 'armado' con el botón táctil. Si se toca el tambor (simulando una vibración o paso) sin desactivar primero, suena una alarma por el Audio Player. Para entrar seguro, se debe presionar el botón y luego tocar un patrón rítmico suave.",
+    "transformedIdeaTitle": "La Bóveda de Seguridad",
+    "transformedIdeaDescription": "Protege tus tesoros en la bóveda. Activa la seguridad con el botón. Ahora, si algún ladrón torpe toca el tambor (vibración del suelo), ¡sonará la sirena de policía! Tú, como dueño, sabes el truco: presiona el botón secreto y toca suavemente el tambor para abrir la puerta sin activar la alarma.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF SystemArmed AND Drum.Hit() THEN Play(Siren); IF Button.Pressed() THEN DisarmSystem()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Auditivo",
+    "originalIdeaDescription": "El usuario utiliza el tambor para ingresar puntos (golpes cortos) y el botón táctil para rayas (presiones largas) o espacios. El sistema interpreta la entrada y el Audio Player 'lee' la letra o reproduce el sonido Morse completo correspondiente a la secuencia ingresada.",
+    "transformedIdeaTitle": "Telegrafista del Titanic",
+    "transformedIdeaDescription": "Estás en el cuarto de comunicaciones de un barco histórico. Necesitas enviar un mensaje urgente. Usa el tambor para los puntos rápidos y el botón para las rayas largas del código Morse. El sistema te dirá en voz alta qué letras estás formando para asegurarse de que el mensaje de rescate se envíe correctamente.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Drum.Hit() ADD Dot; IF Button.Pressed() ADD Dash; ProcessMorse() -> Audio.Speak(Letter)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Oído Absoluto",
+    "originalIdeaDescription": "El Audio Player reproduce una nota musical al azar. El usuario debe intentar igualar el tono o ritmo golpeando el tambor (configurado con diferentes tonos según la intensidad o zona, si fuera posible, o simplemente confirmando ritmo). El botón táctil se usa para pedir una repetición de la nota.",
+    "transformedIdeaTitle": "Entrenador de Oído Musical",
+    "transformedIdeaDescription": "El maestro de música toca una nota en su piano (Audio Player). ¿Puedes identificarla? Escucha bien. Si necesitas escucharla de nuevo, presiona el botón de 'Repetir'. Cuando creas que tienes el ritmo y el tono en tu cabeza, toca el tambor para confirmar que estás listo para la siguiente lección. ¡Entrena tu oído para ser un experto!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(RandomNote); IF Button.Pressed() THEN Replay(Note); IF Drum.Hit() THEN Play(SuccessSound) AND NextNote()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Sonoro",
+    "originalIdeaDescription": "El audio reproduce sonido ambiente de tráfico. El botón táctil actúa como un semáforo de peatones (detiene el sonido de coches, inicia sonido de pasos). El tambor actúa como el silbato del policía, que el usuario debe tocar si el 'tráfico' sonoro se vuelve demasiado caótico o fuerte.",
+    "transformedIdeaTitle": "Policía de Tráfico en Hora Punta",
+    "transformedIdeaDescription": "La ciudad es un caos y tú estás a cargo de la intersección más concurrida. Los coches suenan sin parar. Cuando un peatón quiera cruzar, presiona el botón para detener el tráfico. Si los conductores se ponen impacientes y empiezan a tocar la bocina, ¡golpea el tambor (tu silbato) para poner orden y multar a los ruidosos!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(TrafficNoise); IF Button.Pressed() THEN Play(WalkSignal); IF Drum.Hit() THEN Play(Whistle)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Voz con Ritmo",
+    "originalIdeaDescription": "El Audio Player reproduce frases vocales robóticas o palabras sueltas. El botón táctil selecciona la siguiente palabra de una lista. El tambor se utiliza para 'disparar' la palabra seleccionada, permitiendo al usuario crear oraciones rítmicas o canciones tipo rap con las palabras.",
+    "transformedIdeaTitle": "El Robot Rapero",
+    "transformedIdeaDescription": "Tienes un amigo robot que quiere aprender a rapear, pero necesita tu ayuda para tener 'flow'. Usa el botón para elegir qué frase va a decir ('Yeah', 'Vamos', 'Fiesta'). Luego, golpea el tambor justo en el beat para hacer que el robot diga la frase con ritmo. ¡Combina frases y ritmos para crear el hit del verano!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Pressed() THEN SelectNextWord(); IF Drum.Hit() THEN Play(SelectedWord)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción 'Papa Caliente'",
+    "originalIdeaDescription": "El audio reproduce una música que se acelera progresivamente. Los usuarios deben pasarse un objeto (o turnarse). El botón táctil reinicia la ronda. El tambor marca el momento en que la música se detiene súbitamente (explosión), indicando quién perdió.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "El reloj corre. La música se vuelve cada vez más rápida y tensa. Pásense el turno rápidamente. En un momento aleatorio, el tambor sonará como una explosión y la música se detendrá. Quien tenga el turno en ese momento, ¡pierde! Usa el botón para reiniciar el temporizador y jugar otra ronda emocionante.",
+    "minAge": 7,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(AcceleratingMusic); Timer(Random); ON TimerEnd -> StopMusic() AND Play(ExplosionDrum); IF Button.Pressed() -> Reset()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Meditación Guiada con Gong",
+    "originalIdeaDescription": "El Audio Player reproduce instrucciones de voz para respirar o sonidos de naturaleza suave. El botón táctil alterna entre diferentes paisajes sonoros. El tambor se usa para tocar un 'Gong' virtual al final de cada ciclo de respiración, ayudando a la concentración.",
+    "transformedIdeaTitle": "Maestro Zen de la Relajación",
+    "transformedIdeaDescription": "Crea tu propio santuario de paz. Usa el botón para elegir si quieres escuchar un bosque, el océano o la lluvia. Sigue tu respiración. Cada vez que exhales profundamente y completes un ciclo, toca suavemente el tambor (Gong) para marcar el momento y profundizar tu relajación. Ayuda a tus compañeros a encontrar la calma.",
+    "minAge": 9,
+    "maxAge": 15,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(AmbientSound); IF Button.Pressed() THEN NextAmbient(); IF Drum.Hit() THEN Play(GongSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Sonoro para Historias",
+    "originalIdeaDescription": "El usuario crea el sonido de alguien caminando. Cada golpe al tambor es un paso y reproduce un sonido de pisada (nieve, madera, grava) a través del Audio Player. El botón táctil cambia el tipo de superficie, cambiando el archivo de audio que dispara el tambor.",
+    "transformedIdeaTitle": "Explorador de Mundos",
+    "transformedIdeaDescription": "Viaja por diferentes terrenos sin moverte de tu silla. Estás caminando sobre hojas secas en el bosque (golpea el tambor para dar pasos). De repente, llegas a un castillo antiguo. Presiona el botón para cambiar el suelo a 'madera crujiente' y sigue caminando con el tambor. ¡Crea el paisaje sonoro de tu propia aventura!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.Pressed() THEN ChangeSurface(); IF Drum.Hit() THEN Play(StepSound[CurrentSurface])"
+  }
+]

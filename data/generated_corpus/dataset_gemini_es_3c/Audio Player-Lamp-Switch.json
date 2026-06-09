@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Ambiente para Fiesta Disco",
+    "originalIdeaDescription": "Un sistema que activa música de baile enérgica y luces de colores parpadeantes cuando se presiona un interruptor, creando una atmósfera de fiesta instantánea en cualquier habitación.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "¡Organiza la mejor fiesta de la galaxia! Programa tu sistema para que, al activar el interruptor principal, comience a sonar el último éxito musical y la lámpara cambie de colores rápidamente al ritmo de la música para animar a los alienígenas invitados.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Audio.play('DiscoMusic') AND Lamp.blink(RandomColors) ELSE Audio.stop() AND Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna y Nanas para Bebés",
+    "originalIdeaDescription": "Un dispositivo relajante que, al activarse mediante un interruptor suave, enciende una luz cálida tenue y reproduce una melodía de cuna para ayudar a dormir.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "Crea un dispositivo para ayudar a tu hermano pequeño a dormir sin miedo. Cuando actives el interruptor, la lámpara debe emitir un brillo suave y cálido (ámbar) mientras suena una melodía tranquila. Si se apaga, todo debe quedar en silencio y oscuridad.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor('Amber', brightness=20) AND Audio.play('Lullaby') ELSE Lamp.off() AND Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos para Habitación",
+    "originalIdeaDescription": "Un sistema de seguridad simple donde un interruptor actúa como disparador; si se activa, suena una sirena fuerte y la lámpara parpadea en rojo brillante.",
+    "transformedIdeaTitle": "Defensa de la Base Secreta",
+    "transformedIdeaDescription": "Protege tus secretos. Configura una trampa: si un espía (o tu mascota) activa el interruptor de entrada, debe sonar una alarma de emergencia y la luz debe parpadear en rojo para alertar a todo el escuadrón.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHEN Switch.changedTo(ON): Audio.play('Siren', loop=True) AND Lamp.flash('Red')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Pulsador de Concurso de Preguntas",
+    "originalIdeaDescription": "Un botón estilo concurso de televisión que, al ser presionado, reproduce un sonido de 'Ding' y enciende la luz en verde para indicar qué jugador respondió primero.",
+    "transformedIdeaTitle": "El Juez del Concurso de Trivia",
+    "transformedIdeaDescription": "¡Es hora del show! Programa el botón para que sea tu pulsador. Cuando sepas la respuesta y presiones el interruptor, debe sonar un efecto de victoria y la luz debe ponerse verde brillante para indicar que tienes el turno.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Audio.play('DingSound') AND Lamp.setColor('Green') AND wait(3s) AND Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Un juguete educativo que simula una tormenta. Al accionar el interruptor, se reproduce un sonido de trueno y la lámpara emite un destello blanco intenso como un relámpago.",
+    "transformedIdeaTitle": "Creador de Efectos Especiales de Cine",
+    "transformedIdeaDescription": "Eres el director de una película de terror. Necesitas crear una tormenta perfecta. Programa el interruptor para que, al presionarlo, lance un 'relámpago' (luz blanca rápida) sincronizado con un sonido de trueno retumbante.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.flash('White', duration=0.1s) AND Audio.play('Thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Accesible",
+    "originalIdeaDescription": "Un sistema de timbre diseñado para personas con dificultades auditivas o visuales, activando tanto un sonido de campana como una luz parpadeante al presionar el interruptor.",
+    "transformedIdeaTitle": "El Timbre para Todos",
+    "transformedIdeaDescription": "Diseña un timbre inclusivo para una casa inteligente. Cuando un visitante presione el interruptor, el sistema debe avisar de dos formas: tocando un sonido de campana y haciendo parpadear la lámpara en azul, asegurando que todos en casa se enteren.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN Audio.play('Doorbell') AND REPEAT 3 TIMES { Lamp.on('Blue'); wait(0.5); Lamp.off(); wait(0.5) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Rincón de Lectura Inmersiva",
+    "originalIdeaDescription": "Un control para el área de lectura que enciende una luz blanca brillante y reproduce sonidos ambientales de lluvia o bosque para mejorar la concentración.",
+    "transformedIdeaTitle": "La Biblioteca Mágica",
+    "transformedIdeaDescription": "Crea el ambiente perfecto para leer tu libro de aventuras. Al activar el interruptor, la lámpara debe iluminar en blanco frío para leer bien, y el audio debe reproducir sonidos relajantes de un bosque encantado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor('CoolWhite') AND Audio.play('ForestAmbience', volume=Low) ELSE Lamp.off() AND Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva de Lanzamiento Espacial",
+    "originalIdeaDescription": "Un simulador de lanzamiento de cohetes. El interruptor inicia un audio de cuenta regresiva (10, 9, 8...) y la luz cambia de intensidad hasta el despegue.",
+    "transformedIdeaTitle": "Comandante de Misión a Marte",
+    "transformedIdeaDescription": "Prepara el cohete para el despegue. Al activar el interruptor de inicio, el sistema debe reproducir la cuenta atrás '3, 2, 1...' y la lámpara debe cambiar de amarillo a rojo intenso justo cuando suene el '¡Despegue!'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN Audio.play('Countdown') AND Lamp.setColor('Yellow'); WAIT(audio_end); Lamp.setColor('Red') AND Audio.play('BlastOff')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Sorpresa de Cumpleaños",
+    "originalIdeaDescription": "Un mecanismo para una caja de regalo. Cuando se abre (soltando el interruptor), suena 'Cumpleaños Feliz' y la luz brilla en múltiples colores.",
+    "transformedIdeaTitle": "La Sorpresa de Cumpleaños Perfecta",
+    "transformedIdeaDescription": "Escondes un regalo en una caja oscura. Programa el sistema para que, cuando el cumpleañero abra la tapa (soltando el interruptor presionado), la música de celebración suene y la lámpara ilumine el regalo con colores festivos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isReleased() THEN Audio.play('HappyBirthday') AND Lamp.cycleColors('Rainbow')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Respiración Guiada",
+    "originalIdeaDescription": "Una herramienta de bienestar que usa el interruptor para iniciar una sesión donde la luz aumenta y disminuye de brillo sincronizada con instrucciones de audio para inhalar y exhalar.",
+    "transformedIdeaTitle": "Maestro Zen de Meditación",
+    "transformedIdeaDescription": "Ayuda a tus amigos a relajarse. Crea un programa donde, al activar el interruptor, una voz diga 'Inhala' mientras la luz se hace brillante, y 'Exhala' mientras la luz se atenúa suavemente.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP { Audio.play('Inhale'); Lamp.fadeUp(4s); Audio.play('Exhale'); Lamp.fadeDown(4s) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse",
+    "originalIdeaDescription": "Un dispositivo de comunicación clásico donde presionar el interruptor genera un tono corto (beep) y un destello de luz simultáneo para enviar mensajes.",
+    "transformedIdeaTitle": "Telégrafo de Espías Aliados",
+    "transformedIdeaDescription": "Envía mensajes secretos a través de la habitación. Configura el interruptor para que funcione como un telégrafo: cada vez que lo presiones, debe sonar un 'beep' y encenderse la luz, permitiéndote enviar puntos y rayas en Código Morse.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isPressed() DO Audio.playTone('Beep') AND Lamp.on('White'); END WHILE; Audio.stop() AND Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo Peatonal Interactivo",
+    "originalIdeaDescription": "Un modelo de educación vial. El interruptor solicita el paso, cambiando la luz a verde y emitiendo un sonido intermitente para indicar que es seguro cruzar.",
+    "transformedIdeaTitle": "Ingeniero de Tráfico Urbano",
+    "transformedIdeaDescription": "Diseña un cruce seguro. La luz está normalmente en rojo (no pasar). Cuando un peatón presiona el botón, espera unos segundos, cambia la luz a verde y emite un sonido rápido para indicar que pueden cruzar con seguridad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setColor('Red'); IF Switch.isPressed() THEN wait(2s) AND Lamp.setColor('Green') AND Audio.play('CrossingSound', loop=5s) AND Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Despertador Amanecer Simulado",
+    "originalIdeaDescription": "Un despertador suave que apaga el sonido de alarma y enciende una luz progresiva amarilla cuando el usuario presiona el interruptor para despertar.",
+    "transformedIdeaTitle": "Despertador Solar Inteligente",
+    "transformedIdeaDescription": "¡Basta de alarmas ruidosas! Programa una rutina matutina: cuando suene la alarma (audio), debes presionar el interruptor para apagar el ruido y encender una luz amarilla suave que simule el sol saliendo por la ventana.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Alarm'); WAIT UNTIL Switch.isPressed(); Audio.stop(); Lamp.fadeIn('Yellow', duration=5s)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Canales de Radio",
+    "originalIdeaDescription": "Un dispositivo que simula una radio. Al presionar el interruptor repetidamente, se cambia el 'canal', reproduciendo una pista de audio diferente y cambiando el color de la luz para identificar la estación.",
+    "transformedIdeaTitle": "La Radio Cromática",
+    "transformedIdeaDescription": "Construye una radio futurista. Cada vez que presiones el interruptor, debes cambiar a la siguiente 'estación'. Estación 1: Música Rock y luz Roja. Estación 2: Jazz y luz Azul. Estación 3: Pop y luz Rosa.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "counter = 0; ON Switch.press(): counter++; IF counter==1 THEN Audio.play('Rock') & Lamp.red(); ELSE IF counter==2 THEN Audio.play('Jazz') & Lamp.blue()..."
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Hábitat de Reptiles",
+    "originalIdeaDescription": "Un control ambiental para un terrario. El interruptor activa la 'lámpara de calor' (luz naranja) y sonidos de grillos o selva.",
+    "transformedIdeaTitle": "Cuidador del Zoológico",
+    "transformedIdeaDescription": "Tus reptiles necesitan calor y ambiente. Crea un sistema que, al encender el interruptor, active la lámpara de calor (color naranja) y reproduzca sonidos de la selva para que las mascotas se sientan como en casa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor('Orange') AND Audio.play('JungleSounds') ELSE Lamp.off() AND Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Desactivación de Bomba",
+    "originalIdeaDescription": "Un juego de tensión donde un sonido de tic-tac suena y el usuario debe presionar el interruptor en el momento exacto para obtener una luz verde (éxito) o roja (explosión).",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "¡Corta el cable correcto! Tienes 10 segundos mientras suena el tic-tac. Si presionas el interruptor antes de que termine el tiempo, ganas (luz verde y aplausos). Si tardas demasiado, ¡BOOM! (luz roja y sonido de explosión).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('Ticking'); StartTimer(10s); IF Switch.pressedBeforeTime() THEN Audio.play('Cheer') & Lamp.green() ELSE Audio.play('Explosion') & Lamp.red()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Audioguía de Museo",
+    "originalIdeaDescription": "Un sistema para exhibiciones. Al presionar el interruptor frente a un objeto, una luz lo ilumina (spotlight) y una voz narra su historia.",
+    "transformedIdeaTitle": "Curador del Museo de Historia",
+    "transformedIdeaDescription": "Haz que la historia cobre vida. Cuando un visitante presione el botón frente al hueso de dinosaurio, enciende una luz blanca brillante sobre él y reproduce la explicación del paleontólogo sobre su origen.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.on('SpotlightWhite') AND Audio.play('DinoFacts') AND WAIT(audio_length) AND Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica Electrónica",
+    "originalIdeaDescription": "Un juguete en forma de varita con un interruptor en el mango. Al presionarlo, la punta se ilumina y hace un sonido mágico de destellos.",
+    "transformedIdeaTitle": "Aprendiz de Hechicero",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una varita mágica. Programa el interruptor para lanzar un hechizo: al pulsarlo, debe sonar un efecto de 'polvo de hadas' y la lámpara debe brillar en morado místico.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Audio.play('MagicSparkle') AND Lamp.setColor('Purple') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Grabación",
+    "originalIdeaDescription": "Simulación de un estudio de grabación. Un interruptor activa el modo 'En el Aire', encendiendo una luz roja y un sonido de 'Silencio, grabando'.",
+    "transformedIdeaTitle": "Estudio de Youtuber Pro",
+    "transformedIdeaDescription": "Estás a punto de grabar tu próximo video viral. Configura tu estudio: al presionar el interruptor, la luz debe ponerse roja (ON AIR) y debe sonar un aviso breve de 'Grabando' para que nadie entre en tu cuarto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.toggledTo(ON) THEN Lamp.setColor('Red') AND Audio.play('RecordingStart') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Verdad o Mentira (Juguete)",
+    "originalIdeaDescription": "Un juego de simulación donde un operador usa el interruptor oculto para indicar si una respuesta es 'verdad' (luz verde + ding) o 'mentira' (luz roja + buzz).",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Juega a ser un detective. Haz preguntas a tus amigos. Tú controlas la máquina: si presionas el interruptor una vez rápido, marca 'Verdad' (luz verde + sonido agradable). Si lo mantienes presionado, marca 'Mentira' (luz roja + error).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressDuration() < 0.5s THEN Lamp.green() & Audio.play('Ding') ELSE Lamp.red() & Audio.play('Buzz')"
+  }
+]

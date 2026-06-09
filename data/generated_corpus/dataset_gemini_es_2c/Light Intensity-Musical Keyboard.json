@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin Controlado por Luz Ambiental",
+    "originalIdeaDescription": "Un sistema que utiliza la cantidad de luz recibida para seleccionar qué nota musical reproducir. Al mover la mano sobre el sensor y proyectar sombra, la intensidad de luz cambia y, en consecuencia, cambia la nota musical, imitando el funcionamiento de un Theremin sin contacto físico.",
+    "transformedIdeaTitle": "El Theremin del Mago Invisible",
+    "transformedIdeaDescription": "¡Conviértete en un mago musical! Crearás un instrumento que se toca sin tocarlo. Usarás tu mano para hacer 'hechizos de sombra' sobre el sensor. Cuanta más sombra hagas (menos luz), más grave será el sonido; si dejas pasar la luz, el sonido será agudo. ¿Podrás tocar una melodía moviendo solo tus manos en el aire?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "mapped_note = map(Light.value, 0, 100, NOTE_C4, NOTE_C5); Keyboard.play(mapped_note)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Amanecer con Melodía Progresiva",
+    "originalIdeaDescription": "Un dispositivo diseñado para detectar el aumento gradual de la luz matutina. Cuando la intensidad de la luz supera un umbral específico, el teclado comienza a reproducir una secuencia de notas suave que sirve como despertador natural.",
+    "transformedIdeaTitle": "El Despertador del Gallo Robótico",
+    "transformedIdeaDescription": "Vamos a construir un gallo digital que canta cuando sale el sol. Programarás el sensor para que vigile la ventana. Cuando detecte que la luz del sol ha llegado (supera un nivel de brillo), tu programa deberá activar el teclado para tocar una canción de 'Buenos Días' automáticamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.value > 60 THEN Keyboard.playMelody('MorningSong')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Intrusos para Cajones Oscuros",
+    "originalIdeaDescription": "Este sistema protege objetos de valor guardados en un cajón. El sensor espera en la oscuridad total. Si alguien abre el cajón y entra luz repentinamente, el teclado dispara una secuencia de notas rápidas y agudas a modo de sirena de alarma.",
+    "transformedIdeaTitle": "La Caja Fuerte Anti-Espías",
+    "transformedIdeaDescription": "¡Protege tus secretos! Esconde tu dispositivo dentro de una caja oscura o un cajón. Si un espía (o tu hermano pequeño) intenta abrirlo, la luz entrará y el sensor la detectará, activando inmediatamente una alarma musical ruidosa para ahuyentar al intruso.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.value > 10 THEN Keyboard.play(ALARM_NOTES)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Decodificador Musical de Código Morse Lumínico",
+    "originalIdeaDescription": "Una herramienta para traducir destellos de luz en sonido. Usando una linterna, el usuario envía pulsos de luz al sensor. El sistema interpreta la duración: un pulso corto toca una nota breve, y un pulso largo toca una nota sostenida, permitiendo 'escuchar' la luz.",
+    "transformedIdeaTitle": "Telégrafo de Luz Secreta",
+    "transformedIdeaDescription": "Eres un operador de radio en una misión secreta. Tu compañero te envía mensajes con una linterna desde lejos. Tu misión es programar el dispositivo para que cada vez que reciba un destello de luz, el teclado suene. Así podrás escuchar el mensaje codificado y descifrarlo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.value > threshold THEN Keyboard.noteOn() ELSE Keyboard.noteOff()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Piano Invertido de Criaturas Nocturnas",
+    "originalIdeaDescription": "Un concepto creativo donde la oscuridad genera sonido. A diferencia de los instrumentos normales, este toca notas cuando la luz disminuye. Simula el comportamiento de grillos o criaturas nocturnas que cantan cuando se apagan las luces.",
+    "transformedIdeaTitle": "El Grillo Electrónico Tímido",
+    "transformedIdeaDescription": "Vamos a crear una mascota digital muy tímida: un grillo electrónico. A este grillo no le gusta la luz. Si la habitación está iluminada, se queda callado. Pero si apagas la luz o cubres el sensor con tu mano (haciendo una cueva), ¡empezará a cantar sus notas musicales!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.value < 20 THEN Keyboard.play(CRICKET_SOUND) ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escáner de Escala de Grises Musical",
+    "originalIdeaDescription": "El dispositivo se utiliza para 'leer' diferentes tonos de papel gris o colores. Al pasar el sensor sobre un papel blanco (mucha reflexión) suena una nota alta, y sobre papel negro (poca reflexión) suena una nota baja, creando un escáner sonoro.",
+    "transformedIdeaTitle": "Lector de Códigos de Barras Musicales",
+    "transformedIdeaDescription": "Dibuja franjas de diferentes colores (negro, gris, blanco) en un papel. Pasaremos el sensor por encima como si fuera el escáner de un supermercado. Tu desafío es programar el sistema para que cada tono de gris produzca una nota diferente. ¡Podrás 'componer' canciones dibujando barras!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.value > 80 THEN Play(C) ELSE IF Light.value > 40 THEN Play(E) ELSE Play(G)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Tempo por Iluminación",
+    "originalIdeaDescription": "Un metrónomo inteligente donde la velocidad de una melodía repetitiva depende de la luz ambiental. Si hay mucha luz, la música se reproduce rápido (allegro); si el ambiente se oscurece, la música se ralentiza (adagio).",
+    "transformedIdeaTitle": "DJ Solar: Controla el Ritmo",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Pero en lugar de botones, usas la luz. Programarás una canción que suene en bucle. Si iluminas el sensor con una linterna, la canción se acelerará al máximo. Si tapas el sensor, la canción se volverá lenta y pesada. ¡Haz bailar a todos cambiando la luz!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = map(Light.value, 0, 100, 60, 180); Keyboard.setTempo(BPM)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Puntería con Linterna",
+    "originalIdeaDescription": "Un juego interactivo donde el objetivo es apuntar un haz de luz directamente al sensor. El sistema permanece en silencio hasta que detecta el pico máximo de luz (puntería perfecta), momento en el cual reproduce un sonido de victoria o fanfarria.",
+    "transformedIdeaTitle": "Francotirador de Fotones",
+    "transformedIdeaDescription": "Coloca el sensor al otro lado de la habitación. Usando una linterna láser o focalizada, debes intentar darle justo en el centro. El sensor es el blanco. Si logras iluminarlo con la intensidad máxima, el sistema tocará la 'Fanfarria de la Victoria'. ¡Compite con tus amigos para ver quién tiene mejor puntería!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.value >= 95 THEN Keyboard.play(VICTORY_FANFARE)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Cueva de Ecos",
+    "originalIdeaDescription": "El sistema simula entrar en una cueva profunda. A medida que la luz disminuye (se entra más profundo), el teclado reproduce notas más graves y con mayor espacio entre ellas, simulando el ambiente misterioso y el eco de una caverna.",
+    "transformedIdeaTitle": "Exploradores del Abismo Subterráneo",
+    "transformedIdeaDescription": "Estamos bajando a una cueva inexplorada. Tu misión es crear la banda sonora de la expedición. A medida que tapas el sensor (simulando bajar a la oscuridad), el sonido debe volverse grave y misterioso. Si vuelves a dejar entrar la luz, el sonido debe volverse agudo y alegre, ¡significa que encontramos la salida!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pitch = map(Light.value, 0, 100, LowNote, HighNote); Keyboard.play(Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Interruptor Musical Crepuscular",
+    "originalIdeaDescription": "Un sistema automatizado que detecta el atardecer. Monitorea la luz constantemente y, al cruzar un umbral hacia la oscuridad (anochecer), toca una canción de cuna o una melodía nocturna suave automáticamente.",
+    "transformedIdeaTitle": "La Nana Automática para Bebés",
+    "transformedIdeaDescription": "Ayuda a dormir al bebé (o a tu mascota). Diseña un sistema inteligente que sepa cuándo es hora de dormir. Cuando la habitación se oscurezca porque se apagaron las luces principales, tu invento debe detectarlo y comenzar a tocar suavemente una canción de cuna ('Estrellita, dónde estás').",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.value < 15 AND !playing THEN Keyboard.play(LULLABY)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Arpa Láser Virtual",
+    "originalIdeaDescription": "Usando múltiples lecturas o bloqueos rápidos de luz, se simula una cuerda de arpa. Al pasar el dedo rápidamente frente al sensor (cortando la luz momentáneamente), se dispara una nota, permitiendo 'rasguear' la luz.",
+    "transformedIdeaTitle": "Cuerdas de Luz Invisibles",
+    "transformedIdeaDescription": "Vamos a construir un arpa del futuro. Coloca el sensor bajo una lámpara. Cada vez que pases tu dedo rápidamente por encima, cortarás el rayo de luz. Tu reto es programar el sensor para que detecte ese cambio rápido (corte de luz) y toque una nota, como si hubieras pulsado una cuerda invisible.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (PreviousLight - CurrentLight) > Sensitivity THEN Keyboard.play(PLUCK_NOTE)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas (Parpadeo)",
+    "originalIdeaDescription": "El sistema analiza la variabilidad de la luz. Si detecta cambios rápidos y erráticos (como relámpagos o una luz estroboscópica), reproduce sonidos graves y fuertes en el teclado, simulando truenos.",
+    "transformedIdeaTitle": "Cazadores de Tormentas Eléctricas",
+    "transformedIdeaDescription": "Crea un detector de clima extremo. Usaremos una linterna parpadeando rápido para simular relámpagos. Tu programa debe diferenciar entre una luz fija (día soleado = silencio) y luces que parpadean rápido (tormenta). Si detecta parpadeos, ¡el teclado debe hacer sonidos graves como truenos!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF changes_per_second > 5 THEN Keyboard.play(THUNDER_CHORD)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Medidor de Salud de Plantas Sonoro",
+    "originalIdeaDescription": "Un dispositivo para colocar junto a una planta de interior. Si la planta recibe suficiente luz, toca un acorde mayor (feliz). Si la planta está en sombra demasiada oscura para fotosíntesis, toca un acorde menor (triste) o disonante.",
+    "transformedIdeaTitle": "La Planta que Habla",
+    "transformedIdeaDescription": "Las plantas necesitan luz para vivir, pero no pueden hablar. ¡Tú les darás voz! Coloca el sensor junto a una maceta. Si recibe mucha luz, haz que el teclado toque música feliz. Si alguien le hace sombra o la pone en un rincón oscuro, haz que toque música triste para pedir ayuda.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.value > 50 THEN Keyboard.play(MAJOR_CHORD) ELSE Keyboard.play(MINOR_CHORD)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Distancia por Sombra",
+    "originalIdeaDescription": "Similar al Theremin, pero enfocado en pasos discretos. Se divide el rango de luz en 7 niveles claros. Acercar la mano paso a paso sube la escala musical nota por nota (Do, Re, Mi...) dependiendo de la cercanía al sensor.",
+    "transformedIdeaTitle": "Escalera Musical Invisible",
+    "transformedIdeaDescription": "Imagina que hay una escalera invisible sobre tu mesa. A medida que bajas tu mano hacia el sensor, debes 'pisar' diferentes escalones. Programa el sensor para dividir la luz en 7 niveles. Nivel 1 = Do, Nivel 2 = Re, etc. ¡Intenta tocar la escala completa subiendo y bajando la mano con precisión!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "NoteIndex = floor(map(Light.value, 0, 100, 0, 7)); Keyboard.play(Scale[NoteIndex])"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Candado de Combinación Lumínica",
+    "originalIdeaDescription": "Un juego de memoria y seguridad. El usuario debe iluminar el sensor con tres intensidades específicas en orden (ej. Oscuro, Brillante, Medio) para 'desbloquear' una melodía de éxito. Si falla, suena un tono de error.",
+    "transformedIdeaTitle": "La Clave Secreta de Luz",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una puerta digital. La llave no es de metal, es una secuencia de luz. Debes programar el sistema para que reconozca un patrón: primero tapa el sensor (oscuridad), luego ilumínalo (luz). Si lo haces en el orden correcto, ¡sonará la música de misión cumplida!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Sequence == [Low, High] THEN Keyboard.play(Unlock) ELSE Keyboard.play(Error)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento (Soplido de Luz)",
+    "originalIdeaDescription": "Se usa una pequeña hélice o molinete que proyecta sombras intermitentes sobre el sensor al girar. Al soplar el molinete, la frecuencia de las sombras cambia, y el teclado interpreta esto para tocar notas más rápidas o agudas, simulando una flauta.",
+    "transformedIdeaTitle": "La Flauta de Molinillo",
+    "transformedIdeaDescription": "Construye un molinillo de papel y ponlo frente al sensor bajo una luz. Al soplar, las aspas girarán y crearán sombras rápidas sobre el sensor. Programa el teclado para que, cuanto más rápido cambie la luz (más fuerte soples), más agudo sea el sonido. ¡Acabas de inventar una flauta óptica!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Frequency = MeasureFlickerRate(); Keyboard.playTone(Frequency * Multiplier)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música con Manivela Virtual",
+    "originalIdeaDescription": "Para reproducir una canción nota por nota, el usuario debe pasar la mano frente al sensor repetidamente. Cada vez que el sensor pasa de luz a sombra, el sistema avanza a la siguiente nota de la melodía pre-programada.",
+    "transformedIdeaTitle": "Director de Orquesta con la Mano",
+    "transformedIdeaDescription": "Tienes la partitura, pero la orquesta espera tu orden. Programa el sistema con una canción completa. La canción no sonará sola; cada vez que pases tu mano sobre el sensor (como un director de orquesta marcando el compás), sonará la SIGUIENTE nota. Si dejas de mover la mano, la música se detiene.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.change(HighToLow) THEN Keyboard.playNextNote(SongArray)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Fluctuaciones)",
+    "originalIdeaDescription": "Un juguete para 'cazar fantasmas'. El sensor busca pequeñas fluctuaciones inexplicables en la luz ambiental estática. Si la luz cambia levemente sin razón aparente, toca notas 'espeluznantes' aleatorias.",
+    "transformedIdeaTitle": "El Radar Paranormal",
+    "transformedIdeaDescription": "¡Es hora de cazar fantasmas! Quédate muy quieto en una habitación con luz tenue. El sensor medirá la luz. Si detecta un cambio pequeño (quizás un fantasma pasando enfrente), tocará una nota de misterio. Tu reto es calibrarlo para que no suene con tu movimiento, ¡solo con lo desconocido!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Light.value - average) > small_threshold THEN Keyboard.playRandom(SpookyNotes)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Teclado Cromático por Filtros",
+    "originalIdeaDescription": "Usando plásticos translúcidos de colores. Un filtro rojo bloquea cierta luz, uno azul otra cantidad. El sensor mide la intensidad resultante a través del filtro y asigna una nota específica a cada nivel de 'oscuridad' que provoca el color.",
+    "transformedIdeaTitle": "Piano de Caramelos de Colores",
+    "transformedIdeaDescription": "Consigue envoltorios de caramelos o plásticos de diferentes colores. Como cada color deja pasar distinta cantidad de luz, el sensor leerá valores distintos. Asigna el papel rojo a la nota Do, el azul a la nota Mi, y el verde a la nota Sol. ¡Toca canciones poniendo papeles sobre el sensor!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Value = Light.value; IF Value is in RangeA THEN NoteA ELSE IF Value in RangeB THEN NoteB..."
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Indicador Auditivo de Carga Solar",
+    "originalIdeaDescription": "Simula un panel solar cargando una batería. Cuanta más luz recibe, más agudo y rápido se vuelve un tono pulsante, indicando 'máxima energía'. Si la luz es baja, el tono es grave y lento, indicando 'batería baja'.",
+    "transformedIdeaTitle": "Recargando la Nave Espacial",
+    "transformedIdeaDescription": "Tu nave espacial necesita energía solar para despegar. Orienta el sensor hacia las lámparas o ventanas. Si apuntas bien y recibes mucha luz, el sonido se volverá agudo y rápido (¡Energía al 100%!). Si apuntas a la sombra, el sonido se apagará (¡Peligro, sin energía!). ¡Busca la luz para despegar!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Pitch = Light.value * 10; Keyboard.playTone(Pitch, duration=short)"
+  }
+]

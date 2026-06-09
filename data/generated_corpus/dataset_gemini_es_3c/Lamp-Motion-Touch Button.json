@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna de Carga Cinética",
+    "originalIdeaDescription": "Un sistema donde la lámpara se enciende solo cuando se detecta movimiento continuo. El botón táctil se utiliza para bloquear el sistema y apagar la luz para ahorrar energía.",
+    "transformedIdeaTitle": "Recolector de Polvo de Hadas",
+    "transformedIdeaDescription": "Imagina que tienes un frasco mágico. Debes agitarlo (movimiento) para que el polvo de hadas brille intensamente. Si dejas de moverlo, la magia se desvanece. Usa el botón mágico para cerrar la tapa y guardar la luz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton IS pressed THEN Lamp.off() ELSE IF Motion.shake() THEN Lamp.on() ELSE Lamp.fade()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad Personal",
+    "originalIdeaDescription": "El dispositivo actúa como una alarma que parpadea en rojo cuando se mueve. El botón táctil sirve como un código de desactivación para detener la alarma.",
+    "transformedIdeaTitle": "La Trampa Anti-Espías",
+    "transformedIdeaDescription": "¡Protege tus secretos! Coloca el dispositivo sobre tu diario. Si alguien intenta moverlo, una luz roja de alerta parpadeará furiosamente. Solo tú, poniendo tu huella dactilar en el escáner (botón), puedes desactivar la seguridad.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.detected() THEN Lamp.blink(RED); IF TouchButton.pressed() THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Color por Inclinación",
+    "originalIdeaDescription": "Cambia el color de la lámpara inclinando el dispositivo hacia diferentes ejes. El botón táctil fija el color seleccionado permanentemente.",
+    "transformedIdeaTitle": "El Pincel Mágico",
+    "transformedIdeaDescription": "Conviértete en un artista digital. Inclina tu pincel mágico hacia la izquierda para pintar de azul, o a la derecha para rojo. Cuando encuentres el color perfecto para tu obra maestra, toca el botón para 'congelar' la pintura en el lienzo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltLeft() THEN Lamp.color(BLUE) ELSE IF Motion.tiltRight() THEN Lamp.color(RED); IF TouchButton.pressed() THEN Lamp.lockColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales",
+    "originalIdeaDescription": "La luz está verde mientras hay movimiento. Si el movimiento se detiene, la luz cambia. El botón reinicia el juego.",
+    "transformedIdeaTitle": "Baile Galáctico Congelado",
+    "transformedIdeaDescription": "¡Baila mientras tu traje espacial brille en verde! El sensor detecta tu baile. Si te detienes, la luz se pondrá roja y perderás energía. Presiona el botón del reactor para recargar y empezar otra ronda de baile.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.active() THEN Lamp.color(GREEN) ELSE Lamp.color(RED); IF TouchButton.pressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Estabilidad Manual",
+    "originalIdeaDescription": "La lámpara cambia de verde a rojo según cuánto tiembla la mano del usuario. El botón inicia la prueba de estabilidad.",
+    "transformedIdeaTitle": "Cirujano de Robots",
+    "transformedIdeaDescription": "Estás reparando un microchip delicado. Mantén tu mano super firme; si la luz es verde, todo va bien. Si te mueves demasiado, la luz roja indicará un error en el sistema. Presiona el botón para comenzar la operación.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN Start(); IF Motion.magnitude > 5 THEN Lamp.color(RED) ELSE Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Vela de Viento Virtual",
+    "originalIdeaDescription": "La luz parpadea imitando una vela. Un movimiento brusco (soplar/sacudir) la apaga. El botón la vuelve a encender.",
+    "transformedIdeaTitle": "Explorador de Cuevas Oscuras",
+    "transformedIdeaDescription": "Llevas una antorcha antigua en una cueva ventosa. La llama parpadea suavemente. ¡Cuidado! Un movimiento brusco del viento (agitar) apagará tu luz. Usa el botón de pedernal para encenderla de nuevo rápidamente.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.flicker(YELLOW); IF Motion.shake() THEN Lamp.off(); IF TouchButton.pressed() THEN Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Visual",
+    "originalIdeaDescription": "Cada vez que se detecta un paso (golpe vertical), la luz parpadea. El botón cambia el color del parpadeo.",
+    "transformedIdeaTitle": "Zapatos de Supervelocidad",
+    "transformedIdeaDescription": "Cada vez que das un paso o saltas, tus botas propulsoras emiten un destello de energía. Toca el botón en tu cinturón para cambiar el tipo de energía: ¡de plasma azul a fuego rojo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN Lamp.flash(); IF TouchButton.pressed() THEN Lamp.nextColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita de Hechizos Interactiva",
+    "originalIdeaDescription": "Diferentes patrones de movimiento activan diferentes colores de luz. El botón se mantiene presionado para 'lanzar' el hechizo.",
+    "transformedIdeaTitle": "Academia de Magia",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Mantén presionado el botón mágico y mueve tu varita: un círculo invoca luz violeta, y un golpe hacia adelante invoca un rayo amarillo. ¡Conviértete en el mejor mago!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE TouchButton.held(): IF Motion.circle() THEN Lamp.color(VIOLET) ELSE IF Motion.thrust() THEN Lamp.color(YELLOW)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Nivel de Burbuja",
+    "originalIdeaDescription": "La luz se pone blanca cuando el dispositivo está perfectamente plano, y de otro color si está inclinado. El botón calibra la posición cero.",
+    "transformedIdeaTitle": "Aterrizaje Lunar",
+    "transformedIdeaDescription": "Eres el piloto de una nave espacial intentando aterrizar. Debes mantener la nave perfectamente nivelada (luz blanca) para un aterrizaje seguro. Si te inclinas, la luz roja de peligro se enciende. Presiona el botón para iniciar la secuencia de descenso.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isFlat() THEN Lamp.color(WHITE) ELSE Lamp.color(RED); IF TouchButton.pressed() THEN Calibrate()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz de Lectura Inteligente",
+    "originalIdeaDescription": "La lámpara se enciende automáticamente al levantar el dispositivo y se apaga al ponerlo boca abajo. El botón ajusta la intensidad.",
+    "transformedIdeaTitle": "El Libro de los Secretos",
+    "transformedIdeaDescription": "Este libro mágico brilla cuando lo levantas para leer tus encantamientos. Si lo pones boca abajo para esconderlo, la luz se apaga sola. Usa el sello mágico (botón) para hacer la luz más brillante o más tenue.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.orientation(UP) THEN Lamp.on() ELSE IF Motion.orientation(DOWN) THEN Lamp.off(); IF TouchButton.pressed() THEN Lamp.changeBrightness()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "La luz se enciende en un color aleatorio. El usuario debe agitar el dispositivo solo si es verde. El botón reinicia.",
+    "transformedIdeaTitle": "Duelo de Samuráis",
+    "transformedIdeaDescription": "Espera la señal. Si ves la luz verde, ¡desenvaina tu espada (agita el dispositivo) lo más rápido posible! Si te mueves con la luz roja, pierdes el honor. Presiona el botón para desafiar a otro oponente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.randomColor(); IF Lamp.is(GREEN) AND Motion.shake() THEN Win() ELSE IF Lamp.is(RED) AND Motion.shake() THEN Lose()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse",
+    "originalIdeaDescription": "Agitar el dispositivo genera un punto, inclinarlo una raya, visualizado en la lámpara. El botón borra el mensaje.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Una sacudida corta es un punto (luz breve), una inclinación larga es una raya (luz larga). ¡Transmite el código! Si te equivocas, presiona el botón de autodestrucción para borrar el mensaje.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.shake() THEN Lamp.flash(SHORT) ELSE IF Motion.tilt() THEN Lamp.flash(LONG); IF TouchButton.pressed() THEN Clear()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Tamagotchi",
+    "originalIdeaDescription": "La lámpara representa el estado de ánimo. Agitar para jugar (verde), botón para alimentar (amarillo). Si no se interactúa, se pone roja.",
+    "transformedIdeaTitle": "El Huevo de Dragón",
+    "transformedIdeaDescription": "Cuidas de un huevo de dragón. Si brilla en rojo, está triste; agítalo suavemente para jugar y ponerlo verde. Si brilla en azul, tiene hambre; presiona el botón para darle de comer una gema de fuego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Timer.expired() THEN Lamp.color(RED); IF Motion.shake() THEN Lamp.color(GREEN); IF TouchButton.pressed() THEN Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores Físico",
+    "originalIdeaDescription": "El botón alterna entre canales R, G, B. El movimiento aumenta la intensidad del canal seleccionado.",
+    "transformedIdeaTitle": "Laboratorio de Pociones",
+    "transformedIdeaDescription": "Eres un alquimista. Toca el botón para elegir tu ingrediente base (Rojo, Verde o Azul). Luego, agita la poción para agregar más cantidad de ese ingrediente y ver cómo cambia el color de la mezcla brillante final.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN SelectChannel(); IF Motion.active() THEN IncreaseChannelValue(); Lamp.updateColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Brújula de Luz",
+    "originalIdeaDescription": "Usando el sensor de movimiento para inferir dirección relativa, la luz cambia de color al girar. El botón fija el norte relativo.",
+    "transformedIdeaTitle": "Radar de Tesoros",
+    "transformedIdeaDescription": "Busca el tesoro escondido. Presiona el botón para marcar tu punto de inicio. Gira tu cuerpo: la luz se volverá más brillante y dorada cuanto más te acerques a la dirección secreta donde está el oro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN SetTarget(); IF Motion.rotation() == Target THEN Lamp.brightness(MAX)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "El dispositivo monitorea vibraciones sutiles. La lámpara muestra la intensidad de la vibración. El botón reinicia el sismógrafo.",
+    "transformedIdeaTitle": "Sismógrafo Casero",
+    "transformedIdeaDescription": "Convierte tu mesa en una estación científica. Coloca el sensor quieto. Si golpeas la mesa o saltas cerca, la luz cambiará de verde a rojo según la fuerza del 'terremoto'. Usa el botón para reiniciar la medición después de la réplica.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Sensitivity = Motion.magnitude(); Lamp.color(Map(Sensitivity, GREEN, RED)); IF TouchButton.pressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz de Respiración para Meditación",
+    "originalIdeaDescription": "La luz pulsa lentamente. Si el usuario mueve el dispositivo (inquietud), la luz se vuelve caótica. El botón inicia la sesión.",
+    "transformedIdeaTitle": "Cristal Zen",
+    "transformedIdeaDescription": "Sostén el cristal mágico en tu mano. Respira hondo. El cristal pulsará con una luz azul relajante. Si tu mano tiembla o te mueves nervioso, el cristal se volverá naranja. Presiona el botón para empezar tu viaje de calma.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN Start(); IF Motion.stable() THEN Lamp.breathe(BLUE) ELSE Lamp.flicker(ORANGE)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Papa Caliente",
+    "originalIdeaDescription": "La luz parpadea cada vez más rápido. Se debe pasar el dispositivo (detectado por movimiento/parada). El botón inicia la cuenta.",
+    "transformedIdeaTitle": "Bomba de Tiempo",
+    "transformedIdeaDescription": "¡Pasa la bomba antes de que explote! La luz parpadea cada vez más rápido. Tienes que pasársela a un amigo (el movimiento detecta el pase). Quien la tenga cuando la luz se ponga roja fija, ¡pierde! El botón activa el detonador.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN StartTimer(); Lamp.blinkSpeed(Timer); IF Timer.end() THEN Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Energía Manual",
+    "originalIdeaDescription": "Agitar rápidamente 'carga' una batería virtual que mantiene la luz encendida. El botón descarga la energía de golpe.",
+    "transformedIdeaTitle": "Rayo de Superhéroe",
+    "transformedIdeaDescription": "Carga tu superpoder agitando tu guantelete. La luz se irá haciendo más brillante cuanto más agites. Cuando estés al 100%, presiona el botón para liberar toda la energía en un destello cegador.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Charge = Charge + Motion.shakeAmount(); Lamp.brightness(Charge); IF TouchButton.pressed() THEN Lamp.flash(MAX) AND Charge=0"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Visual",
+    "originalIdeaDescription": "Mover el dispositivo hacia arriba sube el 'tono' (color de la luz hacia violeta) y abajo lo baja (hacia rojo). El botón graba la secuencia.",
+    "transformedIdeaTitle": "Compositor de Arcoíris",
+    "transformedIdeaDescription": "Crea una melodía de colores. Mueve tu mano hacia el cielo para crear azules y violetas, y hacia el suelo para rojos y naranjas. Toca el botón para grabar tu 'canción de colores' y reproducirla después.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Height = Motion.getY(); Lamp.color(Map(Height, RED, VIOLET)); IF TouchButton.pressed() THEN Record(Color)"
+  }
+]

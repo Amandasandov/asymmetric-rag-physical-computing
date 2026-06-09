@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Orientado a los Puntos Cardinales",
+    "originalIdeaDescription": "Un sistema donde cada punto cardinal (Norte, Sur, Este, Oeste) está asignado a una nota musical o acorde específico. El usuario gira el dispositivo para seleccionar la nota deseada basándose en la brújula y presiona el botón táctil para reproducir el sonido, creando un instrumento que se toca girando el cuerpo.",
+    "transformedIdeaTitle": "El Piano de los Cuatro Vientos",
+    "transformedIdeaDescription": "¡Conviértete en un músico explorador! En esta actividad, programarás tu dispositivo para que se comporte como un instrumento mágico que cambia de sonido según hacia dónde mires. Si miras al Norte y presionas el botón, sonará un DO; si miras al Este, un MI. Tendrás que girar físicamente para encontrar las notas y tocar una canción sencilla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Brújula.dirección = 'Norte' Y Botón.presionado ENTONCES Teclado.tocar('C'); SI NO SI Brújula.dirección = 'Este' Y Botón.presionado ENTONCES Teclado.tocar('E')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Una simulación de una caja fuerte donde la 'combinación' implica girar el dispositivo a grados específicos de la brújula. El botón táctil actúa como el mecanismo de confirmación. Si el usuario encuentra el grado correcto y presiona el botón, se reproduce un sonido de éxito; si falla, suena una nota de error.",
+    "transformedIdeaTitle": "El Ladrón de la Caja Musical",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una caja fuerte digital. La combinación no son números, ¡son direcciones! Debes girar el dispositivo hasta encontrar el ángulo secreto (por ejemplo, 90 grados). Cuando creas que estás en la posición correcta, presiona el botón. Si aciertas, escucharás una melodía de victoria y la caja se abrirá.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI (Brújula.grados > 85 Y Brújula.grados < 95) Y Botón.presionado ENTONCES Teclado.tocarMelodía('Victoria') SINO Teclado.tocarNota('Error')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Búsqueda del Tesoro a Ciegas",
+    "originalIdeaDescription": "Una herramienta de navegación auditiva. El usuario establece un destino (una dirección). Mientras camina, si se desvía del rumbo, el teclado reproduce notas disonantes. Si está en el camino correcto y presiona el botón, suena una nota armoniosa para confirmar la trayectoria.",
+    "transformedIdeaTitle": "El Radar del Tesoro Pirata",
+    "transformedIdeaDescription": "Tu mapa del tesoro ha desaparecido, pero tienes un radar sonoro. Programa el dispositivo para que te guíe hacia el 'Norte'. Mientras caminas, presiona el botón para verificar tu rumbo. Si vas bien, escucharás una nota aguda y brillante; si te desvías, el sonido será grave y oscuro. ¡Sigue el sonido para encontrar el botín!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Botón.presionado ENTONCES { SI Brújula.dirección = 'Objetivo' ENTONCES Teclado.tocar('C5') SINO Teclado.tocar('C2') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simón Dice Direccional",
+    "originalIdeaDescription": "Una variante del juego de memoria. El sistema nombra una dirección o reproduce una nota asociada a una dirección. El usuario debe girar hacia esa dirección y presionar el botón para confirmar. La secuencia se vuelve más rápida y compleja con el tiempo.",
+    "transformedIdeaTitle": "El Capitán Simón Dice",
+    "transformedIdeaDescription": "El Capitán Simón te da órdenes de navegación. Si el dispositivo toca una nota alta, debes girar rápidamente al Norte y presionar el botón. Si toca una nota baja, gira al Sur y presiona. Es un reto de memoria y velocidad física. ¿Cuántas órdenes puedes seguir sin equivocarte de rumbo?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Generar Secuencia; SI Brújula.dirección == Secuencia[i] Y Botón.presionado ENTONCES Puntos++ SINO FinDelJuego"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Compositor de Escala de 360 Grados",
+    "originalIdeaDescription": "Divide los 360 grados de la brújula en segmentos pequeños (ej. cada 10 grados). Cada segmento corresponde a una nota semitono. El usuario mantiene presionado el botón para 'grabar' y gira en círculo, creando un glissando o melodía basada en su movimiento rotacional.",
+    "transformedIdeaTitle": "Escultor de Melodías Giratorias",
+    "transformedIdeaDescription": "Imagina que el aire a tu alrededor está lleno de música invisible. Al girar tu cuerpo 360 grados, recorres todas las teclas de un piano gigante circular. Mantén presionado el botón táctil para 'tocar' las teclas mientras giras. Experimenta girando rápido o lento para crear efectos sonoros locos y escalas musicales.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Nota = Mapear(Brújula.grados, 0, 360, Nota_Baja, Nota_Alta); SI Botón.mantenido ENTONCES Teclado.tocar(Nota)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas o Anomalías",
+    "originalIdeaDescription": "Una aplicación lúdica donde ciertas direcciones aleatorias se marcan como 'puntos calientes'. Al apuntar la brújula hacia ellos, el audio cambia (volumen o tono). El botón se usa para 'capturar' la anomalía cuando el sonido es más intenso.",
+    "transformedIdeaTitle": "Cazadores de Fantasmas Musicales",
+    "transformedIdeaDescription": "¡Hay fantasmas invisibles en el aula! Usa tu dispositivo como un detector espectral. Gira lentamente; cuando escuches que la música se vuelve extraña o aguda, ¡has encontrado uno! Apunta con cuidado a la dirección del sonido y presiona el botón para atrapar al fantasma en tu máquina.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Distancia = Abs(Brújula.grados - DirecciónFantasma); Tono = 100 - Distancia; SI Botón.presionado Y Distancia < 5 ENTONCES Capturar()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "Asigna diferentes secciones de instrumentos a direcciones (Violines al Norte, Percusión al Sur). El usuario apunta hacia la sección que quiere escuchar y presiona el botón para activar o desactivar ese grupo de instrumentos en una pista de acompañamiento.",
+    "transformedIdeaTitle": "El Maestro de la Orquesta Invisible",
+    "transformedIdeaDescription": "Toma la batuta y dirige tu propia orquesta. A tu izquierda (Oeste) están los tambores, al frente (Norte) el piano. Gira hacia el instrumento que quieras que suene y presiona el botón para darle entrada. ¡Crea tu propia mezcla sinfónica moviéndote y activando secciones!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Brújula.dirección = 'Oeste' Y Botón.clic ENTONCES Teclado.activarPercusión() SINO SI Brújula.dirección = 'Norte' ENTONCES Teclado.activarMelodía()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alineador de Satélites Espaciales",
+    "originalIdeaDescription": "Juego de simulación donde el usuario debe encontrar una señal satelital débil. El tono del audio sube de frecuencia a medida que la brújula se alinea con el objetivo invisible. El botón se usa para 'bloquear' la señal y establecer comunicación.",
+    "transformedIdeaTitle": "Misión Espacial: Conexión Satelital",
+    "transformedIdeaDescription": "La Estación Espacial Internacional está tratando de contactarte, pero la señal es débil. Gira tu antena (el dispositivo) buscando la frecuencia correcta. Escucha atentamente: el pitido se hará más agudo cuando estés alineado. En el momento exacto del tono más alto, ¡presiona el botón para descargar los datos secretos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Botón.presionado ENTONCES { SI Abs(Brújula.grados - Objetivo) < 10 ENTONCES Ganar() } SINO Teclado.tocarTono(FrecuenciaBase + Brújula.Alineación)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "El usuario debe realizar gestos específicos (ej. girar de Norte a Este rápidamente) y luego presionar el botón para 'lanzar' un hechizo, que es representado por una secuencia rápida de notas musicales.",
+    "transformedIdeaTitle": "Escuela de Magia: Varitas Sonoras",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos digitales. Para el hechizo de 'Levitación', debes apuntar al Norte y luego girar suavemente al Este antes de presionar el botón mágico. Si haces el movimiento correctamente, tu varita tocará una melodía encantada. ¡Programa diferentes movimientos para diferentes hechizos!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Grados_Inicio = 'N' Y Grados_Fin = 'E' Y Botón.presionado ENTONCES Teclado.reproducirArpegio()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Panorámico",
+    "originalIdeaDescription": "El usuario está en el centro de una cabina de DJ virtual. Girar a diferentes ángulos selecciona diferentes pistas o efectos de sonido (scratch, beat). El botón actúa como el 'crossfader' o disparador para insertar el efecto en la mezcla en tiempo real.",
+    "transformedIdeaTitle": "DJ 360: La Fiesta Giratoria",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta del futuro! Tienes efectos de sonido flotando a tu alrededor. Gira a la derecha para cargar un 'Scratch', gira a la izquierda para cargar un 'Beat'. Cuando quieras soltar el sonido en la canción, presiona el botón al ritmo de la música. ¡Haz bailar a todos con tus mezclas!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "EfectoSeleccionado = ObtenerEfectoPorAngulo(Brújula.grados); SI Botón.presionado ENTONCES Teclado.reproducirEfecto(EfectoSeleccionado)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Direccional",
+    "originalIdeaDescription": "Un sistema de comunicación donde apuntar al Norte representa un 'Punto' y al Sur representa una 'Raya'. El usuario orienta el dispositivo y presiona el botón para ingresar el símbolo, construyendo letras y palabras que luego se reproducen musicalmente.",
+    "transformedIdeaTitle": "El Telégrafo de la Brújula",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando un código antiguo. Si apuntas al Norte y tocas el botón, envías un 'punto' (sonido corto). Si apuntas al Sur y tocas, envías una 'raya' (sonido largo). Combina direcciones y clics para escribir tu nombre en Código Morse.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Brújula.Norte Y Botón.clic ENTONCES Morse.agregar('.') Y Teclado.tocar('C4', corto); SI Brújula.Sur Y Botón.clic ENTONCES Morse.agregar('-')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de Meditación Zen",
+    "originalIdeaDescription": "Una aplicación para relajación. Requiere que el usuario se siente y gire muy lentamente hacia puntos cardinales específicos para alinear sus 'chakras' virtuales. Al alcanzar la alineación perfecta y presionar el botón, suena un acorde largo y relajante.",
+    "transformedIdeaTitle": "Jardín Zen: Buscando la Armonía",
+    "transformedIdeaDescription": "Vamos a relajarnos y concentrarnos. Tu objetivo es encontrar la paz interior alineando tu dispositivo con los cuatro puntos de la naturaleza. Gira muy despacio. Cuando tu brújula marque exactamente el Este, presiona el botón suavemente para liberar un sonido de campana relajante. Completa el ciclo de los cuatro vientos.",
+    "minAge": 10,
+    "maxAge": 16,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Brújula.Estable Y Brújula.dirección = 'Este' Y Botón.presionado ENTONCES Teclado.tocarAcorde('Zen', Duración=Larga)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Identificador de Sonidos de Animales",
+    "originalIdeaDescription": "Un entorno educativo donde diferentes animales 'viven' en diferentes direcciones. El usuario explora girando; cuando cree saber dónde está el animal (por pistas visuales o lógicas), presiona el botón. Si es correcto, el teclado imita el sonido del animal.",
+    "transformedIdeaTitle": "Safari en el Aula",
+    "transformedIdeaDescription": "¡Estamos de safari! Los leones están al Norte y los elefantes al Oeste. Tu misión es localizar a los animales invisibles. Gira tu dispositivo y, cuando estés apuntando a la zona del hábitat correcto, presiona el botón para escuchar el rugido o el barritar del animal que encontraste.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Brújula.dirección = 'Norte' Y Botón.presionado ENTONCES Teclado.reproducir('Leon.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Simula una torre de control. El sistema avisa de un 'avión' acercándose desde un grado específico (ej. 270°). El usuario debe apuntar la brújula a esa dirección exacta y presionar el botón para enviar una señal de radio (tono) para guiarlo.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje Seguro",
+    "transformedIdeaDescription": "¡Emergencia! Varios aviones necesitan tu ayuda para aterrizar en la niebla. El radar te dirá: 'Avión acercándose desde el grado 180'. Debes girar rápidamente tu dispositivo hasta que la brújula marque 180 y presionar el botón para enviar el sonido de la baliza de aterrizaje. ¡Sé rápido y preciso!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Objetivo = Random(0, 360); SI Abs(Brújula.grados - Objetivo) < 5 Y Botón.presionado ENTONCES Puntos++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Rotatoria",
+    "originalIdeaDescription": "Permite al usuario colocar diferentes sonidos de percusión en el espacio alrededor de ellos (Kick al N, Snare al S, Hi-hat al E). Para tocar un ritmo, el usuario debe girar el cuerpo rítmicamente hacia las direcciones y presionar el botón en el momento justo.",
+    "transformedIdeaTitle": "El Baterista Giratorio",
+    "transformedIdeaDescription": "¡Convierte tu cuerpo en una batería humana! Programa tu dispositivo para que el Norte sea el bombo, el Sur la caja y el Este los platillos. Ahora, crea un ritmo de rock girando tu cuerpo y presionando el botón cada vez que mires a la dirección correcta. ¡Es ejercicio y música a la vez!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Sonido = SeleccionarInstrumento(Brújula.dirección); SI Botón.presionado ENTONCES Teclado.tocar(Sonido)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Rol (RPG) - Escudo y Espada",
+    "originalIdeaDescription": "Juego de combate simulado. Los enemigos atacan desde direcciones específicas (audio indica dónde). El usuario debe girar para encarar al enemigo (bloquear con escudo) y presionar el botón para contraatacar (espada/sonido de ataque).",
+    "transformedIdeaTitle": "Caballero Defensor del Reino",
+    "transformedIdeaDescription": "¡Defiende el castillo! Los dragones atacan desde todas las direcciones. Escucha la advertencia y mira tu brújula. Si el ataque viene del Oeste, gira rápido para encararlo. Mantén tu posición y presiona el botón para lanzar tu ataque sónico y repeler al dragón. ¡No les des la espalda!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI TiempoAtaque > 0 Y Abs(Brújula.grados - DirecciónEnemigo) < 20 Y Botón.presionado ENTONCES DerrotarEnemigo()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Cuerdas Espacial",
+    "originalIdeaDescription": "Metáfora de tensar una cuerda. El usuario presiona el botón y gira el dispositivo. Girar en sentido horario 'tensa' la cuerda (sube el tono), antihorario la afloja. El objetivo es igualar un tono objetivo soltando el botón en el ángulo correcto.",
+    "transformedIdeaTitle": "El Afinador de Estrellas",
+    "transformedIdeaDescription": "Tienes que afinar las cuerdas del universo. Escucharás una nota modelo. Mantén presionado el botón y gira tu cuerpo a la derecha para subir el tono o a la izquierda para bajarlo. Cuando creas que tu nota suena igual a la nota modelo, suelta el botón. ¿Qué tan buen oído tienes?",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TonoActual = TonoBase + (Brújula.grados - GradoInicial); SI !Botón.presionado ENTONCES ComprobarAfinación(TonoActual)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Historia Interactiva de Elección de Camino",
+    "originalIdeaDescription": "Narración de cuentos donde el usuario elige el camino girando físicamente. 'Para ir al bosque oscuro (Norte), presiona el botón. Para ir a la playa soleada (Sur), presiona el botón'. Cada elección reproduce un tema musical diferente.",
+    "transformedIdeaTitle": "Cuentos de la Brújula Mágica",
+    "transformedIdeaDescription": "Entra en una historia donde tú eliges el destino. El narrador te dirá: 'Si quieres entrar a la cueva, mira al Norte. Si prefieres subir la montaña, mira al Este'. Gira hacia tu decisión y presiona el botón para que la historia continúe y suene la música de tu nueva aventura.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Brújula.Norte Y Botón.clic ENTONCES IrCapitulo('Cueva'); SI Brújula.Este Y Botón.clic ENTONCES IrCapitulo('Montaña')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Metales (Simulado)",
+    "originalIdeaDescription": "Juego de exploración. El 'suelo' tiene objetos ocultos en coordenadas polares predefinidas. A medida que el usuario barre el área con la brújula, el tono cambia. El botón sirve para 'cavar' (reproducir sonido de descubrimiento) en la ubicación actual.",
+    "transformedIdeaTitle": "Buscadores de Oro Digital",
+    "transformedIdeaDescription": "Convierte tu sala en una playa llena de monedas de oro enterradas. Muévete y gira tu 'detector de metales'. Cuando escuches que el pitido se vuelve muy rápido y agudo, significa que hay oro justo debajo de donde apuntas. ¡Presiona el botón rápidamente para desenterrarlo antes que desaparezca!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Proximidad = CalcularCercania(Brújula.grados); Teclado.tocarTono(Proximidad); SI Proximidad > Max Y Botón.presionado ENTONCES EncontrarOro()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ondas por Orientación",
+    "originalIdeaDescription": "Herramienta de diseño sonoro. La dirección de la brújula controla la forma de onda o el filtro de un sonido continuo, y el botón táctil activa/desactiva el sonido o cambia de octava, permitiendo crear texturas sonoras evolutivas.",
+    "transformedIdeaTitle": "Laboratorio de Sonidos Alienígenas",
+    "transformedIdeaDescription": "Eres un científico creando sonidos para una película de ciencia ficción. Presiona el botón para encender el láser sónico. Mientras lo mantienes presionado, gira sobre ti mismo. Al girar, el sonido cambiará de un zumbido grave a un chillido espacial. ¡Graba tus mejores efectos sonoros!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "MIENTRAS Botón.presionado { ModificarSonido(Parametro=Brújula.grados); Teclado.reproducirContinuo() }"
+  }
+]

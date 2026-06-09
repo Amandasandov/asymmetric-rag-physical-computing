@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de iluminación nocturna automático y sensible",
+    "originalIdeaDescription": "Un sistema básico de domótica que monitorea constantemente los niveles de luz en una habitación. Cuando la luz natural desciende por debajo de un umbral específico, la lámpara se enciende automáticamente para proporcionar visibilidad, y se apaga cuando sale el sol nuevamente, simulando una luz de noche inteligente.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "¡Ayuda a los niños a dormir sin miedo! Programarás un compañero nocturno que detecta cuando se hace de noche. Si la habitación está oscura, tu 'Guardián' encenderá una luz suave y cálida automáticamente. Si sale el sol o encienden la luz principal, el Guardián descansará apagándose para ahorrar energía mágica.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN Lamp.on(Warm_White) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma visual de intrusión por sombras",
+    "originalIdeaDescription": "Este dispositivo actúa como un sistema de seguridad silencioso. Se coloca dentro de un cajón o caja fuerte iluminada. Si el sensor detecta un cambio brusco en la intensidad de la luz (alguien abriendo el cajón o proyectando una sombra), la lámpara parpadea en rojo para alertar sobre la intrusión.",
+    "transformedIdeaTitle": "La Trampa del Ladrón de Galletas",
+    "transformedIdeaDescription": "¿Alguien está robando tus galletas? Construye una alarma visual para tu tarro de galletas. El dispositivo esperará en la oscuridad dentro del tarro. En el momento en que alguien destape el tarro y entre luz, la lámpara parpadeará en rojo intenso para delatar al ladrón in fraganti.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN Lamp.blink(Red, Fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Regulador de brillo ambiental inverso proporcional",
+    "originalIdeaDescription": "Un sistema que ajusta la intensidad de la lámpara en relación inversa a la luz ambiental. Cuanto más oscuro esté el entorno, más brillante será la lámpara, y viceversa. Esto mantiene un nivel constante de iluminación en un área de trabajo independientemente de las condiciones externas.",
+    "transformedIdeaTitle": "La Luciérnaga Inteligente",
+    "transformedIdeaDescription": "Crea una luciérnaga biónica que quiere mantener el bosque siempre iluminado. Tu misión es programarla para que, cuanto más se oscurezca el día, más fuerte brille su luz. Deberás usar matemáticas para invertir el valor: si hay poca luz solar, habrá mucha luz de lámpara.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.brightness = 100 - Light_Intensity"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Indicador de salud de planta de interior",
+    "originalIdeaDescription": "Un dispositivo diseñado para monitorear si una planta de interior está recibiendo suficiente luz solar. Si la intensidad de la luz es adecuada durante el día, la lámpara brilla en verde. Si es demasiado baja para la fotosíntesis, la lámpara cambia a color amarillo o rojo como advertencia.",
+    "transformedIdeaTitle": "El Girasol Electrónico Feliz",
+    "transformedIdeaDescription": "Las plantas necesitan sol para comer, pero no pueden hablar. ¡Tú serás su voz! Diseña un dispositivo que se coloque junto a una planta. Si recibe mucha luz, la lámpara brillará en verde (planta feliz). Si está en la sombra y tiene hambre, la luz se pondrá roja para pedir ayuda.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 60 THEN Lamp.color(Green) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Decodificador de señales de luz tipo Morse",
+    "originalIdeaDescription": "Un sistema de comunicación óptica que detecta destellos de luz dirigidos al sensor. El sistema interpreta la duración y frecuencia de los destellos de una linterna externa y responde encendiendo la lámpara con un color específico para confirmar la recepción del mensaje secreto.",
+    "transformedIdeaTitle": "Comunicador Espía de Luz",
+    "transformedIdeaDescription": "Eres un agente secreto enviando mensajes a tu base. Usa una linterna para enviar señales al sensor. Programa la base para que, cada vez que detecte un 'flash' de luz de tu linterna, la lámpara del sistema cambie de color para confirmar que recibió el código secreto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity_Change > Threshold THEN Lamp.cycleColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Farola urbana de eficiencia energética adaptativa",
+    "originalIdeaDescription": "Simulación de una infraestructura de ciudad inteligente. Las farolas (Lámpara) permanecen apagadas cuando hay luz diurna. Al atardecer (luz media), se encienden a media potencia. En oscuridad total, se encienden a máxima potencia, optimizando el consumo eléctrico urbano.",
+    "transformedIdeaTitle": "Ingeniero de la Ciudad Ecológica",
+    "transformedIdeaDescription": "La ciudad gasta mucha electricidad y el alcalde necesita tu ayuda. Debes programar las farolas de la calle para que sean inteligentes. No deben encenderse de golpe; deben aumentar su brillo poco a poco a medida que el sol se pone. ¡Salva el planeta ahorrando energía!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light > 80 THEN Off; ELSE IF Light > 40 THEN Lamp.brightness(50); ELSE Lamp.brightness(100)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de criaturas de las profundidades marinas",
+    "originalIdeaDescription": "Este proyecto simula la biología de un pez abisal. El sistema detecta la oscuridad absoluta (como en el fondo del océano). Solo cuando la luz es casi cero, la lámpara enciende un señuelo luminoso para atraer presas en la oscuridad profunda.",
+    "transformedIdeaTitle": "El Pez Linterna del Abismo",
+    "transformedIdeaDescription": "Vamos a sumergirnos en lo más profundo del océano donde no llega el sol. Eres un Pez Linterna. Debes programar tu señuelo (la lámpara) para que solo se encienda cuando esté totalmente oscuro. Si hay algo de luz, debes esconderte y apagar tu luz para no ser visto por depredadores.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity == 0 THEN Lamp.on(Cyan) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de lectura para protección visual",
+    "originalIdeaDescription": "Dispositivo vestible o de escritorio que monitorea la luz ambiental mientras el usuario lee. Si el sensor detecta que la luz ambiente es insuficiente para leer sin forzar la vista, enciende la lámpara automáticamente para suplementar la iluminación y proteger la salud ocular.",
+    "transformedIdeaTitle": "El Búho Bibliotecario",
+    "transformedIdeaDescription": "Leer en la oscuridad daña tus ojos. Crea un asistente inteligente con forma de búho. Si intentas leer tu libro favorito bajo las sábanas o con poca luz, el Búho lo notará y encenderá automáticamente su luz de lectura para cuidar tu vista. ¡Lectura segura siempre!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < Safe_Reading_Level THEN Lamp.on(White)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja fuerte mágica activada por oscuridad",
+    "originalIdeaDescription": "Un mecanismo de juego donde un objeto 'mágico' (la lámpara) cambia de estado solo cuando se oculta. Al cubrir el sensor de luz con la mano o ponerlo en una caja oscura, la lámpara cambia de color, simulando una transformación mágica que no se puede ver con luz.",
+    "transformedIdeaTitle": "El Cristal Mágico Tímido",
+    "transformedIdeaDescription": "Tienes un cristal mágico que es muy tímido y odia ser visto. Si hay luz, se ve transparente (apagado). Pero si lo cubres con tus manos haciendo 'casita' o lo metes en una caja oscura, ¡se transforma y brilla de colores misteriosos! Descubre qué color elige en la oscuridad.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN Lamp.color(Random) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Analizador de espectro lumínico simulado",
+    "originalIdeaDescription": "Un dispositivo que mapea la intensidad de la luz recibida a un espectro de colores en la lámpara LED RGB. Luz baja corresponde a colores fríos (azules), y luz alta corresponde a colores cálidos (rojos/naranjas), visualizando la temperatura de la luz.",
+    "transformedIdeaTitle": "El Camaleón Cromático",
+    "transformedIdeaDescription": "Construye un camaleón robótico que cambia de color según la cantidad de luz que le da el sol. Si está a la sombra, se pondrá azul y triste. Si le da mucha luz, se pondrá rojo y energético. ¡Usa rangos de valores para pintar con luz!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Map(Light_Value, 0-100) to Lamp.Color(Blue-Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de alerta anti-flash para museos",
+    "originalIdeaDescription": "Simulación de seguridad para obras de arte sensibles a la luz. El sensor detecta picos repentinos de alta intensidad (flashes de cámaras). Si detecta uno, la lámpara se enciende en rojo y parpadea como advertencia de 'Prohibido tomar fotos'.",
+    "transformedIdeaTitle": "Guardia del Museo de Arte",
+    "transformedIdeaDescription": "¡Protege la Mona Lisa! Eres el jefe de seguridad del museo. Las fotos con flash dañan las pinturas antiguas. Programa un sensor que detecte destellos de luz muy fuertes y rápidos. Si alguien toma una foto con flash, activa la sirena visual roja para regañar al turista.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Spike_Detected THEN Lamp.blink(Red, 3_Times)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de búsqueda del tesoro frío/caliente",
+    "originalIdeaDescription": "Un juego interactivo donde la lámpara indica la proximidad a una fuente de luz oculta. El jugador mueve el dispositivo; si la intensidad de luz detectada aumenta (se acerca a la fuente), la lámpara cambia de azul (frío) a rojo (caliente).",
+    "transformedIdeaTitle": "Cazadores de Sol",
+    "transformedIdeaDescription": "Juega a 'frío o caliente' usando la luz. Esconde una linterna encendida en la habitación. Tu dispositivo es el buscador. Si estás lejos de la luz oculta, tu lámpara estará azul (frío). A medida que te acerques y el sensor capte más luz, cambiará a rojo (¡caliente!).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 20 THEN Blue; ELSE IF Light < 60 THEN Yellow; ELSE Red"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de eclipse solar interactivo",
+    "originalIdeaDescription": "Modelo educativo para demostrar eclipses. La lámpara representa el sol (o la corona solar). Cuando el sensor de luz es cubierto gradualmente (simulando la luna bloqueando el sol), la lámpara cambia su comportamiento, mostrando un efecto de 'anillo de diamante' o corona.",
+    "transformedIdeaTitle": "Maestro del Eclipse",
+    "transformedIdeaDescription": "Recrea un evento astronómico. La lámpara es el Sol. Pasa un objeto lentamente sobre el sensor de luz para simular la Luna tapando al Sol. Cuando el sensor detecte oscuridad casi total, haz que la lámpara brille con un blanco especial para mostrar la corona solar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light drops_gradually THEN Lamp.effect(Corona_Simulation)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Luz de compañía para túneles de juguete",
+    "originalIdeaDescription": "Accesorio para trenes o coches de juguete. Al entrar el juguete en un túnel oscuro, el sensor detecta la baja luz y enciende los faros (Lámpara). Al salir del túnel y detectar luz ambiente, los faros se apagan automáticamente.",
+    "transformedIdeaTitle": "El Tren Expreso Subterráneo",
+    "transformedIdeaDescription": "¡Todos a bordo! Tu tren de juguete va a entrar en un túnel oscuro. Programa sus faros delanteros para que se enciendan solos en cuanto entre al túnel y se apaguen al salir a la estación iluminada. ¡Evita accidentes ferroviarios con lógica computacional!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < Tunnel_Darkness THEN Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Medidor de contaminación lumínica",
+    "originalIdeaDescription": "Herramienta de ciencia ciudadana para niños. Mide la luz ambiental en la noche. La lámpara indica la calidad del cielo nocturno: Verde si está muy oscuro (bueno para ver estrellas), Rojo si hay mucha luz artificial (mala visibilidad).",
+    "transformedIdeaTitle": "El Observador de Estrellas",
+    "transformedIdeaDescription": "¿Se pueden ver las estrellas esta noche? Construye un medidor para saber si hay demasiada luz de la ciudad. Sal al patio de noche: si tu lámpara se pone verde, ¡saca el telescopio! Si se pone roja, hay demasiada contaminación lumínica para ver la Vía Láctea.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > Pollution_Limit THEN Lamp.color(Red) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Despertador solar simulado con amanecer",
+    "originalIdeaDescription": "Un reloj biológico inverso. Cuando el sensor detecta los primeros rayos de luz natural de la mañana a través de la ventana, la lámpara comienza a iluminarse muy suavemente en tonos naranjas y amarillos para despertar al usuario de forma natural.",
+    "transformedIdeaTitle": "Despertador Amanecer Suave",
+    "transformedIdeaDescription": "Olvida los ruidos molestos de alarma. Crea un despertador que use luz. Coloca el sensor en la ventana. Cuando detecte que empieza a salir el sol, tu lámpara dentro del cuarto copiará al sol, brillando suavemente en naranja para despertarte con energía positiva.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Trend == Rising THEN Lamp.gradualFadeIn(Orange)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Teatro de sombras interactivo",
+    "originalIdeaDescription": "Un escenario para contar historias donde la iluminación de fondo (Lámpara) cambia de color dramáticamente basándose en objetos que bloquean parcialmente el sensor de luz, permitiendo efectos especiales controlados por la posición de las marionetas.",
+    "transformedIdeaTitle": "Director de Cine de Sombras",
+    "transformedIdeaDescription": "¡Luces, cámara, acción! Crea un teatro de sombras donde tú controlas el clima. Si acercas tu marioneta al sensor (tapando un poco la luz), la lámpara de fondo se pondrá gris como una tormenta. Si la alejas, se pondrá amarilla como un día soleado.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 40 THEN Lamp.color(Grey) ELSE Lamp.color(Yellow)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de fantasmas (cambios sutiles de luz)",
+    "originalIdeaDescription": "Un juguete divertido que busca 'anomalías'. El código establece un valor base de luz ambiental. Si la luz fluctúa ligeramente (sin una fuente obvia), la lámpara parpadea en colores misteriosos (morado/verde) indicando la presencia de un 'ente'.",
+    "transformedIdeaTitle": "Cazafantasmas Digital",
+    "transformedIdeaDescription": "¿Hay fantasmas en tu cuarto? Dicen que los fantasmas hacen parpadear las luces. Calibra tu sensor para la luz normal de tu cuarto. Si detecta un cambio pequeño y misterioso en la luz sin que tú te muevas, la lámpara brillará en verde neón. ¡Has encontrado uno!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light != Base_Value THEN Lamp.blink(Neon_Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Faro de navegación costera automático",
+    "originalIdeaDescription": "Modelo de faro que opera según las condiciones climáticas simuladas. En condiciones de 'niebla' (simuladas cubriendo parcialmente el sensor para luz media), el faro gira o parpadea lentamente. En luz clara, permanece apagado.",
+    "transformedIdeaTitle": "El Capitán del Faro",
+    "transformedIdeaDescription": "Los barcos necesitan ayuda cuando hay niebla. Construye un faro inteligente. Si hay mucha luz (día soleado), el faro descansa. Pero si tapas un poco el sensor simulando niebla espesa, la lámpara debe empezar a rotar o parpadear para guiar a los marineros a puerto seguro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light is Low AND Medium THEN Lamp.rotate_pattern()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Luz de estado de ánimo reactiva al entorno",
+    "originalIdeaDescription": "Lámpara decorativa que intenta equilibrar el ambiente. Si la habitación está muy iluminada (estresante), la lámpara emite un color azul calmante. Si la habitación está lúgubre, emite un rosa o naranja energético para mejorar el ánimo.",
+    "transformedIdeaTitle": "El Equilibrador de Ánimo",
+    "transformedIdeaDescription": "Crea una lámpara que 'siente' el ambiente. Si tu cuarto tiene luces muy fuertes y brillantes, la lámpara pondrá un azul relajante para calmarte. Si está todo gris y oscuro, pondrá un color naranja vibrante para animarte. ¡Es tecnología emocional!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light > High THEN Lamp.color(Calm_Blue) ELSE Lamp.color(Energy_Orange)"
+  }
+]

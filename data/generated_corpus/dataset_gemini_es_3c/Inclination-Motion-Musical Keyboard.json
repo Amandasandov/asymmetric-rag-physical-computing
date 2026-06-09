@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Aire Gestual",
+    "originalIdeaDescription": "Un instrumento virtual donde la inclinación controla la nota musical seleccionada y el movimiento de agitación dispara el sonido, similar a tocar una maraca afinada.",
+    "transformedIdeaTitle": "El Arpa Invisible",
+    "transformedIdeaDescription": "¡Conviértete en un músico mágico! Crea un arpa que no se puede ver. Inclina tu dispositivo hacia adelante o atrás para elegir la nota perfecta y agítalo suavemente en el aire para 'rasguear' la cuerda y hacerla sonar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = map(Inclination.X, -90, 90, C4, C5); IF Motion.shake > threshold THEN Keyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "Un dispositivo que detecta si un objeto valioso es movido o inclinado, disparando una secuencia de notas de alarma estridentes.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tu caja de galletas o tu diario secreto. Programa el dispositivo para que esté en silencio total, pero si alguien intenta levantarlo (movimiento) o volcarlo (inclinación), ¡suene una sirena de policía!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > 0 OR Inclination.changed THEN Keyboard.playSequence([C6, G5, C6])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Espada Láser",
+    "originalIdeaDescription": "Genera un zumbido constante cuya frecuencia cambia con la inclinación, y reproduce un sonido de choque fuerte al detectar movimientos bruscos.",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. Al moverla suavemente, el zumbido cambia de tono según el ángulo (inclinación). Si golpeas contra el aire fuertemente (movimiento), ¡haz que suene el choque de batalla!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Keyboard.playTone(map(Inclination.Y)); IF Motion.impact THEN Keyboard.play(CrashNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Musical",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo plano. Si se inclina demasiado, suenan notas de advertencia. Si se agita (caída), suena una nota de error grave.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que llevas una bandeja llena de vasos de cristal. Mantén el dispositivo plano para que haya silencio. Si te inclinas, escucharás los vasos temblar (notas agudas). Si te mueves bruscamente, ¡se romperán (nota grave)!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.angle > 15 THEN Keyboard.play(E5); IF Motion.shake THEN Keyboard.play(C2)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Sonidos",
+    "originalIdeaDescription": "Diferentes gestos de movimiento combinados con la orientación del dispositivo disparan efectos de sonido mágicos o 'hechizos' musicales.",
+    "transformedIdeaTitle": "Escuela de Magia y Sonido",
+    "transformedIdeaDescription": "Programa tu varita para lanzar hechizos. Si apuntas arriba (inclinación) y agitas, lanza un hechizo de 'Levitación' (notas ascendentes). Si apuntas abajo y agitas, lanza 'Rayo' (notas rápidas).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X > 45 AND Motion.shake THEN play(AscendingScale) ELSE IF Inclination.X < -45 AND Motion.shake THEN play(FastNotes)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche",
+    "originalIdeaDescription": "La inclinación hacia adelante o atrás actúa como cambio de marchas (pitch) y el movimiento continuo simula las revoluciones del motor.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "¡Arranca motores! Usa la inclinación para cambiar de marcha (notas más graves o agudas) y agita el dispositivo para acelerar. Cuanto más rápido agites, más rápido sonará la repetición del motor.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch = map(Inclination.X); tempo = map(Motion.average); loop { Keyboard.play(pitch, duration=tempo) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual",
+    "originalIdeaDescription": "Inclinando el dispositivo a cuatro direcciones diferentes se selecciona un instrumento (bombo, caja, hi-hat) y el movimiento lo activa.",
+    "transformedIdeaTitle": "Batería en el Aire",
+    "transformedIdeaDescription": "Toca la batería sin tocar nada. Inclina a la izquierda para el bombo, a la derecha para la caja, y adelante para los platillos. ¡Agita fuerte para golpear el instrumento seleccionado!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Left THEN note = C3; ELSE IF Inclination.Right THEN note = D3; IF Motion.trigger THEN Keyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Pasos Musical",
+    "originalIdeaDescription": "Cada vez que el sensor de movimiento detecta un paso, suena una nota. La inclinación del dispositivo determina la escala musical usada.",
+    "transformedIdeaTitle": "Zapatos Musicales",
+    "transformedIdeaDescription": "¡Haz música caminando! Sujeta el dispositivo en tu cintura. Cada paso que des tocará una nota. Si te inclinas hacia adelante (corriendo), la música se volverá más alegre (escala mayor).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.peak detected THEN Keyboard.playNextInScale(); IF Inclination.Y > 0 THEN setScale(Major) ELSE setScale(Minor)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Palo de Lluvia Digital",
+    "originalIdeaDescription": "Simula el sonido de la lluvia o granizo usando notas aleatorias rápidas cuando se detecta movimiento, con el tono modificado por la inclinación.",
+    "transformedIdeaTitle": "El Hacedor de Lluvia",
+    "transformedIdeaDescription": "Recrea el sonido de una tormenta. Inclina el dispositivo para decidir si es una lluvia ligera (notas agudas) o una tormenta pesada (notas graves). Agita constantemente para que caigan las gotas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Motion.isActive: pitch = map(Inclination.Z); Keyboard.play(random(pitch-5, pitch+5))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Sonora",
+    "originalIdeaDescription": "Un dispositivo que reacciona con diferentes sonidos 'emocionales' según cómo se le manipule (suave vs brusco, boca arriba vs boca abajo).",
+    "transformedIdeaTitle": "El Robot Gruñón",
+    "transformedIdeaDescription": "Crea una mascota robot. Si lo meces suavemente (inclinación lenta), ronronea con notas suaves. Si lo agitas fuerte (movimiento brusco), ¡se enfada y grita con notas disonantes!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > strong THEN Keyboard.play(Dissonant) ELSE IF Inclination.change < slow THEN Keyboard.play(Harmonic)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Vuelo Sonoro",
+    "originalIdeaDescription": "Simulador de avión donde el pitch del sonido indica la altitud (inclinación) y la turbulencia (movimiento) añade ruido a la señal.",
+    "transformedIdeaTitle": "Aviador a Ciegas",
+    "transformedIdeaDescription": "Vuela tu avión a través de la niebla usando solo el sonido. Inclina hacia atrás para subir (el sonido se hace más agudo) y hacia adelante para bajar. Si el sonido se entrecorta, ¡es que hay turbulencias (movimiento)!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "freq = baseFreq + (Inclination.Y * 10); IF Motion.shake THEN freq = random(); Keyboard.playTone(freq)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical",
+    "originalIdeaDescription": "La música suena mientras hay movimiento. Si el movimiento cesa, la música para. La inclinación cambia la canción.",
+    "transformedIdeaTitle": "Baile Congelado",
+    "transformedIdeaDescription": "¡Fiesta automática! La música solo suena mientras todos están bailando (movimiento detectado). En cuanto te quedas quieto como estatua, la música para. Inclínate para cambiar de canción.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > threshold THEN Keyboard.playNextNote() ELSE Keyboard.stop(); IF Inclination.change THEN changeSong()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Traductor Alienígena",
+    "originalIdeaDescription": "Asigna secuencias de notas extrañas a posiciones específicas de inclinación. Agitar el dispositivo 'transmite' el mensaje.",
+    "transformedIdeaTitle": "Mensajero de Marte",
+    "transformedIdeaDescription": "Comunícate con extraterrestres. Busca la frecuencia correcta inclinando el dispositivo hasta encontrar un tono extraño. Luego, agita tres veces para enviar tu mensaje al espacio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "tone = map(Inclination.X, AlienScale); Keyboard.play(tone); IF Motion.shakeCount == 3 THEN play(ConfirmationSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Theremin de Bolsillo",
+    "originalIdeaDescription": "Un sintetizador experimental donde la inclinación controla la frecuencia y el movimiento controla el vibrato o volumen.",
+    "transformedIdeaTitle": "El Fantasma de la Ópera",
+    "transformedIdeaDescription": "Crea sonidos fantasmales como un Theremin. Inclina la mano para hacer el sonido más agudo o grave. Tiembla la mano (movimiento) para hacer que el sonido vibre como un fantasma asustadizo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch = map(Inclination.X); vibrato = map(Motion.magnitude); Keyboard.playTone(pitch + vibrato)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sonidos de Tenis/Ping Pong",
+    "originalIdeaDescription": "Detecta el gesto de 'swing' con movimiento para reproducir el golpe, y usa la inclinación para determinar si el golpe fue plano o con efecto (cambio de tono).",
+    "transformedIdeaTitle": "Wimbledon Virtual",
+    "transformedIdeaDescription": "Juega al tenis sin pelota. Haz el gesto de raquetazo (movimiento rápido) para golpear. Si inclinas la 'raqueta' hacia abajo al golpear, la pelota sonará con un efecto especial de giro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.peak > hardHit THEN { IF Inclination.Z < 0 THEN play(SpinSound) ELSE play(FlatSound) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Acústico",
+    "originalIdeaDescription": "Herramienta para construcción que reproduce una nota continua. La nota se vuelve más pura/agradable cuanto más nivelado (inclinación 0) esté, y añade ruido con movimiento.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a construir una casa recta sin mirar. Coloca el dispositivo sobre una mesa. Si suena desafinado, está torcida. Ajusta la inclinación hasta que suene una nota perfecta. ¡No te muevas o perderás la medida!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "deviation = abs(Inclination.X); IF deviation == 0 THEN play(C4) ELSE play(C4 + deviation); IF Motion > 0 THEN play(Static)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música a Cuerda",
+    "originalIdeaDescription": "El usuario debe 'dar cuerda' girando (inclinando en círculos o ejes) y luego agitar para liberar la melodía a diferentes velocidades.",
+    "transformedIdeaTitle": "Caja de Música Antigua",
+    "transformedIdeaDescription": "Para escuchar la canción secreta, primero debes dar cuerda inclinando el dispositivo a la derecha 5 veces. Luego, el ritmo de la canción dependerá de cuánto muevas el dispositivo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Right_Count >= 5 THEN { woundUp = true }; IF woundUp AND Motion.active THEN playMelody(speed=Motion.intensity)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Laberinto de Canicas Sonoro",
+    "originalIdeaDescription": "Simula una canica rodando. La inclinación cambia el 'panner' o tono de la canica rodando. Un movimiento brusco simula la canica cayendo en un agujero.",
+    "transformedIdeaTitle": "Canica Musical",
+    "transformedIdeaDescription": "Guía una canica imaginaria sobre una mesa. Al inclinar el dispositivo, la nota cambia como si la canica rodara lejos (agudo) o cerca (grave). ¡Cuidado! Si te mueves bruscamente, la canica caerá por el agujero (sonido final).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = map(Inclination.Y, Low, High); Keyboard.play(pitch); IF Motion.jolt THEN play(FallSound) & stop()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador DJ de Efectos",
+    "originalIdeaDescription": "Usa la inclinación como un 'crossfader' entre notas graves y agudas, y el movimiento como un efecto de 'scratch' de disco.",
+    "transformedIdeaTitle": "DJ Scratch Master",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Inclina el dispositivo a la izquierda para los bajos y a la derecha para los agudos. Agita el dispositivo rápidamente hacia adelante y atrás para hacer el famoso sonido de 'scratch' de los DJs.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "baseNote = map(Inclination.X); IF Motion.oscillating THEN playScratchEffect(baseNote) ELSE playTone(baseNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Monitorea la estabilidad. Pequeños movimientos generan notas bajas (aviso), grandes movimientos o cambios de inclinación generan una alarma de evacuación.",
+    "transformedIdeaTitle": "Sismógrafo Sonoro",
+    "transformedIdeaDescription": "Construye una estación científica. Deja el dispositivo quieto. Si detecta un pequeño temblor (movimiento leve), avisa con un 'bip'. Si el suelo se inclina o el temblor es fuerte, ¡suena la alarma de evacuación!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion < small_threshold THEN silence; ELSE IF Motion < big_threshold THEN play(Bip); ELSE play(Alarm)"
+  }
+]

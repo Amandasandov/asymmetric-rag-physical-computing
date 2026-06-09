@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Ruido con Alerta Sonora y Visual",
+    "originalIdeaDescription": "Un sistema que monitorea constantemente el nivel de ruido en una habitación. Cuando el ruido supera un umbral establecido, activa una alarma sonora y muestra una cruz parpadeante en la matriz LED para indicar que se debe guardar silencio.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca Secreta",
+    "transformedIdeaDescription": "Eres el guardián de una biblioteca mágica donde los libros duermen. Debes programar un sistema que detecte si alguien habla demasiado fuerte. Si el sensor de ruido detecta gritos, el sistema debe mostrar una señal de 'Silencio' en la matriz y reproducir un sonido de 'Shhh' para advertir a los visitantes ruidosos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN LEDMatrix.showImage('X') AND AudioPlayer.play('shh_sound') ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de Música Estilo Ecualizador Gráfico",
+    "originalIdeaDescription": "Un dispositivo que reproduce una pista de audio continua y utiliza el sensor de ruido para detectar los picos de volumen de la música o el ambiente, traduciéndolos en barras verticales que suben y bajan en la matriz LED en tiempo real.",
+    "transformedIdeaTitle": "DJ Robot: Luces de Fiesta",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Conviértete en un ingeniero de luces para un concierto de robots. Tu misión es hacer que las luces de la matriz LED bailen al ritmo de la música. Cuanto más fuerte sea la música o los aplausos que capte el sensor, más altas deben ser las barras de luz en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP: level = NoiseLevel.getValue(); LEDMatrix.showBarGraph(level); AudioPlayer.playBackground('dance_track')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva a la Voz",
+    "originalIdeaDescription": "Una mascota digital mostrada en la matriz LED que cambia su expresión facial basándose en el tono y volumen de la voz del usuario. Si se le habla suavemente, sonríe y ronronea; si se le grita, se asusta y hace un sonido de quejido.",
+    "transformedIdeaTitle": "Tamagotchi Sensible: Cuida a tu Pixel-Mascota",
+    "transformedIdeaDescription": "Adopta a una pequeña criatura hecha de luz. A tu mascota le asustan los ruidos fuertes. Programa su cerebro para que si le cantas suavemente, muestre un corazón y emita un sonido feliz. Pero cuidado, si detecta un ruido fuerte, ¡debe poner cara triste y llorar!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel < 30 THEN LEDMatrix.show('Heart') AND AudioPlayer.play('happy') ELSE IF NoiseLevel > 80 THEN LEDMatrix.show('Sad') AND AudioPlayer.play('cry')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica Interactivo",
+    "originalIdeaDescription": "Un sistema ambiental que reproduce sonido de lluvia constante. Al detectar un ruido fuerte repentino (como un aplauso), simula un trueno reproduciendo un estruendo y flasheando la matriz LED como si fuera un relámpago.",
+    "transformedIdeaTitle": "El Creador de Tormentas: ¡Zeus por un día!",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima. El sonido de la lluvia es relajante, pero tú quieres acción. Crea un programa donde, al aplaudir fuertemente (simulando un choque de nubes), desates un poderoso trueno y un relámpago brillante en tu pantalla LED.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('rain_loop'); IF NoiseLevel > 90 THEN AudioPlayer.play('thunder') AND LEDMatrix.flash('white', 3)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz y Sonido por Aplausos",
+    "originalIdeaDescription": "Un control domótico simple que enciende o apaga la matriz LED (como una lámpara) y una melodía de bienvenida/despedida cada vez que se detecta un patrón de ruido específico, como un aplauso doble.",
+    "transformedIdeaTitle": "La Casa Mágica: ¡Ábrete Sésamo!",
+    "transformedIdeaDescription": "En el futuro, no usamos interruptores, usamos aplausos. Diseña la entrada de tu casa inteligente. Cuando llegues y aplaudas, las luces (LED) deben encenderse y una voz debe saludarte. Si vuelves a aplaudir, todo debe apagarse para ir a dormir.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF DetectClap() THEN Toggle(LEDMatrix.State) AND AudioPlayer.play('chime')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Entrenamiento de Sigilo",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse o realizar acciones sin hacer ruido. Si el nivel de ruido supera un mínimo, se activa una alarma sonora y la matriz muestra un símbolo de 'Detectado'.",
+    "transformedIdeaTitle": "Agente Secreto: Misión Silenciosa",
+    "transformedIdeaDescription": "Eres un espía intentando infiltrarte en una base enemiga. El sensor de ruido es un guardia láser invisible. Debes programar el sistema de seguridad para probar tus habilidades: si haces el más mínimo ruido al moverte, la alarma suena y aparece un 'OJO' gigante en la pantalla. ¿Podrás quedarte quieto?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE GameActive: IF NoiseLevel > 15 THEN AudioPlayer.play('alarm') AND LEDMatrix.show('Eye') AND GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Vela Digital Interactiva",
+    "originalIdeaDescription": "La matriz LED muestra una animación de una llama y se escucha un sonido de crepitar de fuego. Cuando el sensor detecta un soplido (ruido constante de frecuencia media-alta), la luz se atenúa y el sonido se detiene, simulando apagar una vela.",
+    "transformedIdeaTitle": "Apaga el Fuego del Dragón",
+    "transformedIdeaDescription": "Una pequeña llama mágica arde en tu pantalla. Para completar el hechizo, debes apagarla soplando. Programa el sensor para que detecte el sonido de tu soplido. Si soplas lo suficientemente fuerte, la llama digital debe desaparecer y el sonido del fuego debe cesar.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LEDMatrix.showAnimation('fire'); AudioPlayer.play('fire_crackle'); IF NoiseType('blow') THEN LEDMatrix.clear() AND AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "Una herramienta para medir qué concursante recibe más aplausos. El sistema acumula el nivel de ruido durante 5 segundos, muestra una barra de progreso en la matriz y reproduce un sonido de fanfarria si se alcanza el nivel máximo.",
+    "transformedIdeaTitle": "El Juez de Talentos: ¡Aplausómetro!",
+    "transformedIdeaDescription": "Organiza un concurso de talentos en clase. Necesitas un juez imparcial. Crea un 'Aplausómetro' que escuche al público durante 5 segundos. Si los aplausos son ensordecedores, la matriz se llena de luz y suena música de victoria. Si son débiles, solo se encienden unos pocos puntos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "score = Sum(NoiseLevel over 5s); LEDMatrix.fillPercentage(score); IF score > max THEN AudioPlayer.play('fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de Idioma Alienígena",
+    "originalIdeaDescription": "El usuario habla al sensor de ruido. El sistema detecta la entrada de voz, muestra símbolos aleatorios ('glifos alienígenas') en la matriz y reproduce una secuencia de sonidos sintetizados extraños como si estuviera traduciendo.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "¡Hemos hecho contacto! Tu misión es construir un traductor universal. Cuando hables al micrófono, tu dispositivo debe convertir tu voz humana en el idioma de los marcianos, mostrando símbolos extraños en la pantalla y reproduciendo sonidos robóticos divertidos.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN LEDMatrix.showRandomGlyphs() AND AudioPlayer.play('robot_voice')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Máquina de Ruido Blanco para Bebés",
+    "originalIdeaDescription": "Un dispositivo que ayuda a dormir. Si el sensor de ruido detecta un llanto o sonido fuerte por la noche, activa automáticamente una luz tenue en la matriz y reproduce una canción de cuna suave.",
+    "transformedIdeaTitle": "La Nana Automática para Ositos",
+    "transformedIdeaDescription": "El osito bebé no puede dormir si hay silencio absoluto o si se asusta. Crea un programa que vigile el sueño del osito. Si empieza a llorar (ruido alto), enciende una luz nocturna suave (una luna) y reproduce una dulce canción de cuna para calmarlo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Threshold THEN LEDMatrix.show('Moon') AND AudioPlayer.play('lullaby') UNTIL Timer(5min)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Grito para Saltar",
+    "originalIdeaDescription": "Un videojuego simple donde un personaje en la matriz LED corre automáticamente. Para saltar obstáculos, el jugador debe hacer un ruido corto y fuerte. Si choca, suena un sonido de 'Game Over'.",
+    "transformedIdeaTitle": "Carrera Sónica: ¡Grita para Saltar!",
+    "transformedIdeaDescription": "¡Tu voz es el control! Tienes un corredor en la pantalla que avanza sin parar. Se acerca un obstáculo. ¡Rápido, grita '¡SALTA!'! Programa el juego para que un pico de sonido haga que tu personaje suba y esquive el peligro. Si no gritas a tiempo... ¡Crash!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Character.run(); IF NoiseLevel > 70 THEN Character.jump() AND AudioPlayer.play('jump_sfx'); IF CheckCollision() THEN AudioPlayer.play('crash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Voz",
+    "originalIdeaDescription": "El sistema detecta golpes de voz cortos (beatbox). Cada vez que el nivel de ruido supera un umbral muy alto en un tiempo corto, reproduce un sonido de tambor pregrabado y muestra un destello en el centro de la matriz.",
+    "transformedIdeaTitle": "Beatbox Assistido: Amplifica tu Ritmo",
+    "transformedIdeaDescription": "Quieres ser un beatboxer profesional pero necesitas ayuda con los bajos. Programa tu kit para que cada vez que hagas un sonido fuerte y seco con la boca, el sistema dispare un potente sonido de bombo (Kick Drum) y un flash visual. ¡Crea tu propio ritmo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoisePeakDetected() THEN AudioPlayer.play('kick_drum') AND LEDMatrix.flash('center')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Juguete)",
+    "originalIdeaDescription": "Simula un dispositivo paranormal. Reproduce ruido estático de fondo. Cuando el sensor de ruido capta variaciones sutiles, cambia el patrón de la matriz LED a rojo y reproduce sonidos espeluznantes.",
+    "transformedIdeaTitle": "Cazadores de Misterios: El Radar Espectral",
+    "transformedIdeaDescription": "Es noche de Halloween y buscas fantasmas. Construye un radar que escuche 'el más allá'. Normalmente solo se oye estática, pero si detectas un ruido extraño en la habitación, tu radar debe ponerse rojo y emitir una señal de alerta. ¿Hay alguien ahí?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.loop('static'); IF NoiseLevel > AmbientNoise + 10 THEN LEDMatrix.setColor('Red') AND AudioPlayer.play('ghost_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Atmosférico",
+    "originalIdeaDescription": "Al leer un cuento, el sistema detecta pausas y volumen. Si el narrador susurra, la matriz se atenúa y suena música de suspenso. Si habla fuerte, la matriz brilla y la música se vuelve heroica.",
+    "transformedIdeaTitle": "Cuentacuentos Mágico: Efectos Especiales",
+    "transformedIdeaDescription": "Mejora la hora del cuento. Programa un asistente que escuche tu voz. Cuando susurres partes de miedo, debe poner música tenebrosa y luces bajas. Cuando grites de emoción, ¡debe poner música épica y luces brillantes! Haz que la historia cobre vida.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel < 20 THEN SetMood('Suspense') ELSE IF NoiseLevel > 60 THEN SetMood('Heroic')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación",
+    "originalIdeaDescription": "Guía al usuario para respirar. Reproduce sonidos de naturaleza. La matriz muestra un círculo expandiéndose y contrayéndose. Si el usuario hace ruido (rompe la concentración), el sonido se detiene y la matriz indica 'Reiniciar'.",
+    "transformedIdeaTitle": "Maestro Zen: El Reto de la Calma",
+    "transformedIdeaDescription": "Para convertirte en un maestro Zen, debes permanecer en silencio absoluto. El sistema te guiará con luces suaves y sonidos de bosque. Pero cuidado, si el sensor detecta que hablas o te ríes, la música parará y tendrás que empezar de cero. ¿Cuánto tiempo aguantas?",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('forest'); LEDMatrix.animate('breathe'); IF NoiseLevel > 15 THEN AudioPlayer.stop() AND LEDMatrix.text('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de la Estatua Musical Inverso",
+    "originalIdeaDescription": "La música suena mientras hay ruido en la habitación (gente bailando/hablando). Si todos se callan de repente, la música para y la matriz LED muestra una cuenta regresiva para perder.",
+    "transformedIdeaTitle": "Fiesta Eterna: ¡Que no pare el ruido!",
+    "transformedIdeaDescription": "En este planeta, la energía proviene del sonido. Debes mantener la fiesta viva. Mientras detectes ruido y risas, la música sigue sonando y las luces giran. Si la clase se queda callada... ¡la energía se agota y todo se apaga! ¡Hagan ruido!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 30 THEN AudioPlayer.resume() AND LEDMatrix.animate('spin') ELSE AudioPlayer.pause() AND LEDMatrix.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Lanzamiento de Cohete por Voz",
+    "originalIdeaDescription": "Simulación de lanzamiento. El usuario debe hacer un sonido continuo 'Ooooo' que incrementa en volumen. La matriz llena una barra de combustible. Al llenarse, suena el despegue y se muestra un cohete subiendo.",
+    "transformedIdeaTitle": "Misión a Marte: Carga los Motores",
+    "transformedIdeaDescription": "Tu cohete necesita combustible sónico para despegar. Haz un sonido grave y continuo 'VROOOOM'. Mientras más fuerte lo hagas, más se llenará la barra de energía en la pantalla. Cuando llegue al máximo... ¡Despegue! Activa el sonido de propulsores.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise > 40: Fuel++; LEDMatrix.showBar(Fuel); IF Fuel == 100 THEN AudioPlayer.play('launch') AND LEDMatrix.animate('rocket')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma de Puerta Secreta",
+    "originalIdeaDescription": "Dispositivo para colocar en el pomo de una puerta. Detecta la vibración/ruido al abrirse. Al activarse, reproduce ladridos de perro y muestra unos ojos amenazantes en la matriz para asustar al intruso.",
+    "transformedIdeaTitle": "El Perro Guardián Digital",
+    "transformedIdeaDescription": "Protege tu habitación de hermanos entrometidos. Crea un perro guardián virtual. Coloca el sensor cerca de la puerta. Si alguien intenta entrar (haciendo ruido), tu programa debe soltar ladridos feroces y mostrar unos ojos enojados en la matriz LED.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > TriggerLevel THEN AudioPlayer.play('barking') AND LEDMatrix.showImage('angry_eyes')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Teléfono de Lata Digital",
+    "originalIdeaDescription": "Dos dispositivos (conceptualmente). Uno detecta ruido (mensaje) y muestra un icono de 'Enviando'. El otro (simulado) reproduce un sonido de 'Mensaje Recibido' y muestra un icono de sobre de carta.",
+    "transformedIdeaTitle": "Telégrafo de Voz: Código Espía",
+    "transformedIdeaDescription": "Envía mensajes secretos a la base. Di una palabra clave corta y fuerte. El sistema debe detectar ese 'paquete de sonido', mostrar una animación de ondas de radio enviándose y reproducir un sonido de confirmación 'Beep-Boop' de que el mensaje salió.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseInputDetected() THEN LEDMatrix.animate('waves') AND AudioPlayer.play('sent_confirm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Urbano",
+    "originalIdeaDescription": "Simulación de una ciudad. Reproduce sonido ambiente de ciudad. Si el ruido sube mucho (atasco), la matriz pone el semáforo en rojo y suena un silbato de policía. Si baja, pone verde.",
+    "transformedIdeaTitle": "Policía de Tráfico Inteligente",
+    "transformedIdeaDescription": "La ciudad es un caos. Eres el encargado de los semáforos. Si los coches (el ruido de la clase) hacen demasiado escándalo, tu semáforo (Matriz LED) debe ponerse en ROJO y debes tocar el silbato para poner orden. Cuando se calmen, dales LUZ VERDE.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 75 THEN LEDMatrix.color('Red') AND AudioPlayer.play('whistle') ELSE LEDMatrix.color('Green')"
+  }
+]

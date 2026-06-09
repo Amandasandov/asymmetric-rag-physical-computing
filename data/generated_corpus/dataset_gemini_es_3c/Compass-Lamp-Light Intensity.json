@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Farola de Puerto Inteligente",
+    "originalIdeaDescription": "Un faro que cambia de color según hacia dónde mira (Norte=Blanco, Sur=Rojo) pero solo se enciende si el sensor detecta que es de noche.",
+    "transformedIdeaTitle": "El Guardián del Puerto",
+    "transformedIdeaDescription": "Programa la seguridad del puerto. La lámpara debe estar apagada de día (Luz > 50). De noche (Luz < 50), debe encenderse para guiar barcos. Si la brújula apunta al Mar (Norte), la luz debe ser Blanca. Si apunta a la Tierra (Sur), debe ser Roja para advertir peligro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 50: IF Compass.heading < 45 OR Compass.heading > 315 THEN Lamp.set(White) ELSE Lamp.set(Red)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Rastreador de Panel Solar",
+    "originalIdeaDescription": "El usuario gira el dispositivo para encontrar la fuente de luz más fuerte. La lámpara cambia de rojo a verde cuando la orientación y la intensidad son óptimas.",
+    "transformedIdeaTitle": "Ingeniero de Energía Renovable",
+    "transformedIdeaDescription": "Optimiza la carga solar. Gira el panel (tu dispositivo) buscando el sol. La Matriz de LED no se usa, así que usaremos la Lámpara como indicador. Rojo = Poca energía/Mal ángulo. Amarillo = Mejorando. Verde Brillante = ¡Máxima eficiencia! (Luz alta + Dirección correcta).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Efficiency = Light.level; IF Efficiency > 90 AND Compass.heading == SunDir THEN Lamp.color(Green) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Caja Fuerte de las Sombras",
+    "originalIdeaDescription": "Para abrir, el usuario debe apuntar al Oeste y tapar el sensor de luz (oscuridad) al mismo tiempo. La lámpara se enciende verde al desbloquear.",
+    "transformedIdeaTitle": "El Tesoro del Ocaso",
+    "transformedIdeaDescription": "La leyenda dice: 'El tesoro se abre mirando al Poniente (Oeste) cuando cae la oscuridad'. Gira al Oeste (Compass) y cubre el sensor con tu mano para simular la noche. Si lo haces bien, la Lámpara brillará en Verde, revelando el oro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Light.level < 10 THEN Lamp.set(Green) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Detector de Vampiros",
+    "originalIdeaDescription": "La lámpara avisa si es seguro salir. Luz alta = Peligro (Lámpara Roja). Oscuridad = Seguro (Lámpara Verde). La brújula guía al ataúd.",
+    "transformedIdeaTitle": "Supervivencia Vampírica",
+    "transformedIdeaDescription": "Eres un vampiro. Si el sensor detecta sol (Luz > 40), la Lámpara se pone Roja (¡Te quemas!). Debes buscar tu ataúd que está al Norte. Usa la brújula para orientarte hacia el Norte mientras buscas un lugar oscuro donde la Lámpara se ponga Verde.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 40 THEN Lamp.set(Red); ELSE IF Compass.heading == 'North' THEN Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Varita de Hechizos de Luz",
+    "originalIdeaDescription": "Cargar la varita acercándola a una luz. Apuntar a una dirección para seleccionar el color del hechizo. Tapar el sensor para disparar.",
+    "transformedIdeaTitle": "Duelo de Magos",
+    "transformedIdeaDescription": "Recarga maná acercando la varita a una lámpara (Luz alta = Carga). Gira para elegir hechizo: Norte=Hielo (Lámpara Azul), Sur=Fuego (Roja). Para lanzar el hechizo, tapa el sensor de luz rápidamente (gesto de disparo). La lámpara hará un flash.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana = Light.level; Spell = Map(Compass.heading); IF Mana > 80 AND Light.change(Dark) THEN Lamp.flash(Spell)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Luz de Lectura Direccional",
+    "originalIdeaDescription": "Lámpara inteligente. Se enciende si está oscuro. Cambia de color según la orientación (Cálido para dormir al Este, Frío para estudiar al Oeste).",
+    "transformedIdeaTitle": "Ambiente de Lectura Perfecto",
+    "transformedIdeaDescription": "Diseña una lámpara automática. Si la habitación está oscura, se enciende sola. Si orientas tu silla al Este (amanecer/relajación), la luz es Naranja suave. Si miras al Oeste (trabajo), la luz es Blanca brillante.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20: IF Compass.heading == 'East' THEN Lamp.set(Orange) ELSE Lamp.set(White)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Brújula Cromática",
+    "originalIdeaDescription": "Herramienta de aprendizaje. Asigna un color a cada punto cardinal. La intensidad de la luz ambiental ajusta el brillo de la lámpara.",
+    "transformedIdeaTitle": "Navegación por Colores",
+    "transformedIdeaDescription": "Aprende los puntos cardinales. Norte es Rojo, Este es Amarillo, Sur es Verde, Oeste es Azul. Gira para ver los colores. El brillo de la lámpara se adapta: si estás en un cuarto oscuro, brilla tenue para no deslumbrar; si hay sol, brilla fuerte.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Hue = Map(Compass.heading); Brightness = Light.level; Lamp.setHSV(Hue, 100, Brightness)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Repetidor de Señales Morse",
+    "originalIdeaDescription": "Recibe flashes de luz (Input). Si está orientado hacia la 'Base Aliada', retransmite el mensaje con la lámpara (Output).",
+    "transformedIdeaTitle": "Torre de Comunicaciones",
+    "transformedIdeaDescription": "Eres una torre de enlace. Tu misión es retransmitir mensajes a la base del Norte. Si recibes señales de luz (flashes de linterna en el sensor) Y estás mirando al Norte, tu Lámpara debe repetir esos flashes en color Verde. Si miras a otro lado, no transmitas.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Signal = Light.readPulse(); IF Compass.heading == 'North' THEN Lamp.pulse(Green, Signal)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Cazafantasmas: El Espectro",
+    "originalIdeaDescription": "El fantasma solo aparece en la oscuridad y en una dirección específica. La lámpara parpadea cuando lo encuentras.",
+    "transformedIdeaTitle": "Investigador Paranormal",
+    "transformedIdeaDescription": "Busca el fantasma. Apaga las luces (Luz < 10). Gira lentamente con el dispositivo. El fantasma está escondido en una coordenada secreta (ej. 270°). Cuando apuntes ahí en la oscuridad, la Lámpara parpadeará en Púrpura indicando su presencia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Compass.heading == GhostDir THEN Lamp.strobe(Purple) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Juego del Semáforo Solar",
+    "originalIdeaDescription": "Si hay luz (día), el semáforo funciona según la dirección (Norte=Verde, Sur=Rojo). Si es de noche, parpadea en ámbar.",
+    "transformedIdeaTitle": "Controlador de Tráfico",
+    "transformedIdeaDescription": "Gestiona el cruce. De día (Luz alta), los coches que van al Norte tienen paso (Lámpara Verde), los del Sur esperan (Roja). Pero cuidado, al anochecer (Luz baja), el semáforo se estropea y debe parpadear en Amarillo en todas direcciones.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 30 THEN Lamp.blink(Yellow); ELSE IF Compass.heading < 180 THEN Lamp.set(Green) ELSE Lamp.set(Red)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Camaleón Direccional",
+    "originalIdeaDescription": "El dispositivo intenta esconderse. Mide la luz ambiental y ajusta su propio brillo. Cambia de color según hacia dónde 'huye' (dirección).",
+    "transformedIdeaTitle": "El Camuflaje Perfecto",
+    "transformedIdeaDescription": "Tu robot camaleón intenta pasar desapercibido. Iguala el brillo de la Lámpara con la luz de la habitación. Si giras hacia el Norte (bosque), se pone verde. Si giras al Sur (desierto), amarillo. ¡Intenta que no te vean!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.brightness = Light.level; Terrain = Map(Compass.heading); Lamp.setColor(Terrain.Color)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Ritual de la Luna Llena",
+    "originalIdeaDescription": "Orientarse hacia la luna (imaginaria/Este). Si está oscuro, la lámpara se enciende blanca y brillante. Si hay luz, se apaga.",
+    "transformedIdeaTitle": "Hombre Lobo",
+    "transformedIdeaDescription": "Evita transformarte. La luna sale por el Este. Si miras al Este en la oscuridad, la Lámpara brillará en Blanco simulando la luna llena y ¡te transformarás! Para evitarlo, busca una fuente de luz (fuego/lámpara) o mira hacia otro lado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Light.level < 20 THEN Lamp.set(White) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Revelado de Fotos (Cuarto Oscuro)",
+    "originalIdeaDescription": "Simulador de laboratorio fotográfico. Solo luz roja permitida. Si entra luz blanca (sensor), la lámpara parpadea error. Brújula selecciona la cubeta de químicos.",
+    "transformedIdeaTitle": "Laboratorio Secreto",
+    "transformedIdeaDescription": "Revela las fotos. Debes trabajar a oscuras. La Lámpara del dispositivo emite luz Roja segura. Gira al Norte para el 'Revelador', al Sur para el 'Fijador'. Si alguien enciende la luz de la habitación (Sensor detecta subida), la Lámpara parpadea alarma: ¡FOTOS VELADAS!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.set(Red); IF Light.level > SafeLimit THEN Lamp.strobe(White); Process = Map(Compass.heading)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Buscaminas Lumínico",
+    "originalIdeaDescription": "Campo minado invisible. La intensidad de la luz externa es segura. Las minas están en direcciones específicas. La lámpara avisa peligro.",
+    "transformedIdeaTitle": "Campo Minado",
+    "transformedIdeaDescription": "Cruza el campo de batalla. Es seguro caminar hacia la luz (Luz alta). Si te orientas hacia una zona oscura o hacia el Norte (donde están las minas), la Lámpara se pondrá Roja. Busca el camino iluminado y seguro (Lámpara Verde).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Danger = (Compass.heading == 'North' OR Light.level < 20); IF Danger THEN Lamp.set(Red) ELSE Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "El Faro Giratorio",
+    "originalIdeaDescription": "La lámpara siempre apunta al Norte (simulado, se enciende/apaga al girar). Solo funciona de noche.",
+    "transformedIdeaTitle": "Navegación Astronómica",
+    "transformedIdeaDescription": "Encuentra la Estrella Polar. El dispositivo solo funciona de noche (tapa el sensor). Gira lentamente. La Lámpara solo se encenderá cuando apuntes exactamente al Norte Geográfico, ayudándote a orientarte en la oscuridad.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 AND Compass.heading == 0 THEN Lamp.on(White) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Cultivo Inteligente",
+    "originalIdeaDescription": "Monitor de plantas. Verifica si la planta mira al sol (brújula + luz). Lámpara indica estado.",
+    "transformedIdeaTitle": "Asistente de Agricultura",
+    "transformedIdeaDescription": "Tus girasoles deben mirar al Este por la mañana. Coloca el sensor en la maceta. Si hay luz solar Y la orientación es Este, la Lámpara es Verde (Creciendo). Si hay luz pero mira al Oeste (incorrecto), Lámpara Naranja (Girar).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.high: IF Compass.heading == 'East' THEN Lamp.green() ELSE Lamp.orange()"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Cueva del Tesoro",
+    "originalIdeaDescription": "La entrada solo se abre iluminando un sensor específico en una pared orientada al sur.",
+    "transformedIdeaTitle": "Indiana Jones y la Luz",
+    "transformedIdeaDescription": "La puerta está sellada. El jeroglífico dice: 'La luz del sol al mediodía sobre el muro Sur abre el camino'. Gira hacia el Sur. Usa una linterna para iluminar el sensor intensamente. Si aciertas dirección e intensidad, la Lámpara brillará Dorada (Tesoro).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Light.level > 90 THEN Lamp.set(Gold)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Intermitentes de Bici Automáticos",
+    "originalIdeaDescription": "Luz trasera. Se enciende de noche. Si el usuario gira el manillar (cambio de rumbo), la lámpara parpadea indicando el giro.",
+    "transformedIdeaTitle": "Seguridad Ciclista Nocturna",
+    "transformedIdeaDescription": "Haz tu bici segura. El sistema se activa solo en oscuridad (túnel/noche). La Lámpara es roja fija. Si la brújula detecta que estás girando hacia la izquierda o derecha (cambio de rumbo > 30 grados), la Lámpara debe parpadear en amarillo como un intermitente.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.low: IF Change(Heading) > 30 THEN Lamp.blink(Yellow) ELSE Lamp.set(Red)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Medidor de Contaminación Lumínica",
+    "originalIdeaDescription": "El usuario apunta al cielo en diferentes direcciones. La lámpara muestra la calidad del cielo oscuro (Rojo=Malo, Verde=Bueno).",
+    "transformedIdeaTitle": "Astrónomo Urbano",
+    "transformedIdeaDescription": "Busca el mejor lugar para ver estrellas. Apunta al cielo en varias direcciones. El sensor mide la luz artificial. Si la lectura es alta (mucha luz), Lámpara Roja (Mal sitio). Si es baja (oscuridad), Lámpara Verde (Buen sitio para telescopio).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Quality = Inverse(Light.level); Color = Map(Quality, RedToGreen); Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Compass", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Espejo Mágico de Blancanieves",
+    "originalIdeaDescription": "Preguntar '¿Quién es la más bella?'. Girar el espejo. Si hay buena luz (belleza), se pone rosa. Si está oscuro, se pone gris.",
+    "transformedIdeaTitle": "El Espejo de la Verdad",
+    "transformedIdeaDescription": "Juega a los cuentos de hadas. Gira el 'espejo' hacia tus amigos. Si están bien iluminados (Luz alta), el espejo (Lámpara) brillará en colores mágicos y alegres. Si están en la sombra, el espejo se oscurecerá o se pondrá gris triste.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Beauty = Light.level; IF Beauty > 50 THEN Lamp.rainbow() ELSE Lamp.set(Grey)"
+  }
+]

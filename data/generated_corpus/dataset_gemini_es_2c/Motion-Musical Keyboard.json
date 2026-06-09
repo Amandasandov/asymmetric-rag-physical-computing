@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Aire Virtual",
+    "originalIdeaDescription": "Un dispositivo que permite al usuario tocar diferentes notas musicales moviendo el hardware en el aire. Dependiendo de la intensidad del movimiento, se seleccionan notas aleatorias para crear una melodía de campanillas de viento.",
+    "transformedIdeaTitle": "Lluvia de Estrellas Mágicas",
+    "transformedIdeaDescription": "¡Eres un mago controlando el clima! Crea un programa donde, al agitar tu varita (el dispositivo), caigan 'estrellas' sonoras. Cuanto más fuerte agites, más agudas y rápidas sonarán las notas, simulando una lluvia de polvo de hadas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.magnitude > 5 THEN Keyboard.playRandomNote(C5, C6)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Espada Láser",
+    "originalIdeaDescription": "Uso del sensor de movimiento para detectar el balanceo del dispositivo. Al moverlo de lado a lado, se reproduce una nota grave continua o un acorde que simula el zumbido de una espada de energía.",
+    "transformedIdeaTitle": "Entrenamiento del Caballero Galáctico",
+    "transformedIdeaDescription": "Diseña tu propia espada de luz. Programa el dispositivo para que emita un sonido grave y constante cuando la muevas suavemente para defenderte, y un tono agudo de 'impacto' cuando hagas un movimiento rápido de ataque.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.x > 8 THEN Keyboard.play(C3) ELSE IF motion.x > 2 THEN Keyboard.play(C2)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Podómetro Musical",
+    "originalIdeaDescription": "Un sistema que detecta los pasos del usuario cuando lleva el dispositivo en el bolsillo o cinturón. Cada paso detectado por el cambio en el eje Y dispara una nota musical, permitiendo crear ritmo al caminar.",
+    "transformedIdeaTitle": "Las Botas del Gigante",
+    "transformedIdeaDescription": "Imagina que eres un gigante cuyo caminar hace temblar la tierra. Crea un algoritmo que detecte cada vez que das un paso fuerte y reproduzca una nota muy grave (Do bajo) para sonorizar tu caminata pesada.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.y_acceleration > threshold THEN Keyboard.play(C1, duration=0.5)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Terremotos",
+    "originalIdeaDescription": "El dispositivo se coloca sobre una mesa. Si detecta vibración o movimiento en la superficie, comienza a tocar una secuencia de notas de advertencia rápida y repetitiva.",
+    "transformedIdeaTitle": "Detector de T-Rex",
+    "transformedIdeaDescription": "Estás en un parque jurásico y necesitas saber si se acerca un T-Rex. Programa el sensor para que se quede en silencio total si está quieto, pero si detecta las vibraciones del suelo (golpes en la mesa), toque una alerta de peligro.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake detected THEN Keyboard.playSequence([C4, E4, G4])"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita de Director de Orquesta",
+    "originalIdeaDescription": "Utilizar el dispositivo como una batuta. Los movimientos hacia arriba aumentan la octava de la nota, y los movimientos hacia abajo la disminuyen, permitiendo controlar el tono mediante la posición vertical.",
+    "transformedIdeaTitle": "El Maestro de la Orquesta Digital",
+    "transformedIdeaDescription": "Conviértete en el director de una orquesta robot. Programa tu batuta para que cuando apuntes al cielo suenen notas agudas (violines) y cuando apuntes al suelo suenen notas graves (contrabajos).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "note = map(motion.y, -10, 10, C2, C6); Keyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual",
+    "originalIdeaDescription": "Asignar movimientos bruscos en diferentes ejes (X, Y, Z) a diferentes notas o acordes percusivos en el teclado, permitiendo crear ritmos golpeando el aire.",
+    "transformedIdeaTitle": "Karate Musical",
+    "transformedIdeaDescription": "Aprende artes marciales haciendo música. Configura el sistema para que un puñetazo al frente (Eje Z) toque un 'Do', un golpe a la izquierda toque un 'Mi' y un gancho arriba toque un 'Sol'. ¡Crea una canción peleando!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.z > 5 THEN play(C) ELSE IF motion.x < -5 THEN play(E)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Inverso",
+    "originalIdeaDescription": "La música suena continuamente mientras el sensor detecta movimiento. Si el sensor deja de detectar movimiento (el usuario se congela), la música se detiene instantáneamente.",
+    "transformedIdeaTitle": "Baila para Sobrevivir",
+    "transformedIdeaDescription": "Estás atrapado en una fiesta alienígena. Si dejas de bailar, la música se apaga y pierdes energía. Programa el dispositivo para que toque una melodía divertida solo mientras detecte que te estás moviendo constantemente.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.active == TRUE THEN Keyboard.playMelody() ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Theremin Digital",
+    "originalIdeaDescription": "Emulación de un Theremin donde la inclinación lateral del dispositivo cambia la nota musical en tiempo real, creando un sonido continuo y deslizante.",
+    "transformedIdeaTitle": "El Fantasma de la Ópera",
+    "transformedIdeaDescription": "Crea un efecto de sonido espeluznante para una casa embrujada. Al inclinar suavemente el dispositivo de izquierda a derecha, el sonido debe deslizarse de notas graves a agudas como un lamento fantasmal.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP: pitch = calculatePitchFromTilt(motion.x); Keyboard.playTone(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Salto en Trampolín",
+    "originalIdeaDescription": "Detecta la aceleración en el eje vertical (Z). Cuando se detecta un pico de aceleración hacia arriba (salto) y luego caída, reproduce un sonido ascendente y descendente.",
+    "transformedIdeaTitle": "Salto a la Luna",
+    "transformedIdeaDescription": "¡Convierte tu suelo en una superficie lunar! Programa el sensor para que detecte cuando saltas. Al despegar, debe sonar una escala subiendo, y al aterrizar, una nota final de 'poing'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.z_accel > 20 THEN playScaleUp() wait; play(LandNote)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Lanzamiento de Pelota",
+    "originalIdeaDescription": "El dispositivo, insertado en una pelota de espuma, detecta cuando está en caída libre (gravedad cero relativa) y reproduce un sonido de silbido hasta que detecta el impacto.",
+    "transformedIdeaTitle": "La Pelota Cantarina",
+    "transformedIdeaDescription": "Vamos a jugar a 'la papa caliente' pero lanzando el dispositivo (con cuidado). Programa el sensor para que, mientras esté volando por el aire, cante una nota larga, y se calle abruptamente al ser atrapado.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF motion.magnitude < 0.5 (freefall) THEN Keyboard.play(G4) ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Música para Relajación (Cuna)",
+    "originalIdeaDescription": "Un sistema que reproduce una melodía de cuna lenta y suave (tempos bajos) solo cuando detecta un movimiento oscilante rítmico y lento, similar a mecer una cuna.",
+    "transformedIdeaTitle": "Nana para el Bebé Robot",
+    "transformedIdeaDescription": "Tienes que dormir a un bebé robot sensible. Si lo meces suavemente de lado a lado, programa el dispositivo para tocar una canción de cuna lenta. Si dejas de mecerlo o lo agitas muy fuerte, debe dejar de sonar.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.sway is GENTLE THEN Keyboard.playLullaby() ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caña de Pescar Sonora",
+    "originalIdeaDescription": "Simula el lanzamiento de una caña de pescar. Un movimiento rápido de muñeca hacia adelante reproduce un sonido de 'swish' seguido de notas que simulan el anzuelo cayendo al agua.",
+    "transformedIdeaTitle": "Torneo de Pesca Virtual",
+    "transformedIdeaDescription": "Sin agua ni anzuelos. Usa el sensor para imitar el movimiento de lanzar la caña. Si el movimiento es seco y rápido, debe sonar una escala rápida hacia abajo simulando el sedal hundiéndose en el lago.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.angular_velocity > high THEN Keyboard.playDescendingScale()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Robo de Galletas",
+    "originalIdeaDescription": "El dispositivo se coloca dentro de un tarro. Si se detecta cualquier manipulación o movimiento del tarro, suena una sirena utilizando notas agudas alternas.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tus dulces o tu diario secreto. Programa una trampa: el dispositivo debe estar totalmente quieto. Al más mínimo movimiento (alguien intentando robar), debe sonar una alarma policial (ni-no-ni-no).",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.isMoved() THEN Keyboard.playPattern([C6, F6], repeat)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escala Musical Giratoria",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo y gira sobre su propio eje. La brújula o giroscopio detecta la rotación continua y reproduce una escala musical que sube infinitamente mientras se gira.",
+    "transformedIdeaTitle": "El Tornado Musical",
+    "transformedIdeaDescription": "¡Gira como un remolino! Crea un desafío donde al girar tu cuerpo hacia la derecha, las notas musicales suban (Do, Re, Mi...), y si giras hacia la izquierda, las notas bajen. ¿Puedes tocar una canción girando?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF motion.rotation == clockwise THEN note++ ELSE note--"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis FX",
+    "originalIdeaDescription": "Detecta el arco de movimiento de un swing de tenis. Reproduce un sonido de golpe en el punto de mayor aceleración del arco.",
+    "transformedIdeaTitle": "Tenis Sónico en Wimbledon",
+    "transformedIdeaDescription": "Juega un partido de tenis invisible. Programa el sensor para reconocer un 'swing' de brazo. Justo en el momento más rápido del movimiento, debe sonar un acorde fuerte como si golpearas la pelota ganadora.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.peak_acceleration detected THEN Keyboard.playChord(C_Major)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Batería Aérea (Air Drums)",
+    "originalIdeaDescription": "Convierte movimientos verticales rápidos y cortos en sonidos de percusión mapeados a notas del teclado (usando notas bajas para bombo y altas para caja).",
+    "transformedIdeaTitle": "Estrella de Rock Invisible",
+    "transformedIdeaDescription": "Forma tu banda de rock. Programa el sensor para que funcione como una baqueta. Un golpe seco hacia abajo en el aire debe tocar una nota grave y corta, simulando un tambor. ¡Intenta seguir un ritmo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.down_jerk > threshold THEN Keyboard.playNote(C2, short)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Auditivo",
+    "originalIdeaDescription": "Herramienta para ciegos o construcción. Si el dispositivo no está perfectamente plano (ejes X e Y en 0), reproduce un tono. El tono se vuelve más agudo cuanto más inclinado está, y silencio cuando está plano.",
+    "transformedIdeaTitle": "Equilibrista de la Cuerda Floja",
+    "transformedIdeaDescription": "Ayuda al equilibrista a no caerse. Programa el dispositivo para que esté en silencio solo si lo mantienes perfectamente plano en tu palma. Si se inclina un poco, debe empezar a sonar un zumbido que avisa '¡Cuidado!'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "deviation = abs(motion.x) + abs(motion.y); frequency = base + deviation*50"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Acelerador de Moto",
+    "originalIdeaDescription": "Imita el manillar de una motocicleta. Al inclinar el dispositivo hacia atrás (rotación eje X), el tono de la nota sube simulando el motor acelerando.",
+    "transformedIdeaTitle": "Carrera de Motos del Futuro",
+    "transformedIdeaDescription": "Toma el manubrio de tu moto cibernética. Programa el sensor para que, al inclinar tu mano hacia atrás, el sonido del 'motor' (una nota continua) se vuelva más agudo, simulando que vas a toda velocidad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = map(motion.tilt_back, 0, 90, LowNote, HighNote); Keyboard.play(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Agitador de Dados Musical",
+    "originalIdeaDescription": "Simula lanzar dados. Se agita el dispositivo y al detenerse, reproduce un número de notas secuenciales igual al número aleatorio generado (del 1 al 6).",
+    "transformedIdeaTitle": "Dados de la Suerte Cantarines",
+    "transformedIdeaDescription": "Sustituye los dados de tus juegos de mesa. Agita el dispositivo con fuerza y programalo para que, al detenerse, elija un número al azar del 1 al 6 y toque esa cantidad de 'beeps' musicales para decirte cuánto avanzar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WAIT_FOR_SHAKE_END; num = random(1,6); REPEAT num TIMES: Keyboard.play(C4)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Frecuencia Cardíaca Simulado",
+    "originalIdeaDescription": "El dispositivo reproduce un latido constante (nota grave rítmica). Si el sensor detecta mucho movimiento (ejercicio), el tempo de los latidos aumenta automáticamente.",
+    "transformedIdeaTitle": "Corazón Biónico",
+    "transformedIdeaDescription": "Simula cómo funciona tu corazón. Programa un ritmo de fondo lento (bum... bum...). Si empiezas a correr o saltar con el sensor, el ritmo de la música debe acelerarse automáticamente para igualar tu energía.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "activity = average(motion.magnitude); bpm = base + activity; Keyboard.setTempo(bpm)"
+  }
+]

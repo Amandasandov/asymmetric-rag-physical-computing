@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Instrumento Dual",
+    "originalIdeaDescription": "Un sistema donde el usuario puede tocar música, pero el tipo de sonido emitido depende de la posición del interruptor. Si el interruptor está encendido, suenan notas de piano; si está apagado, suenan golpes de batería.",
+    "transformedIdeaTitle": "El Camaleón Musical",
+    "transformedIdeaDescription": "Crea un instrumento mágico que cambia de forma. Eres un mago en un concierto: cuando tu varita (el interruptor) está arriba, tocas una suave melodía de piano para dormir al dragón. Cuando bajas la varita, ¡bum!, tocas tambores de guerra para despertar a los caballeros.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.play(Note) ELSE Drum.play(Beat)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Base Rítmica",
+    "originalIdeaDescription": "El interruptor actúa como un activador de una base rítmica constante utilizando la batería. Mientras el ritmo suena en bucle, el usuario puede tocar la melodía libremente utilizando el teclado musical.",
+    "transformedIdeaTitle": "La Banda de Un Solo Robot",
+    "transformedIdeaDescription": "¡Tu banda no llegó al ensayo! No hay problema. Programa al 'Robot Baterista' (el interruptor) para que mantenga el ritmo constante mientras tú tocas el solo de piano más épico de la historia. ¡Conviértete en una estrella de rock solitaria!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Drum.playPattern()) AND LISTEN(Keyboard) ELSE Stop(Drum)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Acompañamiento de Percusión Sincronizado",
+    "originalIdeaDescription": "En esta configuración, cada vez que se presiona una tecla del piano, suena simultáneamente un golpe de batería, pero solo si el interruptor de 'Modo Potente' está activado. Permite acentuar notas.",
+    "transformedIdeaTitle": "Zapatos de Gigante Musical",
+    "transformedIdeaDescription": "Imagina que eres un gigante caminando por un piano enorme. Activa el 'Modo Gigante' con el interruptor: ahora, cada paso que das (cada nota que tocas) hace temblar la tierra con un fuerte golpe de tambor. ¡Desactívalo para volver a ser un elfo silencioso!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Keyboard.isPressed() THEN Drum.play() AND Keyboard.play()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Sonora",
+    "originalIdeaDescription": "Utiliza el interruptor para 'armar' una alarma. Cuando está armado, tocar cualquier tecla del teclado dispara una secuencia caótica de batería y piano para simular una sirena de alerta.",
+    "transformedIdeaTitle": "La Trampa del Museo de Joyas",
+    "transformedIdeaDescription": "Eres el guardia de seguridad de un museo. Activa el sistema de seguridad (interruptor) antes de irte. Si un ladrón intenta tocar el piano antiguo (tocar cualquier tecla), ¡sonará una alarma ensordecedora de tambores y teclas locas para atraparlo!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Keyboard.input() THEN LOOP(Drum.playRandom() + Keyboard.playRandom())"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo Binario",
+    "originalIdeaDescription": "Un juego educativo donde el sistema toca un patrón (Piano para 0, Batería para 1). El usuario usa el interruptor para cambiar el modo y debe replicar la secuencia escuchada.",
+    "transformedIdeaTitle": "Traductor de Código Espía",
+    "transformedIdeaDescription": "Eres un espía recibiendo un mensaje secreto. Los sonidos suaves (piano) son puntos y los fuertes (batería) son rayas. Usa el interruptor para alternar entre decodificar el mensaje y enviar tu propia respuesta rítmica a la base.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isToggled() THEN PlaySequence([Piano, Drum, Piano])"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Ambiente Narrativo",
+    "originalIdeaDescription": "Creación de una banda sonora para una historia. El interruptor cambia la escena: 'Día' (Piano alegre) vs 'Noche' (Batería misteriosa y notas graves).",
+    "transformedIdeaTitle": "Director de Cine de Terror",
+    "transformedIdeaDescription": "Estás filmando una película. La escena comienza feliz en el parque (toca el piano). ¡De repente, el villano aparece! Mueve el interruptor para cambiar la iluminación y la música: ahora solo suenan tambores de suspenso y notas graves. ¡Acción!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN SetMode(Spooky_Drum_Piano) ELSE SetMode(Happy_Piano)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Manual Asistido",
+    "originalIdeaDescription": "El interruptor activa un metrónomo simple con la batería (un golpe cada segundo). El usuario debe intentar tocar una escala en el teclado sincronizándose perfectamente con el golpe.",
+    "transformedIdeaTitle": "El Desafío del Relojero",
+    "transformedIdeaDescription": "El Gran Reloj de la torre se ha roto y debe ser reparado al ritmo exacto. Activa el mecanismo (interruptor) para escuchar el 'tic-tac' (batería). Debes tocar las campanadas (piano) exactamente cuando suena el golpe para arreglar el tiempo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Loop(Drum.beat(1s)) -> User must match Keyboard.play()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Mecánica",
+    "originalIdeaDescription": "Simula una caja de música. Al encender el interruptor, se reproduce una melodía preprogramada de piano y batería. Al apagarlo, la música se detiene gradualmente.",
+    "transformedIdeaTitle": "La Bailarina en la Caja",
+    "transformedIdeaDescription": "Construye una caja de música digital. Cuando abres la tapa (enciendes el interruptor), la bailarina despierta y suena un hermoso vals de piano y percusión suave. Si cierras la tapa (apagas), la música se detiene y la bailarina duerme.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Switch.isOn() DO PlayMelody(Piano, Drum)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Básico",
+    "originalIdeaDescription": "El usuario toca una melodía en el teclado. El interruptor funciona como un control de 'Drop', insertando un redoble de batería rápido e intenso mientras se mantiene presionado.",
+    "transformedIdeaTitle": "DJ Fiesta en la Playa",
+    "transformedIdeaDescription": "¡Eres el DJ principal! La gente está bailando tu melodía de piano. Cuando sientas que la energía sube, activa el interruptor para soltar el 'DROP' (un redoble de batería loco). ¡Haz que la multitud salte!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Function Loop: Listen(Keyboard); IF Switch.isOn() THEN Drum.playRoll() FAST"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sillas Musicales Manual",
+    "originalIdeaDescription": "Un controlador para el juego de las sillas. El interruptor inicia la música (Piano y Batería). Cuando el operador apaga el interruptor, el sonido se corta abruptamente para que los jugadores se sienten.",
+    "transformedIdeaTitle": "Árbitro de las Sillas Locas",
+    "transformedIdeaDescription": "Tú controlas la diversión en la fiesta. Programa el sistema para tocar una marcha divertida con piano y tambores cuando el interruptor esté encendido. ¡Apágalo en el momento más inesperado para ver quién se queda sin silla!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN PlaySong(Piano+Drum) ELSE StopAllSounds()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Uso creativo de sonidos. El teclado reproduce sonidos agudos (lluvia/viento) y el interruptor activa los 'truenos' (golpes fuertes de batería y acordes graves de piano).",
+    "transformedIdeaTitle": "El Creador de Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima. Toca las teclas agudas para hacer una lluvia suave. Cuando quieras asustar a todos con una tormenta eléctrica, activa el interruptor para lanzar truenos retumbantes (batería grave y piano fuerte).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN PlayThunder(Drum_Bass + Piano_Low) ELSE PlayRain(Keyboard_High)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Teclado de Pregunta y Respuesta",
+    "originalIdeaDescription": "El interruptor alterna entre dos roles. Rol A: El sistema toca una secuencia de batería. Rol B: El usuario responde con el teclado intentando imitar el ritmo con notas.",
+    "transformedIdeaTitle": "Conversación Alienígena",
+    "transformedIdeaDescription": "Un alienígena intenta comunicarse contigo usando golpes en su nave (batería, interruptor A). Cambia el interruptor a B para responderle usando tu traductor universal (piano). ¿Puedes repetir su frase para hacerte amigo?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOff() THEN Drum.playSequence() ELSE User.playKeyboard()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Máquina",
+    "originalIdeaDescription": "Simulación de una máquina industrial. Interruptor encendido = Sonido de operación constante (Batería rítmica). Si se toca el teclado, se simulan 'errores' o 'ajustes' en el tono.",
+    "transformedIdeaTitle": "Ingeniero de la Fábrica de Robots",
+    "transformedIdeaDescription": "La cinta transportadora de robots está funcionando (enciende el interruptor para oír los engranajes/batería). A veces se atasca: usa el teclado para ajustar las tuercas (notas de piano) y cambiar la velocidad de la máquina sin apagarla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO Drum.loop(); IF Keyboard.press() THEN ModulateTempo()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Compositor de Acordes y Ritmos",
+    "originalIdeaDescription": "El interruptor sirve como tecla 'Shift'. Tocar una tecla del piano suena normal. Tocar una tecla con el interruptor encendido toca un acorde completo y un platillo de batería.",
+    "transformedIdeaTitle": "El Piano con Superpoderes",
+    "transformedIdeaDescription": "Este no es un piano normal. Cuando mantienes presionado el 'Botón de Poder' (interruptor), cada tecla que tocas lanza un súper acorde y un platillazo explosivo. ¡Úsalo para el gran final de tu canción!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (Keyboard.playChord() AND Drum.crash()) ELSE Keyboard.playNote()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Personalizable",
+    "originalIdeaDescription": "El interruptor actúa como el botón del timbre. Al presionarlo, se dispara una secuencia corta definida por el usuario usando piano y finalizando con un golpe de batería.",
+    "transformedIdeaTitle": "El Timbre de la Mansión Embrujada",
+    "transformedIdeaDescription": "Diseña el timbre para una casa de Halloween. Cuando los visitantes presionen el botón (interruptor), debe sonar una melodía espeluznante de piano seguida de un golpe de puerta (batería) que los haga saltar del susto.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.StateChanged(To_On) THEN PlaySequence(SpookyPiano + LoudDrum)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Juego de rol. Se hacen preguntas. El operador usa el interruptor oculto para indicar 'Verdad' (acorde de piano angelical) o 'Mentira' (sonido de batería tosco y nota discordante).",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus amigos. Hazles una pregunta divertida. Si crees que dicen la verdad, mueve el interruptor a la izquierda para que suene una música celestial. Si mienten, ¡muévelo a la derecha para que suene la alarma de '¡MENTIROSO!' con tambores!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Play(TruthSound) ELSE Play(LieSound)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Secuenciador de Pasos Manual",
+    "originalIdeaDescription": "El usuario toca 4 notas en el piano. El interruptor 'graba' estas notas y luego las reproduce en bucle acompañadas de un ritmo de batería.",
+    "transformedIdeaTitle": "El Loro Musical",
+    "transformedIdeaDescription": "Tienes un loro robot. Enséñale una melodía corta tocando el piano. Cuando actives su interruptor de 'Repetir', él cantará tu melodía una y otra vez sobre una base de hip-hop (batería) hasta que le digas que pare.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Record(Keyboard); ELSE Loop(RecordedMelody + DrumBeat)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Auditiva",
+    "originalIdeaDescription": "El sistema toca un sonido aleatorio (batería o piano). El usuario debe cambiar el estado del interruptor rápidamente solo si escucha la batería.",
+    "transformedIdeaTitle": "Cazador de Mosquitos",
+    "transformedIdeaDescription": "Escucha con atención. Si oyes el piano, relájate. Pero si oyes el zumbido del mosquito (sonido de batería rápida), ¡activa el interruptor (matamoscas) lo más rápido posible para atraparlo antes de que te pique!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PlayRandom(); IF Sound==Drum AND Switch.flipped() THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metáfora de Transporte",
+    "originalIdeaDescription": "El interruptor arranca el 'motor' (batería en bucle rápido). El teclado controla el 'claxon' o la 'radio' del vehículo.",
+    "transformedIdeaTitle": "Conductor de Autobús Espacial",
+    "transformedIdeaDescription": "Súbete a tu autobús espacial. Gira la llave (interruptor) para encender los propulsores (batería retumbante). Mientras viajas por el espacio, usa el teclado para tocar la bocina a los meteoritos o poner música para los pasajeros alienígenas.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Drum.loop(EngineSound); Keyboard.enable(Horns)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Inversor de Escala",
+    "originalIdeaDescription": "Normalmente el teclado va de grave a agudo. El interruptor invierte esto, y además cambia el instrumento de piano a batería afinada.",
+    "transformedIdeaTitle": "El Mundo del Revés",
+    "transformedIdeaDescription": "Has entrado en un espejo mágico. Cuando activas el interruptor, todo se invierte: las notas agudas se vuelven graves, las graves agudas, y tu piano suena como tambores de acero. ¿Puedes tocar tu canción favorita al revés?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN MapKeys(Reverse) AND SetInstrument(SteelDrum) ELSE MapKeys(Normal)"
+  }
+]

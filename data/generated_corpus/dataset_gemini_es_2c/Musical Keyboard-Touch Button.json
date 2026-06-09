@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de puerta digital personalizado",
+    "originalIdeaDescription": "Un sistema simple donde al presionar el botón táctil se activa una melodía predefinida en el teclado musical, simulando un timbre de entrada moderno y programable para una casa inteligente.",
+    "transformedIdeaTitle": "El Timbre de la Base Espacial",
+    "transformedIdeaDescription": "Diseña el sistema de acceso para una base secreta en Marte. Los estudiantes deben programar el botón para que, al ser presionado por un 'astronauta', se reproduzca una secuencia de notas específica que alerte a la tripulación de una llegada.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalKeyboard.playSequence(['C4', 'E4', 'G4'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cambiador de octavas momentáneo",
+    "originalIdeaDescription": "El teclado reproduce notas en una escala central, pero mientras se mantiene presionado el botón táctil, las notas se transportan una octava más arriba, permitiendo un rango dinámico mayor.",
+    "transformedIdeaTitle": "Voces de Gigantes y Ratones",
+    "transformedIdeaDescription": "Crea un instrumento mágico que cambia de voz. Normalmente suena grave como un gigante, pero cuando mantienes presionado el botón mágico, el sonido se vuelve agudo como el de un ratón. Aprenderán sobre variables y modificación de tono.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isHeld() THEN Note = BaseNote + 12 ELSE Note = BaseNote; MusicalKeyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo de código Morse sonoro",
+    "originalIdeaDescription": "Utilizar el botón táctil como un interruptor telegráfico. Cada vez que se presiona el botón, el teclado emite un tono constante, permitiendo al usuario transmitir mensajes en código Morse mediante la duración de la pulsación.",
+    "transformedIdeaTitle": "El Mensajero Secreto",
+    "transformedIdeaDescription": "¡Eres un espía enviando códigos! Programa el sistema para que emita un sonido constante solo mientras presionas el botón. Los estudiantes practicarán la lógica de estados 'presionado/liberado' para enviar mensajes de puntos y rayas.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalKeyboard.toneOn('A4') ELSE MusicalKeyboard.toneOff()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de acordes automático",
+    "originalIdeaDescription": "Al tocar una nota en el teclado, si el botón táctil está activado simultáneamente, el sistema añade automáticamente la tercera y la quinta nota para formar un acorde mayor completo.",
+    "transformedIdeaTitle": "El Director de Orquesta Automático",
+    "transformedIdeaDescription": "Ayuda a un músico solitario. Cuando toca solo, suena una nota, pero si activa el 'Botón de la Banda', el sistema debe calcular y tocar notas adicionales automáticamente para crear una armonía completa.",
+    "minAge": 12,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Play(Note); IF TouchButton.isActive() THEN Play(Note + 4); Play(Note + 7)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de memoria musical",
+    "originalIdeaDescription": "El teclado reproduce una secuencia aleatoria de notas. El usuario debe intentar replicarla. El botón táctil se utiliza para 'enviar' o confirmar la respuesta una vez que el usuario ha terminado de tocar.",
+    "transformedIdeaTitle": "Desafío de Memoria Alienígena",
+    "transformedIdeaDescription": "Un alienígena te habla con música. Escucha su secuencia y repítela en el teclado. Cuando creas que lo tienes, presiona el botón de 'Transmitir' para ver si entendiste el mensaje correctamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RecordUserNotes(); IF TouchButton.pressed() THEN CheckIf(UserNotes == TargetSequence)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de ritmos manual",
+    "originalIdeaDescription": "El botón táctil actúa como un bombo o percusión, mientras que el teclado se usa para la melodía. Permite al usuario tocar una línea melódica con una mano y marcar el ritmo con la otra.",
+    "transformedIdeaTitle": "Hombre Orquesta Digital",
+    "transformedIdeaDescription": "Conviértete en una banda de una sola persona. Programa el botón para que suene como un tambor grave cada vez que lo toques, mientras usas el teclado para inventar melodías. ¡Coordinación y ritmo en acción!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Event: TouchButton.Press -> MusicalKeyboard.playPercussion('KickDrum')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de instrumentos cíclico",
+    "originalIdeaDescription": "Cada vez que se presiona el botón táctil, se cambia el tipo de sonido que emite el teclado (ej. de Piano a Sintetizador a Órgano), ciclando a través de una lista de presets.",
+    "transformedIdeaTitle": "El Camaleón Musical",
+    "transformedIdeaDescription": "Crea un instrumento que se transforma. Empieza sonando como un piano, pero cada vez que tocas el botón mágico, cambia su 'piel' a otro instrumento. Los estudiantes usarán contadores y listas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.clicked() THEN InstrumentIndex = (InstrumentIndex + 1) % TotalInstruments"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Pedal de sostenido (Sustain)",
+    "originalIdeaDescription": "Simulación de un pedal de piano. Las notas tocadas en el teclado tienen una duración corta por defecto, pero si se mantiene el botón, la duración de la nota se extiende (decay más largo).",
+    "transformedIdeaTitle": "El Eco de la Caverna",
+    "transformedIdeaDescription": "Estás tocando música en una cueva enorme. Programa el botón para que, al mantenerlo presionado, active el 'eco', haciendo que las notas duren mucho más tiempo antes de desvanecerse.",
+    "minAge": 11,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isHeld() THEN NoteDuration = 2000ms ELSE NoteDuration = 500ms"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de bucles simple",
+    "originalIdeaDescription": "El usuario toca una melodía. Al presionar el botón táctil, el sistema comienza a reproducir en bucle las últimas notas tocadas por el usuario hasta que se presione de nuevo.",
+    "transformedIdeaTitle": "La Caja de Música Infinita",
+    "transformedIdeaDescription": "Construye una máquina que recuerda tu canción. Toca algo bonito y luego presiona el botón para que la máquina lo repita una y otra vez mientras tú bailas o tocas encima.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN ToggleLoop(LastRecordedSequence)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de notas aleatorias",
+    "originalIdeaDescription": "Al presionar el botón táctil, el teclado genera y reproduce una nota aleatoria dentro de una escala pentatónica, útil para inspiración musical o juegos de azar sonoros.",
+    "transformedIdeaTitle": "Lluvia de Estrellas Musicales",
+    "transformedIdeaDescription": "Crea un generador de melodías espaciales. No necesitas saber tocar; solo programa el botón para que, cada vez que lo toques, la computadora elija una nota 'mágica' al azar que suene bien.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN Note = Random(['C', 'D', 'E', 'G', 'A']); MusicalKeyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de silencio de emergencia",
+    "originalIdeaDescription": "El teclado reproduce una pista de acompañamiento o una secuencia programada. El botón táctil funciona como un 'Kill Switch' que detiene inmediatamente todo el sonido al ser presionado.",
+    "transformedIdeaTitle": "El Juego de las Estatuas Musicales",
+    "transformedIdeaDescription": "Programa el juego clásico. La música debe sonar automáticamente, pero tú tienes el control absoluto: cuando presionas el botón, ¡silencio total! Todos deben congelarse.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE NOT TouchButton.pressed() DO MusicalKeyboard.playBackingTrack() ELSE MusicalKeyboard.stopAll()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Candado de combinación musical",
+    "originalIdeaDescription": "El usuario debe tocar una secuencia específica de 3 notas en el teclado y luego presionar el botón táctil para 'abrir' el candado (indicado por un sonido de éxito o error).",
+    "transformedIdeaTitle": "La Bóveda del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu tesoro con una clave musical. Elige tres notas secretas. Si alguien toca esas notas y presiona el botón, la bóveda se abre (sonido de triunfo). Si no, ¡suena una alarma!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() AND Last3Notes == SecretCode THEN Play('Success') ELSE Play('Alarm')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Inversor de escala musical",
+    "originalIdeaDescription": "El botón actúa como un modificador lógico. Cuando no se presiona, el teclado es normal. Cuando se presiona, el teclado invierte el orden de las notas (las teclas graves suenan agudas y viceversa).",
+    "transformedIdeaTitle": "El Piano del Mundo al Revés",
+    "transformedIdeaDescription": "Viaja a una dimensión espejo. Programa el botón para que invierta todo: cuando lo mantienes presionado, las teclas de la izquierda suenan agudas y las de la derecha graves. ¡Un reto para el cerebro!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.held() THEN Note = 127 - KeyIndex ELSE Note = KeyIndex; MusicalKeyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo con Tap Tempo",
+    "originalIdeaDescription": "El teclado emite un sonido de 'clic' constante. El usuario presiona el botón táctil repetidamente para establecer la velocidad (BPM) de ese clic basándose en el intervalo entre pulsaciones.",
+    "transformedIdeaTitle": "Marcapazos del Corazón Robot",
+    "transformedIdeaDescription": "Tienes que darle vida a un robot. Presiona el botón al ritmo que quieras que lata su corazón. El teclado comenzará a sonar 'bip-bip' exactamente a la velocidad que tú le marcaste.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Interval = TimeNow - LastPressTime; MusicalKeyboard.setMetronome(Interval)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efecto de tartamudeo (Stutter)",
+    "originalIdeaDescription": "Mientras se toca una nota en el teclado, si se presiona el botón, la nota se interrumpe y repite rápidamente, creando un efecto de estilo glitch o DJ.",
+    "transformedIdeaTitle": "DJ Remix en Vivo",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Mientras suena una nota larga, usa el botón para 'cortarla' rápidamente y crear efectos rítmicos modernos. Aprende sobre bucles rápidos y control de tiempo.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isPressed() DO { MusicalKeyboard.play(Note, 100ms); Wait(100ms) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador ascendente de tono",
+    "originalIdeaDescription": "El teclado no se toca directamente. Cada vez que se presiona el botón táctil, el sistema reproduce la siguiente nota en una escala cromática ascendente, reiniciando al llegar al final.",
+    "transformedIdeaTitle": "Escalera al Cielo",
+    "transformedIdeaDescription": "Sube una escalera musical infinita. No toques las teclas; solo presiona el botón para dar un 'paso'. Cada paso debe sonar un poco más agudo que el anterior. ¿Qué pasa cuando llegas muy alto?",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "OnButtonPress: Pitch = Pitch + 1; MusicalKeyboard.play(Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de modo Mayor/Menor",
+    "originalIdeaDescription": "El botón alterna una variable global. Dependiendo del estado de esa variable, las teclas del teclado se mapean para sonar en una escala Mayor (feliz) o Menor (triste).",
+    "transformedIdeaTitle": "El Emocionómetro Musical",
+    "transformedIdeaDescription": "Crea un instrumento que cambia de estado de ánimo. Toca una melodía feliz. Ahora, presiona el botón para poner el instrumento 'triste' y toca lo mismo. La computadora ajustará las notas automáticamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.toggleState == 0 THEN Scale = MajorMap ELSE Scale = MinorMap"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado 'Gated' (Puerta de ruido)",
+    "originalIdeaDescription": "Las teclas del teclado no producen sonido por sí mismas a menos que el botón táctil esté presionado simultáneamente, obligando a una coordinación bimanual.",
+    "transformedIdeaTitle": "Láser de Seguridad",
+    "transformedIdeaDescription": "El teclado es un panel de control desactivado. Para que funcione, un compañero debe mantener presionado el 'Interruptor de Energía' (botón) mientras tú tocas. ¡Trabajo en equipo y lógica AND!",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Key.isPressed() AND TouchButton.isPressed() THEN MusicalKeyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Arpegiador activado por botón",
+    "originalIdeaDescription": "El usuario mantiene presionada una tecla base en el teclado. Al presionar el botón táctil, se dispara una secuencia rápida de arpegio basada en esa nota raíz.",
+    "transformedIdeaTitle": "Varita Mágica de Sonidos",
+    "transformedIdeaDescription": "Elige una nota base en el teclado. Luego, usa el botón como una varita mágica: cada vez que lo toques, debe brotar una cascada de notas rápidas y brillantes a partir de tu nota base.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN PlayArpeggio(RootKey, [0, 4, 7, 12])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de reflejos auditivos",
+    "originalIdeaDescription": "El sistema reproduce un sonido después de un tiempo aleatorio. El usuario debe presionar el botón táctil lo más rápido posible tras escuchar el sonido. El teclado reproduce un tono agudo si fue rápido, grave si fue lento.",
+    "transformedIdeaTitle": "Duelo de Vaqueros Sonoros",
+    "transformedIdeaDescription": "Espera en silencio... cuando el sistema toque una nota ¡Dibuja! (Presiona el botón). Si eres rápido (menos de 0.5 seg), ganarás un sonido de victoria; si eres lento, un sonido de derrota.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Random); Play(GoSignal); StartTimer; When Button.pressed -> IF Time < 500ms THEN Play(Win) ELSE Play(Lose)"
+  }
+]

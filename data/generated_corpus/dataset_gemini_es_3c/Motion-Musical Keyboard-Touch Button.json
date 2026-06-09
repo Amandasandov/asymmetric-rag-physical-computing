@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Gestual de Aire",
+    "originalIdeaDescription": "Un sistema que permite al usuario tocar notas musicales moviendo el dispositivo en el aire. El movimiento activa el sonido y el botón cambia la escala musical o la octava.",
+    "transformedIdeaTitle": "El Violín Invisible",
+    "transformedIdeaDescription": "Conviértete en un virtuoso sin cuerdas. Mueve tu dispositivo como un arco de violín para tocar melodías. Usa el botón táctil para cambiar entre sonidos agudos y graves, creando una sinfonía con tus gestos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake() THEN MusicalKeyboard.playNote(C); IF TouchButton.isPressed() THEN MusicalKeyboard.changeOctave()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad para Objetos",
+    "originalIdeaDescription": "Dispositivo antirrobo que detecta si un objeto es movido. Al detectar movimiento, suena una secuencia de notas alarmantes. El botón táctil sirve para ingresar un código o desactivar la alarma.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tu diario o tus dulces. Coloca el sensor sobre tu tesoro. Si alguien intenta llevárselo (detectando movimiento), sonará una sirena musical estridente. Solo tú puedes desactivarla presionando el botón secreto.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.intensity > 5 THEN MusicalKeyboard.playSequence(Alarm); IF TouchButton.isPressed() THEN StopSound()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Sonoros",
+    "originalIdeaDescription": "Simulación de una varita mágica. Al agitar el dispositivo, se reproduce un sonido de 'hechizo' (arpegio). El botón táctil cambia el tipo de hechizo (fuego, hielo, curación).",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Sónica",
+    "transformedIdeaDescription": "¡Lanza hechizos reales! Agita tu varita para escuchar el brillo mágico. Presiona el botón para cambiar entre hechizos de 'Congelar' (notas agudas) y 'Terremoto' (notas graves). Aprende el movimiento correcto para cada magia.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() AND mode == 'ice' THEN MusicalKeyboard.playNote(HighC); IF TouchButton.pressed() THEN mode = 'earth'"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Ejercicios Musical",
+    "originalIdeaDescription": "Ayuda para ejercicios físicos. Cada vez que el usuario completa una repetición (movimiento detectado), suena una nota de una escala ascendente. El botón reinicia la cuenta.",
+    "transformedIdeaTitle": "Entrenador Musical Personal",
+    "transformedIdeaDescription": "¿Puedes completar la escala musical haciendo sentadillas? Cada vez que bajas y subes, el dispositivo toca la siguiente nota de la escala (Do, Re, Mi...). Si te cansas, presiona el botón para empezar de nuevo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.y_axis > threshold THEN MusicalKeyboard.playNextNoteInScale(); IF TouchButton.isPressed() THEN resetScale()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caminata Musical Rítmica",
+    "originalIdeaDescription": "Reproduce una canción nota por nota basándose en los pasos del usuario. Si el usuario deja de caminar, la música se detiene. El botón cambia la canción.",
+    "transformedIdeaTitle": "Zapatos Musicales Mágicos",
+    "transformedIdeaDescription": "La música solo suena si tú te mueves. Amarra el sensor a tu pie: cada paso toca una nota de tu canción favorita. ¡Si corres, la canción se acelera! Usa el botón para cambiar de canción.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN MusicalKeyboard.playNextNote(); IF TouchButton.isPressed() THEN changeSong()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos DJ",
+    "originalIdeaDescription": "Simulador de mesa de DJ. El movimiento de inclinación distorsiona o cambia el tono de las notas, y el botón táctil lanza un efecto de sonido específico (sample o acorde).",
+    "transformedIdeaTitle": "DJ Mix Master",
+    "transformedIdeaDescription": "¡Anima la fiesta! Inclina el dispositivo hacia los lados para hacer 'scratching' con las notas musicales. Presiona el botón táctil justo en el momento del 'drop' para soltar el bajo más potente.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "note = map(Motion.tiltX, -90, 90, C3, C5); MusicalKeyboard.playNote(note); IF TouchButton.pressed() THEN MusicalKeyboard.playChord(C_Major)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Espada de Luz Interactiva",
+    "originalIdeaDescription": "Simula el sonido de una espada de energía. El movimiento continuo genera un zumbido, y un movimiento brusco genera un sonido de choque. El botón enciende o apaga la espada.",
+    "transformedIdeaTitle": "Defensor Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada láser. Al moverla suavemente suena un zumbido constante. ¡Haz un movimiento rápido de ataque para escuchar el choque! Usa el botón para encender tu arma antes de la batalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration > high THEN MusicalKeyboard.playNote(Clash) ELSE IF Motion.isMoving() THEN MusicalKeyboard.playNote(Hum); IF TouchButton.pressed() THEN togglePower()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción 'Patata Caliente'",
+    "originalIdeaDescription": "Juego grupal. La música suena mientras se pasa el dispositivo. El movimiento mantiene la música, pero un temporizador aleatorio la detiene. El botón reinicia la ronda.",
+    "transformedIdeaTitle": "La Bomba Musical",
+    "transformedIdeaDescription": "Pásale el dispositivo a tus amigos con cuidado pero rápido. Mientras detecte movimiento al pasarse, sonará música. ¡Cuando la música pare (temporizador aleatorio), el que lo tenga pierde! Presiona el botón para revancha.",
+    "minAge": 9,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE timer > 0: IF Motion.detected() THEN MusicalKeyboard.playRandomNote(); IF timer == 0 THEN MusicalKeyboard.playNote(Explosion); IF TouchButton.pressed() THEN resetGame()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Sonora",
+    "originalIdeaDescription": "Una mascota sin pantalla. Agitarla suavemente la hace 'ronronear' (notas graves). Si no se mueve por mucho tiempo, llora. El botón se usa para 'alimentarla'.",
+    "transformedIdeaTitle": "Tu Huevo de Dragón",
+    "transformedIdeaDescription": "Cuida de tu huevo de dragón. Mécelo suavemente para que duerma (melodía de cuna). Si lo dejas quieto mucho tiempo, empezará a llorar. Presiona el botón para darle calor y comida cuando tenga hambre.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.gentleShake() THEN MusicalKeyboard.playMelody(Lullaby); IF Time.idle > 10s THEN MusicalKeyboard.playNote(Cry); IF TouchButton.pressed() THEN MusicalKeyboard.playNote(Happy)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Bailarina",
+    "originalIdeaDescription": "Una caja de música inversa. Solo suena cuando detecta que el usuario está bailando (movimiento constante). El botón cambia el género musical (Vals, Pop, Rock).",
+    "transformedIdeaTitle": "Fiesta de Baile Congelado",
+    "transformedIdeaDescription": "¡La música eres tú! Mientras bailes y te muevas, la canción continuará sonando. En cuanto te quedes 'congelado' como estatua, la música se detendrá instantáneamente. Usa el botón para cambiar el ritmo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isActive() THEN MusicalKeyboard.continueSong() ELSE MusicalKeyboard.stop(); IF TouchButton.pressed() THEN nextSong()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Vehículo",
+    "originalIdeaDescription": "Usa la inclinación o movimiento para simular las revoluciones de un motor usando notas graves que suben de tono. El botón funciona como el claxon.",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula 1",
+    "transformedIdeaDescription": "Convierte tu mano en un auto de carreras. Inclina hacia adelante para acelerar y escucha cómo sube el tono del motor. ¡Cuidado con el tráfico! Presiona el botón para tocar el claxon si alguien se cruza.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = map(Motion.tiltY, 0, 90, LowNote, HighNote); MusicalKeyboard.playNote(pitch); IF TouchButton.pressed() THEN MusicalKeyboard.playNote(Horn)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo y Equilibrio",
+    "originalIdeaDescription": "El usuario debe transportar el dispositivo sin activarlo. Si el movimiento supera un umbral sensible, suena una nota de error. El botón reinicia el nivel.",
+    "transformedIdeaTitle": "El Desafío del Ninja",
+    "transformedIdeaDescription": "Debes llevar el 'artefacto sagrado' de un lado a otro de la habitación sin que suene. Si te mueves muy rápido o tiemblas, sonará la alarma y perderás. Presiona el botón para intentar de nuevo.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeIntensity > 2 THEN MusicalKeyboard.playNote(Alarm); IF TouchButton.pressed() THEN resetSensor()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería de Aire y Botón",
+    "originalIdeaDescription": "Instrumento híbrido. Un movimiento brusco hacia abajo actúa como el golpe de tambor o platillo. El botón actúa como el bombo de pie.",
+    "transformedIdeaTitle": "Estrella de Rock: Batería Aérea",
+    "transformedIdeaDescription": "Crea el ritmo perfecto. Golpea el aire con tu mano para tocar la caja (snare) y usa tu dedo en el botón como si fuera el pedal del bombo. ¡Coordina ambos para crear un ritmo de rock!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.shakeDown() THEN MusicalKeyboard.playNote(SnareSound); IF TouchButton.pressed() THEN MusicalKeyboard.playNote(KickSound)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Digital",
+    "originalIdeaDescription": "Controla el tempo de una melodía pregrabada. Agitar rápido aumenta la velocidad de reproducción de las notas. El botón detiene o inicia la actuación.",
+    "transformedIdeaTitle": "Maestro de la Orquesta",
+    "transformedIdeaDescription": "Tú tienes la batuta. Agita el dispositivo suavemente para una melodía lenta y tranquila. Agítalo con energía para que la orquesta toque 'Presto' (muy rápido). Presiona el botón para el aplauso final.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "tempo = map(Motion.speed, 0, 10, 60bpm, 180bpm); MusicalKeyboard.playSong(tempo); IF TouchButton.pressed() THEN stopMusic()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cerradura de Patrón Musical",
+    "originalIdeaDescription": "Sistema de seguridad lúdico. El usuario debe realizar una secuencia (ej: agitar, botón, agitar) para desbloquear una melodía de éxito. Si falla, suena error.",
+    "transformedIdeaTitle": "Caja Fuerte Secreta",
+    "transformedIdeaDescription": "Para abrir la caja fuerte, debes conocer la clave secreta de movimientos: ¡Agitar, Pulsar, Agitar! Si lo haces en el orden correcto, escucharás el sonido de victoria. Si fallas, sonará la alarma.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Sequence == [Motion, Button, Motion] THEN MusicalKeyboard.playMelody(Success) ELSE MusicalKeyboard.playNote(Error)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Sonora",
+    "originalIdeaDescription": "Simulador deportivo. Detecta el movimiento de swing para reproducir un sonido de golpe. El botón sirve para 'lanzar' la pelota (servicio).",
+    "transformedIdeaTitle": "Torneo de Tenis Sónico",
+    "transformedIdeaDescription": "Juega la final de Wimbledon en tu cuarto. Presiona el botón para lanzar la pelota al aire, espera un segundo y... ¡Haz el swing con el sensor! Si lo haces a tiempo, escucharás un raquetazo potente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN waitForSwing(); IF Motion.swingDetected() AND timingIsGood THEN MusicalKeyboard.playNote(HitSound)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Clima Ambiental",
+    "originalIdeaDescription": "Crea una atmósfera sonora. Movimientos suaves crean sonido de viento o lluvia ligera (notas aleatorias altas). El botón activa un trueno (acorde grave).",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Controla el clima. Mueve suavemente el dispositivo para crear una lluvia musical relajante. Cuando quieras asustar a todos, ¡presiona el botón para invocar un trueno retumbante!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isMoving() THEN MusicalKeyboard.playRandomHighNotes(); IF TouchButton.pressed() THEN MusicalKeyboard.playLowChord()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo Morse Sonoro",
+    "originalIdeaDescription": "Sistema de comunicación. El botón hace puntos (notas cortas) y un movimiento rápido hacia adelante hace rayas (notas largas). Permite enviar mensajes codificados.",
+    "transformedIdeaTitle": "Espía: Comunicador Secreto",
+    "transformedIdeaDescription": "Envía mensajes en código a tus compañeros espías. Presiona el botón para un sonido corto (Punto) y mueve el dispositivo adelante para un sonido largo (Raya). ¿Puedes deletrear S.O.S.?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN playShortNote(); IF Motion.jerkForward() THEN playLongNote()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de la Suerte Musical",
+    "originalIdeaDescription": "Juego de azar. Al agitar fuerte se 'gira' la ruleta (notas rápidas). Al detenerse, cae en una nota al azar. El botón confirma la selección.",
+    "transformedIdeaTitle": "La Ruleta Musical de la Fortuna",
+    "transformedIdeaDescription": "¿Qué premio ganarás? Agita con fuerza para girar la ruleta, escucharás las notas pasar muy rápido. Cuando se detenga en una nota final, presiona el botón para reclamar tu premio virtual.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake() THEN MusicalKeyboard.playScaleLoop(); WHEN Motion.stops() THEN MusicalKeyboard.playNote(Random); IF TouchButton.pressed() THEN blinkLights()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Juguete de broma. Se hacen preguntas. Si el sujeto se mueve mucho (nervios) suena alarma. El operador puede forzar 'Verdad' o 'Mentira' con el botón.",
+    "transformedIdeaTitle": "Detector de Nervios y Mentiras",
+    "transformedIdeaDescription": "Hazle preguntas a tus amigos. Pídeles que sostengan el sensor. Si se ponen nerviosos y les tiembla la mano, ¡el detector tocará una nota de 'Mentira'! Tú puedes presionar el botón secretamente para salvarlos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tremble() > limit THEN MusicalKeyboard.playNote(Buzz); IF TouchButton.held() THEN limit = 100 (SafeMode)"
+  }
+]

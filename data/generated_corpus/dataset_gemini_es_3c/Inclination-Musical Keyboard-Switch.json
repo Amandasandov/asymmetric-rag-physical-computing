@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica Melódica",
+    "originalIdeaDescription": "Un dispositivo en forma de varita que permite al usuario crear melodías moviéndolo en el aire. El interruptor activa el modo mágico, y la inclinación de la varita selecciona qué nota musical suena, permitiendo gestos expresivos para tocar música.",
+    "transformedIdeaTitle": "Desafío del Director de Orquesta Digital",
+    "transformedIdeaDescription": "Los estudiantes programarán una varita digital. El objetivo es mapear el ángulo de inclinación (eje Y) a una escala musical específica. Deben usar el interruptor como un botón de 'mute/unmute' para que la música solo suene cuando el director esté listo. Aprenderán sobre rangos de variables y condicionales.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN (Read Inclination.Y -> Map Value to Note -> Play Note)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Inclinación para Bicicletas",
+    "originalIdeaDescription": "Un sistema antirrobo para bicicletas. Cuando el usuario estaciona, activa el interruptor. Si la bicicleta se inclina (alguien intenta moverla o se cae), el teclado musical reproduce una secuencia de notas de alarma estridentes.",
+    "transformedIdeaTitle": "Diseñando el Sistema de Seguridad 'No Me Toques'",
+    "transformedIdeaDescription": "Los alumnos crearán un sistema de seguridad. Deberán definir un 'umbral de seguridad' para la inclinación. Si el sensor detecta un ángulo mayor al umbral mientras el interruptor está en posición de 'Armado', el sistema debe disparar una alerta sonora repetitiva. Introduce el concepto de estados y comparadores lógicos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND (Inclination > Threshold OR Inclination < -Threshold) THEN Play AlarmLoop"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Cantarín",
+    "originalIdeaDescription": "Una herramienta para construcción que ayuda a encontrar superficies planas. Si la superficie está inclinada, reproduce notas disonantes graves o agudas según la dirección. Cuando está perfectamente nivelada, reproduce un acorde armonioso. El interruptor enciende la herramienta.",
+    "transformedIdeaTitle": "El Buscador del Equilibrio Perfecto",
+    "transformedIdeaDescription": "En esta actividad, los estudiantes deben calibrar un sensor. Programarán el dispositivo para que el silencio o una nota agradable suene solo cuando la inclinación sea exactamente 0. Cualquier desviación positiva o negativa generará notas de advertencia, enseñando precisión y lógica 'if-else-if'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON: IF Inclination == 0 THEN Play C_Major ELSE Play Error_Note"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sintetizador de Theremin Digital",
+    "originalIdeaDescription": "Un instrumento musical experimental inspirado en el Theremin. El usuario inclina el dispositivo hacia adelante o atrás para cambiar el tono de la nota de forma continua. El interruptor sirve para cambiar entre octavas o tipos de sonido.",
+    "transformedIdeaTitle": "Programación de Instrumentos Virtuales",
+    "transformedIdeaDescription": "Los estudiantes construirán un instrumento donde la física controla el sonido. El reto es convertir la lectura analógica continua de la inclinación en notas discretas del teclado. El interruptor funcionará como un modificador de variable, sumando un valor constante para cambiar la octava (matemáticas simples aplicadas).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Inclination); IF Switch == ON THEN Note = Note + 12; Play Note"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Volante de Conducción Musical",
+    "originalIdeaDescription": "Un juguete tipo volante donde girar a la izquierda reproduce notas graves y a la derecha notas agudas, simulando el sonido de un motor acelerando o desacelerando. El interruptor arranca el 'motor' (habilita el sonido).",
+    "transformedIdeaTitle": "Simulador de Coche Sonoro",
+    "transformedIdeaDescription": "Los niños programarán un volante interactivo. Deben establecer una relación directa entre el eje X de inclinación y la frecuencia de las notas. El interruptor actúa como la llave de encendido, introduciendo el concepto de bucle principal que solo se ejecuta bajo una condición verdadera.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Switch == ON: Read Inclination.X -> Play Corresponding Note"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Un dispositivo wearable para ejercicio. Se coloca en el muslo. Al bajar (cambiar inclinación), reproduce una escala descendente, y al subir, una ascendente. El interruptor inicia la sesión de entrenamiento.",
+    "transformedIdeaTitle": "El Entrenador Personal Algorítmico",
+    "transformedIdeaDescription": "Los estudiantes diseñan un algoritmo para monitorear movimiento humano. Deben detectar el cambio progresivo en el sensor de inclinación y reproducir sonido en tiempo real para dar retroalimentación (feedback) al usuario sobre la profundidad de su movimiento.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON: CurrentTilt = Read Inclination; Play Note mapped to CurrentTilt"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Musical",
+    "originalIdeaDescription": "Una caja fuerte que solo se abre si se inclina en una secuencia secreta de ángulos (como una combinación de caja fuerte antigua), reproduciendo notas como pistas. El interruptor confirma la entrada de la combinación.",
+    "transformedIdeaTitle": "Hackers de la Bóveda Secreta",
+    "transformedIdeaDescription": "Un juego de lógica donde los estudiantes programan una 'contraseña gestual'. Deben verificar si la inclinación coincide con un valor predefinido (ej. 45 grados) y si el interruptor es presionado en ese momento exacto para reproducir la nota de 'éxito' o 'acceso concedido'.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch_Pressed AND Inclination == Secret_Angle THEN Play Success_Fanfare ELSE Play Error_Buzz"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "El Violín de Aire",
+    "originalIdeaDescription": "Simula tocar un violín. La mano izquierda (inclinación del dispositivo) selecciona la nota en el diapasón virtual, y el interruptor actúa como el arco, reproduciendo la nota solo cuando se mantiene presionado.",
+    "transformedIdeaTitle": "Creación de la Orquesta Invisible",
+    "transformedIdeaDescription": "Los alumnos deben separar la selección de datos (inclinación selecciona nota) de la ejecución (interruptor reproduce sonido). Esto enseña la diferencia entre preparar una variable y ejecutar una función basada en un disparador (trigger).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Selected_Note = Map(Inclination); IF Switch == ON THEN Play Selected_Note"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juguete de Lluvia Digital",
+    "originalIdeaDescription": "Un tubo que simula un palo de lluvia. Al inclinarlo, las notas caen en cascada de agudas a graves simulando agua. El interruptor cambia entre sonido de 'lluvia suave' y 'tormenta' (velocidad de las notas).",
+    "transformedIdeaTitle": "Simulación de Fenómenos Naturales",
+    "transformedIdeaDescription": "Los estudiantes recrearán el sonido de la lluvia. Usarán la inclinación para determinar la velocidad del bucle de notas. El interruptor modificará los parámetros del bucle (ej. delay entre notas) para simular diferentes intensidades de lluvia, enseñando control de flujo y temporización.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Map(Inclination); IF Switch == ON THEN Speed = Speed / 2; Loop Play Random_Note with Delay(Speed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Casero",
+    "originalIdeaDescription": "Un sismógrafo sonoro que se deja en una mesa. Si la mesa tiembla (cambios rápidos en inclinación), suena una alarma. El interruptor reinicia el sistema después de un evento.",
+    "transformedIdeaTitle": "Ingeniería Sísmica: Alerta Temprana",
+    "transformedIdeaDescription": "El desafío es detectar cambios bruscos. Los estudiantes deben comparar la inclinación actual con la inclinación anterior. Si la diferencia (delta) es mayor a un margen, suena la alarma. El interruptor actúa como un 'reset' manual para detener el sonido.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Delta = Abs(CurrentInclination - LastInclination); IF Delta > SensitiveLimit THEN Play Alarm; IF Switch == OFF THEN Stop"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de DJ con Efectos",
+    "originalIdeaDescription": "Una mesa de mezclas portátil. Inclinar el dispositivo hacia los lados aplica un efecto de 'pitch bend' (deformación de tono) a la melodía. El interruptor activa o desactiva el ritmo base.",
+    "transformedIdeaTitle": "Programando la Mesa de Mezclas",
+    "transformedIdeaDescription": "Los alumnos explorarán la modificación de audio en tiempo real. Programarán una base rítmica que suene si el interruptor está activo, y sumarán el valor del sensor de inclinación a la nota base para crear efectos de distorsión sonora, aprendiendo aritmética de variables en tiempo real.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON: BaseNote = 60; Output = BaseNote + (Inclination / 10); Play Output"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "El Robot Traductor de Emociones",
+    "originalIdeaDescription": "Un dispositivo que da 'voz' a un robot. Si inclinas el robot hacia arriba (orgullo), toca una fanfarria mayor. Si lo inclinas hacia abajo (tristeza), toca una escala menor lenta. El interruptor activa el modo de voz.",
+    "transformedIdeaTitle": "Inteligencia Emocional Robótica",
+    "transformedIdeaDescription": "Los estudiantes programarán 'estados de ánimo' basados en datos. Definirán rangos: Inclinación > 20 es 'Feliz', Inclinación < -20 es 'Triste'. Usarán el interruptor para habilitar la expresión del robot, utilizando estructuras condicionales anidadas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON: IF Inclination > 20 THEN Play HappyScale ELSE IF Inclination < -20 THEN Play SadScale"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Sonoro",
+    "originalIdeaDescription": "Un juego donde el usuario debe guiar una 'bola imaginaria' manteniendo el dispositivo plano. Si se inclina demasiado en cualquier dirección, suena una nota de error que se vuelve más aguda cuanto más se inclina. El interruptor inicia un nuevo nivel.",
+    "transformedIdeaTitle": "Desarrollo de Juegos: El Desafío del Laberinto",
+    "transformedIdeaDescription": "El objetivo es gamificar el equilibrio. Los estudiantes deben calcular la magnitud de la inclinación (valor absoluto) y usarla para controlar el tono del audio. Si el interruptor se apaga y enciende, reinicia un contador de tiempo (puntuación).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ErrorLevel = Abs(Inclination); Play Note(Base + ErrorLevel); IF Switch == TOGGLE THEN Reset_Game"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Bastón para Invidentes con Sonar Musical",
+    "originalIdeaDescription": "Un prototipo de ayuda accesibilidad. Se coloca en un bastón. Si el bastón detecta una pendiente peligrosa (inclinación excesiva hacia abajo), emite sonidos de advertencia. El interruptor apaga el dispositivo para ahorrar batería.",
+    "transformedIdeaTitle": "Tecnología Asistiva: Bastón Inteligente",
+    "transformedIdeaDescription": "Los estudiantes diseñarán una solución para un problema real. Programarán el sensor para detectar ángulos peligrosos (ej. > 45 grados) que indiquen un escalón o caída, activando una alerta auditiva. El interruptor gestiona el suministro de energía (lógica de encendido/apagado).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Inclination.Y < -45 THEN Play Warning_Beeps"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "El Acelerador de Partituras",
+    "originalIdeaDescription": "Un metrónomo interactivo. Al inclinar el dispositivo a la derecha, la música se reproduce más rápido. A la izquierda, más lento. El interruptor pausa o reanuda la canción.",
+    "transformedIdeaTitle": "Controlador de Tiempo Musical",
+    "transformedIdeaDescription": "Una lección sobre frecuencia y temporizadores. Los estudiantes deben mapear el valor de inclinación a la variable de 'Duración de Nota' o 'Tempo'. Cuanto mayor la inclinación, menor el tiempo de espera entre notas. El interruptor actúa como pausa.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = BaseTempo - Inclination; IF Switch == ON THEN Play Melody(Tempo)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Guitarra de Trémolo",
+    "originalIdeaDescription": "Un accesorio para guitarra de juguete. Al agitar el mástil (cambios rápidos de inclinación), se crea un efecto de vibrato (notas oscilantes). El interruptor cambia el tipo de sonido (piano a órgano).",
+    "transformedIdeaTitle": "Procesamiento de Señales de Audio",
+    "transformedIdeaDescription": "Los alumnos simularán un efecto de vibrato. Deben programar un bucle que lea la inclinación y la sume y reste rápidamente a la nota base para crear oscilación. El interruptor cambiará el 'instrumento' seleccionando un banco de sonidos diferente.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Modulation = Read(Inclination); Play Note + Modulation; IF Switch CHANGED THEN ChangeInstrument()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nave Espacial con Motor Sónico",
+    "originalIdeaDescription": "Juguete de nave espacial. Al inclinar hacia arriba (despegue), el tono sube. Al nivelar (crucero), el tono es constante. El interruptor activa los propulsores (sonido on/off).",
+    "transformedIdeaTitle": "Física de Vuelo y Sonido",
+    "transformedIdeaDescription": "Una simulación simple de física. Los estudiantes asocian la inclinación (ángulo de ataque) con la frecuencia del sonido del motor. Deben asegurar una transición suave de notas para que suene como un motor acelerando, controlado por el interruptor maestro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON: Pitch = Map(Inclination, -90, 90, LowNote, HighNote); Play Pitch"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "El Péndulo Musical",
+    "originalIdeaDescription": "Un dispositivo colgado de una cuerda que se balancea. En cada extremo del balanceo (máxima inclinación), toca una nota, actuando como un metrónomo visual y sonoro. El interruptor inicia el conteo.",
+    "transformedIdeaTitle": "Estudio del Movimiento Pendular",
+    "transformedIdeaDescription": "Los estudiantes explorarán el movimiento armónico simple. Deben detectar los picos (máximos y mínimos) de la onda de inclinación y disparar un sonido solo en esos momentos. El interruptor sirve para resetear el análisis.",
+    "minAge": 14,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON: IF Inclination reaches Peak THEN Play Tick"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Zapatos de Tap Digitales",
+    "originalIdeaDescription": "Dispositivos acoplables al calzado. Al levantar el pie (inclinación), se carga el sonido. Al pisar (inclinación plana de golpe), suena el tap. El interruptor enciende los zapatos.",
+    "transformedIdeaTitle": "Wearables: Pasos Musicales",
+    "transformedIdeaDescription": "Los alumnos crearán tecnología vestible. Deben programar una secuencia lógica: Esperar a que la inclinación indique 'pie levantado', luego esperar a que indique 'pie plano' rápidamente para disparar el sonido de percusión/nota. El interruptor es el botón de encendido.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON: IF State == 'Up' AND Inclination == Flat THEN Play Note; State = 'Down'"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas Sí/No",
+    "originalIdeaDescription": "Un juguete para tomar decisiones. Inclinar a la derecha hace un sonido alegre (Sí), a la izquierda un sonido grave (No). El interruptor bloquea la respuesta seleccionada.",
+    "transformedIdeaTitle": "La Máquina de Decisiones Binarias",
+    "transformedIdeaDescription": "Una introducción a la lógica binaria y árboles de decisión. Los estudiantes programan el dispositivo para evaluar la inclinación como positiva o negativa y asignar una respuesta sonora. El interruptor actúa como una función de 'Bloqueo' (Latch) para guardar el resultado final.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination > 0 THEN Sound=Yes ELSE Sound=No; IF Switch == ON THEN Play(Sound)"
+  }]

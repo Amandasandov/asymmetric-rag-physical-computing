@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Brújula Musical de Orientación",
+    "originalIdeaDescription": "Una herramienta donde cada punto cardinal principal (Norte, Sur, Este, Oeste) activa una nota musical distinta, permitiendo al usuario orientarse sin mirar la pantalla mediante pistas auditivas.",
+    "transformedIdeaTitle": "El Explorador del Bosque Encantado",
+    "transformedIdeaDescription": "Imagina que estás perdido en un bosque mágico donde la niebla no te deja ver. Debes programar tu brújula mágica para que cante una nota 'Do' cuando mires al Norte (la salida) y notas graves de advertencia si miras hacia otros peligros.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 45 OR Compass.heading > 315 THEN Keyboard.play('C') ELSE Keyboard.play('G_low')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Radar de Tesoros Sonoro",
+    "originalIdeaDescription": "Utiliza la brújula para detectar si el usuario está mirando hacia una dirección objetivo predefinida. El tono de las notas musicales aumenta a medida que el ángulo del usuario se acerca al ángulo objetivo.",
+    "transformedIdeaTitle": "Cazador de Fantasmas",
+    "transformedIdeaDescription": "Eres un cazafantasmas rastreando una señal espectral. El fantasma se esconde en una dirección específica (ej. 90 grados). Crea un detector que haga sonidos agudos y rápidos cuando estés mirando directamente al fantasma y graves cuando le des la espalda.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "difference = abs(TargetAngle - Compass.heading); IF difference < 10 THEN Keyboard.play('High_C') ELSE Keyboard.play('Low_C')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Direccional",
+    "originalIdeaDescription": "Un juego donde el usuario debe girar el dispositivo hacia una secuencia específica de direcciones (ej. Norte, luego Este, luego Oeste) para desbloquear una melodía de victoria.",
+    "transformedIdeaTitle": "El Código Secreto del Espía",
+    "transformedIdeaDescription": "Para abrir la bóveda del banco, debes girar el dial (tú mismo con el dispositivo) en la secuencia correcta: Norte, Este, Sur. Programa la app para que toque una nota de confirmación solo cuando completes la secuencia correcta en orden.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == North THEN step=1; IF step==1 AND Compass.heading == East THEN step=2... IF step==3 THEN Keyboard.playMelody()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escala Musical de 360 Grados",
+    "originalIdeaDescription": "Mapea los 360 grados de la brújula a una escala musical completa. A medida que el usuario gira en círculo completo, se reproduce una escala musical ascendente o descendente.",
+    "transformedIdeaTitle": "Escalando la Montaña Musical",
+    "transformedIdeaDescription": "Convierte tu giro físico en una subida musical. Programa tu dispositivo para que, al girar lentamente en círculo, toques todas las notas de la escala (Do, Re, Mi...) como si estuvieras subiendo una escalera de caracol invisible.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "noteIndex = map(Compass.heading, 0, 360, 0, 7); Keyboard.play(scale[noteIndex])"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Virtual Theremin",
+    "originalIdeaDescription": "Un instrumento experimental donde la orientación del dispositivo controla la selección de la nota, permitiendo al usuario 'pintar' melodías en el aire simplemente girando su cuerpo.",
+    "transformedIdeaTitle": "El Mago de las Melodías",
+    "transformedIdeaDescription": "Conviértete en un hechicero que controla el sonido con el movimiento. Crea un programa donde girar a la derecha hace que la música sea más aguda y girar a la izquierda la hace más grave, permitiéndote componer canciones sin tocar ninguna tecla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = Compass.heading / 10; Keyboard.playFrequency(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simón Dice Geográfico",
+    "originalIdeaDescription": "La aplicación nombra un punto cardinal y el usuario debe girar hacia allí rápidamente. Si la brújula detecta la dirección correcta, el teclado toca un sonido de éxito.",
+    "transformedIdeaTitle": "Capitán del Barco Pirata",
+    "transformedIdeaDescription": "¡El capitán grita órdenes! '¡A estribor (Este)!' o '¡A proa (Norte)!'. Debes programar tu timón para que verifique si estás mirando hacia donde dijo el capitán. Si aciertas, suena una campana; si fallas, suena una bocina de error.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "target = Random('N','S','E','W'); IF Compass.direction == target THEN Keyboard.play('Ding') ELSE Keyboard.play('Buzz')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Desviación de Rumbo",
+    "originalIdeaDescription": "Una ayuda para caminar en línea recta. Se establece un rumbo y si el usuario se desvía a la izquierda o derecha, suenan notas disonantes para corregirlo.",
+    "transformedIdeaTitle": "Caminata en la Cuerda Floja",
+    "transformedIdeaDescription": "Estás cruzando un cañón sobre una cuerda floja invisible. Debes mantenerte mirando exactamente al frente (Norte). Programa una alerta: si te desvías a la izquierda suena una nota baja, si te desvías a la derecha suena una nota alta. ¡Mantén el silencio para no caer!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading < 350 AND Compass.heading > 180 THEN Keyboard.play('Left_Warn') ELSE IF Compass.heading > 10 AND Compass.heading < 180 THEN Keyboard.play('Right_Warn')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Acordes Ambientales",
+    "originalIdeaDescription": "Divide el espacio en cuatro cuadrantes. Cada cuadrante reproduce un acorde musical diferente (Mayor, Menor, Séptima) creando atmósferas sonoras según hacia dónde mire el usuario.",
+    "transformedIdeaTitle": "El DJ de las Emociones",
+    "transformedIdeaDescription": "Crea una pista de baile donde la música cambia según hacia dónde mire la gente. Programa el Norte para que suene alegre (acordes mayores) y el Sur para que suene misterioso (acordes menores). ¡Tú controlas el ambiente girando!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading < 90 THEN Keyboard.playChord('C_Major') ELSE IF Compass.heading < 180 THEN Keyboard.playChord('A_Minor')..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música Centrífuga",
+    "originalIdeaDescription": "La melodía de una canción famosa solo avanza nota por nota si el usuario continúa girando en una dirección específica a una velocidad constante.",
+    "transformedIdeaTitle": "La Bailarina de la Caja Musical",
+    "transformedIdeaDescription": "Para que la canción de la caja musical suene, la bailarina (tú) debe girar. Programa la app para que toque la siguiente nota de la canción 'Estrellita donde estás' cada vez que tu dirección cambie en 45 grados.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Compass.heading - lastHeading) > 45 THEN Keyboard.play(NextNote); lastHeading = Compass.heading"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Buscador de Polos Magnéticos",
+    "originalIdeaDescription": "Una herramienta educativa que ayuda a identificar el Norte y el Sur magnético. El Norte reproduce notas muy agudas y el Sur notas muy graves, con silencio en el Este/Oeste.",
+    "transformedIdeaTitle": "Brújula de Hielo y Fuego",
+    "transformedIdeaDescription": "El Norte es el reino del Hielo (sonidos cristalinos agudos) y el Sur es el reino del Fuego (sonidos graves y profundos). Programa tu sensor para identificar a qué reino perteneces según hacia dónde apuntas tu varita.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 20 OR Compass.heading > 340 THEN Keyboard.play('High_E') ELSE IF Compass.heading > 160 AND Compass.heading < 200 THEN Keyboard.play('Low_E')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Laberinto Sonoro Invisible",
+    "originalIdeaDescription": "El usuario navega un laberinto virtual. Ciertas direcciones están 'bloqueadas' (suena un tono de error) y solo una dirección es el 'camino libre' (suena un tono agradable).",
+    "transformedIdeaTitle": "Escape de la Cueva Oscura",
+    "transformedIdeaDescription": "Estás atrapado en una cueva sin luz. Tantea las paredes girando: si oyes un 'Bzzz', hay una pared. Si oyes un 'Ding', hay un pasillo. Programa la lógica para definir qué dirección es la salida segura.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WallDirections = [0, 90, 180]; IF Compass.heading IN WallDirections THEN Keyboard.play('Buzz') ELSE Keyboard.play('Ding')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Espacial",
+    "originalIdeaDescription": "Asigna diferentes instrumentos o tonos a diferentes secciones del espacio (ej. Norte=Violines/Agudos, Sur=Contrabajos/Graves). El usuario 'señala' para activar esa sección.",
+    "transformedIdeaTitle": "El Maestro de la Orquesta",
+    "transformedIdeaDescription": "Eres el director de una orquesta invisible. Los violines están al Norte, las trompetas al Este, y los tambores al Sur. Programa tu batuta para que suene el instrumento correcto cuando los señales.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading is North THEN Keyboard.play('Violin_Sound') ELSE IF Compass.heading is East THEN Keyboard.play('Trumpet_Sound')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Posición Estática",
+    "originalIdeaDescription": "Un sistema de seguridad que comienza a tocar una alarma sonora in crescendo si el dispositivo cambia su orientación original más de un cierto número de grados.",
+    "transformedIdeaTitle": "Estatua Musical",
+    "transformedIdeaDescription": "Juega a las estatuas. Cuando la música pare, debes quedarte congelado mirando a una dirección fija. Programa una alarma que suene fuerte si la 'estatua' se mueve o gira más de 10 grados de su posición original.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "lockedHeading = Compass.heading; LOOP: IF abs(Compass.heading - lockedHeading) > 10 THEN Keyboard.play('Alarm')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintonizador de Frecuencias Espaciales",
+    "originalIdeaDescription": "El usuario debe girar muy lentamente para encontrar una frecuencia 'pura' (nota limpia). Si se aleja, la nota se desafina o vibra.",
+    "transformedIdeaTitle": "Hacker de Radio",
+    "transformedIdeaDescription": "Estás intentando sintonizar una radio secreta rebelde. La señal es clara solo en una dirección exacta (ej. 125 grados). Programa el dispositivo para que toque una nota limpia en esa dirección y ruido estático (notas al azar) en cualquier otra.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 125 THEN Keyboard.play('C_Clear') ELSE Keyboard.play('Random_Noise')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Reloj Solar Auditivo",
+    "originalIdeaDescription": "Simula la posición del sol. Al apuntar al Este (amanecer) suena una melodía suave, al cenit (simulado por Sur en hemisferio norte) una fuerte, y al Oeste (atardecer) una melodía de cuna.",
+    "transformedIdeaTitle": "El Guardián del Día",
+    "transformedIdeaDescription": "Tu misión es despertar al pueblo al amanecer y mandarlos a dormir al anochecer. Programa el Este para tocar el 'Himno de la Mañana' y el Oeste para tocar una 'Canción de Cuna'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 80 AND Compass.heading < 100 THEN Keyboard.play('Morning') ELSE IF Compass.heading > 260 AND Compass.heading < 280 THEN Keyboard.play('Lullaby')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Direccional",
+    "originalIdeaDescription": "El sistema toca una nota asociada a una dirección. El usuario debe recordar qué dirección produce esa nota y girar hacia ella para confirmar.",
+    "transformedIdeaTitle": "Memoria Musical de 360 Grados",
+    "transformedIdeaDescription": "Cada esquina de tu habitación tiene un sonido. El Norte es 'Do', el Sur es 'Sol'. La app tocará una nota y tú debes girar rápidamente hacia la dirección correcta para ganar puntos. ¡Es un juego de memoria con todo el cuerpo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = Random('C', 'G'); Keyboard.play(note); WAIT for user rotation; IF (note=='C' AND Compass.heading==N) THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Virtuales",
+    "originalIdeaDescription": "Diferentes rangos de la brújula corresponden a hábitats de animales. Al apuntar a ellos, el teclado reproduce sonidos que imitan a esos animales o sus temas musicales.",
+    "transformedIdeaTitle": "Safari Sonoro",
+    "transformedIdeaDescription": "Convierte tu habitación en una selva. Al Norte viven los leones (notas graves y fuertes), al Este los pájaros (notas agudas y rápidas). Programa tu brújula para descubrir qué animal se esconde según hacia dónde apuntes.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 90 THEN Keyboard.playSequence('Birds') ELSE IF Compass.heading > 270 THEN Keyboard.playSequence('Lions')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Calibrador de Precisión",
+    "originalIdeaDescription": "Una herramienta técnica donde el usuario debe alinear el dispositivo exactamente a grados específicos (ej. 45, 90, 135) para completar una octava musical paso a paso.",
+    "transformedIdeaTitle": "Mecánico de Robots",
+    "transformedIdeaDescription": "Estás reparando un robot gigante y necesitas apretar sus tuercas en ángulos exactos. Cada vez que encuentres el ángulo perfecto (45, 90, 135...), el robot emitirá un sonido de 'OK'. ¡Completa el círculo para repararlo!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "targets = [45, 90, 135]; FOR t in targets: IF Compass.heading == t THEN Keyboard.play('Ping')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de Pistas por Orientación",
+    "originalIdeaDescription": "Permite al usuario cambiar entre diferentes 'pistas' o bases rítmicas de una canción simplemente girando su cuerpo hacia diferentes sectores.",
+    "transformedIdeaTitle": "Remix en Vivo",
+    "transformedIdeaDescription": "Eres un DJ famoso. En lugar de botones, usas tu cuerpo. Si miras al público (Norte) suenan la batería, si miras al escenario (Sur) suena el piano. ¡Gira para mezclar la canción en tiempo real!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading < 180 THEN Keyboard.playLoop('Drums') ELSE Keyboard.playLoop('Piano')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "El Faro Guía",
+    "originalIdeaDescription": "Un usuario actúa como faro. Debe mantener su orientación fija hacia el 'mar' (una dirección). Si se desvía, el sonido del faro se apaga, indicando peligro para los barcos.",
+    "transformedIdeaTitle": "El Faro en la Tormenta",
+    "transformedIdeaDescription": "Los barcos dependen de tu luz. Debes mantenerte firme mirando al Norte para que suene la sirena de niebla que los guía. Si te mueves por el viento (giras), el sonido para y los barcos podrían chocar. ¡Programa la lógica de seguridad!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 350 OR Compass.heading < 10 THEN Keyboard.play('FogHorn') ELSE Keyboard.stop()"
+  }
+]

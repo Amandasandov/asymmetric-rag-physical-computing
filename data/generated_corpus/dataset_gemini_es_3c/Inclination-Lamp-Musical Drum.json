@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Batería por Gestos Aéreos",
+    "originalIdeaDescription": "Un sistema que permite tocar diferentes partes de una batería virtual inclinando el dispositivo en diferentes direcciones. Inclinar a la izquierda activa la caja, a la derecha los platillos, y hacia adelante el bombo. La lámpara cambia de color según el instrumento tocado para proporcionar retroalimentación visual inmediata.",
+    "transformedIdeaTitle": "El Baterista Invisible del Futuro",
+    "transformedIdeaDescription": "¡Conviértete en una estrella de rock sin tocar un instrumento físico! Programarás tu dispositivo para que sea una 'batería de aire'. Si inclinas el dispositivo a la izquierda, sonará la caja y brillará en rojo; a la derecha, sonará el platillo y brillará en azul. ¡Crea tu propio solo de percusión usando solo el movimiento de tus manos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN { Drum.play('Snare'); Lamp.setColor('Red') } ELSE IF Inclination.X > 20 THEN { Drum.play('Cymbal'); Lamp.setColor('Blue') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivelación con Alarma Sonora",
+    "originalIdeaDescription": "Un dispositivo utilitario diseñado para ayudar a nivelar superficies. Si el sensor de inclinación detecta que el dispositivo está perfectamente plano, la lámpara se enciende en verde. Si hay una desviación significativa, la lámpara se pone roja y suena un redoble de tambor continuo para alertar del desnivel.",
+    "transformedIdeaTitle": "El Constructor de la Torre Perfecta",
+    "transformedIdeaDescription": "Eres el arquitecto principal de una torre muy alta. Necesitas asegurar que los cimientos estén perfectamente rectos. Crea una herramienta que muestre una luz verde silenciosa cuando todo está seguro y nivelado, pero que active una alarma de emergencia (luces rojas y tambores) si la torre comienza a inclinarse peligrosamente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Angle == 0 THEN Lamp.setColor('Green') ELSE { Lamp.setColor('Red'); Drum.play('Roll') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica Interactivo",
+    "originalIdeaDescription": "Una experiencia sensorial que simula una tormenta. Al inclinar el dispositivo bruscamente hacia adelante, se activa un sonido de trueno grave (bombo) y un destello blanco en la lámpara, imitando un relámpago. Inclinaciones suaves generan sonidos más leves y luces tenues.",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "¡Tienes el poder de controlar el clima! Programa tu varita mágica (el dispositivo) para invocar una tormenta. Cuando agites la varita hacia abajo con fuerza, debes crear un gran trueno (tambor grave) y un relámpago cegador (luz blanca intermitente) para asustar a los monstruos virtuales.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 45 THEN { Lamp.flash('White'); Drum.play('Bass Drum') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio con Penalización Auditiva",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el dispositivo en posición horizontal. Cuanto más se inclina el dispositivo fuera del centro, más rápido parpadea la lámpara y más fuertes y frecuentes son los golpes de tambor, indicando que el jugador está perdiendo el equilibrio.",
+    "transformedIdeaTitle": "Transporte de Nitroglicerina",
+    "transformedIdeaDescription": "Estás transportando una sustancia química muy inestable (nitroglicerina) a través de un camino lleno de baches. Debes mantener tu camión (el dispositivo) estable. Si te inclinas demasiado, la luz de advertencia parpadeará y escucharás explosiones (tambores). ¡Mantén la calma y el pulso firme!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Angle > 15 THEN { Lamp.blink('Orange', fast); Drum.play('Tom-tom') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Volante Virtual con Indicadores de Giro",
+    "originalIdeaDescription": "Simulación de conducción donde la inclinación controla la dirección. Inclinar a la izquierda enciende una luz amarilla izquierda y un sonido de 'clic-clac' con el tambor (intermitente). Inclinar a la derecha hace lo mismo para el lado opuesto, simulando las luces direccionales de un coche.",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula Code",
+    "transformedIdeaDescription": "Diseña el volante de tu coche de carreras. Cuando gires el volante (inclines el dispositivo) para tomar una curva, debes activar automáticamente las luces direccionales (lámpara amarilla parpadeando) y el sonido del indicador de giro usando un ritmo constante de percusión. ¡La seguridad en la pista es lo primero!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -30 THEN { Lamp.blink('Yellow'); Drum.playPattern('Click-Clack') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Sonoros",
+    "originalIdeaDescription": "Un juguete interactivo donde movimientos específicos de muñeca generan 'hechizos'. Un movimiento ascendente rápido cambia la luz a púrpura y toca un platillo brillante. Un movimiento descendente cambia la luz a verde y toca un sonido de tambor seco.",
+    "transformedIdeaTitle": "Academia de Hechicería Digital",
+    "transformedIdeaDescription": "Para graduarte de la escuela de magia, debes programar tu propia varita. Crea un hechizo de 'Levitación' (inclinar arriba) que brille en púrpura con un sonido mágico (platillo), y un hechizo de 'Raíces' (inclinar abajo) que brille en verde con un sonido de tierra (tambor grave).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -40 THEN { Lamp.color('Purple'); Drum.play('Open Hi-hat') } ELSE IF Inclination.Y > 40 THEN { Lamp.color('Green'); Drum.play('Floor Tom') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura Corporal",
+    "originalIdeaDescription": "Dispositivo para colocar en la espalda o cabeza. Si el usuario se encorva (inclinación hacia adelante excesiva), la lámpara se pone roja y suena un golpe de tambor rítmico molesto para recordar al usuario que debe enderezarse.",
+    "transformedIdeaTitle": "El Guardián de la Postura Real",
+    "transformedIdeaDescription": "Eres un guardia real y debes mantenerte firme y recto. Programa un dispositivo que detecte si te estás quedando dormido o encorvando. Si te inclinas hacia adelante, el dispositivo debe despertarte con luces rojas y un ritmo de tambor militar hasta que recuperes la postura correcta.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Z > 30 THEN { Lamp.setColor('Red'); Drum.loop('Snare March') } ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de Ritmos DJ por Inclinación",
+    "originalIdeaDescription": "Una herramienta de creación musical donde los 4 ejes de inclinación (adelante, atrás, izquierda, derecha) activan 4 loops de batería diferentes y 4 colores distintos, permitiendo al usuario mezclar ritmos moviendo el dispositivo.",
+    "transformedIdeaTitle": "DJ Gyro: La Fiesta en tus Manos",
+    "transformedIdeaDescription": "¡La fiesta depende de ti! Eres el DJ y tu mesa de mezclas se ha roto, solo tienes este sensor. Programa el dispositivo para que al inclinarlo hacia adelante suene el bajo (luz azul), hacia atrás la caja (luz rosa), y a los lados los platillos. ¡Combina movimientos para que la gente baile!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y > 20 THEN { Lamp.color('Blue'); Drum.play('Kick') } ELSE IF Inclination.Y < -20 THEN { Lamp.color('Pink'); Drum.play('Snare') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Huevo Virtual Tamagotchi",
+    "originalIdeaDescription": "Simulación de cuidado de una criatura. El usuario debe mecer suavemente el dispositivo de lado a lado. Si lo hace suavemente, la luz es cálida y suave. Si lo agita fuerte (inclinación rápida), la criatura se enfada con luces rojas y golpes de tambor fuertes.",
+    "transformedIdeaTitle": "Cuida al Bebé Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. Necesita calor y movimiento suave. Programa el sensor para que, si lo meces suavemente, brille con luz naranja (calor). Pero cuidado, si lo inclinas bruscamente, el dragón se asustará, la luz se pondrá roja y golpeará el cascarón (tambor).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF delta(Inclination) > threshold THEN { Lamp.color('Red'); Drum.play('Hard Beat') } ELSE { Lamp.color('Orange'); }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "Un dispositivo de seguridad que permanece en silencio y con luz verde cuando está quieto. Al detectar vibraciones o cambios en la inclinación (simulando un sismo), activa una alarma visual estroboscópica y sonora con tambores rápidos.",
+    "transformedIdeaTitle": "Estación Sismológica de Alerta",
+    "transformedIdeaDescription": "Construye una estación de alerta temprana para una ciudad propensa a terremotos. Mientras la tierra (tu mesa) esté quieta, todo está tranquilo (luz verde). Si detectas cualquier movimiento o inclinación de la tierra, ¡activa la alarma de evacuación inmediatamente con luces parpadeantes y tambores de emergencia!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.change) > 5 THEN { Lamp.strobe('Red'); Drum.loop('Fast Beat') } ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Navegación en Laberinto Ciego",
+    "originalIdeaDescription": "Juego donde el usuario no mira la pantalla, sino que se guía por audio. Inclinar hacia el 'camino correcto' produce un sonido de platillo suave y luz blanca. Inclinar hacia una 'pared' produce un golpe de bombo grave y luz roja.",
+    "transformedIdeaTitle": "Escape de la Cueva Oscura",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura y no puedes ver nada. Debes usar tu 'sonar' para escapar. Programa tu dispositivo para que te guíe: si inclinas hacia la salida correcta, debe sonar un platillo agudo (y luz tenue). Si vas a chocar contra una pared, debe sonar un golpe grave de advertencia.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination == CorrectPath THEN { Drum.play('Ride'); Lamp.on() } ELSE { Drum.play('Bass'); Lamp.color('Red') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Palo de Lluvia Digital",
+    "originalIdeaDescription": "Recreación de un instrumento de palo de lluvia. Al inclinar el dispositivo lentamente, se reproducen secuencias rápidas y aleatorias de percusión suave y la luz fluye de un color a otro, imitando las semillas cayendo por el tubo.",
+    "transformedIdeaTitle": "El Hacedor de Lluvia",
+    "transformedIdeaDescription": "Crea un instrumento musical ancestral digital. Cuando inclines el dispositivo lentamente como si fuera un palo hueco lleno de semillas, debes programar una cascada de sonidos de percusión rápidos y luces azules que imiten el sonido relajante de la lluvia cayendo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Inclination is changing DO { Drum.playRandom('Soft Percussion'); Lamp.fade('Blue', 'Cyan') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Señalización de Aterrizaje",
+    "originalIdeaDescription": "Un asistente para aterrizaje de naves. El usuario actúa como el señalero. Brazos arriba (inclinación alta) = luz roja + tambor rápido (abortar). Brazos horizontales = luz verde + ritmo lento (proceder).",
+    "transformedIdeaTitle": "Controlador de Tráfico Aéreo",
+    "transformedIdeaDescription": "¡Un avión necesita tu ayuda para aterrizar en la pista! Usa tus sensores para guiar al piloto. Si sostienes el dispositivo plano, muestra luz verde y un ritmo tranquilo para indicar 'Todo bien'. Si levantas el dispositivo bruscamente, indica '¡PELIGRO, SUBIR!' con luz roja y tambores rápidos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 60 THEN { Lamp.color('Red'); Drum.loop('Fast') } ELSE { Lamp.color('Green'); Drum.loop('Slow') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Gestual",
+    "originalIdeaDescription": "Mecanismo de seguridad que requiere una secuencia específica de inclinaciones (ej. izquierda, izquierda, derecha) para 'abrirse'. Cada paso correcto emite un sonido de tom y luz amarilla. El éxito final es un platillo y luz verde.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Estás intentando abrir una caja fuerte digital de alta seguridad. La combinación no son números, ¡son movimientos! Programa la cerradura para que detecte si inclinas a la izquierda dos veces y luego a la derecha. Cada movimiento correcto debe darte una pista (sonido y luz).",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Sequence == [Left, Left, Right] THEN { Lamp.color('Green'); Drum.play('Cymbal') } ELSE { Lamp.color('Yellow'); Drum.play('Tom') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Intensidad de Aplausos/Inclinación",
+    "originalIdeaDescription": "En un concierto o evento deportivo, agitar el dispositivo (cambios rápidos de inclinación) funciona como aplauso virtual. Cuanto más rápido se agita, más brillante la luz y más sonidos de percusión se suman a la mezcla.",
+    "transformedIdeaTitle": "La Barra Brava Digital",
+    "transformedIdeaDescription": "¡Apoya a tu equipo favorito! Programa tu dispositivo para animar. Si agitas el dispositivo suavemente, muestra los colores del equipo. Pero si lo agitas con mucha energía (inclinaciones rápidas), debes hacer mucho ruido con los tambores y luces estroboscópicas para celebrar el gol.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ShakingSpeed > High THEN { Lamp.strobe(); Drum.play('Roll') } ELSE { Lamp.on(); }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Simulador de caña de pescar. Mantener quieto (inclinación 0) espera al pez. Cuando la luz parpadea (picada), el usuario debe inclinar bruscamente hacia arriba para 'tirar'. Si lo hace a tiempo, suena un tambor de éxito.",
+    "transformedIdeaTitle": "Torneo de Pesca Mayor",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una caña de pescar profesional. Mantén la caña quieta y espera. Cuando el programa indique que un pez mordió el anzuelo (luz parpadeando), ¡tienes que tirar hacia atrás rápidamente (inclinar arriba)! Si eres rápido, ganarás el trofeo (sonido de victoria).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF FishBite == True AND Inclination.Y < -45 THEN { Drum.play('Success'); Lamp.color('Gold') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Gestual",
+    "originalIdeaDescription": "Herramienta para músicos. La inclinación del dispositivo (eje X) ajusta la velocidad (BPM) del metrónomo. La lámpara parpadea y el tambor suena al ritmo seleccionado. Inclinación derecha = más rápido, izquierda = más lento.",
+    "transformedIdeaTitle": "Director de Orquesta Robótico",
+    "transformedIdeaDescription": "La orquesta necesita seguir un ritmo, pero el tempo cambia constantemente. Crea un metrónomo inteligente. Si inclinas el dispositivo a la derecha, el ritmo del tambor y el parpadeo de la luz deben acelerarse. Si lo inclinas a la izquierda, deben ir más lento. ¡Tú controlas el tiempo!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = map(Inclination.X, -90, 90, 40, 200); Loop(Drum.beat(), Lamp.blink(), BPM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Bomba de Tiempo Desactivable",
+    "originalIdeaDescription": "Juego tenso donde la lámpara parpadea rojo y el tambor suena como cuenta regresiva. Para 'desactivar', el usuario debe sostener el dispositivo perfectamente nivelado durante 5 segundos. Cualquier inclinación reinicia el contador o acelera la explosión.",
+    "transformedIdeaTitle": "Escuadrón de Desactivación de Bombas",
+    "transformedIdeaDescription": "¡Alerta roja! Hay un dispositivo inestable a punto de estallar. Tu misión es estabilizar el núcleo. Debes mantener el sensor perfectamente plano y quieto. La luz roja parpadeante y el sonido del temporizador (tambor) solo se detendrán si logras mantener el equilibrio absoluto durante 5 segundos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination approx 0 FOR 5 sec THEN { Lamp.green(); StopSound() } ELSE { Lamp.red(); Drum.tick() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Traductor de Emociones Robot",
+    "originalIdeaDescription": "Un 'rostro' robótico abstracto. Inclinación abajo (triste) pone luz azul y tambor lento. Inclinación arriba (feliz) pone luz amarilla y ritmo rápido. Inclinación lateral (confuso) pone luz violeta y sonido asincrónico.",
+    "transformedIdeaTitle": "El Robot con Sentimientos",
+    "transformedIdeaDescription": "Los robots no tienen cara, así que necesitan otra forma de expresarse. Programa a tu robot para que muestre cómo se siente según su postura. Si mira hacia abajo, está triste (azul y lento). Si mira hacia arriba, está eufórico (amarillo y rápido). ¡Enséñale a comunicarse!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 30 THEN { Lamp.color('Blue'); Drum.beat(Slow) } ELSE IF Inclination.Y < -30 THEN { Lamp.color('Yellow'); Drum.beat(Fast) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Cañón de Circo",
+    "originalIdeaDescription": "Juego de apuntar para lanzar al hombre bala. La inclinación ajusta el ángulo del cañón. La luz cambia de verde (ángulo bajo) a rojo (ángulo alto). Un movimiento brusco 'dispara' el cañón con un gran estruendo de tambor.",
+    "transformedIdeaTitle": "El Hombre Bala del Gran Circo",
+    "transformedIdeaDescription": "¡El acto principal del circo depende de ti! Debes apuntar el cañón para lanzar al hombre bala a la red. Usa la inclinación para apuntar: la luz te dirá si el ángulo es seguro (verde) o peligroso (rojo). Cuando estés listo, ¡haz un movimiento rápido para disparar el cañón con un gran BOOM!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Aim = Inclination.Y; Lamp.color(map(Aim)); IF Shake THEN Drum.play('Cannon Boom')"
+  }
+]

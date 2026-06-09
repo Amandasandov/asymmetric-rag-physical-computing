@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Luz de Seguridad para Bicicleta Inteligente",
+    "originalIdeaDescription": "Un sistema de iluminación para bicicletas que se activa automáticamente cuando detecta oscuridad ambiental. Además, utiliza el sensor de inclinación para detectar si la bicicleta se ha caído o inclinado excesivamente, cambiando la luz a un color rojo parpadeante de emergencia.",
+    "transformedIdeaTitle": "El Guardián Nocturno Sobre Ruedas",
+    "transformedIdeaDescription": "¡Diseña el sistema de seguridad definitivo para ciclistas! Tu misión es crear una luz que sepa cuándo es de noche para encenderse sola. Pero eso no es todo: si el ciclista sufre una caída (detectada por una inclinación extrema), la luz debe transformarse en una señal de SOS roja para pedir ayuda.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN (IF Inclination > 60 THEN Lamp.blink('Red') ELSE Lamp.on('White'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Panel Solar",
+    "originalIdeaDescription": "Una herramienta educativa que simula cómo los paneles solares buscan la luz. El dispositivo debe inclinarse hacia la fuente de luz más fuerte. La lámpara se enciende de color verde brillante solo cuando la inclinación es óptima respecto a la luz detectada.",
+    "transformedIdeaTitle": "Cazadores de Energía Solar",
+    "transformedIdeaDescription": "Eres un ingeniero de la NASA diseñando un rover para Marte. Debes programar sus paneles solares para obtener la máxima energía. Mueve el dispositivo buscando la luz; si el ángulo es perfecto y hay mucha luz, la lámpara se pondrá verde indicando 'Carga Máxima'. Si no, se pondrá roja indicando 'Batería Baja'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 80 AND (Inclination.X > -10 AND Inclination.X < 10) THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Alarma Fotosensible",
+    "originalIdeaDescription": "Un dispositivo colocado dentro de una caja o cajón oscuro. Si detecta luz (la caja se abre) o si detecta movimiento/inclinación (la caja es robada), la lámpara parpadea violentamente como alarma.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu tesoro de los saqueadores. Esconde el dispositivo en una caja oscura. Programa la trampa para que, si alguien abre la tapa (entra luz) o intenta llevarse la caja (se inclina), se active una alarma visual cegadora para ahuyentar al ladrón.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 5 OR Inclination.total > 10 THEN Lamp.strobe('Red', 'Blue')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Vela Digital de Viento y Oscuridad",
+    "originalIdeaDescription": "Una recreación de una vela que solo se enciende en entornos oscuros. Al inclinar el dispositivo rápidamente, simula el efecto del viento, haciendo que la luz parpadee o se apague si la inclinación es muy brusca.",
+    "transformedIdeaTitle": "La Llama Eterna de la Mazmorra",
+    "transformedIdeaDescription": "Estás explorando una mazmorra antigua y tu antorcha digital es tu única amiga. Solo brilla en la oscuridad. Ten cuidado de no correr o tropezar (inclinar el dispositivo bruscamente), o la llama parpadeará y podría apagarse, dejándote a oscuras.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 20 THEN (IF change(Inclination) > fast THEN Lamp.flicker() ELSE Lamp.on('Orange')) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Sueño y Postura",
+    "originalIdeaDescription": "Un monitor para colocar en la almohada. Detecta oscuridad para iniciar el modo sueño. Si la inclinación cambia constantemente (dando vueltas en la cama), la luz cambia de color suavemente para indicar inquietud.",
+    "transformedIdeaTitle": "El Monitor de Sueños Dulces",
+    "transformedIdeaDescription": "Ayuda a los científicos a estudiar el sueño. Crea un dispositivo que sepa cuándo las luces están apagadas (hora de dormir). Si el usuario se mueve mucho en la cama (cambia la inclinación), enciende una luz tenue azul para registrar 'sueño inquieto'. Si está quieto, luz apagada para 'sueño profundo'.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 5 THEN (IF delta(Inclination) > threshold THEN Lamp.color('DimBlue') ELSE Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Nivelador de Fotografía Nocturna",
+    "originalIdeaDescription": "Herramienta para fotógrafos que ayuda a nivelar la cámara en la oscuridad. Si hay poca luz, la lámpara actúa como un nivel de burbuja digital, poniéndose verde solo cuando el dispositivo está perfectamente horizontal.",
+    "transformedIdeaTitle": "El Fotógrafo Fantasma",
+    "transformedIdeaDescription": "Quieres tomar fotos de espíritus en la oscuridad, pero tu cámara debe estar perfectamente recta. Programa tu dispositivo para que funcione solo de noche. Usa la inclinación para guiarte: luz roja si está chueco, y luz verde brillante cuando la cámara esté perfectamente nivelada.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 15 THEN (IF Inclination.X == 0 AND Inclination.Y == 0 THEN Lamp.color('Green') ELSE Lamp.color('Red'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Camaleón",
+    "originalIdeaDescription": "Una mascota virtual que reacciona al entorno. Si hay mucha luz, se despierta (Lámpara encendida). El color de la lámpara cambia según hacia dónde inclines al 'camaleón', simulando que cambia de color según la superficie.",
+    "transformedIdeaTitle": "Pepe el Camaleón Dormilón",
+    "transformedIdeaDescription": "¡Adopta a Pepe, el camaleón digital! A Pepe le gusta dormir a oscuras (Lámpara apagada). Cuando sale el sol (Luz alta), se despierta. Inclínalo hacia la izquierda para que se ponga verde, o a la derecha para que se ponga azul. ¡Haz que reaccione a tu movimiento!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN (IF Inclination.X < -20 THEN Lamp.color('Green') ELSE Lamp.color('Blue')) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Linterna de Lectura Automática",
+    "originalIdeaDescription": "Una luz de lectura que se activa en entornos oscuros. La intensidad o el color de la lámpara se ajusta automáticamente según el ángulo de inclinación, proporcionando más luz si el usuario se inclina hacia el libro.",
+    "transformedIdeaTitle": "Libro Mágico de Hechizos",
+    "transformedIdeaDescription": "Eres un mago estudiando en la biblioteca prohibida por la noche. Crea una varita que se encienda sola cuando esté oscuro. Si inclinas tu varita hacia abajo para leer el hechizo de cerca, la luz debe volverse blanca intensa; si la levantas, debe ser una luz tenue ámbar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN (IF Inclination.Y > 45 THEN Lamp.brightness(100) ELSE Lamp.brightness(30))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo en la Oscuridad",
+    "originalIdeaDescription": "Un juego donde el jugador debe moverse en una habitación oscura. Si el sensor de luz detecta un 'foco de vigilancia' (luz externa) o si el jugador se mueve demasiado rápido (inclinación), pierde una vida indicada por la lámpara.",
+    "transformedIdeaTitle": "Escape de la Prisión Láser",
+    "transformedIdeaDescription": "¡Eres un espía escapando de una prisión de alta seguridad! Debes moverte en total oscuridad. Si un guardia te ilumina con su linterna (Sensor de Luz sube) o si corres y pierdes el equilibrio (Inclinación inestable), tu collar de seguridad se pondrá rojo y ¡serás capturado!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > Threshold OR Shake(Inclination) THEN Lamp.color('Red') ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Buscador de Artefactos Submarinos",
+    "originalIdeaDescription": "Simulador de un submarino de aguas profundas. Funciona en oscuridad (fondo del mar). La inclinación controla la dirección. La lámpara cambia de color azul a morado según la 'profundidad' simulada por el ángulo de inclinación vertical.",
+    "transformedIdeaTitle": "Expedición a la Fosa de las Marianas",
+    "transformedIdeaDescription": "Pilotea un submarino en las profundidades más oscuras del océano (habitación oscura). Usa la inclinación para sumergirte más profundo. A medida que bajas la nariz del submarino (inclinación hacia abajo), cambia la luz de cabina de Azul a Violeta para simular la presión extrema.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 10 THEN Map(Inclination.Y, -90, 90, Lamp.ColorRange('Blue', 'Violet'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación Zen",
+    "originalIdeaDescription": "Dispositivo para meditación que requiere un entorno con luz tenue. El usuario debe mantener el dispositivo en equilibrio perfecto en su mano. La lámpara pulsa suavemente si se cumplen ambas condiciones (poca luz + equilibrio).",
+    "transformedIdeaTitle": "El Maestro del Equilibrio Interior",
+    "transformedIdeaDescription": "Conviértete en un monje Shaolin. Para pasar la prueba, debes entrar en un templo en penumbra y sostener la 'Piedra de Luz' en tu palma completamente quieta y plana. Solo si la luz es baja y tu mano no tiembla, la piedra brillará con un pulso relajante.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 40 AND abs(Inclination.X) < 5 AND abs(Inclination.Y) < 5 THEN Lamp.pulse('Cyan') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Vampiros",
+    "originalIdeaDescription": "Un juguete para 'cazar vampiros'. Se activa en la oscuridad. Si inclinas el dispositivo hacia 'el cuello' (un ángulo específico) y hay oscuridad total, la luz se torna roja. Si hay luz, se desactiva (los vampiros duermen).",
+    "transformedIdeaTitle": "Cazadores de Sombras",
+    "transformedIdeaDescription": "Los vampiros solo salen cuando está muy oscuro. Crea un radar que se active con oscuridad total. Cuando apuntes tu radar hacia arriba (inclinación > 45 grados) buscando murciélagos, la luz debe ponerse roja para advertirte de la presencia de un vampiro cercano.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 5 AND Inclination.Y > 45 THEN Lamp.color('Red') ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Comunicador Morse Secreto",
+    "originalIdeaDescription": "Sistema para enviar mensajes en código Morse usando luz, pero que solo funciona si el sensor de luz detecta que es 'seguro' (oscuridad). La inclinación hacia la derecha envía un punto (luz corta), hacia la izquierda una raya (luz larga).",
+    "transformedIdeaTitle": "El Telégrafo del Espía Nocturno",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu base, pero solo de noche para no ser visto. Si hay luz, el sistema se bloquea. En la oscuridad, inclina el dispositivo a la derecha para un destello corto y a la izquierda para un destello largo. ¡Aprende a decir SOS!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 20 THEN (IF Inclination.X > 30 THEN Lamp.blink(short) ELSE IF Inclination.X < -30 THEN Lamp.blink(long))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mezclador de Pociones Mágicas",
+    "originalIdeaDescription": "Simula un caldero. Requiere un ambiente oscuro para ver el 'brillo' de la poción. Al inclinar el dispositivo como si se vertiera un líquido, la lámpara cambia de color, simulando la mezcla de ingredientes reactivos a la luz.",
+    "transformedIdeaTitle": "Clase de Pociones en Hogwarts",
+    "transformedIdeaDescription": "El Profesor Snape te observa. En el calabozo oscuro, debes mezclar tu poción. Mantén el dispositivo plano para 'cocinar' (Luz Amarilla). Inclínalo suavemente para 'verter' el antídoto. Si lo inclinas demasiado rápido o enciendes la luz del aula, ¡la poción explotará (Luz Roja parpadeante)!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN (IF Inclination > 60 THEN Lamp.color('Red') ELSE Lamp.color('Yellow'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Luciérnaga en Tarro",
+    "originalIdeaDescription": "El dispositivo imita a una luciérnaga atrapada. Solo brilla cuando hay poca luz. Si agitas el tarro (cambios rápidos de inclinación), la luciérnaga se asusta y apaga su luz temporalmente o cambia a color de advertencia.",
+    "transformedIdeaTitle": "Cuida a la Luciérnaga Tímida",
+    "transformedIdeaDescription": "Atrapaste una luciérnaga digital. Ella brilla con una hermosa luz amarilla, pero solo si está oscuro y tranquilo. Si hay mucha luz o si agitas el frasco (mueves mucho el dispositivo), se asustará y apagará su luz. ¡Sé gentil!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 40 AND Stability(Inclination) THEN Lamp.on('Yellow') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Brújula Solar Primitiva",
+    "originalIdeaDescription": "Un dispositivo que ayuda a encontrar la orientación aproximada del sol (o fuente de luz fuerte) mediante sombras digitales. Al inclinar el dispositivo, la lámpara indica cuán directa es la incidencia de la luz sobre el sensor.",
+    "transformedIdeaTitle": "Navegante de la Isla Desierta",
+    "transformedIdeaDescription": "Estás perdido en una isla y necesitas encontrar el norte usando el sol. Mueve e inclina tu dispositivo. Cuando el sensor de luz capte la máxima intensidad (apuntando al sol), la lámpara se encenderá. Usa esto para orientar tu mapa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "brightness = Map(LightIntensity, 0, 100, 0, 255); Lamp.setBrightness(brightness)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Robot Fotofóbico",
+    "originalIdeaDescription": "Simula un robot que tiene miedo a la luz. Si la intensidad de luz es alta, la lámpara se pone roja (miedo) y requiere que inclines el dispositivo hacia 'la sombra' (abajo) para calmarse y ponerse verde.",
+    "transformedIdeaTitle": "El Robot Asustadizo",
+    "transformedIdeaDescription": "Tu robot 'Shadow-Bot' odia la luz brillante. Si detecta mucha luz, sus ojos (lámpara) se pondrán rojos de pánico. Tu misión es inclinarlo hacia abajo para esconder su cara de la luz. Solo entonces sus ojos se pondrán verdes y estará feliz de nuevo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 70 THEN (IF Inclination.Y < -45 THEN Lamp.color('Green') ELSE Lamp.color('Red'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Nivel de Obra para Túneles",
+    "originalIdeaDescription": "Herramienta de construcción para trabajadores de túneles. Activa una luz de trabajo potente solo cuando está oscuro y el dispositivo está en una posición vertical específica (pared) u horizontal (suelo).",
+    "transformedIdeaTitle": "El Constructor de Túneles",
+    "transformedIdeaDescription": "Eres el ingeniero jefe excavando un túnel bajo la ciudad. Está oscuro ahí abajo. Programa tu herramienta para que ilumine la pared (Luz Blanca) solo cuando el sensor detecte oscuridad Y sostengas la herramienta perfectamente vertical contra la pared.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 AND Inclination.Y > 80 THEN Lamp.on('White') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma de Caída para Ancianos (Modo Noche)",
+    "originalIdeaDescription": "Un dispositivo wearable simulado. Si detecta oscuridad (noche) y un cambio brusco de inclinación seguido de una posición horizontal (caída), la lámpara parpadea en rojo como señal de auxilio.",
+    "transformedIdeaTitle": "El Dispositivo de Superhéroe Médico",
+    "transformedIdeaDescription": "Diseña un gadget para proteger a las personas mayores que se levantan de noche. Si la habitación está oscura y el dispositivo detecta una caída repentina (cambio rápido de inclinación a plano), debe encender una luz de emergencia roja parpadeante para alertar a la familia.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 10 AND DetectFall(Inclination) THEN Lamp.blink('Red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Pista de Aterrizaje",
+    "originalIdeaDescription": "Simula las luces de un avión aterrizando. Requiere cierta oscuridad para activar las luces de navegación. La inclinación del dispositivo controla el color de las luces (Verde=Nivelado, Rojo=Muy inclinado/Peligro).",
+    "transformedIdeaTitle": "Capitán de Vuelo Nocturno",
+    "transformedIdeaDescription": "¡Mayday! Tienes que aterrizar el avión en medio de una tormenta nocturna. El sistema solo funciona si está oscuro afuera. Mantén las alas niveladas (Inclinación 0); si lo logras, verás luces verdes. Si te inclinas demasiado, ¡luces rojas de peligro! ¡Aterriza con seguridad!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 40 THEN (IF abs(Inclination.X) < 10 THEN Lamp.color('Green') ELSE Lamp.color('Red'))"
+  }
+]

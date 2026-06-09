@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Eco de la Caverna Rítmica",
+    "originalIdeaDescription": "El usuario grita o da una palmada (Ruido). El sistema responde con un golpe de tambor con un retardo, simulando un eco percusivo. El audio reproduce el viento de fondo de la cueva.",
+    "transformedIdeaTitle": "El Espíritu de la Montaña",
+    "transformedIdeaDescription": "Estás en una cueva sagrada. El viento sopla (Audio). El espíritu solo responde al ritmo. Da una palmada fuerte (Noise). Si es lo suficientemente fuerte, el espíritu te devolverá el saludo con un golpe profundo de tambor (Drum) que retumba en la cueva.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('Wind'); IF Noise.peak() > 50 THEN WAIT(0.5s); Drum.play('Tom');"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Batería Activada por Voz",
+    "originalIdeaDescription": "Un sistema donde sonidos graves (voz baja) activan el Bombo y sonidos agudos (gritos/chiflidos) activan la Caja. El audio pone una base de bajo.",
+    "transformedIdeaTitle": "Beatbox Humano-Máquina",
+    "transformedIdeaDescription": "Conviértete en una caja de ritmos. El Audio pone una línea de bajo funky. Tú haces los ritmos con la boca: si haces un sonido grave 'Dum' (Noise), la máquina toca el Bombo. Si haces un sonido seco 'Kaa', toca la Caja. ¡Sincronízate con el bajo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('BassLoop'); IF Noise.tone == 'Low' THEN Drum.play('Kick'); ELSE IF Noise.tone == 'High' THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Monitor de Biblioteca Estricto",
+    "originalIdeaDescription": "Música clásica suave de fondo (Audio). Si el nivel de ruido sube de cierto umbral, el tambor toca un golpe fuerte y seco para pedir silencio.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Estudia con música relajante (Audio). Pero cuidado, el Guardián Robot vigila. Si hablas o te ríes fuerte (Sensor de Ruido > 40), el robot golpeará la mesa con fuerza (Drum: Snare Hit) para regañarte. Intenta mantener el silencio durante 1 minuto.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Mozart'); IF Noise.level > 40 THEN Drum.play('RimShot', volume=100)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Audio de lluvia constante. El usuario debe dar una palmada fuerte (trueno) y el tambor reproduce el retumbo del trueno. La intensidad depende del ruido.",
+    "transformedIdeaTitle": "Zeus: Señor del Trueno",
+    "transformedIdeaDescription": "Controla el clima. La lluvia cae suavemente (Audio). Cuando quieras invocar un rayo, da una palmada explosiva al micrófono (Noise). El sistema responderá con un redoble de timbales (Drum) simulando el trueno rodando por el cielo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('Rain'); intensity = Noise.peak(); IF intensity > 70 THEN Drum.roll('Timpani', volume=intensity)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo: Pisadas Pesadas",
+    "originalIdeaDescription": "El usuario debe caminar en silencio. Si hace ruido (pasos fuertes), el tambor simula pasos de un gigante acercándose y el audio pone música de persecución.",
+    "transformedIdeaTitle": "Escapa del Ogro Dormido",
+    "transformedIdeaDescription": "El Ogro duerme (Audio: ronquidos). Debes cruzar la habitación. Si haces ruido al caminar (Sensor de Ruido), el Ogro se despierta. Escucharás sus pasos pesados (Drum: Bombo, Bombo) acercándose. ¡Quédate quieto hasta que vuelva a roncar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 20 THEN Audio.play('ChaseMusic'); Drum.loop('Kick', bpm=60); ELSE Audio.play('Snore')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Aplausos de Concurso",
+    "originalIdeaDescription": "Al final de una actuación (Audio), la audiencia aplaude. El nivel de ruido determina si el tambor toca un redoble corto o una fanfarria larga.",
+    "transformedIdeaTitle": "El Aplausómetro de la Fama",
+    "transformedIdeaDescription": "¡Final del show! El presentador (Audio) pide un aplauso. Toda la clase debe aplaudir y gritar (Noise). Si el volumen es bajo, el tambor suena triste. Si el volumen es explosivo, el tambor toca un redoble de victoria épico.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.say('Applause!'); score = Noise.average(5s); IF score > 80 THEN Drum.play('VictoryRoll') ELSE Drum.play('SadTap')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Ritmo (Call & Response)",
+    "originalIdeaDescription": "El audio reproduce un patrón rítmico. El usuario debe repetirlo dando golpes en la mesa (Ruido). El tambor confirma cada golpe detectado.",
+    "transformedIdeaTitle": "Academia de Percusión",
+    "transformedIdeaDescription": "El profesor toca un ritmo: 'Pum, Pum, Chas' (Audio). Ahora es tu turno. Golpea la mesa imitando el ritmo. El sensor de ruido detectará tus golpes y el Tambor digital sonará en tiempo real para confirmar tu precisión. ¿Puedes pasar el nivel difícil?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.playPattern(); Record(Noise.hits); IF UserPattern == TargetPattern THEN Audio.play('Success')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Motor de Coche de Carreras",
+    "originalIdeaDescription": "El usuario hace 'Vroom' con la boca. Cuanto más fuerte es el ruido, más rápido toca el tambor (simulando pistones) y el audio cambia de marcha.",
+    "transformedIdeaTitle": "Superdeportivo Humano",
+    "transformedIdeaDescription": "Arranca motores. Haz el sonido del motor con tu boca. Si lo haces suave, el Tambor lleva un ritmo lento (ralentí). Si aceleras y ruges fuerte (Noise alto), el Tambor acelera al máximo simulando los pistones y el Audio mete el 'turbo'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RPM = Noise.level * 10; Drum.setBPM(RPM); IF RPM > RedLine THEN Audio.play('GearShift')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Historia Interactiva de Terror",
+    "originalIdeaDescription": "Narración por Audio. En momentos clave, si el usuario grita (susto), el tambor hace un efecto de impacto ('Jump scare').",
+    "transformedIdeaTitle": "Cuentos de la Cripta",
+    "transformedIdeaDescription": "Escucha la historia de miedo (Audio). 'Y entonces, la puerta se abrió...'. Si te asustas y gritas (o si el juego te pide que grites para asustar al monstruo), el Tambor soltará un golpe estruendoso junto con un grito grabado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.playStory(); IF StoryPoint == 'Scare' AND Noise.peak() THEN Drum.play('Crash') AND Audio.play('ScreamFX')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Multitud en Estadio",
+    "originalIdeaDescription": "Audio de ambiente de estadio. El usuario inicia un cántico. El tambor sigue el ritmo del cántico detectado por el ruido.",
+    "transformedIdeaTitle": "Jefe de la Barra Brava",
+    "transformedIdeaDescription": "¡Anima a tu equipo! Empieza a cantar '¡Olé, Olé!' (Noise). El sistema detectará el ritmo de tus gritos y el Gran Tambor del estadio empezará a tocar automáticamente al mismo tiempo que tú para que todo el estadio te siga.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Rhythm = DetectBeat(Noise); Drum.sync(Rhythm); Audio.mix('CrowdCheer')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Mascota Hambrienta",
+    "originalIdeaDescription": "Audio de perro gimiendo. El usuario debe hacer ruido (silbar/llamar) para 'alimentarlo'. El tambor suena como comida cayendo en el plato.",
+    "transformedIdeaTitle": "Alimenta al Cachorro",
+    "transformedIdeaDescription": "Tu perro virtual tiene hambre (Audio: gemidos). Llámalo silbando o chasqueando los dedos (Noise). Cada vez que detecta un sonido fuerte, el Tambor hace 'Clanc' (comida cayendo al plato) y el perro se pone feliz.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Audio.isPlaying('Whine') AND Noise.peak() THEN Drum.play('MetalHit'); FoodLevel++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Banda de Rock Automática",
+    "originalIdeaDescription": "Audio toca la guitarra. El usuario canta. El tambor se activa solo cuando el usuario canta, siguiendo la amplitud.",
+    "transformedIdeaTitle": "Vocalista Estrella",
+    "transformedIdeaDescription": "Tú eres el cantante. La guitarra suena sola (Audio). Cuando empiezas a cantar al micrófono (Noise), la batería entra automáticamente acompañándote. Si dejas de cantar, la batería para y se queda solo la guitarra. ¡Controla la banda con tu voz!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('Guitar'); IF Noise.level > Threshold THEN Drum.unmute() ELSE Drum.mute()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras Percusivo",
+    "originalIdeaDescription": "El usuario responde preguntas. Si duda o tartamudea (ruido irregular) o habla muy bajo, el tambor toca un ritmo de 'sospecha'. Audio da el veredicto.",
+    "transformedIdeaTitle": "El Interrogatorio",
+    "transformedIdeaDescription": "Responde rápido. ¿Quién se comió el pastel? Si respondes con voz firme y fuerte (Noise constante), el Audio dice 'Verdad'. Si titubeas, haces pausas o hablas bajito, el Tambor empieza a tocar un ritmo de tensión y el Audio dice '¡MENTIRA!'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Analyze(Noise.consistency); IF Voice.shaky THEN Drum.loop('Tension') AND Audio.say('Lie') ELSE Audio.say('Truth')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Ceremonia Tribal",
+    "originalIdeaDescription": "Audio de selva. El grupo debe mantener un nivel de ruido constante (canto). Si baja, el tambor deja de tocar y la ceremonia falla.",
+    "transformedIdeaTitle": "El Fuego Sagrado",
+    "transformedIdeaDescription": "Mantén vivo el fuego. Toda la tribu debe hacer 'Ommmm' continuo (Noise). Mientras el volumen sea alto, el Tambor tocará el ritmo del corazón de la selva. Si alguien se calla y el volumen baja, el tambor se detiene y el fuego (Audio) se apaga.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.average > 50 THEN Drum.loop('Tribal') ELSE Audio.play('FireExtinguished')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Herrero",
+    "originalIdeaDescription": "Audio de fuego de fragua. El usuario golpea la mesa (Ruido). El tambor suena como martillo contra yunque. Hay que seguir un ritmo.",
+    "transformedIdeaTitle": "Forjando la Espada",
+    "transformedIdeaDescription": "Eres el herrero del reino. El metal está caliente (Audio: Fuego). Golpea tu mesa con ritmo (Noise). Cada golpe tuyo hace sonar el Yunque (Drum: Cowbell/Metallic). Si pierdes el ritmo, el metal se enfría y la espada se rompe.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.hitDetected() THEN Drum.play('Anvil'); CheckRhythmPrecision()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Juego de Estatues Musicales Inverso",
+    "originalIdeaDescription": "El audio suena. Hay que hacer ruido (bailar/cantar). Si el audio para, hay que callarse. Si el sensor detecta ruido en silencio, el tambor te elimina.",
+    "transformedIdeaTitle": "Fiesta Congelada",
+    "transformedIdeaDescription": "¡Baila y canta mientras suene la música (Audio)! Haz todo el ruido que quieras. Pero cuando la música corte, ¡SILENCIO TOTAL! Si el sensor detecta siquiera un suspiro (Noise > 5), el Tambor tocará un platillazo de eliminación.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play(); WAIT; Audio.stop(); IF Noise.level > 5 THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Cañón Sónico",
+    "originalIdeaDescription": "Cargar energía haciendo ruido continuo. Al llegar al máximo, el tambor dispara y el audio hace la explosión.",
+    "transformedIdeaTitle": "Destruye el Asteroide",
+    "transformedIdeaDescription": "Un asteroide se acerca. Carga el cañón láser gritando '¡AAAAH!' (Noise) para subir la barra de energía. Cuando llegue al 100%, el sistema disparará automáticamente: ¡BOOM! (Drum Kick + Audio Explosión).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Power += Noise.level; IF Power >= 100 THEN Drum.play('BigBoom'); Audio.play('Explosion'); Power=0"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Metrónomo Inteligente",
+    "originalIdeaDescription": "El usuario toca un instrumento (ruido). El sistema detecta el tempo y el tambor empieza a acompañar al mismo BPM. Audio añade armonía.",
+    "transformedIdeaTitle": "Acompañante Automático",
+    "transformedIdeaDescription": "Empieza a dar palmadas o tocar una nota a tu propio ritmo (Noise). El ordenador escuchará, calculará tu velocidad y el Tambor empezará a marcar el compás exactamente a tu velocidad. Si aceleras, el tambor te sigue.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = CalculateTempo(Noise.peaks); Drum.setBPM(BPM); Drum.start()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Traductor de Monstruos",
+    "originalIdeaDescription": "El usuario gruñe (ruido). El tambor replica el patrón rítmico del gruñido y el audio 'traduce' lo que dijo.",
+    "transformedIdeaTitle": "Diplomacia Alienígena",
+    "transformedIdeaDescription": "Habla con el alienígena. Haz sonidos extraños con la boca (Noise). El alienígena repetirá tu ritmo golpeando su pecho (Drum) y luego el traductor (Audio) te dirá qué significa en humano: 'Dijo que tiene hambre'.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Pattern = Record(Noise); Drum.playPattern(Pattern); Audio.playRandomTranslation()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Boxeo Ciego",
+    "originalIdeaDescription": "Audio dice '¡Golpea!'. Usuario golpea el saco (Ruido fuerte). Tambor confirma el impacto. Si tarda, audio se burla.",
+    "transformedIdeaTitle": "Campeón de Peso Pesado",
+    "transformedIdeaDescription": "Entrenamiento de reflejos. El entrenador grita '¡Ya!' (Audio). Tienes 0.5 segundos para golpear tu almohada o dar una palmada fuerte (Noise). Si eres rápido, suena la campana (Drum). Si eres lento, el entrenador dice '¡Muy lento!'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.say('Hit!'); Timer.start(); IF Noise.peak() AND Timer < 0.5s THEN Drum.play('Bell') ELSE Audio.say('Slow')"
+  }
+]

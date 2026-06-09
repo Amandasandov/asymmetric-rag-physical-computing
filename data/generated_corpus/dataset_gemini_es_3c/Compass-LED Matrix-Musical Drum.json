@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Kit de Batería Espacial 360",
+    "originalIdeaDescription": "Un instrumento virtual donde el usuario gira su cuerpo para acceder a diferentes partes de una batería. El Norte activa el bombo, el Sur la caja, etc., visualizando el instrumento seleccionado en la matriz.",
+    "transformedIdeaTitle": "La Banda Invisible 360",
+    "transformedIdeaDescription": "¡Estás rodeado de tambores invisibles! Gira tu cuerpo para encontrarlos. Cuando mires al Norte tocarás el bombo, y al Sur los platillos. ¡Crea tu propio ritmo girando!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 45 OR Compass.heading > 315 THEN LED.show('Bombo'); Drum.play('Kick') ELSE IF Compass.heading > 135 AND Compass.heading < 225 THEN LED.show('Caja'); Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Búsqueda del Tesoro con Sonar",
+    "originalIdeaDescription": "Un dispositivo de navegación que guía al usuario hacia una dirección objetivo predefinida. La matriz muestra una flecha y el tambor aumenta la frecuencia de golpeo cuanto más cerca se alinea el usuario con el objetivo.",
+    "transformedIdeaTitle": "El Radar del Pirata Ciego",
+    "transformedIdeaDescription": "El tesoro está escondido en una dirección secreta (el Este). Tu radar hace 'ping' lentamente, pero si giras y apuntas exactamente al tesoro, ¡el sonido se acelera y la pantalla brilla!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = 90; Error = abs(Compass.heading - Target); Speed = map(Error, 0, 180, 100, 1000); Drum.play_loop('Ping', Speed); LED.showArrow(Target)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simón Dice Geográfico",
+    "originalIdeaDescription": "Juego de memoria y orientación. La matriz muestra una letra de dirección (N, S, E, O) y el usuario debe girar el dispositivo hacia esa dirección. Un redoble de tambor confirma el éxito.",
+    "transformedIdeaTitle": "Capitán Brújula Manda",
+    "transformedIdeaDescription": "El Capitán te da órdenes en la pantalla: 'N' (Norte), 'S' (Sur). ¡Gira rápido hacia la dirección correcta! Si aciertas, escucharás un redoble de victoria; si fallas, un sonido de error.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Target = Random(['N', 'S', 'E', 'W']); LED.show(Target); WAIT_FOR_TURN; IF Compass.getDirection() == Target THEN Drum.play('Success') ELSE Drum.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Simulación de un dial de caja fuerte. El usuario debe rotar el dispositivo a grados específicos. La matriz muestra números cambiantes y el tambor hace un sonido de 'clic' mecánico al pasar por los números.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Tienes que abrir la bóveda secreta. Gira el dispositivo lentamente como un dial. Escucha los 'clics' y busca la combinación secreta en la pantalla. ¡Si te detienes en el grado exacto, la caja se abre!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CurrentAngle = Compass.heading; LED.show(CurrentAngle); Drum.play('Click'); IF CurrentAngle == SecretCode THEN LED.show('Open') AND Drum.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica Elemental",
+    "originalIdeaDescription": "Dependiendo de la dirección cardinal a la que se apunte, el dispositivo 'invoca' un elemento diferente (Fuego, Agua, etc.), mostrando un icono en la matriz y reproduciendo un sonido de percusión temático.",
+    "transformedIdeaTitle": "Escuela de Hechicería Elemental",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una varita. Apunta al Norte para lanzar hechizos de Hielo (sonido cristalino) o al Sur para Fuego (tambores graves). ¡La pantalla te mostrará la magia que estás invocando!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == North THEN LED.show('Ice') AND Drum.play('Chimes'); IF Compass.heading == South THEN LED.show('Fire') AND Drum.play('FloorTom')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rueda de la Fortuna Musical",
+    "originalIdeaDescription": "El usuario gira físicamente sobre sí mismo. Mientras la brújula detecta cambio rápido, la matriz gira una animación y suena un redoble. Al detenerse, selecciona un premio basado en la dirección final.",
+    "transformedIdeaTitle": "La Ruleta Rusa de Ritmos",
+    "transformedIdeaDescription": "¡Gira sobre ti mismo lo más rápido que puedas! Mientras giras, los tambores redoblan. Al detenerte, la dirección en la que quedes mirando decidirá tu premio o penitencia en la pantalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Compass.isRotating() DO LED.animate('Spin') AND Drum.play('Roll'); WHEN STOPPED DO LED.show(Compass.getPrize(Heading))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Invisible",
+    "originalIdeaDescription": "Un juego donde el usuario camina en un laberinto virtual. La brújula determina la dirección de movimiento. La matriz muestra paredes cercanas y el tambor suena si el usuario choca contra una pared virtual.",
+    "transformedIdeaTitle": "Escape del Laberinto Oscuro",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto que no puedes ver. Usa la brújula para moverte. Si la pantalla muestra un bloque y el tambor hace '¡BUM!', te has golpeado contra una pared. ¡Encuentra la salida!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlayerPos += Compass.getVector(); IF Map[PlayerPos] == WALL THEN Drum.play('Crash') AND LED.show('X') ELSE LED.show('Forward')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Ecolocalización de Murciélago",
+    "originalIdeaDescription": "Simulador de sonar biológico. Al apuntar en diferentes direcciones, el sistema 'escanea'. Si hay un 'obstáculo' programado en esa dirección, el tambor devuelve un eco y la matriz muestra la distancia.",
+    "transformedIdeaTitle": "Soy un Murciélago",
+    "transformedIdeaDescription": "Es de noche y vuelas a ciegas. Gira para escanear tu entorno. Si escuchas un eco de tambor rápido, ¡cuidado, hay un obstáculo cerca! La pantalla te dirá qué tan lejos está.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ScanDir = Compass.heading; IF Obstacles.contains(ScanDir) THEN Distance = Obstacles.dist; Drum.play('Echo', Distance); LED.showBarGraph(Distance)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Robótico",
+    "originalIdeaDescription": "Divide el espacio de 360 grados en 4 secciones de instrumentos. El usuario apunta a una sección para activarla o silenciarla. La matriz muestra qué sección está activa.",
+    "transformedIdeaTitle": "Maestro de la Orquesta Digital",
+    "transformedIdeaDescription": "¡Tú controlas la música! Apunta a la izquierda para que suenen los platillos, o a la derecha para los bombos. La pantalla se ilumina para mostrarte qué músicos te están obedeciendo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Section = Compass.getQuadrant(); ToggleInstrument(Section); LED.showIcon(Section); Drum.playLoop(ActiveInstruments)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Traductor de Señales Alienígenas",
+    "originalIdeaDescription": "El usuario debe buscar una señal de radio específica girando. Al encontrar la dirección correcta (frecuencia), la matriz decodifica un glifo y el tambor reproduce un patrón rítmico 'alienígena'.",
+    "transformedIdeaTitle": "Cazador de OVNIS",
+    "transformedIdeaDescription": "Estamos recibiendo mensajes del espacio. Gira tu antena (el dispositivo) hasta sintonizar la señal clara. Cuando encuentres el punto exacto, escucharás el código secreto de los alienígenas y verás sus símbolos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SignalStrength = 180 - abs(Compass.heading - AlienDir); IF SignalStrength > 170 THEN LED.show('AlienFace') AND Drum.play('Sequence') ELSE LED.show('Static')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Kung Fu",
+    "originalIdeaDescription": "El dispositivo indica una dirección de ataque en la matriz. El usuario debe girar rápidamente para 'bloquear' en esa dirección. El tambor simula el sonido del impacto del bloqueo.",
+    "transformedIdeaTitle": "Dojo del Dragón Giratorio",
+    "transformedIdeaDescription": "¡Los ninjas te atacan desde todas partes! La pantalla te muestra una flecha de dónde viene el ataque. Gira rápido para bloquearlo. ¡Si eres rápido, escucharás el golpe de tu defensa exitosa!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AttackDir = Random(); LED.showArrow(AttackDir); Timer.start(); WAIT_UNTIL Compass.heading == AttackDir; IF Timer < 2s THEN Drum.play('Block') ELSE Drum.play('Hit')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Estación Meteorológica Sonora",
+    "originalIdeaDescription": "Usa la brújula para indicar la dirección del viento simulada. La matriz muestra nubes o sol dependiendo de la orientación, y el tambor simula truenos si se apunta a una zona de 'tormenta'.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Busca dónde está la tormenta. Gira el dispositivo. Si apuntas al Oeste y la pantalla muestra un rayo y el tambor retumba como un trueno, ¡has encontrado el huracán!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WeatherMap = {North: 'Sun', West: 'Storm'}; Current = WeatherMap.get(Compass.heading); LED.show(Current.icon); IF Current == 'Storm' THEN Drum.play('Thunder')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Reloj de Cuco Direccional",
+    "originalIdeaDescription": "Convierte el dispositivo en un reloj gigante. El usuario actúa como la aguja. Al apuntar a las 12 (Norte), 3 (Este), etc., la matriz muestra la hora y el tambor da las campanadas correspondientes.",
+    "transformedIdeaTitle": "El Reloj Humano Gigante",
+    "transformedIdeaDescription": "Tú eres la aguja del reloj. Apunta al Norte para marcar las 12 y el tambor sonará 12 veces. Apunta al Este para las 3. ¡Aprende a decir la hora moviendo todo tu cuerpo!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Hour = map(Compass.heading, 0, 360, 12, 1); LED.showNumber(Hour); Drum.playNote('Bell', times=Hour)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "La matriz muestra aviones acercándose desde diferentes ángulos. El usuario debe apuntar la brújula hacia el avión para darle permiso de aterrizar, confirmado por un sonido de tambor.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje Forzoso",
+    "transformedIdeaDescription": "¡Emergencia! Los aviones necesitan aterrizar. Mira el radar en tu pantalla para ver por dónde vienen. Apunta hacia ellos con tu brújula para guiarlos a la pista. Un golpe de tambor confirma que están a salvo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IncomingPlane = RandomDir(); LED.showRadar(IncomingPlane); IF Compass.heading == IncomingPlane THEN Drum.play('Land') AND Score++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador DJ Giroscópico",
+    "originalIdeaDescription": "El usuario selecciona pistas de ritmo (base, hi-hat, percusión) orientándose a diferentes puntos cardinales. La matriz visualiza los niveles de audio de la pista seleccionada.",
+    "transformedIdeaTitle": "DJ Brújula en la Discoteca",
+    "transformedIdeaDescription": "Eres el DJ de la fiesta. Para meter el ritmo base, mira al Norte. Para añadir platillos, gira al Este. ¡Mezcla la música en vivo bailando y girando en la cabina!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == N THEN Drum.unmute('Bass'); IF Compass.heading == E THEN Drum.unmute('HiHat'); LED.showEqualizer(Drum.volume)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras (Juego)",
+    "originalIdeaDescription": "Un juego de rol donde una persona sostiene el dispositivo. Si la brújula se mueve demasiado (nerviosismo) mientras responde, el tambor suena una alarma y la matriz muestra una 'X'.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Hazle una pregunta a un amigo mientras sostiene el dispositivo muy quieto apuntando al Norte. Si tiembla o se gira al responder, la alarma sonará y sabrás que... ¡está mintiendo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "StartAngle = Compass.heading; IF abs(Compass.heading - StartAngle) > Threshold THEN Drum.play('Alarm') AND LED.show('False') ELSE LED.show('True')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Guía de Meditación Zen",
+    "originalIdeaDescription": "Herramienta de relajación. El usuario debe encontrar el 'centro' perfecto (Norte). La música de tambor es suave y constante solo cuando está perfectamente alineado; la matriz muestra un patrón de respiración.",
+    "transformedIdeaTitle": "El Maestro del Equilibrio",
+    "transformedIdeaDescription": "Encuentra tu paz interior. Gira muy despacio hasta encontrar el centro exacto. Cuando lo logres, aparecerá una flor en la pantalla y escucharás un ritmo suave y relajante. ¡Mantén el equilibrio!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == Target THEN LED.animate('Flower') AND Drum.play('SoftBeat') ELSE LED.show('Dot') AND Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Navegador de Barco Pirata",
+    "originalIdeaDescription": "Simula el timón de un barco. La matriz muestra el horizonte y obstáculos. El usuario gira para esquivar. El tambor suena como olas golpeando el casco al girar bruscamente.",
+    "transformedIdeaTitle": "Capitán de los Siete Mares",
+    "transformedIdeaDescription": "¡Toma el timón! Navega tu barco por aguas peligrosas. La pantalla te muestra rocas. Gira para esquivarlas. Si giras muy fuerte, escucharás las olas chocar contra tu barco.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TurnRate = Compass.changeRate; IF TurnRate > High THEN Drum.play('Splash'); ObstacleCheck(Compass.heading, LED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Candado de Secuencia Secreta",
+    "originalIdeaDescription": "El usuario debe realizar una secuencia de giros (ej. Norte -> Oeste -> Norte) para desbloquear el dispositivo. El tambor marca cada paso correcto y la matriz muestra el progreso.",
+    "transformedIdeaTitle": "La Llave Maestra Invisible",
+    "transformedIdeaDescription": "Para abrir el cofre, debes conocer la danza secreta: Mira al Norte, luego al Oeste, luego al Norte otra vez. Cada paso correcto hará un sonido. ¡Completa la danza para ganar!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Sequence = [N, W, N]; Step = 0; IF Compass.heading == Sequence[Step] THEN Drum.play('Ding'); Step++; LED.showProgress(Step)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Salvajes",
+    "originalIdeaDescription": "Al apuntar a diferentes sectores, el dispositivo simula encontrar un animal. La matriz muestra la huella o cara del animal y el tambor imita el sonido de sus pasos (pesado para elefante, rápido para ratón).",
+    "transformedIdeaTitle": "Safari en el Aula",
+    "transformedIdeaDescription": "Convierte tu clase en una selva. Apunta con tu rastreador. ¿Hacia el Este? ¡Un elefante (pasos fuertes)! ¿Hacia el Oeste? ¡Un conejo (golpes rápidos)! Mira la pantalla para ver qué encontraste.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == East THEN LED.show('Elephant') AND Drum.play('HeavyPlod'); IF Compass.heading == West THEN LED.show('Rabbit') AND Drum.play('FastTap')"
+  }
+]

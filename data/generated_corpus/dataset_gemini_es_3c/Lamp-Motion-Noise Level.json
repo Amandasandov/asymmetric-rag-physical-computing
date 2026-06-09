@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Sensible al Entorno",
+    "originalIdeaDescription": "Un sistema de seguridad portátil que utiliza el sensor de movimiento para detectar vibraciones físicas y el sensor de ruido para detectar sonidos fuertes. Cuando se activan ambos umbrales, la lámpara parpadea en rojo brillante para alertar al usuario de una intrusión.",
+    "transformedIdeaTitle": "La Trampa del Agente Secreto",
+    "transformedIdeaDescription": "¡Eres un espía protegiendo documentos clasificados! Crea una trampa que detecte si un intruso entra en la habitación (ruido) o intenta mover tu caja fuerte (movimiento). Si atrapas al espía enemigo, enciende la luz roja de alarma.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Motion.intensity > 5 OR Noise.level > 60) THEN Lamp.blink('Red', 500ms)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luz de Discoteca Interactiva",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que cambia el color de la luz basándose en el movimiento del dispositivo (baile) y ajusta el brillo de la luz basándose en el volumen de la música ambiental detectada por el sensor de ruido.",
+    "transformedIdeaTitle": "Fiesta Disco de Bolsillo",
+    "transformedIdeaDescription": "¡Convierte tu dispositivo en el alma de la fiesta! Programa la luz para que cambie de color cada vez que agitas el dispositivo al ritmo del baile, y haz que brille más fuerte cuando la música suba de volumen.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.brightness = Noise.level; IF Motion.isShaken() THEN Lamp.color = Random()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Bibliotecas",
+    "originalIdeaDescription": "Una herramienta para ayudar a mantener el silencio. La luz permanece verde si el ruido es bajo y el dispositivo está quieto. Si se detecta ruido fuerte, cambia a rojo. Si se mueve bruscamente, cambia a amarillo para indicar distracción.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca",
+    "transformedIdeaDescription": "Ayuda a la bibliotecaria a mantener el orden. Si los estudiantes hablan muy alto, la luz se pone roja. Si están jugando y moviendo las mesas (movimiento), la luz se pone amarilla. ¡Si todo está tranquilo, luz verde!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 70 THEN Lamp.color('Red') ELSE IF Motion.intensity > 3 THEN Lamp.color('Yellow') ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Meditación Zen",
+    "originalIdeaDescription": "Un dispositivo para practicar la calma. El usuario debe sostener el dispositivo sin moverse y mantener silencio absoluto. La lámpara brilla en azul suave, pero se apaga si se detecta cualquier perturbación sonora o cinética.",
+    "transformedIdeaTitle": "El Desafío del Maestro Shaolin",
+    "transformedIdeaDescription": "Para convertirte en un maestro Shaolin, debes controlar tu cuerpo y tu mente. Sostén la 'Llama Azul' (Lámpara). Si te mueves o haces ruido, la llama se extinguirá (Lámpara apagada). ¿Cuánto tiempo puedes mantenerla encendida?",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Motion.intensity < 2 AND Noise.level < 10) THEN Lamp.on('Blue') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos",
+    "originalIdeaDescription": "Un juguete interactivo que simula una varita. Un movimiento suave cambia el color de la punta (Lámpara). Si el usuario pronuncia un 'hechizo' fuerte (ruido alto), la lámpara emite un destello blanco intenso.",
+    "transformedIdeaTitle": "Aprendiz de Mago",
+    "transformedIdeaDescription": "¡Crea tu propia varita mágica! Agítala suavemente para preparar tu magia cambiando los colores. Cuando estés listo, grita tu hechizo favorito ('¡Abracadabra!') para lanzar un rayo de luz blanca deslumbrante.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.detected() THEN Lamp.cycleColors(); IF Noise.level > 80 THEN Lamp.flash('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Simulado",
+    "originalIdeaDescription": "Un simulador ambiental donde agitar el dispositivo representa el viento (parpadeo tenue de la luz) y aplaudir fuerte representa un trueno (parpadeo brillante e instantáneo de la luz).",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "¡Tú controlas el clima! Agita el dispositivo para crear viento que hace titilar la luz como una vela. Luego, da un fuerte aplauso para invocar un relámpago brillante. Crea tu propia tormenta perfecta.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isShaken() THEN Lamp.brightness(Random(20,50)); IF Noise.level > 90 THEN Lamp.blink('White', 100ms)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Compañero de Sueño Inteligente",
+    "originalIdeaDescription": "Una luz nocturna que se enciende en un tono cálido automáticamente si detecta que el niño se mueve mucho en la cama o si llora/habla, proporcionando confort inmediato.",
+    "transformedIdeaTitle": "El Osito Cuidador Nocturno",
+    "transformedIdeaDescription": "Programa un guardián para tus sueños. Si tienes una pesadilla y te mueves mucho o gritas, tu 'Osito' (el dispositivo) encenderá una luz suave y cálida para que sepas que estás seguro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (Motion.intensity > 4 OR Noise.level > 40) THEN Lamp.color('WarmWhite') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Volcán Activo",
+    "originalIdeaDescription": "Modelo educativo donde el movimiento constante aumenta la 'presión' (la luz cambia de amarillo a naranja). Un ruido fuerte final desencadena la 'erupción' (luz roja parpadeante).",
+    "transformedIdeaTitle": "Erupción Volcánica",
+    "transformedIdeaDescription": "¡El volcán está despertando! Agita el dispositivo para aumentar la presión del magma (la luz se vuelve naranja). Cuando no aguantes más, haz un sonido de explosión para que el volcán entre en erupción con luz roja.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Variable pressure = Motion.accumulate(); Lamp.color = Gradient(Yellow, Orange, pressure); IF Noise.level > 85 THEN Lamp.blink('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luz de Seguridad para Bicicletas",
+    "originalIdeaDescription": "Una luz trasera inteligente para ciclistas. Se mantiene encendida con el movimiento de la bicicleta. Si detecta el ruido de un claxon de coche cerca, parpadea rápidamente para aumentar la visibilidad.",
+    "transformedIdeaTitle": "Bici-Segura 3000",
+    "transformedIdeaDescription": "Diseña una luz inteligente para tu bici. Mientras pedaleas (movimiento), la luz roja se mantiene fija. Pero cuidado, si un coche toca la bocina (ruido fuerte), ¡haz que la luz parpadee rápido para que te vean bien!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level > 80 THEN Lamp.blink('Red', Fast) ELSE IF Motion.detected() THEN Lamp.on('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Digital Emocional",
+    "originalIdeaDescription": "Una mascota virtual que reacciona a estímulos. Si la acaricias suavemente (movimiento leve) se pone verde (feliz). Si le gritas (ruido alto), se pone roja (asustada/enojada).",
+    "transformedIdeaTitle": "Tu Mascota Alienígena",
+    "transformedIdeaDescription": "Adopta un alienígena. Le gusta que lo mezan suavemente (luz verde de felicidad), pero odia los gritos (luz roja de enfado). Aprende a cuidar de él equilibrando el movimiento y el silencio.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 70 THEN Lamp.color('Red') ELSE IF Motion.intensity > 0 AND Motion.intensity < 3 THEN Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Explorador de Cavernas por Eco",
+    "originalIdeaDescription": "Simulación de ecolocalización. El usuario camina (movimiento) y la luz es tenue. Para ver más lejos (luz más brillante), debe hacer un sonido que 'rebote' en las paredes.",
+    "transformedIdeaTitle": "Ecolocalización de Murciélago",
+    "transformedIdeaDescription": "Eres un murciélago en una cueva oscura. Muévete volando suavemente. Para ver hacia dónde vas, emite un chillido. Cuanto más fuerte chilles, más brillante se encenderá la luz para revelar el camino.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.detected() THEN Lamp.brightness(10); Lamp.brightness = Lamp.brightness + (Noise.level / 2)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Cohete Espacial de Despegue",
+    "originalIdeaDescription": "Juego de simulación de lanzamiento. El usuario debe agitar el dispositivo para cargar combustible (luz azul a naranja). El despegue ocurre solo cuando se hace el sonido de conteo final o ignición.",
+    "transformedIdeaTitle": "Misión a Marte",
+    "transformedIdeaDescription": "¡Prepara el despegue! Agita el cohete fuertemente para llenar los tanques de combustible (la luz cambia de color). Cuando estén llenos, haz el sonido de los motores ('¡Fiuuuu!') para lanzar el cohete con un destello final.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeCount > 20 THEN Lamp.color('Orange'); IF Lamp.color == 'Orange' AND Noise.level > 60 THEN Lamp.blink('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Juguete de exploración. La luz parpadea aleatoriamente (efecto fallo). Si detecta movimiento Y un susurro (ruido bajo), la luz se fija en un color 'fantasmal' (cian o violeta).",
+    "transformedIdeaTitle": "Cazadores de Fantasmas",
+    "transformedIdeaDescription": "Busca espectros en tu habitación. Camina despacio buscando señales. Si el sensor detecta una vibración extraña y un susurro misterioso al mismo tiempo, ¡la luz violeta se encenderá indicando que has encontrado un fantasma!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Motion.intensity > 2 AND Noise.level > 20 AND Noise.level < 50) THEN Lamp.color('Purple') ELSE Lamp.flicker()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo Controlado por Gestos",
+    "originalIdeaDescription": "Sistema educativo de tráfico. Inclinar el dispositivo hacia arriba pone la luz verde (avanzar), hacia abajo roja (parar). Un silbato fuerte (ruido) pone la luz en amarillo (precaución) independientemente de la posición.",
+    "transformedIdeaTitle": "El Policía de Tráfico",
+    "transformedIdeaDescription": "Controla el tráfico de la ciudad. Inclina tu mando para poner el semáforo en verde o rojo. Pero si hay una emergencia, toca tu silbato fuerte para poner todo en ámbar y alertar a los conductores.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level > 80 THEN Lamp.color('Yellow') ELSE IF Motion.tiltY > 0 THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Generador de Energía Cinética Ficticia",
+    "originalIdeaDescription": "Simulación de energía. Agitar el dispositivo carga una 'batería' (aumenta brillo). El ruido ambiental actúa como resistencia, haciendo que la luz se atenúe más rápido si hay mucho ruido.",
+    "transformedIdeaTitle": "La Linterna de Dinamo",
+    "transformedIdeaDescription": "Estás en un apagón y tu linterna se queda sin pilas. ¡Agítala rápido para cargarla y que brille! Pero cuidado, el ruido 'roba' energía, así que mantén silencio para que la luz dure más tiempo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Variable energy += Motion.shake(); energy -= Noise.level; Lamp.brightness(energy)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor Universal Alienígena",
+    "originalIdeaDescription": "Dispositivo de juego de rol. Se mueve el dispositivo para 'escanear' a una persona. Cuando la persona habla (ruido), la luz parpadea en diferentes colores simulando el procesamiento y traducción del idioma.",
+    "transformedIdeaTitle": "Escáner Galáctico",
+    "transformedIdeaDescription": "Encuentra formas de vida nuevas. Apunta tu escáner (movimiento) hacia tus amigos. Cuando ellos hablen, tu dispositivo procesará su idioma haciendo parpadear luces de colores misteriosos. ¿Vienen en son de paz?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isPointing() AND Noise.level > 40 THEN Lamp.cycleColors(Fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de 'Estatua' Musical",
+    "originalIdeaDescription": "Versión automatizada del juego. Mientras hay ruido (música), la luz es verde y puedes moverte. Si el ruido cesa, la luz es roja; si te mueves con luz roja, la luz parpadea indicando 'eliminado'.",
+    "transformedIdeaTitle": "Estatuas Musicales Automáticas",
+    "transformedIdeaDescription": "Juega a las estatuas sin árbitro. Si hay música (ruido), la luz es verde: ¡baila! Si la música para, la luz se pone roja: ¡congélate! Si el sensor detecta que te mueves con la luz roja, parpadeará: ¡perdiste!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level > 20 THEN Lamp.color('Green') ELSE { Lamp.color('Red'); IF Motion.intensity > 1 THEN Lamp.blink('Red') }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Talentos",
+    "originalIdeaDescription": "Un medidor de audiencia. El dispositivo se levanta (movimiento) para iniciar la medición. Cuanto más fuerte sea el ruido (aplausos), más brillante y colorida se vuelve la luz (de azul a rosa intenso).",
+    "transformedIdeaTitle": "Jurado del Show de Talentos",
+    "transformedIdeaDescription": "¿Quién ganó el concurso? Levanta tu medidor y pide al público que aplauda. Si aplauden suave, la luz es azul tenue. Si aplauden muy fuerte, ¡la luz se pondrá rosa brillante para indicar al ganador!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltZ > 45 THEN Lamp.color = Gradient(Blue, Pink, Noise.level)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Comunicador Morse Secreto",
+    "originalIdeaDescription": "Herramienta de espionaje. Un golpe seco (movimiento brusco) es un punto (luz corta). Un sonido corto (ruido) es una raya (luz larga). Permite enviar mensajes luminosos combinando golpes y sonidos.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Da un golpe seco al dispositivo para hacer un punto de luz, o haz un sonido corto para hacer una raya de luz larga. ¡Aprende código Morse y comunícate sin palabras!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.impact() THEN Lamp.blink(200ms) ELSE IF Noise.peak() THEN Lamp.blink(600ms)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Bola de Cristal Adivina",
+    "originalIdeaDescription": "Juguete de adivinación. El usuario agita el dispositivo mientras hace una pregunta en voz alta. Al detenerse el movimiento y el ruido, la lámpara se enciende en un color aleatorio (Verde=Sí, Rojo=No, Amarillo=Tal vez).",
+    "transformedIdeaTitle": "El Oráculo de Colores",
+    "transformedIdeaDescription": "Pregunta al Oráculo tu futuro. Agita la bola mágica mientras preguntas en voz alta. Cuando te quedes quieto y en silencio, el Oráculo responderá: Verde es Sí, Rojo es No, y Amarillo es Quizás.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Motion.wasShaken() AND Noise.wasLoud() AND Now.isQuiet()) THEN Lamp.color(Random(['Green', 'Red', 'Yellow']))"
+  }
+]

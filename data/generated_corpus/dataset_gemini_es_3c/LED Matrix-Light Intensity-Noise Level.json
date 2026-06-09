@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Farola Inteligente Ecológica",
+    "originalIdeaDescription": "Un sistema de iluminación urbana que ahorra energía. La matriz LED solo se enciende si es de noche (Luz baja) y detecta el ruido de un coche o peatón acercándose.",
+    "transformedIdeaTitle": "Ingeniero de Ciudad Verde",
+    "transformedIdeaDescription": "Diseña las luces de la ciudad del futuro. La matriz LED representa la farola. Si es de día (Luz > 50), debe estar apagada. Si es de noche (Luz < 50), debe estar en modo espera (tenue). Si es de noche y escuchas un coche (Ruido > 60), ¡enciende los LEDs al máximo para iluminar la calle!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 50: IF Noise.level > 60 THEN LED.brightness(100) ELSE LED.brightness(10)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Mascota Virtual Dormilona",
+    "originalIdeaDescription": "Una cara en la matriz LED. Si hay luz y ruido, está despierta (ojos abiertos). Si está oscuro y en silencio, se duerme (animación Zzz).",
+    "transformedIdeaTitle": "Cuida a tu Robot",
+    "transformedIdeaDescription": "Tu robot necesita descansar. Si apagas las luces y guardas silencio, la Matriz mostrará una animación de 'Zzz' y corazones. Pero si alguien enciende la luz o grita, el robot se despertará con cara de sorpresa (Ojos grandes).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level < 20 THEN LED.showAnimation('Sleep') ELSE LED.showIcon('Surprised')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fantasmas Visual",
+    "originalIdeaDescription": "La matriz muestra estática (ruido visual). Si el sensor detecta oscuridad y un pico de ruido repentino, dibuja un fantasma en la pantalla.",
+    "transformedIdeaTitle": "Cazafantasmas: El Escáner",
+    "transformedIdeaDescription": "Explora la casa encantada. Ve a un lugar oscuro. La pantalla muestra puntos aleatorios. Si el sensor de ruido capta un 'Boo!' o un golpe, la Matriz debe fijar la imagen y mostrar la cara del fantasma que has atrapado.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.showStatic(); IF Light.level < 10 AND Noise.peak() THEN LED.showIcon('Ghost')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Vela Digital de Viento",
+    "originalIdeaDescription": "La matriz muestra una animación de fuego. Si el usuario sopla fuerte (ruido constante), la 'llama' disminuye hasta apagarse.",
+    "transformedIdeaTitle": "Apaga las Velas de Cumpleaños",
+    "transformedIdeaDescription": "Celebra tu fiesta. La Matriz muestra velas encendidas. Para apagarlas, tienes que soplar fuerte al micrófono. El sensor de ruido detectará la intensidad: un soplido suave hace parpadear la llama, un soplido fuerte la apaga por completo (LEDs apagados).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "FlameHeight = 5 - Map(Noise.level); LED.plotBarGraph(FlameHeight)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Sistema de Seguridad de Caja Fuerte",
+    "originalIdeaDescription": "Si la caja está cerrada (oscuridad), está segura. Si se abre (luz) y hay ruido, la matriz muestra una 'X' parpadeante y alerta.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Esconde el dispositivo en una caja. Si está oscuro, muestra un candado cerrado en la Matriz. Si un ladrón abre la caja (detecta Luz) y hace ruido al rebuscar, cambia la imagen a una calavera parpadeante para asustarlo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 AND Noise.level > 30 THEN LED.flash('Skull') ELSE LED.showIcon('Lock')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Visualizador de Música (Ecualizador)",
+    "originalIdeaDescription": "Barras en la matriz suben y bajan con el ruido (música). El brillo de los LEDs se ajusta inversamente a la luz ambiental para mejor contraste.",
+    "transformedIdeaTitle": "DJ de la Discoteca",
+    "transformedIdeaDescription": "Crea un espectáculo de luces. Pon música. Las columnas de la Matriz LED deben subir y bajar siguiendo el ritmo (Nivel de Ruido). Además, si apagas la luz de la habitación, los LEDs deben brillar más fuerte para destacar en la oscuridad.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BarHeight = Map(Noise.level); Brightness = 100 - Light.level; LED.setBrightness(Brightness); LED.plotBar(BarHeight)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El usuario usa una linterna para el 'rayo'. Al detectarlo, la matriz espera el 'trueno' (palmada). Si ocurren en orden, muestra lluvia.",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Invoca la lluvia. Primero, haz un flash con una linterna sobre el sensor (Rayo). Luego, da una palmada fuerte (Trueno). Si el sistema detecta Luz y luego Ruido, la Matriz mostrará una animación de gotas de lluvia cayendo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.flash(): Await(Noise.clap); IF Noise.clap(): LED.showAnimation('Rain')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Decodificador de Mensajes Secretos",
+    "originalIdeaDescription": "La matriz parece apagada o muestra basura. Solo si hay oscuridad total y el usuario susurra la clave, el mensaje aparece.",
+    "transformedIdeaTitle": "Agente Secreto 007",
+    "transformedIdeaDescription": "Tienes un mensaje clasificado. Para leerlo en la pantalla LED, debes esconderte bajo una manta (Oscuridad total). Pero eso no es todo: el sistema de seguridad requiere una contraseña de voz. Di algo suavemente (Ruido bajo) para que las letras del mensaje empiecen a desplazarse.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 AND (Noise.level > 10 AND Noise.level < 40) THEN LED.scroll('TOP SECRET')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Semáforo Activado por Voz",
+    "originalIdeaDescription": "La matriz muestra un semáforo rojo. Para ponerlo en verde, hay que 'pitar' (hacer ruido) o iluminarlo con 'faros' (linterna).",
+    "transformedIdeaTitle": "Controlador de Tráfico",
+    "transformedIdeaDescription": "Hay un atasco. El semáforo en la Matriz está en Rojo (píxeles centrales). Para cambiarlo a Verde y dejar pasar el tráfico, tienes dos opciones: hacer sonar un claxon (Ruido fuerte) o hacer ráfagas de luces largas (Flash de Luz).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 80 OR Light.level > 80 THEN LED.show('GreenLight') ELSE LED.show('RedLight')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Murciélago en la Cueva",
+    "originalIdeaDescription": "La matriz muestra ojos de murciélago. Si hay luz, se cierran (duerme). Si es de noche y hay ruido (ecos), los ojos miran a los lados.",
+    "transformedIdeaTitle": "La Cueva del Murciélago",
+    "transformedIdeaDescription": "Eres un murciélago. Si hay luz solar, cierra los ojos (LEDs apagados o línea horizontal). Si es de noche (Oscuridad), abre los ojos. Si detectas un ruido fuerte (como un insecto o eco), mueve las pupilas en la Matriz hacia la dirección del sonido (simulado o aleatorio).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 50 THEN LED.show('ClosedEyes'); ELSE IF Noise.level > 30 THEN LED.show('LookingAround')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Aplausómetro Visual",
+    "originalIdeaDescription": "Mide el nivel de ruido de los aplausos y llena la matriz LED de abajo hacia arriba como una barra de energía.",
+    "transformedIdeaTitle": "Concurso de Talentos",
+    "transformedIdeaDescription": "Juzga la actuación. Pide a la clase que aplauda. Usa el sensor de ruido para medir el volumen. La Matriz LED se llenará de filas iluminadas. Si llegan al tope (Ruido máximo), ¡la pantalla parpadeará celebrando al ganador!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Rows = Map(Noise.level, 0, 100, 0, 7); LED.plotBarGraph(Rows)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Juego del Escondite Ninja",
+    "originalIdeaDescription": "El usuario debe estar en silencio y oscuro. Si la matriz detecta luz o ruido, muestra 'Game Over'. El objetivo es aguantar tiempo.",
+    "transformedIdeaTitle": "Ninja Invisible",
+    "transformedIdeaDescription": "Escóndete del guardia. La Matriz cuenta los segundos que llevas escondido. Debes mantenerte en la sombra (Luz baja) y en silencio absoluto. Si toses o te iluminan con una linterna, la cuenta se detiene y aparece una 'X' grande.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level < 10 THEN Score++ AND LED.show(Score) ELSE LED.show('X')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Planta Virtual",
+    "originalIdeaDescription": "Muestra una flor. Si tiene luz, crece (más LEDs). Si hay mucho ruido, se marchita (menos LEDs).",
+    "transformedIdeaTitle": "Jardín de la Paz",
+    "transformedIdeaDescription": "Haz crecer tu flor. Pon el dispositivo al sol. La Matriz mostrará cómo el tallo sube y la flor se abre. Pero cuidado: la planta odia el ruido. Si gritas, verás en la pantalla cómo pierde pétalos y se encoge.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 THEN Growth++; IF Noise.level > 70 THEN Growth--; LED.showImage(PlantStage[Growth])"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Alarma Despertador Solar",
+    "originalIdeaDescription": "Cuando sale el sol (luz sube), la matriz empieza a parpadear. Para apagarla, hay que gritar '¡Buenos días!'.",
+    "transformedIdeaTitle": "El Gallo Electrónico",
+    "transformedIdeaDescription": "Despierta con el sol. Cuando el sensor detecte que amaneció (Luz > 60), la Matriz mostrará un sol parpadeante. No hay botón de apagado: para detener la alarma visual, tienes que dar una palmada fuerte o gritar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 AND !Awake THEN LED.flash('Sun'); IF Noise.level > 80 THEN Awake=TRUE"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Comunicador Alienígena",
+    "originalIdeaDescription": "Traduce patrones de luz y sonido en símbolos en la matriz. Luz corta + Ruido = Letra A, etc.",
+    "transformedIdeaTitle": "Primer Contacto",
+    "transformedIdeaDescription": "Recibes señales del espacio. Intenta comunicarte. Si haces un flash de luz y luego un golpe (ruido), la Matriz muestra un símbolo alienígena. Experimenta con diferentes combinaciones de luz y sonido para descubrir todo el alfabeto extraterrestre.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pattern = Input(Light, Noise); Symbol = Decode(Pattern); LED.show(Symbol)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Casco de Minero Automático",
+    "originalIdeaDescription": "En oscuridad, enciende todos los LEDs (linterna). Si detecta un ruido fuerte (derrumbe), muestra SOS.",
+    "transformedIdeaTitle": "Seguridad en la Mina",
+    "transformedIdeaDescription": "Baja a la profundidad. Si el sensor detecta oscuridad, la Matriz se enciende en blanco para iluminar tu camino. Si de repente hay un estruendo fuerte (Ruido > 90), el sistema asume un accidente y cambia la luz a un patrón de S.O.S. parpadeante.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 THEN Mode='Flashlight'; IF Noise.level > 90 THEN Mode='SOS'; LED.run(Mode)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Fuegos Artificiales Digitales",
+    "originalIdeaDescription": "La 'mecha' se enciende con luz intensa. Al retirar la luz, espera, y un ruido fuerte (explosión) dispara la animación en la matriz.",
+    "transformedIdeaTitle": "Pirotecnia Segura",
+    "transformedIdeaDescription": "Lanza cohetes. Acerca una linterna para 'encender la mecha' (barra de carga en LED). Cuando esté lista, aleja la luz y da un golpe en la mesa (Ruido) para detonar. La Matriz mostrará una explosión de píxeles brillante.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 90 THEN Fuse++; IF Fuse==Max AND Noise.peak() THEN LED.animate('Explosion')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Contador de Historias de Terror",
+    "originalIdeaDescription": "La matriz muestra una cara. La expresión cambia según la iluminación (sombra=miedo) y el volumen de la voz del narrador.",
+    "transformedIdeaTitle": "La Máscara Narrativa",
+    "transformedIdeaDescription": "Cuenta una historia de miedo. Sujeta el dispositivo bajo tu barbilla como una linterna. Si hay mucha luz y hablas normal, la cara en la Matriz es neutral. Si apagas la luz y susurras, la cara se vuelve tenebrosa. Si gritas, ¡la cara se asusta!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Face = Analyze(Light, Noise); LED.showIcon(Face)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Reflejos",
+    "originalIdeaDescription": "La matriz muestra 'LISTOS'. Cuando se apaga la luz (señal), el usuario debe gritar '¡YA!'. Muestra el tiempo de reacción.",
+    "transformedIdeaTitle": "Salida de Carrera",
+    "transformedIdeaDescription": "En sus marcas, listos... El árbitro apagará la luz de la habitación para dar la salida. En ese instante exacto, debes gritar. La Matriz calculará los milisegundos que pasaron entre el apagón y tu grito. ¡Intenta bajar tu récord!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(Light.drop); Timer.start(); Wait(Noise.peak); Result = Timer.stop(); LED.scrollNumber(Result)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Búho Nocturno",
+    "originalIdeaDescription": "Muestra ojos de búho. Si hay luz, parpadean lentamente. Si está oscuro y escucha un ruido, los ojos se abren mucho (alerta).",
+    "transformedIdeaTitle": "Guardián del Bosque",
+    "transformedIdeaDescription": "Eres un búho vigilando. Si es de día (Luz), duerme (Ojos cerrados -). Si es de noche (Oscuridad), abre los ojos (O O). Si escuchas un ratón (Ruido leve), mira a los lados. Si escuchas un oso (Ruido fuerte), abre los ojos al máximo de sorpresa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.high: LED('Sleep'); ELSE IF Noise.high: LED('BigEyes'); ELSE LED('NormalEyes')"
+  }
+]

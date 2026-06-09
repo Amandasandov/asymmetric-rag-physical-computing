@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Automatic Audio Volume Regulator System",
+    "originalIdeaDescription": "This system acts as an environment regulator. When the switch activates the system, it continuously monitors ambient noise levels. If the background noise becomes too loud, the audio player automatically increases its volume to compensate, and lowers it when the room is quiet.",
+    "transformedIdeaTitle": "The Smart DJ Party Controller",
+    "transformedIdeaDescription": "Become a DJ for a smart disco! Create a program where the music adapts to the crowd. When you flip the 'Party Switch' on, the system listens. If the crowd cheers loudly (high noise), play the music at maximum volume! If the crowd is chatting quietly, lower the volume to background levels so they can talk.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF Noise.level > 80 THEN Audio.setVolume(100) ELSE Audio.setVolume(30) }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Quiet Zone Violation Alarm",
+    "originalIdeaDescription": "Designed for libraries or study halls, this device uses the switch to arm the system. Once armed, if the noise level sensor detects sound above a specific decibel threshold, the audio player emits a 'Shhh' sound or a gentle reminder to keep quiet.",
+    "transformedIdeaTitle": "The Grumpy Librarian Bot",
+    "transformedIdeaDescription": "Build a robot guardian for the library. When you activate the 'Guard Mode' switch, the robot listens intently. If anyone talks too loudly or sneezes (noise spike), the robot immediately plays a 'Shh!' sound effect. If the switch is off, the robot sleeps and ignores all noise.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > 50 THEN Audio.play('shh_sound')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Clap Activated Music Player",
+    "originalIdeaDescription": "This device allows users to control music playback without hands. The switch acts as a master power. When on, a sharp spike in noise level (like a clap) toggles the state of the audio player between playing and pausing a track.",
+    "transformedIdeaTitle": "Magical Wizard Radio",
+    "transformedIdeaDescription": "You are a wizard who controls music with magic claps! Program a radio that turns on only when the 'Magic Power' switch is active. Then, write code to detect a loud clap. If a clap is heard, start the song. Another clap stops it. No buttons allowed for the music!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.detectClap() THEN Audio.togglePlay()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Intruder Detection Security Siren",
+    "originalIdeaDescription": "A home security concept where the switch is used to arm the system before leaving. If the noise level sensor detects any sound (footsteps or breaking glass) while armed, the audio player loops a loud siren alert until the switch is turned off.",
+    "transformedIdeaTitle": "Super Secret Base Trap",
+    "transformedIdeaDescription": "Protect your secret base from spies! Use a switch to 'arm' your trap before you go to sleep. If a spy sneaks in and makes even a tiny sound (noise detected), your system must blast a loud siren alarm to scare them away. The alarm stops only when you flip the switch off.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() { IF Noise.level > 10 THEN Audio.play('siren') }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Voice Level Feedback Trainer",
+    "originalIdeaDescription": "A tool to help people modulate their voice. The switch selects the mode (Presentation vs. Library). The audio player gives feedback tones: a high pitch if the user is too loud for the selected mode, and a low pitch if they are too quiet.",
+    "transformedIdeaTitle": "The Goldilocks Voice Coach",
+    "transformedIdeaDescription": "Help your friends speak at just the right volume. If the Switch is OFF (Library Mode), playing a warning beep if they speak above a whisper. If the Switch is ON (Stage Mode), play a cheering sound only if they project their voice loudly enough. It teaches volume control!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOff() AND Noise > 30 THEN Audio.play('beep'); IF Switch.isOn() AND Noise > 70 THEN Audio.play('cheer')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Scream Activated Halloween Prop",
+    "originalIdeaDescription": "An interactive decoration for haunted houses. The switch powers the device. When the noise sensor detects a scream (very high volume), the audio player responds with a spooky laugh or ghost sound effect to startle the visitor further.",
+    "transformedIdeaTitle": "Monster in the Box",
+    "transformedIdeaDescription": "Create a spooky prank! The box looks empty, but when the switch is flipped, it wakes up a monster. If someone screams or shouts at the box, the monster screams back! The louder they shout, the scarier the sound the monster makes.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > 90 THEN Audio.play('monster_scream')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ambient Noise Sound Masking",
+    "originalIdeaDescription": "This system helps concentration. When the switch is turned on, it measures external disturbing noise. If the environment is noisy, it plays white noise or rain sounds through the audio player to mask the distraction. If it's quiet, the audio stops.",
+    "transformedIdeaTitle": "Focus Force Field",
+    "transformedIdeaDescription": "Design a 'shield' against distracting noises while doing homework. When you flip the 'Focus Switch', the computer listens. If your siblings are being loud (noise detected), the system plays soothing rain sounds to block them out. If they stop, the rain stops.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF Noise.level > 40 THEN Audio.play('rain') ELSE Audio.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interactive Story Choice System",
+    "originalIdeaDescription": "An audio storytelling device. The switch is used to select between two different story genres. The user then triggers the start of the next chapter or sound effect by making a specific noise or keyword, allowing for hands-free interaction.",
+    "transformedIdeaTitle": "The Listen-and-React Storybook",
+    "transformedIdeaDescription": "Create an interactive audiobook. Use the switch to choose a Scary Story or a Funny Story. The story pauses at exciting moments. The listener must clap their hands (make noise) to make the story continue. If they stay silent, the story waits for them.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Audio.load('Funny'); Audio.playPart1(); WAIT UNTIL Noise > 50; Audio.playPart2()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Baby Soothing Machine",
+    "originalIdeaDescription": "A device placed near a crib. The switch activates the monitoring mode. If the noise sensor detects crying (sustained high noise), the audio player automatically begins playing a gentle lullaby for a set duration to soothe the baby.",
+    "transformedIdeaTitle": "Robo-Nanny 3000",
+    "transformedIdeaDescription": "Program a robot to take care of a virtual baby. When the 'Night Mode' switch is on, the robot listens. If the baby starts crying (noise > 60), the robot must immediately play a lullaby. If the room is quiet, the robot stays silent to let the baby sleep.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.level > 60 THEN Audio.play('lullaby')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Acoustic Echo Simulator",
+    "originalIdeaDescription": "A fun physics demonstration. When the switch is held down (recording mode), the system listens to input noise. When the switch is released, the audio player replays the sound with a delay and decay effect, simulating an echo in a canyon.",
+    "transformedIdeaTitle": "The Cave Explorer",
+    "transformedIdeaDescription": "Simulate being inside a giant cave. While you hold the switch down, you can shout into the microphone. As soon as you let go of the switch, the program plays back a sound effect that mimics your shout fading away like a real echo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN Noise.record() ELSE Audio.playEffect('echo')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Game Show Buzzer System",
+    "originalIdeaDescription": "A controller for quiz games. The switch resets the system. Players must make a loud sound (like shouting their name) to 'buzz in'. The system detects the first noise spike and plays a unique chime, locking out other inputs until reset.",
+    "transformedIdeaTitle": "Shout-to-Win Quiz Controller",
+    "transformedIdeaDescription": "Build a buzzer for a trivia game where you don't press a button, you shout! The moderator uses the switch to reset the round. The first person to shout an answer triggers the 'Ding-Ding!' sound. The system must ignore other shouts until the moderator flips the switch again.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.toggled() THEN Reset(); IF Noise > 70 AND !Locked THEN { Audio.play('ding'); Locked = True }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Stealth Training Game",
+    "originalIdeaDescription": "A game mechanic where the audio player emits a background drone. The user must move silently. If the noise sensor detects sound above a threshold, the audio cuts to a 'Caught' alarm. The switch resets the game for a new attempt.",
+    "transformedIdeaTitle": "Ninja Stealth Challenge",
+    "transformedIdeaDescription": "Train to be a ninja! The system plays suspenseful music. You must sneak across the room without making a sound. If your footsteps are too loud (Noise sensor triggers), the music stops and a 'Busted!' alarm plays. Use the switch to restart the mission.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('suspense'); IF Noise.level > 20 THEN { Audio.stop(); Audio.play('alarm'); }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Voice Activated Music Box",
+    "originalIdeaDescription": "A digital music box. The switch determines the song selection (Song A vs Song B). The music only plays while the user is humming or singing into the sensor. If the user stops making noise, the music pauses immediately.",
+    "transformedIdeaTitle": "The Magic Singing Stone",
+    "transformedIdeaDescription": "Create a magical artifact that only works when you give it energy with your voice. Select a song with the switch. The music will only play AS LONG AS you are humming a continuous note. If you run out of breath and stop, the music stops too!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Song = 'A'; WHILE Noise.level > 30 DO Audio.play(Song)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Conversation Timer and Alert",
+    "originalIdeaDescription": "Used for debates or meetings. The switch starts a timer. If the noise level indicates someone is speaking continuously for too long without a pause (silence), the audio player emits a polite beep to signal their turn is over.",
+    "transformedIdeaTitle": "The Fair Play Debate Timer",
+    "transformedIdeaDescription": "Keep debates fair! When you flip the switch, the timer starts. If one person talks loudly for too long without taking a breath (continuous noise), the system plays a buzzer to tell them to let someone else speak. It teaches taking turns!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.duration > 10_seconds THEN Audio.play('buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Pet Bark Stopper",
+    "originalIdeaDescription": "An automated training device. The switch turns the system on when the owner leaves. If the microphone detects barking (sharp, repetitive loud noises), the audio player emits a high-frequency sound or a command to discourage the behavior.",
+    "transformedIdeaTitle": "The Doggy Trainer",
+    "transformedIdeaDescription": "Help train a virtual puppy. When you leave the house (flip Switch ON), the system monitors the puppy. If the puppy barks (loud noise), the system automatically plays a recording of your voice saying 'Quiet please!'. If the puppy is quiet, the system does nothing.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Noise.detectBark() THEN Audio.play('Quiet_Command')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interactive Animal Roar Encyclopedia",
+    "originalIdeaDescription": "Educational toy. The switch cycles through different animals (Lion, Elephant, Bird). The user must mimic the animal's sound volume. If the noise level matches the animal's typical volume (loud for lion, quiet for mouse), the audio player plays the real animal sound.",
+    "transformedIdeaTitle": "The Zoo Mimic Game",
+    "transformedIdeaDescription": "Can you roar like a lion? Use the switch to pick an animal. If you pick Lion, you must shout loudly to hear the real Lion roar back. If you pick Mouse, you must whisper to hear the Mouse squeak. If you get the volume wrong, it plays an error sound!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.State == 'Lion' AND Noise > 80 THEN Audio.play('Roar') ELSE Audio.play('TryAgain')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Emergency whistle Detector",
+    "originalIdeaDescription": "Safety device prototype. The switch is a 'test' mode. In normal operation, if the sensor detects a specific high-pitched sustained sound (like a safety whistle), the audio player emits a loud rescue beacon sound to guide rescuers.",
+    "transformedIdeaTitle": "Mountain Rescue Beacon",
+    "transformedIdeaDescription": "You are lost on a mountain! Program a rescue device. If you blow your safety whistle (high, sustained noise), the device activates a loud beacon sound so the helicopter can find you. Use the switch to turn off the beacon once you are saved.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.isHighPitch() AND Noise.level > 80 THEN Audio.loop('SOS_Beacon'); IF Switch.off() THEN Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Musical Statue Stop/Go",
+    "originalIdeaDescription": "Automates the game of Red Light / Green Light. The audio player plays music. When the switch is flipped, music stops. The system then checks noise levels. If players are moving (making noise) during the silence, a 'You're out' sound is played.",
+    "transformedIdeaTitle": "Musical Statues Referee",
+    "transformedIdeaDescription": "Build a machine to judge the 'Musical Statues' game. When the music plays, everyone dances. When the music stops (randomly or by switch), the machine listens. If anyone moves and makes noise during the silence, the machine plays a funny 'You Lose' trumpet sound.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.stop(); WAIT(1); IF Noise.level > 10 THEN Audio.play('FailSound')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Applause Meter",
+    "originalIdeaDescription": "Measures crowd enthusiasm. The switch starts the measurement window. The noise level sensor integrates the volume over 5 seconds. The audio player then announces the score or plays a fanfare corresponding to the loudness of the applause.",
+    "transformedIdeaTitle": "The Talent Show Judge",
+    "transformedIdeaDescription": "Who won the talent show? Let the audience decide! Flip the switch to start listening. If the audience claps normally, play a polite 'Good Job' sound. If they scream and clap wildly (super high noise), play a 'Winner!' fanfare. You are coding the judge!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { Score = Noise.average(); IF Score > 80 THEN Audio.play('Fanfare') ELSE Audio.play('Clap') }"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sound Intensity Safe",
+    "originalIdeaDescription": "A puzzle box mechanism. To unlock (simulated by a specific audio chime), the user must maintain the noise level within a very specific narrow range (not too loud, not too quiet) while holding the switch active for 3 seconds.",
+    "transformedIdeaTitle": "The Secret Sonic Safe",
+    "transformedIdeaDescription": "Crack the code to open the safe! The lock doesn't use numbers, it uses sound. Hold the switch and hum a note. You must keep the volume exactly in the middle—not too loud, not too quiet—for 3 seconds. If you succeed, the safe plays a 'Click-Open' sound.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.held() AND (Noise > 40 AND Noise < 60) FOR 3_Sec THEN Audio.play('Unlock')"
+  }
+]

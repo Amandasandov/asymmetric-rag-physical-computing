@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Theremin de Luz y Gesto",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la cantidad de luz que incide sobre el sensor selecciona la octava o el instrumento, y la inclinación o agitación (Motion) añade vibrato o cambia el volumen mientras se toca el teclado.",
+    "transformedIdeaTitle": "El Sintetizador Espacial",
+    "transformedIdeaDescription": "Construye un instrumento del futuro. Usa una linterna sobre el sensor de luz para cambiar el tono de las teclas (Luz fuerte = Agudo, Luz suave = Grave). Mueve el dispositivo en el aire (Motion) para distorsionar el sonido como si estuvieras en el espacio.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Octave = Map(Light.level); Effect = Motion.tilt; Keyboard.setPitch(Octave); Keyboard.setModulation(Effect)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Alarma de Diario Secreto",
+    "originalIdeaDescription": "Sistema de seguridad para un cajón. Si detecta luz (se abre el cajón) y movimiento (se manipula el objeto), el teclado toca una alarma estridente.",
+    "transformedIdeaTitle": "Trampa para Curiosos",
+    "transformedIdeaDescription": "Protege tus secretos. Esconde el dispositivo en tu cajón. Debe estar a oscuras y quieto. Si tu hermano abre el cajón (entra Luz) y mueve tu diario (Motion), el teclado disparará una sirena de policía. Solo tú sabes el código de teclas para desactivarla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 10 AND Motion.magnitude > 5 THEN Keyboard.playLoop('Alarm') UNTIL Keyboard.pin('1234')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Mascota: Planta Virtual",
+    "originalIdeaDescription": "Una planta que necesita luz para la fotosíntesis y viento (agitar/motion) para fortalecerse. Si se cumplen las condiciones, toca una melodía de crecimiento.",
+    "transformedIdeaTitle": "Jardinero Digital",
+    "transformedIdeaDescription": "Cuida tu flor digital. Ponla bajo una lámpara (Comida/Luz) y simula el viento agitándola suavemente (Motion). Si recibe ambos cuidados, presiona una tecla para escuchar la 'Canción de la Primavera' y subir de nivel.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 AND Motion.shake() THEN Energy++; IF Keyboard.pressed() AND Energy > 10 THEN Play('GrowthSong')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Sigilo: El Vampiro",
+    "originalIdeaDescription": "El usuario es un vampiro que debe volver a su ataúd. Solo puede moverse si está oscuro. Si hay luz y se mueve, se quema (sonido de daño en teclado).",
+    "transformedIdeaTitle": "Escape del Castillo de Drácula",
+    "transformedIdeaDescription": "Eres un vampiro huyendo del sol. Debes correr (agitar dispositivo) para escapar. Pero cuidado: solo puedes moverte si tapas el sensor de luz (Sombra). Si te mueves cuando hay luz, el sol te quemará y el teclado sonará un acorde terrorífico.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isRunning(): IF Light.level > 20 THEN Keyboard.play('Damage') ELSE Distance++"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Vehículo Solar Todoterreno",
+    "originalIdeaDescription": "Simulador de conducción. La luz es el combustible (más luz = más velocidad). La inclinación es el volante. El teclado es el claxon.",
+    "transformedIdeaTitle": "Gran Premio Solar",
+    "transformedIdeaDescription": "Pilota un coche ecológico. Necesitas luz solar para que el motor funcione: apunta a la lámpara. Inclina el dispositivo para girar. Si te cruzas con un obstáculo imaginario, toca la tecla negra del teclado para tocar el claxon.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Light.level; Direction = Motion.tiltX; IF Keyboard.key('Black') THEN Play('Horn')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja de Música de Bailarina",
+    "originalIdeaDescription": "La música suena solo si la caja está abierta (luz) y se le da cuerda (agitar/motion).",
+    "transformedIdeaTitle": "Cajita Musical Mágica",
+    "transformedIdeaDescription": "Repara la caja de música antigua. Para que suene la melodía en el teclado, necesitas dos cosas: que la tapa esté abierta (Luz detectada) y haberle dado cuerda girando el dispositivo (Motion). Si la cierras (Oscuridad), la música para.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WoundUp += Motion.rotation; IF Light.level > 20 AND WoundUp > 0 THEN Keyboard.playMelody() AND WoundUp--"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Varita de Hechicero",
+    "originalIdeaDescription": "Cargar maná absorbiendo luz. Lanzar hechizo con un gesto (motion). El teclado selecciona el elemento del hechizo (Fuego, Hielo).",
+    "transformedIdeaTitle": "Duelo de Magos",
+    "transformedIdeaDescription": "Prepárate para el duelo. Absorbe energía apuntando el sensor a una luz hasta que escuches un 'Ding'. Elige tu hechizo con una tecla (Do=Fuego, Re=Rayo) y lánzalo haciendo una estocada rápida (Motion) hacia tu oponente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana += Light.accumulate(); IF ManaMax AND Keyboard.key('C') AND Motion.jerk() THEN Play('Fireball')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Detecta si la habitación está oscura y si hay movimiento en la cuna. Si el bebé se mueve mucho, toca una nana suave.",
+    "transformedIdeaTitle": "Niñera Robot",
+    "transformedIdeaDescription": "El bebé necesita dormir. Si la luz está apagada (Noche) y el sensor detecta que el bebé se está moviendo mucho en la cuna (Motion > Umbral), activa automáticamente el teclado para tocar 'Estrellita dónde estás' y calmarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.shake > 30 THEN Keyboard.play('Lullaby')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Desactivación de Bomba",
+    "originalIdeaDescription": "El usuario debe llevar el dispositivo con pulso firme (sin motion) a una zona segura y 'cortar el cable' tapando la luz. El teclado introduce el código final.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "Transporta el explosivo inestable. Camina muy suavemente (Motion bajo). Cuando llegues a la zona segura, tapa el sensor de luz con el dedo (simulando cortar cable) e introduce el código '1-2-3' en el teclado para salvar la ciudad.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.shake > 10 THEN Explode(); IF Light.covered() AND Keyboard.code('123') THEN Defuse()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Pesca Nocturna",
+    "originalIdeaDescription": "Esperar en la oscuridad. Un tirón (Motion) indica que picaron. Tocar teclado para recoger carrete.",
+    "transformedIdeaTitle": "Pesca en el Lago Misterioso",
+    "transformedIdeaDescription": "Es de noche (cubre el sensor de luz). Mantén la caña quieta. De repente, sentirás un tirón (el juego simula un pez, tú reaccionas al aviso en pantalla moviendo la caña/Motion). ¡Rápido! Toca las teclas repetidamente para recoger el hilo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Light < 5); IF FishBite AND Motion.jerk() THEN Hooked=TRUE; IF Hooked AND Keyboard.mash() THEN Catch()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "El Murciélago Ciego",
+    "originalIdeaDescription": "Simular el vuelo de un murciélago. Agitar para aletear. Funciona en oscuridad. El teclado es el sonar (tocar para 'ver' con sonido).",
+    "transformedIdeaTitle": "Vuelo Nocturno",
+    "transformedIdeaDescription": "Eres un murciélago. Aletea (agita el dispositivo) para volar. Solo puedes volar si está oscuro. Para no chocar, toca una tecla: si el sonido es agudo, hay pared; si es grave, camino libre. Navega por el aula.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 AND Motion.shake() THEN Fly(); IF Keyboard.pressed() THEN PlaySonarPing()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Estatuas Musicales",
+    "originalIdeaDescription": "Si hay luz, baila (motion). Si se apaga la luz, congúelate. El teclado suena mientras dura el juego.",
+    "transformedIdeaTitle": "Fiesta de Baile Freeze",
+    "transformedIdeaDescription": "¡A bailar! Mientras el profesor tenga la luz encendida, muévete al ritmo y toca el teclado. En cuanto se apague la luz (oscuridad), ¡CONGÉLATE! (Motion 0). Si te mueves en la oscuridad, pierdes.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.on THEN Require(Motion); IF Light.off AND Motion.detected THEN GameOver()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte Gravitacional",
+    "originalIdeaDescription": "Para abrir, inclinar a la izquierda, tapar la luz, e inclinar a la derecha. Luego confirmar con una tecla.",
+    "transformedIdeaTitle": "El Ladrón Maestro",
+    "transformedIdeaDescription": "Abre la bóveda del banco. La combinación es compleja: 1. Inclina a la izquierda. 2. Tapa el sensor de luz (oscuridad). 3. Inclina a la derecha. 4. Toca la tecla 'Sol'. Si fallas el orden, suena la alarma.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Seq = [TiltL, Dark, TiltR, KeyG]; CheckSequence(Inputs)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Linterna de Dinamo Musical",
+    "originalIdeaDescription": "Agitar carga energía. La luz se enciende (simulado) y el teclado permite tocar música. Si dejas de agitar, se apaga la música.",
+    "transformedIdeaTitle": "Piano a Pedales",
+    "transformedIdeaDescription": "Este piano necesita energía cinética. Agita el dispositivo constantemente (Motion) para cargar el generador. Mientras la 'batería' tenga carga (indicado porque el sensor de luz recibe reflejo o pantalla), el teclado funcionará. ¡No dejes de moverte!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Charge += Motion.shake; IF Charge > 0 THEN Keyboard.enable() ELSE Keyboard.disable()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Reacción Flash",
+    "originalIdeaDescription": "Esperar un flash de luz. Al verlo, agitar lo más rápido posible. El teclado anuncia el tiempo de reacción con notas.",
+    "transformedIdeaTitle": "El Pistolero de Luz",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos. Espera en la oscuridad... ¡FLASH! (Alguien te ilumina). Agita el dispositivo inmediatamente. El teclado tocará una escala ascendente: cuanto más rápido reacciones, más alta será la nota final.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Light.spike); Timer.start(); Wait(Motion.shake); Result = Timer.stop(); Keyboard.playResult(Result)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Estación Meteorológica Musical",
+    "originalIdeaDescription": "Detecta si hay sol (Luz) o viento (Agitar). Toca una canción diferente para cada clima.",
+    "transformedIdeaTitle": "El DJ del Clima",
+    "transformedIdeaDescription": "El dispositivo siente el tiempo. Si hay mucha luz, toca una canción 'Soleada' en el teclado. Si lo agitas (simulando viento), toca efectos de tormenta. Si tapas la luz (nubes), toca una melodía melancólica.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN Play('Storm'); ELSE IF Light.high THEN Play('Sunny'); ELSE Play('Cloudy')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Bici Inteligente",
+    "originalIdeaDescription": "Detecta movimiento (andar). Si es de noche (luz baja), activa sonido de dinamo. Teclado sirve de timbre.",
+    "transformedIdeaTitle": "Seguridad Ciclista",
+    "transformedIdeaDescription": "Simula un ordenador de bicicleta. Si te mueves (Motion), la bici avanza. Si el sensor detecta que entras en un túnel (Luz baja), activa automáticamente un sonido de seguridad. Usa el teclado como timbre para alertar a peatones.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active AND Light.low THEN Play('LightOnSound'); IF Keyboard.pressed() THEN Play('DingDing')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Caminar buscando zonas frías (luz baja). Si el dispositivo vibra (motion simulado), hay un fantasma. Tocar teclado para atrapar.",
+    "transformedIdeaTitle": "Cazafantasmas: La Mansión",
+    "transformedIdeaDescription": "Explora la mansión. Camina con el dispositivo. Busca rincones oscuros (Luz baja). Si de repente el sensor de movimiento detecta una 'vibración espectral' (sacude tú la mano), significa que el fantasma está ahí. ¡Toca la tecla 'Espacio' para capturarlo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.low AND Motion.jerk() THEN GhostFound=TRUE; IF GhostFound AND Keyboard.pressed() THEN Capture()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Robot de Cocina",
+    "originalIdeaDescription": "Agitar para mezclar ingredientes. Luz encendida es el horno. Teclado es el temporizador.",
+    "transformedIdeaTitle": "Master Chef: El Pastel",
+    "transformedIdeaDescription": "Haz un pastel. 1. Mezcla los ingredientes agitando el dispositivo (Motion). 2. Mételo al horno acercándolo a una lámpara (Luz y Calor). 3. Configura el tiempo tocando las teclas del teclado. ¡Cuidado no se queme!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Dough += Motion.shake; IF Dough_Ready AND Light.high THEN Bake(); Keyboard.setTimer()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Espada Láser Recargable",
+    "originalIdeaDescription": "Cargar energía solar (luz). Blandir espada (motion). Sonidos de choque (teclado).",
+    "transformedIdeaTitle": "Caballero Jedi",
+    "transformedIdeaDescription": "Construye tu sable. Carga la batería apuntando al sol (Luz). Una vez cargado, haz movimientos de corte en el aire (Motion) para escuchar el zumbido. Si chocas contra otra espada, pulsa una tecla para el sonido de '¡Clash!'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Power = Light.level; IF Motion.swing() THEN Play('Hum'); IF Keyboard.hit() THEN Play('Clash')"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Nivel Digital con Alerta Sonora",
+    "originalIdeaDescription": "Un dispositivo que utiliza el sensor de inclinación para mover un punto en la matriz LED. Si el dispositivo está perfectamente nivelado, el punto se centra y suena un tono agudo continuo; si está inclinado, el tono cambia.",
+    "transformedIdeaTitle": "El Constructor de Pirámides",
+    "transformedIdeaDescription": "Eres un arquitecto en el antiguo Egipto. Debes colocar la última piedra de la gran pirámide. Usa tu dispositivo para equilibrar la piedra. Si se inclina, verás una flecha en la matriz y oirás un sonido de advertencia grave. ¡Manténlo recto para escuchar la fanfarria de victoria!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X == 0 THEN LED.show(Center) AND Audio.play(Success) ELSE LED.show(Arrow) AND Audio.play(Warning)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin de Aire",
+    "originalIdeaDescription": "Un instrumento musical invisible donde la inclinación del dispositivo cambia el tono de la nota musical reproducida por el Audio Player, y la Matriz LED muestra una barra de altura que sube o baja según la inclinación.",
+    "transformedIdeaTitle": "El Violín Galáctico",
+    "transformedIdeaDescription": "Conviértete en un músico espacial. Mueve tu 'arco' (el dispositivo) hacia arriba y hacia abajo (inclinación) para cambiar las notas musicales. La pantalla mostrará ondas de sonido. Intenta tocar una melodía alienígena siguiendo las luces y los sonidos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PITCH = MAP(Inclination.Y, -90, 90, Low, High); Audio.playNote(PITCH); LED.showBarGraph(Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Sonoro",
+    "originalIdeaDescription": "Un juego donde el usuario inclina el dispositivo para guiar un píxel a través de un laberinto en la Matriz LED. Cada vez que el píxel choca contra una pared virtual, el Audio Player emite un sonido de choque.",
+    "transformedIdeaTitle": "Escape de la Cueva Oscura",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Inclina tu dispositivo para moverte. No puedes ver el camino completo, solo tu posición (luz LED). Si chocas contra una roca (pared invisible), oirás un '¡Bong!'. Encuentra la salida guiándote por el mapa y evitando los golpes.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Tilt == Direction AND Wall == False THEN LED.movePixel() ELSE Audio.play(Crash)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo Básico",
+    "originalIdeaDescription": "El usuario inclina el dispositivo como una palanca de mando. La Matriz LED muestra el horizonte artificial inclinándose, y el Audio Player reproduce el sonido del motor que cambia de intensidad según la inclinación (aceleración).",
+    "transformedIdeaTitle": "Piloto de Rescate Alpino",
+    "transformedIdeaDescription": "Pilota tu helicóptero de rescate a través de una tormenta. Inclina el dispositivo hacia adelante para acelerar (el motor ruge más fuerte) y hacia los lados para girar. Mantén el horizonte nivelado en la pantalla LED para no estrellarte contra la montaña.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setVolume(Inclination.Y); LED.drawLine(Angle = Inclination.X)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Anti-Robo",
+    "originalIdeaDescription": "El dispositivo se coloca sobre un objeto valioso. Si el sensor de inclinación detecta movimiento, la Matriz LED parpadea con una 'X' y el Audio Player suena una sirena fuerte.",
+    "transformedIdeaTitle": "El Guardián del Dragón",
+    "transformedIdeaDescription": "Estás protegiendo un huevo de dragón (tu dispositivo). Debes dejarlo muy quieto. Si alguien intenta robarlo y lo inclina lo más mínimo, el huevo 'despertará': ojos furiosos aparecerán en la pantalla y un rugido sonará para asustar al ladrón.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Change > Threshold THEN Audio.play(Roar) AND LED.showAnimation(Eyes)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Durmiente",
+    "originalIdeaDescription": "Una mascota digital que necesita ser mecida suavemente. La inclinación rítmica suave hace que la Matriz muestre 'Zzz' y suene una canción de cuna. Si se agita fuerte, la mascota se despierta y llora.",
+    "transformedIdeaTitle": "Nana para el Robot Bebé",
+    "transformedIdeaDescription": "Tu pequeño robot bebé no puede dormir. Mécelo suavemente de lado a lado. Si lo haces bien, verás caritas felices y oirás música suave. Si lo agitas demasiado rápido, se mareará, aparecerá una cara triste y llorará. ¡Sé delicado!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.SwingSpeed < Limit THEN Audio.play(Lullaby) AND LED.show(Happy) ELSE Audio.play(Cry)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Gestual",
+    "originalIdeaDescription": "Usa la inclinación en el eje X para controlar el 'scratch' o velocidad de reproducción, y el eje Y para el volumen. La Matriz LED muestra un ecualizador gráfico animado.",
+    "transformedIdeaTitle": "DJ Mágico sin Manos",
+    "transformedIdeaDescription": "¡Eres el DJ del futuro! No tocas botones, solo mueves el aire. Inclina a la derecha para acelerar el ritmo y hacia arriba para subir el volumen al máximo. La pantalla LED bailará al ritmo de tu mezcla. ¡Haz que la fiesta no pare!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.setSpeed(Inclination.X); Audio.setVolume(Inclination.Y); LED.showEqualizer(Audio.Level)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Educativo",
+    "originalIdeaDescription": "Simula un sismógrafo. Al agitar la mesa o el dispositivo, la Matriz LED dibuja ondas sísmicas y el Audio Player emite un sonido de estruendo proporcional a la intensidad de la sacudida.",
+    "transformedIdeaTitle": "Cazadores de Sismos",
+    "transformedIdeaDescription": "Construye una estación científica. Coloca el sensor en la mesa y golpea la superficie suavemente. Observa cómo se dibujan las ondas en la pantalla. Si golpeas fuerte, simulando un gran terremoto, sonará la alarma de evacuación. ¡Aprende cómo se mide la fuerza de la tierra!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = Inclination.ShakeAmount; LED.plotGraph(Intensity); IF Intensity > High THEN Audio.play(Alarm)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Volante de Carreras Interactivo",
+    "originalIdeaDescription": "El dispositivo actúa como volante. Girar a la izquierda/derecha activa señales de giro en la Matriz LED y sonidos de intermitentes. Inclinar hacia adelante toca la bocina.",
+    "transformedIdeaTitle": "Super Conductor de Karts",
+    "transformedIdeaDescription": "¡Carrera final! Usa tu dispositivo como volante. Gira para tomar las curvas (verás las flechas en la pantalla). Si alguien se pone en tu camino, inclina el volante hacia adelante para tocar la bocina y apartarlos. ¡Llega a la meta!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X < -20 THEN LED.show(LeftArrow); IF Inclination.Y > 20 THEN Audio.play(Horn)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Caja de Efectos de Sonido (Foley)",
+    "originalIdeaDescription": "Diferentes movimientos bruscos (inclinaciones rápidas) disparan efectos de sonido de dibujos animados (boing, crash, zap) mientras la Matriz muestra onomatopeyas visuales.",
+    "transformedIdeaTitle": "El Narrador de Cómics",
+    "transformedIdeaDescription": "Pon sonido a tu propia historia de acción. Cuando el héroe salte, inclina rápido hacia arriba para oír un '¡Boing!'. Cuando golpee, sacude hacia el lado para un '¡Pif!'. La pantalla mostrará las palabras de acción. ¡Tú controlas los efectos especiales!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Acceleration.Z > Threshold THEN Audio.play(Boing) AND LED.scrollText('BOING')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura Corporal",
+    "originalIdeaDescription": "El dispositivo se fija a la ropa. Si el usuario se encorva (inclinación cambia), la Matriz muestra una cara triste y suena un pitido recordatorio. Si está recto, muestra una cara feliz.",
+    "transformedIdeaTitle": "El Soldado de la Guardia Real",
+    "transformedIdeaDescription": "¡Atención! Eres un guardia real y debes permanecer muy recto. Coloca el sensor en tu pecho. Si te encorvas, tu oficial superior te regañará (sonido) y verás una cara enfadada. Mantente firme para ganar medallas en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < StraightAngle THEN Audio.play(Buzz) AND LED.show(Sad) ELSE LED.show(Happy)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Bola 8 Mágica Sensorial",
+    "originalIdeaDescription": "El usuario hace una pregunta y agita el dispositivo. Al detenerse, se selecciona una respuesta aleatoria que se muestra en la Matriz LED y se reproduce un sonido místico.",
+    "transformedIdeaTitle": "El Oráculo del Futuro",
+    "transformedIdeaDescription": "Haz una pregunta de sí o no al universo. Agita el dispositivo para mezclar el destino. Escucharás polvo de estrellas tintineando. Al detenerte, el Oráculo revelará tu destino en la pantalla: ¿Sí, No, o Tal vez?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Shaking == True THEN Audio.play(MagicSound); IF ShakingStop THEN LED.show(RandomAnswer)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Pintura por Gravedad",
+    "originalIdeaDescription": "Un píxel 'gotea' por la pantalla LED basado en la dirección de la inclinación, dejando un rastro iluminado. Sonidos de goteo o pintura se reproducen mientras se mueve.",
+    "transformedIdeaTitle": "Arte Abstracto en Movimiento",
+    "transformedIdeaDescription": "Convierte tu pantalla en un lienzo líquido. Inclina el dispositivo para guiar una gota de pintura brillante. A medida que la pintura se desliza, escucharás sonidos acuáticos. ¡Crea formas locas moviendo tus manos!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP: Update PixelPosition based on Inclination; LED.turnOn(PixelPosition); Audio.play(Drip)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Caminata Espacial",
+    "originalIdeaDescription": "Simula la gravedad cero. Al inclinar suavemente, los objetos en la LED flotan lentamente en esa dirección y suena una respiración de buzo espacial. Movimientos bruscos activan alarmas de traje.",
+    "transformedIdeaTitle": "Flotando en el Cosmos",
+    "transformedIdeaDescription": "Estás reparando la Estación Espacial. Todo flota. Inclina muy despacio para mover tus herramientas (píxeles) por la pantalla. Escucha tu respiración en el casco. ¡Cuidado! Si te mueves rápido, te irás al espacio profundo y sonará la alarma de oxígeno.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Velocity = Inclination * GravityFactor; LED.updateObjects(Velocity); Audio.playLoop(Breathing)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Efecto Doppler Interactivo",
+    "originalIdeaDescription": "Al inclinar el dispositivo hacia la izquierda o derecha, un objeto visual cruza la pantalla LED y el sonido del Audio Player cambia de tono (agudo a grave) simulando un coche pasando.",
+    "transformedIdeaTitle": "El Ingeniero de Sonido de F1",
+    "transformedIdeaDescription": "Aprende cómo suenan los coches de carreras. Inclina el dispositivo para hacer que el coche cruce la pista (pantalla) de un lado a otro. Escucha cómo el sonido cambia 'Iiiiii-uuuum' (Efecto Doppler) justo cuando el coche pasa por el centro.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pos = Map(Inclination); Pitch = CalculateDoppler(Pos); LED.drawCar(Pos); Audio.setPitch(Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de Circo",
+    "originalIdeaDescription": "El usuario debe mantener una 'barra' de LEDs en el centro. La dificultad aumenta con el tiempo. Si se cae, suena música de circo fallida.",
+    "transformedIdeaTitle": "El Equilibrista Estrella",
+    "transformedIdeaDescription": "¡El público te observa! Eres el equilibrista en la cuerda floja. Mantén la línea recta en la pantalla. El viento soplará (el juego se hace más difícil), y tendrás que inclinarte para compensar. Si caes, oirás risas de payasos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BalanceVar += RandomWind(); IF Abs(Inclination - BalanceVar) > Limit THEN GameOver() ELSE Score++"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Traductor de Gestos a Voz",
+    "originalIdeaDescription": "Asocia posiciones específicas de inclinación (arriba, abajo, izquierda) con iconos en la LED y frases pregrabadas en el Audio Player (ej. 'Sí', 'No', 'Ayuda').",
+    "transformedIdeaTitle": "El Comunicador Secreto de Espías",
+    "transformedIdeaDescription": "Estás en una misión silenciosa. No puedes hablar. Usa tu dispositivo para enviar mensajes a tu equipo. Inclina arriba para mostrar un 'Pulgar Arriba' y decir 'Afirmativo'. Inclina abajo para 'Negativo'. ¡Comunícate sin abrir la boca!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 45 THEN LED.show(ThumbUp) AND Audio.play('Yes'); IF Inclination.Y < -45 THEN LED.show(ThumbDown) AND Audio.play('No')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Palo de Lluvia Digital",
+    "originalIdeaDescription": "Simula un palo de lluvia tradicional. Al inclinar el dispositivo, los píxeles 'caen' como semillas en la matriz LED y el audio reproduce sonido de lluvia o granos cayendo.",
+    "transformedIdeaTitle": "El Chamán de la Lluvia",
+    "transformedIdeaDescription": "Invoca la lluvia para la selva. Gira lentamente tu bastón mágico (dispositivo). Verás las gotas de agua caer por la pantalla. Cuanto más vertical lo pongas, más fuerte caerá la tormenta y más fuerte sonará el aguacero.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Speed = Abs(Inclination.Y); Audio.playRain(Volume=Speed); LED.animateRain(Speed)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Catapulta Sonora",
+    "originalIdeaDescription": "El usuario inclina hacia atrás para 'cargar' tensión (LED se llena, sonido de resorte tensándose) y luego inclina rápido hacia adelante para 'lanzar' (sonido de disparo y animación de proyectil).",
+    "transformedIdeaTitle": "Defensores del Castillo",
+    "transformedIdeaDescription": "¡Carga la catapulta! Inclina hacia atrás lentamente para tensar la cuerda (escucha el 'criiiiic' y mira la barra de fuerza). ¡Ahora lanza! Inclina rápido hacia adelante para disparar la roca virtual contra los invasores.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination < -45 THEN Charge++; IF Charge > 50 AND Inclination > 45 THEN Audio.play(Launch) AND LED.show(Projectile)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Navegación por Sonido 3D",
+    "originalIdeaDescription": "Un juego de 'frío o caliente'. Se elige un objetivo invisible. Al inclinar el dispositivo hacia la dirección correcta, el sonido se hace más rápido y la LED parpadea más brillante.",
+    "transformedIdeaTitle": "Buscador de Tesoros a Ciegas",
+    "transformedIdeaDescription": "Hay un tesoro invisible enterrado cerca. Usa tu detector. Inclina el dispositivo explorando direcciones. Si el sonido es lento 'bip... bip', estás frío. Si se acelera 'bip-bip-bip', ¡estás muy cerca! La luz te guiará al punto exacto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Distance = CalculateDiff(TargetAngle, CurrentAngle); Audio.setBeepRate(Distance); LED.setBrightness(1/Distance)"
+  }
+]

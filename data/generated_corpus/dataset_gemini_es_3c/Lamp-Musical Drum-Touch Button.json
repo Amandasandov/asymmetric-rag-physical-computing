@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de alerta visual y auditiva sincronizada",
+    "originalIdeaDescription": "Un sistema básico donde al presionar el botón táctil se activa una luz de color específico simultáneamente con un sonido de percusión, diseñado para dar retroalimentación sensorial inmediata a una acción física.",
+    "transformedIdeaTitle": "El Tambor de Rayos y Truenos",
+    "transformedIdeaDescription": "¡Conviértete en el dios del clima! Crea un instrumento donde cada vez que tocas el botón, lanzas un rayo (la lámpara parpadea en amarillo brillante) y un segundo después se escucha un trueno (golpe de bombo grave). Aprenderás sobre secuencias y retrasos en la programación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Lamp.setColor(Yellow) -> Lamp.on() -> Wait(0.5s) -> MusicalDrum.play(BassDrum) -> Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de ritmo y memoria visual simple",
+    "originalIdeaDescription": "La lámpara se enciende indicando el momento exacto en el que el usuario debe presionar el botón. Si el usuario acierta el tiempo, suena un tambor gratificante; si falla, no suena nada.",
+    "transformedIdeaTitle": "Entrenador de Ritmo Jedi",
+    "transformedIdeaDescription": "La Fuerza requiere coordinación. La luz se encenderá rítmicamente. Tu misión es golpear el botón (tu sable de luz) exactamente cuando la luz esté verde para bloquear el ataque y hacer sonar el choque de energía (tambor). Si lo haces a destiempo, ¡perderás puntos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: Lamp.on(Green) -> Wait(1s) -> IF TouchButton.isPressed() THEN MusicalDrum.play(Snare) ELSE Lamp.setColor(Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de puerta accesible para hipoacúsicos",
+    "originalIdeaDescription": "Un dispositivo de notificación para puertas que, al ser activado mediante el botón táctil, emite una señal lumínica parpadeante y un sonido de tambor fuerte para alertar a personas con diferentes capacidades auditivas.",
+    "transformedIdeaTitle": "El Timbre de la Casa Embrujada",
+    "transformedIdeaDescription": "Diseña el timbre para una mansión misteriosa. Cuando los visitantes presionan el botón, las luces deben parpadear en morado misterioso tres veces mientras suenan golpes de puerta espeluznantes (tambores graves) para anunciar su llegada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN REPEAT 3 TIMES: [Lamp.setColor(Purple) -> Lamp.on() -> MusicalDrum.play(LowTom) -> Wait(0.5s) -> Lamp.off()]"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo interactivo con acento visual",
+    "originalIdeaDescription": "Un metrónomo que marca el tiempo con un sonido de tambor constante. El usuario puede presionar el botón táctil para cambiar el color de la luz que acompaña a cada primer tiempo del compás.",
+    "transformedIdeaTitle": "Director de Orquesta Robótica",
+    "transformedIdeaDescription": "Programa un asistente musical que marque el paso. El tambor sonará constantemente como un reloj 'tic-toc'. Tu tarea es usar el botón para marcar el inicio del compás, haciendo que la lámpara se ilumine en rojo intenso solo en el primer tiempo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: MusicalDrum.play(ClosedHiHat) -> IF TouchButton.wasPressed() THEN Lamp.on(Red) ELSE Lamp.off() -> Wait(BPM)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de semáforo para carreras",
+    "originalIdeaDescription": "Una secuencia automática de luces (rojo, amarillo, verde) iniciada por un botón. Al llegar al verde, suena un tambor para indicar el inicio de la carrera.",
+    "transformedIdeaTitle": "La Gran Carrera de Fórmula Bot",
+    "transformedIdeaDescription": "¡Prepara la salida! Crea un sistema de arranque. Al presionar el botón de 'Juez', la lámpara pasará de Rojo a Amarillo. Al llegar a Verde, debe sonar el 'Disparo de Salida' (un golpe fuerte de caja) para que los coches salgan disparados.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Lamp.setColor(Red) -> Wait(1s) -> Lamp.setColor(Yellow) -> Wait(1s) -> Lamp.setColor(Green) -> MusicalDrum.play(Crash)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de ritmos con selector de modo",
+    "originalIdeaDescription": "El botón táctil funciona como un interruptor que alterna entre dos modos: en uno la lámpara es azul y suena un bombo, en el otro es roja y suena una caja.",
+    "transformedIdeaTitle": "DJ Mezclador de Fiestas",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Programa tu consola para tener dos estilos. Si tocas el botón una vez, entras en 'Modo Chill' (luz azul, tambor suave). Si lo tocas de nuevo, cambias a 'Modo Rock' (luz roja parpadeante, batería fuerte).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Toggle(Mode); IF Mode==1 THEN {Lamp.Blue(); Drum.Kick()} ELSE {Lamp.Red(); Drum.Snare()}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de código Morse simplificado",
+    "originalIdeaDescription": "Un sistema de comunicación donde toques cortos y largos en el botón generan diferentes sonidos de percusión y duraciones de luz, imitando el código Morse.",
+    "transformedIdeaTitle": "Telégrafo de Espías Secretos",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Configura el botón para que un toque rápido encienda una luz blanca breve y un sonido agudo (punto), y mantenerlo presionado haga una luz larga y un sonido grave (raya).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.duration < 0.5s THEN {Lamp.flash(0.2s); Drum.play(HighTom)} ELSE {Lamp.flash(1s); Drum.play(LowTom)}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de reflejos y velocidad de reacción",
+    "originalIdeaDescription": "La lámpara se enciende de forma aleatoria. El usuario debe presionar el botón lo más rápido posible. Si es lo suficientemente rápido, suena un tambor de victoria.",
+    "transformedIdeaTitle": "Cazafantasmas: Trampa de Luz",
+    "transformedIdeaDescription": "Un fantasma (la luz) aparecerá en cualquier momento sin aviso. ¡Debes tener reflejos de acero! Presiona el botón en cuanto veas la luz. Si eres rápido (menos de 0.5 segundos), el fantasma quedará atrapado y sonará un golpe triunfal.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(RandomTime) -> Lamp.on() -> StartTimer -> IF TouchButton.pressed AND Timer < 0.5s THEN MusicalDrum.play(OpenHiHat) ELSE DoNothing"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de latidos del corazón",
+    "originalIdeaDescription": "Al mantener presionado el botón, se inicia una secuencia rítmica de luz y sonido que imita un latido cardíaco, aumentando de velocidad si se presiona repetidamente.",
+    "transformedIdeaTitle": "Doctor de Robots",
+    "transformedIdeaDescription": "El paciente robot necesita energía. Presiona el botón rítmicamente para hacer funcionar su corazón. Cada pulsación debe generar un doble destello rojo y un sonido 'pum-pum' (bombo y tom) para mostrar que está vivo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Lamp.setColor(Red) -> Lamp.on() -> Drum.play(Kick) -> Wait(0.1s) -> Lamp.off() -> Drum.play(Tom)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de cuenta regresiva de explosión",
+    "originalIdeaDescription": "Un temporizador dramático donde la luz parpadea cada vez más rápido acompañada de sonidos de tambor, y el botón sirve para 'desactivar' la secuencia.",
+    "transformedIdeaTitle": "Desactivación de la Bomba de Tiempo",
+    "transformedIdeaDescription": "¡El reloj corre! La luz parpadea y el tambor suena cada vez más rápido. Tienes que presionar el botón en el último segundo posible antes de la 'explosión' para cortar el cable y salvar el día.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop i from 1 to 10: {Wait(1/i); Lamp.flash(); Drum.play();} IF Button.pressed() THEN StopAll() ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de aplausos y ovaciones",
+    "originalIdeaDescription": "Al presionar el botón, la lámpara parpadea rápidamente en múltiples colores y el tambor reproduce un redoble seguido de un platillo, simulando un final de espectáculo.",
+    "transformedIdeaTitle": "El Aplausómetro de Talentos",
+    "transformedIdeaDescription": "¡El show ha terminado y el público enloquece! Programa el botón para que, al tocarlo, se active el 'Modo Ovación': luces de discoteca aleatorias y un redoble de tambores que termina en un gran platillazo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Lamp.setRandomColor() -> MusicalDrum.play(SnareRoll) -> Wait(1s) -> MusicalDrum.play(Crash)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de respiración para meditación",
+    "originalIdeaDescription": "Un ciclo suave donde la luz aumenta y disminuye de intensidad. El tambor suena suavemente al final de la 'exhalación'. El botón inicia o detiene la sesión.",
+    "transformedIdeaTitle": "Jardín Zen Digital",
+    "transformedIdeaDescription": "Crea una herramienta para relajarte. Al activar el botón, la luz debe encenderse muy lentamente (inhalar) y apagarse lentamente (exhalar). Al final de la exhalación, un suave toque de tambor marcará el nuevo ciclo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.active THEN Loop: {FadeIn(Lamp, 4s); FadeOut(Lamp, 4s); MusicalDrum.play(SideStick)}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de seguridad con alarma",
+    "originalIdeaDescription": "El sistema está 'armado' (luz roja fija). Si se toca el botón (simulando una intrusión), la luz parpadea y suena una alarma de tambores repetitiva.",
+    "transformedIdeaTitle": "Guardián del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu cofre de oro. Deja la luz roja encendida para advertir a los ladrones. Si alguien se atreve a tocar el botón (abrir el cofre), ¡activa la alarma! Luces parpadeando y tambores sonando sin parar hasta que se reinicie.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setColor(Red); IF TouchButton.isPressed() THEN Loop: {Lamp.toggle(); MusicalDrum.play(Snare); Wait(0.2s)}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de efectos para cuentos de terror",
+    "originalIdeaDescription": "Configuración ambiental donde la luz es tenue y parpadeante. Al tocar el botón, se genera un sonido fuerte e inesperado para 'asustar' durante una narración.",
+    "transformedIdeaTitle": "Efectos Especiales: La Cueva del Monstruo",
+    "transformedIdeaDescription": "Estás contando una historia de miedo alrededor de una fogata virtual (luz naranja tenue). En el momento más terrorífico del cuento, presiona el botón para que la luz se apague de golpe y suene un estruendo (tambor grave) para asustar a tus amigos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.setColor(Orange, Dim); IF TouchButton.isPressed() THEN Lamp.off() -> MusicalDrum.play(FloorTom)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de estatuas musicales manual",
+    "originalIdeaDescription": "El tambor suena en bucle y la luz está verde. Al presionar el botón, la música para y la luz se pone roja. Quien se mueva pierde.",
+    "transformedIdeaTitle": "Congelados Musicales",
+    "transformedIdeaDescription": "Programa el juego de las estatuas. Mientras no presiones el botón, hay fiesta (luz verde + ritmo de batería). Al mantener presionado el botón, todo se detiene y la luz se pone roja. ¡Tus amigos deben quedarse congelados o pierden!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NOT TouchButton.isPressed() THEN {Lamp.Green(); Drum.Loop()} ELSE {Lamp.Red(); Drum.Stop()}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de fuegos artificiales",
+    "originalIdeaDescription": "El botón lanza un 'cohete' (sonido ascendente o espera) que culmina en un estallido de luz de color aleatorio y un sonido de golpe fuerte.",
+    "transformedIdeaTitle": "Pirotecnia Segura",
+    "transformedIdeaDescription": "Celebra el Año Nuevo. Al tocar el botón, espera un segundo (mientras el cohete sube) y luego ¡BOOM! La lámpara debe brillar en un color sorpresa y el tambor debe sonar fuerte. ¡Crea tu propio show de luces!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Wait(1s) -> Lamp.setRandomColor() -> MusicalDrum.play(Crash) -> Lamp.fadeout()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de repeticiones de ejercicio",
+    "originalIdeaDescription": "Cada vez que se toca el botón, se cuenta una repetición con un sonido corto y un destello. Al llegar a 10, se celebra con una secuencia especial.",
+    "transformedIdeaTitle": "Entrenador Personal de Flexiones",
+    "transformedIdeaDescription": "¡Ponte en forma! Coloca el botón en el suelo. Cada vez que bajes el pecho y toques el botón, sonará un 'bip' (caja) y luz blanca. Si logras hacer 10 seguidas, el sistema celebrará tu victoria con luces y redobles.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Counter++; IF Counter < 10 THEN {Drum.Snare(); Lamp.Flash()} ELSE {Drum.Roll(); Lamp.Disco(); Counter=0}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de prueba de conductividad",
+    "originalIdeaDescription": "Utiliza el botón táctil como sonda. Si se cierra el circuito (se toca), la lámpara se enciende y suena un tono, indicando que hay conexión.",
+    "transformedIdeaTitle": "Detector de Mentiras (Ficticio)",
+    "transformedIdeaDescription": "Construye un juguete para interrogar a sospechosos. Hazles una pregunta y pídeles que pongan el dedo en el sensor. Si presionas tú el control oculto (programación), la luz se pondrá roja y sonará un tambor grave indicando ¡MENTIRA!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Lamp.setColor(Red) -> MusicalDrum.play(BassDrum)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de motor de nave espacial",
+    "originalIdeaDescription": "Al tocar repetidamente el botón, se 'carga' energía. La luz se vuelve más brillante y el ritmo del tambor se acelera hasta alcanzar la velocidad máxima.",
+    "transformedIdeaTitle": "Despegue a Marte",
+    "transformedIdeaDescription": "La nave necesita energía para despegar. Toca el botón tan rápido como puedas. Con cada toque, la luz sube de intensidad y el tambor suena más rápido. Si dejas de tocar, la energía (y la luz) se apaga.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.Pressed() THEN Speed++; Brightness++; PlayDrum(Speed); Lamp.SetBrightness(Brightness) ELSE Speed--;"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de adivinanza de secuencia de colores",
+    "originalIdeaDescription": "El sistema muestra un color. El usuario debe tocar el botón cuando el tambor suene un número específico de veces que corresponde a ese color (código preestablecido).",
+    "transformedIdeaTitle": "Código Secreto de Colores",
+    "transformedIdeaDescription": "Descifra el código. Si la luz es Azul, debes esperar a que el tambor suene 2 veces y luego presionar el botón. Si es Roja, espera 1 vez. ¡Si presionas en el momento incorrecto, se activará la alarma de error!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.Blue(); Wait(Drum*2); IF Button.Pressed() THEN Win() ELSE Fail()"
+  }
+]

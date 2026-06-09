@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Monitoreo de Ruido para Bibliotecas",
+    "originalIdeaDescription": "Este sistema está diseñado para mantener el silencio en entornos de estudio. El botón táctil activa el modo de vigilancia. Una vez activo, el sensor de nivel de ruido monitorea constantemente el ambiente. Si el nivel de decibelios supera un umbral preestablecido, el reproductor de audio emite automáticamente un sonido suave de 'Shhh' o una advertencia verbal para recordar a los usuarios que deben guardar silencio, ayudando a automatizar la gestión del ruido.",
+    "transformedIdeaTitle": "El Guardián del Silencio de la Biblioteca Mágica",
+    "transformedIdeaDescription": "¡Eres el protector de los libros antiguos! Los hechizos solo funcionan en silencio absoluto. Crea un dispositivo que detecte cuando los estudiantes hablan demasiado fuerte. Usa el botón para activar tu magia de guardia. Si alguien hace ruido (detectado por el sensor), tu dispositivo debe lanzar automáticamente un sonido de advertencia mágico para proteger la concentración de los jóvenes magos. ¿Podrás mantener la paz en la biblioteca?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN active = true; IF active AND Noise.Level > 50 THEN Audio.play('silence_spell.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Reproducción de Audio por Aplausos",
+    "originalIdeaDescription": "Un dispositivo interactivo de control de medios que permite al usuario pausar o reanudar la música sin usar las manos. El botón táctil sirve como interruptor principal de encendido/apagado del sistema. Cuando el sistema está encendido, el sensor de ruido espera un pico repentino de sonido, como un aplauso fuerte. Al detectar este pico, el reproductor de audio alterna entre reproducir y pausar la pista actual, facilitando el control a distancia.",
+    "transformedIdeaTitle": "El DJ Manos Libres del Futuro",
+    "transformedIdeaDescription": "Imagina que eres un DJ en una fiesta espacial y tus manos están ocupadas mezclando luces holográficas. Necesitas controlar la música solo con sonidos. Programa tu consola para que se encienda con el botón táctil. Luego, haz que la música se detenga o arranque cada vez que aplaudas fuerte. ¡Es la forma más genial de controlar el ritmo sin tocar nada! ¿Qué tan preciso puedes hacer tu sistema?",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.wasPressed() THEN systemOn = !systemOn; IF systemOn AND Noise.peak > 80 THEN Audio.togglePlay()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos Activada por Sonido Ambiental",
+    "originalIdeaDescription": "Este sistema de seguridad básico utiliza el sensor de ruido para detectar la presencia de personas no autorizadas en una habitación silenciosa. El usuario arma la alarma presionando el botón táctil. Después de un breve retraso, si el sensor detecta cualquier ruido por encima del nivel de fondo (como pasos o voces), el reproductor de audio dispara un sonido de sirena fuerte para alertar sobre la intrusión y disuadir al intruso.",
+    "transformedIdeaTitle": "La Trampa del Tesoro del Dragón",
+    "transformedIdeaDescription": "¡Protege tu cofre del tesoro! Eres un dragón que necesita dormir, pero los ladrones quieren tu oro. Construye una trampa que se active cuando presiones el botón antes de dormir. Si algún ladrón hace el más mínimo ruido al intentar acercarse, tu sistema debe despertar y rugir ferozmente usando el reproductor de audio. ¡Asegúrate de que tus ronquidos no activen la alarma por error!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.pressed() THEN arm_system(); IF armed AND Noise.Level > threshold THEN Audio.play('dragon_roar.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juguete de Respuesta de Voz para Bebés",
+    "originalIdeaDescription": "Un dispositivo diseñado para calmar a los bebés o entretener a los niños pequeños. El botón táctil permite a los padres seleccionar entre diferentes modos de sonido (canciones de cuna o sonidos de animales). El sensor de ruido escucha el llanto o las vocalizaciones del niño. Al detectar sonido continuo, el reproductor de audio emite una respuesta suave o la canción seleccionada para consolar o interactuar con el niño automáticamente.",
+    "transformedIdeaTitle": "El Robot Niñera Inteligente",
+    "transformedIdeaDescription": "Diseña un robot amable que ayude a cuidar a un bebé alienígena. Este bebé llora cuando está solo. Usa el botón para elegir una canción de cuna espacial. Luego, programa al robot para que escuche atentamente; si el bebé comienza a llorar (hace mucho ruido), el robot debe cantar automáticamente para calmarlo. ¡La tecnología al servicio del sueño y la tranquilidad!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "mode = Touch.countPresses(); IF Noise.Level > 60 THEN Audio.play(playlist[mode])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Gritos para Ferias y Juegos",
+    "originalIdeaDescription": "Una instalación recreativa tipo 'fuerza de voz'. El usuario presiona y mantiene el botón táctil para iniciar la medición y preparar el sistema. Luego, debe gritar lo más fuerte posible hacia el sensor de ruido. Al soltar el botón, el sistema evalúa el nivel máximo de ruido registrado y el reproductor de audio anuncia un resultado divertido o un efecto de sonido correspondiente al nivel de intensidad alcanzado (ej. 'Ratón' vs 'León').",
+    "transformedIdeaTitle": "El Torneo de Rugidos de la Selva",
+    "transformedIdeaDescription": "¡Bienvenidos al campeonato mundial de rugidos! Tu misión es crear una máquina que decida quién es el rey de la selva. Los competidores deben mantener presionado el botón y rugir con todas sus fuerzas. Tu programa debe medir qué tan fuerte fue el rugido y reproducir un sonido de victoria épico si superan el récord, o un sonido gracioso si fue demasiado suave.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Touch.isHeld() { record(Noise.Level) }; IF maxNoise > 90 THEN Audio.play('winner') ELSE Audio.play('fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Sigilo y Movimiento Silencioso",
+    "originalIdeaDescription": "Este sistema gamifica el entrenamiento de sigilo. El botón táctil inicia una sesión de juego y reproduce una música de fondo tensa. El objetivo es moverse por la habitación sin hacer ruido. Si el sensor de ruido detecta sonidos por encima de un umbral muy bajo (pasos fuertes), el reproductor de audio detiene la música y reproduce un sonido de 'Juego Terminado' o una explosión, indicando que el usuario ha sido detectado.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Pasos de Sombra",
+    "transformedIdeaDescription": "Para convertirte en un Maestro Ninja, debes aprender a caminar sin ser oído. Crea un dojo digital. Al tocar el botón, comienza el desafío. Debes cruzar la habitación mientras el sensor escucha. Si haces el más mínimo ruido al pisar, sonará una alarma y habrás fallado la misión. ¿Puedes ajustar la sensibilidad para que sea un desafío imposible?",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.start() THEN Audio.play('bgm'); IF Audio.isPlaying() AND Noise.Level > 20 THEN Audio.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Mensajes Secretos Simulada",
+    "originalIdeaDescription": "Un dispositivo de juego de roles para espías. El usuario mantiene presionado el botón táctil para 'grabar' un mensaje (simulado). Mientras el botón está presionado, el sensor de ruido monitorea si el usuario está hablando. Al soltar el botón, si se detectó voz (ruido), el reproductor de audio reproduce un efecto de sonido de 'Transmisión Enviada' o un galimatías codificado, simulando el envío de datos secretos.",
+    "transformedIdeaTitle": "El Transmisor del Agente Secreto 007",
+    "transformedIdeaDescription": "Tu misión, si decides aceptarla, es enviar códigos secretos al cuartel general. Construye un transmisor espía. Mantén presionado el botón para abrir el canal seguro y susurra tu mensaje. Si el dispositivo detecta tu voz, al soltar el botón debe confirmar con un sonido de 'Enviado'. Si no hablaste, debe hacer un sonido de error. ¡El destino del mundo depende de tu comunicación!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Touch.held() { checkVoice = Noise.Level > 40 }; IF checkVoice THEN Audio.play('sent') ELSE Audio.play('error')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Interactivo",
+    "originalIdeaDescription": "Un generador de ambiente sonoro. El botón táctil alterna el estado del sistema, iniciando un sonido base de lluvia suave a través del reproductor de audio. El sensor de ruido actúa como un disparador de eventos: si el usuario hace un ruido fuerte repentino (como golpear la mesa o aplaudir), el sistema superpone un sonido de trueno potente, simulando que el ruido del usuario provocó el relámpago.",
+    "transformedIdeaTitle": "El Mago del Clima: Creador de Tormentas",
+    "transformedIdeaDescription": "¡Tienes el poder de controlar el clima! Usa tu código para crear una atmósfera de lluvia constante. Pero aquí viene la magia: cada vez que golpees la mesa o hagas un ruido fuerte, tu programa debe invocar un trueno poderoso instantáneamente. Crea tu propia banda sonora de tormenta controlando cuándo caen los rayos con tus propios sonidos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('rain'); IF Noise.Level > 85 THEN Audio.playOverlay('thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Automatizado",
+    "originalIdeaDescription": "Automatización del clásico juego infantil. El botón táctil inicia la música. El sistema detiene la música aleatoriamente. Durante el silencio, el sensor de ruido se activa con alta sensibilidad. Si detecta cualquier sonido (risas, movimiento, jadeos), el reproductor de audio emite un sonido de eliminación ('Booo' o 'Fuera'). El botón reinicia la ronda para los jugadores restantes.",
+    "transformedIdeaTitle": "Estatua Musical: El Juez Robot Implacable",
+    "transformedIdeaDescription": "¡Nadie puede engañar al Juez Robot! Vamos a programar el juego de las Estatuas Musicales. La música suena y todos bailan. Cuando la música para (programado aleatoriamente), el sensor de ruido se convierte en el juez. Si alguien se mueve, se ríe o respira fuerte, el Juez Robot lo detectará y tocará el sonido de '¡Eliminado!'. ¿Quién será el último en pie?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('music'); RandomWait(); Audio.pause(); IF Noise.Level > 10 THEN Audio.play('eliminated')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura de Cuentos Interactivo",
+    "originalIdeaDescription": "Un dispositivo para acompañar la narración de historias. El botón táctil avanza a través de diferentes 'capítulos' o segmentos de audio. El sensor de ruido se utiliza para pausar la narración si el ambiente se vuelve demasiado ruidoso, asegurando que los oyentes estén prestando atención antes de continuar, o para activar efectos de sonido específicos si la historia requiere que los niños griten o hagan ruido.",
+    "transformedIdeaTitle": "El Cuentacuentos Tímido",
+    "transformedIdeaDescription": "Conoce a 'LibroBot', un narrador de cuentos muy tímido. Él quiere contarte una historia increíble, pero solo hablará si todos están calladitos. Programa a LibroBot para que empiece a narrar cuando toques su botón. Pero cuidado: si el sensor de ruido detecta que los niños están hablando, LibroBot se asustará y dejará de hablar hasta que vuelva el silencio.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed() THEN narrating = true; IF narrating AND Noise.Level < 30 THEN Audio.play('story') ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Efectos de Eco y Repetición",
+    "originalIdeaDescription": "Un sistema que imita un eco de cueva. El botón táctil selecciona el tipo de 'cueva' (diferentes efectos de sonido de fondo). Cuando el sensor de ruido detecta un sonido corto y fuerte, el reproductor de audio dispara inmediatamente una versión pregrabada o un sonido similar que se desvanece, creando una ilusión auditiva de eco en respuesta al sonido del usuario.",
+    "transformedIdeaTitle": "Exploradores de la Cueva del Eco",
+    "transformedIdeaDescription": "Estás explorando una caverna misteriosa. ¿Qué tan profunda es? ¡Usa el sonido para averiguarlo! Crea un dispositivo que escuche tus gritos. Cuando grites '¡HOLA!', el sensor debe detectarlo y disparar inmediatamente un efecto de eco espeluznante. Usa el botón para cambiar entre una cueva de hielo, un cañón de metal o un pozo sin fondo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "type = Touch.selectMode(); IF Noise.spike() THEN Audio.playEffect('echo_' + type)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Control de Volumen por Voz",
+    "originalIdeaDescription": "Un prototipo de interfaz de usuario adaptativa. El reproductor de audio emite música o contenido. El botón táctil sirve para bloquear/desbloquear el control. Cuando está desbloqueado, el nivel de ruido ambiental detectado por el sensor ajusta inversamente el volumen del reproductor: si hay mucho ruido, el volumen sube para compensar; si hay silencio, baja para ser más sutil.",
+    "transformedIdeaTitle": "La Radio Inteligente Adaptable",
+    "transformedIdeaDescription": "Imagina una radio para tu bicicleta que sabe qué tan rápido vas por el ruido del viento. Diseña un sistema donde la música suba de volumen automáticamente si hay mucho ruido a tu alrededor (para que puedas escucharla) y baje si todo está tranquilo. Usa el botón para 'fijar' el volumen si encuentras el nivel perfecto. ¡Ingeniería de audio inteligente!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "vol = map(Noise.Level, 0, 100, 20, 100); IF !Touch.isLocked() THEN Audio.setVolume(vol)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Bromas Sensible al Ruido",
+    "originalIdeaDescription": "Un dispositivo para gastar bromas. El usuario esconde el dispositivo y lo activa con el botón táctil (con un temporizador de retardo). El dispositivo permanece en silencio hasta que alguien cercano habla o hace ruido. Al detectar el ruido, el reproductor de audio emite un sonido gracioso, una voz fantasmal o un ruido de animal inesperado, sorprendiendo a la víctima.",
+    "transformedIdeaTitle": "El Fantasma Bromista Escondido",
+    "transformedIdeaDescription": "¡Es hora de una broma inofensiva! Programa una 'caja fantasma'. Escóndela en un lugar tranquilo y actívala con el botón. El dispositivo esperará pacientemente en silencio. En cuanto alguien entre a la habitación y empiece a hablar (detectando ruido), ¡BOO! El audio reproducirá una risa fantasmal o un sonido gracioso para asustarlos. ¡La sorpresa perfecta!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "wait(5000); IF Noise.Level > threshold THEN Audio.play('ghost_laugh.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Verificador de Contraseñas Rítmicas",
+    "originalIdeaDescription": "Un sistema de acceso basado en patrones de sonido. El botón táctil pone el sistema en modo 'escucha'. El usuario debe golpear una superficie con un ritmo específico (ruido). Si el patrón de picos de ruido coincide con el ritmo programado, el reproductor de audio emite un sonido de 'Acceso Concedido'. Si falla, emite 'Acceso Denegado'.",
+    "transformedIdeaTitle": "La Puerta de la Bóveda Secreta",
+    "transformedIdeaDescription": "Eres un espía intentando entrar a una base secreta. La puerta no tiene llave, se abre con un código de golpes rítmicos. Programa el sistema para que escuche cuando presiones el botón. Si golpeas la mesa con el ritmo correcto (Pum-Pum... Pum), la puerta se abrirá (sonido de éxito). Si te equivocas, ¡sonará la alarma! ¿Puedes programar el ritmo perfecto?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Touch.activate(); pattern = listen(Noise); IF match(pattern, correctRhythm) THEN Audio.play('unlock') ELSE Audio.play('lock')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Ronquidos con Respuesta",
+    "originalIdeaDescription": "Una aplicación de salud y bienestar simulada. El usuario activa el monitoreo nocturno con el botón táctil antes de dormir. El sensor de ruido monitorea patrones de sonido rítmicos y de baja frecuencia (ronquidos). Si se detectan niveles consistentes de ruido, el reproductor de audio emite un chasquido suave o un silbido para incitar al usuario a cambiar de posición sin despertarlo completamente.",
+    "transformedIdeaTitle": "El Doctor Sueño Anti-Ronquidos",
+    "transformedIdeaDescription": "¿Tienes un papá o un perro que ronca mucho? ¡Ayudémoslos a dormir mejor! Crea un invento médico que vigile el sueño. Actívalo con el botón al ir a la cama. Si el sensor escucha sonidos fuertes y constantes (¡ronquidos!), el dispositivo debe hacer un sonido suave de 'Tsk Tsk' para que el durmiente se mueva un poco. ¡Ciencia aplicada al descanso!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isActive() AND Noise.average(10s) > snoreLimit THEN Audio.play('gentle_nudge')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción de 'Semáforo Sonoro'",
+    "originalIdeaDescription": "Un juego de reflejos auditivos. El reproductor de audio emite música que se acelera. El botón táctil se usa para 'detenerse'. Sin embargo, el sensor de ruido añade una capa de complejidad: el jugador debe quedarse quieto Y en silencio. Si la música para y el sensor detecta ruido (jadeo del jugador), pierde. El botón reinicia el juego.",
+    "transformedIdeaTitle": "Estatuas de Hielo Extremas",
+    "transformedIdeaDescription": "Esto es mucho más difícil que el juego normal de las estatuas. La música suena rápida y emocionante. Cuando se detiene, no solo debes congelarte, ¡tampoco puedes hacer ningún ruido! Ni siquiera respirar fuerte. Si el sensor te escucha justo después de que la música pare, sonará un bocinazo de error. Usa el botón para retar a tus amigos una y otra vez.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('fast_music'); Audio.stop(); IF Noise.Level > 5 THEN Audio.play('honk')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Controlado por Voz",
+    "originalIdeaDescription": "Un sintetizador experimental donde la voz controla el tono o el efecto. El botón táctil cambia entre diferentes instrumentos (piano, sintetizador, batería). El sensor de ruido detecta la intensidad de la voz del usuario. El reproductor de audio genera notas o ritmos cuya intensidad o velocidad varían directamente según qué tan fuerte cante o grite el usuario hacia el sensor.",
+    "transformedIdeaTitle": "La Orquesta de Gritos",
+    "transformedIdeaDescription": "¡Convierte tu voz en una orquesta! No necesitas saber tocar instrumentos, solo saber gritar y susurrar. Usa el botón para elegir si quieres ser un tambor o una trompeta. Si susurras al sensor, el instrumento sonará suave. Si gritas fuerte, el instrumento tocará con máxima potencia. ¡Crea una sinfonía loca usando solo el volumen de tu voz!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "instrument = Touch.cycle(); intensity = Noise.Level; Audio.playNote(instrument, volume=intensity)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de Meditación con Alerta de Ruido",
+    "originalIdeaDescription": "Una herramienta para practicar mindfulness. El botón táctil inicia un temporizador de meditación con sonidos de naturaleza suaves (Audio). El objetivo es mantener el ambiente en paz. Si el sensor de ruido detecta interrupciones externas fuertes, el audio cambia momentáneamente a un sonido de campana suave para recordar al usuario volver a concentrarse, luego retoma el sonido de naturaleza.",
+    "transformedIdeaTitle": "El Maestro Zen Digital",
+    "transformedIdeaDescription": "Vamos a practicar la concentración. Construye un asistente de meditación. Al tocar el botón, comienza a sonar un arroyo relajante. Tu tarea es mantener la calma. Si algo rompe tu paz (un ruido fuerte detectado), tu asistente tocará una campana tibetana para recordarte respirar hondo y volver a concentrarte. ¿Cuánto tiempo puedes mantener la calma absoluta?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('nature'); IF Noise.spike() THEN Audio.play('bell'); resume_nature()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Chistes con Risas Grabadas",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento tipo 'sitcom'. El usuario (o un amigo) cuenta un chiste. El botón táctil se presiona para indicar el final del chiste 'punchline'. Si el sensor de ruido no detecta risas reales de la audiencia (nivel bajo), el reproductor de audio interviene automáticamente reproduciendo una pista de risas enlatadas para llenar el silencio incómodo.",
+    "transformedIdeaTitle": "El Salvador de Comediantes",
+    "transformedIdeaDescription": "¿Tus chistes son malos? ¡No importa! Crea una máquina que te haga parecer el comediante más gracioso del mundo. Cuenta tu chiste y presiona el botón al final. El sensor escuchará: si tus amigos se ríen, genial. Pero si hay un silencio incómodo (nadie se ríe), tu máquina lanzará automáticamente risas grabadas y aplausos para salvar el momento.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed() { wait(2s); IF Noise.Level < 20 THEN Audio.play('canned_laughter') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Fugas de Agua Auditivo (Simulación)",
+    "originalIdeaDescription": "Un sistema educativo que simula detección industrial. El audio reproduce un sonido de maquinaria constante. El sensor de ruido busca un cambio en el patrón de frecuencia o intensidad (simulando el sonido de una fuga de gas/agua). El botón táctil sirve para 'reparar' la fuga. Si el ruido sube (fuga detectada), suena una alarma hasta que se presiona el botón de reparación.",
+    "transformedIdeaTitle": "Ingeniero de la Nave Espacial",
+    "transformedIdeaDescription": "¡Alerta roja! Eres el ingeniero jefe de una nave espacial. El motor hace un zumbido constante. Si escuchas un siseo fuerte (haz el ruido tú mismo o sopla al sensor), significa que hay una fuga de oxígeno. La alarma de emergencia sonará. Debes correr y presionar el botón de 'Reparación Manual' para sellar la fuga y salvar a la tripulación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.Level > dangerLevel THEN Audio.play('alarm'); IF Touch.pressed() THEN Audio.stopAlarm()"
+  }
+]

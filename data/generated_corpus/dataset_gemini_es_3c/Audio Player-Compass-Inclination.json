@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación Sonora para Senderistas",
+    "originalIdeaDescription": "Un dispositivo diseñado para ayudar a los excursionistas a mantener el rumbo correcto. Si el usuario se desvía del Norte magnético o si el terreno se vuelve demasiado inclinado (peligroso), el reproductor de audio emite alertas de advertencia específicas para corregir la trayectoria y evitar caídas.",
+    "transformedIdeaTitle": "El Explorador de la Jungla Perdida",
+    "transformedIdeaDescription": "¡Estás atrapado en una jungla espesa y necesitas encontrar el camino al campamento antiguo! Tu dispositivo es tu única guía. Debes programarlo para que reproduzca un sonido de 'pájaro cantor' solo cuando estés mirando hacia el Norte y manteniendo el dispositivo plano (simulando caminar en terreno seguro). Si te inclinas demasiado (caída) o cambias de dirección, sonará un 'rugido de tigre'.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.x < 10 THEN AudioPlayer.play('bird') ELSE AudioPlayer.play('tiger')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Controlador de Mezcla de DJ Espacial",
+    "originalIdeaDescription": "Una herramienta creativa para músicos donde la orientación del dispositivo selecciona la pista de música (batería, bajo, melodía) y la inclinación del mismo aplica efectos de sonido o cambia el volumen, permitiendo una performance musical física y expresiva sin tocar botones.",
+    "transformedIdeaTitle": "DJ 360: La Fiesta Giratoria",
+    "transformedIdeaDescription": "Conviértete en el DJ del futuro. Tu misión es mezclar la música moviendo tu cuerpo. Programa el sistema para que al mirar al Este suene música Pop, y al Oeste suene Rock. Usa la inclinación hacia adelante para subir el volumen de la multitud. ¡Mantén el ritmo y no dejes que la fiesta se detenga!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading > 90 AND Compass.heading < 180 THEN AudioPlayer.play('Pop'); IF Inclination.y > 20 THEN AudioPlayer.setVolume(100)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo para Drones Ciegos",
+    "originalIdeaDescription": "Un sistema de entrenamiento donde el usuario controla el 'motor' de un dron mediante audio. La inclinación simula el cabeceo del dron y la brújula su dirección. El audio cambia de tono para indicar la velocidad del motor según la inclinación y la dirección del viento simulado.",
+    "transformedIdeaTitle": "Piloto de Drones de Rescate",
+    "transformedIdeaDescription": "Eres un piloto de rescate en una misión crítica. Debes volar tu dron a través de una tormenta. Programa el dron para que el sonido de las hélices sea suave cuando el dron está nivelado y apunta al Sur (hacia la base), pero que suene una alarma de 'turbulencia' si te inclinas demasiado a la izquierda o derecha.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.x > 30 OR Inclination.x < -30 THEN AudioPlayer.play('alarm') ELSE AudioPlayer.play('propeller_smooth')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura para Meditación",
+    "originalIdeaDescription": "Un dispositivo de bienestar que ayuda a los usuarios a mantener una postura perfecta durante la meditación. Utiliza la brújula para alinear al usuario con una dirección cardinal específica y el sensor de inclinación para asegurar que la espalda esté recta, reproduciendo sonidos relajantes solo cuando la alineación es perfecta.",
+    "transformedIdeaTitle": "El Maestro Zen del Templo",
+    "transformedIdeaDescription": "Para convertirte en un Maestro Zen, debes aprender a quedarte perfectamente quieto. Configura tu 'piedra de sabiduría' (el dispositivo) para que reproduzca el sonido de un gong suave y agua fluyendo solo si estás mirando hacia el Este (el amanecer) y tu dispositivo está perfectamente plano sobre tus rodillas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Inclination.y == 0 THEN AudioPlayer.play('zen_water')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Gestual",
+    "originalIdeaDescription": "Un mecanismo de seguridad lúdico donde para 'abrir' el sistema y escuchar un mensaje secreto, el usuario debe girar el dispositivo a una secuencia específica de puntos cardinales mientras lo mantiene inclinado en un ángulo preciso, como si estuviera manipulando una cerradura compleja.",
+    "transformedIdeaTitle": "La Bóveda del Banco Secreto",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte antigua. La combinación no son números, ¡son movimientos! Debes programar la cerradura lógica: primero gira al Oeste, luego inclina el dispositivo 45 grados hacia adelante. Si lo haces en orden, sonará el 'clic' de apertura y ganarás el oro.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'West' THEN (IF Inclination.y > 40 THEN AudioPlayer.play('unlock_click'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Guía Turístico de Audio Interactivo",
+    "originalIdeaDescription": "Un dispositivo para museos o sitios históricos. Cuando el usuario apunta el dispositivo hacia un punto de interés (Brújula) y lo levanta como tomando una foto (Inclinación), se reproduce la narración de audio correspondiente a ese monumento específico.",
+    "transformedIdeaTitle": "El Museo Embrujado",
+    "transformedIdeaDescription": "Trabajas en un museo donde las estatuas cobran vida por la noche. Crea un programa para que cuando apuntes tu linterna (dispositivo) hacia el Norte (donde está la momia) y levantes la mano (inclinación hacia arriba), la momia te cuente su historia terrorífica. Haz lo mismo para el vampiro en el Sur.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.y > 45 THEN AudioPlayer.play('mummy_voice')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Simulador de Barco en Alta Mar",
+    "originalIdeaDescription": "Juguete interactivo que simula la experiencia de navegar. El audio reproduce sonidos de olas que se intensifican con la inclinación (simulando marejada) y sonidos de gaviotas o bocinas de niebla dependiendo de la dirección hacia la que navega el 'barco' (brújula).",
+    "transformedIdeaTitle": "Capitán de la Tormenta Perfecta",
+    "transformedIdeaDescription": "¡Todos a bordo! Eres el capitán de un barco pesquero. El mar está picado. Programa tu barco para que suene la bocina de niebla cuando navegues hacia el Norte. Pero ten cuidado, si el barco se inclina mucho a los lados (eje X), ¡debe sonar la alarma de 'Hombre al Agua'!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.x > 25 THEN AudioPlayer.play('man_overboard') ELSE IF Compass.heading == 'North' THEN AudioPlayer.play('foghorn')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Juego de Búsqueda de 'Frecuencia Fantasma'",
+    "originalIdeaDescription": "Un juego de realidad aumentada auditiva donde los jugadores deben encontrar una señal de radio oculta. La señal se vuelve más clara (menos estática) cuando el dispositivo apunta a la dirección correcta y tiene la inclinación correcta de la 'antena'.",
+    "transformedIdeaTitle": "Cazafantasmas: La Señal Oculta",
+    "transformedIdeaDescription": "Hay un fantasma escondido en la habitación y solo tu detector de ectoplasma puede encontrarlo. Configura el detector para que reproduzca estática fuerte, pero cuando apuntes exactamente al Sureste y inclines el dispositivo hacia abajo (buscando debajo de la cama), la estática desaparezca y se escuche al fantasma.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'SouthEast' AND Inclination.y < -20 THEN AudioPlayer.play('ghost_laugh') ELSE AudioPlayer.play('static')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Sonoros",
+    "originalIdeaDescription": "Un accesorio para juegos de rol donde realizar movimientos específicos (gestos de varita con inclinación) en direcciones cardinales específicas lanza 'hechizos' auditivos, como bolas de fuego o rayos de hielo.",
+    "transformedIdeaTitle": "Escuela de Magia y Hechicería",
+    "transformedIdeaDescription": "Es tu examen final de magia. Debes lanzar el hechizo 'Leviosa'. Para lograrlo, debes apuntar tu varita al Oeste y hacer un movimiento suave hacia arriba (inclinación creciente). Si lo haces bien, sonará un efecto mágico brillante; si fallas, sonará una explosión cómica.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Inclination.y > 10 THEN AudioPlayer.play('magic_spell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Asistente de Ejercicios de Cuello",
+    "originalIdeaDescription": "Un dispositivo de salud montado en la cabeza o sostenido que guía al usuario a través de estiramientos de cuello. Instruye mediante audio girar la cabeza (brújula) o inclinarla (inclinación) y da feedback sonoro positivo cuando se alcanza el rango de movimiento deseado.",
+    "transformedIdeaTitle": "El Robot Entrenador Personal",
+    "transformedIdeaDescription": "Estás diseñando un robot para ayudar a los astronautas a mantenerse en forma. Programa la rutina de calentamiento: el astronauta debe girar 90 grados a la derecha y luego inclinar la cabeza hacia atrás. Cuando complete ambos movimientos, el robot debe decir '¡Excelente trabajo!' y tocar una fanfarria.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 90 AND Inclination.y < -30 THEN AudioPlayer.play('fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento Virtual",
+    "originalIdeaDescription": "Simula un instrumento donde la nota musical cambia según la rotación del cuerpo (escala musical alrededor del usuario) y la intensidad/volumen se controla inclinando el dispositivo hacia arriba (soplar más fuerte) o abajo.",
+    "transformedIdeaTitle": "La Flauta del Encantador de Serpientes",
+    "transformedIdeaDescription": "Tienes una flauta mágica que controla animales. Crea un programa donde cada dirección cardinal sea una nota musical diferente. Apuntar al Norte toca un 'Do', al Este un 'Re'. Además, si inclinas la flauta hacia arriba, la nota debe sonar más fuerte para despertar a la serpiente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN AudioPlayer.playNote('C'); IF Inclination.y > 20 THEN AudioPlayer.setVolume(High)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos y Deslizamientos",
+    "originalIdeaDescription": "Un prototipo científico que monitorea la estabilidad del suelo. Usa la brújula para mantener una orientación fija de referencia y la inclinación para detectar cambios sutiles en el nivel del suelo, activando una alarma sonora si se detectan movimientos anormales.",
+    "transformedIdeaTitle": "Sismógrafo de Alerta Temprana",
+    "transformedIdeaDescription": "Eres un geólogo vigilando un volcán activo. Debes construir un dispositivo que avise al pueblo si la tierra se mueve. Si el sensor detecta cualquier cambio en la inclinación (la tierra se está levantando) sin importar la dirección, debe sonar una sirena de evacuación inmediata.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.x != 0 OR Inclination.y != 0 THEN AudioPlayer.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Sonoro",
+    "originalIdeaDescription": "Un juego sin pantalla donde el usuario navega por un laberinto virtual. El audio indica si hay una pared o un camino libre basándose en la dirección a la que mira el usuario y si intenta 'avanzar' inclinando el dispositivo hacia adelante.",
+    "transformedIdeaTitle": "Escape del Laberinto Oscuro",
+    "transformedIdeaDescription": "Estás en una cueva totalmente oscura. Solo puedes oír. Programa tu dispositivo para navegar: si miras al Norte y te inclinas para caminar, suena 'pasos en grava'. Pero si miras al Oeste (donde hay una pared) y te inclinas, debe sonar un sonido de 'golpe' (¡Auch!).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.y > 10 THEN (IF Compass.heading == 'North' THEN AudioPlayer.play('steps') ELSE AudioPlayer.play('bump'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Rastreador de Constelaciones Parlante",
+    "originalIdeaDescription": "Herramienta educativa de astronomía. Al apuntar el dispositivo hacia el cielo (inclinación alta) y girar hacia coordenadas específicas (brújula), el dispositivo nombra la estrella o constelación hacia la que se está apuntando.",
+    "transformedIdeaTitle": "El Telescopio Parlanchín",
+    "transformedIdeaDescription": "Construye un telescopio inteligente. Cuando apuntes alto hacia el cielo (inclinación > 60 grados) y gires hacia el Norte, el telescopio debe decir '¡Mira, es la Estrella Polar!'. Si bajas el telescopio (inclinación < 20), debe decir 'Estás mirando al suelo'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.y > 60 AND Compass.heading == 'North' THEN AudioPlayer.play('Polar_Star_Info')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Sonido para Teatro",
+    "originalIdeaDescription": "Dispositivo para técnicos de sonido en obras escolares. Permite disparar efectos de sonido (truenos, lluvia, viento) moviendo el dispositivo en patrones específicos, permitiendo una reacción rápida a la actuación en vivo sin mirar una pantalla.",
+    "transformedIdeaTitle": "Director de Sonido en Vivo",
+    "transformedIdeaDescription": "Es la noche de estreno de la obra escolar. Tú controlas el clima. Programa el sistema para que si inclinas el dispositivo a la izquierda bruscamente, suene un trueno. Si lo giras lentamente hacia el Sur, que comience a sonar una lluvia suave.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.x < -45 THEN AudioPlayer.play('thunder'); IF Compass.heading == 'South' THEN AudioPlayer.play('rain')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Simulador de Radar de Submarino",
+    "originalIdeaDescription": "Juguete que simula ser un sonar. Emite un sonido de 'ping' constante. La frecuencia del ping aumenta cuando la brújula apunta hacia un 'objetivo' predefinido y la inclinación coincide con la profundidad del objetivo.",
+    "transformedIdeaTitle": "Caza-Submarinos en lo Profundo",
+    "transformedIdeaDescription": "Estás al mando de un submarino. El radar indica que hay un tesoro hundido al Este. Programa tu sonar para que haga un sonido de 'Ping... Ping' lento normalmente, pero que haga 'Ping-Ping-Ping' muy rápido cuando mires al Este y inclines el submarino hacia abajo para sumergirte.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Inclination.y < -30 THEN AudioPlayer.play('fast_ping') ELSE AudioPlayer.play('slow_ping')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Nivel de Carpintero con Feedback Auditivo",
+    "originalIdeaDescription": "Herramienta de accesibilidad para construcción. Ayuda a nivelar superficies sin necesidad de ver la burbuja. Emite un tono continuo que se vuelve más agudo cuanto más nivelada (inclinación 0) y alineada (brújula fija) está la superficie.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a un constructor que no puede ver bien a poner una estantería perfectamente recta. Crea una herramienta que haga un tono continuo molesto si la estantería está chueca (inclinación diferente de 0), pero que toque una melodía de victoria cuando esté perfectamente plana.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.x == 0 AND Inclination.y == 0 THEN AudioPlayer.play('victory') ELSE AudioPlayer.play('buzz')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Mezclador de Sonidos Ambientales (Paisajes Sonoros)",
+    "originalIdeaDescription": "Un generador de ambientes relajantes. Dependiendo de hacia dónde apunte el usuario (Norte=Bosque, Sur=Playa), cambia el entorno base. La inclinación añade elementos como viento (arriba) o animales (abajo).",
+    "transformedIdeaTitle": "Creador de Mundos Mágicos",
+    "transformedIdeaDescription": "Diseña un viaje relajante. Programa tu dispositivo para teletransportarte: si miras al Norte, escuchas un bosque. Si inclinas el dispositivo hacia arriba mientras estás en el bosque, añades viento en los árboles. Si miras al Sur, escuchas el océano.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN AudioPlayer.play('forest'); IF Inclination.y > 30 THEN AudioPlayer.playOverlay('wind')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio y Orientación",
+    "originalIdeaDescription": "Un juego físico donde el usuario debe mantener una bandeja virtual equilibrada (inclinación 0) mientras gira su cuerpo 360 grados. Si la bandeja se inclina, suena un sonido de cristales rotos.",
+    "transformedIdeaTitle": "El Camarero Robot",
+    "transformedIdeaDescription": "Eres un robot camarero sirviendo bebidas muy caras. Tienes que dar una vuelta completa sobre ti mismo (girar 360 grados) para servir a todos. ¡Pero cuidado! Si te inclinas aunque sea un poco, las copas se caerán. Programa el sonido de 'cristales rotos' si la inclinación deja de ser 0.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.x != 0 OR Inclination.y != 0 THEN AudioPlayer.play('glass_shatter')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Brújula de Animales para Niños",
+    "originalIdeaDescription": "Juguete educativo para aprender los puntos cardinales. Cada dirección cardinal está asignada a un animal. Al apuntar y 'agitar' (cambio rápido de inclinación) el dispositivo, el animal correspondiente saluda.",
+    "transformedIdeaTitle": "La Granja Giratoria",
+    "transformedIdeaDescription": "Aprende los puntos cardinales visitando la granja. El Norte es el granero de las vacas, el Sur el estanque de los patos. Programa el juguete para que si miras al Norte y agitas el dispositivo (inclinación rápida), la vaca haga 'Muuu'.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.change > 5 THEN AudioPlayer.play('cow_moo')"
+  }
+]

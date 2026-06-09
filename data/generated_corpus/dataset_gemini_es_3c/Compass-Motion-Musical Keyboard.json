@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Explorador de la Selva Musical",
+    "originalIdeaDescription": "El usuario debe caminar físicamente hacia el Norte (Brújula) mientras simula correr (agitar el dispositivo/Motion). Al encontrar un 'obstáculo', debe detenerse y tocar una secuencia en el teclado para abrir el camino.",
+    "transformedIdeaTitle": "La Búsqueda del Templo Perdido",
+    "transformedIdeaDescription": "Eres un aventurero. El mapa dice 'Corre hacia el Norte'. Gira al Norte (Compass) y agita el dispositivo rítmicamente (Motion) para simular correr. De repente, ¡un río de lava! Deja de correr y toca la melodía mágica en el teclado para invocar un puente y cruzar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Motion.isShaking() THEN distance++; IF obstacle THEN Audio.wait(Keyboard.melody('Magic'))"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Violín Aéreo 360",
+    "originalIdeaDescription": "Usar la brújula para seleccionar la cuerda del violín (Norte=Sol, Este=Re, etc.) y el movimiento de inclinación (Motion) como el arco para hacer sonar la nota. El teclado añade vibrato.",
+    "transformedIdeaTitle": "El Virtuoso Invisible",
+    "transformedIdeaDescription": "Toca un violín que no existe. Gira tu cuerpo para elegir la cuerda: Norte es grave, Sur es aguda. Mueve el dispositivo de lado a lado (Motion) como si pasaras el arco para producir sonido. Mantén presionada una tecla para añadir efectos de vibrato a tu concierto.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "string = Map(Compass.heading); volume = Motion.tiltSpeed; Note.play(string, volume); IF Keyboard.pressed() THEN applyVibrato()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Gravedad",
+    "originalIdeaDescription": "Para abrir la caja, el usuario debe orientarla al Oeste, inclinarla exactamente 45 grados (Motion) y teclear el código. Si se mueve bruscamente, se reinicia.",
+    "transformedIdeaTitle": "El Ladrón de Arte",
+    "transformedIdeaDescription": "Estás robando un diamante protegido por láseres. Alinea el dispositivo al Oeste. Inclínalo suavemente hasta 45 grados para esquivar el láser. Si te tiembla la mano (Motion > Umbral), suena la alarma. Una vez en posición, introduce el hack en el teclado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Motion.tiltX == 45 AND Motion.stable() THEN AllowInput(); IF Keyboard.code('123') THEN Open()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Golf Virtual",
+    "originalIdeaDescription": "Alinear el tiro con la brújula. Hacer el gesto de swing con el sensor de movimiento. El teclado selecciona el tipo de palo (Driver, Putter).",
+    "transformedIdeaTitle": "Torneo de Golf Digital",
+    "transformedIdeaDescription": "El hoyo está al Sureste. Gira y apunta (Compass). Selecciona tu palo con la tecla '1' (Potencia) o '2' (Precisión). Ahora, haz el swing con el brazo (Motion). El sistema calculará dónde cae la bola según tu fuerza y dirección.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Club = Keyboard.selection(); Power = Motion.swingSpeed; Direction = Compass.heading; CalculateShot(Club, Power, Direction)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Varita de Hechizos Complejos",
+    "originalIdeaDescription": "Un sistema de magia donde el hechizo depende de hacia dónde apuntas (Elemento), el gesto que haces (Forma) y la palabra mágica (Teclas).",
+    "transformedIdeaTitle": "Escuela de Magos: Duelo Final",
+    "transformedIdeaDescription": "Enfréntate al dragón. Para lanzar 'Bola de Fuego', mira al Sur (Fuego), haz un movimiento de estocada hacia adelante (Motion) y presiona la tecla roja simultáneamente. Si fallas la coordinación, el hechizo te explota en la cara.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Motion.gesture('Thrust') AND Keyboard.key('Red') THEN CastFireball()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Drones de Rescate",
+    "originalIdeaDescription": "La inclinación (Motion) mueve el dron. La brújula indica la dirección del viento que afecta el vuelo. El teclado suelta el paquete de ayuda.",
+    "transformedIdeaTitle": "Misión: Rescate en la Montaña",
+    "transformedIdeaDescription": "Pilota el dron de rescate. Inclina tu mano para volar. ¡Cuidado! La brújula muestra viento fuerte del Norte, así que debes inclinarte contra el viento para compensar. Cuando estés sobre el objetivo, presiona la 'Espaciadora' (tecla grande) para soltar las medicinas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "DronePos += Motion.tilt; DronePos += Wind(Compass.heading); IF DronePos == Target AND Keyboard.pressed() THEN DropPackage()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Pesca con Orientación",
+    "originalIdeaDescription": "El usuario busca bancos de peces girando (Brújula). Lanza la caña con un gesto (Motion). Usa el teclado para recoger el hilo cuando pican.",
+    "transformedIdeaTitle": "Pesca Legendaria",
+    "transformedIdeaDescription": "Busca el pez dorado. Gira lentamente hasta que el radar indique 'Peces al Este'. Haz el gesto de lanzar la caña (Motion). Espera... ¡Picó! Presiona repetidamente las teclas para recoger el carrete antes de que el pez se escape.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Motion.gesture('Throw') THEN FishOn = TRUE; IF FishOn AND Keyboard.mashSpeed() > 50 THEN Catch()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Danza de la Lluvia",
+    "originalIdeaDescription": "El usuario debe realizar una coreografía específica: girar al Norte, saltar (Motion), girar al Sur, agacharse, y tocar un ritmo en el teclado.",
+    "transformedIdeaTitle": "El Chamán de la Tribu",
+    "transformedIdeaDescription": "La aldea necesita lluvia. Sigue los pasos del ritual antiguo: 1. Mira al Norte y salta (Motion). 2. Mira al Sur e inclínate. 3. Toca la 'Llamada del Agua' en el teclado. Si lo haces en orden y con ritmo, lloverá.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Step1 = (Compass.North AND Motion.Jump); Step2 = (Compass.South AND Motion.Tilt); Step3 = Keyboard.Song(); IF Step1 AND Step2 AND Step3 THEN Rain()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Alarma de Mochila Inteligente",
+    "originalIdeaDescription": "Si la mochila se mueve (Motion) o cambia de orientación (Compass), suena una alarma. Solo se desactiva con un PIN en el teclado.",
+    "transformedIdeaTitle": "Guardián del Tesoro Escolar",
+    "transformedIdeaDescription": "Protege tus secretos. Activa la alarma. Si alguien intenta llevarse tu dispositivo (detecta movimiento) o simplemente lo gira para verlo (cambio de brújula), comenzará a pitar. ¡Corre! Solo tú puedes desactivarlo ingresando tu clave secreta en el teclado.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > 0 OR Compass.delta > 10 THEN Alarm = ON; IF Keyboard.pin('1234') THEN Alarm = OFF"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Remo",
+    "originalIdeaDescription": "El usuario se sienta y se inclina hacia adelante y atrás (Motion) para remar. La brújula controla el rumbo del bote. El teclado se usa para tocar canciones de marinero.",
+    "transformedIdeaTitle": "Regata Olímpica",
+    "transformedIdeaDescription": "Compite por el oro. Siéntate y haz el movimiento de remar (inclinar torso adelante y atrás rítmicamente detectado por Motion). Gira el dispositivo para mantener el rumbo recto en el carril (Compass). Si pierdes el ritmo, toca una tecla para animar a la tripulación.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Motion.oscillationFreq; Course = Compass.heading; IF Speed > Target AND Course == 'Straight' THEN Win()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Yoga Musical",
+    "originalIdeaDescription": "Posturas que requieren equilibrio. 'Saludo al Sol': Mirar al Este, mantener el dispositivo quieto (Motion bajo) y tocar una nota larga.",
+    "transformedIdeaTitle": "Maestro Zen",
+    "transformedIdeaDescription": "Encuentra tu centro. El juego te pedirá: 'Postura del Árbol mirando al Este'. Oriéntate (Compass) y quédate totalmente inmóvil (Motion debe ser 0). Mantén el equilibrio mientras tocas una nota suave en el teclado para completar el nivel.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Motion.vibration == 0 AND Keyboard.held('C') THEN ZenScore++"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Grúa de Construcción",
+    "originalIdeaDescription": "Girar el cuerpo (Compass) rota la grúa. Inclinar el dispositivo (Motion) sube o baja el gancho. El teclado cierra la pinza para agarrar objetos.",
+    "transformedIdeaTitle": "Operador de Grúa Torre",
+    "transformedIdeaDescription": "Construye el rascacielos. Gira sobre tu silla para mover el brazo de la grúa (Compass). Inclina el mando hacia adelante para bajar el cable (Motion). Cuando el gancho esté sobre el bloque, presiona la 'Barra Espaciadora' (teclado) para agarrarlo y subirlo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CraneAngle = Compass.heading; HookHeight += Motion.tiltY; IF Height == BlockLevel AND Keyboard.pressed() THEN Grab()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simón Dice Extremo",
+    "originalIdeaDescription": "Instrucciones combinadas: 'Norte', 'Agitar', 'Tecla Fa'. El usuario debe ejecutar la acción correcta rápidamente.",
+    "transformedIdeaTitle": "Comandante Galáctico",
+    "transformedIdeaDescription": "¡Atención cadete! Sigue las órdenes. Si digo 'Giro a Babor', orienta al Oeste. Si digo '¡Turbulencia!', agita el dispositivo. Si digo '¡Láser!', toca una tecla. El tiempo de reacción se acorta cada ronda.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Action = Random(['North', 'Shake', 'Key']); CheckInput(Action, Compass, Motion, Keyboard)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Navegación Espacial en Gravedad Cero",
+    "originalIdeaDescription": "Usar Motion para propulsarse (agitar) y Compass para navegar. Si chocas (Motion brusco), debes reparar la nave con el teclado.",
+    "transformedIdeaTitle": "Perdidos en el Espacio",
+    "transformedIdeaDescription": "Flota hacia la estación espacial. Agita suavemente para avanzar. Usa la brújula para apuntar a la Tierra. Si chocas con un asteroide (sacudida fuerte), sonará una alarma y deberás teclear el código de reparación antes de que se agote el oxígeno.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake(Gentle) THEN Move(); IF Motion.impact() THEN Damage=TRUE; IF Damage AND Keyboard.code('Fix') THEN Damage=FALSE"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Cazafantasmas con Trampa",
+    "originalIdeaDescription": "Rastrear al fantasma con la brújula. Cuando esté cerca, lanzar la trampa (gesto de lanzar con Motion) y activar el confinamiento (teclado).",
+    "transformedIdeaTitle": "Escuadrón Paranormal",
+    "transformedIdeaDescription": "El escáner indica un espectro al Sur. Gira con cuidado. Cuando estés alineado, haz el gesto de lanzar la trampa al suelo (Motion). Luego, presiona repetidamente las teclas para mantener el rayo de protones estable y capturarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == GhostDir AND Motion.gesture('Throw') THEN TrapDeployed; IF TrapDeployed AND Keyboard.mash() THEN Capture()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Bolera Ciega",
+    "originalIdeaDescription": "Alinear el lanzamiento con la brújula (sin ver la pista). Hacer el movimiento de lanzar la bola. Usar teclas para dar efecto.",
+    "transformedIdeaTitle": "Bolos a Ciegas",
+    "transformedIdeaDescription": "Escucha dónde están los bolos. Oriéntate al centro (Compass). Haz el movimiento de lanzar la bola con el brazo (Motion). Mientras la bola 'rueda' virtualmente, usa las flechas del teclado (teclas) para darle efecto y corregir la trayectoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LanePos = Compass.heading; Speed = Motion.swing; Spin = Keyboard.arrows(); CalculateScore(LanePos, Speed, Spin)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Director de Orquesta 4 Estaciones",
+    "originalIdeaDescription": "Cada punto cardinal es una estación (Vivaldi). El movimiento controla el tempo. El teclado activa solistas.",
+    "transformedIdeaTitle": "El Señor de las Estaciones",
+    "transformedIdeaDescription": "Controla el tiempo y la música. Mira al Norte para invocar el Invierno. Mueve tu 'varita' (dispositivo) lentamente para que la música sea lenta y triste. Gira al Sur (Verano) y agita rápido para música alegre. Toca teclas para añadir truenos o pájaros.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Season = Map(Compass.heading); Tempo = Motion.intensity; PlayMusic(Season, Tempo); IF Keyboard.pressed() THEN AddFX()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Mascota Virtual Holográfica",
+    "originalIdeaDescription": "Hay que mecerla para dormir (Motion suave), pasearla (Caminar/Compass) y alimentarla (Teclado).",
+    "transformedIdeaTitle": "Huevo de Dragón",
+    "transformedIdeaDescription": "Cuida el huevo. Tienes que caminar 100 pasos hacia el Norte para incubarlo (Compass + Motion oscilación al caminar). Cuando se rompa el cascarón, mécelo suavemente (Tilt). Si tiene hambre, toca la 'Canción de la Comida' en el teclado.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Motion.steps > 100 THEN Hatch(); IF Motion.rocking() THEN Sleep(); IF Keyboard.song() THEN Eat()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Francotirador de Agua",
+    "originalIdeaDescription": "Juego de carnaval. Apuntar pistola de agua (Compass), bombear presión (agitar Motion), disparar (Teclado).",
+    "transformedIdeaTitle": "Feria de Carnaval: Payasos",
+    "transformedIdeaDescription": "Derriba a los payasos. Gira para apuntar (Compass). ¡Te quedas sin presión! Agita el dispositivo arriba y abajo para cargar el tanque de agua (Motion). Cuando esté lleno, presiona la tecla para disparar el chorro y ganar el peluche.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Aim = Compass.heading; Pressure += Motion.shake; IF Key.pressed() AND Pressure > 0 THEN Fire(Aim); Pressure--"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Bici Estática Virtual",
+    "originalIdeaDescription": "Mover las manos como pedales (Motion circular). Girar el cuerpo para doblar (Compass). Tocar el timbre (Teclado).",
+    "transformedIdeaTitle": "Tour de Francia en el Aula",
+    "transformedIdeaDescription": "Sujeta el dispositivo como un manillar. Gira tu cuerpo para tomar las curvas de la montaña (Compass). Agita el dispositivo rítmicamente para simular el esfuerzo de pedaleo en subida. Si hay peatones, ¡toca el timbre (tecla aguda) para que se aparten!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Motion.rhythm; Turn = Compass.heading; IF Speed > 0 THEN Distance++; IF Obstacle AND Keyboard.key('Ding') THEN Avoid()"
+  }
+]

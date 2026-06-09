@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Orientación Nocturna Automático",
+    "originalIdeaDescription": "Un dispositivo que utiliza el sensor de luz para detectar la oscuridad. Cuando el nivel de luz cae por debajo de un umbral, activa la matriz de LED para mostrar una flecha de brújula que apunta siempre al Norte magnético.",
+    "transformedIdeaTitle": "El Casco del Explorador de Cuevas",
+    "transformedIdeaDescription": "Eres un explorador atrapado en una cueva profunda. Tu casco inteligente debe ahorrar batería. Prográmalo para que la brújula en la pantalla solo se encienda automáticamente cuando detecte que la oscuridad es total, guiándote hacia la salida Norte.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN Show(Compass.Direction) ON LED_Matrix ELSE LED_Matrix.Clear()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Rastreador Solar de Eficiencia",
+    "originalIdeaDescription": "Este sistema ayuda a posicionar paneles solares. Utiliza la brújula para asegurar que el dispositivo apunte al Sur (o Norte según hemisferio) y el sensor de luz para medir la intensidad. La matriz muestra una cara feliz si la orientación y la luz son óptimas.",
+    "transformedIdeaTitle": "El Girasol Robótico",
+    "transformedIdeaDescription": "Ayuda a 'Sunny', un girasol robot, a comer su desayuno. Sunny solo puede recargar sus baterías si mira hacia el Sur y recibe mucha luz solar directa. Si cumple ambas condiciones, ¡muéstrale una gran sonrisa en su cara digital!",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.Direction == 'South' AND Light_Intensity > 80 THEN LED_Matrix.Show('Smile') ELSE LED_Matrix.Show('Sad')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Monstruos Direccional",
+    "originalIdeaDescription": "Un juguete que reacciona a condiciones ambientales específicas. Si hay oscuridad y el dispositivo apunta hacia una dirección 'maldita' (ej. Oeste), la matriz LED muestra una animación de alerta o un icono de monstruo.",
+    "transformedIdeaTitle": "El Radar de Vampiros",
+    "transformedIdeaDescription": "Los vampiros odian la luz y siempre vienen del Oeste. Construye un radar que muestre una alerta de 'PELIGRO' en la pantalla solo si está muy oscuro y estás mirando hacia el Oeste. ¡Si hay luz, estás a salvo!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 5 AND Compass.Direction == 'West' THEN LED_Matrix.ShowIcon('Vampire') ELSE LED_Matrix.ShowIcon('Shield')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Candado de Combinación Ambiental",
+    "originalIdeaDescription": "Un mecanismo de seguridad digital que desbloquea un sistema solo cuando se cumplen dos condiciones físicas: el dispositivo debe apuntar a un grado específico (ej. 90°) y el sensor de luz debe recibir un destello intenso (linterna).",
+    "transformedIdeaTitle": "La Caja Fuerte del Agente Secreto",
+    "transformedIdeaDescription": "Para abrir la caja fuerte con los documentos secretos, el Agente 007 debe usar su dispositivo. La cerradura solo se abre si apuntas exactamente al Este y alumbras el sensor con tu linterna espía. Muestra un 'Candado Abierto' cuando lo logres.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.Heading == 90 AND Light_Intensity > 90 THEN LED_Matrix.Show('Unlock') ELSE LED_Matrix.Show('Lock')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Visor de Constelaciones Astronómicas",
+    "originalIdeaDescription": "Dispositivo educativo que muestra patrones de estrellas en la matriz LED. El patrón cambia dependiendo de la dirección cardinal a la que apunta la brújula, pero solo funciona si el sensor de luz detecta que es de noche.",
+    "transformedIdeaTitle": "El Planetario de Bolsillo",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un mapa estelar. Si estás afuera de noche (poca luz), al apuntar al Norte verás la Osa Mayor y al Sur la Cruz del Sur en la pantalla. Si es de día, muestra un sol para proteger tus ojos virtuales.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 50 THEN Show('Sun') ELSE IF Compass == 'North' THEN Show('BigDipper') ELSE Show('Stars')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Indicador de Ciclista Inteligente",
+    "originalIdeaDescription": "Accesorio para bicicletas. La matriz LED muestra flechas de dirección basadas en la brújula. El brillo de los LEDs se ajusta inversamente a la intensidad de luz ambiental para ser visible tanto de día como de noche.",
+    "transformedIdeaTitle": "La Super Bici del Futuro",
+    "transformedIdeaDescription": "Diseña el sistema de luces para una moto futurista. La pantalla trasera debe mostrar hacia dónde te diriges (Norte, Sur, etc.). Además, si entras en un túnel oscuro, los LEDs deben brillar al máximo, pero atenuarse bajo el sol brillante.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LED_Matrix.Brightness = (100 - Light_Intensity); LED_Matrix.ShowArrow(Compass.Direction)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Escondite del Topo",
+    "originalIdeaDescription": "Un juego interactivo donde un personaje en la matriz LED reacciona a la luz. Si hay mucha luz, el personaje 'cava' y desaparece. Si hay poca luz, asoma la cabeza. La dirección de excavación depende de la brújula.",
+    "transformedIdeaTitle": "El Topo Asustadizo",
+    "transformedIdeaDescription": "Tienes una mascota virtual: un topo. Odia la luz del sol. Programa al topo para que se esconda (pantalla negra o animación de cola) si hay mucha luz. Si tapas el sensor (oscuridad), el topo se asoma. Usa la brújula para decidir hacia dónde mira su nariz.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 60 THEN LED_Matrix.ShowAnimation('Digging') ELSE LED_Matrix.ShowIcon('MoleFace', Compass.Direction)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Estación Meteorológica Visual",
+    "originalIdeaDescription": "Herramienta de monitoreo ambiental. La matriz LED muestra un icono del clima (Sol o Nube) basado en la intensidad de luz, y una flecha pequeña indicando la dirección del viento (simulada por la orientación del dispositivo).",
+    "transformedIdeaTitle": "El Reportero del Clima",
+    "transformedIdeaDescription": "¡Eres el hombre/mujer del tiempo! Crea un dispositivo que informe automáticamente las condiciones. Si hay mucha luz, muestra un SOL radiante; si hay poca, una NUBE. Agrega una flecha pequeña en la esquina que indique hacia dónde sopla el 'viento' (tu orientación).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "DisplayIcon(Light > 50 ? 'Sun' : 'Cloud'); DisplayPixelArrow(Compass.Heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Decodificador de Tinta Invisible",
+    "originalIdeaDescription": "Simulación de espionaje. La matriz LED aparece apagada o muestra 'ruido' estático. Solo revela un mensaje secreto o un código QR simple cuando el nivel de luz es bajo (simulando luz UV en cuarto oscuro) y la brújula apunta al Norte.",
+    "transformedIdeaTitle": "Mensaje Fantasma",
+    "transformedIdeaDescription": "Has interceptado un mensaje alienígena, pero está encriptado. Solo se revela bajo condiciones especiales. Debes ir a un lugar oscuro (tapa el sensor) y apuntar tu dispositivo hacia el Norte magnético para que las letras aparezcan en la pantalla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 AND Compass.IsNorth() THEN LED_Matrix.ScrollText('HOLA') ELSE LED_Matrix.ShowStatic()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Marítimo",
+    "originalIdeaDescription": "La matriz LED simula un haz de luz que gira. La posición del haz en la matriz (columnas) depende de la lectura de la brújula (0-360 grados). El sistema solo se activa cuando el sensor de luz detecta la noche.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Los barcos necesitan tu ayuda para no chocar contra las rocas. Construye un faro que solo se encienda de noche. Cuando gires tu cuerpo (y el dispositivo), el haz de luz en la matriz debe moverse para alumbrar diferentes partes del 'océano'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN Column = Map(Compass.Heading, 0, 360, 0, 6); LED_Matrix.LightColumn(Column)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Herramienta de Meditación Zen",
+    "originalIdeaDescription": "Dispositivo de biofeedback simple. Requiere que el usuario se siente mirando al Este (amanecer). La matriz pulsa una luz suavemente. La velocidad del pulso disminuye si la luz ambiental es tenue, promoviendo la relajación.",
+    "transformedIdeaTitle": "El Maestro Zen",
+    "transformedIdeaDescription": "Crea una herramienta para relajarte. El dispositivo te pide encontrar el Este (donde sale el sol). Una vez allí, si bajas las luces de la habitación, la pantalla mostrará un círculo que crece y se encoge lentamente para guiar tu respiración.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.Direction == 'East' THEN Speed = Map(Light, 0, 100, Slow, Fast); LED_Matrix.Pulse(Speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Escudo de Defensa Laser Tag",
+    "originalIdeaDescription": "Juego activo. El jugador usa el dispositivo en el pecho. Si el sensor de luz detecta un pico repentino (disparo láser) Y el jugador está mirando hacia el oponente (dirección específica), la matriz registra un bloqueo exitoso.",
+    "transformedIdeaTitle": "Escudo de Energía Galáctico",
+    "transformedIdeaDescription": "Estás en una batalla espacial. Tu escudo de energía puede bloquear láseres enemigos. Si detectas un destello de luz fuerte (disparo enemigo) y estás mirando de frente al ataque (Norte), ¡la pantalla debe mostrar un escudo! Si no miras al frente, muestra 'DAÑO'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Change > Threshold AND Compass.Direction == 'North' THEN Show('Shield') ELSE IF Light_Change > Threshold THEN Show('Hit')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Brújula de Sombras Digital",
+    "originalIdeaDescription": "Una interpretación artística de un reloj de sol. La matriz ilumina píxeles opuestos a la dirección de la luz más fuerte (detectada por rotación del usuario hasta max luz) y alineados con el Norte geográfico.",
+    "transformedIdeaTitle": "El Reloj de Sombra Mágico",
+    "transformedIdeaDescription": "Antiguamente usaban la sombra de un palo para saber la hora. Crea una versión digital: busca dónde está la luz más fuerte girando el dispositivo. La pantalla debe dibujar una 'sombra' de píxeles oscuros en la dirección opuesta a la luz.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ShadowDir = (Compass.Heading + 180) % 360; LED_Matrix.DrawLine(Center, ShadowDir)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Navegador de Túneles",
+    "originalIdeaDescription": "Sistema de navegación contextual. Al aire libre (luz alta), muestra información general o una cara feliz. En interiores oscuros (luz baja), cambia automáticamente a modo brújula de alta precisión en la matriz.",
+    "transformedIdeaTitle": "Explorador de Ruinas Antiguas",
+    "transformedIdeaDescription": "Estás buscando un tesoro. Mientras caminas por la selva (luz fuerte), tu mapa muestra una carita feliz. Pero al entrar en las ruinas oscuras (poca luz), el mapa debe transformarse mágicamente en una flecha brillante para no perderte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light > 40 THEN Show('Smile') ELSE ShowArrow(Compass.Heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Falsos Amaneceres",
+    "originalIdeaDescription": "Dispositivo para despertar. Monitorea la luz y la dirección. Solo activa la alarma visual (matriz parpadeando) si la luz aumenta gradualmente y proviene del Este, ignorando luces artificiales de otras direcciones.",
+    "transformedIdeaTitle": "Despertador Inteligente Anti-Trampas",
+    "transformedIdeaDescription": "Quieres despertar con el sol, no con la luz del pasillo. Programa tu alarma para que solo suene (parpadee en la pantalla) si detecta luz brillante Y el dispositivo está apuntando hacia la ventana del Este. ¡Así sabrás que es de día de verdad!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > Threshold AND Compass.Direction == 'East' THEN LED_Matrix.Blink('Wake Up!')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros Caliente-Frío",
+    "originalIdeaDescription": "Juego de búsqueda. El objetivo está en una dirección fija (ej. Sur). La matriz muestra 'Cerca' (brillante) o 'Lejos' (tenue) basándose en qué tan alineada está la brújula con el objetivo, modulado por la luz ambiental como factor de dificultad.",
+    "transformedIdeaTitle": "Brújula del Tesoro Pirata",
+    "transformedIdeaDescription": "El tesoro está enterrado al Sur. Tu brújula mágica brilla intensamente en la pantalla cuando apuntas exactamente al Sur. Si te desvías, la luz de la pantalla se apaga. ¡Usa también el sensor de luz para apagar el mapa si alguien te alumbra!",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = Map(Abs(Compass.Heading - 180), 0, 180, 100, 0); IF Light < 80 THEN Matrix.Brightness(Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Analizador de Contaminación Lumínica",
+    "originalIdeaDescription": "Herramienta de ciencia ciudadana. Mide la intensidad de luz en 4 direcciones cardinales. El usuario rota, el sistema registra la luz en N, S, E, O y muestra un gráfico de barras simple en la matriz indicando la dirección más contaminada.",
+    "transformedIdeaTitle": "Detective de Luz",
+    "transformedIdeaDescription": "Ayuda a los astrónomos a encontrar el cielo más oscuro. Gira en círculo lentamente. Tu dispositivo debe medir cuánta luz viene de cada dirección y mostrar en la pantalla una barra grande hacia donde haya más contaminación lumínica (luces de ciudad).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Data[Compass.Quadrant] = Light_Intensity; LED_Matrix.Graph(Data)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Comunicador Morse Óptico Direccional",
+    "originalIdeaDescription": "Sistema de envío de señales. El usuario apunta a un receptor (usando brújula para validar dirección). Usa el sensor de luz (tapándolo y destapándolo) como un botón telegráfico. La matriz muestra los puntos y rayas generados.",
+    "transformedIdeaTitle": "Telégrafo de Destellos",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu aliado en el Norte. Primero, orienta tu dispositivo al Norte. Luego, usa tu mano para tapar y destapar el sensor de luz rápidamente. ¡Verás tu código Morse escribiéndose en la pantalla!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.IsNorth() THEN (IF Light_Change THEN Matrix.AddDotOrDash())"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Camaleón",
+    "originalIdeaDescription": "La matriz muestra una criatura que cambia su patrón según el entorno. El patrón de los píxeles cambia según la dirección de la brújula (textura) y el brillo de los LEDs se adapta a la luz ambiental (camuflaje).",
+    "transformedIdeaTitle": "El Camaleón Digital",
+    "transformedIdeaDescription": "Crea un camaleón que vive en tu matriz LED. Si miras al Norte, le salen rayas; si miras al Sur, le salen puntos. Además, haz que brille mucho si hay mucha luz, y que se vuelva tenue si está oscuro para camuflarse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Pattern = (Compass.Heading < 180) ? 'Stripes' : 'Dots'; Matrix.Show(Pattern, Brightness=Light)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Nivelador de Fotografía",
+    "originalIdeaDescription": "Herramienta para fotógrafos. Ayuda a tomar fotos al amanecer/atardecer. La matriz indica si el dispositivo está nivelado con el horizonte (usando brújula/inclinación implícita o dirección de luz) y mide si la luz es suficiente para una foto sin flash.",
+    "transformedIdeaTitle": "Asistente de Fotógrafo Pro",
+    "transformedIdeaDescription": "Quieres tomar la foto perfecta del atardecer al Oeste. Programa tu asistente: Si apuntas al Oeste Y la luz es suave (media), muestra un 'Check' verde en la pantalla. Si hay demasiada luz o no miras al Oeste, muestra una 'X'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.Direction == 'West' AND Light > 20 AND Light < 60 THEN Show('Check') ELSE Show('X')"
+  }
+]

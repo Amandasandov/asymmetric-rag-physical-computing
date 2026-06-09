@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Juego de Estatuas Ninja",
+    "originalIdeaDescription": "El audio reproduce música. Cuando la música para, el usuario debe quedarse totalmente inmóvil (Motion) y en silencio absoluto (Noise). Si falla, pierde.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: El Templo Silencioso",
+    "transformedIdeaDescription": "Conviértete en un ninja invisible. La música suena mientras practicas tus movimientos de combate. De repente, la música se detiene (Audio). En ese instante, debes congelarte como una estatua y contener la respiración. Si el sensor detecta el más mínimo temblor o un suspiro (Ruido), los guardias te descubrirán.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Music'); WAIT(Random); Audio.stop(); WAIT(3s); IF Motion.detected() OR Noise.level > 10 THEN Audio.play('Alarm') ELSE Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Motocicleta",
+    "originalIdeaDescription": "El usuario inclina el dispositivo para girar (Motion). Para acelerar, debe hacer el sonido del motor con la boca (Noise). El Audio reproduce el motor real.",
+    "transformedIdeaTitle": "Gran Premio de Motociclismo",
+    "transformedIdeaDescription": "Agarra el manillar. Inclina el dispositivo para tomar las curvas. Para acelerar y adelantar a tus rivales, debes hacer '¡Brummm!' fuerte al micrófono. Cuanto más fuerte sea tu sonido de motor (Noise), más rápido sonará la motocicleta en el juego (Audio).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Noise.level * 2; Audio.setPlaybackRate(Speed); Audio.setPitch(Motion.tiltX); IF Speed > 100 THEN Win()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Bebé Virtual Llorón",
+    "originalIdeaDescription": "Un simulador de cuidar un bebé. Si se mueve bruscamente, llora. Para calmarlo, hay que mecerlo suavemente (Motion) y hacer 'Shhh' (Noise).",
+    "transformedIdeaTitle": "La Niñera Perfecta",
+    "transformedIdeaDescription": "El bebé está inquieto. Si agitas el dispositivo fuerte, empezará a llorar desconsoladamente (Audio). Para que se duerma, debes mecerlo con un ritmo suave y constante (Motion) mientras le susurras una nana o haces 'Shhh' (Noise) al mismo tiempo.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > 50 THEN Audio.play('Cry'); IF Motion.rocking() AND Noise.sound('Shhh') THEN Audio.fadeOut('Cry') AND Audio.play('Sleep')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Varita Mágica con Voz",
+    "originalIdeaDescription": "Para lanzar un hechizo, el usuario debe hacer un gesto específico con la varita (Motion) y gritar el nombre del hechizo (Noise). El audio reproduce el efecto mágico.",
+    "transformedIdeaTitle": "Duelo de Hechiceros",
+    "transformedIdeaDescription": "Enfréntate a Voldemort. Para lanzar 'Expelliarmus', debes hacer un movimiento de estocada rápido hacia adelante (Motion) y gritar el conjuro al mismo tiempo (Noise). Si la coordinación es perfecta, escucharás el rayo mágico salir disparado.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('Thrust') AND Noise.level > 70 THEN Audio.play('SpellSound') ELSE Audio.play('Fizzle')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fiestas",
+    "originalIdeaDescription": "Si hay mucho movimiento (baile) y mucho ruido (música/gritos), el dispositivo sube el volumen de la música y añade efectos de sonido.",
+    "transformedIdeaTitle": "El DJ Automático",
+    "transformedIdeaDescription": "¡Que empiece la fiesta! El dispositivo es el DJ. Si detecta que la gente está saltando (Motion) y gritando de emoción (Noise), subirá el volumen de la música al máximo y lanzará efectos de sirena. Si la gente se para, la música se apaga.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Energy = Motion.average + Noise.average; Audio.setVolume(Energy); IF Energy > 90 THEN Audio.playSample('AirHorn')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Karate",
+    "originalIdeaDescription": "El audio da instrucciones. El usuario debe dar un puñetazo al aire (Motion rápido) y gritar '¡Kiai!' (Noise) simultáneamente para ganar puntos.",
+    "transformedIdeaTitle": "Cinturón Negro: Kiai",
+    "transformedIdeaDescription": "El Sensei te observa. Cuando escuches '¡GOLPE!', lanza tu puño al aire con fuerza (el sensor detecta el frenazo brusco) y grita '¡KIAI!'. Solo si el movimiento es rápido y el grito es fuerte al mismo tiempo, el golpe será válido (sonido de impacto).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.say('Punch'); WAIT(1s); IF Motion.accel > 3g AND Noise.level > 80 THEN Audio.play('Impact') AND Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Exploración de Cueva con Eco",
+    "originalIdeaDescription": "El usuario camina (Motion). Para ver si hay paredes, da una palmada (Noise) y el sistema reproduce un eco (Audio) que indica la distancia.",
+    "transformedIdeaTitle": "El Murciélago Ciego",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Avanza moviendo el dispositivo como si caminaras. Para orientarte, da una palmada seca. Si el Audio devuelve un eco rápido, hay una pared cerca. Si el eco tarda, el camino está libre. Navega sin chocar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.step(): Move(); IF Noise.clap(): Distance = CheckMap(); Audio.play('Echo', delay=Distance)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Ladrón Torpe",
+    "originalIdeaDescription": "El usuario intenta robar el dispositivo. Si hace ruido (pasos/respiración) o mueve el dispositivo bruscamente, suena la alarma.",
+    "transformedIdeaTitle": "Misión Imposible: El Diamante",
+    "transformedIdeaDescription": "El dispositivo es un diamante protegido por láseres invisibles. Debes levantarlo de la mesa muy, muy despacio (Motion bajo). Además, no puedes hacer ni un ruido (Noise bajo). Si te mueves rápido o suspiras, la alarma sonará y perderás.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > threshold OR Noise.level > threshold THEN Audio.play('Alarm'); ELSE IF Motion.lifted THEN Win()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Instrumento de Percusión Corporal",
+    "originalIdeaDescription": "Agitar el dispositivo suena como maracas. Golpear el cuerpo o aplaudir (Ruido) suena como bombo o caja.",
+    "transformedIdeaTitle": "Hombre Orquesta",
+    "transformedIdeaDescription": "Crea un ritmo complejo. Usa tu mano derecha para agitar el dispositivo y crear un ritmo de 'shaker' (Motion). Con tu mano izquierda, da palmadas o golpes en el pecho (Noise) para activar el sonido del Bombo. Sincroniza ambos para crear samba.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeDetected() THEN Audio.play('Shaker'); IF Noise.peakDetected() THEN Audio.play('KickDrum')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Despertador Activo",
+    "originalIdeaDescription": "La alarma no se apaga hasta que el usuario agita el dispositivo vigorosamente y grita '¡Estoy despierto!' tres veces.",
+    "transformedIdeaTitle": "El Despertador Militar",
+    "transformedIdeaDescription": "¡Arriba soldado! La corneta suena (Audio). Para apagarla, tienes que demostrar que estás activo: haz 10 saltos (el sensor cuenta las sacudidas) y grita '¡SEÑOR, SÍ SEÑOR!' (Ruido) para detener el sonido infernal.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE AlarmOn: Audio.play('Bugle'); IF Motion.jumps > 10 AND Noise.phrase('YesSir') THEN AlarmOn=FALSE"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Lanzamiento de Cohete",
+    "originalIdeaDescription": "Cargar combustible agitando (Motion). Iniciar cuenta atrás con voz (Noise). Despegue (Audio).",
+    "transformedIdeaTitle": "Control de Misión Espacial",
+    "transformedIdeaDescription": "Prepara el lanzamiento. Agita el dispositivo de arriba a abajo para bombear combustible (Motion). Cuando el tanque esté lleno, inicia la cuenta atrás en voz alta: '3, 2, 1...' (Sensor de Ruido). Al llegar a cero, el Audio disparará los motores.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Fuel += Motion.shake; IF Fuel > 100: Audio.play('Ready'); IF Noise.countdown() THEN Audio.play('BlastOff')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Detector de Monstruos debajo de la Cama",
+    "originalIdeaDescription": "El usuario pone el dispositivo bajo la cama. Si el monstruo se mueve (vibración) o gruñe (ruido), el dispositivo avisa.",
+    "transformedIdeaTitle": "Cazafantasmas Doméstico",
+    "transformedIdeaDescription": "Investiga lo paranormal. Deja el dispositivo en el suelo. Túrnense para intentar asustarlo. Si caminas cerca (vibración/Motion) o haces ruidos espeluznantes, el dispositivo detectará la 'presencia' y emitirá un sonido de radar (Audio) cada vez más rápido.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Presence = Motion.level + Noise.level; Frequency = Map(Presence); Audio.beep(Frequency)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "El usuario agita el dispositivo para el viento y grita/aplaude para los truenos. El audio complementa con lluvia.",
+    "transformedIdeaTitle": "El Dios de la Tormenta",
+    "transformedIdeaDescription": "Controla el clima. Inclina el dispositivo suavemente para traer la brisa. Agítalo fuerte para desatar un huracán (Audio viento). Da un aplauso fuerte para invocar un trueno (Audio estruendo). Crea una sinfonía climática.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setVolume('Wind', Motion.shake); IF Noise.peak() THEN Audio.play('Thunder')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Perros Virtual",
+    "originalIdeaDescription": "El usuario da órdenes de voz ('¡Siéntate!'). El perro (Audio) reacciona. Si se le acaricia (Motion suave), jadea feliz.",
+    "transformedIdeaTitle": "Mi Cachorro Robot",
+    "transformedIdeaDescription": "Adopta un perro digital. Llámalo silbando (Noise). Cuando venga (ladrido), acaricia la pantalla o mueve el dispositivo suavemente (Motion) para que mueva la cola. Si lo agitas fuerte, se enfadará y gruñirá.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.whistle() THEN Audio.play('Bark'); IF Motion.gentle() THEN Audio.play('Pant') ELSE IF Motion.hard() THEN Audio.play('Growl')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Juego de Tenis Ciego",
+    "originalIdeaDescription": "El audio indica la pelota viniendo. El usuario debe hacer el swing (Motion) y gruñir de esfuerzo (Noise) para golpear fuerte.",
+    "transformedIdeaTitle": "Final de Wimbledon a Ciegas",
+    "transformedIdeaDescription": "Escucha la pelota acercarse (sonido aumenta). Calcula el momento exacto. Haz el swing con el brazo (Motion) y grita '¡HAAA!' (Noise) para darle potencia al golpe. Si sincronizas todo, escucharás el 'POK' perfecto; si no, la red.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BallPos = Timer; IF Motion.swing() AND Noise.grunt() AND BallPos == HitWindow THEN Audio.play('Hit') ELSE Audio.play('Miss')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Caja de Sorpresas Payaso",
+    "originalIdeaDescription": "Girar una manivela imaginaria (movimiento circular Motion). La música se acelera. Al final, gritar '¡POP!' para que salga el payaso.",
+    "transformedIdeaTitle": "Jack-in-the-Box",
+    "transformedIdeaDescription": "Gira la manivela haciendo círculos con el dispositivo. La música de circo suena cada vez más rápido (Audio). Cuando la música pare, tienes 1 segundo para gritar '¡BOO!' (Noise). Si lo haces a tiempo, el payaso sale riendo; si no, se rompe el juguete.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "speed = Motion.rotation; Audio.play('PopGoesWeasel', speed); IF SongEnd AND Noise.shout() THEN Audio.play('ClownLaugh')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Agente Secreto en el Techo",
+    "originalIdeaDescription": "Caminar sobre un techo crujiente. El usuario debe moverse lento. Si hace ruido (crujido de piso virtual por Motion) o real (Noise), lo oyen.",
+    "transformedIdeaTitle": "Escape por el Tejado",
+    "transformedIdeaDescription": "Estás sobre el techo enemigo. Avanza inclinando el dispositivo. Pero cuidado: las tejas viejas crujen. Si te mueves rápido (Motion alto) o haces ruido con tu respiración (Noise), los guardias dispararán la alarma. Sé un fantasma.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stealth = 100 - (Motion.speed + Noise.level); IF Stealth < 50 THEN Audio.play('Siren'); ELSE Audio.play('Footsteps')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Lámpara Mágica de Genio",
+    "originalIdeaDescription": "Frotar la lámpara (movimiento rápido repetitivo). El genio pregunta '¿Deseo?'. El usuario habla. El genio concede (sonido).",
+    "transformedIdeaTitle": "El Genio de la Lámpara",
+    "transformedIdeaDescription": "Encuentras una lámpara vieja. Frótala enérgicamente (agita el dispositivo/Motion) para limpiarla. Saldrá humo (sonido mágico). El Genio dirá: 'Pide un deseo'. Di tu deseo fuerte al micrófono (Noise). El Genio responderá con un sonido de concesión.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shakeCount > 20 THEN Audio.play('GeniusVoice'); WAIT(Noise.speech); Audio.play('GrantWish')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Duelo de Pistolas Láser",
+    "originalIdeaDescription": "Cargar el arma (agitar). Disparar (ruido 'Piu Piu'). Si te disparan (audio), esquivar (moverse lateralmente).",
+    "transformedIdeaTitle": "Batalla Galáctica en Vivo",
+    "transformedIdeaDescription": "¡Estás bajo fuego! Recarga tu bláster agitando el dispositivo hacia abajo (Motion). Apunta y dispara haciendo el sonido '¡Piu!' con la boca (Noise). Si escuchas un disparo enemigo acercarse, ¡salta a la izquierda para esquivarlo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Ammo += Motion.shake; IF Noise.sound('Piu') AND Ammo > 0 THEN Audio.play('Shot'); IF Audio.incoming() AND !Motion.dodge() THEN Hit()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Laboratorio de Química Explosiva",
+    "originalIdeaDescription": "Mezclar ingredientes agitando (Motion). Si la mezcla burbujea (Audio), hay que soplar (Noise) para enfriarla o explota.",
+    "transformedIdeaTitle": "El Profesor Chiflado",
+    "transformedIdeaDescription": "Crea la fórmula secreta. Agita el matraz (dispositivo) para mezclar. Escucha: si empieza a burbujear demasiado fuerte (Audio in crescendo), ¡significa que va a explotar! Sopla urgentemente al micrófono (Noise) para enfriar la mezcla y salvar el laboratorio.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Heat += Motion.shake; Audio.setVolume(Heat); IF Heat > Critical THEN Audio.play('Warning'); IF Noise.blow() THEN Heat--"
+  }
+]

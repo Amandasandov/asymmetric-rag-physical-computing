@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Manual Morse Code Transmitter with Safety Cutoff",
+    "originalIdeaDescription": "This system uses a switch as a main power safety toggle and a touch button as the telegraph key. The lamp only lights up to transmit signals when the safety switch is active and the button is tapped.",
+    "transformedIdeaTitle": "El Telégrafo Secreto de Espías",
+    "transformedIdeaDescription": "¡Conviértete en un espía de la Segunda Guerra Mundial! Construye un dispositivo para enviar mensajes en código Morse a tus aliados. Usa el interruptor para 'armar' tu transmisor y evitar mensajes accidentales, y el botón táctil para enviar los destellos de luz con tus mensajes secretos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN Lamp.turnOn() ELSE Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Adjustable RGB Ambient Lighting Controller",
+    "originalIdeaDescription": "A lighting control system where the switch toggles the main power of the lamp on or off. While the lamp is powered on, the touch button cycles through a predefined array of different colors to set the mood.",
+    "transformedIdeaTitle": "Lámpara Mágica de Sueños",
+    "transformedIdeaDescription": "Crea la lámpara de noche perfecta para tu habitación. Usa el interruptor para encenderla a la hora de dormir. Si no te gusta el color, toca el botón mágico para cambiar entre azul relajante, rojo cálido o verde bosque hasta encontrar tu favorito.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.on(); IF TouchButton.wasPressed() THEN Lamp.nextColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visual Security Breach Alarm System",
+    "originalIdeaDescription": "An alarm simulation where the switch acts as the system arming mechanism. If the touch button is pressed (simulating a door opening or sensor trip) while the system is armed, the lamp flashes red continuously.",
+    "transformedIdeaTitle": "Sistema de Seguridad Láser",
+    "transformedIdeaDescription": "Protege tu base secreta de intrusos. Activa la alarma con el interruptor antes de salir. Si alguien toca el botón (abre la puerta) mientras la alarma está activa, la lámpara parpadeará en rojo para alertar a todos de la intrusión.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN Lamp.flash(Red, Fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "AND Gate Logic Demonstration Unit",
+    "originalIdeaDescription": "An educational tool to demonstrate Boolean logic. The lamp acts as the output Q. The Switch and Touch Button act as Inputs A and B. The lamp only turns on when both A (Switch) and B (Touch) are active simultaneously.",
+    "transformedIdeaTitle": "El Desafío de la Llave Doble",
+    "transformedIdeaDescription": "Como en las películas de submarinos nucleares, se necesitan dos personas para activar el sistema. Aprende lógica de computadoras creando un sistema donde la luz verde de 'ACCESO CONCEDIDO' solo se enciende si mantienes el interruptor encendido Y presionas el botón al mismo tiempo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN Lamp.setColor(Green) ELSE Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Manual Traffic Light Maintenance Mode",
+    "originalIdeaDescription": "A simulation of a traffic light being operated manually by police. The switch turns the system on. The touch button advances the state of the lamp from Green to Yellow to Red each time it is pressed.",
+    "transformedIdeaTitle": "Controlador de Tráfico Urbano",
+    "transformedIdeaDescription": "¡El semáforo automático se ha roto y hay un atasco! Tú eres el oficial de tránsito encargado. Enciende el sistema y usa el botón táctil para cambiar las luces manualmente (Verde, Amarillo, Rojo) y dirigir el flujo de coches para que nadie llegue tarde.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF TouchButton.wasPressed() THEN Lamp.nextTrafficColor())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reaction Time Game Tester",
+    "originalIdeaDescription": "A game loop where the switch starts the game session. The lamp turns on a random color after a delay. The user must press the touch button immediately to turn the lamp off and register a 'win'.",
+    "transformedIdeaTitle": "Juego de Reflejos: ¡Atrapa la Luz!",
+    "transformedIdeaDescription": "¿Eres el más rápido del oeste? Activa el juego con el interruptor. Espera... espera... ¡YA! En cuanto la luz se encienda, presiona el botón táctil lo más rápido posible para apagarla. ¡Compite con tus amigos para ver quién tiene mejores reflejos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { Wait(Random); Lamp.on(); IF TouchButton.pressed() THEN Lamp.off() }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Dual Mode Flashlight (Steady/Burst)",
+    "originalIdeaDescription": "A flashlight utility with two modes. If the switch is ON, the lamp stays on (steady mode). If the switch is OFF, the touch button acts as a momentary switch for short bursts of light.",
+    "transformedIdeaTitle": "Linterna de Explorador Táctica",
+    "transformedIdeaDescription": "Diseña una linterna inteligente para tus acampadas. Usa el interruptor para dejar la luz fija cuando camines por el bosque, o usa el botón táctil para hacer señales rápidas a tus amigos sin gastar toda la batería.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.on() ELSE (IF TouchButton.isPressed() THEN Lamp.on() ELSE Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Color Mixing Laboratory Bench",
+    "originalIdeaDescription": "Demonstrates additive color mixing. The switch represents the Red channel, the Touch Button represents the Blue channel. Activating both results in the Lamp displaying Purple (Red + Blue).",
+    "transformedIdeaTitle": "Laboratorio de Mezcla de Colores",
+    "transformedIdeaDescription": "¡Experimenta con la luz! Tienes dos controles: el interruptor añade luz Roja y el botón añade luz Azul. ¿Qué pasa si activas los dos a la vez? ¡Descubre cómo crear el color Púrpura mezclando señales digitales!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN Lamp.setColor(Purple) ELSE IF Switch.isOn() THEN Lamp.setColor(Red)..."
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Do Not Disturb Status Indicator",
+    "originalIdeaDescription": "A status light for a room. The switch sets the status to 'Busy' (Red Lamp). The touch button overrides this momentarily to 'Available' (Green Lamp) or serves as a 'knock' indicator (Fashing).",
+    "transformedIdeaTitle": "Señal de 'No Molestar' Gamer",
+    "transformedIdeaDescription": "Evita que interrumpan tu partida online. Si el interruptor está encendido, la luz roja avisa que estás ocupado. Configura el botón táctil para que tus padres puedan usarlo como un timbre visual (parpadeo) si la cena está lista.",
+    "minAge": 8,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Red); IF TouchButton.isPressed() THEN Lamp.blink(White)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Strobe Light Frequency Controller",
+    "originalIdeaDescription": "A party light system. The switch enables the strobe effect. Holding the touch button changes the frequency of the flashing from slow to fast (or changes color patterns) while pressed.",
+    "transformedIdeaTitle": "Luces de Fiesta Disco",
+    "transformedIdeaDescription": "¡Monta una fiesta en tu salón! Activa el modo fiesta con el interruptor para que la luz parpadee. Mantén presionado el botón táctil para acelerar el ritmo de las luces cuando suene la parte más emocionante de tu canción favorita.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF TouchButton.isHeld() THEN Lamp.strobe(Fast) ELSE Lamp.strobe(Slow))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Quiz Show Buzzer with Reset",
+    "originalIdeaDescription": "A system for trivia games. The touch button latches the lamp ON (indicating a player buzzed in). The switch is used by the moderator to reset the lamp to OFF for the next question.",
+    "transformedIdeaTitle": "Botón de Concurso de TV",
+    "transformedIdeaDescription": "¡Bienvenido al gran concurso de preguntas! Construye tu propio pulsador. Cuando sepas la respuesta, toca el botón y tu luz se quedará encendida para ganar el turno. El presentador usará el interruptor para apagar tu luz antes de la siguiente pregunta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN Lamp.on(); IF Switch.wasToggled() THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Automated SOS Beacon with Cancel",
+    "originalIdeaDescription": "An emergency signaling device. Flipping the switch starts an automated SOS pattern (3 short, 3 long, 3 short) on the Lamp. Pressing the touch button pauses or cancels the signal to save power.",
+    "transformedIdeaTitle": "Baliza de Rescate en Isla Desierta",
+    "transformedIdeaDescription": "Estás atrapado en una isla. Programa tu lámpara para pedir ayuda automáticamente. Al encender el interruptor, la lámpara parpadeará S-O-S (... --- ...). Si ves pasar un avión, presiona el botón para detener la señal y no gastar batería.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND NOT TouchButton.isPressed() THEN Lamp.playPattern(SOS) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Digital Voting Machine Simulator",
+    "originalIdeaDescription": "A system to cast a vote. The switch opens or closes the polling station (enables/disables input). The touch button casts a vote, confirmed by a single green flash of the lamp.",
+    "transformedIdeaTitle": "Máquina de Votación Escolar",
+    "transformedIdeaDescription": "Organiza una elección democrática en clase. El maestro usa el interruptor para 'abrir las urnas'. Mientras estén abiertas, cada estudiante puede venir y tocar el botón una vez; la luz parpadeará en verde para confirmar que su voto ha sido registrado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.wasPressed() THEN Lamp.flash(Green, Once)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulated Light Dimmer Interface",
+    "originalIdeaDescription": "Simulates a dimming function. The switch turns the light on. Each press of the touch button reduces the brightness intensity by 25% until it loops back to full brightness.",
+    "transformedIdeaTitle": "Atenuador de Luz de Cine",
+    "transformedIdeaDescription": "Prepara el ambiente para una película. Enciende la luz principal con el interruptor. Luego, usa el botón táctil para bajar la intensidad de la luz poco a poco (100%, 75%, 50%, 25%) hasta que esté perfecta para comer palomitas.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setBrightness(Level); IF TouchButton.pressed() THEN Level = Level - 25"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "XOR Logic / 2-Way Staircase Switch",
+    "originalIdeaDescription": "Implements Exclusive OR logic. Used to simulate a staircase light where flipping the switch OR pressing the button toggles the light state, allowing control from two different locations.",
+    "transformedIdeaTitle": "El Interruptor Mágico de Escalera",
+    "transformedIdeaDescription": "Imagina una escalera muy larga. Quieres poder encender la luz abajo (Interruptor) y apagarla cuando llegues arriba (Botón Táctil), o viceversa. Programa este sistema inteligente donde si cambias cualquiera de los dos, la luz cambia de estado.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() != TouchButton.stateLast() THEN Lamp.toggle() (Simplified XOR logic)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Battery Tester Simulator",
+    "originalIdeaDescription": "Simulates a battery testing device. The switch acts as the 'insert battery' action. The touch button acts as the 'test' button. If the battery is inserted (Switch On) and test is pressed, Lamp glows Green.",
+    "transformedIdeaTitle": "Probador de Baterías Espaciales",
+    "transformedIdeaDescription": "Antes de lanzar el cohete, debes probar las baterías. El interruptor simula insertar la batería en la ranura. El botón táctil inicia el test. Si la batería está puesta y presionas el test, ¡la luz verde confirma que está cargada!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF TouchButton.isPressed() THEN Lamp.setColor(Green)) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simple Notification Reminder",
+    "originalIdeaDescription": "A system to set a reminder. The switch acts as the 'Set Reminder' toggle. If set to ON, the lamp will blink blue every few seconds. The touch button acknowledges and stops the blinking temporarily.",
+    "transformedIdeaTitle": "Recordatorio de Tareas Pendientes",
+    "transformedIdeaDescription": "¿Olvidas hacer la tarea? Activa el interruptor 'Modo Recordatorio'. La luz parpadeará en azul cada pocos segundos para molestarte hasta que la hagas. Si necesitas un descanso, toca el botón para pausar el parpadeo un momento.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.blink(Blue); IF TouchButton.pressed() THEN Lamp.pauseBlink()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Bike Turn Signal System",
+    "originalIdeaDescription": "A bicycle safety system simulation. The switch powers the main headlight (Steady White). The touch button activates the turn signal (Blinking Orange) while held.",
+    "transformedIdeaTitle": "Intermitente para Bici Inteligente",
+    "transformedIdeaDescription": "Mejora la seguridad de tu bicicleta. El interruptor enciende tu faro delantero (luz blanca fija) para ver el camino. Cuando vayas a doblar una esquina, mantén presionado el botón táctil para activar el intermitente naranja parpadeante.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(White); IF TouchButton.isHeld() THEN Lamp.blink(Orange)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Countdown Timer Defusal",
+    "originalIdeaDescription": "A 'bomb defusal' game. The switch starts a countdown where the Lamp changes from Green to Red over time. The user must press the Touch Button at the exact right moment (e.g., when Yellow) to 'defuse' and win.",
+    "transformedIdeaTitle": "Desactiva la Bomba de Pintura",
+    "transformedIdeaDescription": "¡Tic-tac! Al encender el interruptor, la luz empieza a cambiar de Verde a Rojo. Tu misión es detener el temporizador tocando el botón exactamente cuando la luz esté AMARILLA. ¡Si tardas mucho, la bomba de pintura virtual explotará (Luz Roja)!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN RunTimer(); IF Lamp.is(Yellow) AND TouchButton.pressed() THEN Win() ELSE Fail()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Child Sleep Training Clock",
+    "originalIdeaDescription": "A device to help children know when to wake up. The switch sets 'Sleep Mode' (Lamp turns Red). The parent can press the touch button to trigger 'Wake Up Mode' (Lamp turns Green) when it's time to get up.",
+    "transformedIdeaTitle": "Entrenador de Sueño para Niños",
+    "transformedIdeaDescription": "Ayuda a tu hermano pequeño a saber cuándo levantarse. Activa el modo noche con el interruptor (Luz Roja = 'Quedarse en cama'). Por la mañana, cuando sea hora de despertar, toca el botón secreto para cambiar la luz a Verde = '¡A jugar!'.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Red); IF TouchButton.wasPressed() THEN Lamp.setColor(Green)"
+  }
+]

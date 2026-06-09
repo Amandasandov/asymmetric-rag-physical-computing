@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Batería Activado por Aplausos",
+    "originalIdeaDescription": "Un sistema interactivo donde el sonido ambiental fuerte, como un aplauso, dispara un sonido de bombo de la batería. El botón táctil se utiliza para cambiar el tipo de instrumento de percusión (por ejemplo, de bombo a caja) o para apagar temporalmente el sistema para evitar disparos accidentales.",
+    "transformedIdeaTitle": "El Percusionista Fantasma",
+    "transformedIdeaDescription": "Imagina que tienes un amigo fantasma al que le encanta tocar la batería, pero solo puede tocar cuando tú aplaudes. Crearás un programa donde tus aplausos fuertes hagan que el fantasma toque el tambor. Usarás un botón mágico para decirle al fantasma que cambie de instrumento. ¡Crea el dúo musical más sobrenatural!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN MusicalDrum.play('Kick'); IF TouchButton.isPressed() THEN switchInstrument()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Bibliotecas",
+    "originalIdeaDescription": "Un dispositivo diseñado para mantener el silencio en una sala de estudio. Si el nivel de ruido supera un umbral establecido, la batería reproduce un sonido de platillo agudo como advertencia. El botón táctil permite al bibliotecario reiniciar el sistema o ajustar la sensibilidad del sensor.",
+    "transformedIdeaTitle": "El Guardián del Templo Silencioso",
+    "transformedIdeaDescription": "Eres el guardián de un templo antiguo donde el ruido despierta a un dragón dormido. Debes programar un sistema de alerta. Si los exploradores (tus amigos) hablan demasiado fuerte, sonará un gong (batería) de advertencia. Usa el botón secreto para calmar al dragón y reiniciar la vigilancia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Threshold THEN MusicalDrum.play('Cymbal'); IF TouchButton.isPressed() THEN resetSystem()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Ritmos con Capas de Ruido",
+    "originalIdeaDescription": "Una caja de ritmos donde el usuario presiona el botón táctil para establecer un patrón de ritmo básico (bom, bom, cha). El sensor de ruido añade complejidad: si hay mucho ruido ambiental, el sistema agrega redobles o percusión extra automáticamente para destacar sobre el fondo.",
+    "transformedIdeaTitle": "DJ de la Fiesta Ruidosa",
+    "transformedIdeaDescription": "¡La fiesta se está animando! Eres el DJ y tu misión es que la música nunca se pierda. Programarás un ritmo base con un botón, pero si la gente grita y hace ruido de emoción, tu sistema debe detectar ese volumen y automáticamente agregar platillos y redobles locos para mantener la energía al máximo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP beat; IF NoiseLevel > 70 THEN MusicalDrum.play('Fill_In') ELSE MusicalDrum.play('Base_Beat'); IF TouchButton.isPressed() THEN changeTempo()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Sonora 'Semáforo Auditivo'",
+    "originalIdeaDescription": "El sistema reproduce un ritmo de batería constante. De repente se detiene. El usuario debe quedarse completamente en silencio (nivel de ruido bajo). Si hacen ruido, pierden y suena un error. El botón táctil se usa para iniciar una nueva ronda del juego.",
+    "transformedIdeaTitle": "Estatuas Musicales Ninja",
+    "transformedIdeaDescription": "Entrena tus habilidades ninja. La música de tambores sonará para que bailes. Cuando la música pare, debes congelarte y no hacer ni un solo ruido, ni siquiera respirar fuerte. Si el sensor te escucha, sonará un tambor de derrota. Usa el botón para comenzar tu entrenamiento.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "MusicalDrum.play('Beat'); WAIT random; MusicalDrum.stop(); IF NoiseLevel > 10 THEN MusicalDrum.play('Fail_Sound'); IF TouchButton.isPressed() THEN restartGame()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Efectos de Sonido para Cuentacuentos",
+    "originalIdeaDescription": "Un dispositivo para acompañar narraciones. El botón táctil reproduce sonidos de pasos (golpes secos de batería). Si el narrador eleva la voz (detectado por el sensor de ruido) para un momento dramático, el sistema reproduce automáticamente un trueno o un golpe fuerte de batería.",
+    "transformedIdeaTitle": "El Narrador de Aventuras Épicas",
+    "transformedIdeaDescription": "Conviértete en un maestro de los efectos especiales. Mientras cuentas una historia de miedo, usa el botón para simular los pasos del monstruo. Pero aquí viene la magia: programa el sistema para que, cuando grites \"¡BOOM!\" en la historia, la batería suene con un estruendo automático para asustar a tu audiencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Snare_Tap'); IF NoiseLevel > 80 THEN MusicalDrum.play('Kick_Heavy')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos por Vibración",
+    "originalIdeaDescription": "Un sistema de seguridad simulado. Se coloca el dispositivo en una mesa o puerta. Si alguien golpea la superficie (generando un pico de ruido/vibración), la batería suena como una sirena rítmica. El botón táctil sirve como panel de código para desactivar la alarma.",
+    "transformedIdeaTitle": "La Trampa de la Bóveda Secreta",
+    "transformedIdeaDescription": "Protege tus tesoros (o tus galletas). Diseña una alarma que detecte si alguien intenta forzar la puerta o golpear la mesa donde guardas el botín. Al detectar el golpe, sonará una sirena de batería imparable. Solo tú, pulsando el botón secreto, podrás desactivarla antes de que lleguen los guardias.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > ImpactThreshold AND AlarmArmed == True THEN MusicalDrum.loop('Alarm_Pattern'); IF TouchButton.isPressed() THEN AlarmArmed = False"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "Una herramienta para juzgar concursos. Mide el nivel de ruido constante de los aplausos. Cuanto más alto es el ruido, más rápido toca la batería un redoble. El botón táctil finaliza la medición y da un golpe final (platillo) para cerrar la votación.",
+    "transformedIdeaTitle": "El Jurado del Talent Show",
+    "transformedIdeaDescription": "¡Organiza un concurso de talentos! Necesitas saber quién ganó por los aplausos del público. Programa el 'Aplausómetro': cuanto más fuerte aplaudan tus amigos, más rápido sonará el redoble de tambores. Cuando presiones el botón, el redoble terminará con un gran platillazo para anunciar al ganador.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "DrumSpeed = map(NoiseLevel, 0, 100, slow, fast); MusicalDrum.play('Roll', DrumSpeed); IF TouchButton.isPressed() THEN MusicalDrum.play('Cymbal_Crash')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Eco de Percusión en Caverna",
+    "originalIdeaDescription": "Simulador de eco. El usuario hace un sonido corto (grito o palmada). El sistema captura el nivel de ruido y, tras un pequeño retraso, responde con un golpe de batería cuya intensidad es proporcional al ruido original. El botón cambia el tipo de 'caverna' (instrumento).",
+    "transformedIdeaTitle": "Explorando la Cueva del Eco",
+    "transformedIdeaDescription": "Estás en una cueva mágica que responde con música. Si gritas fuerte, la cueva te devuelve un golpe de tambor fuerte. Si susurras, te devuelve un golpecito suave. Programa este eco mágico y usa el botón para cambiar la acústica de la cueva de 'Tambores de Piedra' a 'Platillos de Cristal'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "recordedNoise = NoiseLevel; WAIT(1000ms); MusicalDrum.play('Tom', volume=recordedNoise); IF TouchButton.isPressed() THEN changeInstrument()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Un dispositivo que simula un latido de corazón con la batería. El ritmo es constante, pero si el sensor de ruido detecta 'estrés' (sonido ambiental alto), el ritmo del bombo se acelera. El botón táctil actúa como 'medicina' para calmar y ralentizar el ritmo.",
+    "transformedIdeaTitle": "El Corazón del Robot Asustadizo",
+    "transformedIdeaDescription": "Has construido un robot con sentimientos. Su corazón (un bombo) late tranquilo, pero si hay mucho ruido a su alrededor, se pone nervioso y su corazón se acelera. Tu misión es programar su reacción al miedo y usar el botón táctil para acariciarlo y hacer que su ritmo cardíaco vuelva a la normalidad.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN BeatDelay = 200 ELSE BeatDelay = 800; MusicalDrum.play('Heartbeat'); WAIT(BeatDelay); IF TouchButton.isPressed() THEN BeatDelay = 800"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo 'El Gato y el Ratón'",
+    "originalIdeaDescription": "El jugador es un ratón que debe presionar el botón táctil repetidamente para 'comer queso' (sumar puntos). Sin embargo, si hacen ruido mientras comen (detectado por el sensor), el 'gato' se despierta (sonido fuerte de batería) y el juego termina.",
+    "transformedIdeaTitle": "Misión: Robar el Queso sin Despertar al Gato",
+    "transformedIdeaDescription": "Eres un ratoncito hambriento. Tienes que presionar el botón muchas veces para comer queso. ¡Pero cuidado! Hay un gato durmiendo. Si haces el más mínimo ruido mientras comes, el gato saltará (sonido de batería) y perderás. ¿Cuántos quesitos puedes comer en total silencio?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Score++; IF NoiseLevel > SilenceThreshold THEN MusicalDrum.play('Cat_Attack') AND GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Acústico",
+    "originalIdeaDescription": "El usuario emite sonidos cortos o largos con la voz. El sistema detecta la duración del ruido y lo traduce a golpes de batería (corto=caja, largo=bombo) para retransmitir el mensaje. El botón táctil borra el mensaje o reinicia la escucha.",
+    "transformedIdeaTitle": "El Telégrafo de la Selva",
+    "transformedIdeaDescription": "Estás perdido en la selva y necesitas enviar mensajes a la tribu vecina usando tambores. Crearás un traductor: si haces un sonido corto con tu boca, sonará una caja; si haces un sonido largo, sonará un bombo profundo. Usa el botón para borrar el mensaje si te equivocas. ¡Aprende a hablar en 'tambor'!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < Short THEN MusicalDrum.play('Snare') ELSE MusicalDrum.play('Kick'); IF TouchButton.isPressed() THEN clearBuffer()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Genera un ambiente sonoro. El usuario presiona el botón para alternar entre lluvia suave y fuerte (diferentes sonidos de batería rápidos). Si el sensor de ruido detecta un aplauso fuerte (simulando un cambio de presión), dispara un 'trueno' con el bombo y platillos.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima. Usa el botón para hacer que empiece a llover (sonidos rápidos de tambor). Cuando quieras asustar a todos con un trueno, da un aplauso fuerte y el sistema responderá con un estruendo de bombo y platillos. ¡Crea la tormenta perfecta!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN toggleRainSound(); IF NoiseLevel > 85 THEN MusicalDrum.play('Thunder_Crash')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Inteligente Adaptativo",
+    "originalIdeaDescription": "Un metrónomo que marca el tiempo con la batería. El botón táctil se usa para marcar el tempo inicial (tap tempo). El sensor de ruido monitorea al músico; si el músico toca muy fuerte, el metrónomo sube el volumen de su 'click' (batería) para ser escuchado.",
+    "transformedIdeaTitle": "El Director de Orquesta Robot",
+    "transformedIdeaDescription": "Ayuda a tu banda a mantener el ritmo. Programarás un metrónomo que marca el paso con un tambor. Tú le dices la velocidad tocando el botón. Lo más inteligente es que si la banda empieza a tocar muy fuerte, el robot tocará su tambor más fuerte para que nadie pierda el ritmo. ¡Es un director que sabe escuchar!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = calculateTapTempo(TouchButton); MusicalDrum.play('Click', volume=map(NoiseLevel)); loop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música 'Despierta al Bebé'",
+    "originalIdeaDescription": "El sistema reproduce una melodía de percusión suave (nana). Si el sensor de ruido detecta un sonido fuerte (el 'bebé' llorando o ruido externo), la música se detiene bruscamente con un sonido de error. El botón se usa para reiniciar la nana e intentar dormir al bebé de nuevo.",
+    "transformedIdeaTitle": "Operación: Nana Silenciosa",
+    "transformedIdeaDescription": "El bebé robot necesita dormir. Debes programar una nana suave con campanitas y tambores ligeros. Pero ten mucho cuidado: si alguien hace ruido en la habitación, la nana se rompe y el bebé se despierta. Usa el botón para intentar dormirlo otra vez. ¿Podrás mantener el silencio absoluto?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE NoiseLevel < Threshold DO MusicalDrum.play('Lullaby'); MusicalDrum.stop(); IF TouchButton.isPressed() THEN restartLullaby()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Contraseñas Rítmicas",
+    "originalIdeaDescription": "Seguridad por sonido. El usuario debe golpear la mesa con un patrón de intensidad específico (fuerte, suave, fuerte). El sensor de ruido lee los picos. Si coincide, la batería toca una fanfarria de éxito. El botón pone el sistema en modo 'escucha'.",
+    "transformedIdeaTitle": "La Puerta Mágica de Golpes",
+    "transformedIdeaDescription": "La entrada a tu base secreta no usa llaves, usa ritmo. Diseña un sistema que escuche cuando tocas la puerta. Debes programarlo para reconocer un código secreto: '¡PUM! ... pam ... ¡PUM!'. Pulsa el botón para escuchar y, si el código es correcto, sonará una fanfarria de bienvenida.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN recordPattern(NoiseLevel); IF recordedPattern == secretCode THEN MusicalDrum.play('Victory')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería de Aire Invisible",
+    "originalIdeaDescription": "Un instrumento virtual. El usuario sostiene el dispositivo y hace el gesto de golpear en el aire. El sensor de ruido detecta el 'woosh' del movimiento rápido del aire cerca del micrófono y dispara el sonido. El botón cambia entre Hi-Hat y Snare.",
+    "transformedIdeaTitle": "Baterista de Aire",
+    "transformedIdeaDescription": "¿Alguna vez has tocado la batería en el aire? ¡Ahora sonará de verdad! Programa el sensor para que detecte el sonido del viento cuando mueves la mano súper rápido cerca del micrófono. Cada vez que hagas 'woosh', sonará el tambor. Usa el botón para cambiar de platillos a tambores.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel (WindNoise) > Threshold THEN MusicalDrum.play(SelectedInstrument); IF TouchButton.isPressed() THEN toggleInstrument()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Gritos",
+    "originalIdeaDescription": "Un juego de resistencia pulmonar. Al presionar el botón, comienza un redoble de batería. El usuario debe gritar o mantener una nota constante. Mientras el sensor detecte ruido, el redoble continúa. Cuando el usuario se queda sin aire (silencio), el redoble termina con un plato final.",
+    "transformedIdeaTitle": "El Desafío del Grito Infinito",
+    "transformedIdeaDescription": "¿Cuánto tiempo puedes mantener una nota cantando? Presiona el botón y empieza a cantar '¡AAAAH!'. Mientras el sensor te escuche, la batería hará un redoble emocionante. En el momento en que te quedes sin aire, la batería parará. ¡Compite con tus amigos para ver quién logra el redoble más largo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN StartState; WHILE NoiseLevel > Threshold DO MusicalDrum.play('Roll'); MusicalDrum.play('End_Crash')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Beatbox",
+    "originalIdeaDescription": "Herramienta para beatboxers. El usuario hace los sonidos con la boca. El sensor de ruido detecta los picos de volumen. El sistema añade automáticamente un 'hi-hat' en los silencios entre golpes fuertes para rellenar el ritmo. El botón activa/desactiva el acompañamiento.",
+    "transformedIdeaTitle": "Tu Compañero de Beatbox",
+    "transformedIdeaDescription": "Te encanta hacer ritmos con la boca, pero te falta algo. Crea un programa que te acompañe. Tú haces el bombo y la caja con tu voz, y el sistema detectará cuando haces silencio para rellenar esos huecos con platillos (hi-hats) automáticos. ¡El botón activa a tu compañero robótico!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > BeatThreshold THEN wait() ELSE MusicalDrum.play('HiHat'); IF TouchButton.isPressed() THEN toggleSystem()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Fuegos Artificiales",
+    "originalIdeaDescription": "El usuario 'enciende la mecha' presionando el botón (sonido de siseo de batería). Luego debe hacer un sonido de explosión con la voz '¡PUM!'. El sensor lo detecta y dispara una secuencia compleja de sonidos de percusión simulando fuegos artificiales.",
+    "transformedIdeaTitle": "Maestro Pirotécnico Sonoro",
+    "transformedIdeaDescription": "Vamos a lanzar fuegos artificiales, pero solo con sonido. Primero, presiona el botón para encender la mecha (sssss...). Espera unos segundos y grita '¡BOOM!'. Si tu grito es lo suficientemente fuerte, el sistema lanzará una serie espectacular de sonidos de batería que parecerán explosiones en el cielo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN MusicalDrum.play('Fuse_Hiss'); IF FuseActive AND NoiseLevel > 90 THEN MusicalDrum.play('Fireworks_Sequence')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería Aleatoria del Caos",
+    "originalIdeaDescription": "Generador de música experimental. El nivel de ruido ambiental controla la aleatoriedad. Si hay silencio, el botón reproduce un ritmo ordenado. Si hay mucho ruido, presionar el botón genera sonidos de batería totalmente aleatorios y caóticos.",
+    "transformedIdeaTitle": "La Batería que se Vuelve Loca",
+    "transformedIdeaDescription": "Esta batería tiene dos personalidades. Cuando la habitación está en silencio, el botón toca un ritmo perfecto y ordenado. Pero si tus amigos empiezan a gritar y hacer ruido, la batería se confunde y al presionar el botón empezará a tocar sonidos locos y desordenados. ¡Experimenta con el orden y el caos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF NoiseLevel < 40 THEN MusicalDrum.play('Clean_Beat') ELSE MusicalDrum.play(Random_Sound) }"
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Decibelios con Reinicio Manual",
+    "originalIdeaDescription": "Un dispositivo que visualiza la intensidad del sonido ambiental mediante una barra de carga en la matriz LED. Cuanto más fuerte es el ruido, más filas se iluminan. El botón táctil sirve para congelar la medición actual o reiniciar el gráfico a cero.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca",
+    "transformedIdeaDescription": "Programa un asistente para la bibliotecaria. La matriz LED debe mostrar una cara feliz si hay silencio. Si el sensor de ruido detecta gritos, la cara debe cambiar a enfadada. Usa el botón táctil para 'perdonar' a los estudiantes y volver a la cara feliz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 50 THEN LED.show('Angry') ELSE LED.show('Happy'); IF Button.isPressed() THEN LED.show('Happy')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual que Duerme y Despierta",
+    "originalIdeaDescription": "Una mascota digital representada en la matriz LED. Si el ambiente está en silencio, la mascota muestra ojos cerrados (durmiendo). Si hay un ruido fuerte, se despierta (ojos abiertos). El botón se usa para acariciarla y calmarla para que duerma de nuevo.",
+    "transformedIdeaTitle": "El Huevo de Dragón Sensible",
+    "transformedIdeaDescription": "Estás cuidando un huevo de dragón. Si haces demasiado ruido, el huevo se romperá (muestra una grieta en la LED). Si tocas el botón suavemente, el huevo se cura. ¡Mantén el silencio para que nazca sano!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 70 THEN LED.show('Crack'); IF Button.isPressed() THEN LED.show('Egg')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Vela Digital de Viento",
+    "originalIdeaDescription": "La matriz LED muestra una animación de una llama. El usuario debe soplar fuerte (detectado por el sensor de ruido) para 'apagar' la vela. El botón táctil actúa como un encendedor para volver a prender la llama.",
+    "transformedIdeaTitle": "Apaga la Vela de Cumpleaños",
+    "transformedIdeaDescription": "Crea una vela digital infinita. Dibuja una llama en la matriz. Programa el sensor para que, al detectar un soplido fuerte (ruido alto), la llama desaparezca. Usa el botón para volver a encenderla y pedir otro deseo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.show('Fire'); IF Noise > 85 THEN LED.clear(); IF Button.isPressed() THEN LED.show('Fire')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Intrusos Sonora",
+    "originalIdeaDescription": "Un sistema de seguridad simple. Si el nivel de ruido supera un umbral (alguien entra haciendo ruido), la matriz LED parpadea con una señal de advertencia. El botón táctil es el código de seguridad para desactivar la alarma.",
+    "transformedIdeaTitle": "La Trampa para Espías",
+    "transformedIdeaDescription": "Diseña una trampa para proteger tu habitación. Si alguien entra hablando (ruido), la matriz debe mostrar una gran 'X' parpadeante. Solo tú sabes que tocando el botón secreto la alarma se apaga y vuelve al modo vigilancia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 40 THEN LED.flash('X'); IF Button.isPressed() THEN LED.stopFlash()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo Musical",
+    "originalIdeaDescription": "Un dispositivo que crea patrones aleatorios en la matriz LED sincronizados con el ritmo de la música ambiental. El botón táctil permite al usuario cambiar entre diferentes estilos de patrones visuales.",
+    "transformedIdeaTitle": "DJ de Luces Robot",
+    "transformedIdeaDescription": "Conviértete en un técnico de luces. Programa la matriz para que se llene de puntos aleatorios cada vez que suene un golpe de batería (ruido fuerte). Usa el botón para cambiar el diseño de los puntos a cuadrados o líneas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise > Threshold THEN LED.showPattern(Mode); IF Button.isPressed() THEN Mode = Mode + 1"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción por Grito",
+    "originalIdeaDescription": "La matriz muestra una cuenta atrás. Cuando llega a cero y muestra 'YA', el usuario debe gritar. El sistema mide el tiempo de reacción. El botón táctil inicia la siguiente ronda del juego.",
+    "transformedIdeaTitle": "Desafío del Grito Espacial",
+    "transformedIdeaDescription": "La nave está a punto de despegar. Cuando la matriz muestre la flecha hacia arriba, ¡grita 'DESPEGUE'! para activar los motores. Si gritas antes de tiempo o no presionas el botón de inicio, la misión falla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isPressed() THEN StartTimer(); IF Timer == 0 AND Noise > 60 THEN LED.show('Rocket')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz por Aplausos",
+    "originalIdeaDescription": "Un sistema domótico simulado. Un aplauso fuerte enciende todos los LEDs de la matriz (luz encendida). Dos aplausos los apagan. El botón táctil sirve como interruptor manual tradicional.",
+    "transformedIdeaTitle": "Casa Inteligente del Futuro",
+    "transformedIdeaDescription": "Programa una lámpara inteligente. Si aplaudes fuerte, la matriz debe iluminarse completamente (Luz ON). Si tocas el botón, debe apagarse (Luz OFF). ¡Intenta calibrarlo para que no se encienda al hablar!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > ClapThreshold THEN LED.fill(White); IF Button.isPressed() THEN LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "El usuario debe moverse o realizar una acción física mientras sostiene el dispositivo sin hacer ruido. La matriz muestra un ojo observando. Si el ruido sube, el ojo se pone rojo. El botón finaliza la misión.",
+    "transformedIdeaTitle": "Entrenamiento Ninja Silencioso",
+    "transformedIdeaDescription": "El Sensei (Matriz LED) te observa. Debes mantener el sensor de ruido por debajo del nivel 10 mientras caminas. Si haces ruido, el Sensei muestra una cara triste. Presiona el botón al llegar a la meta para ganar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise < 10 THEN LED.show('Ninja'); ELSE LED.show('Alert'); IF Button.isPressed() AND Noise < 10 THEN LED.show('Win')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Voz a Emojis",
+    "originalIdeaDescription": "El dispositivo 'escucha' el tono de voz. Si es alto y errático, muestra emojis de confusión o locura. Si es suave, muestra calma. El botón táctil cambia el set de emojis disponibles.",
+    "transformedIdeaTitle": "El Robot de las Emociones",
+    "transformedIdeaDescription": "Crea un robot que reaccione a tu voz. Si le gritas, se asusta (muestra cara de miedo). Si le susurras, se pone feliz. Usa el botón para hacerle cosquillas (muestra risa).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 80 THEN LED.show('Scared') ELSE IF Noise > 10 THEN LED.show('Happy'); IF Button.isPressed() THEN LED.show('Laugh')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Saltos por Impacto",
+    "originalIdeaDescription": "Al saltar con el dispositivo, el sensor de ruido detecta el impacto de los pies contra el suelo. La matriz LED incrementa un número. El botón táctil reinicia el contador de ejercicios.",
+    "transformedIdeaTitle": "Competición de Saltos Gigantes",
+    "transformedIdeaDescription": "¡Vamos a saltar! Cada vez que tus pies golpeen el suelo y hagan un sonido fuerte, suma 1 punto en la pantalla LED. ¿Puedes llegar a 10 saltos? Usa el botón para poner el marcador a cero.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > ImpactLevel THEN Score = Score + 1; LED.showNumber(Score); IF Button.isPressed() THEN Score = 0"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego del Pájaro Controlado por Voz",
+    "originalIdeaDescription": "Un juego estilo 'Flappy Bird' simplificado. El personaje en la matriz LED sube si el usuario hace ruido constante (soplido o voz) y cae por gravedad si hay silencio. El botón inicia el juego.",
+    "transformedIdeaTitle": "Helicóptero de Voz",
+    "transformedIdeaDescription": "Pilota un helicóptero en la matriz LED. Haz 'Ahhh' constante para mantener el helicóptero en el aire. Si te quedas callado, caerá al suelo. Presiona el botón para arrancar el motor.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.isPressed() THEN GameOn=True; WHILE GameOn: IF Noise > 30 THEN Y=Y-1 ELSE Y=Y+1; LED.plot(X,Y)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Clave Rítmica",
+    "originalIdeaDescription": "Para desbloquear la visualización en la matriz (mostrar un tesoro), el usuario debe replicar un patrón de ruidos (dos golpes rápidos, uno lento). El botón bloquea la caja nuevamente.",
+    "transformedIdeaTitle": "La Puerta Mágica Secreta",
+    "transformedIdeaDescription": "Eres un mago. Para abrir la puerta (mostrar un candado abierto), debes decir la palabra mágica fuerte '¡ABRETE!'. Si solo tocas el botón, la puerta permanecerá cerrada (candado cerrado).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.show('Lock'); IF Noise > 90 THEN LED.show('Unlock'); IF Button.isPressed() THEN LED.show('Lock')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Fuerza de Grito (Feria)",
+    "originalIdeaDescription": "Como el juego del martillo de feria, pero con la voz. Al gritar, la columna de LEDs sube. Si llega al tope, parpadea 'WIN'. El botón resetea el juego para el siguiente jugador.",
+    "transformedIdeaTitle": "Superhéroe Sónico",
+    "transformedIdeaDescription": "Carga tu poder de superhéroe. Cuanto más fuerte grites, más se llenará la barra de energía en la matriz LED. Si la llenas a tope, ganas. Pulsa el botón para descargar la energía.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Level = Map(Noise, 0, 100, 0, 7); LED.barGraph(Level); IF Button.isPressed() THEN LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Juguete)",
+    "originalIdeaDescription": "La matriz muestra ruido estático ('nieve'). Si el sensor detecta un sonido repentino en un ambiente silencioso, muestra un icono de fantasma. El botón 'atrapa' al fantasma y lo guarda.",
+    "transformedIdeaTitle": "Cazafantasmas Digital",
+    "transformedIdeaDescription": "Camina de puntillas. La pantalla muestra estática. Si el sensor oye un ruido extraño, ¡aparecerá un fantasma en la pantalla! Rápido, presiona el botón para atraparlo antes de que desaparezca.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.show('Static'); IF Noise > Threshold THEN LED.show('Ghost'); IF Button.isPressed() AND LED.image == 'Ghost' THEN LED.show('Cage')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Controlado por Voz",
+    "originalIdeaDescription": "La matriz muestra un semáforo rojo. Cambia a verde solo cuando detecta el sonido de un coche (ruido constante) o una orden verbal. El botón funciona como botón de cruce peatonal forzando el rojo.",
+    "transformedIdeaTitle": "El Policía de Tráfico",
+    "transformedIdeaDescription": "Controla el tráfico. La luz está en Roja (matriz llena). Grita '¡VERDE!' para que los coches pasen (matriz vacía). Si un peatón toca el botón, el semáforo debe ponerse en Rojo inmediatamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "LED.color('Red'); IF Noise > 60 THEN LED.color('Green'); IF Button.isPressed() THEN LED.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El botón dispara un flash en la matriz (rayo). El usuario debe aplaudir (trueno) cuando lo vea. El sistema calcula la distancia simulada. Si no hay aplauso (ruido), la tormenta está lejos.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Eres Zeus. Cuando toques el botón, crea un relámpago en la pantalla. Luego, sopla fuerte en el micrófono para crear el viento que se lleva las nubes (borra la pantalla).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isPressed() THEN LED.flash('Lightning'); IF Noise > 50 THEN LED.fadeOut()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Visual",
+    "originalIdeaDescription": "Sonidos cortos muestran un punto, sonidos largos una raya en la matriz. El botón táctil sirve para enviar el mensaje (borrar la pantalla y parpadear confirmación).",
+    "transformedIdeaTitle": "Espía de Código Morse",
+    "transformedIdeaDescription": "Envía mensajes secretos. Da un golpe seco en la mesa para un punto, y un golpe arrastrado para una raya. La matriz los dibujará. Presiona el botón para borrar y enviar tu mensaje secreto.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < Short THEN LED.addDot() ELSE LED.addDash(); IF Button.isPressed() THEN SendAndClear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "La Flor Tímida",
+    "originalIdeaDescription": "La matriz muestra una flor abierta. Si hay mucho ruido ambiental, la flor se cierra (se hace pequeña). El botón táctil es 'agua' que ayuda a la flor a abrirse más rápido después del susto.",
+    "transformedIdeaTitle": "Jardín Digital Zen",
+    "transformedIdeaDescription": "Cuida de una flor digital. Si hablas fuerte, se asusta y se encoge a un solo punto. Si hay silencio, florece. Usa el botón para 'regarla' y que sea inmune al ruido por unos segundos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 40 THEN LED.show('SmallFlower') ELSE LED.show('BigFlower'); IF Button.isPressed() THEN Wait(5000)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro Activado por Voz",
+    "originalIdeaDescription": "Un cronómetro que empieza a contar cuando se detecta la palabra 'YA' (pico de ruido) y se detiene cuando se presiona el botón táctil. Muestra el tiempo en la matriz.",
+    "transformedIdeaTitle": "Carrera de Velocidad Mental",
+    "transformedIdeaDescription": "Prepara, listos... ¡YA! Grita para iniciar el cronómetro en la pantalla. Resuelve un problema matemático mentalmente y presiona el botón lo más rápido posible para parar el tiempo. ¿Cuál es tu récord?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > StartThreshold THEN Timer.start(); IF Button.isPressed() THEN Timer.stop() AND LED.show(Time)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Arte Aleatorio por Sonido",
+    "originalIdeaDescription": "Cada vez que se detecta un sonido, se añade un píxel aleatorio a la matriz. Con el tiempo se forma una obra de arte abstracto. El botón guarda la imagen (parpadea) y limpia el lienzo.",
+    "transformedIdeaTitle": "Pintor Abstracto por Voz",
+    "transformedIdeaDescription": "Usa tu voz como pincel. Canta diferentes notas o haz ruidos para llenar la pantalla de puntos de luz. Cuando tu obra maestra esté lista, presiona el botón para 'enmarcarla' (congelarla) antes de borrarla.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 20 THEN LED.plot(RandomX, RandomY); IF Button.isPressed() THEN Wait(2000) AND LED.clear()"
+  }]

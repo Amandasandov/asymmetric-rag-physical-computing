@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Amanecer Gradual",
+    "originalIdeaDescription": "Un sistema que detecta cuando sale el sol o se enciende la luz de la habitación. Al detectar luz, comienza a reproducir sonidos suaves de la naturaleza con el Audio Player y, a medida que la luz se intensifica, agrega ritmos de percusión con el Musical Drum para despertar al usuario con energía.",
+    "transformedIdeaTitle": "El Despertador de la Jungla",
+    "transformedIdeaDescription": "¡Crea un dispositivo para despertar a los exploradores! Programarás el sensor para que detecte la luz de la mañana. Al principio, sonarán pájaros suavemente, pero si la luz se vuelve muy fuerte (el sol está alto), ¡los tambores tribales comenzarán a sonar para iniciar la aventura!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 20 THEN Audio.play('birds'); IF LightIntensity > 80 THEN Drum.play('tribal_beat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Activada por Sombras",
+    "originalIdeaDescription": "Una actividad interactiva donde el sensor de luz actúa como un disparador. Cuando el usuario pasa la mano sobre el sensor (creando una sombra), se corta la luz y se activa un golpe de tambor específico, mientras una pista de acompañamiento suena en el Audio Player.",
+    "transformedIdeaTitle": "Tambores Ninja Invisibles",
+    "transformedIdeaDescription": "Conviértete en un músico ninja. Usarás la oscuridad de tu propia sombra para tocar la batería. Una música de fondo sonará constantemente, pero tú debes agregar los efectos de percusión pasando tu mano rápidamente sobre el sensor sin tocarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('background_music'); IF LightIntensity < 30 THEN Drum.play('snare_hit')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Cuevas Oscuras",
+    "originalIdeaDescription": "Simulación de exploración. Si el sensor detecta oscuridad total, se reproduce un sonido ambiental de cueva y goteo de agua. Si se detecta una luz repentina (linterna), suena un redoble de tambor dramático indicando un descubrimiento.",
+    "transformedIdeaTitle": "Exploradores de la Caverna Prohibida",
+    "transformedIdeaDescription": "Estás diseñando el sistema de sonido para una película de aventuras. Si todo está oscuro, el ambiente debe ser misterioso. Pero si el héroe enciende su linterna (luz intensa), ¡la música debe marcar el momento con un gran redoble de tambor!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 10 THEN Audio.play('cave_ambience') ELSE IF LightIntensity > 90 THEN Drum.play('drama_roll')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador DJ Fotónico",
+    "originalIdeaDescription": "Un sistema de mezcla musical donde la intensidad de la luz controla la velocidad o el tipo de ritmo de la batería, mientras una melodía base se reproduce en el Audio Player. Más luz equivale a un ritmo más rápido.",
+    "transformedIdeaTitle": "DJ Fotónico: La Fiesta de Luz",
+    "transformedIdeaDescription": "¡Tú controlas la fiesta con tu linterna! Una melodía sonará de fondo, pero el ritmo de la batería depende de ti. Si apuntas mucha luz, el ritmo se acelera para que todos bailen; si bajas la luz, el ritmo se relaja.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('melody'); bpm = map(LightIntensity, 0, 100, 60, 160); Drum.setTempo(bpm); Drum.play('beat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Musical",
+    "originalIdeaDescription": "Un dispositivo para proteger objetos en una caja. Si la caja está cerrada (oscuridad), hay silencio. Si se abre (luz), suena una alarma de voz grabada y una percusión caótica para asustar al intruso.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tus monedas de oro. Programa el sensor para que se mantenga en silencio en la oscuridad del cofre. Pero si alguien lo abre y entra la luz, ¡activa una advertencia pirata y un ruido ensordecedor de tambores!",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN Audio.play('pirate_voice') AND Drum.play('chaos_rhythm') ELSE stopAll()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Utiliza flashes de luz (linterna parpadeando) para simular rayos. El sensor detecta los picos de luz y dispara un sonido de trueno (Audio) acompañado de un golpe grave de tambor (Drum) para simular la vibración del suelo.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Vamos a crear efectos especiales. Usa una linterna como si fuera un relámpago. Tu programa debe esperar el flash de luz y, justo después, hacer sonar un trueno retumbante usando el audio y los tambores graves.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity_Change > RAPID_INCREASE THEN Audio.play('thunder') AND Drum.play('bass_drum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Túnel del Tren Fantasma",
+    "originalIdeaDescription": "Para usar con un tren de juguete. Cuando el tren entra en un túnel (oscuridad), el Audio Player reproduce sonidos de chirridos y fantasmas. Al salir a la luz, suena un ritmo de batería alegre.",
+    "transformedIdeaTitle": "El Tren del Misterio",
+    "transformedIdeaDescription": "Automatiza tu maqueta de trenes. Cuando el tren entre en el túnel oscuro, haz que suenen ruidos espeluznantes. En cuanto salga a la luz del día, ¡celebra la llegada con una marcha de tambores feliz!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 15 THEN Audio.play('ghost_sounds') ELSE Drum.play('happy_march')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin de Luz",
+    "originalIdeaDescription": "Un instrumento musical experimental donde acercar o alejar una fuente de luz cambia el tono o la pista de audio, y la percusión marca el tiempo. La intensidad de luz selecciona qué instrumento de percusión suena.",
+    "transformedIdeaTitle": "Orquesta de Linternas",
+    "transformedIdeaDescription": "Crea un instrumento que se toca sin tocarlo. Mueve tu linterna cerca y lejos del sensor. Si está cerca, sonarán platillos; si está lejos, sonarán bombos, todo sobre una base musical futurista.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.loop('drone'); IF LightIntensity > 80 THEN Drum.play('cymbal') ELSE IF LightIntensity < 40 THEN Drum.play('kick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Monitor de Planta Musical",
+    "originalIdeaDescription": "Un sistema que simula el estado de ánimo de una planta. Si recibe suficiente luz, reproduce música clásica y ritmos suaves. Si está en la sombra por mucho tiempo, reproduce un sonido triste y tambores lentos.",
+    "transformedIdeaTitle": "La Flor Cantarina",
+    "transformedIdeaDescription": "Las plantas necesitan sol para ser felices. Programa esta 'planta digital' para que cante una canción alegre con ritmo vivo cuando esté en la ventana (luz), pero que toque una marcha fúnebre lenta si la pones en un rincón oscuro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 60 THEN Audio.play('happy_song') AND Drum.tempo(120) ELSE Audio.play('sad_song') AND Drum.tempo(60)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inversa",
+    "originalIdeaDescription": "La música y la batería suenan mientras haya luz constante. Si alguien pasa frente al sensor y bloquea la luz (movimiento detectado por sombra), la música se detiene abruptamente. El objetivo es acercarse sin cortar la música.",
+    "transformedIdeaTitle": "Operación: Sigilo Luminoso",
+    "transformedIdeaDescription": "Eres un agente secreto. La música suena mientras el láser (sensor de luz) esté activo. Debes moverte muy despacio. Si pasas rápido y proyectas una sombra fuerte, el sistema cortará la música y habrás perdido.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > AMBIENT_LEVEL THEN Audio.play('spy_theme') AND Drum.active(TRUE) ELSE stopAll()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Código Morse Rítmico",
+    "originalIdeaDescription": "El usuario utiliza una linterna para enviar pulsos de luz. El sistema traduce pulsos cortos en un golpe de caja (snare) y pulsos largos en un golpe de bombo (kick), permitiendo 'escribir' ritmos con luz sobre una pista de audio.",
+    "transformedIdeaTitle": "Telégrafo de Ritmos",
+    "transformedIdeaDescription": "¡Envía mensajes secretos con música! Usa tu linterna para hacer parpadeos cortos o largos. Tu programa debe convertir los destellos cortos en sonidos agudos de batería y los largos en sonidos graves. ¡Crea un patrón!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightPulse == SHORT THEN Drum.play('snare'); IF LightPulse == LONG THEN Drum.play('kick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Ambiente Espacial Reactivo",
+    "originalIdeaDescription": "Simulador de nave espacial. En condiciones de luz normal, suena un zumbido de motor (Audio). Al apagar la luz (espacio exterior), se activa un modo de 'alerta' con percusión rítmica y mensajes de audio de la tripulación.",
+    "transformedIdeaTitle": "Comandante Estelar",
+    "transformedIdeaDescription": "Pilota tu nave. Cuando las luces de la habitación están encendidas, estás en el hangar y los motores suenan suave. Al apagar la luz, sales al espacio: ¡activa los tambores de batalla y los sonidos de alerta!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 THEN Audio.play('engine_idle') ELSE Audio.play('alert_voice') AND Drum.loop('battle_beat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Semáforo Auditivo para Invidentes",
+    "originalIdeaDescription": "Un prototipo de accesibilidad. Si detecta mucha luz (día/calle despejada), reproduce un sonido de tráfico suave. Si se tapa el sensor (simulando luz roja o obstáculo), cambia a un ritmo de batería rápido y alerta de audio para indicar 'detenerse'.",
+    "transformedIdeaTitle": "Asistente de Cruce Inteligente",
+    "transformedIdeaDescription": "Diseña una ayuda para cruzar la calle. Si el sensor ve luz clara, reproduce un sonido tranquilo indicando que es seguro avanzar. Si la luz se bloquea (como una señal de alto), debe sonar una alarma rítmica rápida para indicar '¡Alto!'",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 70 THEN Audio.play('walk_sound') ELSE Drum.loop('fast_warning_beat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Música Sorpresa",
+    "originalIdeaDescription": "Una variación de 'Jack-in-the-box'. Se gira una manivela (simulada tapando y destapando el sensor rítmicamente). Si se hace al ritmo correcto, el Audio Player libera una canción final y la batería hace un remate.",
+    "transformedIdeaTitle": "El Payaso en la Caja Digital",
+    "transformedIdeaDescription": "Programa un juguete clásico. Tienes que tapar y destapar el sensor siguiendo un ritmo. Si lo haces 5 veces seguidas correctamente, el sistema te premiará con una canción divertida y un gran final de batería.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "COUNT pulses; IF pulses == 5 THEN Audio.play('pop_goes_weasel') AND Drum.play('cymbal_crash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos Visuales",
+    "originalIdeaDescription": "En lugar de medir sonido, mide el parpadeo de luces (flashes de cámaras o estrobos en un concierto). A mayor intensidad y frecuencia de luz, más fuerte suena la pista de audio de 'público ovacionando' y redobles de batería.",
+    "transformedIdeaTitle": "El Escenario de la Superestrella",
+    "transformedIdeaDescription": "Imagina que estás en un concierto. Cuantas más luces parpadeantes (flashes) detecte tu sensor, más fuerte debe sonar la ovación del público y los tambores de celebración. ¡Haz que tus fans se vuelvan locos con la luz!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "volume = map(LightFlickerRate, 0, 10, 20, 100); Audio.setVolume(volume); Drum.play('cheer_roll')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Guía de Meditación Zen",
+    "originalIdeaDescription": "Sistema de relajación. Si la luz es tenue (atardecer), reproduce sonidos de agua y un tambor muy lento y profundo (tipo latido de corazón). Si la luz es brillante, cambia a sonidos de pájaros y ritmos más activos.",
+    "transformedIdeaTitle": "El Templo de la Calma",
+    "transformedIdeaDescription": "Crea un ambiente para relajarse. Si bajas las luces de la habitación, tu dispositivo debe reproducir sonidos de agua y un tambor lento como un corazón tranquilo. Si enciendes la luz, despierta al usuario con sonidos de naturaleza.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN Audio.play('water') AND Drum.bpm(60) ELSE Audio.play('nature') AND Drum.bpm(90)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Usa la intensidad de la luz para buscar 'anomalías'. El usuario camina por una habitación oscura. Si el sensor detecta un leve cambio en la luz (reflejo), el Audio Player susurra y el tambor hace un golpe seco.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Construye una herramienta para buscar fantasmas en la oscuridad. El dispositivo debe estar en silencio total, pero si detecta el más mínimo cambio de luz (un reflejo fantasmal), ¡debe soltar un susurro y un golpe de miedo!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "baseLight = read(); IF abs(read() - baseLight) > 5 THEN Audio.play('whisper') AND Drum.play('scare_hit')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería de Cocina",
+    "originalIdeaDescription": "Un sistema para instalar dentro de la nevera o alacena. Al abrir la puerta (luz encendida), suena una música 'angelical' y un redoble de tambores. Al cerrar, silencio.",
+    "transformedIdeaTitle": "La Nevera Mágica",
+    "transformedIdeaDescription": "¿Qué pasa cuando cierras la nevera? ¡Vamos a darle vida! Programa el sensor para que, cuando detecte la luz de la bombilla de la nevera, toque una fanfarria triunfal con tambores, celebrando que vas a comer algo rico.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 10 (LightOn) THEN Audio.play('heavenly_choir') AND Drum.play('roll') ELSE Stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sintonizador de Radio Solar",
+    "originalIdeaDescription": "Mover el dispositivo hacia diferentes intensidades de luz cambia la 'estación' (pista de audio) y el estilo de la batería. Sombra = Jazz, Luz media = Rock, Luz directa = Electrónica.",
+    "transformedIdeaTitle": "Radio Solar Interactiva",
+    "transformedIdeaDescription": "Construye una radio que funciona con el sol. Si estás en la sombra, toca música Jazz suave. Si sales al sol, ¡cambia automáticamente a música Electrónica rápida! Usa la luz para sintonizar tu estilo favorito.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light < 30 THEN Play('Jazz'); ELSE IF Light < 70 THEN Play('Rock'); ELSE Play('Electronic')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Contador de Pasos (Luz)",
+    "originalIdeaDescription": "Dispositivo para colocar en el zapato. Cada vez que se levanta el pie (más luz) y se baja (menos luz/sombra), cuenta un paso. Cada 10 pasos, el Audio Player anima al usuario y la batería marca el ritmo de la marcha.",
+    "transformedIdeaTitle": "Entrenador Personal de Zapatilla",
+    "transformedIdeaDescription": "¡Ponte en forma! Coloca el sensor en tu pie. Detectará la luz cambiante al caminar. Programa el sistema para que marque el ritmo de tus pasos con la batería y, cada 10 pasos, te grite '¡Vamos!' para motivarte.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightChangeDetected THEN StepCount++; Drum.play('step_beat'); IF StepCount % 10 == 0 THEN Audio.play('cheer')"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batería Aérea de Bolsillo",
+    "originalIdeaDescription": "Un dispositivo que permite al usuario tocar una batería invisible simplemente moviendo el dispositivo en el aire. El interruptor sirve para activar o desactivar el modo de instrumento para evitar sonidos accidentales cuando no se está tocando.",
+    "transformedIdeaTitle": "¡Rockstar Invisible!",
+    "transformedIdeaDescription": "Imagina que eres el baterista de una banda de rock famosa, pero olvidaste tu instrumento. Programarás tu dispositivo para que, al activar el 'Modo Concierto' con un interruptor, cada vez que agites la mano fuerte, suene un platillo o un tambor. ¡Crea tu propio solo de batería en el aire!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaken() THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad para Mochilas",
+    "originalIdeaDescription": "Un sistema de seguridad portátil que se coloca dentro de una mochila. Cuando el interruptor está activado (armado), cualquier movimiento brusco detectado por el sensor activará una secuencia rápida de sonidos de batería como alarma.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Tienes un tesoro secreto (tu mochila) y necesitas protegerlo de los espías. Crea un sistema de alarma: cuando actives el 'Escudo' (interruptor), si alguien intenta mover tu tesoro, sonará una alarma ruidosa de tambores para alertarte. Si desactivas el escudo, podrás moverla en silencio.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.acceleration > 5 THEN Drum.playLoop('AlarmBeat') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Efectos de Pasos (Foley)",
+    "originalIdeaDescription": "Herramienta para crear efectos de sonido para películas o teatro. Al caminar con el dispositivo, el sensor de movimiento detecta el paso y reproduce un sonido de percusión grave. El interruptor cambia el tipo de superficie (sonido) simulada.",
+    "transformedIdeaTitle": "Cineasta de Sonidos FX",
+    "transformedIdeaDescription": "¡Eres el encargado de los efectos especiales de una película! El actor es un gigante. Programa el dispositivo para que cada vez que agites el aparato (simulando un paso), suene un gran golpe de tambor. Usa el interruptor para cambiar el sonido de 'caminar sobre tierra' a 'caminar sobre metal'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN (IF Switch.isOn() THEN Drum.play('TomLow') ELSE Drum.play('Kick'))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo Cardíaco",
+    "originalIdeaDescription": "Dispositivo para acompañar el ejercicio físico. Al hacer saltos de tijera (Jumping Jacks), el sensor detecta el movimiento vertical y reproduce un ritmo. El interruptor inicia o pausa la sesión de entrenamiento.",
+    "transformedIdeaTitle": "Entrenador Personal Musical",
+    "transformedIdeaDescription": "¡Ponte en forma con ritmo! Vas a crear un entrenador que cuenta tus saltos con música. Activa el entrenamiento con el interruptor y, cada vez que saltes, el dispositivo tocará un ritmo de batería para mantenerte motivado. Si paras de saltar, la música se detiene.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.axisY > Threshold THEN Drum.play('HiHat')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de la Estatua Musical Inversa",
+    "originalIdeaDescription": "Un juego donde el objetivo es mantenerse completamente quieto. Se activa con el interruptor. Si el sensor detecta cualquier micro-movimiento, suena un redoble de batería indicando que el jugador ha perdido.",
+    "transformedIdeaTitle": "Desafío Ninja: Estatua de Piedra",
+    "transformedIdeaDescription": "Los ninjas deben ser totalmente invisibles y silenciosos. Activa el 'Modo Sigilo' con el interruptor y sostén el dispositivo. Si te mueves aunque sea un milímetro, el tambor sonará y habrás sido descubierto. ¿Cuánto tiempo puedes aguantar sin activar la trampa?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isMoving() THEN Drum.play('Crash') ELSE wait()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Percusión",
+    "originalIdeaDescription": "Un juguete interactivo que convierte gestos en hechizos sonoros. Agitar suavemente produce sonidos ligeros, y agitar fuerte produce sonidos graves. El interruptor cambia el 'tipo de magia' (banco de sonidos de batería).",
+    "transformedIdeaTitle": "La Varita del Hechicero Rítmico",
+    "transformedIdeaDescription": "Conviértete en un mago que lanza hechizos de sonido. Programa tu varita para que un movimiento suave lance 'Polvo de Hadas' (platillos suaves) y un movimiento fuerte lance 'Trueno' (bombo fuerte). Usa el interruptor para cambiar a magia oscura con sonidos diferentes.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.shakeForce > 10 THEN Drum.play('Kick') ELSE Drum.play('Cymbal'))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Casero",
+    "originalIdeaDescription": "Simulador de sismógrafo para estructuras de juguete. Se coloca sobre una torre de bloques. Si la torre se tambalea (moción), suena la batería. El interruptor resetea el sistema después de un 'terremoto'.",
+    "transformedIdeaTitle": "Ingeniero Sísmico",
+    "transformedIdeaDescription": "Construye una torre de bloques y coloca el sensor encima. Tu misión es probar si es resistente a terremotos. Activa el sistema y golpea la mesa. Si la torre se mueve demasiado, sonará una alarma de tambores indicando que la estructura ha fallado. ¡Intenta construir una que no active la alarma!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.tilt > 15 THEN Drum.play('Roll')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Maraca Digital Configurable",
+    "originalIdeaDescription": "Un instrumento digital que imita una maraca. El movimiento continuo genera ritmo. El interruptor permite alternar entre sonido de maraca tradicional y sonido de pandereta.",
+    "transformedIdeaTitle": "La Maraca del Futuro",
+    "transformedIdeaDescription": "Las maracas normales son aburridas. ¡Programa una Maraca Digital! Cuando la agites, debe sonar al ritmo de tu mano. Agrega una función especial: si presionas el interruptor, el sonido cambia instantáneamente a una pandereta para acompañar diferentes canciones.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Switch.isOn(): IF Motion.isShaken() THEN Drum.play('Maraca') ELSE Drum.play('Tambourine')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta por Vibración",
+    "originalIdeaDescription": "Dispositivo que se cuelga en el pomo de una puerta. Detecta la vibración cuando alguien toca la puerta y reproduce un sonido de batería como timbre. El interruptor activa el modo 'No Molestar' (silencio).",
+    "transformedIdeaTitle": "Detector de Intrusos de Habitación",
+    "transformedIdeaDescription": "¿Quieres saber si alguien entra a tu cuarto? Cuelga el dispositivo en el pomo de la puerta. Programa el sensor para que, al sentir la vibración de la puerta abriéndose, toque un ritmo de bienvenida. Usa el interruptor para apagarlo cuando tú entres para no activar tu propia trampa.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOff() AND Motion.vibration > Level THEN Drum.play('DoorKnockEffect')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente Temporizada",
+    "originalIdeaDescription": "Juego grupal donde se pasa el dispositivo. El movimiento lo mantiene 'seguro', pero si se deja de mover o el tiempo (controlado internamente y reiniciado por interruptor) acaba, suena una explosión de batería.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Rítmica",
+    "transformedIdeaDescription": "Pásale el dispositivo a tus amigos en círculo. Deben agitarlo suavemente mientras lo tienen. Si alguien lo deja quieto por mucho tiempo o presiona el interruptor por error, ¡BOOM! Suena un gran tamborazo y esa persona queda eliminada. ¡No dejes que el ritmo pare!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() OR Motion.isStill() > 3sec THEN Drum.play('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Nave Espacial",
+    "originalIdeaDescription": "Juguete de simulación. Inclinar el dispositivo hacia arriba (Motion) aumenta la velocidad del motor (ritmo de batería más rápido). El interruptor activa los propulsores principales.",
+    "transformedIdeaTitle": "Piloto de la Galaxia",
+    "transformedIdeaDescription": "¡Despegue inminente! Usa tu dispositivo como la palanca de mando de una nave espacial. Si inclinas hacia atrás, el motor (tambores) sonará lento. Si inclinas hacia adelante, acelerarás el ritmo. ¡Usa el interruptor para activar el Turbo y hacer que la batería suene a máxima velocidad!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Drum.speed(200) ELSE Drum.speed(Motion.tiltY * 2)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Bocina de Bicicleta Inteligente",
+    "originalIdeaDescription": "Accesorio para manillar de bicicleta. Detecta frenadas bruscas (Motion) y emite sonido de advertencia. El interruptor funciona como una bocina manual de percusión.",
+    "transformedIdeaTitle": "Copiloto de Bici Seguro",
+    "transformedIdeaDescription": "Convierte tu bici en un vehículo inteligente. Programa el dispositivo para que, si frenas muy fuerte (el sensor siente el cambio brusco), suene una advertencia de tambores para avisar a quien va detrás. Además, usa el interruptor como una bocina manual para saludar a tus amigos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() THEN Drum.play('Horn') ELSE IF Motion.deceleration > High THEN Drum.play('Warning')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Dispositivo para contar historias. Movimientos suaves crean sonido de lluvia (golpes rápidos y suaves), sacudidas fuertes crean truenos (golpes graves). El interruptor enciende o apaga la tormenta.",
+    "transformedIdeaTitle": "El Señor de las Tormentas",
+    "transformedIdeaDescription": "Eres el dios del clima en una obra de teatro. Tu tarea es crear el ambiente. Si activas el interruptor, comienza la magia: agita suavemente para crear el sonido de la lluvia cayendo, y da un golpe seco al aire para invocar un trueno estruendoso con el bombo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.shake > Hard THEN Drum.play('Thunder') ELSE Drum.play('RainDrop'))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ayudante de Cocina (Mezclador)",
+    "originalIdeaDescription": "Temporizador lúdico para batir ingredientes. El usuario debe batir (Motion) al ritmo de la batería. El interruptor inicia la cuenta regresiva del tiempo de batido.",
+    "transformedIdeaTitle": "Chef de Ritmo Batido",
+    "transformedIdeaDescription": "¡A cocinar! Tienes que batir la mezcla para panqueques, pero es aburrido. Crea un programa que te ponga un ritmo de batería cuando presiones el interruptor. Debes mover tu brazo al ritmo de la música. Si dejas de batir (moverte), la música se detiene y la mezcla se arruina.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaking() THEN Drum.playLoop('CookingBeat')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Gestual",
+    "originalIdeaDescription": "Sistema de comunicación donde sacudidas cortas son puntos y largas (o inclinación) son rayas, traducidas a sonidos de percusión. El interruptor cambia entre modo transmisión y recepción (silencio).",
+    "transformedIdeaTitle": "Mensajero Secreto de Espías",
+    "transformedIdeaDescription": "Envía mensajes codificados a tu compañero espía. En lugar de presionar botones, usarás gestos. Un golpe rápido hacia adelante es un 'punto' (sonido agudo), y un movimiento largo hacia el lado es una 'raya' (sonido grave). Usa el interruptor para 'abrir el canal' de transmisión.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.gesture == 'Tap' THEN Drum.play('Dot') ELSE IF Motion.gesture == 'Swipe' THEN Drum.play('Dash'))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Boxeo de Sombras",
+    "originalIdeaDescription": "Juego de fitness. El usuario lanza puñetazos al aire. El sensor detecta la aceleración rápida y reproduce un sonido de impacto. El interruptor reinicia el contador de golpes.",
+    "transformedIdeaTitle": "Campeón de Boxeo Virtual",
+    "transformedIdeaDescription": "Entrena para el gran combate. Sujeta el dispositivo y lanza puñetazos al aire. Cada vez que lances un golpe rápido y fuerte, el dispositivo hará un sonido de impacto realista. Usa el interruptor para sonar la campana y empezar un nuevo round.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed() THEN Drum.play('Bell'); IF Motion.punchDetected() THEN Drum.play('Impact')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Galope de Caballo",
+    "originalIdeaDescription": "Juguete para imitar montar a caballo. El movimiento vertical rítmico produce sonido de cascos galopando. El interruptor hace que el caballo 'relinche' (sonido especial de percusión/efecto).",
+    "transformedIdeaTitle": "Jinete del Viejo Oeste",
+    "transformedIdeaDescription": "¡Yi-ja! Convierte tu habitación en el lejano oeste. Coloca el sensor en tu cintura. Cuando saltes imitando el galope, sonará como un caballo corriendo. Si necesitas que tu caballo salte un obstáculo, presiona el interruptor para hacer un sonido especial de salto.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() THEN Drum.play('Neigh') ELSE IF Motion.bounce() THEN Drum.play('Gallop')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Sonoro",
+    "originalIdeaDescription": "Herramienta de construcción accesible. Ayuda a nivelar superficies. Si la inclinación no es cero, suena un ritmo rápido. Cuando está perfectamente nivelado (Motion estable y plano), se silencia. El interruptor enciende la herramienta.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a un constructor a poner una repisa derecha sin mirar. Programa el dispositivo para que haga un redoble de tambor molesto si está chueco (inclinado). Cuando logres ponerlo perfectamente horizontal, el tambor debe callarse. Usa el interruptor para encender tu herramienta.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND (Motion.tiltX != 0) THEN Drum.play('WarningBeat') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "Generador de música experimental. Cada vez que se agita el dispositivo, selecciona un sonido de percusión al azar y lo reproduce. El interruptor bloquea el último sonido para repetirlo.",
+    "transformedIdeaTitle": "Compositor de Música Caótica",
+    "transformedIdeaDescription": "Crea música loca. Agita el dispositivo para descubrir nuevos sonidos: ¡pum, crash, bang! Es totalmente sorpresa. Cuando encuentres un sonido que te guste mucho, activa el interruptor para 'congelarlo' y tocar solo ese sonido como un instrumento normal.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOff() THEN Sound = Random(); IF Motion.shake() THEN Drum.play(Sound)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Juguete de exploración. El dispositivo reproduce sonidos de ambiente (bajos). Si se detecta un movimiento extraño o inclinación específica (el 'fantasma'), suena un golpe fuerte. El interruptor enciende el 'radar'.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar",
+    "transformedIdeaDescription": "Es de noche y hay fantasmas en la casa. Enciende tu radar con el interruptor. Camina muy despacio (el sensor detecta tu movimiento). Si el sensor detecta algo raro (una sacudida repentina que no hiciste tú, o finges que no hiciste), ¡sonará un golpe de miedo! ¿Podrás encontrar dónde se esconden?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.spikeDetected() THEN Drum.play('ScaryBoom')"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Básico",
+    "originalIdeaDescription": "Un sistema simple donde al presionar el interruptor se activa una nota o secuencia corta de notas en el teclado musical, simulando un timbre de casa tradicional. El sonido solo se reproduce una vez por pulsación.",
+    "transformedIdeaTitle": "El Timbre de la Nave Espacial",
+    "transformedIdeaDescription": "¡Eres el ingeniero de una nave espacial! Diseña el sistema de entrada para la cabina de mando. Cuando un astronauta quiera entrar y presione el botón (Switch), debe sonar una secuencia futurista de tres notas agudas para alertar al capitán.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Keyboard.playSequence(['C5', 'E5', 'G5'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Código Morse Sonoro",
+    "originalIdeaDescription": "Utilizar el interruptor como un manipulador telegráfico. Mientras el interruptor esté encendido, suena una nota constante; al apagarlo, el sonido se detiene. Esto permite al usuario crear puntos y rayas manualmente.",
+    "transformedIdeaTitle": "El Telégrafo del Espía Secreto",
+    "transformedIdeaDescription": "Necesitas enviar un mensaje secreto a tu base sin que nadie lo intercepte. Programa el sistema para que emita un tono continuo solo cuando mantengas el interruptor presionado. ¡Usa ritmos cortos y largos para crear tu propio código secreto!",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.playNote('A4') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Activada por Interruptor",
+    "originalIdeaDescription": "Un dispositivo que reproduce una melodía pregrabada en bucle mientras el interruptor se mantenga en la posición de encendido. Al apagar el interruptor, la música se detiene inmediatamente.",
+    "transformedIdeaTitle": "El Cofre del Tesoro Encantado",
+    "transformedIdeaDescription": "Has encontrado un cofre mágico que solo canta cuando está abierto. Programa el interruptor para que funcione como la tapa del cofre: si está 'abierto' (ON), debe sonar una melodía mágica en bucle; si se cierra (OFF), debe haber silencio absoluto.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO Keyboard.playMelody('FantasySong')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "El interruptor actúa como un sensor de puerta o ventana. Si el interruptor cambia a estado 'encendido' (simulando una apertura no autorizada), el teclado reproduce una sirena de notas alternas repetitivamente.",
+    "transformedIdeaTitle": "La Trampa para Dragones",
+    "transformedIdeaDescription": "Protege tu castillo. Coloca un 'cable trampa' (el interruptor) en la entrada. Si un dragón pisa el cable y activa el interruptor, tu programa debe hacer sonar una alarma fuerte y repetitiva (notas graves y agudas alternadas) para despertar a los guardias.",
+    "minAge": 11,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Keyboard.play('C4'), Keyboard.play('C5'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Cambio de Octava",
+    "originalIdeaDescription": "El interruptor modifica el tono de una nota base. Si está apagado, suena una nota grave (ej. C3); si está encendido, suena la misma nota una octava más alta (ej. C4), permitiendo alternar tonos.",
+    "transformedIdeaTitle": "El Traductor Gigante-Hormiga",
+    "transformedIdeaDescription": "Crea un dispositivo traductor. Cuando el interruptor está apagado, habla con la voz grave de un gigante (nota baja). Cuando lo enciendes, habla con la voz aguda de una hormiga (nota alta). ¡Alterna el interruptor para contar una historia con dos personajes!",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.play('C5') ELSE Keyboard.play('C3')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de las Estatuas Musicales",
+    "originalIdeaDescription": "Un sistema manual para organizar juegos. El operador usa el interruptor para controlar la música. ON: suena música de baile; OFF: silencio total (señal para congelarse).",
+    "transformedIdeaTitle": "El DJ de la Fiesta de Robots",
+    "transformedIdeaDescription": "Eres el DJ en una fiesta de robots. Los robots solo pueden bailar cuando hay música. Programa el interruptor para que controle la pista de baile: al encenderlo suena música funk, y al apagarlo se corta el sonido para ver quién se mueve y queda eliminado.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.playLoop('DanceBeat') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Binario",
+    "originalIdeaDescription": "Usar el interruptor para marcar un ritmo manualmente. Cada vez que el estado del interruptor cambia (de ON a OFF o viceversa), se reproduce un sonido de 'clic' o nota corta.",
+    "transformedIdeaTitle": "El Entrenador de Corredores",
+    "transformedIdeaDescription": "Ayuda a un atleta a mantener el ritmo. Crea un dispositivo donde cada vez que muevas el interruptor, suene un 'bip' corto. El atleta tendrá que correr al ritmo que tú marques moviendo el interruptor de un lado a otro constantemente.",
+    "minAge": 12,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Switch.change() DO Keyboard.playNote('C4', duration=0.1s)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Máquina",
+    "originalIdeaDescription": "Simulación de una máquina industrial. Si el interruptor está encendido (máquina operando), suena un zumbido grave constante. Si se apaga, suena una melodía descendente de apagado.",
+    "transformedIdeaTitle": "El Motor del Submarino",
+    "transformedIdeaDescription": "Pilotas un submarino. Cuando activas los motores (Switch ON), debe escucharse un sonido grave y constante de fondo para saber que todo funciona. Cuando apagas los motores, debe sonar una secuencia de notas bajando de tono indicando que el sistema se ha detenido.",
+    "minAge": 11,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.playTone('G2') ELSE Keyboard.playSequence(['G2', 'E2', 'C2'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escala Musical Ascendente",
+    "originalIdeaDescription": "Un contador simple. Cada vez que se enciende y apaga el interruptor, se toca la siguiente nota de la escala musical (Do, luego Re, luego Mi...), reiniciando al llegar al final.",
+    "transformedIdeaTitle": "Escalando la Montaña Musical",
+    "transformedIdeaDescription": "Cada vez que presiones el interruptor, tu personaje sube un escalón en una montaña mágica. Programa el sistema para que cada pulsación toque una nota más aguda que la anterior (Do, Re, Mi...), hasta llegar a la cima.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Switch.press() DO { index++; Keyboard.play(Scale[index]); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Botón de Pánico / Emergencia",
+    "originalIdeaDescription": "El sistema está en silencio por defecto. Al activar el interruptor, se reproduce una secuencia de alarma de alta prioridad o 'SOS' en código morse auditivo de forma continua.",
+    "transformedIdeaTitle": "Alerta de Invasión Alienígena",
+    "transformedIdeaDescription": "¡Emergencia! Detectamos ovnis. Configura el interruptor como un botón de pánico. Al activarlo, debe enviar automáticamente la señal de S.O.S. (... --- ...) usando sonidos cortos y largos repetidamente hasta que se apague.",
+    "minAge": 13,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO PlayMorseSOS()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Probador de Reflejos Auditivos",
+    "originalIdeaDescription": "El sistema espera un tiempo aleatorio y luego toca un sonido. El usuario debe presionar el interruptor para detener el sonido lo más rápido posible.",
+    "transformedIdeaTitle": "El Duelo de Vaqueros Digital",
+    "transformedIdeaDescription": "Desafía tus reflejos. El programa tocará una nota de 'desafío' al azar. Tu misión es programar el interruptor para que, al presionarlo, detenga el sonido inmediatamente y toque una fanfarria de victoria.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WAIT random(); Keyboard.start('G4'); WAIT UNTIL Switch.isOn(); Keyboard.stop(); Keyboard.play('Victory')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Bocina de Tren",
+    "originalIdeaDescription": "Al presionar el interruptor, se reproduce un acorde disonante (dos notas cercanas simultáneamente) para simular la bocina de aire de un tren o camión.",
+    "transformedIdeaTitle": "El Conductor del Expreso Polar",
+    "transformedIdeaDescription": "Conduces un tren a través de la niebla. Para avisar a los animales del bosque, necesitas una bocina potente. Configura el interruptor para que, al presionarlo, suenen dos notas graves (ej. Do y Mi) al mismo tiempo, creando un sonido de bocina fuerte.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Keyboard.playChord(['C3', 'E3'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Tarjeta de Felicitación Electrónica",
+    "originalIdeaDescription": "Simula el mecanismo de una tarjeta musical. El interruptor representa la tarjeta abriéndose. Al activarse, suena 'Cumpleaños Feliz'. Al desactivarse (cerrar tarjeta), para.",
+    "transformedIdeaTitle": "La Carta Sorpresa de Cumpleaños",
+    "transformedIdeaDescription": "Quieres sorprender a tu mejor amigo. Diseña una tarjeta digital que, cuando él mueva el interruptor (como si abriera el sobre), comience a sonar la canción de 'Cumpleaños Feliz' automáticamente.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.playSong('HappyBirthday') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Modo: Día y Noche",
+    "originalIdeaDescription": "El interruptor cambia el 'ambiente'. ON representa el día (sonidos alegres/mayores). OFF representa la noche (sonidos tristes/menores o lentos).",
+    "transformedIdeaTitle": "El Bosque Encantado: Día y Noche",
+    "transformedIdeaDescription": "Crea la banda sonora de un bosque mágico. Si el interruptor está en 'Día' (ON), toca una melodía rápida y feliz. Si cambias a 'Noche' (OFF), la música debe cambiar instantáneamente a una melodía lenta y misteriosa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.play('HappyTune') ELSE Keyboard.play('MysteryTune')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta Atrás para Despegue",
+    "originalIdeaDescription": "Al activar el interruptor, se inicia una secuencia de sonidos descendentes (5, 4, 3...) y al final un sonido largo de despegue.",
+    "transformedIdeaTitle": "Lanzamiento del Cohete a Marte",
+    "transformedIdeaDescription": "Eres el jefe de control de misión. Cuando actives el interruptor de lanzamiento, el sistema debe tocar 5 notas cortas descendentes (como una cuenta atrás: 5, 4, 3, 2, 1) seguidas de un acorde largo y triunfal para el despegue.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.switchedToOn() THEN { Keyboard.playSeq(['G', 'F', 'E', 'D', 'C']); Keyboard.play('C_Chord'); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Afinador de Referencia",
+    "originalIdeaDescription": "Herramienta para músicos. Al encender el interruptor, se emite una nota La (A4 440Hz) pura y continua para afinar instrumentos.",
+    "transformedIdeaTitle": "El Robot Cantor de Ópera",
+    "transformedIdeaDescription": "Tu robot quiere entrar a la escuela de ópera, pero necesita practicar su nota perfecta. Programa el interruptor para que, mientras esté encendido, el robot cante una nota 'La' perfectamente afinada y continua sin desafinar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.startTone('A4') ELSE Keyboard.stopTone()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas: Correcto/Incorrecto",
+    "originalIdeaDescription": "Un sistema simple para concursos. Interruptor ON momentáneo reproduce sonido de 'Ding' (correcto). Se asume lógica para cambiar a sonido de error o usar el switch solo para aciertos.",
+    "transformedIdeaTitle": "El Juez del Concurso de TV",
+    "transformedIdeaDescription": "Estás diseñando el pulsador para un programa de concursos. Cuando un concursante presiona el interruptor para responder, debe sonar un 'Ding-Ding' brillante para indicar que ha pedido el turno.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Keyboard.playSequence(['C5', 'E5'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Un juego de rol. Se hace una pregunta, y otra persona opera el interruptor. Si lo enciende, suena un tono agudo (verdad); si lo apaga, un tono grave (mentira).",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Construye un detector de mentiras para jugar con amigos. Haz una pregunta. Si el operador mueve el interruptor a la derecha (ON), suena un sonido celestial (Verdad). Si lo mueve a la izquierda (OFF), suena un zumbido grave y feo (Mentira).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Keyboard.play('HighChime') ELSE Keyboard.play('LowBuzz')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cronómetro Musical",
+    "originalIdeaDescription": "Al encender el interruptor, la música comienza a acelerarse progresivamente (aumenta el tempo) para indicar que el tiempo se acaba.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "¡Corre contra el tiempo! Al activar el interruptor, inicia una secuencia de notas repetitivas. Programa una variable para que, con cada repetición, las notas suenen más rápido, creando tensión como en una película de acción.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { play('C4'); wait(time); time = time * 0.9; }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Radar Sonoro",
+    "originalIdeaDescription": "Emite un 'bip' periódico mientras el interruptor esté encendido, simulando el barrido de un radar.",
+    "transformedIdeaTitle": "El Radar del Barco Pirata",
+    "transformedIdeaDescription": "Navegas en busca de tesoros. Activa el radar (Switch ON) para buscar islas cercanas. Debe sonar un 'Ping' agudo cada 2 segundos exactamente mientras el radar esté encendido. Si lo apagas, el radar se silencia para no ser detectado.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Keyboard.play('C6'); wait(2s); }"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Acompañamiento Musical Básico",
+    "originalIdeaDescription": "Un sistema donde el interruptor activa o desactiva una pista de batería de fondo utilizando el reproductor de audio. Mientras el ritmo suena, el usuario puede tocar una melodía libremente sobre la base utilizando el teclado musical, simulando una sesión de improvisación simple.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "¡Eres el DJ principal en una fiesta espacial! Tu misión es mantener a los alienígenas bailando. Debes programar el 'Interruptor de Gravedad' para encender el ritmo base (Audio Player) y luego usar el 'Piano Estelar' (Musical Keyboard) para improvisar solos increíbles que combinen con la música de fondo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play(\"DrumLoop\") ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Modo de Instrumento",
+    "originalIdeaDescription": "El interruptor actúa como un selector de modo. Cuando está apagado, el teclado suena como un piano normal. Cuando se enciende, el teclado se silencia y, en su lugar, el reproductor de audio reproduce efectos de sonido pregrabados al presionar teclas específicas (lógica simulada).",
+    "transformedIdeaTitle": "El Transformador de Sonidos Mágicos",
+    "transformedIdeaDescription": "Crea un instrumento que cambia de forma. En el 'Mundo Real' (Interruptor Apagado), tu teclado toca notas musicales hermosas. Pero al cruzar al 'Mundo de los Monstruos' (Interruptor Encendido), tu instrumento cambia y reproduce rugidos y sonidos extraños usando el reproductor de audio.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOff() THEN Keyboard.playNote() ELSE AudioPlayer.playEffect(KeyID)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Auditiva con Confirmación",
+    "originalIdeaDescription": "El reproductor de audio emite una nota musical al azar. El usuario debe intentar encontrar esa misma nota en el teclado musical. Una vez que cree haber encontrado la tecla correcta, presiona el interruptor para confirmar su respuesta y recibir retroalimentación.",
+    "transformedIdeaTitle": "El Decodificador de Espías",
+    "transformedIdeaDescription": "Has interceptado una transmisión secreta (una nota musical del Audio Player). Tu trabajo es replicar el código exacto en tu consola de mando (Keyboard). Una vez que estés seguro de tener la frecuencia correcta, presiona el 'Botón Rojo' (Switch) para enviar la respuesta al cuartel general.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play(Target); IF Keyboard.lastNote == Target AND Switch.pressed() THEN Win() ELSE TryAgain()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música con Melodía Oculta",
+    "originalIdeaDescription": "El teclado musical no funciona a menos que el interruptor esté activado. Además, al activar el interruptor, comienza a sonar una melodía suave de fondo en el reproductor de audio, creando una atmósfera específica para que el usuario toque encima.",
+    "transformedIdeaTitle": "Abriendo el Cofre del Tesoro Musical",
+    "transformedIdeaDescription": "Encontraste un cofre antiguo cerrado. Debes usar la llave (Switch) para abrirlo. Al hacerlo, una música mágica escapa del cofre (Audio Player) y libera el poder de las teclas encantadas (Keyboard), permitiéndote tocar junto con el espíritu del tesoro.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { AudioPlayer.play(\"Magic\"); Keyboard.enable() } ELSE { AudioPlayer.stop(); Keyboard.disable() }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Efecto de Radio Antigua",
+    "originalIdeaDescription": "El usuario toca una canción en el teclado musical. El interruptor sirve para añadir un efecto de 'estática' o ruido de fondo reproducido por el Audio Player, simulando que la señal de la radio se está perdiendo o recuperando.",
+    "transformedIdeaTitle": "Operador de Radio en la Tormenta",
+    "transformedIdeaDescription": "Estás transmitiendo una canción importante al mundo, pero hay una tormenta eléctrica. Toca tu melodía en el teclado, pero ten cuidado: usa el interruptor para simular la interferencia de la tormenta (sonido de estática) que intenta bloquear tu señal musical.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Keyboard.play(); IF Switch.isOn() THEN AudioPlayer.play(\"StaticNoise\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo con Pausa",
+    "originalIdeaDescription": "El reproductor de audio reproduce un metrónomo o una base rítmica simple. El usuario debe tocar una nota en el teclado en cada tiempo fuerte. El interruptor se utiliza para pausar el entrenamiento momentáneamente sin reiniciar el contador de progreso.",
+    "transformedIdeaTitle": "Entrenamiento de Robot Baterista",
+    "transformedIdeaDescription": "Estás programando un robot para que mantenga el ritmo. El Audio Player marca el paso (tic-tac). Debes presionar una tecla del teclado exactamente en el golpe. Si necesitas ajustar los circuitos, usa el interruptor de emergencia para pausar la simulación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.loop(\"Metronome\"); IF Switch.isOn() THEN AudioPlayer.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo",
+    "originalIdeaDescription": "El reproductor de audio narra una historia. En momentos clave, la narración se detiene y el usuario debe tocar una 'emoción' musical en el teclado (triste o feliz) para decidir el rumbo, luego presiona el interruptor para continuar la historia.",
+    "transformedIdeaTitle": "El Director de Cine Sonoro",
+    "transformedIdeaDescription": "Una película se reproduce en la pantalla de tu mente (Audio Player narrando). La película se detiene en una escena de suspenso. ¡Tú eres el compositor! Toca una melodía de tensión en el teclado y luego presiona 'Acción' (Switch) para ver qué sucede después en la historia.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.playSegment(); IF Switch.toggled() THEN Audio.playNextSegment()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Grabadora de Bucles (Loop Station) Conceptual",
+    "originalIdeaDescription": "El interruptor inicia y detiene una 'grabación' (simulada o real si el audio player lo permite, si no, reproduce un backing track). El usuario toca el teclado como solista mientras el interruptor controla el estado de la base rítmica.",
+    "transformedIdeaTitle": "La Máquina del Tiempo Musical",
+    "transformedIdeaDescription": "Construye una máquina que atrapa el sonido. Presiona el interruptor para activar el 'Vórtice de Tiempo' (inicia un loop de base rítmica en el Audio Player). Mientras el tiempo se repite, usa el teclado para añadir capas de melodía que viajan a través del bucle temporal.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.stateChanged(TO_ON) THEN AudioPlayer.loop(\"BaseBeat\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sillas Musicales Digital",
+    "originalIdeaDescription": "El reproductor de audio toca música. Al presionar el interruptor, la música se detiene abruptamente. El jugador debe tocar rápidamente cualquier tecla del teclado musical como reacción para no ser 'eliminado'.",
+    "transformedIdeaTitle": "Reflejos de Ninja Musical",
+    "transformedIdeaDescription": "La música suena tranquila en el dojo (Audio Player). Un oponente invisible (el Interruptor controlado por un amigo o al azar) cortará la música de golpe. En ese instante de silencio, ¡debes atacar con una nota de tu espada sonora (Teclado) lo más rápido posible!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play(); IF Switch.pressed() THEN { Audio.stop(); Timer.start() wait for Keyboard }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sintetizador de Dos Capas",
+    "originalIdeaDescription": "El teclado siempre toca notas. El interruptor activa una 'segunda capa' de sonido donde el reproductor de audio reproduce un zumbido o armonía constante (pad) mientras el interruptor se mantenga presionado, llenando el fondo.",
+    "transformedIdeaTitle": "Orquesta de un Solo Hombre",
+    "transformedIdeaDescription": "Toca el piano con una mano. Con la otra, controla el 'Pedal de Orquesta' (Interruptor). Mientras mantengas presionado el interruptor, una sección entera de cuerdas (Audio Player) acompañará tus notas del teclado, haciendo que tu canción suene épica.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isHeld() DO AudioPlayer.play(\"StringsPad\"); Keyboard.active()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Musical",
+    "originalIdeaDescription": "El reproductor de audio emite un sonido de alarma molesto. Para apagarlo, el usuario debe presionar el interruptor, pero esto solo baja el volumen; para apagarlo totalmente, debe tocar una secuencia correcta en el teclado.",
+    "transformedIdeaTitle": "Desactiva la Bomba Sónica",
+    "transformedIdeaDescription": "¡Emergencia! Una alarma ensordecedora (Audio Player) está sonando. Presionar el botón de pánico (Interruptor) solo te da unos segundos de silencio. Para desactivar el sistema permanentemente, debes ingresar el código de seguridad secreto tocando la melodía correcta en el teclado.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play(\"Alarm\"); IF Switch.on() THEN Audio.volume(50%); IF Keyboard.sequenceCorrect() THEN Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cambiador de Escalas por Ambiente",
+    "originalIdeaDescription": "El interruptor alterna entre un ambiente 'Feliz' y uno 'Triste'. Esto cambia la pista de fondo en el reproductor de audio y (conceptualmente) instruye al estudiante a usar teclas mayores o menores en el teclado.",
+    "transformedIdeaTitle": "El Pintor de Emociones",
+    "transformedIdeaDescription": "Usa el interruptor para cambiar el clima de tu mundo: 'Día Soleado' (música alegre en Audio) o 'Noche Lluviosa' (música triste). Tu tarea es improvisar en el teclado usando las notas que coincidan con la emoción del clima que elegiste.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Audio.play(\"HappyBacking\") ELSE Audio.play(\"SadBacking\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Teclado con Efecto de Tartamudeo (Stutter)",
+    "originalIdeaDescription": "Mientras el usuario toca una melodía en el teclado, el interruptor se utiliza para activar un efecto rítmico en el reproductor de audio que complementa la melodía, o para cortar el audio momentáneamente creando un efecto de 'glitch'.",
+    "transformedIdeaTitle": "El Hacker Musical",
+    "transformedIdeaDescription": "Estás hackeando la red principal con tu música. Toca una melodía fluida en el teclado, pero usa el interruptor para 'romper' el ritmo e insertar efectos de glitch y errores digitales (sonidos del Audio Player), creando un remix tecno en tiempo real.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() THEN AudioPlayer.play(\"GlitchSound\") OVER Keyboard.sound"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas y Respuestas Musicales",
+    "originalIdeaDescription": "El Audio Player hace una pregunta (grabación de voz). El usuario usa el interruptor para seleccionar entre dos opciones (A o B) y luego debe tocar un jingle en el teclado para enviar su respuesta.",
+    "transformedIdeaTitle": "Concurso de Trivia Musical",
+    "transformedIdeaDescription": "Bienvenido al show de juegos. El presentador (Audio Player) hace una pregunta. Usa el interruptor para alternar tu respuesta entre 'Verdadero' o 'Falso', y luego toca la tecla 'Enter' (una nota aguda del teclado) para bloquear tu respuesta y ganar puntos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play(\"Question\"); IF Switch.toggled() THEN selection=!selection; IF Keyboard.key(\"C5\") THEN CheckAnswer()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Manual",
+    "originalIdeaDescription": "El teclado se usa para tocar la melodía. El interruptor se usa como un disparador de bombo (kick drum) manual. Cada vez que se presiona el interruptor, el Audio Player reproduce un sonido de golpe seco, permitiendo tocar melodía y ritmo a la vez.",
+    "transformedIdeaTitle": "Hombre Orquesta Biónico",
+    "transformedIdeaDescription": "Coordina tus manos y pies (o dedos). Tu mano derecha toca una melodía en el teclado. Tu mano izquierda controla el 'Corazón del Ritmo' (Interruptor). Cada vez que tocas el interruptor, suena un tambor potente (Audio Player). ¡Intenta mantener el ritmo mientras tocas la canción!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() THEN AudioPlayer.playOneShot(\"KickDrum\"); Keyboard.active()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Afinación",
+    "originalIdeaDescription": "El interruptor activa una nota de referencia constante en el reproductor de audio (ej. un La 440Hz). El estudiante debe tocar la misma nota en el teclado y escuchar si coinciden, luego apagar el interruptor para practicar solo.",
+    "transformedIdeaTitle": "Afinador de Motores Espaciales",
+    "transformedIdeaDescription": "El motor de la nave hace un ruido específico (Audio Player activado por Interruptor). Debes igualar la frecuencia del motor usando tu panel de control (Teclado) para que la nave pueda despegar suavemente. Si la nota no coincide, ¡el motor vibrará!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.playTone(\"A4\"); IF Keyboard.key == \"A4\" THEN Match()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Creador de Jingles para Puertas",
+    "originalIdeaDescription": "El interruptor simula un timbre de puerta. Al presionarlo, en lugar de un sonido estándar, el sistema espera que el usuario toque una secuencia corta en el teclado, que luego el Audio Player reproduce como si fuera la grabación final del timbre.",
+    "transformedIdeaTitle": "Diseñador de Casas Inteligentes",
+    "transformedIdeaDescription": "Los clientes quieren un timbre único para sus casas. Cuando el visitante presiona el botón (Interruptor), el sistema se activa. Tú debes componer y tocar rápidamente una melodía de bienvenida en el teclado que sonará por los altavoces de la casa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() THEN { WaitForInput(Keyboard); Audio.play(Keyboard.Sequence) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Intro y Final",
+    "originalIdeaDescription": "El usuario toca una canción en el teclado. El interruptor tiene dos funciones: al encenderlo reproduce una introducción orquestal (Audio Player) y al apagarlo reproduce un final o aplausos.",
+    "transformedIdeaTitle": "Estrella del Escenario",
+    "transformedIdeaDescription": "Prepara tu gran entrada. Acciona el interruptor para que la banda toque la introducción (Audio Player). Luego, ¡es tu turno de brillar en el teclado! Cuando termines tu canción, apaga el interruptor para escuchar los aplausos del público.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.turnedOn() THEN Audio.play(\"Intro\"); IF Switch.turnedOff() THEN Audio.play(\"Applause\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Código Morse Musical",
+    "originalIdeaDescription": "El Audio Player reproduce un mensaje en código morse rítmico. El usuario debe usar el teclado para 'traducir' los puntos y rayas a notas altas y bajas, y el interruptor para enviar el mensaje traducido.",
+    "transformedIdeaTitle": "Telegrafista Musical",
+    "transformedIdeaDescription": "Llega un mensaje urgente por el telégrafo (Audio Player con ritmos cortos y largos). Traduce el mensaje a música: usa una nota aguda para los sonidos cortos y una grave para los largos en el teclado. Usa el interruptor para enviar la melodía resultante al destinatario.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.playPattern(); User maps Short->HighNote, Long->LowNote; Switch.send()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Banda Sonora de Videojuego",
+    "originalIdeaDescription": "El Audio Player reproduce sonidos de ambiente de un nivel de videojuego (selva, espacio). El interruptor cambia el 'nivel' (pista de audio). El usuario debe improvisar música en el teclado que se adapte al entorno sonoro actual.",
+    "transformedIdeaTitle": "Compositor de Videojuegos",
+    "transformedIdeaDescription": "El juego ha cambiado de nivel. Usa el interruptor para viajar entre el 'Nivel de Lava' y el 'Nivel de Hielo'. Escucha el ambiente (Audio Player) e inventa en el teclado una canción rápida y peligrosa para la lava, o lenta y cristalina para el hielo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.state==0 THEN Audio.play(\"Lava\") ELSE Audio.play(\"Ice\"); Keyboard.active()"
+  }
+]

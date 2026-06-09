@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Entrada con Timbre Visual y Auditivo",
+    "originalIdeaDescription": "Un sistema básico de notificación para puertas donde al presionar el botón táctil se activa una secuencia de iluminación en la matriz LED y un sonido de percusión para alertar a los ocupantes.",
+    "transformedIdeaTitle": "El Timbre de la Casa Encantada",
+    "transformedIdeaDescription": "Diseña un timbre para una casa embrujada. Cuando los visitantes toquen el botón, la matriz debe mostrar un fantasma parpadeando y la batería debe hacer un sonido grave y misterioso para asustarlos.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { LEDMatrix.showAnimation('Ghost'); MusicalDrum.play('LowTom'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual Asistido por Entrada Táctil",
+    "originalIdeaDescription": "Dispositivo para músicos que marca el tiempo. El botón inicia el ciclo, la matriz muestra una barra oscilante y la batería marca el 'clic' del metrónomo en cada intervalo.",
+    "transformedIdeaTitle": "El Director de Orquesta Digital",
+    "transformedIdeaDescription": "Eres el director de una banda de robots. Programa el botón para iniciar el ensayo: la matriz debe mover una batuta de lado a lado y la batería debe marcar el ritmo 'uno, dos, tres, cuatro' para que todos toquen a tiempo.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN LOOP { MusicalDrum.play('HiHat'); LEDMatrix.toggleSide(); wait(500ms); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Números Aleatorios con Efecto de Redoble",
+    "originalIdeaDescription": "Un dado digital que se activa por tacto. Al presionar el botón, la matriz muestra una animación de mezcla, la batería hace un redoble y finalmente se muestra un número del 1 al 6 junto con un golpe final.",
+    "transformedIdeaTitle": "El Dado Mágico de la Fortuna",
+    "transformedIdeaDescription": "Crea un dado electrónico para tus juegos de mesa. Al tocar el botón, debe sonar un redoble de tambores de suspenso mientras la pantalla cambia rápidamente, deteniéndose en un número final con un fuerte ¡PUM!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { MusicalDrum.play('Roll'); LEDMatrix.animateRandom(); delay(2s); LEDMatrix.showNumber(random(1,6)); MusicalDrum.play('Crash'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Tiempo de Reacción Auditivo-Visual",
+    "originalIdeaDescription": "Herramienta para medir reflejos. El sistema espera un tiempo aleatorio, enciende la matriz y el usuario debe presionar el botón rápidamente. La batería suena si el usuario reacciona a tiempo.",
+    "transformedIdeaTitle": "Reflejos de Ninja",
+    "transformedIdeaDescription": "Entrena como un ninja. Espera en silencio... cuando aparezca el shuriken en la pantalla, ¡toca el botón lo más rápido posible! Si eres rápido, escucharás el gong de la victoria (batería).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(RandomTime); LEDMatrix.show('Shuriken'); StartTimer; IF TouchButton.isPressed() AND Time < 500ms THEN MusicalDrum.play('Gong') ELSE LEDMatrix.show('SadFace');"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Secuenciador de Percusión de Paso Único",
+    "originalIdeaDescription": "Un creador de ritmos simple. Cada vez que se presiona el botón, se añade un golpe a un bucle, la matriz visualiza en qué tiempo del compás se encuentra el sonido.",
+    "transformedIdeaTitle": "La Caja de Ritmos del DJ",
+    "transformedIdeaDescription": "Conviértete en DJ. Usa el botón para 'grabar' tu ritmo. Cada vez que toques, se encenderá una luz en la matriz y sonará el bombo. ¡Crea el mejor loop para la fiesta!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP 4_steps { LEDMatrix.nextPixel(); IF TouchButton.isPressed() THEN MusicalDrum.play('Kick'); Wait(BeatDuration); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual con Indicador de Hambre",
+    "originalIdeaDescription": "Simulación de una mascota digital. La matriz muestra el estado de ánimo. Si se muestra 'hambre', el usuario debe presionar el botón para alimentar, recibiendo un sonido de satisfacción de la batería.",
+    "transformedIdeaTitle": "Alimenta al Monstruo Pixel",
+    "transformedIdeaDescription": "Tu monstruo vive en la pantalla LED. Cuando abra la boca (matriz), tienes 3 segundos para darle una galleta presionando el botón. Si lo haces a tiempo, masticará ruidosamente (batería).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LEDMatrix.show('OpenMouth') AND TouchButton.isPressed() THEN { MusicalDrum.play('Crunch'); LEDMatrix.show('Happy'); } ELSE { LEDMatrix.show('Sad'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Visual y Sonoro",
+    "originalIdeaDescription": "Dispositivo de comunicación. Presionar el botón activa simultáneamente un punto/raya en la matriz LED y un golpe corto/largo en la batería para enviar mensajes codificados.",
+    "transformedIdeaTitle": "El Telégrafo del Espía Secreto",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Presiona el botón: un toque corto es un punto, uno largo es una raya. La matriz dibujará el código y la batería lo transmitirá por sonido.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressDuration < 200ms THEN { LEDMatrix.show('.'); MusicalDrum.play('ShortBeat'); } ELSE { LEDMatrix.show('-'); MusicalDrum.play('LongBeat'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria de Patrones Rítmicos",
+    "originalIdeaDescription": "Variación del juego 'Simón Dice'. La matriz muestra una secuencia de cuadrantes iluminados acompañada de sonidos de batería. El usuario debe replicar el ritmo presionando el botón en los momentos correctos.",
+    "transformedIdeaTitle": "Eco Musical",
+    "transformedIdeaDescription": "La computadora tocará una secuencia de luces y tambores. ¡Memorízala! Luego, usa el botón para repetir el ritmo exactamente igual. Si fallas, la pantalla mostrará una 'X'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlaySequence(LED, Drum); UserInput = Record(TouchButton); IF UserInput == Sequence THEN Score++ ELSE GameOver();"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva con Alarma de Finalización",
+    "originalIdeaDescription": "Temporizador visual. La matriz muestra los números descendentes. El botón pausa/reanuda. Al llegar a cero, la batería ejecuta una secuencia de alarma repetitiva.",
+    "transformedIdeaTitle": "Despegue del Cohete Espacial",
+    "transformedIdeaDescription": "Prepara el lanzamiento. La pantalla cuenta: 10, 9, 8... Si hay un problema, presiona el botón para pausar. Si llega a 0, ¡la batería simula la explosión de los motores para el despegue!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "FOR i=10 TO 0 { IF TouchButton.isPressed() THEN Pause(); LEDMatrix.showNumber(i); Wait(1s); } MusicalDrum.play('BlastOff');"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Votación Unitaria con Contador",
+    "originalIdeaDescription": "Contador de eventos. Cada pulsación del botón incrementa un contador visualizado en la matriz y emite un sonido de confirmación breve en la batería.",
+    "transformedIdeaTitle": "El Juez de Talentos",
+    "transformedIdeaDescription": "Eres el juez de un concurso. Cada vez que veas algo que te guste, presiona el botón. La pantalla sumará puntos y sonará un 'bip' de aprobación. ¿Qué puntaje final obtendrá el participante?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN { Count = Count + 1; LEDMatrix.showNumber(Count); MusicalDrum.play('SnareTap'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos Activada Manualmente",
+    "originalIdeaDescription": "Sistema de seguridad simple. Se presiona el botón para 'armar'. Después de un retraso, si se vuelve a presionar (simulando un disparador), la matriz parpadea en rojo y la batería suena continuamente.",
+    "transformedIdeaTitle": "Trampa para Dragones",
+    "transformedIdeaDescription": "Protege tu tesoro. Activa la trampa con el botón. Si el dragón (o tu hermano pequeño) toca el botón de nuevo, la alarma debe sonar muy fuerte y las luces parpadear para ahuyentarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF SystemArmed AND TouchButton.isPressed() THEN LOOP { LEDMatrix.flash('X'); MusicalDrum.play('Alarm'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Lluvia y Truenos Controlable",
+    "originalIdeaDescription": "Efecto ambiental. La matriz muestra una animación de gotas cayendo. Al mantener presionado el botón, la 'tormenta' se intensifica y la batería reproduce sonidos graves simulando truenos.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Controla el clima. La pantalla muestra una lluvia suave. Mantén presionado el botón para invocar una súper tormenta: la lluvia caerá más rápido y escucharás truenos retumbando en la batería.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isHeld() THEN { LEDMatrix.setSpeed('Fast'); MusicalDrum.play('Thunder'); } ELSE { LEDMatrix.setSpeed('Slow'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Tenis de Una Dimensión (Pong)",
+    "originalIdeaDescription": "Juego arcade minimalista. Un punto se mueve lateralmente en la matriz. El usuario debe presionar el botón justo cuando el punto llega al extremo para 'devolverlo' acompañado de un sonido de golpe.",
+    "transformedIdeaTitle": "Frontón Electrónico",
+    "transformedIdeaDescription": "La pelota rebota de lado a lado en la pantalla. Tu misión es devolverla presionando el botón justo cuando toque tu pared. Cada golpe exitoso suena como un raquetazo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BallPosition += Direction; IF BallPosition == Edge AND TouchButton.isPressed() THEN { Direction *= -1; MusicalDrum.play('Hit'); } ELSE IF BallPosition == Edge THEN GameOver();"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Paso a Paso",
+    "originalIdeaDescription": "Reproductor interactivo. Una melodía predefinida avanza una nota cada vez que se presiona el botón. La matriz muestra la altura de la nota y la batería marca el ritmo de avance.",
+    "transformedIdeaTitle": "La Canción Misteriosa",
+    "transformedIdeaDescription": "Hay una canción escondida. Para escucharla, debes presionar el botón repetidamente al ritmo que quieras. Cada toque revela la siguiente nota en la pantalla y un acompañamiento de batería.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN { SongIndex++; LEDMatrix.showNoteLevel(Song[SongIndex]); MusicalDrum.play('Tick'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Simulador médico. El usuario marca un pulso constante con el botón. La matriz grafica el electrocardiograma y la batería suena como un monitor cardíaco (beep-beep).",
+    "transformedIdeaTitle": "Doctor Robot",
+    "transformedIdeaDescription": "¡Emergencia! El paciente robot necesita un corazón nuevo. Presiona el botón rítmicamente para hacer latir su corazón. La pantalla mostrará el pulso y escucharás el 'bip... bip...' de vida.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN { LEDMatrix.animate('HeartBeat'); MusicalDrum.play('Beep'); CalculateBPM(); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Emociones Interactivo",
+    "originalIdeaDescription": "Herramienta de expresión. Cada pulsación del botón cambia el icono en la matriz (Feliz, Triste, Enojado) y reproduce un sonido de percusión acorde a la emoción (ej. platillo brillante vs tom grave).",
+    "transformedIdeaTitle": "La Máscara de las Emociones",
+    "transformedIdeaDescription": "Crea una cara digital que cambie de humor. Pulsa el botón para alternar entre feliz (sonido agudo y sonrisa) y enojado (sonido grave y ceño fruncido). ¡Úsala para mostrar cómo te sientes!",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "EmotionState++; IF EmotionState == 1 THEN { LEDMatrix.show('Smile'); MusicalDrum.play('HiHat'); } ELSE { LEDMatrix.show('Frown'); MusicalDrum.play('LowTom'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Caza de Píxeles (Whack-a-Mole)",
+    "originalIdeaDescription": "Juego de reflejos. Un píxel se ilumina aleatoriamente en la matriz. El usuario debe presionar el botón mientras el píxel está encendido. Éxito = sonido de victoria; Fallo = sonido de error.",
+    "transformedIdeaTitle": "Atrapa la Luciérnaga",
+    "transformedIdeaDescription": "Una luciérnaga (luz) aparece y desaparece en la pantalla. ¡Debes ser rápido! Presiona el botón exactamente cuando la veas encendida para atraparla y escuchar el sonido de éxito.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LEDMatrix.showRandomPixel(); TimerStart(); IF TouchButton.isPressed() AND PixelIsOn THEN MusicalDrum.play('Win') ELSE MusicalDrum.play('Fail');"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo de Salida para Carreras",
+    "originalIdeaDescription": "Controlador de inicio de carrera. Al presionar el botón, inicia una secuencia: Rojo, Rojo, Rojo, Verde (Matriz) sincronizado con 3 golpes de caja y 1 de platillo (Batería).",
+    "transformedIdeaTitle": "El Iniciador de Carreras F1",
+    "transformedIdeaDescription": "Tus autos de juguete están listos. Presiona el botón para iniciar la cuenta regresiva del semáforo. Luces rojas... ¡Luz verde! La batería debe sonar fuerte para indicar la salida.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { LEDMatrix.color('Red'); MusicalDrum.play('Beat'); Wait(1s); ... LEDMatrix.color('Green'); MusicalDrum.play('Crash'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Podómetro Manual con Incentivo Sonoro",
+    "originalIdeaDescription": "Contador de pasos manual. El usuario lleva el dispositivo y presiona el botón en cada paso. La matriz cuenta hasta 10, al llegar a la meta suena una fanfarria de batería y se reinicia.",
+    "transformedIdeaTitle": "La Marcha del Explorador",
+    "transformedIdeaDescription": "Vamos de excursión. Presiona el botón con cada paso que des. La pantalla contará tu progreso. ¡Cada 10 pasos, la batería celebrará tu avance con un ritmo especial!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Steps++; LEDMatrix.showNumber(Steps); IF Steps % 10 == 0 THEN MusicalDrum.play('Fanfare');"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Verdad o Mentira Aleatorio",
+    "originalIdeaDescription": "Juguete de broma. El 'sujeto' pone el dedo en el botón. El sistema procesa (animación matriz) y aleatoriamente decide Verdad (Check verde + sonido suave) o Mentira (X roja + sonido fuerte).",
+    "transformedIdeaTitle": "El Detector de Mentiras",
+    "transformedIdeaDescription": "Haz una pregunta a tu amigo y dile que ponga el dedo en el botón. La máquina 'pensará' con luces y luego dirá si miente (X en pantalla y ruido fuerte) o dice la verdad (Check y sonido suave).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { LEDMatrix.animate('Thinking'); Result = Random(0,1); IF Result THEN { LEDMatrix.show('Check'); MusicalDrum.play('Soft'); } ELSE { LEDMatrix.show('X'); MusicalDrum.play('Loud'); } }"
+  }
+]

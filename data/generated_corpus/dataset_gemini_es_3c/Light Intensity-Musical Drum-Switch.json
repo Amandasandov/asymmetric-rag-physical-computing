@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batería Activada por Sombra",
+    "originalIdeaDescription": "Un sistema donde el tambor suena automáticamente cada vez que una sombra pasa sobre el sensor de luz, y el interruptor sirve para encender o apagar el sistema completo.",
+    "transformedIdeaTitle": "La Trampa del Templo Perdido",
+    "transformedIdeaDescription": "¡Eres un explorador protegiendo un tesoro antiguo! Construye una trampa invisible. Si un intruso proyecta una sombra sobre el sensor (baja la luz) mientras el sistema está armado (interruptor encendido), debe sonar un tambor fuerte para asustarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 40 THEN MusicalDrum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo de Luz Ambiental",
+    "originalIdeaDescription": "Dispositivo que cambia la velocidad del ritmo de la batería basándose en cuánta luz hay en la habitación; el interruptor inicia o detiene el ritmo.",
+    "transformedIdeaTitle": "DJ de la Naturaleza",
+    "transformedIdeaDescription": "Crea una máquina de ritmos que reaccione al sol. Cuando hay mucha luz, la música debe ser rápida y energética; si se nubla o oscurece, el ritmo se relaja. Usa el interruptor para comenzar tu sesión de DJ.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN tempo = map(LightIntensity.value, 0, 100, 60, 180); MusicalDrum.playLoop(tempo)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El sistema detecta destellos de luz repentinos (como relámpagos) y reproduce un sonido de bombo grave (trueno). El interruptor activa el modo de simulación.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Programa un efecto especial para una obra de teatro. Tu dispositivo debe esperar en silencio (con el interruptor activado). Si detecta un 'relámpago' (un aumento súbito de luz con una linterna), debe hacer sonar un trueno profundo inmediatamente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND (LightIntensity.current - LightIntensity.previous > 20) THEN MusicalDrum.play('Bass')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Musical",
+    "originalIdeaDescription": "Para detener un ritmo de batería molesto, el usuario debe iluminar el sensor con la cantidad exacta de luz requerida y presionar el interruptor.",
+    "transformedIdeaTitle": "Desactiva la Bomba Sónica",
+    "transformedIdeaDescription": "Un villano ha activado un ruido insoportable (batería en bucle). Para desactivarlo, debes usar tu linterna para encontrar el nivel exacto de luz (por ejemplo, entre 50 y 60) y presionar el botón rojo (interruptor) en el momento justo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOff() DO MusicalDrum.play(); IF Switch.isOn() AND (LightIntensity > 50 AND LightIntensity < 60) THEN Stop() ELSE Continue"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Tambor Theremin Óptico",
+    "originalIdeaDescription": "Un instrumento donde la altura de la mano sobre el sensor (intensidad de luz) selecciona qué pieza de la batería suena cuando se presiona el interruptor.",
+    "transformedIdeaTitle": "La Batería Mágica Invisible",
+    "transformedIdeaDescription": "Diseña un instrumento del futuro. Mueve tu mano sobre el sensor sin tocarlo. Dependiendo de cuánta sombra hagas, el interruptor tocará un instrumento diferente (Bombo con mucha sombra, Platillo con mucha luz).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { IF Light < 30 THEN Drum.play('Bass') ELSE IF Light < 70 THEN Drum.play('Snare') ELSE Drum.play('HiHat') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma Despertador Solar",
+    "originalIdeaDescription": "Un sistema que comienza a tocar un ritmo suave cuando detecta que ha amanecido, el cual se apaga con el interruptor.",
+    "transformedIdeaTitle": "Despertador para Osos Hibernando",
+    "transformedIdeaDescription": "Ayuda a un oso a despertar en primavera. Programa el sensor para que, cuando la luz supere un nivel de 'amanecer', comience a sonar un ritmo suave de percusión. El oso (usuario) debe presionar el interruptor para detener la alarma.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 80 THEN MusicalDrum.playLoop(); IF Switch.isChanged() THEN MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos en la Oscuridad",
+    "originalIdeaDescription": "El juego comienza con el interruptor. Cuando la luz se apaga repentinamente, el jugador debe tocar el sensor o el interruptor, recibiendo feedback auditivo.",
+    "transformedIdeaTitle": "Escape del Apagón",
+    "transformedIdeaDescription": "Estás en una nave espacial averiada. Activa el sistema con el interruptor. En cuanto las luces se apaguen (el sensor detecte oscuridad total), debes presionar el interruptor de nuevo lo más rápido posible. Si lo logras, sonará un redoble de victoria.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value == 0 THEN { Wait_For_Switch_Off(); MusicalDrum.play('Win') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Polución Lumínica",
+    "originalIdeaDescription": "Herramienta científica que suena un golpe de tambor cada vez que la luz artificial supera un umbral nocturno, controlado por un interruptor maestro.",
+    "transformedIdeaTitle": "Guardián de las Estrellas",
+    "transformedIdeaDescription": "Quieres ver las estrellas, pero hay mucha luz en la ciudad. Crea un dispositivo que avise con un golpe de platillo cada vez que alguien encienda una luz fuerte cerca de tu telescopio, para saber cuándo tapar la lente. Usa el interruptor para activarlo de noche.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value > Threshold THEN MusicalDrum.play('Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Código Morse de Percusión",
+    "originalIdeaDescription": "Usar una linterna sobre el sensor para enviar señales. Luz corta = sonido agudo, Luz larga = sonido grave. El interruptor cambia el modo de transmisión.",
+    "transformedIdeaTitle": "Telégrafo Secreto de la Jungla",
+    "transformedIdeaDescription": "Envía mensajes secretos a la tribu vecina usando luz y sonido. Si iluminas el sensor brevemente, suena un tambor agudo. Si lo iluminas por más tiempo, suena un tambor grave. Usa el interruptor para borrar el mensaje.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Duration = MeasureLightDuration(); IF Duration < 0.5 THEN Drum.play('High') ELSE Drum.play('Low')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Estacionamiento de Garaje",
+    "originalIdeaDescription": "A medida que un coche bloquea la luz al entrar al garaje, el tambor suena más rápido. El interruptor apaga el sistema.",
+    "transformedIdeaTitle": "Radar de Retroceso",
+    "transformedIdeaDescription": "Ayuda a estacionar el rover en Marte. A medida que el vehículo entra en la cueva (y oscurece el sensor), los tambores deben sonar más rápido para indicar proximidad. Si está totalmente oscuro, ¡frena (sonido de choque)! El interruptor apaga el motor.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Speed = 100 - LightIntensity; MusicalDrum.setTempo(Speed); MusicalDrum.play() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "El nivel de luz se usa como una 'semilla' para generar un ritmo aleatorio cuando se presiona el interruptor.",
+    "transformedIdeaTitle": "El Compositor Caótico",
+    "transformedIdeaDescription": "¡La música necesita inspiración! Usa la luz del ambiente para crear un ritmo único. Apunta el sensor a diferentes lugares y presiona el interruptor. El sistema generará un patrón de batería único basado en cuánta luz detectó en ese instante.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.Pressed() THEN { RandomSeed(LightIntensity.value); Pattern = GenerateBeat(); MusicalDrum.play(Pattern) }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Detecta fluctuaciones sutiles e inexplicables en la luz en una habitación oscura y dispara un sonido espeluznante. El interruptor resetea la línea base.",
+    "transformedIdeaTitle": "Cazafantasmas Digital",
+    "transformedIdeaDescription": "Entra en la casa embrujada. Calibra tu sensor en la oscuridad presionando el interruptor. Si algo pasa flotando y cambia la luz aunque sea un poco, tu dispositivo debe tocar un redoble de misterio para alertarte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Baseline = Store(Light); IF Switch.isOn() AND Abs(Light - Baseline) > 5 THEN MusicalDrum.play('Mystery')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inversa",
+    "originalIdeaDescription": "La música suena mientras hay luz. Si se tapa el sensor (oscuridad), la música para. El interruptor inicia el juego.",
+    "transformedIdeaTitle": "Baila con el Sol",
+    "transformedIdeaDescription": "Un juego para fiestas: Mientras el sensor reciba luz, el tambor toca un ritmo bailable. Si alguien tapa el sensor con la mano (simulando una nube), la música para y todos deben congelarse. El interruptor sirve para iniciar una nueva ronda.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF LightIntensity > 20 THEN MusicalDrum.play() ELSE MusicalDrum.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Vueltas para Carreras",
+    "originalIdeaDescription": "En una pista de carreras de juguete, el coche corta un haz de luz. Cada corte suena un platillo y cuenta una vuelta. El interruptor reinicia el contador.",
+    "transformedIdeaTitle": "Cronometrador de Fórmula 1",
+    "transformedIdeaDescription": "Construye la línea de meta para tus coches de juguete. Coloca una luz frente al sensor. Cada vez que el coche pase y corte la luz, debe sonar un platillo y celebrar la vuelta. Usa el interruptor para poner el contador a cero antes de la carrera.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.dropsSudden() THEN { Laps++; MusicalDrum.play('Cymbal') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Comunicación Minera",
+    "originalIdeaDescription": "En túneles oscuros, usar destellos de luz para solicitar diferentes herramientas (sonidos de tambor específicos). El interruptor confirma la recepción.",
+    "transformedIdeaTitle": "Rescate en la Mina",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura y tu radio no funciona. Tienes una linterna. Programa el sistema para que 1 destello pida 'Cuerda' (Sonido 1) y 2 destellos pidan 'Agua' (Sonido 2). El operador de superficie usa el interruptor para confirmar que te escuchó.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CountFlashes(TimeWindow); IF Count == 1 THEN Drum.play(1); IF Count == 2 THEN Drum.play(2); IF Switch.On THEN SendConfirm()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batería de Ahorro Energético",
+    "originalIdeaDescription": "El volumen de la batería depende de la luz disponible para simular energía solar. Poca luz = volumen bajo. Interruptor = encendido.",
+    "transformedIdeaTitle": "Robot Ecológico Musical",
+    "transformedIdeaDescription": "Tu robot músico funciona con energía solar. Si hay mucha luz, toca los tambores muy fuerte. Si se nubla, su energía baja y toca muy despacio y suave. Si apagas el interruptor, entra en modo hibernación para ahorrar batería.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Volume = LightIntensity; MusicalDrum.setVolume(Volume); MusicalDrum.play() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Afinador de Ritmo Visual",
+    "originalIdeaDescription": "El usuario debe ajustar una fuente de luz (dimmer) hasta que el tambor suene a un tempo específico objetivo. El interruptor valida la respuesta.",
+    "transformedIdeaTitle": "Cerrajero de Luz",
+    "transformedIdeaDescription": "Para abrir la caja fuerte, debes igualar el ritmo del sistema de seguridad. Mueve tu linterna acercándola o alejándola para cambiar la velocidad del tambor. Cuando creas que el ritmo es el correcto, presiona el interruptor para intentar abrirla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CurrentTempo = Light * 2; Drum.play(CurrentTempo); IF Switch.Pressed() AND (CurrentTempo == TargetTempo) THEN Success()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Básico",
+    "originalIdeaDescription": "Basado en la idea de que el estrés cambia la micro-circulación (opaco) o movimiento. Si la luz varía irregularmente al poner el dedo, suena alarma. Interruptor inicia test.",
+    "transformedIdeaTitle": "El Interrogador",
+    "transformedIdeaDescription": "Juega a los espías. Tu sujeto debe poner el dedo sobre el sensor de luz de forma muy quieta. Activa el interruptor. Si el sensor detecta temblores (variaciones rápidas de luz) porque el sujeto está nervioso, ¡suena la alarma de tambor!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Variance(LightIntensity) > Tolerance THEN MusicalDrum.play('Alarm')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simón Dice: Edición Linterna",
+    "originalIdeaDescription": "El tambor toca un patrón (ej. Pum, Pum). El usuario debe replicarlo flasheando una luz sobre el sensor la misma cantidad de veces. El interruptor confirma el fin del turno.",
+    "transformedIdeaTitle": "Duelo de Percusión y Luz",
+    "transformedIdeaDescription": "El ordenador toca 3 golpes de tambor. Tú debes responder 'golpeando' el sensor de luz con tu linterna 3 veces. Al terminar tu turno, presiona el interruptor. Si coincidiste, pasas al siguiente nivel.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ComputerPlays(N); UserFlashes = CountLightPulses(); IF Switch.Pressed() AND UserFlashes == N THEN WinLevel()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Silencioso (Nocturno)",
+    "originalIdeaDescription": "De día (mucha luz), el interruptor hace sonar el tambor. De noche (poca luz), el interruptor solo registra la visita sin sonido.",
+    "transformedIdeaTitle": "Timbre Inteligente para Vampiros",
+    "transformedIdeaDescription": "Diseña un timbre para un castillo donde duermen vampiros de día. Si es de día (luz alta), el botón (interruptor) no debe hacer ruido para no despertarlos. Si es de noche (luz baja), el botón debe activar un sonido de tambor lúgubre para anunciar visitas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { IF LightIntensity < 20 THEN MusicalDrum.play('Spooky') ELSE DoNothing }"
+  }]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita Mágica Interactiva de Hechizos",
+    "originalIdeaDescription": "Un dispositivo que funciona como una varita mágica. Cuando el usuario realiza un movimiento brusco (agitar), el sistema activa una luz de color místico y muestra un símbolo de 'chispas' o estrellas en la matriz LED para simular el lanzamiento de un hechizo.",
+    "transformedIdeaTitle": "Academia de Magos: El Hechizo de Luz",
+    "transformedIdeaDescription": "¡Conviértete en un aprendiz de mago! Programa tu varita para que reconozca cuando lanzas un hechizo. Debes configurar el sensor para detectar el movimiento de tu brazo y, como recompensa mágica, iluminar la habitación y mostrar chispas mágicas en la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN Lamp.setColor('cyan') AND LEDMatrix.show('stars')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de Alerta de Terremotos",
+    "originalIdeaDescription": "Un sismógrafo casero que monitorea la estabilidad de una superficie. Si el sensor de movimiento detecta vibraciones inesperadas, la lámpara parpadea en rojo como advertencia y la matriz LED muestra una señal de peligro o una cruz.",
+    "transformedIdeaTitle": "Defensores de la Tierra: Detector Sísmico",
+    "transformedIdeaDescription": "Eres un ingeniero geólogo encargado de proteger la ciudad. Crea un dispositivo que detecte temblores en el suelo. Si la tierra se mueve, tu sistema debe activar inmediatamente la alarma visual roja y mostrar una señal de evacuación para salvar a todos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.intensity > 5 THEN Lamp.blink('red') AND LEDMatrix.show('X')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador Personal de Sentadillas",
+    "originalIdeaDescription": "Un dispositivo portátil que se coloca en el cuerpo. Detecta el movimiento vertical de una sentadilla. Al completar el movimiento, la luz se pone verde y la matriz LED muestra una cara feliz o suma un punto al contador.",
+    "transformedIdeaTitle": "Desafío Fitness: El Contador Inteligente",
+    "transformedIdeaDescription": "¡Es hora de ponerse en forma! Diseña un entrenador digital que cuente tus ejercicios. Configura el sistema para que detecte cuando bajas y subes. Cada vez que lo logres, recibirás una luz verde de aprobación y una sonrisa digital para motivarte.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Y_axis_change() THEN Lamp.setColor('green') AND LEDMatrix.show('smile')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva al Sueño",
+    "originalIdeaDescription": "Una mascota digital que 'duerme' cuando el dispositivo está quieto (luz tenue, ojos cerrados en LED). Si se mueve o agita, la mascota 'despierta' con luz brillante y ojos abiertos en la matriz.",
+    "transformedIdeaTitle": "Cuida a tu Robo-Mascota",
+    "transformedIdeaDescription": "Tu mascota robot necesita descansar, pero también quiere jugar. Programa su cerebro para que, cuando esté quieta, duerma plácidamente con luz suave. Pero cuidado, si la mueves para jugar, ¡debe despertarse con energía, iluminarse y abrir sus ojos digitales!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isStill() THEN Lamp.dim() AND LEDMatrix.show('sleep_eyes') ELSE Lamp.bright() AND LEDMatrix.show('open_eyes')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Bola de Cristal del Futuro",
+    "originalIdeaDescription": "Inspirado en la 'Magic 8-Ball'. El usuario hace una pregunta y agita el dispositivo. Al detenerse el movimiento, la lámpara cambia a un color místico (morado) y la matriz muestra un símbolo que representa 'Sí', 'No' o 'Quizás'.",
+    "transformedIdeaTitle": "El Oráculo Digital: Adivina tu Futuro",
+    "transformedIdeaDescription": "Crea un oráculo misterioso que responda las preguntas de tus amigos. Programa el sistema para detectar cuando alguien agita la bola de cristal. Al detenerse, el oráculo debe revelar el destino con una luz mística y un símbolo secreto en la pantalla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake_end() THEN Lamp.setColor('purple') AND LEDMatrix.showRandom(['yes','no','maybe'])"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Luz Trasera Inteligente para Bicicleta",
+    "originalIdeaDescription": "Un dispositivo de seguridad para ciclistas. Cuando el sensor detecta una desaceleración rápida (frenado), la lámpara se enciende en rojo intenso y la matriz LED muestra una señal de 'STOP' o un cuadrado sólido.",
+    "transformedIdeaTitle": "Ingeniero Vial: Freno Automático Seguro",
+    "transformedIdeaDescription": "La seguridad en la bicicleta es crucial. Tu misión es programar una luz inteligente que avise a los coches cuando frenas. Si la bicicleta reduce su velocidad bruscamente, enciende la luz roja de alerta máxima y muestra una señal de parada para evitar accidentes.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.deceleration > threshold THEN Lamp.setColor('red') AND LEDMatrix.show('square_filled')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Escudo de Energía Galáctico",
+    "originalIdeaDescription": "Un juguete de rol. Cuando el usuario levanta el dispositivo rápidamente como si bloqueara un golpe, la lámpara parpadea en azul y la matriz muestra un diseño de escudo, simulando la activación de una defensa.",
+    "transformedIdeaTitle": "Guardián Espacial: Activa el Escudo",
+    "transformedIdeaDescription": "¡Estás bajo ataque alienígena! Programa tu brazalete de defensa. Cuando detectes un movimiento rápido de bloqueo con tu brazo, despliega instantáneamente el escudo de energía: una luz azul brillante y un icono de protección impenetrable.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.gesture('block') THEN Lamp.flash('blue') AND LEDMatrix.show('shield_icon')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Un dispositivo de juego que simula detectar presencias. Si el usuario camina sigilosamente (movimiento suave), el dispositivo reacciona aleatoriamente con luces parpadeantes y figuras fantasmales en la matriz para asustar al usuario.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Construye un radar para encontrar entes paranormales en la oscuridad. Mientras caminas explorando (movimiento suave), programa el dispositivo para que, de repente, detecte un 'pico de energía', haciendo parpadear la luz y mostrando un fantasma en la pantalla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isWalking() AND Random.trigger() THEN Lamp.flicker('white') AND LEDMatrix.show('ghost')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Incubadora de Huevo de Dragón",
+    "originalIdeaDescription": "El dispositivo representa un huevo. El usuario debe mantenerlo caliente y moverlo suavemente. Si se agita demasiado fuerte, la luz se pone roja (daño). Si se mece suavemente, la luz es naranja cálida y la matriz muestra un corazón latiendo.",
+    "transformedIdeaTitle": "El Cuidador de Dragones",
+    "transformedIdeaDescription": "Tienes un huevo de dragón muy frágil. Tu tarea es programar la incubadora para que reconozca el trato suave. Si lo meces con cuidado, muestra un corazón y luz cálida. Pero ¡cuidado! Si lo agitas fuerte, activa la alarma roja, o el huevo no nacerá.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake_strong() THEN Lamp.red() ELSE IF Motion.sway() THEN Lamp.orange() AND LEDMatrix.animate('heart')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente Explosiva",
+    "originalIdeaDescription": "Un juego grupal donde se pasa el dispositivo. El sensor detecta el pase (movimiento). Con cada pase, la luz cambia de color (verde a rojo) y la matriz muestra una cuenta regresiva visual hasta que 'explota'.",
+    "transformedIdeaTitle": "Desactivación de Bomba: La Papa Caliente",
+    "transformedIdeaDescription": "Programa el juego definitivo para tus fiestas. El dispositivo es una 'bomba' inestable. Detecta cuando se pasa de mano en mano. Con cada movimiento, aumenta la tensión cambiando la luz hacia el rojo y reduciendo el tiempo en la pantalla. ¡Que no te explote a ti!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.toss() THEN Timer.decrease() AND Lamp.shiftColorTo('red') AND LEDMatrix.show(Timer.value)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Cinturón de Superhéroe de Velocidad",
+    "originalIdeaDescription": "Un dispositivo para correr. Cuanto más rápido se mueva el usuario (mayor intensidad de movimiento), más brillante se vuelve la lámpara y la matriz muestra flechas animadas indicando velocidad.",
+    "transformedIdeaTitle": "Flash Kid: Velocímetro Humano",
+    "transformedIdeaDescription": "Diseña tu propio traje de superhéroe. Programa tu cinturón para que reaccione a tu supervelocidad. Cuanto más rápido corras y te muevas, más intensas deben ser las flechas en tu pantalla y más brillante tu aura de luz. ¡Corre como el viento!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SET Lamp.brightness = Motion.intensity AND LEDMatrix.animate('arrows_up', speed=Motion.intensity)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Luces de Fiesta Disco Portátil",
+    "originalIdeaDescription": "Un generador de ambiente para bailar. Detecta el ritmo del movimiento del usuario. Si el usuario baila, la lámpara cambia de colores aleatorios rápidamente y la matriz muestra patrones geométricos tipo caleidoscopio.",
+    "transformedIdeaTitle": "DJ Robot: Fiesta de Baile",
+    "transformedIdeaDescription": "¡Lleva la fiesta contigo! Programa un dispositivo que sepa cuándo estás bailando. Usa el sensor para detectar el ritmo de tu cuerpo. Si te mueves, haz que las luces se vuelvan locas con colores y la pantalla muestre patrones disco. Si paras, la fiesta se apaga.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Motion.isActive() DO Lamp.randomColor() AND LEDMatrix.showPattern('disco') END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Espada de Luz Interactiva",
+    "originalIdeaDescription": "Simulación de espada láser. Al mover el dispositivo en arcos (swing), la lámpara mantiene un color sólido brillante y la matriz muestra una línea que crece y decrece según la dirección del movimiento.",
+    "transformedIdeaTitle": "Academia Jedi: Construye tu Sable",
+    "transformedIdeaDescription": "Todo caballero necesita su espada. Programa la tuya para que se active al blandirla. Cuando muevas el brazo haciendo un corte, la luz debe brillar intensamente y la pantalla debe simular el haz de energía extendiéndose. ¡Que la fuerza del código te acompañe!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.swing() THEN Lamp.on('blue') AND LEDMatrix.showAnimation('beam_extend')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Podómetro de Exploración Espacial",
+    "originalIdeaDescription": "Cuenta pasos simulando una caminata lunar. Cada vez que detecta un paso (impacto vertical), la lámpara parpadea en blanco y la matriz incrementa una barra de progreso para llegar a la 'base'.",
+    "transformedIdeaTitle": "Misión a Marte: Caminata Lunar",
+    "transformedIdeaDescription": "Estás explorando la superficie de un nuevo planeta. Necesitas medir tu distancia a la base. Programa tu traje para contar cada paso que das. Con cada impacto de tu bota, enciende una luz guía y llena la barra de energía en tu pantalla hasta completar la misión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN Lamp.pulse('white') AND LEDMatrix.addPixelToBar()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Cohete de Despegue Vertical",
+    "originalIdeaDescription": "Simulador de lanzamiento. El usuario debe mover el dispositivo hacia arriba rápidamente. Esto desencadena una luz amarilla/naranja (fuego) y una animación de despegue en la matriz LED.",
+    "transformedIdeaTitle": "Control de Misión: Despegue en 3, 2, 1...",
+    "transformedIdeaDescription": "Prepara el lanzamiento del cohete. Tu código debe detectar cuando el cohete (tu dispositivo) acelera hacia el cielo. En ese momento exacto, activa los motores: luz naranja de fuego y una animación de la nave subiendo en la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.moveUpFast() THEN Lamp.setColor('orange') AND LEDMatrix.animate('rocket_up')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Linterna de Explorador con Brújula Visual",
+    "originalIdeaDescription": "Una linterna inteligente. Se enciende al moverse. Además, dependiendo de hacia dónde se incline el dispositivo (izquierda/derecha), la matriz muestra una flecha indicando el camino, y la luz cambia de tono para iluminar zonas oscuras.",
+    "transformedIdeaTitle": "Explorador de Cuevas: Luz Guía",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Programa tu linterna inteligente. No solo debe encenderse cuando te mueves, sino que si inclinas la mano a la izquierda o derecha, debe mostrarte una flecha en la pantalla para guiar a tu equipo por el túnel.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.tiltLeft() THEN LEDMatrix.show('arrow_left') ELSE IF Motion.active() THEN Lamp.on('white')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Dado Digital Gigante",
+    "originalIdeaDescription": "Reemplazo de dados para juegos de mesa. El usuario agita el dispositivo como un cubilete. Al detenerse, la lámpara muestra un color aleatorio (para el equipo) y la matriz muestra un número del 1 al 6.",
+    "transformedIdeaTitle": "Noche de Juegos: El Super Dado",
+    "transformedIdeaDescription": "¡No pierdas más los dados! Crea uno digital indestructible. Programa el sistema para detectar cuando lo agitas fuertemente. Al parar, debe calcular un número al azar, mostrarlo en la pantalla y asignar un color de equipo con la lámpara.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake_stop() THEN Lamp.randomColor() AND LEDMatrix.showNumber(Random(1,6))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Museo",
+    "originalIdeaDescription": "Un dispositivo 'No Tocar'. Se coloca sobre un objeto. Si detecta el más mínimo movimiento (alguien intentando robarlo), la lámpara parpadea como sirena de policía y la matriz muestra un ojo vigilante.",
+    "transformedIdeaTitle": "Agente Secreto: Protege el Diamante",
+    "transformedIdeaDescription": "Tienes que proteger una joya valiosa. Diseña una trampa para ladrones. Coloca el sensor sobre la joya y prográmalo: si detecta el más mínimo movimiento, ¡activa la alarma policial azul y roja y muestra un ojo gigante que todo lo ve!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.moved() THEN Lamp.strobe('blue', 'red') AND LEDMatrix.show('eye')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Generador de efectos de sonido y luz. Al agitar fuertemente el dispositivo, se simula un trueno: la lámpara emite flashes blancos estroboscópicos y la matriz muestra un rayo cayendo.",
+    "transformedIdeaTitle": "El Señor del Clima: Crea Tormentas",
+    "transformedIdeaDescription": "Controla el clima con tus manos. Programa un efecto de tormenta: cuando agites el dispositivo con fuerza, debes desatar el poder del trueno haciendo que la luz parpadee como un relámpago y aparezca un rayo eléctrico en tu pantalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake_heavy() THEN Lamp.strobe('white', fast) AND LEDMatrix.show('lightning')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Reacción Química Inestable",
+    "originalIdeaDescription": "Juego de equilibrio. El usuario debe mantener el dispositivo perfectamente plano. Si se inclina, el 'líquido' (luz verde) se vuelve 'inestable' (luz amarilla/roja) y la matriz muestra burbujas que explotan.",
+    "transformedIdeaTitle": "Laboratorio Loco: La Mezcla Peligrosa",
+    "transformedIdeaDescription": "Eres un científico transportando una sustancia volátil. Debes caminar manteniendo el dispositivo plano. Programa la alerta: si se inclina, la luz verde segura debe cambiar a roja de peligro y la pantalla debe mostrar burbujas a punto de explotar. ¡Mantén el equilibrio!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.isLevel() THEN Lamp.green() ELSE Lamp.red() AND LEDMatrix.animate('bubbles_pop')"
+  }
+]

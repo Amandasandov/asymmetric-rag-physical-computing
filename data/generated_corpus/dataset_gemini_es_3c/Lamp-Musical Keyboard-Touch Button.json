@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado con Retroalimentación Visual Sinestésica",
+    "originalIdeaDescription": "Un sistema donde cada vez que se toca una nota en el teclado, la lámpara se ilumina con un color específico asignado a esa nota. El botón táctil se utiliza para cambiar entre diferentes paletas de colores (ej. colores cálidos para notas agudas, fríos para graves).",
+    "transformedIdeaTitle": "El Piano del Arcoíris",
+    "transformedIdeaDescription": "¡Convierte el sonido en luz! En esta actividad, los estudiantes crearán un instrumento mágico donde cada nota musical pinta la habitación de un color diferente. Aprenderán a asociar frecuencias sonoras con variables visuales, permitiendo 'ver' la música que componen.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF MusicalKeyboard.notePressed() THEN Lamp.setColor(noteColor); IF TouchButton.isPressed() THEN changeColorPalette()"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta para Personas con Discapacidad Auditiva",
+    "originalIdeaDescription": "Un sistema de notificación accesible. Cuando se presiona el botón táctil (el timbre), se reproduce una melodía en el teclado y simultáneamente la lámpara parpadea intensamente para alertar visualmente a alguien que no puede escuchar el sonido.",
+    "transformedIdeaTitle": "Timbre Inteligente e Inclusivo",
+    "transformedIdeaDescription": "Diseña un sistema de alerta para un hogar moderno e inclusivo. Los estudiantes programarán un timbre que no solo suena, sino que también avisa con luces parpadeantes, enseñando la importancia de la accesibilidad y la redundancia en los sistemas de comunicación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { MusicalKeyboard.playMelody('DingDong'); Lamp.blink(Color.WHITE, 3_times) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida Luz-Sonido",
+    "originalIdeaDescription": "La lámpara se enciende en un color aleatorio después de un tiempo de espera. El usuario debe presionar el botón táctil lo más rápido posible. Si es rápido, suena una fanfarria de victoria; si es lento, suena un tono grave de error.",
+    "transformedIdeaTitle": "Reflejos Relámpago",
+    "transformedIdeaDescription": "Desafía a tus amigos a ver quién tiene los reflejos más rápidos. Los estudiantes crearán un juego donde deben esperar la señal luminosa 'VERDE' y presionar el botón al instante para ganar un premio musical. Introduce conceptos de temporizadores y condicionales.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(RandomTime); Lamp.on(Green); StartTimer(); IF TouchButton.pressed() AND Time < 1sec THEN MusicalKeyboard.play('Victory') ELSE MusicalKeyboard.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música Nocturna con Temporizador",
+    "originalIdeaDescription": "Al presionar el botón, se activa un modo de relajación. La lámpara se atenúa a un azul suave y el teclado reproduce una canción de cuna lenta. Al finalizar la canción, la luz se apaga automáticamente.",
+    "transformedIdeaTitle": "La Nana Automática",
+    "transformedIdeaDescription": "Ayuda al bebé robot a dormir. Los estudiantes programarán una secuencia relajante que se activa con un toque suave, combinando luces tenues y melodías lentas, aprendiendo sobre secuencias lineales y automatización del hogar.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { Lamp.setColor(SoftBlue); MusicalKeyboard.playSong('Lullaby'); Wait(SongEnd); Lamp.off() }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Musical Interactivo",
+    "originalIdeaDescription": "La lámpara alterna entre rojo y verde. Cuando está en verde, el botón táctil permite tocar notas en el teclado. Cuando está en rojo, el botón desactiva el sonido y si se toca, emite un sonido de advertencia.",
+    "transformedIdeaTitle": "Luz Roja, Luz Verde Musical",
+    "transformedIdeaDescription": "¡Un giro musical al juego clásico! Los estudiantes programarán las reglas del juego: solo puedes tocar música cuando la luz es verde. Si tocas cuando es roja, ¡pierdes! Introduce lógica de estados (State Machines) básica.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop { Lamp.color(Green); SoundEnabled = True; Wait(5s); Lamp.color(Red); SoundEnabled = False; } Event: IF ButtonPressed AND !SoundEnabled THEN Play('Buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Musical Keyboard",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Máquina de Código Morse Audiovisual",
+    "originalIdeaDescription": "El botón táctil funciona como un manipulador de telégrafo. Presiones cortas producen un sonido agudo y luz breve; presiones largas producen un sonido grave y luz larga, permitiendo enviar mensajes en código Morse.",
+    "transformedIdeaTitle": "El Telégrafo Espía",
+    "transformedIdeaDescription": "Conviértete en un agente secreto enviando mensajes codificados. Los estudiantes aprenderán a diferenciar entre pulsaciones cortas y largas para generar señales de luz y sonido, creando su propio sistema de comunicación Morse.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.downDuration < 0.3s THEN { Lamp.flash(Short); Keyboard.beep(High) } ELSE { Lamp.flash(Long); Keyboard.beep(Low) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo Ambiental",
+    "originalIdeaDescription": "Cada vez que se presiona el botón, se cambia el 'modo' del ambiente. Modo 1: Luz amarilla + Música alegre. Modo 2: Luz azul + Música triste. Modo 3: Luz roja + Música energética.",
+    "transformedIdeaTitle": "Creador de Ambientes Emocionales",
+    "transformedIdeaDescription": "¿Cómo te sientes hoy? Los estudiantes programarán un dispositivo que cambia la atmósfera de la habitación con un solo toque, explorando cómo la luz y el sonido influyen en las emociones y aprendiendo a usar variables contadoras para cambiar estados.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "counter = counter + 1; IF counter == 1 THEN { Lamp.set(Yellow); Keyboard.play(Happy) } ELSE IF counter == 2 THEN { Lamp.set(Blue); Keyboard.play(Sad) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual con Tap Tempo",
+    "originalIdeaDescription": "El usuario marca un ritmo presionando el botón táctil repetidamente. El sistema calcula la velocidad (BPM) y luego usa la lámpara y un sonido corto del teclado para mantener ese ritmo constantemente.",
+    "transformedIdeaTitle": "El Maestro del Ritmo",
+    "transformedIdeaDescription": "Mantén el compás de la banda. Los estudiantes crearán una herramienta útil para músicos que aprende el ritmo que tocas con el dedo y luego lo repite con luz y sonido. Desafío avanzado de cálculo de intervalos de tiempo.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "interval = TimeNow - LastPressTime; Loop { Lamp.blink(); Keyboard.click(); Wait(interval) }"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Musical Keyboard",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Intrusos de Juguete",
+    "originalIdeaDescription": "El sistema se 'arma' manteniendo presionado el botón. Una vez armado, la lámpara parpadea en rojo lentamente. Si se suelta el botón (simulando abrir una puerta o soltar un objeto), suena una sirena fuerte y la luz estroboscópica se activa.",
+    "transformedIdeaTitle": "La Trampa de Seguridad",
+    "transformedIdeaDescription": "¡Protege tus tesoros! Los estudiantes diseñarán una alarma que se activa cuando alguien deja de presionar el botón (o quita un objeto del sensor). Aprenderán sobre lógica inversa (activar al soltar) y bucles de alerta.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isReleased() AND SystemArmed THEN { Loop { MusicalKeyboard.playSirene(); Lamp.strobe(Red) } }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Simón Dice",
+    "originalIdeaDescription": "La computadora genera una secuencia de colores en la lámpara y notas en el teclado. El usuario debe usar el botón táctil para confirmar que ha visto la secuencia, o en una versión simplificada, contar los parpadeos y presionar el botón esa cantidad de veces.",
+    "transformedIdeaTitle": "Desafío de Memoria Alienígena",
+    "transformedIdeaDescription": "Una nave espacial intenta comunicarse. Los estudiantes programan una secuencia de luces y sonidos que el jugador debe memorizar. Deben contar cuántas veces brilló la luz y presionar el botón el mismo número de veces para 'responder' al mensaje.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "GenerateSequence(N); PlaySequence(); UserInput = CountButtonPresses(); IF UserInput == N THEN Win ELSE Lose"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Controlador de DJ con Efectos de Luz",
+    "originalIdeaDescription": "El teclado reproduce un bucle de batería base. El botón táctil se usa para inyectar efectos de sonido o notas de sintetizador encima del ritmo, y cada vez que se presiona, la lámpara cambia de color aleatoriamente al ritmo del toque.",
+    "transformedIdeaTitle": "Consola de DJ Superestrella",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Los estudiantes programan una base rítmica automática y usan el botón como un disparador de efectos especiales (samples) y luces de discoteca, aprendiendo sobre ejecución paralela de sonido y eventos de usuario.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Background: PlayLoop(Drums); Event: IF Button.pressed() THEN { Lamp.setRandomColor(); Keyboard.playEffect(Scratch) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Adivina la Nota Musical",
+    "originalIdeaDescription": "El sistema reproduce una nota al azar y muestra un color asociado (pista). El usuario debe presionar el botón táctil cuando cree saber qué nota es, revelando la respuesta correcta mediante una melodía de confirmación y luz blanca brillante.",
+    "transformedIdeaTitle": "Entrenador de Oído Musical",
+    "transformedIdeaDescription": "Un juego educativo para aprender música. El sistema toca una nota misteriosa y da una pista de color. Al presionar el botón, el sistema revela la respuesta. Los estudiantes usan lógica condicional para diseñar un quiz interactivo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Note = Random(); Keyboard.play(Note); Lamp.color(HintColor); WaitButton(); Speak(NoteName); Lamp.on(White)"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Medidor de Intensidad de Aplausos (Simulado)",
+    "originalIdeaDescription": "El usuario debe presionar el botón táctil lo más rápido posible (simulando aplausos frenéticos). La lámpara sube de intensidad y el teclado sube de tono (pitch) cuanto más rápida sea la frecuencia de pulsación.",
+    "transformedIdeaTitle": "El Termómetro de la Fama",
+    "transformedIdeaDescription": "¿Cuánto le gusta al público tu actuación? Los estudiantes crean un medidor que reacciona a la velocidad de los dedos. Cuanto más rápido presionen el botón, más brillante la luz y más agudo el sonido, visualizando datos de frecuencia en tiempo real.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Speed = CalculateClicksPerSecond(); Lamp.brightness(Speed * 10); MusicalKeyboard.setPitch(Base + Speed * 100)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narrador de Historias con Efectos FX",
+    "originalIdeaDescription": "Al presionar el botón, se avanza a la siguiente escena de una historia. Cada escena tiene un color de lámpara (ej. verde para bosque) y un sonido de fondo en el teclado (ej. notas graves para misterio) preprogramados.",
+    "transformedIdeaTitle": "Cuentos Interactivos Mágicos",
+    "transformedIdeaDescription": "Da vida a tus libros. Los estudiantes programan una secuencia de 'escenas'. Cada vez que el lector presiona el botón, la atmósfera cambia (luz y sonido) para coincidir con la parte de la historia que están contando.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Scene++; IF Scene==1 THEN {Lamp.green(); Music.forest()} IF Scene==2 THEN {Lamp.red(); Music.danger()}"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Temporizador de 'Bomba' para Juegos",
+    "originalIdeaDescription": "Un temporizador cuenta regresivamente con un sonido de 'tic-tac' en el teclado y la lámpara parpadeando más rápido. El botón táctil debe mantenerse presionado por 5 segundos para 'desactivar' la bomba antes de que llegue a cero y 'explote' (sonido fuerte + luz roja fija).",
+    "transformedIdeaTitle": "Misión: Desactivar el Dispositivo",
+    "transformedIdeaDescription": "¡El tiempo se acaba! Los estudiantes crean un dispositivo de juego emocionante. Deben programar un bucle que acelera el ritmo y una condición de salida compleja (mantener presionado el botón) para ganar el juego.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Timer > 0 { Play(Tick); Lamp.blink(); IF Button.held(5s) THEN Win() }; IF Timer == 0 THEN Explosion()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Emocional",
+    "originalIdeaDescription": "El sistema actúa como una mascota. Si no tocas el botón por mucho tiempo, la lámpara se pone azul y suena triste. Si tocas el botón ('acariciar'), la lámpara se pone rosa y el teclado hace sonidos felices.",
+    "transformedIdeaTitle": "Tu Mascota Digital",
+    "transformedIdeaDescription": "Crea un amigo digital que necesita atención. Los estudiantes programan 'estados de ánimo' basados en temporizadores de inactividad. Si ignoras a la mascota, se pone triste; si juegas con el botón, se pone feliz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TimeSinceLastPress > 10s THEN { Lamp.blue(); Sound.sad() } ELSE { Lamp.pink(); Sound.happy() }"
+  },
+  {
+    "componentUsed": [
+      "Touch Button",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz Musical Aleatorio",
+    "originalIdeaDescription": "Un interruptor de luz divertido. Cada vez que se presiona el botón para encender o apagar la lámpara, el teclado reproduce un efecto de sonido cómico aleatorio diferente.",
+    "transformedIdeaTitle": "El Interruptor Bromista",
+    "transformedIdeaDescription": "¡Haz que encender la luz sea divertido! Los estudiantes reinventan el aburrido interruptor de luz. Al presionarlo, no solo controla la luz, sino que elige un sonido gracioso al azar de una lista, enseñando sobre listas y aleatoriedad.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed() THEN { Lamp.toggle(); RandomSound = List[RandomIndex]; Keyboard.play(RandomSound) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Verdad o Mentira (Juguete)",
+    "originalIdeaDescription": "El 'interrogador' presiona el botón mientras alguien habla. El sistema aleatoriamente decide si es 'Verdad' (Luz Verde + Timbre Agudo) o 'Mentira' (Luz Roja + Zumbido Grave).",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Construye un juguete para jugar con amigos. Los estudiantes programan un dispositivo que, al presionar un botón, elige al azar un resultado binario (Verdad/Mentira), usando diferentes salidas de luz y sonido para cada resultado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed() THEN { Result = Random(0,1); IF Result==1 THEN {Lamp.Green(); Sound.Ding()} ELSE {Lamp.Red(); Sound.Buzz()} }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Touch Button",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Paso a Paso",
+    "originalIdeaDescription": "El usuario construye un ritmo. Presiona el botón para agregar un 'golpe' en el tiempo actual. La lámpara se ilumina en cada tiempo fuerte y el teclado reproduce los golpes grabados en bucle.",
+    "transformedIdeaTitle": "Compositor de Bucles",
+    "transformedIdeaDescription": "Crea tu propia base de rap. Los estudiantes diseñan un sistema que graba cuándo presionas el botón dentro de un ciclo de tiempo y luego reproduce esos sonidos continuamente, visualizando el tempo con la luz.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop(4_Beats) { FlashLamp(); IF Button.pressed() THEN RecordHit(); IF HitRecorded THEN PlayDrum() }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de las Estatuas Musicales Automático",
+    "originalIdeaDescription": "El sistema reproduce música y luces de fiesta aleatoriamente. De repente, se detiene (Luz Roja, Silencio). Si se presiona el botón durante el silencio (moverse), se pierde. El botón reinicia la música.",
+    "transformedIdeaTitle": "Estatuas Congeladas",
+    "transformedIdeaDescription": "Automatiza el juego de las estatuas. El programa reproduce música por un tiempo aleatorio y luego para. Los estudiantes deben programar la lógica para detener todo y esperar a que el 'juez' reinicie el juego con el botón.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "While GameOn { PlayMusic(); Lamp.Disco(); Wait(Random); StopAll(); Lamp.Red(); WaitButtonToRestart() }"
+  }
+]

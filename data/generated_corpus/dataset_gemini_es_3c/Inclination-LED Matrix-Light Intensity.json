@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Rastreador Solar Inteligente para Optimización Energética",
+    "originalIdeaDescription": "Un sistema que simula un panel solar motorizado. Utiliza el sensor de luz para detectar la fuente más brillante y la inclinación para ajustar el ángulo visual en la matriz LED, maximizando la eficiencia teórica de la recolección de energía.",
+    "transformedIdeaTitle": "El Girasol Robótico",
+    "transformedIdeaDescription": "¡Ayuda a tu flor robótica a sobrevivir! Programa el Girasol para que 'busque' la luz. Los estudiantes deben mover el dispositivo (inclinación) hasta que el sensor de luz detecte el valor máximo. Si la luz es baja, la matriz muestra una cara triste; si está perfectamente alineada con la luz brillante, muestra una sonrisa radiante.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN LED.show('Sad') ELSE IF Inclination.X aligns_with_light THEN LED.show('Smile')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación para Vehículos Subterráneos",
+    "originalIdeaDescription": "Simulador de un vehículo topo que debe navegar en la oscuridad total. La inclinación dirige el movimiento del vehículo y la intensidad de luz detecta brechas en la superficie o minerales brillantes, mostrando la dirección en la matriz.",
+    "transformedIdeaTitle": "Escape de la Mina de Diamantes",
+    "transformedIdeaDescription": "Eres el conductor de un taladro subterráneo. Usa la inclinación para dirigir tu excavadora (píxel en la matriz). Sin embargo, solo puedes avanzar si la 'oscuridad' es total (sensor de luz cubierto). Si entra luz, significa que has roto el túnel y debes detenerte mostrando una 'X' de advertencia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 10 THEN LED.show('X') ELSE LED.movePixel(Inclination.X, Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés Virtuales",
+    "originalIdeaDescription": "Un dispositivo que monitorea si un bebé virtual está durmiendo. La inclinación detecta si la cuna se mueve y la luz detecta si la habitación está oscura, mostrando el estado del bebé en la pantalla.",
+    "transformedIdeaTitle": "Niñera de Monstruos",
+    "transformedIdeaDescription": "Cuida a un pequeño monstruo que solo duerme si está a oscuras y lo meces suavemente. Si hay mucha luz, el monstruo despierta (ojos abiertos en LED). Si la luz es baja pero no inclinas el dispositivo suavemente (mecer), el monstruo llora. ¡Logra que se duerma (Zzz en LED)!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 THEN LED.show('Awake') ELSE IF Inclination.isRocking() THEN LED.show('Zzz') ELSE LED.show('Cry')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Ciclocomputador con Luces Automáticas de Seguridad",
+    "originalIdeaDescription": "Accesorio para bicicletas que usa la inclinación para detectar frenado o giros, y el sensor de luz para encender automáticamente la señalización en la matriz LED cuando entra en túneles o anochece.",
+    "transformedIdeaTitle": "La Bici del Futuro",
+    "transformedIdeaDescription": "Diseña el sistema de seguridad para una bicicleta inteligente. Cuando el sensor de luz detecta que es de noche, la matriz LED debe encenderse automáticamente. Además, si inclinas el dispositivo a la izquierda o derecha, la matriz debe mostrar flechas direccionales intermitentes para avisar a los demás conductores.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 40 THEN (IF Inclination.X < -20 THEN LED.show('LeftArrow') ELSE LED.show('LightOn')) ELSE LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Juego de Sigilo",
+    "originalIdeaDescription": "Un mando para juegos donde el movimiento del personaje se controla con inclinación, pero el personaje se congela si el sensor detecta luz ambiental alta, simulando ser visto por un guardia.",
+    "transformedIdeaTitle": "Agente Secreto: Misión Sombra",
+    "transformedIdeaDescription": "¡Infíltrate en la base enemiga! Mueve a tu agente (punto LED) inclinando el dispositivo a través de un laberinto. Pero cuidado: si la luz de la habitación se enciende (sensor de luz), un reflector te ha descubierto y debes quedarte totalmente inmóvil o perderás la partida.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN Game.Freeze() ELSE Game.MoveCharacter(Inclination.X, Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja con Calibración de Brillo",
+    "originalIdeaDescription": "Herramienta de construcción que muestra una burbuja niveladora en la matriz. El brillo de los LEDs se ajusta inversamente a la luz ambiental para ser visible tanto en interiores oscuros como bajo el sol.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "Ayuda a construir la Torre de Pisa... ¡pero recta! Crea un nivel digital donde un punto se mueve al centro si la placa está plana. El desafío extra: el sistema debe ahorrar batería, así que si hay poca luz ambiental, la matriz debe brillar menos, y si hay mucho sol, debe brillar al máximo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LED.setBrightness(map(LightIntensity, 0, 100, 1, 10)); LED.plot(Inclination.X, Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo con Horizonte Artificial Nocturno",
+    "originalIdeaDescription": "Instrumento de avión que muestra el horizonte artificial basado en la inclinación. El modo nocturno (colores tenues o diseño simplificado) se activa automáticamente cuando el sensor de luz detecta oscuridad en la cabina.",
+    "transformedIdeaTitle": "Piloto de Avión Nocturno",
+    "transformedIdeaDescription": "Pilota tu avión a través de una tormenta. Usa la inclinación para mantener el avión nivelado (línea horizontal en la matriz). Cuando se hace de noche (tapa el sensor de luz), el tablero cambia a 'Modo Nocturno' mostrando solo puntos parpadeantes de las pistas de aterrizaje en lugar de la línea del horizonte.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 20 THEN LED.showAnimation('RunwayLights') ELSE LED.drawLine(Inclination.Roll)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Sensor Láser y Combinación",
+    "originalIdeaDescription": "Sistema de seguridad donde la inclinación actúa como dial giratorio para introducir números. El sensor de luz actúa como un mecanismo 'anti-manipulación'; si detecta luz (caja abierta), se bloquea.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Intenta abrir la caja fuerte girando el dial (inclinando el dispositivo como un volante) para encontrar el número secreto en la pantalla LED. ¡Pero ten cuidado! Si el sensor de luz detecta cualquier rayo de luz (linterna del guardia), la alarma se dispara (pantalla parpadea) y el código se reinicia.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity > 10 THEN TriggerAlarm() ELSE IF Inclination.X == SecretAngle THEN UnlockSafe()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mascota Camaleón Reactiva",
+    "originalIdeaDescription": "Un juguete digital que cambia su patrón en la matriz LED según la inclinación (postura) y ajusta su 'camuflaje' (brillo o densidad de píxeles) basándose en la intensidad de la luz ambiental.",
+    "transformedIdeaTitle": "Camaleón Digital",
+    "transformedIdeaDescription": "Crea una mascota camaleón. Si hay mucha luz, el camaleón se asusta y se hace pequeño (un solo punto en el centro). Si está oscuro, se relaja y llena la pantalla. Además, si inclinas el dispositivo, el camaleón 'camina' (la animación se desplaza) hacia esa dirección.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 80 THEN LED.show('Dot') ELSE LED.show('FullPattern'); LED.scroll(Inclination.X)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Brújula Solar de Supervivencia",
+    "originalIdeaDescription": "Herramienta que ayuda a encontrar el norte aproximado utilizando la posición del sol (luz más fuerte) y la inclinación del dispositivo para calcular la sombra proyectada virtualmente en la matriz.",
+    "transformedIdeaTitle": "Explorador del Desierto",
+    "transformedIdeaDescription": "Estás perdido en el desierto. Para encontrar el camino, debes apuntar el dispositivo hacia el sol (máxima luz). Al mismo tiempo, debes mantener el dispositivo perfectamente plano (inclinación 0). Solo cuando ambas condiciones se cumplan, la matriz mostrará una flecha indicando la salida.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity == Max AND Inclination.isFlat() THEN LED.show('ArrowNorth') ELSE LED.show('Searching...')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Murciélago con Ecolocalización",
+    "originalIdeaDescription": "Juego donde el usuario 'vuela' usando la inclinación. La visibilidad del entorno en la matriz LED depende de la oscuridad; a más oscuridad (modo nocturno real), mejor 've' el sonar del murciélago.",
+    "transformedIdeaTitle": "Soy Batman (El Murciélago)",
+    "transformedIdeaDescription": "Conviértete en un murciélago. Vuelas inclinando la placa. Lo curioso es que eres ciego a la luz. Si hay mucha luz en la habitación, la matriz se apaga (ceguera). Si cubres el sensor (oscuridad), el sonar se activa y puedes ver los obstáculos en la matriz LED para esquivarlos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 THEN Game.RenderObstacles(Inclination) ELSE LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Bola Mágica 8 Fotosensible",
+    "originalIdeaDescription": "Dispositivo de adivinación. Se agita (cambio rápido de inclinación) para mezclar una respuesta. La respuesta solo se revela en la matriz LED si el dispositivo se coloca bajo una luz brillante, simulando tinta invisible.",
+    "transformedIdeaTitle": "Oráculo de Tinta Invisible",
+    "transformedIdeaDescription": "Crea una bola mágica misteriosa. Primero, el usuario debe agitar el dispositivo (detectado por el acelerómetro/inclinación) para 'invocar' la respuesta. Sin embargo, la pantalla permanecerá negra hasta que el usuario ponga el dispositivo bajo una luz fuerte para 'revelar' la respuesta secreta.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ShakeDetected(Inclination) THEN AnswerReady = True; IF AnswerReady AND LightIntensity > 80 THEN LED.show('Yes') ELSE LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Entrenador de Yoga Saludo al Sol",
+    "originalIdeaDescription": "Dispositivo weareable para corregir postura. Detecta la inclinación correcta del torso y verifica si el usuario está orientado hacia una fuente de luz (el sol) para validar el ejercicio.",
+    "transformedIdeaTitle": "Maestro de Yoga Zen",
+    "transformedIdeaDescription": "Programa un asistente de yoga. El estudiante debe realizar la postura del 'Guerrero'. El dispositivo verifica si el brazo está horizontal (inclinación) y si está saludando al sol (sensor de luz apuntando a una fuente brillante). Si ambas cosas ocurren, la matriz muestra un símbolo de 'Om' o una flor de loto.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y approx 0 AND LightIntensity > 60 THEN LED.show('Lotus') ELSE LED.show('Adjust')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Alerta de Avalancha",
+    "originalIdeaDescription": "Dispositivo de seguridad para esquiadores. Si detecta una inclinación errática (caída) seguida de oscuridad total (enterrado bajo nieve), activa una señal SOS visual intermitente en la matriz para rescate.",
+    "transformedIdeaTitle": "Rescate en la Nieve",
+    "transformedIdeaDescription": "Simula un dispositivo de emergencia. Si el esquiador cae (cambio brusco de inclinación) y queda enterrado (luz llega a 0), la matriz LED debe empezar a parpadear automáticamente con las letras 'S.O.S' para que los equipos de rescate puedan localizarlo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF FallDetected(Inclination) AND LightIntensity == 0 THEN LED.flash('SOS')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Terrario Virtual con Clima Dinámico",
+    "originalIdeaDescription": "Simulación de un ecosistema. La luz controla el ciclo día/noche. La inclinación provoca 'terremotos' o cambios de terreno que afectan a las criaturas virtuales mostradas en la matriz.",
+    "transformedIdeaTitle": "Dios del Clima",
+    "transformedIdeaDescription": "Controla un pequeño mundo en la matriz LED. Si iluminas el sensor, sale el sol y crecen plantas (píxeles verdes/brillantes). Si tapas el sensor, salen las estrellas. Si agitas la placa (inclinación rápida), provocas un terremoto y las construcciones de píxeles se derrumban.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Shake(Inclination) THEN CollapseBuildings(); IF LightIntensity > 50 THEN ShowSun() ELSE ShowStars()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Cámara Estenopeica Digital Simulada",
+    "originalIdeaDescription": "Simulador de fotografía antigua. Se usa la inclinación para 'enfocar' (mover lentes virtuales) y el sensor de luz determina el tiempo de exposición. Si hay mucha luz y se expone mucho tiempo, la imagen en la matriz sale 'quemada' (toda blanca).",
+    "transformedIdeaTitle": "El Fotógrafo Antiguo",
+    "transformedIdeaDescription": "Toma una foto perfecta. Debes mantener la cámara quieta (inclinación estable). El sensor de luz decide cuánto tiempo 'abre' el obturador. Los estudiantes deben programar la lógica: Mucha luz = exposición corta. Si se equivocan, la matriz se llena de luz (foto quemada) o se queda negra (subexpuesta).",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Exposure = 100 - LightIntensity; IF Stable(Inclination) THEN Wait(Exposure); LED.showImage()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Casco de Minero Inteligente",
+    "originalIdeaDescription": "Casco que detecta la inclinación de la cabeza para encender luces direccionales en la matriz y ajusta la intensidad según la luz ambiental para no deslumbrar a compañeros.",
+    "transformedIdeaTitle": "Explorador de Cavernas",
+    "transformedIdeaDescription": "Diseña un casco inteligente. Si miras hacia abajo (inclinación frontal), la matriz ilumina la fila inferior. Si miras arriba, la superior. Además, si entras en una zona muy oscura (baja luz), la intensidad de los LEDs debe subir al máximo automáticamente para poder ver.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Row = Map(Inclination.Y, -90, 90, 0, 7); Brightness = 100 - LightIntensity; LED.lightRow(Row, Brightness)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Sombras Chinescas Digitales",
+    "originalIdeaDescription": "Entretenimiento interactivo donde la intensidad de la luz define el tamaño de la sombra proyectada en la matriz, y la inclinación cambia la forma de la figura (perro, pájaro, conejo).",
+    "transformedIdeaTitle": "Teatro de Sombras",
+    "transformedIdeaDescription": "Crea figuras con tu mano digital. Al inclinar la placa hacia la izquierda, aparece un conejo; a la derecha, un lobo. El truco es que las figuras solo aparecen si hay una sombra real cayendo sobre el sensor (baja intensidad de luz). Si hay luz directa, el 'escenario' desaparece.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 30 THEN (IF Inclination.X < 0 THEN LED.show('Rabbit') ELSE LED.show('Wolf')) ELSE LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Heliógrafo: Comunicador por Espejos",
+    "originalIdeaDescription": "Dispositivo de comunicación óptica. La inclinación apunta el 'espejo' y el sensor de luz verifica si hay suficiente sol para enviar la señal Morse mostrada en la matriz.",
+    "transformedIdeaTitle": "Mensajero de Señales de Humo",
+    "transformedIdeaDescription": "Envía mensajes secretos a través de la montaña. Inclina el dispositivo para seleccionar una letra del alfabeto en la matriz. Para 'enviarla', debes tapar y destapar el sensor de luz rápidamente (como haciendo señales de humo o Morse).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Letter = SelectLetter(Inclination); IF LightIntensityChange(HighToLow) THEN Send(Letter)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Despertador de Amanecer Interactivo",
+    "originalIdeaDescription": "Reloj que muestra la hora en la matriz. Se apaga solo si detecta luz de amanecer (intensidad creciente) y el usuario inclina el dispositivo para confirmar que se ha levantado de la cama.",
+    "transformedIdeaTitle": "¡El Gallo Madrugador!",
+    "transformedIdeaDescription": "Programa el despertador más molesto. Cuando el sensor detecta que salió el sol (luz > 20), la matriz empieza a parpadear y sonar. Para apagarlo, no basta con presionar un botón: ¡tienes que poner el dispositivo totalmente vertical (levantarte de la cama) para que pare!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 20 AND Inclination.Y < 80 THEN LED.flashAlarm() ELSE LED.showTime()"
+  }
+]

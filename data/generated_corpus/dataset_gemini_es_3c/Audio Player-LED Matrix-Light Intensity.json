@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Despertador Solar Inteligente",
+    "originalIdeaDescription": "Un sistema de alarma que utiliza el sensor de luz para detectar cuando amanece. Al recibir luz natural, el dispositivo reproduce música suave y muestra un icono de sol en la matriz LED para despertar al usuario gradualmente.",
+    "transformedIdeaTitle": "El Gallo Robótico del Amanecer",
+    "transformedIdeaDescription": "¡Ayuda al granjero a despertarse a tiempo! Programa tu Gallo Robótico para que cante (reproduzca audio) y abra los ojos (muestre un sol) solo cuando la luz del sol golpee el sensor del granero. Si está oscuro, el gallo debe seguir durmiendo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN Audio.play('rooster') AND Matrix.show('Sun') ELSE Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Cuevas Oscuras",
+    "originalIdeaDescription": "Un dispositivo para exploradores que alerta cuando el entorno se vuelve demasiado oscuro. Si la luz cae por debajo de un umbral, reproduce un sonido de advertencia y muestra ojos de advertencia en la matriz.",
+    "transformedIdeaTitle": "Explorador de la Cueva Misteriosa",
+    "transformedIdeaDescription": "Estás explorando una cueva profunda. Tu misión es crear una herramienta de seguridad: si la luz se apaga (oscuridad total), tu dispositivo debe encender unos 'ojos de gato' en la pantalla y emitir un sonido de radar para no perderte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN Audio.play('sonar_ping') AND Matrix.show('Eyes') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Theremin de Luz Musical",
+    "originalIdeaDescription": "Instrumento musical experimental donde la intensidad de la luz controla el volumen o el tono de una nota continua, mientras la matriz LED muestra una barra de nivel visualizando la intensidad.",
+    "transformedIdeaTitle": "DJ Fotónico: Música con Sombras",
+    "transformedIdeaDescription": "Conviértete en un DJ del futuro. Crea un instrumento que no se toca. Mueve tu mano sobre el sensor para bloquear la luz; cuanto más luz haya, más fuerte sonará la música y más alta será la barra de energía en tu pantalla LED.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.setVolume(Light_Intensity); Matrix.showBarGraph(Light_Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Caja Fuerte",
+    "originalIdeaDescription": "Una caja fuerte que solo se abre con un patrón de luz específico. Al detectar un destello de luz intenso (linterna), reproduce un sonido de desbloqueo y muestra un candado abierto.",
+    "transformedIdeaTitle": "La Bóveda del Agente Secreto",
+    "transformedIdeaDescription": "Protege los documentos secretos. La bóveda solo se abre si apuntas una linterna directamente al sensor. Programa el sistema para que, al detectar luz máxima, haga un sonido de 'clic' mecánico y muestre un candado abierto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 90 THEN Audio.play('unlock_click') AND Matrix.show('OpenLock')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Monitor de Emociones de Planta",
+    "originalIdeaDescription": "Un dispositivo que se coloca junto a una planta. Si recibe suficiente luz, muestra una cara feliz y tararea. Si está oscuro durante el día, muestra una cara triste y pide luz.",
+    "transformedIdeaTitle": "Mascota Vegetal Virtual",
+    "transformedIdeaDescription": "Tu planta alienígena necesita luz solar para sobrevivir. Si la pones bajo la luz, se ríe y sonríe en la pantalla. Si la cubres y está a oscuras, llora y pone cara triste. ¡Prográmala para mantenerla feliz!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 40 THEN Matrix.show('Happy') AND Audio.play('giggle') ELSE Matrix.show('Sad') AND Audio.play('whimper')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Un sistema ambiental que detecta cambios rápidos de luz. Si hay luz baja constante, simula lluvia suave. Si hay destellos de luz (simulando relámpagos externos), reproduce truenos.",
+    "transformedIdeaTitle": "El Meteorólogo de Efectos Especiales",
+    "transformedIdeaDescription": "Trabajas en una película de cine. Crea un efecto de tormenta: cuando el sensor detecte oscuridad, suena lluvia y se ven gotas en la pantalla. Pero si detectas un flash de luz repentino, ¡debe sonar un trueno explosivo!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN Audio.play('rain'); IF Delta(Light_Intensity) > 50 THEN Audio.play('thunder') AND Matrix.flash()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura Nocturna",
+    "originalIdeaDescription": "Herramienta de salud visual. Si el usuario está leyendo y la luz ambiental baja demasiado, el dispositivo emite un pitido suave y muestra un icono de bombilla para sugerir encender la luz.",
+    "transformedIdeaTitle": "Guardián de la Biblioteca",
+    "transformedIdeaDescription": "Ayuda a los estudiantes a cuidar sus ojos. Diseña un sistema que monitoree la sala de lectura. Si oscurece demasiado, el Guardián debe avisar educadamente con un sonido y mostrar una bombilla encendida en la pantalla para recordar prender la luz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 25 THEN Audio.play('ding') AND Matrix.show('LightBulb')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Caja de Música Sorpresa",
+    "originalIdeaDescription": "Una caja que contiene el sensor. Mientras la caja está cerrada (oscuridad), hay silencio. Al abrir la tapa (luz), comienza a sonar una melodía y la matriz muestra notas musicales bailando.",
+    "transformedIdeaTitle": "El Cofre del Tesoro Musical",
+    "transformedIdeaDescription": "Has encontrado un cofre mágico. Mientras está cerrado, no hace nada. Pero en el momento en que la luz entra al abrir la tapa, debe sonar una fanfarria de victoria y mostrarse diamantes brillando en la pantalla.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 10 THEN Audio.play('fanfare') AND Matrix.playAnimation('Sparkles') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Vampiros",
+    "originalIdeaDescription": "Juguete temático que reacciona a la luz solar. Si detecta luz intensa (sol), el vampiro 'grita' y se convierte en polvo (animación). En la oscuridad, se ríe malvadamente.",
+    "transformedIdeaTitle": "Cazadores de Vampiros: La Trampa Solar",
+    "transformedIdeaDescription": "¡Atrapa al vampiro! Programa la trampa: si está oscuro, el vampiro está seguro y se ríe (audio). Pero si le da la luz del sol directa, debe gritar dramáticamente y desaparecer de la pantalla LED.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 80 THEN Audio.play('scream') AND Matrix.show('Dust') ELSE Audio.play('evil_laugh') AND Matrix.show('VampireFace')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Contador de Pasos por Sombra",
+    "originalIdeaDescription": "Un contador que se coloca en el suelo. Cada vez que alguien pasa y proyecta una sombra (baja la luz), suena un 'beep', se incrementa un contador y se muestra el número en la matriz.",
+    "transformedIdeaTitle": "Contador de Clientes de la Tienda",
+    "transformedIdeaDescription": "Eres el gerente de una tienda popular. Instala un sensor en la entrada. Cada vez que la sombra de un cliente cubra el sensor, debe sonar un timbre de bienvenida y el número en la pantalla debe aumentar en uno.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity drops below threshold THEN count = count + 1; Audio.play('chime'); Matrix.showNumber(count)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Faro de Navegación Automático",
+    "originalIdeaDescription": "Simulación de un faro costero. Cuando la luz ambiental baja (noche), el sistema reproduce sonidos de olas y gaviotas, y la matriz LED simula un haz de luz rotatorio.",
+    "transformedIdeaTitle": "El Guardián del Faro Solitario",
+    "transformedIdeaDescription": "Los barcos necesitan tu ayuda. Cuando caiga la noche (baja luz), activa el faro automáticamente. Debes programar el sonido del océano de fondo y hacer que la pantalla LED muestre una luz girando para guiar a los marineros.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN Audio.loop('ocean_waves') AND Matrix.playAnimation('RotatingLight')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Óptico",
+    "originalIdeaDescription": "El sensor lee parpadeos de luz (puntos y rayas). El sistema traduce estos parpadeos en sonidos cortos y largos, y visualiza los puntos y rayas en la matriz LED.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Recibe mensajes secretos desde una linterna lejana. Programa tu dispositivo para que cada vez que detecte un flash de luz, emita un 'beep' y dibuje un punto en la pantalla. ¡Intenta transmitir un mensaje en código Morse!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity > Threshold THEN Audio.playTone(High) AND Matrix.plotPoint(x,y)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Alarma Anti-Flash para Museos",
+    "originalIdeaDescription": "Protege obras de arte sensibles a la luz. Si detecta un aumento repentino de intensidad (flash de cámara), suena una sirena y muestra una señal de 'PROHIBIDO' en la matriz.",
+    "transformedIdeaTitle": "Seguridad del Museo del Louvre",
+    "transformedIdeaDescription": "La Mona Lisa se daña con el flash de las cámaras. Crea un sistema que detecte picos repentinos de luz. Si alguien toma una foto con flash, ¡haz sonar la alarma y muestra una X grande en la pantalla para regañar al turista!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF changeIn(Light_Intensity) > Speed_Threshold THEN Audio.play('siren') AND Matrix.show('X_Sign')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Submarino de Profundidad",
+    "originalIdeaDescription": "Simulador de inmersión. A medida que se cubre el sensor (más oscuro = más profundo), el sonido de los motores cambia a un tono más grave y la matriz muestra la 'profundidad' en metros.",
+    "transformedIdeaTitle": "Misión a la Fosa de las Marianas",
+    "transformedIdeaDescription": "Pilota tu submarino hacia el fondo del mar. A medida que desciende (cubres el sensor con la mano gradualmente), la luz disminuye. Haz que el sonido del motor sea más grave y oscuro, y muestra burbujas ascendiendo en la pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Map(Light_Intensity, 100, 0, Pitch, High, Low); Matrix.animate('Bubbles')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Escondite de Luciérnagas",
+    "originalIdeaDescription": "Un juego donde el usuario debe encontrar un lugar oscuro para 'esconderse'. Cuando la luz es cero, el dispositivo felicita al usuario y muestra una luciérnaga brillante.",
+    "transformedIdeaTitle": "El Escondite Ninja",
+    "transformedIdeaDescription": "Entrena para ser un Ninja invisible. Tienes que esconder el dispositivo en el lugar más oscuro posible de la habitación. Si el sensor detecta oscuridad total, el Maestro Ninja te felicitará (audio) y aparecerá una estrella ninja en la pantalla.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity == 0 THEN Audio.play('Excellent') AND Matrix.show('Shuriken')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico en Túnel",
+    "originalIdeaDescription": "Detecta cuando un 'coche' (el dispositivo) entra en un túnel (oscuridad). Al entrar, enciende 'faros' en la matriz y cambia la acústica del audio para que tenga eco.",
+    "transformedIdeaTitle": "Conductor Responsable en el Túnel",
+    "transformedIdeaDescription": "Vas conduciendo por la carretera. Cuando entres en un túnel oscuro (cubre el sensor), tu coche inteligente debe encender las luces automáticamente (matriz LED brillante) y tocar la bocina con eco para avisar a otros.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 40 THEN Matrix.brightness(100) AND Audio.play('horn_echo') ELSE Matrix.brightness(0)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Fotosíntesis",
+    "originalIdeaDescription": "Educativo. Muestra una planta creciendo en la matriz solo cuando hay luz. Si hay luz, suena un sonido de 'crecimiento' y la planta añade píxeles de altura. Sin luz, se detiene.",
+    "transformedIdeaTitle": "Crecimiento Mágico del Bosque",
+    "transformedIdeaDescription": "La magia de la naturaleza en tus manos. Haz crecer un árbol píxel por píxel. Mientras mantengas el sensor bajo la luz, el árbol crecerá hacia arriba en la pantalla acompañado de música mágica. Si quitas la luz, el crecimiento se pausa.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Light_Intensity > 50 DO Matrix.addPixelToPlant() AND Audio.play('magic_chime') WAIT 1s"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Un dispositivo de 'broma' que reacciona a cambios sutiles de luz y sombra. Si una sombra pasa rápido, dispara un sonido de susto y una cara fantasmagórica en la matriz.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Hay fantasmas invisibles en la habitación que crean sombras rápidas. Programa tu radar para que, si detecta una caída rápida en la luz (una sombra pasando), active la alarma de protones y muestre dónde está el fantasma.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF rapidDrop(Light_Intensity) THEN Audio.play('proton_pack') AND Matrix.show('GhostIcon')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Afinador de Ambiente Zen",
+    "originalIdeaDescription": "Sistema de relajación. Si la luz es tenue (atardecer), reproduce sonidos de grillos y muestra estrellas. Si es brillante, reproduce sonidos de pájaros y muestra nubes.",
+    "transformedIdeaTitle": "Creador de Atmósferas Zen",
+    "transformedIdeaDescription": "Diseña un espacio de relajación. Si la habitación está iluminada, transporta al usuario a un bosque con pájaros (audio) y nubes (LED). Si apagan las luces, transpórtalos a una noche de camping con grillos y estrellas.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 60 THEN Play('birds') Show('Cloud') ELSE Play('crickets') Show('Stars')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Audio Player",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos de Luz",
+    "originalIdeaDescription": "Juego de velocidad. La matriz muestra 'AHORA' y el usuario debe iluminar el sensor con una linterna lo más rápido posible. El audio indica el tiempo de reacción o éxito.",
+    "transformedIdeaTitle": "Duelo de Láseres Rápidos",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos. El sistema dirá '¡FUEGO!' y mostrará un objetivo. Debes disparar tu linterna al sensor inmediatamente. Si lo haces rápido, ganas un sonido de victoria; si tardas, pierdes una vida.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WaitRandom(); Matrix.show('Target'); StartTimer(); IF Light > 90 THEN StopTimer() AND Audio.announceScore()"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Brújula Digital con Calibración por Movimiento",
+    "originalIdeaDescription": "Un dispositivo que muestra la dirección cardinal en la matriz LED. Para asegurar la precisión, el usuario debe agitar el dispositivo vigorosamente para iniciar un proceso de calibración antes de que la brújula muestre el norte.",
+    "transformedIdeaTitle": "El Explorador Perdido en la Jungla",
+    "transformedIdeaDescription": "¡Estás perdido en la selva! Tu GPS se quedó sin batería y debes usar una brújula antigua. Primero, sacude el dispositivo para quitarle el polvo y los insectos. Luego, gira lentamente hasta encontrar el Norte para que la matriz LED te muestre la flecha de salida.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > threshold THEN calibration = true; IF calibration AND Compass.heading == 0 THEN LED.show('ArrowUp')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Bloqueo Giratorio",
+    "originalIdeaDescription": "Un mecanismo de bloqueo que requiere que el usuario gire el dispositivo a una secuencia específica de direcciones cardinales (Norte, Este, Oeste) y agite el dispositivo en cada punto para confirmar la entrada.",
+    "transformedIdeaTitle": "La Caja Fuerte del Agente Secreto",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte enemiga. La combinación no son números, ¡son direcciones! Gira al Norte y agita para confirmar, luego al Este y agita. Si aciertas la secuencia, la matriz LED mostrará un candado abierto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 0 AND Motion.shake THEN step1 = true; IF step1 AND Compass.heading == 90 AND Motion.shake THEN LED.show('Unlock')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Intensidad de Caminata",
+    "originalIdeaDescription": "Una herramienta que rastrea la dirección en la que camina una persona y cuenta los pasos basándose en la oscilación del sensor de movimiento, mostrando el progreso en la matriz LED.",
+    "transformedIdeaTitle": "Rastreador de Dinosaurios",
+    "transformedIdeaDescription": "Conviértete en un paleontólogo. Debes caminar sigilosamente hacia el 'Valle de los Huesos' (Oeste). El dispositivo cuenta tus pasos al detectar el movimiento. Si caminas en la dirección correcta, la matriz LED se llenará poco a poco hasta encontrar el fósil.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 270 AND Motion.magnitude > walk_threshold THEN progress++; LED.fill(progress)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita de Control Gestual",
+    "originalIdeaDescription": "Un dispositivo que actúa como un controlador mágico. Apuntar hacia diferentes direcciones cardinales selecciona un 'elemento' y un movimiento brusco 'lanza' el efecto visual en la matriz.",
+    "transformedIdeaTitle": "Academia de Hechicería Elemental",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Apunta al Norte para seleccionar Hielo o al Sur para Fuego. Una vez apuntado, haz un movimiento de 'latigazo' con tu varita para lanzar el hechizo y ver cómo explota en la pantalla LED.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 0 THEN spell = 'Ice'; IF spell == 'Ice' AND Motion.gesture == 'swipe' THEN LED.show('Snowflake')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Radar de Proximidad Simulado",
+    "originalIdeaDescription": "Simula un radar donde la dirección se determina por la brújula y la 'distancia' de un objeto imaginario se simula mediante la intensidad del movimiento (agitar más fuerte acerca el objeto).",
+    "transformedIdeaTitle": "Detector de Fantasmas",
+    "transformedIdeaDescription": "Hay un fantasma en la habitación. Gira con el dispositivo (radar) para encontrar dónde está la señal más fuerte. Cuando el LED parpadee rápido, agita el dispositivo para 'atrapar' al fantasma en tu trampa de luz.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetDir = Random(); IF Compass.heading == targetDir THEN LED.blink(fast); IF LED.blinking AND Motion.shake THEN LED.show('Ghost')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Físico",
+    "originalIdeaDescription": "Un juego donde el usuario debe navegar un laberinto invisible. La brújula determina la dirección del movimiento y el sensor de movimiento detecta si el usuario está 'caminando' para avanzar.",
+    "transformedIdeaTitle": "Escape del Laberinto Invisible",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto que no puedes ver. Gira tu cuerpo para elegir un camino y da pasos (mueve el dispositivo) para avanzar. La matriz LED te mostrará una pared (X) si chocas o un camino libre si avanzas correctamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.stepDetected THEN checkWall(Compass.heading); IF wall THEN LED.show('X') ELSE currentPos++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio Direccional",
+    "originalIdeaDescription": "Una herramienta de ejercicio donde el usuario debe mantener una postura de equilibrio perfecta (sin movimiento) mientras mira hacia una dirección específica indicada por la matriz LED.",
+    "transformedIdeaTitle": "Desafío del Monje Shaolin",
+    "transformedIdeaDescription": "Para convertirte en un maestro Shaolin, debes mantener el equilibrio absoluto. La matriz te dirá hacia dónde mirar (Norte, Sur, Este, Oeste). Gira hacia allá y quédate totalmente quieto. Si el sensor detecta movimiento, ¡fallaste la prueba!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = RandomDir(); LED.show(target); IF Compass.heading == target AND Motion.magnitude < 0.1 THEN score++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Espacial",
+    "originalIdeaDescription": "Un sintetizador donde la inclinación (Motion) controla el tono y la orientación (Compass) controla el instrumento o la escala, visualizando la nota en la matriz LED.",
+    "transformedIdeaTitle": "Orquesta del Futuro",
+    "transformedIdeaDescription": "Eres el director de una orquesta futurista. Gira hacia la derecha para dirigir a los violines y hacia la izquierda para los tambores. Inclina el dispositivo hacia arriba o abajo para controlar el volumen y ver las barras de sonido subir en la pantalla LED.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "instrument = Map(Compass.heading); volume = Map(Motion.tiltY); LED.showBarGraph(volume)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Orientada",
+    "originalIdeaDescription": "Una mascota digital que tiene preferencias. Le gusta mirar al Este (amanecer) y necesita ser mecida (Motion) para dormir. La cara de la mascota se muestra en la matriz.",
+    "transformedIdeaTitle": "Cuidando al Huevo de Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón que está por nacer. Para mantenerlo caliente, debe mirar siempre hacia el Sur. Si empieza a temblar (animación en LED), debes mecerlo suavemente con tus manos para calmarlo hasta que nazca.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading != 180 THEN LED.show('Sad'); IF Compass.heading == 180 AND Motion.swing THEN LED.show('Happy')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Simón Dice Geográfico",
+    "originalIdeaDescription": "Un juego de memoria donde el dispositivo muestra una dirección y una acción (saltar/agitar). El usuario debe orientarse correctamente y realizar la acción física.",
+    "transformedIdeaTitle": "Capitán Tormenta Dice",
+    "transformedIdeaDescription": "¡Todos a cubierta! Sigue las órdenes del Capitán. Si la pantalla muestra una flecha al Norte, gira al Norte y salta. Si muestra al Sur, gira y agáchate. ¡Si te equivocas de dirección o movimiento, caminas por la plancha!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ShowRandomDir(); IF Compass.heading == targetDir AND Motion.detected THEN score++ ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Escáner de Constelaciones",
+    "originalIdeaDescription": "Al apuntar el dispositivo hacia coordenadas específicas y mantenerlo estable, la matriz LED revela patrones de estrellas simulados.",
+    "transformedIdeaTitle": "Telescopio de Bolsillo",
+    "transformedIdeaDescription": "El cielo está lleno de secretos. Levanta tu 'telescopio' hacia el cielo. Gira lentamente hasta encontrar la Osa Mayor. Cuando estés en la posición correcta y mantengas el pulso firme, las estrellas aparecerán brillantes en tu pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltZ > 45 AND Compass.heading == STAR_COORDS THEN LED.show('ConstellationPattern')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja 360",
+    "originalIdeaDescription": "Una herramienta de construcción que utiliza el acelerómetro para detectar la inclinación y la brújula para registrar hacia qué pared se está midiendo, mostrando el nivel en la LED.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "Ayuda a construir la torre más alta. Coloca el dispositivo sobre una superficie. Gira para comprobar cada lado de la torre. Si la luz LED está centrada, está nivelado. Si se mueve a los lados, ¡la torre se va a caer!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pixelX = Map(Motion.tiltX); pixelY = Map(Motion.tiltY); LED.plot(pixelX, pixelY)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Comunicador Alienígena",
+    "originalIdeaDescription": "Un dispositivo que 'traduce' movimientos y direcciones en símbolos extraños en la matriz LED, simulando una comunicación interestelar.",
+    "transformedIdeaTitle": "Primer Contacto Alienígena",
+    "transformedIdeaDescription": "Los alienígenas no hablan, ¡se comunican con gestos! Mira hacia su nave nodriza (Norte) y haz patrones de movimiento (círculos, sacudidas) para generar símbolos en la pantalla y descifrar su mensaje de paz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 0 THEN glyph = GenerateGlyph(Motion.pattern); LED.show(glyph)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo de Dron",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo plano. Inclinarlo controla la velocidad (Motion) y girar el cuerpo controla el rumbo (Compass). La matriz muestra un horizonte artificial.",
+    "transformedIdeaTitle": "Piloto de Avión Acrobático",
+    "transformedIdeaDescription": "Toma los controles de tu avión. Inclina tu dispositivo hacia adelante para acelerar y gira tu cuerpo para cambiar el rumbo del avión. La matriz LED es tu cabina, mantén el horizonte recto o entrarás en barrena.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "speed = Motion.tiltX; direction = Compass.heading; LED.updateHorizon(direction, speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Cronómetro de Entrenamiento en Circuito",
+    "originalIdeaDescription": "El usuario se coloca en el centro de un círculo. Cada dirección cardinal representa un ejercicio. Al girar y hacer el ejercicio (movimiento), el contador aumenta.",
+    "transformedIdeaTitle": "Gimnasio de Superhéroes",
+    "transformedIdeaDescription": "Entrena como un héroe. Norte: Golpes de puño. Sur: Saltos. Gira rápido hacia la estación de entrenamiento y realiza el movimiento. El sensor cuenta tus repeticiones y las muestra en la pantalla LED. ¡Llega a 10 para ganar!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 0 AND Motion.shake THEN repsN++; LED.showNumber(repsN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Ruleta de la Fortuna Digital",
+    "originalIdeaDescription": "El usuario gira físicamente con el dispositivo y se detiene al azar. El movimiento de frenado selecciona un premio que se muestra en la matriz.",
+    "transformedIdeaTitle": "La Ruleta de los Retos",
+    "transformedIdeaDescription": "Siéntate en una silla giratoria o gira sobre tus pies con el dispositivo. Gira rápido y detente de golpe. La brújula detectará dónde paraste y la matriz LED te mostrará un reto divertido (cantar, bailar, contar un chiste).",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.rotationSpeed > high THEN spinning=true; IF spinning AND Motion.rotationSpeed == 0 THEN SelectPrize(Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Arte de Pintura con Luz 3D",
+    "originalIdeaDescription": "Usar el dispositivo como un pincel. La brújula cambia el 'color' o patrón del pincel, y el movimiento dibuja trazos en la matriz LED.",
+    "transformedIdeaTitle": "Pincel Mágico de Aire",
+    "transformedIdeaDescription": "Eres un artista digital. Gira a la izquierda para elegir pincel fino, a la derecha para pincel grueso. Luego mueve tu mano en el aire para 'pintar' píxeles en la matriz LED y crear tu obra maestra.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "brushType = Map(Compass.heading); IF Motion.moved THEN LED.drawPixel(x, y, brushType)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Analizador de Swing de Golf/Béisbol",
+    "originalIdeaDescription": "Registra la dirección del lanzamiento (Compass) y la fuerza/velocidad del arco de movimiento (Motion), mostrando una puntuación en la LED.",
+    "transformedIdeaTitle": "Campeonato de Bateo",
+    "transformedIdeaDescription": "Prepárate en el plato (home). Apunta hacia donde quieres lanzar la bola (Jardín Central). Haz el swing más rápido que puedas. La pantalla te dirá si fue un 'Home Run' basado en tu fuerza y dirección.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == TARGET AND Motion.peakForce > HomeRunThreshold THEN LED.show('HR') ELSE LED.show('Out')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Buscador de Señal Wi-Fi Imaginario",
+    "originalIdeaDescription": "Juego donde el usuario busca una señal invisible. La señal es fuerte en una coordenada específica y requiere que el dispositivo esté quieto para 'conectar'.",
+    "transformedIdeaTitle": "Hacker de la Red Secreta",
+    "transformedIdeaDescription": "Debes interceptar una señal secreta. Camina por la habitación escaneando con tu dispositivo. La brújula te guía. Cuando la matriz LED muestre todas las barras de señal, quédate totalmente inmóvil para descargar los datos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "signal = CalculateDist(Compass.heading, Target); LED.showBars(signal); IF signal == 100 AND Motion.isStill THEN download()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Reloj de Sol Interactivo",
+    "originalIdeaDescription": "Un dispositivo que simula la sombra de un reloj de sol en la matriz LED basándose en la orientación del dispositivo con respecto al norte magnético.",
+    "transformedIdeaTitle": "El Guardián del Tiempo Antiguo",
+    "transformedIdeaDescription": "Antes de los relojes digitales, usábamos el sol. Convierte tu dispositivo en un reloj solar. Alínealo con el Norte. Dependiendo de cómo lo inclines (simulando la altura del sol), la sombra (un pixel oscuro) se moverá por la matriz LED.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "shadowPos = CalculateShadow(Compass.heading, Motion.tiltY); LED.plot(shadowPos)"
+  }
+]

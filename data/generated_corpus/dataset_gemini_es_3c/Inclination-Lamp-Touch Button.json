@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores RGB por Inclinación",
+    "originalIdeaDescription": "Un dispositivo que cambia el color de la Lámpara basándose en la inclinación del eje X y Y. El usuario inclina el dispositivo para encontrar un color específico y presiona el Botón Táctil para 'bloquear' y guardar ese color.",
+    "transformedIdeaTitle": "El Laboratorio del Alquimista",
+    "transformedIdeaDescription": "¡Eres un alquimista creando una poción mágica! Inclina tu caldero (el dispositivo) hacia adelante para agregar 'Sangre de Dragón' (Rojo) o hacia los lados para 'Lágrimas de Sirena' (Azul). Cuando la poción brille con el color púrpura perfecto, presiona el botón mágico para embotellarla antes de que explote.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET color_val = map(inclination.x, -10, 10, 0, 255); Lamp.setColor(color_val); IF touchButton.isPressed() THEN saveColor()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel Digital de Burbuja con Calibración",
+    "originalIdeaDescription": "Herramienta que ayuda a nivelar superficies. La Lámpara brilla en rojo si el dispositivo está inclinado y cambia a verde cuando está perfectamente plano. El botón se usa para recalibrar el 'cero' en una superficie irregular.",
+    "transformedIdeaTitle": "Aterrizaje Lunar de Emergencia",
+    "transformedIdeaDescription": "Tu nave espacial está descendiendo a la Luna. Debes aterrizar perfectamente plano o la nave volcará. Mantén la luz de estado en VERDE equilibrando el dispositivo. Si se pone ROJA, ¡corrige el rumbo inmediatamente! Presiona el botón para apagar los motores una vez que el aterrizaje sea seguro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch < 2 AND inclination.roll < 2 THEN Lamp.setColor('green') ELSE Lamp.setColor('red'); IF touchButton.pressed() AND Lamp.color == 'green' THEN winGame()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Intermitentes de Bicicleta Controlados por Gesto",
+    "originalIdeaDescription": "Sistema de seguridad para ciclistas. Al inclinar el dispositivo hacia la izquierda, la lámpara parpadea en amarillo a la izquierda. El botón funciona como una luz de freno de emergencia que pone la lámpara en rojo fijo.",
+    "transformedIdeaTitle": "Conductor de Moto del Futuro",
+    "transformedIdeaDescription": "Diseña el sistema de luces para una moto de la película TRON. Inclina tu cuerpo (y el dispositivo) para indicar giros en la autopista digital; la luz parpadeará indicando la dirección. Si ves un obstáculo, ¡toca el botón rápidamente para activar los frenos de emergencia rojos!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.roll < -15 THEN Lamp.blink('yellow', left); ELSE IF inclination.roll > 15 THEN Lamp.blink('yellow', right); IF touchButton.pressed() THEN Lamp.setColor('red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna de Intensidad Variable",
+    "originalIdeaDescription": "Una linterna donde el brillo depende del ángulo de inclinación vertical (pitch). Apuntar hacia arriba da máxima luz, hacia abajo atenúa. El botón enciende o apaga el sistema.",
+    "transformedIdeaTitle": "Explorador de Cavernas de Cristal",
+    "transformedIdeaDescription": "Estás explorando una cueva oscura. Para ver las estalactitas en el techo, inclina tu linterna hacia arriba y brillará intensamente. Para mirar el suelo sin asustar a los insectos, inclínala hacia abajo para una luz tenue. Usa el botón para apagar la luz y esconderte si oyes un murciélago.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF touchButton.isOn() THEN { brightness = map(inclination.pitch, -90, 90, 0, 100); Lamp.setBrightness(brightness) } ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Gestual",
+    "originalIdeaDescription": "Juego donde el usuario debe encontrar un ángulo 'secreto' de inclinación. La lámpara cambia de color de frío a caliente a medida que se acerca al ángulo correcto. El botón abre la caja si el ángulo es preciso.",
+    "transformedIdeaTitle": "El Ladrón de Bancos Maestro",
+    "transformedIdeaDescription": "Estás frente a una caja fuerte antigua. Gira el dial (inclinando el dispositivo) lentamente. La luz pasará de azul (frío) a rojo (caliente) cuando estés cerca del número secreto. Cuando la luz se ponga verde brillante, ¡toca el botón rápidamente para abrir la bóveda y ganar el oro!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "dist = abs(inclination.current - secret_angle); IF dist < 5 THEN Lamp.setColor('green'); ELSE Lamp.setColor(blend('blue', 'red', dist)); IF touchButton.pressed() AND dist < 5 THEN unlock()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Pincel de Luz",
+    "originalIdeaDescription": "Herramienta para fotografía de larga exposición. La inclinación cambia el matiz (hue) del color de la luz. Mantener presionado el botón enciende la luz para 'pintar' en el aire.",
+    "transformedIdeaTitle": "Varita de Hechicero de Hielo y Fuego",
+    "transformedIdeaDescription": "¡Dibuja en el aire con magia! Inclina tu varita hacia arriba para conjurar fuego (Luz Roja/Naranja) o hacia abajo para hielo (Azul/Blanco). Mantén presionado el botón mágico para liberar el hechizo y ver cómo la luz brilla mientras mueves la varita.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "hue = map(inclination.x, -90, 90, 0, 360); Lamp.setColorHSB(hue, 100, 100); IF touchButton.isHeld() THEN Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Movimiento y Vibración",
+    "originalIdeaDescription": "Sistema de seguridad simple. Se activa con el botón. Una vez activo, si detecta cualquier cambio significativo en la inclinación, la lámpara parpadea en rojo como alarma.",
+    "transformedIdeaTitle": "Trampa para Fantasmas",
+    "transformedIdeaDescription": "Coloca la trampa (dispositivo) en el suelo y actívala con el botón. Espera en silencio... Si un fantasma invisible pasa y mueve la trampa aunque sea un poco, la luz parpadeará en rojo violentamente para alertarte. ¡No dejes que escapen!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF touchButton.pressed() THEN armed = true; IF armed AND abs(inclination.change) > threshold THEN Lamp.strobe('red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio de Yoga",
+    "originalIdeaDescription": "Dispositivo para colocar sobre la espalda o cabeza. Si el usuario pierde la postura (se inclina), la luz cambia de color. El botón reinicia la sesión.",
+    "transformedIdeaTitle": "El Desafío del Monje Shaolin",
+    "transformedIdeaDescription": "Debes meditar manteniendo una postura perfecta. Coloca el sensor sobre tu cabeza o mano extendida. Si te mantienes quieto, la luz brillará con un azul relajante (Zen). Si pierdes el equilibrio, se volverá roja (Fallo). Usa el botón para comenzar tu prueba de concentración.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF touchButton.pressed() THEN startTimer(); IF abs(inclination.x) > 10 OR abs(inclination.y) > 10 THEN Lamp.setColor('red') ELSE Lamp.setColor('blue')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Radar de Navegación por Colores",
+    "originalIdeaDescription": "Simulación de brújula o radar. Inclinar hacia el Norte (simulado por eje Y positivo) pone la luz blanca. Otras direcciones dan colores tenues. El botón marca una ubicación objetivo.",
+    "transformedIdeaTitle": "Buscador de Tesoros en la Niebla",
+    "transformedIdeaDescription": "Tu barco navega por una niebla espesa. Inclina el dispositivo para dirigir el foco de búsqueda. La luz se volverá blanca brillante y parpadeará solo cuando apuntes hacia la 'Isla del Tesoro' (una dirección predefinida). Presiona el botón para soltar el ancla cuando la encuentres.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target_y = 50; IF abs(inclination.y - target_y) < 10 THEN Lamp.blink('white') ELSE Lamp.dim(10); IF touchButton.pressed() THEN dropAnchor()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Emociones/Mood Tracker",
+    "originalIdeaDescription": "El usuario inclina el dispositivo para desplazarse por un espectro de colores que representan emociones. El botón selecciona y mantiene el color que representa cómo se sienten hoy.",
+    "transformedIdeaTitle": "Anillo de Humor Digital",
+    "transformedIdeaDescription": "¿Cómo te sientes hoy? Inclina el dispositivo hacia la izquierda si te sientes triste (Azul), a la derecha si estás enérgico (Amarillo), o hacia atrás si estás enojado (Rojo). Cuando la luz coincida con tu emoción, toca el botón para mostrarle al mundo tu estado de ánimo actual.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.x < -10 THEN Lamp.setColor('blue'); ELSE IF inclination.x > 10 THEN Lamp.setColor('yellow'); IF touchButton.pressed() THEN lockColor()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Discoteca",
+    "originalIdeaDescription": "La inclinación controla la velocidad del parpadeo (estroboscópico) de la lámpara. El botón cambia entre diferentes paletas de colores.",
+    "transformedIdeaTitle": "DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta en Marte! Inclina tu mesa de mezclas hacia adelante para acelerar las luces estroboscópicas y volver loca a la multitud. Inclina hacia atrás para un ritmo lento. Toca el botón para cambiar el láser de verde alienígena a rosa nebulosa.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = map(inclination.y, -45, 45, 100, 1000); Lamp.blink(selectedColor, speed); IF touchButton.pressed() THEN changeColorPalette()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Invisible",
+    "originalIdeaDescription": "Simula una bola en un laberinto. La inclinación mueve la bola (virtual). Si la bola choca con una pared, la lámpara parpadea en rojo. El botón reinicia la posición.",
+    "transformedIdeaTitle": "Transporte de Nitroglicerina",
+    "transformedIdeaDescription": "Llevas una carga de explosivos inestables (la bola virtual) en un camión. Debes mantener el camión estable. Si inclinas demasiado el dispositivo, la carga golpeará las paredes y la luz roja indicará una explosión inminente. Usa el botón para cargar un nuevo camión tras un accidente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "virtualX += inclination.x; IF virtualX > wallLimit THEN Lamp.setColor('red') ELSE Lamp.setColor('green'); IF touchButton.pressed() THEN virtualX = 0"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura Nocturna",
+    "originalIdeaDescription": "Lámpara que ajusta su temperatura de color según la posición de lectura (inclinación) y se apaga con un toque.",
+    "transformedIdeaTitle": "Luz de Cuentos Mágicos",
+    "transformedIdeaDescription": "Hora de leer bajo las sábanas. Si estás acostado (dispositivo inclinado), la luz se vuelve cálida y naranja para dar sueño. Si te sientas (dispositivo vertical), se vuelve blanca para ver mejor las ilustraciones. Toca el botón mágico para apagar todo y dormir.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch > 45 THEN Lamp.setColor('white') ELSE Lamp.setColor('orange'); IF touchButton.pressed() THEN Lamp.toggle()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Volcán",
+    "originalIdeaDescription": "La lámpara simula magma. A medida que se agita o inclina más el dispositivo, la luz pasa de amarillo a rojo intenso y parpadea. El botón provoca la 'erupción' final.",
+    "transformedIdeaTitle": "El Despertar del Volcán",
+    "transformedIdeaDescription": "Tienes un volcán inactivo en tus manos. Empieza a inclinarlo suavemente para calentar el magma (luz naranja). Inclínalo bruscamente para aumentar la presión (luz roja parpadeante). Cuando no aguante más, ¡presiona el botón para causar una súper erupción de luz blanca!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "heat = abs(inclination.x) + abs(inclination.y); Lamp.setColor(heatMap(heat)); IF heat > critical AND touchButton.pressed() THEN Lamp.strobe('white')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador Visual de Arena",
+    "originalIdeaDescription": "Funciona como un reloj de arena. Al invertir el dispositivo (inclinación 180), la luz empieza a 'llenarse' o cambiar de intensidad. El botón pausa el tiempo.",
+    "transformedIdeaTitle": "Reloj de Arena Digital",
+    "transformedIdeaDescription": "Desafía a tus amigos a completar tareas antes de que se acabe el tiempo. Voltea el dispositivo boca abajo para iniciar el reloj (la luz se irá apagando poco a poco como arena cayendo). Si necesitas una pausa, toca el botón. ¡Si la luz se apaga, pierdes!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch > 160 THEN startCountdown(); Lamp.setBrightness(timeLeft); IF touchButton.pressed() THEN pauseTimer()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Gestual",
+    "originalIdeaDescription": "Inclinación izquierda = punto (luz corta), Inclinación derecha = raya (luz larga). El botón envía la letra completa.",
+    "transformedIdeaTitle": "Agente Secreto: Mensaje en la Oscuridad",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados al otro lado de la habitación. Inclina a la izquierda para un parpadeo corto (Punto), y a la derecha para uno largo (Raya). Usa el botón para marcar el final de una letra. ¡Aprende a decir 'HOLA' en Morse!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination.x < -20 THEN { Lamp.on(); wait(200); Lamp.off(); } ELSE IF inclination.x > 20 THEN { Lamp.on(); wait(600); Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Escudo de Energía Direccional",
+    "originalIdeaDescription": "Juego de rol. La inclinación determina qué sector del escudo está activo (lámpara ilumina un lado). El botón recarga la energía del escudo.",
+    "transformedIdeaTitle": "Defensor Estelar",
+    "transformedIdeaDescription": "¡Te atacan láseres desde todas direcciones! Inclina tu escudo hacia la izquierda o derecha para bloquear los disparos (la luz cambiará de color indicando protección activa). Si tu escudo recibe muchos golpes y la luz se atenúa, pulsa el botón repetidamente para recargar energía.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.roll < -30 THEN shieldSide = 'left'; Lamp.setColor('cyan'); IF energy < 20 AND touchButton.pressed() THEN energy += 10"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual",
+    "originalIdeaDescription": "La inclinación ajusta los BPM (golpes por minuto). La lámpara parpadea al ritmo establecido. El botón sincroniza el primer golpe.",
+    "transformedIdeaTitle": "Director de Orquesta de Luz",
+    "transformedIdeaDescription": "Dirige a tu banda de música. Inclina el bastón hacia arriba para un ritmo rápido (Allegro) o hacia abajo para uno lento (Adagio). La luz marcará el tempo para que todos toquen a la vez. Toca el botón para iniciar la canción en el momento exacto.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "bpm = map(inclination.pitch, -45, 45, 40, 180); delayTime = 60000/bpm; loop { Lamp.blink(); wait(delayTime); } IF touchButton.pressed() THEN resetLoop()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Un dispositivo de broma. El operador inclina secretamente el dispositivo para hacer que la luz sea verde (verdad) o roja (mentira) mientras el 'sujeto' presiona el botón.",
+    "transformedIdeaTitle": "El Detector de la Verdad",
+    "transformedIdeaDescription": "Haz una pregunta a tu amigo. Pídele que ponga su dedo en el botón para escanear su respuesta. ¡Tú controlas el resultado! Inclina disimuladamente el dispositivo hacia ti para que salga VERDE (Verdad) o lejos de ti para ROJO (Mentira). ¡No dejes que te descubran!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF touchButton.isPressed() THEN { IF inclination.pitch > 5 THEN Lamp.setColor('green') ELSE Lamp.setColor('red') } ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de Riego de Plantas Simulado",
+    "originalIdeaDescription": "Simulación educativa. La planta se marchita (luz tenue) si no está en el ángulo correcto hacia el sol. El botón riega la planta (luz azul).",
+    "transformedIdeaTitle": "Cuidador del Girasol",
+    "transformedIdeaDescription": "Eres responsable de un girasol digital. Debes inclinar el dispositivo para seguir al sol imaginario durante el día y mantener la luz amarilla brillante. Si la luz se vuelve marrón, el girasol tiene sed: ¡presiona el botón de la gota de agua para revivirlo!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(inclination.x - sunPosition) < 10 THEN Lamp.setBrightness(100) ELSE Lamp.dim(); IF touchButton.pressed() THEN Lamp.blink('blue')"
+  }]

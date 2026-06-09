@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión por Gestos Aéreos",
+    "originalIdeaDescription": "Un sistema que convierte el movimiento físico del dispositivo en sonidos de percusión. Al agitar el dispositivo bruscamente, se activa un sonido de tambor específico y la matriz LED muestra un patrón de explosión visual, creando una experiencia de 'batería en el aire' donde la intensidad del movimiento se correlaciona con la respuesta visual.",
+    "transformedIdeaTitle": "¡Conviértete en una Estrella de Rock Invisible!",
+    "transformedIdeaDescription": "Diseña tu propia batería invisible. Programa el dispositivo para que, al agitarlo hacia la derecha, suene el redoblante y aparezca un rayo en la pantalla; y al agitarlo hacia la izquierda, suene el bombo con un círculo. ¡Crea un ritmo completo usando solo tus manos y movimientos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.X > 5 THEN { Drum.play('Snare'); LED.show('Bolt') } ELSE IF Motion.X < -5 THEN { Drum.play('Kick'); LED.show('Circle') }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Un dispositivo que simula un monitor cardíaco. Cuando el usuario está quieto, el tambor suena lento y la matriz muestra un corazón latiendo despacio. Al agitar el dispositivo, el ritmo del tambor se acelera y la animación del corazón en la matriz LED se vuelve más rápida, enseñando la relación entre ejercicio y ritmo cardíaco.",
+    "transformedIdeaTitle": "El Corazón Biónico",
+    "transformedIdeaDescription": "Estás construyendo un robot que se cansa cuando corre. Programa su corazón para que lata (sonido de tambor y dibujo de corazón) lentamente cuando está quieto. Pero, si detecta mucho movimiento, ¡haz que el corazón lata a toda velocidad para simular el esfuerzo físico!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "currentMotion = Motion.magnitude(); speed = map(currentMotion, 0, 10, 1000, 200); LOOP { LED.show('Heart'); Drum.play('Beat'); wait(speed) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria por Agitación",
+    "originalIdeaDescription": "Una caja de ritmos generativa donde agitar el dispositivo actúa como un 'dado'. Cada vez que se detecta una sacudida fuerte, el sistema selecciona aleatoriamente un nuevo patrón de batería y muestra un icono abstracto diferente en la matriz LED, permitiendo la improvisación musical basada en el azar.",
+    "transformedIdeaTitle": "La Caja de Música Mágica",
+    "transformedIdeaDescription": "Crea una caja misteriosa que cambia de canción cada vez que la agitas. Usa la programación para que, al detectar una sacudida, el dispositivo elija un sonido de percusión y un dibujo al azar. ¿Qué ritmo saldrá esta vez? ¡Agita para descubrirlo!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake == TRUE THEN { randomSound = random(1, 5); randomImg = random(1, 5); Drum.play(randomSound); LED.show(randomImg) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos con Alarma",
+    "originalIdeaDescription": "Un sistema de alerta sísmica simulado. El dispositivo monitorea la estabilidad. Si detecta vibración continua por encima de un umbral, activa una alarma de tambores repetitivos y muestra una señal de advertencia o grietas animadas en la matriz LED para indicar peligro estructural.",
+    "transformedIdeaTitle": "Sismógrafo de Alerta Temprana",
+    "transformedIdeaDescription": "Eres un ingeniero geológico. Debes programar un dispositivo que detecte terremotos. Si la tierra (tu mesa) empieza a temblar, tu dispositivo debe hacer sonar una alarma de tambores graves y mostrar una señal de 'PELIGRO' en las luces para avisar a todos que evacuen.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.vibration > threshold THEN { LOOP { Drum.play('TomLow'); LED.scroll('PELIGRO'); } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Baile: Sigue la Flecha",
+    "originalIdeaDescription": "Un juego interactivo donde la matriz LED muestra una flecha direccional (arriba, abajo, izquierda, derecha) y el usuario debe mover el dispositivo en esa dirección rápidamente. Si el movimiento coincide con la flecha, suena un platillo de éxito; si no, un sonido de error grave.",
+    "transformedIdeaTitle": "Desafío de Baile: ¡Sigue el Ritmo!",
+    "transformedIdeaDescription": "¡Es hora de bailar! Tu dispositivo es el instructor. Programa el juego para que aparezca una flecha al azar. El jugador debe mover el dispositivo hacia ese lado rápidamente. Si acierta, ¡suena un platillo triunfal! Si falla, suena un tambor triste.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "direction = random(['Up', 'Down']); LED.show(direction); WAIT_FOR_MOVE; IF Motion.direction == direction THEN Drum.play('Cymbal') ELSE Drum.play('TomLow')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Barra de Carga de Energía Cinética",
+    "originalIdeaDescription": "Un medidor de energía que motiva al usuario a moverse. Cuanto más rápido se mueve el dispositivo, más filas de la matriz LED se iluminan (como una batería cargándose) y el ritmo de la percusión se vuelve más complejo y rápido, recompensando la actividad física.",
+    "transformedIdeaTitle": "Recargando la Nave Espacial",
+    "transformedIdeaDescription": "Tu nave espacial se ha quedado sin energía. La única forma de recargarla es con movimiento. Programa una barra de energía en la pantalla que suba cuando corres o saltas. A medida que se llena, los motores (tambores) deben sonar más rápido. ¡Llega al 100% para despegar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "energy = Motion.averageSpeed() * 10; LED.barGraph(energy); beatSpeed = 100 - energy; Drum.loop('HiHat', beatSpeed)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Sonidos y Luces",
+    "originalIdeaDescription": "El dispositivo actúa como una varita mágica. Al realizar un movimiento de barrido suave, se activa un sonido de 'chimes' o percusión ligera y la matriz LED muestra un rastro de estrellas o destellos que se desvanecen, imitando el efecto de lanzar un hechizo.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Encantada",
+    "transformedIdeaDescription": "Aprende el hechizo 'Lumus Sonorus'. Programa tu varita para que, al moverla suavemente en el aire, deje un rastro de luces brillantes en la pantalla y haga sonar campanas mágicas (percusión aguda). ¡Pero cuidado, si la mueves muy fuerte el hechizo fallará!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isSmoothWave() THEN { LED.animation('Sparkles'); Drum.play('Chimes'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Huevo Fabergé Digital (Equilibrio)",
+    "originalIdeaDescription": "Un juego de equilibrio donde el usuario debe mantener un 'huevo' (pixel iluminado) en el centro de la matriz. Al inclinar el dispositivo, el pixel se desliza. Si toca los bordes, el huevo se 'rompe' visualmente y suena un fuerte golpe de tambor indicando el fallo.",
+    "transformedIdeaTitle": "Misión: Transportar la Nitro-Glicerina",
+    "transformedIdeaDescription": "Llevas una carga muy inestable (un punto de luz) en el centro de tu camión. Debes mantener el dispositivo plano. Si lo inclinas, la carga se deslizará. Si toca las paredes... ¡BOOM! Programa el sonido de explosión y la animación si fallas en el equilibrio.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pixelX = pixelX + Motion.TiltX; pixelY = pixelY + Motion.TiltY; LED.plot(pixelX, pixelY); IF pixelX > 6 OR pixelX < 0 THEN { Drum.play('Crash'); LED.show('Explosion') }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Gestual",
+    "originalIdeaDescription": "Una herramienta para músicos donde el usuario establece el tempo golpeando (moviendo bruscamente) el dispositivo dos veces. El sistema calcula el intervalo, comienza a reproducir un sonido de 'click' (tambor seco) a ese ritmo y visualiza un péndulo oscilando en la matriz LED.",
+    "transformedIdeaTitle": "El Director de Orquesta Digital",
+    "transformedIdeaDescription": "¡Tú marcas el ritmo! Golpea el aire dos veces con tu batuta (dispositivo) para enseñar la velocidad a la banda. El dispositivo debe calcular ese tiempo y mantenerlo sonando (tick-tock) mientras muestra una barra oscilando de izquierda a derecha.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "time1 = getTime(firstShake); time2 = getTime(secondShake); bpm = time2 - time1; LOOP { Drum.play('Woodblock'); LED.animation('Metronome'); wait(bpm) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efecto de Lluvia Interactivo",
+    "originalIdeaDescription": "Simulación ambiental donde la inclinación del dispositivo controla la intensidad de una tormenta. En posición horizontal es 'calma'. Al inclinarlo, comienzan a caer 'gotas' (pixels) en la matriz y suenan redobles suaves. Al agitarlo, se convierte en tormenta con truenos (bombos) y lluvia torrencial.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Controla el clima con tus manos. Empieza con una llovizna suave inclinando el dispositivo: verás gotas caer y oirás golpecitos. Luego, agítalo con fuerza para invocar una súper tormenta con truenos (bombos fuertes) y mucha lluvia en la pantalla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > high THEN { Drum.play('Thunder'); LED.anim('HeavyRain') } ELSE IF Motion.tilt > low THEN { Drum.play('RainDrop'); LED.anim('LightRain') }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad de Objetos",
+    "originalIdeaDescription": "Un dispositivo antirrobo para mochilas o cajones. Se activa un temporizador de cuenta regresiva en la matriz LED. Una vez armado, cualquier movimiento detectado disparará una sirena rítmica de tambores y una animación de 'X' parpadeante para ahuyentar al intruso.",
+    "transformedIdeaTitle": "Trampa para Espías Curiosos",
+    "transformedIdeaDescription": "¡Protege tu diario o tus dulces! Programa una alarma que se active después de 5 segundos. Una vez activa, si alguien intenta mover tu dispositivo, debe sonar una alarma de percusión muy fuerte y mostrar luces de policía para asustar al ladrón.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WAIT(5000); armed = TRUE; LOOP { IF armed AND Motion.isMoved() THEN { Drum.play('AlarmBeat'); LED.flash('X'); } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Secuenciador de Pasos Físico",
+    "originalIdeaDescription": "Un secuenciador musical donde los ejes X, Y y Z controlan diferentes partes de un ritmo. Inclinar en X añade Hi-Hats, en Y añade Bombos, y Z añade Cajas. La matriz muestra qué instrumentos están activos en una cuadrícula de 3x3.",
+    "transformedIdeaTitle": "DJ 3D: Mezcla con Movimiento",
+    "transformedIdeaDescription": "Conviértete en un DJ que no usa botones. Inclina el dispositivo hacia adelante para activar el bajo, hacia la derecha para los platillos y sacúdelo para la caja. La pantalla te mostrará qué instrumentos están sonando. ¡Encuentra la mezcla perfecta moviendo tu cuerpo!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "beat = []; IF Tilt.X > 10 THEN beat.add('Kick'); IF Tilt.Y > 10 THEN beat.add('Hat'); IF Tilt.Z > 10 THEN beat.add('Snare'); Drum.playPattern(beat); LED.showActive(beat)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tenis de Mesa",
+    "originalIdeaDescription": "Juego de Pong para un jugador controlado por movimiento. El usuario mueve el dispositivo lateralmente para controlar una 'paleta' en la parte inferior de la matriz. Cuando la bola rebota en la paleta, suena un 'ping'; si toca la pared superior, suena un 'pong'.",
+    "transformedIdeaTitle": "Ping-Pong de Bolsillo",
+    "transformedIdeaDescription": "Crea el clásico juego de Ping-Pong. Usa el sensor de movimiento para mover tu raqueta (una rayita de luz) de izquierda a derecha. Debes golpear la pelota de luz. Cada vez que rebote, haz que suene un 'toc' seco. ¡No dejes que se caiga!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "paddleX = map(Motion.TiltX, -10, 10, 0, 6); ball.update(); IF ball.hits(paddleX) THEN { ball.bounce(); Drum.play('Ping'); } ELSE IF ball.y > 7 THEN gameOver()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Contador de Saltos (Cuerda Virtual)",
+    "originalIdeaDescription": "Un simulador de saltar la cuerda. El dispositivo detecta el movimiento vertical cíclico del salto del usuario. Cada salto exitoso incrementa un contador en la matriz LED y reproduce un sonido de 'swish' o golpe de cuerda contra el suelo.",
+    "transformedIdeaTitle": "Reto de la Cuerda Invisible",
+    "transformedIdeaDescription": "¡A ver cuántos saltos seguidos puedes dar! Programa el dispositivo para que cuente cada vez que saltes (detectando el impacto vertical). Por cada salto, debe sonar la cuerda golpeando el suelo y sumar un punto en la pantalla. ¿Llegarás a 100?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "jumps = 0; IF Motion.Y_Impact > threshold THEN { jumps++; Drum.play('RopeHit'); LED.showNumber(jumps); WAIT(200); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente",
+    "originalIdeaDescription": "Juego grupal. La matriz LED muestra una cuenta atrás visual (círculo reduciéndose). Mientras suena un ritmo de tambor constante, los jugadores deben pasar el dispositivo suavemente. Si se agita demasiado (pánico) o el tiempo se acaba, 'explota' con sonido y luz.",
+    "transformedIdeaTitle": "Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "Juega con tus amigos. El dispositivo es una bomba de tiempo que hace 'tick-tock' (tambor). Pásalo con cuidado. La mecha en la pantalla se hace más corta. Si se acaba el tiempo o si alguien lo pasa muy bruscamente... ¡KABOOM! (Sonido y luces locas).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "timer--; IF Motion.shake > panic OR timer == 0 THEN { Drum.play('Explosion'); LED.show('Boom'); Stop(); } ELSE { Drum.play('Tick'); LED.showTimer(timer); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rodillo de Tambor Incrementales",
+    "originalIdeaDescription": "Simulación de un redoble de tambores. Al inclinar el dispositivo hacia adelante, la frecuencia de los golpes de tambor aumenta progresivamente desde un ritmo lento hasta un redoble frenético. La matriz LED llena sus filas de abajo hacia arriba acompañando la intensidad.",
+    "transformedIdeaTitle": "Generador de Suspenso",
+    "transformedIdeaDescription": "Crea el efecto de sonido para un momento emocionante. Inclina el dispositivo hacia adelante para empezar un redoble de tambores. Cuanto más lo inclines, más rápido debe sonar, y la barra de luz debe subir hasta llegar al final con un gran platillazo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = map(Motion.TiltY, 0, 90, 500, 20); Drum.play('Snare'); LED.fillBar(Motion.TiltY); WAIT(speed); IF speed < 30 THEN Drum.play('Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Sensible",
+    "originalIdeaDescription": "Una cara en la matriz LED que reacciona al trato físico. Si se mece suavemente, muestra una cara feliz y ronronea (tambor suave). Si se agita fuerte, pone cara de mareo o enfado y emite sonidos de percusión discordantes.",
+    "transformedIdeaTitle": "Cuida a tu Pixel-Mascota",
+    "transformedIdeaDescription": "Programemos una mascota digital. Si la meces suavemente como a un bebé, debe sonreír en la pantalla y hacer sonidos relajantes. Pero cuidado, si la agitas fuerte, se mareará, pondrá cara triste y se quejará con ruidos fuertes.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > violent THEN { LED.show('DizzyFace'); Drum.play('Discordant'); } ELSE IF Motion.isGentleRocking() THEN { LED.show('Smile'); Drum.play('SoftPurr'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Brújula Sonora para Ciegos",
+    "originalIdeaDescription": "Una herramienta de accesibilidad conceptual. Al girar el dispositivo, diferentes instrumentos de percusión suenan según el punto cardinal al que se apunte (ej. Norte = Bombo, Sur = Caja). La matriz muestra la inicial del punto cardinal.",
+    "transformedIdeaTitle": "Explorador a Ciegas",
+    "transformedIdeaDescription": "Crea una herramienta para orientarse en la oscuridad. Asigna un sonido diferente a cada dirección: Norte (Bombo), Sur (Platillo), Este (Caja). Gira con el dispositivo en la mano y escucha los sonidos para saber hacia dónde miras, mientras la pantalla muestra la letra N, S, E o W.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "angle = Compass.getHeading(); IF angle is North THEN { LED.show('N'); Drum.play('Kick'); } ELSE IF angle is South THEN { LED.show('S'); Drum.play('HiHat'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Musical",
+    "originalIdeaDescription": "Herramienta de construcción divertida. Un punto en la matriz LED simula la burbuja de un nivel. Cuando el dispositivo está perfectamente plano (burbuja al centro), suena un ritmo armonioso y constante. Si se desnivela, el ritmo se rompe o se detiene.",
+    "transformedIdeaTitle": "El Constructor Perfecto",
+    "transformedIdeaDescription": "Ayuda al constructor a saber si la mesa está recta. Programa un 'nivel' donde un punto de luz se mueve con la inclinación. El objetivo es centrarlo. Cuando esté perfectamente centrado, debe sonar un ritmo de victoria continuo para indicar que está nivelado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.TiltX == 0 AND Motion.TiltY == 0 THEN { LED.show('CenterDot'); Drum.loop('Groove'); } ELSE { LED.show('OffCenter'); Drum.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Gestos de Karate",
+    "originalIdeaDescription": "Entrenador de artes marciales. El dispositivo reconoce movimientos rápidos y secos (puñetazos). Un movimiento rápido en el eje Z dispara un sonido de impacto y una animación de 'POW'. Se mide la velocidad para calificar el golpe.",
+    "transformedIdeaTitle": "Dojo Digital: El Puño de Fuego",
+    "transformedIdeaDescription": "Entrena tus movimientos de karate. Sujeta el dispositivo y lanza un puñetazo al aire (¡sin soltarlo!). Si el movimiento es lo bastante rápido, el dispositivo debe gritar con un sonido de impacto y mostrar una explosión. Si es lento, no hará nada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "accel = Motion.Z_Acceleration; IF accel > superFast THEN { Drum.play('HeavyHit'); LED.show('PowIcon'); } ELSE IF accel > mediumFast THEN { Drum.play('LightHit'); }"
+  }
+]

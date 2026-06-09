@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Cajón Secreto con Luz",
+    "originalIdeaDescription": "Un sistema de seguridad diseñado para un cajón o caja fuerte. Cuando el sensor de luz detecta un aumento repentino de iluminación (al abrirse el cajón), activa una alerta sonora utilizando la batería musical y muestra un símbolo de advertencia parpadeante en la matriz LED.",
+    "transformedIdeaTitle": "La Trampa del Espía: Protege los Documentos",
+    "transformedIdeaDescription": "¡Eres un agente secreto protegiendo archivos clasificados! Programa tu dispositivo para que funcione como una trampa de seguridad dentro de una caja oscura. Si alguien abre la caja y entra luz, debe sonar una alarma de tambores y mostrar una calavera en la pantalla para asustar al intruso.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 10 THEN (MusicalDrum.play('Crash') AND LEDMatrix.showImage('Skull'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea Controlada por Sombras",
+    "originalIdeaDescription": "Un instrumento musical virtual donde el usuario no toca nada físico. Al pasar la mano sobre el sensor de luz y crear una sombra, se dispara un sonido de percusión y se visualiza una onda de sonido en la matriz LED.",
+    "transformedIdeaTitle": "Baterista Invisible: El Concierto Mágico",
+    "transformedIdeaDescription": "Crea una batería mágica que se toca sin baquetas. Tu misión es programar el sensor para que cada vez que pases tu mano y tapes la luz (hagas sombra), suene un fuerte golpe de bombo y la pantalla se ilumine con una explosión de píxeles.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.value < 20 THEN (MusicalDrum.play('Kick') AND LEDMatrix.animate('Explosion'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Despertador Amanecer Rítmico",
+    "originalIdeaDescription": "Un dispositivo que simula el amanecer. A medida que la luz ambiental aumenta naturalmente por la mañana, la matriz LED muestra un sol saliendo y el ritmo de la batería comienza suavemente y aumenta de velocidad para despertar al usuario.",
+    "transformedIdeaTitle": "Gallo Electrónico: Amanecer Musical",
+    "transformedIdeaDescription": "Ayuda a despertar a la granja digital. Crea un programa que detecte cuando sale el sol (aumenta la luz). A medida que haya más luz, muestra un sol más grande en la pantalla y haz que el ritmo de los tambores sea más rápido y animado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP: Speed = map(LightIntensity.value, 0, 100, 60, 180); MusicalDrum.setTempo(Speed); LEDMatrix.show('Sun')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Un sistema ambiental que reacciona a la baja luz. Cuando está oscuro, genera destellos aleatorios en la matriz LED simulando relámpagos, seguidos inmediatamente por sonidos de truenos usando los tambores graves.",
+    "transformedIdeaTitle": "Creador de Tormentas: El Señor del Clima",
+    "transformedIdeaDescription": "¡Controla el clima en tu habitación! Programa el sistema para que cuando apagues las luces, comience una tormenta. Debes sincronizar un flash brillante en la matriz LED seguido de un fuerte estruendo de tambor para simular rayos y truenos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.value < 5 THEN (LEDMatrix.flash('White') AND WAIT(0.5) AND MusicalDrum.play('TomLow'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Fotosensible",
+    "originalIdeaDescription": "Una mascota digital que vive en la matriz LED. Si hay mucha luz, la mascota está despierta, sonríe y hace sonidos alegres. Si oscurece, la mascota cierra los ojos (LED) y emite sonidos rítmicos suaves de ronquidos.",
+    "transformedIdeaTitle": "Tamagotchi Solar: Cuida a tu Pixel-Pet",
+    "transformedIdeaDescription": "Diseña una mascota hecha de luz. Tu Pixel-Pet tiene miedo a la oscuridad. Si hay luz, muestra una cara feliz y toca un ritmo de samba. Si tapas el sensor o apagas la luz, muestra una cara durmiendo 'Zzz' y reproduce un ritmo lento como si roncara.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 50 THEN (LEDMatrix.show('Smile') AND MusicalDrum.loop('Samba')) ELSE (LEDMatrix.show('Zzz') AND MusicalDrum.loop('SlowBeat'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenamiento Ninja de Sigilo",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el sensor en completa oscuridad cubriéndolo. Si se filtra algo de luz, el sistema detecta el fallo, suena un tambor de 'Game Over' y muestra una X en la matriz.",
+    "transformedIdeaTitle": "Misión Ninja: Operación Sombra",
+    "transformedIdeaDescription": "Eres un ninja infiltrándote en una base enemiga. Debes mantener tu dispositivo completamente oculto en tu mano o bolsillo. Si el sensor detecta, aunque sea un rayo de luz, ¡te habrán descubierto! Sonará la alarma de tambores y perderás la misión.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "GAME_LOOP: IF LightIntensity.value > 0 THEN (MusicalDrum.play('SnareRoll') AND LEDMatrix.show('X') AND Game.stop())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Potencia Visual",
+    "originalIdeaDescription": "Usa una linterna para cargar una barra de energía. Cuanto más intensa es la luz dirigida al sensor, más se llena la barra en la matriz LED y más rápido es el redoble de tambores.",
+    "transformedIdeaTitle": "Cargador de Fotones: ¡Sube la Energía!",
+    "transformedIdeaDescription": "Usa una linterna como fuente de combustible. Apunta al sensor para llenar el tanque de energía de tu nave espacial. Programa la matriz para mostrar una barra de carga que sube con la luz, y haz que los motores (tambores) suenen más rápido a medida que alcanzas el 100%.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Level = map(LightIntensity.value, 0, 100, 0, 7); LEDMatrix.showBar(Level); MusicalDrum.playRepeat('Hit', Level * 10)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Radar de Murciélago Echolocation",
+    "originalIdeaDescription": "Simula la visión de un murciélago en la oscuridad. A baja intensidad de luz, el sistema emite 'clics' de percusión y muestra ondas concéntricas en la matriz LED que simulan el sonido rebotando.",
+    "transformedIdeaTitle": "Soy Batman: Visión de Sonar",
+    "transformedIdeaDescription": "Conviértete en un murciélago explorando una cueva oscura. Cuando las luces se apaguen, activa tu 'sonar'. Programa el dispositivo para emitir pulsos de sonido (tambores secos) y dibujar ondas expansivas en la pantalla LED para 'ver' en la oscuridad.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity.value < 10 THEN (MusicalDrum.play('HiHat') AND LEDMatrix.animation('Ripple'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Ritmo Cardíaco del Miedo",
+    "originalIdeaDescription": "Un dispositivo de narración interactiva. A medida que la habitación se oscurece, simula un latido del corazón (bombo) que se acelera y muestra un corazón palpitante en la matriz LED.",
+    "transformedIdeaTitle": "Casa Embrujada: El Corazón Miedoso",
+    "transformedIdeaDescription": "Estás contando una historia de terror. Crea un efecto especial que simule el miedo del protagonista. Cuanto más oscuro esté el lugar, más rápido debe latir el corazón en la pantalla LED y más fuertes deben sonar los 'latidos' de tambor.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BeatDelay = map(LightIntensity.value, 0, 100, 200, 1000); LOOP: LEDMatrix.show('Heart'); MusicalDrum.play('Kick'); WAIT(BeatDelay)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo Óptico Interactivo",
+    "originalIdeaDescription": "Una herramienta para músicos donde la velocidad del metrónomo (clicks de tambor) y la oscilación de un péndulo visual en la matriz LED se controlan acercando o alejando una fuente de luz.",
+    "transformedIdeaTitle": "DJ de Luz: Controla el Tempo",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Construye un controlador futurista donde la velocidad de la música depende de tu mano. Si acercas tu mano (menos luz), el ritmo se vuelve lento y pesado. Si alejas la mano (más luz), el ritmo se acelera al máximo. ¡Visualiza el beat en la pantalla!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = map(LightIntensity.value, 0, 100, 60, 180); MusicalDrum.setBPM(BPM); LEDMatrix.pulseOnBeat()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Semáforo Rítmico Inteligente",
+    "originalIdeaDescription": "Un sistema de tráfico lúdico. Detecta la luz ambiental; si es alta (día/seguro), muestra una flecha verde y toca un ritmo constante. Si es baja (noche/peligro), muestra un STOP y detiene el sonido.",
+    "transformedIdeaTitle": "Tráfico en la Ciudad Futura",
+    "transformedIdeaDescription": "Diseña un semáforo para autos voladores que funciona con energía solar. Si hay suficiente sol, muestra una flecha de 'Avanzar' y toca una marcha rítmica para que los autos se muevan. Si cae la noche (poca luz), muestra una señal de 'Alto' y silencia los tambores para detener el tráfico.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 40 THEN (LEDMatrix.show('Arrow') AND MusicalDrum.play('March')) ELSE (LEDMatrix.show('StopBox') AND MusicalDrum.stop())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Lumínico",
+    "originalIdeaDescription": "Un sistema que traduce pulsos de luz en sonido. Si el usuario hace parpadear una linterna sobre el sensor, el sistema reproduce un golpe de tambor por cada destello y enciende un píxel central.",
+    "transformedIdeaTitle": "Telégrafo Secreto de Luz a Sonido",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando una linterna. Programa el receptor para que cada vez que detecte un destello de luz de tu linterna, convierta esa señal en un sonido de tambor y un punto brillante en la pantalla. ¡Ideal para comunicarse entre bases secretas!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity.change > Threshold THEN (MusicalDrum.play('Tap') AND LEDMatrix.pixel(3,3, ON))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Planta Alienígena Bailarina",
+    "originalIdeaDescription": "Simula una planta que reacciona a la fotosíntesis. Con luz óptima, la matriz muestra una flor abriéndose y suena un ritmo alegre. Con demasiada o muy poca luz, la flor se marchita y el sonido se vuelve disonante.",
+    "transformedIdeaTitle": "Botánica Espacial: La Flor Cantante",
+    "transformedIdeaDescription": "Has descubierto una flor rara en otro planeta que canta cuando recibe la luz perfecta. Programa tu invernadero para que cuando la luz esté en el nivel medio ideal, la flor florezca en la pantalla y toque un ritmo feliz. Si está muy oscuro o la luz quema, ¡haz que suene triste!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.value > 40 AND LightIntensity.value < 70 THEN (LEDMatrix.show('Flower') AND MusicalDrum.loop('Happy')) ELSE (MusicalDrum.loop('Sad'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Contador de Pasos por Sombra",
+    "originalIdeaDescription": "Un contador simple que se coloca en el suelo o marco de una puerta. Cada vez que alguien pasa y crea una sombra sobre el sensor, incrementa un número en la matriz LED y suena un 'hi-hat'.",
+    "transformedIdeaTitle": "Portero Automático: Contador de Visitas",
+    "transformedIdeaDescription": "¡Lleva la cuenta de quién entra a tu club secreto! Coloca el sensor en la entrada. Cada vez que la sombra de un amigo pase sobre él, tu programa debe sumar 1 al contador en la pantalla LED y hacer sonar un platillo para anunciar su llegada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.change < -20 THEN (Count = Count + 1; LEDMatrix.showNumber(Count); MusicalDrum.play('HiHat'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Theremin de Percusión",
+    "originalIdeaDescription": "Instrumento musical experimental. Mover la mano arriba y abajo sobre el sensor cambia qué tambor suena (Bajo, Caja, Platillo) y muestra la posición de la mano como una barra vertical en la matriz LED.",
+    "transformedIdeaTitle": "Compositor de Aire: Manos Mágicas",
+    "transformedIdeaDescription": "Crea un instrumento futurista que cambia de sonido según la altura de tu mano. Si tu mano está cerca (poca luz), toca el bombo grave. Si está lejos (mucha luz), toca los platillos agudos. ¡La pantalla debe mostrar una barra que sube y baja con tu mano!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light < 30 THEN Drum='Kick' ELSE IF Light < 60 THEN Drum='Snare' ELSE Drum='Cymbal'; MusicalDrum.play(Drum); LEDMatrix.showLevel(Light)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Vampiros (Amanecer)",
+    "originalIdeaDescription": "Juego de rol. El sistema actúa como un vampiro. En oscuridad (noche) muestra colmillos y silencio. Si detecta luz (sol), la matriz muestra fuego y los tambores suenan caóticamente como si se quemara.",
+    "transformedIdeaTitle": "Sobrevive la Noche: El Vampiro Digital",
+    "transformedIdeaDescription": "Tu dispositivo es un vampiro antiguo. Mientras esté oscuro, está a salvo y muestra sus colmillos en la pantalla. Pero cuidado, si detecta la luz del sol (o una linterna), ¡comenzará a quemarse! Programa una animación de fuego y un redoble de tambores frenético cuando suba la luz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 80 THEN (LEDMatrix.animate('Fire') AND MusicalDrum.play('Chaos')) ELSE (LEDMatrix.show('Fangs'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Luciérnaga Cibernética Sincronizada",
+    "originalIdeaDescription": "Dispositivo biomimético. En la oscuridad, genera un patrón de parpadeo suave en la matriz LED acompañado de sonidos de percusión muy suaves y agudos, imitando insectos nocturnos.",
+    "transformedIdeaTitle": "Bosque Encantado: La Luciérnaga Robot",
+    "transformedIdeaDescription": "Crea una luciérnaga robótica para iluminar tu acampada. Cuando se haga de noche (oscuridad), tu luciérnaga debe despertar: haz que la luz de la pantalla parpadee suavemente y acompáñalo de sonidos 'click' muy suaves y misteriosos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.value < 15 THEN (LEDMatrix.fade('Yellow') AND MusicalDrum.play('Rimshot_Soft'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Sorpresa (Jack-in-the-box)",
+    "originalIdeaDescription": "Juguete clásico reinventado. Se coloca dentro de una caja cerrada. Al abrir la tapa (detectar luz), salta una animación divertida en la LED y suena un redoble de tambores final.",
+    "transformedIdeaTitle": "La Caja de Bromas: Sorpresa Luminosa",
+    "transformedIdeaDescription": "Prepara una broma divertida. Esconde el dispositivo en una caja de regalo. Programa el sistema para que espere en silencio en la oscuridad. En el momento exacto en que alguien abra la caja y entre luz: ¡BOOM! Sonido de platillos y una cara graciosa sacando la lengua en la pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WAIT UNTIL LightIntensity.value > 50; MusicalDrum.play('CymbalCrash'); LEDMatrix.show('FunnyFace')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Túnel de Lavado de Autos",
+    "originalIdeaDescription": "Simulación de un proceso industrial. Un objeto pasa por el sensor (sombra), activando 'rodillos' animados en la matriz LED y un sonido rítmico de maquinaria pesada con los tambores.",
+    "transformedIdeaTitle": "Magnate del Autolavado",
+    "transformedIdeaDescription": "¡Gestiona tu propio túnel de lavado! Cuando un 'auto' (tu mano) entra al túnel y tapa la luz, debes activar la maquinaria. Muestra rodillos girando en la pantalla LED y reproduce un ritmo mecánico constante con los tambores mientras dure el lavado.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE LightIntensity.value < 30 DO (LEDMatrix.animate('Spin') AND MusicalDrum.play('IndustrialBeat'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Explorador de Profundidad Marina",
+    "originalIdeaDescription": "Simulador de submarino. A medida que 'bajas' (reduces la luz manualmente o con un dimmer), la presión aumenta: los tambores suenan más graves y lentos, y la matriz muestra criaturas bioluminiscentes.",
+    "transformedIdeaTitle": "Expedición al Fondo del Mar",
+    "transformedIdeaDescription": "Pilota un submarino hacia la Fosa de las Marianas. A medida que la luz exterior desaparece (se oscurece), activa el modo 'Profundidad': sonidos de tambores graves y lentos como la presión del agua, y extrañas luces de peces abisales en la pantalla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Depth = 100 - LightIntensity.value; MusicalDrum.setPitch(Low); MusicalDrum.setTempo(Slow); LEDMatrix.showRandomPixels(Depth)"
+  }
+]

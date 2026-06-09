@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Velocidad Musical",
+    "originalIdeaDescription": "El usuario agita el dispositivo. Cuanto más rápido lo agita (sensor de movimiento), más rápido se reproduce la canción en el reproductor de audio. El teclado se usa para cambiar la canción.",
+    "transformedIdeaTitle": "El DJ Maratónico",
+    "transformedIdeaDescription": "¡La música depende de tu energía! Debes correr en tu lugar o bailar. El sensor de movimiento detecta tu ritmo: si te detienes, la música se apaga y pierdes puntos. Si te mueves rápido, la música se acelera. Usa el teclado para cambiar de pista sin dejar de moverte.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = Motion.magnitude / 10; Audio.setPlaybackRate(speed); IF Keyboard.pressed() THEN Audio.nextTrack()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Espada Láser Sonora",
+    "originalIdeaDescription": "Simulador de espada de ciencia ficción. Al mover el dispositivo, suena el zumbido característico (Audio). Al chocar (frenazo brusco), suena un choque. El teclado cambia el color del cristal (sonido diferente).",
+    "transformedIdeaTitle": "Academia de Caballeros Espaciales",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. Programa el sensor para que, al detectar un movimiento de 'barrido', el Audio reproduzca un zumbido. Si detecta un golpe seco (impacto), debe sonar una explosión. Usa las teclas para cambiar el modo de la espada (Defensa/Ataque).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > threshold THEN Audio.play('Clash'); ELSE IF Motion.isMoving() THEN Audio.play('Hum'); IF Keyboard.key('1') THEN setMode('Red')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Estatues Musicales",
+    "originalIdeaDescription": "La música suena. Cuando para aleatoriamente, el usuario debe quedarse inmóvil. Si el sensor detecta movimiento durante el silencio, pierde. El teclado reinicia el juego.",
+    "transformedIdeaTitle": "Guardia del Museo Nocturno",
+    "transformedIdeaDescription": "Eres una estatua viviente. Cuando suena la música mágica, puedes bailar. En cuanto la música se detenga (controlada por el programa), ¡congélate! Si el sensor de movimiento detecta el más mínimo temblor, sonará una alarma y te atraparán. Presiona una tecla para intentar de nuevo.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Music'); WAIT(random); Audio.stop(); WAIT(3s); IF Motion.detected() THEN Audio.play('Alarm'); ELSE Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Instrumento de Percusión por Gestos",
+    "originalIdeaDescription": "Mover el dispositivo hacia la izquierda toca un platillo, a la derecha un bombo, y arriba una caja. El teclado agrega melodía de acompañamiento.",
+    "transformedIdeaTitle": "Hombre Orquesta Virtual",
+    "transformedIdeaDescription": "Coordina todo tu cuerpo. Mueve tu mano derecha fuerte para golpear el platillo (Motion + Audio), mientras con la mano izquierda tocas una melodía en el teclado. Crea un ritmo complejo combinando movimientos físicos y digitación musical.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.accelX > 20 THEN Audio.play('Crash'); IF Keyboard.pressed('C') THEN Audio.playNote('C')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Alarma de Transporte Delicado",
+    "originalIdeaDescription": "Juego de equilibrio. El usuario debe transportar el dispositivo como si fuera nitroglicerina. Si se mueve mucho, explota (Audio). El teclado sirve para desactivar la bomba al llegar.",
+    "transformedIdeaTitle": "Transporte de Materia Inestable",
+    "transformedIdeaDescription": "Llevas un núcleo de energía inestable. Camina suavemente por el aula. Si el sensor de movimiento detecta una sacudida fuerte, el Audio iniciará una cuenta atrás de autodestrucción. ¡Debes detenerte y teclear el código de emergencia rápidamente para estabilizarlo!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > limit THEN Audio.play('Countdown'); IF Keyboard.code('1234') THEN Audio.play('Safe') ELSE Audio.play('Explosion')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Varita Mágica de Hechizos",
+    "originalIdeaDescription": "El usuario hace un gesto específico (ej. círculo o estocada) y presiona una tecla simultáneamente para lanzar un hechizo sonoro.",
+    "transformedIdeaTitle": "Duelo de Magos Elementales",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Para lanzar 'Rayo', debes agitar el dispositivo hacia adelante (Motion) MIENTRAS mantienes presionada la tecla 'Re' (Keyboard). Si la coordinación es correcta, el Audio desatará un sonido de trueno poderoso.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('Forward') AND Keyboard.isPressed('D') THEN Audio.play('ThunderSpell')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja de Ritmos Caminante",
+    "originalIdeaDescription": "Podómetro sonoro. Cada paso detectado por el sensor de movimiento reproduce un sonido de bombo, creando un ritmo al caminar. El teclado añade 'claps' o 'snares'.",
+    "transformedIdeaTitle": "Zapatillas de Hip-Hop",
+    "transformedIdeaDescription": "Convierte tus pasos en música. Engancha el dispositivo a tu cintura. Cada paso que das (Motion) dispara un sonido de bajo (Audio). Camina con ritmo para crear una base. Usa el teclado en tu mano para improvisar solos de sintetizador sobre tu propio ritmo de caminata.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN Audio.play('KickDrum'); IF Keyboard.key('A') THEN Audio.play('Snare')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Theremin de Movimiento",
+    "originalIdeaDescription": "Inclinar el dispositivo cambia el tono de un sonido continuo. El teclado cambia el tipo de onda (senoidal, cuadrada) o el volumen base.",
+    "transformedIdeaTitle": "El Violín Fantasma",
+    "transformedIdeaDescription": "Toca un instrumento invisible. Mantén presionada una tecla para activar el arco. Inclina el dispositivo hacia arriba o abajo (Motion) para cambiar la nota (pitch) en tiempo real. Intenta tocar una melodía conocida solo moviendo tu muñeca en el aire.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "baseFreq = 440; pitch = baseFreq + (Motion.tiltY * 10); IF Keyboard.pressed() THEN Audio.playFrequency(pitch)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Vuelo",
+    "originalIdeaDescription": "Usa el sensor de movimiento como palanca de mando (joystick) para controlar el sonido del motor de un avión. El teclado dispara ametralladoras o bombas.",
+    "transformedIdeaTitle": "Piloto de Caza Estelar",
+    "transformedIdeaDescription": "¡Despegue inmediato! Inclina el dispositivo para pilotar tu nave. Si inclinas mucho, el motor ruge más fuerte (Audio pitch). Si detectas enemigos, presiona las teclas para disparar láseres. Mantén la nave estable o sonará la alarma de pérdida de control.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setPitch(Motion.tiltX); IF Keyboard.key('Fire') THEN Audio.play('Laser'); IF Motion.shake > severe THEN Audio.play('StallWarning')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Despertador Activo",
+    "originalIdeaDescription": "Una alarma que no se apaga hasta que el usuario agita el dispositivo vigorosamente por 10 segundos y toca una secuencia de teclas correcta.",
+    "transformedIdeaTitle": "El Desafío del Despertar",
+    "transformedIdeaDescription": "¡La alarma más molesta del mundo! Suena fuerte (Audio). Para apagarla, no basta un botón: tienes que agitar el dispositivo para llenar una barra de energía y, al mismo tiempo, tocar la 'Melodía del Sol' en el teclado. ¡Perfecto para despertar el cerebro y el cuerpo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE AlarmOn: Audio.loop('Ring'); energy += Motion.shakeAmount; IF energy > 100 AND Keyboard.sequence('C-D-E') THEN AlarmOn = FALSE"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Hacer un gesto de 'lanzar' con el sensor. Esperar sonido de agua. Cuando suena el pique, tirar hacia atrás. Usar el teclado para 'recoger el carrete'.",
+    "transformedIdeaTitle": "Pesca en Alta Mar",
+    "transformedIdeaDescription": "Lanza tu caña haciendo un gesto brusco con el brazo (Motion). Espera en silencio... cuando escuches '¡Splash!' (Audio), ¡tira hacia atrás rápidamente! Luego, presiona repetidamente las teclas alternas (Do-Re-Do-Re) para luchar contra el pez y subirlo al barco.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('Throw') THEN Audio.play('Cast'); WAIT(random); Audio.play('Bite'); IF Motion.gesture('Pull') AND Keyboard.mash() THEN Audio.play('Success')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Entrenador de Baloncesto",
+    "originalIdeaDescription": "Simular un tiro libre. Levantar el brazo y 'lanzar' (movimiento). El audio reproduce el rebote y el enceste si el movimiento fue suave y correcto. Teclado para marcador.",
+    "transformedIdeaTitle": "Tiro Libre Sobre la Bocina",
+    "transformedIdeaDescription": "Quedan 3 segundos. Simula el lanzamiento perfecto con el sensor de movimiento (suavidad y arco). Si el gesto es técnico, escucharás el sonido de la red 'Swish' (Audio). Si es muy brusco, sonará el aro 'Clang'. Usa el teclado para sumar tus puntos al marcador.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('Shoot') AND Motion.smoothness > 80 THEN Audio.play('Swish'); ELSE Audio.play('RimHit')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Narrador de Cuentos con Efectos",
+    "originalIdeaDescription": "El usuario lee un cuento. Al llegar a partes de acción, agita el dispositivo (truenos, galope) o toca teclas (pájaros, puertas) para agregar efectos de sonido.",
+    "transformedIdeaTitle": "Cuentacuentos FX",
+    "transformedIdeaDescription": "Eres el artista de efectos especiales. Mientras narras la historia del 'Caballo Mágico', golpea el dispositivo rítmicamente contra tu pierna (Motion) para hacer el sonido de galope. Usa el teclado para hacer cantar a los pájaros del bosque. ¡Sincroniza todo con la narración!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.impact() THEN Audio.play('Gallop'); IF Keyboard.key('C') THEN Audio.play('BirdChirp')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Papa Caliente Cósmica",
+    "originalIdeaDescription": "Pasar el dispositivo. El movimiento debe ser suave. Si se agita mucho, explota. El tiempo se acaba (Audio in crescendo). Quien lo tenga al final debe tocar una tecla para 'revivir'.",
+    "transformedIdeaTitle": "Bomba de Gravedad Cero",
+    "transformedIdeaDescription": "Pasad el dispositivo en círculo con mucho cuidado. El sensor de movimiento es muy sensible; si detecta un movimiento brusco, ¡BOOM! (Audio). Además, la mecha se consume (sonido tic-tac). Si explota en tus manos, debes cumplir una prenda o tocar una canción de redención en el teclado.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Timer > 0: Audio.play('Tick'); IF Motion.accel > limit THEN Audio.play('Explosion'); Game.End()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Baile (Dance Pad)",
+    "originalIdeaDescription": "Juego de ritmo. Audio dice 'Izquierda', usuario mueve dispositivo a la izquierda. Audio dice 'Tecla A', usuario toca tecla. Se suman puntos por precisión.",
+    "transformedIdeaTitle": "Revolución de Baile de Manos",
+    "transformedIdeaDescription": "Sigue el ritmo. El sistema te gritará comandos: '¡Arriba!', '¡Abajo!', '¡Tecla Roja!'. Debes mover el dispositivo o tocar el teclado al instante. Si fallas o tardas mucho, la música se distorsiona y el público te abuchea (Audio).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = Random(['Up', 'Down', 'KeyC']); Audio.say(target); IF InputMatches(target, Motion, Keyboard) THEN Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Escape de Zombis (Run Game)",
+    "originalIdeaDescription": "Audio inmersivo de zombis persiguiendo. El usuario debe correr en el sitio (Motion detecta saltos). Si deja de correr, el volumen de los zombis sube. Teclado para abrir puertas.",
+    "transformedIdeaTitle": "Huyendo de la Horda",
+    "transformedIdeaDescription": "Cierra los ojos y escucha. Los zombis están detrás de ti (Audio). Corre en tu lugar (el sensor detecta el rebote) para mantenerlos lejos. Si te cansas y paras, el sonido de los gruñidos se acercará. Si encuentras un obstáculo, toca rápidamente el código en el teclado para saltarlo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "zombieDist = 100; IF Motion.activity < low THEN zombieDist--; Audio.setVolume(100 - zombieDist); IF Keyboard.correct() THEN obstacleCleared = TRUE"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Giro y Clave",
+    "originalIdeaDescription": "Para abrir, el usuario debe girar el dispositivo 90 grados a la derecha (Motion), esperar un 'click' (Audio), luego 90 a la izquierda, y finalizar con un código en el teclado.",
+    "transformedIdeaTitle": "El Ladrón de Bancos Maestro",
+    "transformedIdeaDescription": "Frente a la gran bóveda. Gira el dispositivo como si fuera el dial de la caja fuerte. Siente y escucha el 'clic' (Audio) cuando el sensor de giro (Gyro) llegue a la posición correcta. Tras tres giros correctos, introduce el PIN final en el teclado para llevarte el oro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Gyro.angle == target THEN Audio.play('Click'); unlockedSteps++; IF unlockedSteps == 3 AND Keyboard.pin('1234') THEN OpenVault()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Tenis",
+    "originalIdeaDescription": "El usuario hace el gesto de 'swing' con el sensor. El audio reproduce el golpe de la raqueta. El teclado se usa para seleccionar el tipo de golpe (liftado, cortado).",
+    "transformedIdeaTitle": "Final de Wimbledon",
+    "transformedIdeaDescription": "Es el punto de partido. El Audio reproduce la pelota viniendo. Calcula el tiempo y haz el swing con tu brazo (Motion). Antes de golpear, mantén una tecla presionada para decidir si es un golpe potente o una dejada sutil. ¡Gana el campeonato!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(BallTime); IF Motion.swing() THEN Audio.play('RacketHit'); IF Keyboard.key('TopSpin') THEN Audio.play('SpinSound')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Colocar el dispositivo en una mesa 'estructura'. Golpear la mesa para simular sismo. El sensor mide la intensidad. Audio reproduce alarma según nivel. Teclado para resetear.",
+    "transformedIdeaTitle": "Ingeniero Sísmico",
+    "transformedIdeaDescription": "Simula un terremoto golpeando la mesa. El sensor registrará la vibración. Si es leve, el Audio dirá 'Precaución'. Si es fuerte, sonará una sirena de evacuación. Tu misión es diseñar una estructura (con bloques) que no active la alarma fuerte al mover la mesa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "intensity = Motion.shake; IF intensity > 50 THEN Audio.play('Siren'); ELSE IF intensity > 20 THEN Audio.play('Warning')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Motion", "Musical Keyboard"],
+    "originalIdeaTitle": "Director de Orquesta Robótico",
+    "originalIdeaDescription": "El usuario mueve el dispositivo como una batuta. La amplitud del movimiento controla el volumen. El teclado selecciona qué sección de la orquesta suena.",
+    "transformedIdeaTitle": "Maestro de la Filarmónica",
+    "transformedIdeaDescription": "Toma la batuta. Mueve el brazo suavemente para que la música suene bajo (Piano). Mueve el brazo con grandes gestos para que suene Fortissimo. Usa el teclado para indicar la entrada de los violines o los tambores. ¡Controla la dinámica de la obra!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "volume = Motion.amplitude * factor; Audio.setVolume(volume); IF Keyboard.pressed('V') THEN Audio.unmute('Violins')"
+  }
+]

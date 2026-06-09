@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea Direccional Interactiva",
+    "originalIdeaDescription": "Un sistema donde el usuario simula tocar una batería en el aire. La dirección hacia donde apunta determina qué tambor se selecciona (caja, bombo, platillo) y un movimiento brusco de inclinación hacia abajo activa el sonido.",
+    "transformedIdeaTitle": "La Banda de Rock Virtual",
+    "transformedIdeaDescription": "¡Conviértete en una estrella de rock sin instrumentos físicos! Programarás un sistema donde al girar tu cuerpo (Brújula) eliges entre platillos o tambores, y al hacer el gesto de golpear con tu 'baqueta' (Inclinación), sonará el ritmo (Batería).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass < 90 THEN selected_drum = 'snare' ELSE selected_drum = 'hi-hat'; IF Inclination.pitch < -45 THEN MusicalDrum.play(selected_drum)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Espacial",
+    "originalIdeaDescription": "Un dispositivo de seguridad lúdico que solo se desbloquea si el usuario orienta el dispositivo hacia el Norte y lo inclina exactamente 45 grados, reproduciendo un sonido de éxito al lograrlo.",
+    "transformedIdeaTitle": "El Tesoro del Pirata Espacial",
+    "transformedIdeaDescription": "Eres un explorador espacial intentando abrir una compuerta antigua. Debes crear un código secreto: la puerta solo se abre si apuntas al Norte Magnético y giras la llave (Inclinación) en el ángulo exacto. Un 'clic' (Batería) confirmará tu éxito.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'North' AND Inclination.roll > 40 THEN MusicalDrum.play('click_sound') ELSE wait()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Aterrizaje de Vuelo",
+    "originalIdeaDescription": "Herramienta que simula el aterrizaje de un avión. La brújula debe mantenerse alineada con la pista y la inclinación debe estar nivelada. Si hay desviación, suenan alarmas de impacto.",
+    "transformedIdeaTitle": "Piloto de Drones de Rescate",
+    "transformedIdeaDescription": "Tu misión es aterrizar un dron de rescate en una plataforma ventosa. Mantén el rumbo hacia el Sur (Brújula) y las alas niveladas (Inclinación). Si te inclinas demasiado, ¡el dron chocará contra el suelo (sonido de Batería)!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass != 'South' OR Inclination.roll != 0 THEN MusicalDrum.play('crash') ELSE MusicalDrum.play('success')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Ritmos Geográficos",
+    "originalIdeaDescription": "Un explorador musical donde diferentes puntos cardinales tienen asignados diferentes ritmos base. La inclinación del dispositivo controla la velocidad (tempo) de ese ritmo.",
+    "transformedIdeaTitle": "La Brújula del DJ",
+    "transformedIdeaDescription": "Crea una mesa de mezclas que cambia de estilo musical según hacia dónde mires. El Norte es Rock, el Sur es Jazz. Inclina el dispositivo hacia adelante para acelerar el ritmo de la batería y poner a bailar a todos.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "beat_type = Compass.getDirection(); speed = map(Inclination.pitch, -90, 90, 60, 180); MusicalDrum.playLoop(beat_type, speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio Zen",
+    "originalIdeaDescription": "Dispositivo para meditación en movimiento. El usuario debe girar lentamente 360 grados sin alterar la inclinación plana del dispositivo. Un sonido de gong suave suena cada 90 grados si el equilibrio es perfecto.",
+    "transformedIdeaTitle": "El Desafío del Monje Shaolin",
+    "transformedIdeaDescription": "Demuestra tu control total. Debes girar una vuelta completa sin derramar la 'taza de agua' virtual (mantén la Inclinación a 0). Si lo logras, cada vez que mires al Este, Oeste, Norte o Sur, sonará un gong ceremonial (Batería).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.flat() AND (Compass.heading % 90 == 0) THEN MusicalDrum.play('gong') ELSE stop_sound()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "Juguete interactivo tipo varita. Movimientos específicos (apuntar al Este y golpear hacia abajo) lanzan 'hechizos' representados por secuencias de percusión.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Duelos",
+    "transformedIdeaDescription": "Aprende a lanzar el hechizo 'Ritmosis'. Debes apuntar tu varita hacia el oponente (Oeste) y hacer un movimiento de 'flic' hacia abajo (Inclinación). Si lo haces correctamente, se escuchará el efecto mágico (Batería).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'West' AND Inclination.pitchChange > 10 THEN MusicalDrum.play('magic_spell')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Radar de Fantasmas",
+    "originalIdeaDescription": "Juego de realidad aumentada auditiva. El usuario busca una dirección 'embrujada' aleatoria. Al acercarse (alinear brújula), la inclinación actúa como escáner, aumentando la frecuencia de sonidos de tambor.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Usa tu dispositivo para encontrarlo. Gira hasta que la brújula detecte la señal y luego inclina el sensor para 'escanear'. Los golpes de batería se harán más rápidos cuando estés cerca de atraparlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Compass.heading - ghostDir) < 10 THEN drum_interval = map(Inclination.pitch, 0, 90, 1000, 100); MusicalDrum.playBeat(drum_interval)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batuta de Director de Orquesta",
+    "originalIdeaDescription": "Controlador gestual para música. La brújula selecciona la sección de la orquesta (vientos, cuerdas, percusión) y la inclinación vertical controla la intensidad del volumen de los tambores.",
+    "transformedIdeaTitle": "El Maestro de la Sinfonía",
+    "transformedIdeaDescription": "¡Dirige tu propia orquesta digital! Apunta a la izquierda para los violines o a la derecha para los metales (Brújula). Levanta tu batuta (Inclinación) para que la sección de percusión (Batería) toque con fuerza un redoble final.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "instrument_group = Compass.getSection(); volume = Inclination.y; MusicalDrum.setVolume(volume); MusicalDrum.play(instrument_group)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Grúa de Construcción",
+    "originalIdeaDescription": "Simulador de maquinaria pesada. Girar el cuerpo rota la cabina de la grúa, e inclinar el dispositivo baja el gancho. Al tocar el suelo virtual, suena un golpe metálico.",
+    "transformedIdeaTitle": "Operador de Grúa Gigante",
+    "transformedIdeaDescription": "Ayuda a construir el rascacielos. Gira sobre tu silla para rotar la grúa (Brújula) y inclina el mando hacia adelante para bajar la carga. Escucha el 'clank' (Batería) cuando la viga de acero toque el suelo correctamente.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "crane_rotation = Compass.heading; hook_height = Inclination.pitch; IF hook_height < -45 THEN MusicalDrum.play('metal_clank')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego del Huevo y la Cuchara",
+    "originalIdeaDescription": "Versión digital del juego clásico. El usuario debe caminar hacia una meta (Norte) manteniendo el dispositivo plano. Si se inclina, suena un huevo rompiéndose.",
+    "transformedIdeaTitle": "Carrera del Huevo Digital",
+    "transformedIdeaDescription": "Compite contra tus amigos. Debes caminar hacia la meta (Norte) equilibrando un huevo virtual. Mantén el dispositivo totalmente plano (Inclinación). Si te desvías o inclinas la mano, ¡CRACK!, sonará el huevo rompiéndose (Batería).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == Target AND Inclination.isFlat() THEN continue ELSE MusicalDrum.play('crack_sound')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación para Ciegos (Simulado)",
+    "originalIdeaDescription": "Herramienta de accesibilidad. Utiliza sonidos de tambor espaciados para indicar si el camino al Norte está libre y recto (inclinación plana).",
+    "transformedIdeaTitle": "El Bastón Inteligente",
+    "transformedIdeaDescription": "Diseña una ayuda tecnológica. El dispositivo guiará al usuario hacia el Norte. Si la persona va en la dirección correcta y el camino es plano, la batería tocará un ritmo suave y constante. Si se desvía o hay una pendiente, el ritmo se detiene.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading < 10 AND Inclination.pitch < 5 THEN MusicalDrum.playPattern('steady_beat') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Duelo del Lejano Oeste",
+    "originalIdeaDescription": "Juego de reacción. Los jugadores esperan de espaldas. A la señal, deben girar 180 grados (brújula) y levantar el 'arma' (inclinación) para disparar (sonido tambor).",
+    "transformedIdeaTitle": "Duelo de Vaqueros Rápidos",
+    "transformedIdeaDescription": "¡Desenunda, forastero! Ponte de espaldas al objetivo. Cuando el programa diga 'YA', gira rápidamente hacia el Este (Brújula) y levanta tu brazo (Inclinación). El más rápido en activar el sonido de disparo (Batería) gana.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "wait_signal(); IF Compass.change > 150 AND Inclination.pitch > 45 THEN MusicalDrum.play('gunshot')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de Efectos de Sonido",
+    "originalIdeaDescription": "Herramienta para historias sonoras. Girar selecciona una categoría (clima, animales, ciudad) e inclinar dispara un efecto de sonido percusivo específico de esa categoría.",
+    "transformedIdeaTitle": "El Cuentacuentos FX",
+    "transformedIdeaDescription": "Dale vida a tus historias de terror o aventura. Gira hacia la 'Zona de Tormenta' (Norte) e inclina el dispositivo para hacer truenos (Batería). Gira hacia la 'Zona de Pasos' (Sur) para simular a alguien corriendo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "category = Compass.getZone(); IF Inclination.shake() THEN MusicalDrum.playEffect(category)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Monitor de ejercicio. El usuario debe mirar al frente (Brújula fija) y bajar el cuerpo (inclinación detectada en muslo). Un tambor cuenta cada repetición válida.",
+    "transformedIdeaTitle": "Tu Entrenador Personal Robot",
+    "transformedIdeaDescription": "¡Hora de ponerse en forma! Programa un dispositivo que cuente tus sentadillas. Pégalo a tu pierna: si miras al frente y tu pierna se pone horizontal (Inclinación), sonará un platillo (Batería) para contar '¡UNO!'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.steady() AND Inclination.pitch == 90 THEN reps++; MusicalDrum.play('crash')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Navegación en Laberinto Invisible",
+    "originalIdeaDescription": "Juego de memoria espacial. El usuario navega un mapa invisible. Si intenta caminar (inclinación hacia adelante) hacia una pared (dirección bloqueada en Brújula), suena un golpe.",
+    "transformedIdeaTitle": "Escape del Cuarto Oscuro",
+    "transformedIdeaDescription": "Estás atrapado en un cuarto totalmente oscuro. Usa el dispositivo para tantear las paredes. Camina (inclina el dispositivo). Si la Brújula indica que vas hacia una pared virtual, ¡BUM!, sonarás contra ella (Batería). Encuentra la salida al Este.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "user_dir = Compass.heading; IF user_dir == blocked_wall AND Inclination.forward() THEN MusicalDrum.play('wall_hit')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento Shaker Digital",
+    "originalIdeaDescription": "Instrumento musical tipo maraca. La dirección de la brújula cambia el tono o tipo de percusión, y agitarlo (cambios rápidos de inclinación) produce el sonido.",
+    "transformedIdeaTitle": "La Maraca Mágica Multicolor",
+    "transformedIdeaDescription": "Construye el instrumento definitivo. Si agitas tu dispositivo mirando al Norte, suena como maracas. Si te giras al Sur y agitas, suena como pandereta. ¡Crea una canción completa solo girando y agitando!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "instrument = map(Compass.heading); IF Inclination.isShaking() THEN MusicalDrum.play(instrument)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Control de Tráfico Aéreo",
+    "originalIdeaDescription": "Juego de simulación. El usuario actúa como torre de control, apuntando a aviones (Brújula) y señalando 'despegue' o 'espera' con la inclinación. Errores causan alertas sonoras.",
+    "transformedIdeaTitle": "Controlador de Aeropuerto",
+    "transformedIdeaDescription": "Dirige el tráfico en un aeropuerto concurrido. Apunta a la pista 1 (Este). Si levantas el dispositivo (Inclinación arriba), das permiso de despegue (redoble de batería). Si bajas, ordenas frenar. ¡No equivoques las órdenes!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target_runway = Compass.heading; command = Inclination.pitch > 0 ? 'takeoff' : 'stop'; MusicalDrum.playSignal(command)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Lúdico",
+    "originalIdeaDescription": "Juguete de broma. Se calibra una dirección 'verdadera'. Si el usuario se desvía o se pone nervioso (tiembla la inclinación), suena una alarma de mentira.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Hazle preguntas a tus amigos. Diles que sostengan el dispositivo muy quieto y mirando al frente. Si tiemblan por los nervios (Inclinación inestable) o intentan mirar a otro lado (Brújula), ¡la alarma (Batería) los delatará!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.shake) > threshold OR Compass.deviation > 20 THEN MusicalDrum.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Golf",
+    "originalIdeaDescription": "Juego deportivo. El usuario alinea el tiro con la brújula (viento/dirección) y usa la inclinación como el swing del palo. El sonido del golpe depende de la velocidad de inclinación.",
+    "transformedIdeaTitle": "Torneo de Golf Digital",
+    "transformedIdeaDescription": "¡Hoyo en uno! Primero, alinéate con la bandera mirando al Norte (Brújula). Luego, usa el dispositivo como un palo de golf: haz un swing hacia arriba (Inclinación). Si el movimiento es rápido, escucharás un golpe fuerte (Batería).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "direction = Compass.heading; power = Inclination.speed; IF power > 50 THEN MusicalDrum.play('hard_hit') ELSE MusicalDrum.play('soft_hit')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Robot Explorador de Marte",
+    "originalIdeaDescription": "Control remoto de un rover imaginario. Inclinación para avanzar/retroceder, Brújula para girar. Sonidos de percusión indican terreno rocoso.",
+    "transformedIdeaTitle": "Misión: Rover en Marte",
+    "transformedIdeaDescription": "Eres el conductor de un robot en Marte. Inclina el control para avanzar. Si la brújula apunta al 'Valle Rocoso' (Oeste), el robot vibrará y hará ruidos de golpes (Batería) simulando las ruedas pasando por piedras.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.forward() AND Compass.heading == 'West' THEN MusicalDrum.playPattern('rocky_terrain')"
+  }
+]

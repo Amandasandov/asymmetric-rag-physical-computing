@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualización de Emociones Cambiantes",
+    "originalIdeaDescription": "Un sistema simple donde la matriz LED muestra diferentes caras o emojis. Cada vez que se presiona el botón táctil, la expresión facial en la matriz cambia a la siguiente en una lista predefinida, ciclando entre feliz, triste y sorprendido.",
+    "transformedIdeaTitle": "La Máscara del Robot Actor",
+    "transformedIdeaDescription": "¡Ayuda a un robot a expresar sus sentimientos en una obra de teatro! Los estudiantes programarán una 'máscara digital' que cambia de expresión. Aprenderán a usar listas y eventos para ciclar a través de imágenes de píxeles cada vez que el director (el estudiante) dé la señal táctil.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF touch_button.isPressed() THEN current_face_index = (current_face_index + 1) % total_faces; LED_Matrix.show(faces[current_face_index])"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Dado Digital Aleatorio",
+    "originalIdeaDescription": "Dispositivo que actúa como un dado de seis caras. Al presionar el botón, la matriz muestra una animación de barajado y, al soltarlo, muestra un número aleatorio del 1 al 6 representado por puntos.",
+    "transformedIdeaTitle": "El Generador de Suerte para Juegos de Mesa",
+    "transformedIdeaDescription": "¡No más dados perdidos debajo del sofá! Los estudiantes crearán su propio dado electrónico. El desafío introduce el concepto de 'aleatoriedad' (random) y control de flujo, haciendo que la matriz muestre puntos al azar solo cuando se activa el botón.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF touch_button.isPressed() THEN LED_Matrix.showAnimation('shuffle') ELSE number = random(1, 6); LED_Matrix.showDice(number)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Código Morse",
+    "originalIdeaDescription": "Un sistema de comunicación que distingue entre pulsaciones cortas y largas. Una pulsación rápida muestra un punto en la matriz, mientras que mantener el botón presionado muestra una raya, permitiendo escribir mensajes visuales.",
+    "transformedIdeaTitle": "El Telégrafo del Espía Secreto",
+    "transformedIdeaDescription": "Los estudiantes se convierten en agentes secretos enviando mensajes codificados. Deben programar lógica que mida cuánto tiempo se presiona el botón para decidir si dibujar un punto o una raya, introduciendo variables de tiempo y condicionales complejos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "START timer ON press; STOP timer ON release; IF duration < 0.5s THEN LED_Matrix.drawPixel() ELSE LED_Matrix.drawLine()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Salto de Obstáculos",
+    "originalIdeaDescription": "Un minijuego donde un punto (personaje) corre automáticamente hacia la derecha en la fila inferior. Obstáculos aparecen y el usuario debe presionar el botón para que el personaje 'salte' (suba de fila) y los esquive.",
+    "transformedIdeaTitle": "Carrera de Píxeles: ¡Salta el Lava!",
+    "transformedIdeaDescription": "Crea un videojuego retro donde un héroe de un solo píxel corre sin parar. El reto es programar la lógica del salto: al tocar el botón, la coordenada Y del personaje debe cambiar temporalmente para evitar chocar con los bloques enemigos que se acercan.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RunLoop: MoveObstacles(); IF touch_button.isPressed() THEN CharacterY = 1 ELSE CharacterY = 0; IF CheckCollision() THEN GameOver()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Aforo Manual",
+    "originalIdeaDescription": "Herramienta para contar personas o eventos. Cada pulsación del botón incrementa un contador numérico que se visualiza en la matriz LED. Si se mantiene presionado, el contador se reinicia a cero.",
+    "transformedIdeaTitle": "El Portero de la Discoteca Robótica",
+    "transformedIdeaDescription": "Gestiona la entrada a una fiesta exclusiva. Los estudiantes diseñan un contador digital. Aprenderán sobre variables acumulativas y cómo mostrar números de más de un dígito en una pantalla pequeña (desplazamiento de texto).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF touch_button.wasPressed() THEN count = count + 1; LED_Matrix.scrollNumber(count); IF touch_button.held(3s) THEN count = 0"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Animación Frame a Frame",
+    "originalIdeaDescription": "Una visualización de arte pixelado donde la animación no es automática. El usuario debe presionar el botón repetidamente para avanzar al siguiente cuadro de la animación, controlando la velocidad de reproducción manualmente.",
+    "transformedIdeaTitle": "Cineasta de Stop-Motion Digital",
+    "transformedIdeaDescription": "Los estudiantes se convierten en animadores. Crearán una secuencia de 'fotogramas' (arrays de píxeles) y programarán el botón para que funcione como la manivela de un proyector antiguo, enseñando el concepto de indexación de arrays y bucles.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "frames = [img1, img2, img3]; index = 0; ON touch_button.press: index = (index + 1); LED_Matrix.show(frames[index])"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Carga de Batería",
+    "originalIdeaDescription": "Simulación de una batería cargando. Mientras se mantiene presionado el botón, la matriz se llena de filas de luz de abajo hacia arriba. Si se suelta, la carga comienza a drenarse lentamente hacia abajo.",
+    "transformedIdeaTitle": "La Estación de Recarga Espacial",
+    "transformedIdeaDescription": "¡La nave necesita energía! Los alumnos deben programar una barra de energía visual. El reto lógico es usar un bucle 'mientras' (while) para llenar la matriz y un temporizador para vaciarla cuando no hay interacción, simulando la física de una batería.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE touch_button.isPressed() { batteryLevel++; LED_Matrix.fillRow(batteryLevel) } ELSE { wait(1s); batteryLevel--; LED_Matrix.clearRow(batteryLevel) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Simón",
+    "originalIdeaDescription": "Versión simplificada de memoria. La matriz muestra una forma específica brevemente. Luego la pantalla se borra y el usuario debe presionar el botón cuando cree que ha pasado el mismo tiempo que la imagen estuvo en pantalla.",
+    "transformedIdeaTitle": "El Desafío del Tiempo Invisible",
+    "transformedIdeaDescription": "Pon a prueba tu sentido del ritmo. La matriz muestra un icono por un tiempo aleatorio y se apaga. El estudiante debe programar el sistema para comparar la duración de la pulsación del botón con la duración original de la luz. ¡Gana quien se acerque más!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target_time = random(); LED_Matrix.on(target_time); user_time = measureButtonPress(); IF abs(target_time - user_time) < margin THEN showWin()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Interactivo",
+    "originalIdeaDescription": "Un semáforo que está siempre en rojo. Al presionar el botón (como un peatón), inicia una secuencia: espera, cambia a verde (o símbolo de caminar) por unos segundos, parpadea y vuelve a rojo.",
+    "transformedIdeaTitle": "Cruzar la Calle del Futuro",
+    "transformedIdeaDescription": "Diseña un paso de peatones inteligente. Los estudiantes aprenderán sobre 'máquinas de estados' simples. El sistema debe esperar una entrada (botón), ejecutar una secuencia temporizada de animaciones (rojo -> verde -> parpadeo) y reiniciar el ciclo automáticamente.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "LED_Matrix.show('RED'); WAIT UNTIL touch_button.press; WAIT(2s); LED_Matrix.show('GREEN'); WAIT(5s); LED_Matrix.show('RED')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna con Modos",
+    "originalIdeaDescription": "Utiliza la matriz LED como fuente de luz. El botón alterna entre modos: Apagado, Luz Tenue (pocos LEDs), Luz Alta (todos los LEDs) y Estroboscópica (parpadeo rápido).",
+    "transformedIdeaTitle": "La Linterna de Exploración Táctica",
+    "transformedIdeaDescription": "Prepara tu equipo para la acampada. Los estudiantes programarán un botón multifunción. Aprenderán a usar una variable de estado (0, 1, 2, 3) que cambia con cada clic para controlar diferentes configuraciones de brillo y patrones en la matriz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON press: mode = (mode + 1) % 4; IF mode==0 THEN all_off; IF mode==1 THEN center_leds; IF mode==2 THEN all_on; IF mode==3 THEN flash_loop"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos Rápidos",
+    "originalIdeaDescription": "La matriz muestra una cuenta regresiva o espera un tiempo aleatorio y luego muestra una señal 'YA'. El usuario debe presionar el botón lo más rápido posible. La matriz muestra el tiempo de reacción en milisegundos.",
+    "transformedIdeaTitle": "Duelo de Vaqueros Digitales",
+    "transformedIdeaDescription": "¿Quién tiene el dedo más rápido del oeste? Los estudiantes crearán un juego de reacción. Deben programar una espera aleatoria, detectar el evento del botón y calcular la diferencia de tiempo entre la señal visual y la entrada táctil.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "wait(random()); LED_Matrix.show('GO'); startTime = now(); WAIT FOR button; reactionTime = now() - startTime; LED_Matrix.scroll(reactionTime)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador Binario",
+    "originalIdeaDescription": "Enseñanza de sistema binario. Cada vez que se presiona el botón, se suma 1 a un contador interno, pero la matriz visualiza este número encendiendo LEDs que representan bits (1, 2, 4, 8, 16...).",
+    "transformedIdeaTitle": "El Traductor del Lenguaje de las Máquinas",
+    "transformedIdeaDescription": "Aprende a contar como una computadora. Cada pulsación suma uno, pero el reto es programar la matriz para que encienda los LEDs correspondientes a la representación binaria del número decimal, visualizando cómo funcionan los bits.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON press: decimal++; binaryString = toBinary(decimal); FOR i in binaryString: IF char=='1' THEN LED[i].on() ELSE LED[i].off()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Tamagotchi",
+    "originalIdeaDescription": "Una cara en la matriz que se pone triste con el tiempo. El usuario debe presionar el botón repetidamente para 'alimentar' o 'acariciar' a la mascota, lo que hace que vuelva a sonreír y llene una barra de felicidad.",
+    "transformedIdeaTitle": "Cuida a tu Pixel-Mascota",
+    "transformedIdeaDescription": "Responsabilidad digital. Los estudiantes programan una mascota que 'siente' hambre (una variable que disminuye con el tiempo). Deben usar el botón para incrementar esa variable y condicionales para cambiar la cara de triste a feliz según el nivel de hambre.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: hunger--; IF hunger < 5 THEN show('SAD') ELSE show('HAPPY'); ON press: hunger = hunger + 2"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de la Fortuna",
+    "originalIdeaDescription": "Una luz gira alrededor del borde de la matriz LED (perímetro). Al presionar el botón, la luz comienza a desacelerar hasta detenerse en una posición específica, indicando un premio o castigo.",
+    "transformedIdeaTitle": "La Ruleta de Premios",
+    "transformedIdeaDescription": "¡Gira la rueda! Los estudiantes programan un secuenciador que ilumina los LEDs del borde uno por uno. El desafío es implementar la lógica de desaceleración: aumentar el tiempo de espera entre cada cambio de LED cuando se presiona el botón hasta que se detiene.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "speed = fast; WHILE speed > 0: moveLightNextPosition(); wait(speed); IF buttonPressed: speed = speed + decayAmount"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lluvia Controlada",
+    "originalIdeaDescription": "Animación de píxeles cayendo como lluvia. El botón controla la intensidad. Sin presionar es llovizna (pocos píxeles), presionado es tormenta (muchos píxeles cayendo rápido).",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Controla los elementos. Los estudiantes crean una simulación de partículas. Aprenderán a generar posiciones aleatorias en la fila superior (X, 0) y hacerlas bajar (Y+1). El botón modificará la variable de 'frecuencia de generación' de nuevas gotas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: clearScreen(); updateDropPositions(); IF button.isPressed() THEN spawnRate = high ELSE spawnRate = low; IF random() < spawnRate THEN createNewDrop()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Candado de Patrón Rítmico",
+    "originalIdeaDescription": "Sistema de seguridad que desbloquea un 'candado' (muestra un check verde) solo si el usuario presiona el botón con un ritmo específico (ej. dos rápidos, pausa, uno rápido).",
+    "transformedIdeaTitle": "La Caja Fuerte Musical",
+    "transformedIdeaDescription": "Protege tus secretos con ritmo. Los estudiantes programan un sistema que registra los intervalos de tiempo entre pulsaciones. Luego deben comparar ese patrón de tiempos con una 'contraseña' guardada para decidir si muestran un candado abierto o cerrado.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "recordPresses(); IF patternMatch(recorded, secretPattern, tolerance) THEN LED_Matrix.show('UNLOCK') ELSE LED_Matrix.show('LOCKED')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Pizarra Mágica de Un Píxel",
+    "originalIdeaDescription": "Un píxel parpadeante se mueve automáticamente recorriendo la matriz línea por línea. Cuando el usuario presiona el botón, el píxel en la posición actual se queda encendido permanentemente, permitiendo dibujar formas.",
+    "transformedIdeaTitle": "Impresora 3D de Luz",
+    "transformedIdeaDescription": "Dibuja con precisión. Un cursor recorre la pantalla automáticamente. El estudiante debe programar el botón para 'congelar' o pintar el píxel en la posición actual del cursor, entendiendo coordenadas (X, Y) y persistencia de imagen.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: cursorX++, if end of row cursorY++; IF button.isPressed() THEN canvas[cursorX][cursorY] = 1; LED_Matrix.display(canvas + cursor)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Latidos (Simulador)",
+    "originalIdeaDescription": "La matriz muestra un corazón pulsante. El usuario debe tocar el botón repetidamente al ritmo de su propio pulso (o uno deseado) y la animación del corazón se sincroniza con la velocidad de las pulsaciones.",
+    "transformedIdeaTitle": "Sincronizador de Corazones",
+    "transformedIdeaDescription": "Biofeedback simulado. Los estudiantes crean una animación de corazón. Deben calcular el promedio de tiempo entre las últimas pulsaciones del botón para ajustar la velocidad de la animación (BPM), vinculando matemáticas con retroalimentación visual.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "timeDiff = now() - lastPressTime; bpm = 60000 / timeDiff; LED_Matrix.animate('HEART', speed=bpm)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Tenis Solitario (Pong)",
+    "originalIdeaDescription": "Una bola rebota en las paredes. En la parte inferior hay una barra de 2 píxeles. El botón mueve la barra de izquierda a derecha (o cambia su dirección) para interceptar la bola.",
+    "transformedIdeaTitle": "Raqueta Galáctica",
+    "transformedIdeaDescription": "El clásico Pong, pero simplificado. Una bola rebota por la matriz. El reto es programar la lógica de la paleta: al presionar el botón, la paleta cambia de dirección o posición. Si la bola toca la fila inferior y la paleta no está ahí, Game Over.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "UpdateBallPos(); IF ballY == 6 AND (ballX != paddleX) THEN GameOver; ON buttonPress: paddleX = (paddleX + 1) % width"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Votación Sí/No",
+    "originalIdeaDescription": "La matriz muestra un ícono de pregunta. Un toque corto registra un voto 'Sí' (cara feliz), un toque largo registra un voto 'No' (cara triste). Al final muestra el total de votos de cada uno.",
+    "transformedIdeaTitle": "La Urna Electrónica",
+    "transformedIdeaDescription": "Democracia digital en clase. Los estudiantes crean un sistema para encuestas. Deben diferenciar tipos de pulsación (corta vs larga) para incrementar dos variables diferentes (votos_si, votos_no) y luego mostrar los resultados numéricamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF pressDuration < 1s THEN yesVotes++ ELSE noVotes++; showIcon(confirmation); WAIT(2s); showQuestion()"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Batería Aérea 360",
+    "originalIdeaDescription": "El usuario toca instrumentos de percusión en el aire. Apuntando al Norte y agitando, suena la caja. Al Sur y agitando, suena el bombo.",
+    "transformedIdeaTitle": "El Hombre Orquesta Invisible",
+    "transformedIdeaDescription": "Crea una batería invisible a tu alrededor. Divide la habitación: Norte es para la Caja, Sur para el Bombo, Este para el Platillo. Gira tu cuerpo (Compass) para seleccionar el instrumento y haz un movimiento de golpeo con la mano (Motion) para que suene el Tambor. ¡Coordina para crear un ritmo de rock!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Instrument = Map(Compass.heading); IF Motion.force > Threshold THEN Drum.play(Instrument)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Duelo del Lejano Oeste",
+    "originalIdeaDescription": "Juego de reflejos. El usuario da la espalda, espera señal, gira 180 grados y hace gesto de disparo. El tambor suena el disparo.",
+    "transformedIdeaTitle": "El Sheriff Más Rápido",
+    "transformedIdeaDescription": "Estás en un duelo al mediodía. Ponte de espaldas al 'malhechor'. Espera la cuenta atrás. ¡YA! Gira rápidamente 180 grados (Compass) y haz un gesto seco con el brazo (Motion) para desenfundar. Si eres rápido, el Tambor sonará '¡BANG!'. El sistema medirá tu tiempo de reacción.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "StartAngle = Compass.heading; WAIT(Signal); IF Abs(Compass.heading - StartAngle) > 160 AND Motion.jerk() THEN Drum.play('Gunshot')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Simulador de Remo Vikingo",
+    "originalIdeaDescription": "El usuario se sienta y hace el movimiento de remar. La brújula indica el rumbo. El tambor marca el ritmo de la boga.",
+    "transformedIdeaTitle": "Regata de Drakkar",
+    "transformedIdeaDescription": "Comanda tu barco vikingo. Debes mantener el rumbo hacia el Norte (Compass). Si te desvías, chocas. Para avanzar, debes hacer el movimiento de remar rítmicamente (Motion oscilante). Cada remada completa activará un golpe profundo de Tambor para animar a la tripulación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Motion.cycle('Row') THEN Drum.play('Boom') AND Speed++"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Detector de Metales",
+    "originalIdeaDescription": "El usuario barre el dispositivo de izquierda a derecha (Motion) mientras camina (Compass). El tambor hace 'bip' si encuentra algo.",
+    "transformedIdeaTitle": "Buscatesoros en la Playa",
+    "transformedIdeaDescription": "Hay monedas enterradas en coordenadas específicas. Camina por el aula. Haz un movimiento de barrido con el brazo (Motion de lado a lado). Si tu Brújula apunta hacia el tesoro mientras barres, el Tambor empezará a pitar. Cuanto más cerca, más rápido el ritmo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isSweeping() AND DistanceToTarget(Compass.heading) < 5 THEN Drum.playLoop('Bip', fast) ELSE Drum.playLoop('Bip', slow)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Constructor de Martillo",
+    "originalIdeaDescription": "El usuario selecciona el tipo de clavo girando (Compass) y lo clava haciendo el gesto de martillar (Motion).",
+    "transformedIdeaTitle": "Carpintero Maestro",
+    "transformedIdeaDescription": "Construye una casa. Gira al Este para seleccionar clavos de madera, o al Oeste para vigas de acero. Una vez seleccionado, usa el dispositivo como un martillo. Golpea el aire (Motion fuerte). Cada golpe hará sonar un 'Clanc' metálico o un 'Poc' de madera en el Tambor.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Material = (Compass.heading < 180) ? 'Wood' : 'Steel'; IF Motion.impact() THEN Drum.play(Material.Sound)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Caja Fuerte de Giro y Golpe",
+    "originalIdeaDescription": "La combinación requiere girar a un grado específico y dar un golpe seco para confirmar.",
+    "transformedIdeaTitle": "Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Abre la bóveda. La combinación es: Norte, Este, Sur. Gira al Norte y da un golpe seco al aire (Motion) para escuchar un 'Clic' (Tambor). Repite con el Este y el Sur. Si te equivocas de dirección o golpeas flojo, sonará una alarma.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Sequence = [N, E, S]; IF Compass.heading == Sequence[i] AND Motion.shake() THEN Drum.play('Click'); i++"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Danza de la Lluvia",
+    "originalIdeaDescription": "Un ritual que requiere pasos específicos: girar, saltar, girar, agacharse. El tambor suena al completar pasos.",
+    "transformedIdeaTitle": "Ritual Tribal",
+    "transformedIdeaDescription": "La tribu necesita lluvia. Sigue las instrucciones del anciano: '¡Mira al Oeste y salta!'. Si orientas la Brújula y el sensor de Movimiento detecta el salto simultáneamente, el gran Tambor sonará un trueno. Completa 4 pasos para ganar.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == TargetDir AND Motion.jumpDetected() THEN Drum.play('ThunderSound') AND NextStep()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Entrenador de Boxeo de Sombras",
+    "originalIdeaDescription": "El sistema indica dónde bloquear o atacar. El usuario gira y golpea. El tambor confirma el impacto.",
+    "transformedIdeaTitle": "Rocky: Entrenamiento",
+    "transformedIdeaDescription": "Sube al ring. El entrenador grita '¡Gancho Derecho!'. Debes girar tu cuerpo hacia la derecha (Compass) y lanzar el puño (Motion). Si la dirección y la fuerza son correctas, el Tambor sonará un golpe seco. Si fallas, suena un silbido de aire.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Motion.punch() THEN Drum.play('HeavyBagHit') ELSE Drum.play('Miss')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Simulador de Pesca",
+    "originalIdeaDescription": "Lanzar la caña hacia una dirección (Compass + Motion). Esperar. Tirar para recoger (Motion). Tambor indica captura.",
+    "transformedIdeaTitle": "Torneo de Pesca",
+    "transformedIdeaDescription": "Los peces están al Sur. Gira hacia allá. Haz el gesto de lanzar la caña (Motion). Espera... Cuando sientas que pican, tira hacia atrás bruscamente. El Tambor empezará a redoblar simulando el pez coleando mientras lo sacas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Motion.gesture('Throw') THEN Cast=TRUE; IF Cast AND Motion.gesture('Pull') THEN Drum.roll()"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Rastreador de Pasos (Podómetro Sonoro)",
+    "originalIdeaDescription": "Cuenta los pasos (Motion) solo si se camina en la dirección correcta. El tambor marca cada paso válido.",
+    "transformedIdeaTitle": "El Camino de Baldosas Amarillas",
+    "transformedIdeaDescription": "Debes llegar a Oz siguiendo el camino del Este. Camina en tu lugar (Motion). Si tu brújula apunta al Este, cada paso sonará como un Tambor alegre y sumarás puntos. Si te desvías del rumbo, los pasos dejarán de sonar y te perderás.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.stepDetected() AND Compass.heading == 'East' THEN Drum.play('StepSound'); Distance--"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Controlador de Tráfico",
+    "originalIdeaDescription": "Apuntar a un coche (Compass) y hacer gesto de 'alto' (Motion). El tambor suena como silbato de policía.",
+    "transformedIdeaTitle": "Policía de Cruce",
+    "transformedIdeaDescription": "Hay un caos vehicular. Gira para señalar al coche que viene del Norte. Haz un gesto firme con la mano (Motion stop) para detenerlo. El Tambor emitirá un sonido de silbato corto y seco. Dirige el tráfico sin causar accidentes.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.lockedTarget() AND Motion.stopGesture() THEN Drum.play('Whistle')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Golf Ciego",
+    "originalIdeaDescription": "Alinear el tiro con la brújula. Hacer el swing con motion. El tambor suena al golpear la bola.",
+    "transformedIdeaTitle": "Hoyo en Uno",
+    "transformedIdeaDescription": "No puedes ver el hoyo, pero sabes que está a 270 grados (Oeste). Alinea tu cuerpo. Prepara el palo. Haz el swing (Motion). Si el ángulo es perfecto y el swing fuerte, el Tambor hará un sonido de '¡Poc!' seguido de aplausos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Accuracy = Abs(270 - Compass.heading); Power = Motion.swingSpeed; IF Accuracy < 5 THEN Drum.play('Hit') ELSE Drum.play('SandTrap')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Agente Secreto: Puerta Trampa",
+    "originalIdeaDescription": "Para abrir la puerta secreta en el suelo, hay que mirar al Norte, y dar 3 pisotones fuertes.",
+    "transformedIdeaTitle": "La Entrada a la Guarida",
+    "transformedIdeaDescription": "Encuentra la entrada secreta. Tu mapa dice 'Norte'. Oriéntate. Ahora, da 3 pisotones fuertes en el suelo (el sensor detecta los impactos bruscos de Motion). Con cada pisotón, el Tambor sonará como un cerrojo pesado abriéndose.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Motion.impactCount == 3 THEN Drum.play('DoorOpen')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Mezclador de Ritmos (Step Sequencer)",
+    "originalIdeaDescription": "El usuario gira 360 grados. El círculo se divide en 8 pasos. Agitar en un paso activa/desactiva el tambor en ese tiempo.",
+    "transformedIdeaTitle": "Compositor Circular",
+    "transformedIdeaDescription": "Crea un loop de batería. Imagina un reloj en el suelo. Gira hacia la 1, agita el dispositivo para poner un Bombo (suena Tambor). Gira a las 2, agita para poner Caja. Gira y construye tu ritmo paso a paso en el espacio físico.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Step = Map(Compass.heading, 0, 360, 1, 8); IF Motion.shake() THEN Sequence[Step] = TRUE; PlayLoop(Sequence)"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Cazador de Fantasmas",
+    "originalIdeaDescription": "Moverse sigilosamente (Motion bajo). La brújula guía al fantasma. Al encontrarlo, agitar para 'aspirarlo' (Tambor redobla).",
+    "transformedIdeaTitle": "Atrapa al Espectro",
+    "transformedIdeaDescription": "El fantasma está al Este. Camina muy despacio (si Motion es alto, se asusta). Cuando la Brújula marque Este, agita el dispositivo rápidamente para activar la trampa de protones. El Tambor sonará caótico mientras luchas por atraparlo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.walking() > StealthLimit THEN Fail; IF Compass.heading == GhostDir AND Motion.shake() THEN Drum.play('TrapSequence')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Samurái de Corte Preciso",
+    "originalIdeaDescription": "Realizar un corte con la katana en un ángulo específico (Compass) y con velocidad (Motion). El tambor suena el corte.",
+    "transformedIdeaTitle": "Maestro de la Katana",
+    "transformedIdeaDescription": "Corta el bambú. El maestro dice: '¡Corte horizontal hacia el Este!'. Oriéntate y haz un movimiento de tajada rápido (Motion). Si el ángulo es recto y la velocidad alta, el Tambor hará un sonido de corte limpio. Si no, sonará un golpe sordo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Align(Compass, Target) AND Motion.speed > Fast THEN Drum.play('Slice') ELSE Drum.play('Thud')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Alarma de Mochila Antirrobo",
+    "originalIdeaDescription": "Si la mochila cambia de dirección (alguien se la lleva) o se mueve, el tambor suena como sirena.",
+    "transformedIdeaTitle": "Seguridad Escolar",
+    "transformedIdeaDescription": "Protege tus cosas. Activa la alarma dejando el dispositivo quieto apuntando al Norte. Si un ladrón lo agarra (Motion detectado) o lo gira (Cambio de Compass), el Tambor empezará a tocar un ritmo de alarma militar insoportable.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SetHeading = Compass.heading; IF Motion.active OR Abs(Compass.heading - SetHeading) > 20 THEN Drum.loop('Alarm')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Simón Dice Espacial",
+    "originalIdeaDescription": "Instrucciones: 'Agita al Norte', 'Golpea al Sur'. El usuario debe cumplir la combinación.",
+    "transformedIdeaTitle": "Comandante de la Flota",
+    "transformedIdeaDescription": "Sigue las órdenes para pilotar la nave. '¡Turbulencia al Norte!': Gira al Norte y agita. '¡Choque al Sur!': Gira al Sur y golpea el aire. El Tambor confirmará cada acción correcta con un sonido de sistema.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Command = Random(Dir, Action); IF Input matches Command THEN Drum.play('Ping') AND Score++"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Juego de la Serpiente Cascabel",
+    "originalIdeaDescription": "El usuario es la serpiente. Debe reptar (Motion suave). Si cambia de dirección bruscamente (Compass), suena el cascabel (Tambor maraca).",
+    "transformedIdeaTitle": "Serpiente Sigilosa",
+    "transformedIdeaDescription": "Eres una serpiente de cascabel. Muévete suavemente por el suelo. Si giras la cabeza muy rápido (cambio brusco de Compass) o te sacudes (Motion), tu cola sonará (Tambor redoblante) y alertarás a tu presa, perdiendo el juego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.delta > 45 OR Motion.jerk() THEN Drum.play('Rattle')"
+  },
+  {
+    "componentUsed": ["Compass", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Director de Orquesta de Percusión",
+    "originalIdeaDescription": "Apuntar a secciones de la orquesta. Mover la batuta (Motion) controla el volumen de esa sección.",
+    "transformedIdeaTitle": "Maestro de Percusión",
+    "transformedIdeaDescription": "Dirige el ensamble. Apunta a la izquierda (Oeste) para los Timbales, a la derecha (Este) para los Platillos. Agita la batuta con fuerza (Motion) para que toquen 'Fortissimo' (Tambor fuerte), o suave para 'Pianissimo'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Instrument = Map(Compass); Volume = Map(Motion); Drum.play(Instrument, Volume)"
+  }
+]

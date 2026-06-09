@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros con Pistas Sonoras",
+    "originalIdeaDescription": "Un dispositivo que guía al usuario hacia una dirección 'secreta' preestablecida. Mientras el usuario gira sobre su eje, el reproductor de audio emite un sonido de 'bip' que se acelera a medida que la brújula se alinea con el norte magnético, y la matriz LED muestra una flecha indicadora.",
+    "transformedIdeaTitle": "El Radar del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Conviértete en un pirata buscando oro enterrado! Programarás tu dispositivo para que actúe como un radar antiguo. Cuando mires hacia el Norte, el 'radar' sonará frenéticamente y mostrará una 'X' en la pantalla LED, indicando que has encontrado el botín. Si miras a otro lado, solo escucharás el viento.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 350 OR Compass.heading < 10 THEN Audio.play('fast_beep') AND LED.show('X') ELSE Audio.play('wind')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Virtual con Combinación de Giro",
+    "originalIdeaDescription": "Una simulación de una cerradura de caja fuerte. El usuario debe girar su cuerpo a grados específicos (ej. 90, 180, 270) en orden. La matriz LED muestra un candado cerrado que cambia a abierto solo cuando se completa la secuencia correcta acompañada de un sonido de 'clic'.",
+    "transformedIdeaTitle": "El Espía Desbloqueador",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una bóveda de alta seguridad. Debes girar tu cuerpo con precisión milimétrica para encontrar los 'puntos dulces'. Cuando aciertes el ángulo correcto, escucharás el mecanismo desbloquearse y verás la luz verde en tu pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == secret_angle THEN Audio.play('click') AND LED.show('unlock_icon') ELSE LED.show('lock_icon')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Controlado por Orientación",
+    "originalIdeaDescription": "Un sistema que asigna diferentes pistas de audio o instrumentos a los cuatro puntos cardinales. Al mirar al Norte suena una batería, al Este un piano, etc. La matriz LED muestra la inicial del punto cardinal correspondiente mientras suena la música.",
+    "transformedIdeaTitle": "La Brújula Sinfónica",
+    "transformedIdeaDescription": "Crea una orquesta invisible a tu alrededor. En esta actividad, asignarás un instrumento diferente a cada dirección. Gira hacia el Este para tocar el piano o hacia el Oeste para la guitarra. ¡Baila y gira para mezclar tu propia canción en tiempo real!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'N' THEN Audio.play('drums') LED.show('N') ELSE IF Compass.direction == 'E' THEN Audio.play('piano') LED.show('E')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Entidades Paranormales Simuladas",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que utiliza la brújula para detectar 'fantasmas' en direcciones aleatorias. Cuando la brújula apunta a una coordenada generada al azar, el audio reproduce un sonido espectral y la matriz LED muestra una cara asustada.",
+    "transformedIdeaTitle": "Cazadores de Fantasmas",
+    "transformedIdeaDescription": "¡Hay fantasmas invisibles en el aula! Usa tu dispositivo para escanear la habitación girando lentamente. Cuando tu sensor detecte una presencia (una dirección aleatoria programada), escucharás un grito y verás al fantasma en tu pantalla. ¡Encuéntralos a todos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = random(0, 360); IF Compass.heading == target THEN Audio.play('ghost_scream') AND LED.show('ghost_face')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Asistente de Navegación para Caminata a Ciegas",
+    "originalIdeaDescription": "Una herramienta de accesibilidad simulada donde el usuario se venda los ojos e intenta caminar en línea recta. Si la brújula detecta una desviación del rumbo inicial, el audio emite una advertencia ('izquierda' o 'derecha') y la LED muestra una flecha correctiva.",
+    "transformedIdeaTitle": "El Murciélago Sonar",
+    "transformedIdeaDescription": "Los murciélagos vuelan en la oscuridad usando el sonido. En este desafío, te vendarás los ojos y confiarás en tu oído. Programa tu dispositivo para que te avise si te estás desviando del camino recto mientras intentas cruzar la habitación sin ver.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading > target + 10 THEN Audio.play('turn_left') ELSE IF Compass.heading < target - 10 THEN Audio.play('turn_right')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entorno Inmersivo de Sonidos de la Naturaleza",
+    "originalIdeaDescription": "Un generador de ambiente relajante que cambia según la orientación. El Norte reproduce lluvia, el Sur olas del mar, etc. La matriz LED muestra animaciones simples del clima correspondiente (gotas de lluvia, sol, olas) para acompañar el sonido.",
+    "transformedIdeaTitle": "Viaje por los Cuatro Climas",
+    "transformedIdeaDescription": "Construye una máquina de teletransportación climática. Si miras al Norte, estarás en una tormenta lluviosa; si giras al Sur, estarás en una playa soleada. Aprende a sincronizar sonidos relajantes con iconos visuales pixelados para crear una experiencia zen.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SWITCH Compass.direction: CASE 'N': Audio.play('rain'), LED.show('drops'); CASE 'S': Audio.play('waves'), LED.show('sun')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Receptor de Señales de Radio Extraterrestres",
+    "originalIdeaDescription": "Juego donde el usuario escanea el horizonte buscando una señal. Se reproduce ruido estático constante excepto en un rango pequeño de grados (la 'señal'), donde se escucha un mensaje claro y la matriz LED muestra un símbolo alienígena.",
+    "transformedIdeaTitle": "Contacto Galáctico",
+    "transformedIdeaDescription": "Eres un astrónomo buscando vida en el espacio. Tu radio solo capta estática, pero hay una señal oculta en una dirección específica del cielo. Gira tu antena hasta que el ruido desaparezca y escuches el mensaje secreto de los alienígenas.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Compass.heading - signal_angle) < 5 THEN Audio.play('alien_msg') AND LED.show('alien') ELSE Audio.play('static_noise')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Memoria con Instrucciones Direccionales",
+    "originalIdeaDescription": "Una versión de 'Simón Dice' usando la brújula. El audio dice una dirección ('Norte', 'Este'), y el usuario debe girar hacia ella rápidamente. Si la brújula confirma la dirección correcta a tiempo, la LED muestra un check verde y suena una campana.",
+    "transformedIdeaTitle": "El Comandante Dice: ¡Gira!",
+    "transformedIdeaDescription": "¡Atención cadetes! El Comandante os dará órdenes de marcha. Si grita '¡Este!', debéis girar vuestro cuerpo hacia el Este inmediatamente. Si sois rápidos y precisos, ganaréis puntos. Si os equivocáis de dirección, ¡alarma de error!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(instruction); WAIT 3s; IF Compass.direction == instruction THEN LED.show('check') ELSE LED.show('fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Navegación Marítima en Tormenta",
+    "originalIdeaDescription": "El usuario actúa como capitán de barco que debe mantener un rumbo fijo. El audio reproduce sonidos de tormenta. Si el usuario se desvía del rumbo, el sonido de la tormenta aumenta y la LED muestra olas peligrosas; si mantiene el rumbo, el mar se calma.",
+    "transformedIdeaTitle": "Capitán en Alta Mar",
+    "transformedIdeaDescription": "¡Sostén el timón firme! Estás navegando a través de un huracán y debes mantener el barco apuntando al Norte. Si tus manos tiemblan y el barco gira, la tormenta rugirá más fuerte y las olas en la pantalla crecerán. ¡Mantén el rumbo para sobrevivir!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "deviation = abs(Compass.heading - target); Audio.setVolume(deviation); LED.setBrightness(deviation)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Narrativa Interactiva Basada en Decisiones de Rumbo",
+    "originalIdeaDescription": "Una historia de audio donde el usuario elige su camino girando físicamente. 'Para entrar a la cueva gira al Este, para ir al bosque gira al Oeste'. La brújula detecta la decisión y dispara la siguiente pista de audio y un icono en la LED.",
+    "transformedIdeaTitle": "El Laberinto de Cuentos",
+    "transformedIdeaDescription": "Entra en un audiolibro donde tú eres el protagonista. El narrador te dará opciones: ¿Girarás a la izquierda hacia el castillo embrujado o a la derecha hacia el valle de los dragones? Tu movimiento físico decide qué capítulo escuchas a continuación.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('intro'); IF Compass.direction == 'E' THEN Audio.play('cave_story') ELSE IF Compass.direction == 'W' THEN Audio.play('forest_story')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Rastreo de Fauna Salvaje",
+    "originalIdeaDescription": "Herramienta educativa para simular la búsqueda de animales. Cada animal 'vive' en una dirección. Al apuntar correctamente, se escucha el sonido del animal y se ve su huella en la matriz LED, enseñando sobre la fauna y los puntos cardinales.",
+    "transformedIdeaTitle": "Safari en el Aula",
+    "transformedIdeaDescription": "Convierte tu clase en una selva. Hay leones al Norte y elefantes al Sur, pero están escondidos. Usa tu rastreador para encontrarlos. Gira lentamente hasta escuchar sus rugidos y ver sus huellas digitales aparecer en tu pantalla. ¡Haz un mapa de la selva!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'N' THEN Audio.play('lion_roar') AND LED.show('paw_print')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Control de Tráfico Aéreo Personal",
+    "originalIdeaDescription": "El usuario actúa como una torre de control. La LED muestra un avión aproximándose. El audio solicita permiso para aterrizar en una pista específica (ej. 180 grados). El usuario debe orientarse hacia esa pista para dar luz verde.",
+    "transformedIdeaTitle": "Torre de Control Aéreo",
+    "transformedIdeaDescription": "Los aviones necesitan aterrizar y tú eres el controlador. El piloto te dirá por radio: 'Aproximando por la pista Sur'. Debes girar rápidamente hacia el Sur y encender las luces de la pista (tu pantalla LED) para guiarlos a salvo a tierra.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('request_landing_S'); IF Compass.direction == 'S' THEN LED.show('runway_lights') AND Audio.play('cleared')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entrenador de Baile con Giros Corporales",
+    "originalIdeaDescription": "Un juego de ritmo activo. La música suena y la matriz LED muestra flechas que indican hacia dónde girar (Izquierda/Oeste, Derecha/Este). El sistema verifica con la brújula si el usuario realizó el giro a tiempo con el ritmo.",
+    "transformedIdeaTitle": "Tornados de Baile",
+    "transformedIdeaDescription": "¡Que no pare la música! Este juego pondrá a prueba tus reflejos y tu ritmo. Observa la flecha en la pantalla y gira todo tu cuerpo en esa dirección antes de que caiga el 'beat'. Si lo logras, la música sigue; si fallas, el disco se raya.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Show('arrow_left'); WAIT(beat); IF Compass.heading_change == -90 THEN Score++ ELSE Audio.play('scratch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego Clásico de Frío y Caliente Digital",
+    "originalIdeaDescription": "Se establece un objetivo invisible en la habitación. A medida que la brújula del usuario se acerca al ángulo correcto, el volumen de un sonido de 'latido' aumenta y la matriz LED se llena de píxeles (caliente). Si se aleja, volumen bajo y pantalla vacía (frío).",
+    "transformedIdeaTitle": "Buscadores de Oro",
+    "transformedIdeaDescription": "Tu detector de metales te ayudará a encontrar la pepita de oro más grande. Camina y gira por la habitación. Cuanto más fuerte suene el 'bip' y más brillante sea tu pantalla, más cerca estarás del tesoro escondido. ¿Puedes encontrar el punto exacto?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "distance = abs(target - Compass.heading); Audio.setVolume(100 - distance); LED.fillLevel(100 - distance)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual con Secciones",
+    "originalIdeaDescription": "Simula un podio de director. Mirar a la izquierda activa los violines (audio + icono violín), al centro los vientos, y a la derecha la percusión. Permite al usuario mezclar la música girando hacia las diferentes secciones.",
+    "transformedIdeaTitle": "Maestro del Concierto",
+    "transformedIdeaDescription": "Sube al podio y toma la batuta. Tienes el control de toda la orquesta. Gira a la izquierda para que entren los violines, o a la derecha para despertar a los tambores. ¡Dirige la intensidad de la sinfonía con tus propios movimientos!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF heading < 90 THEN Audio.track1.unmute() LED.show('violin'); IF heading > 270 THEN Audio.track2.unmute() LED.show('drum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Rotatorio con Niebla",
+    "originalIdeaDescription": "El usuario debe actuar como un faro, girando constantemente 360 grados. La LED actúa como el haz de luz. Si el usuario deja de girar, suena una sirena de niebla y un sonido de choque de barcos, indicando peligro.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Es una noche de niebla espesa y los barcos dependen de ti. Debes girar constantemente para que la luz del faro (tu pantalla LED) barra todo el océano. Si te detienes o te mareas, ¡sonará la sirena de niebla y los barcos podrían chocar!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isRotating() THEN LED.animation('scan') ELSE Audio.play('foghorn_warning')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Exploración de Superficie Marciana Remota",
+    "originalIdeaDescription": "Juego de rol donde el usuario es un Rover en Marte. Ciertas direcciones están bloqueadas por 'cráteres' (definidos en el código). Si la brújula apunta a un cráter, suena una alarma y aparece una señal de 'Stop'. El usuario debe encontrar el camino libre.",
+    "transformedIdeaTitle": "Misión: Marte Rover",
+    "transformedIdeaDescription": "Estás conduciendo un robot en el planeta rojo y el terreno es peligroso. Programa tu Rover para detectar cráteres invisibles. Si intentas avanzar en una dirección bloqueada, tu sistema de alerta debe sonar. ¡Encuentra la ruta segura a la base!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading in danger_zone THEN Audio.play('alarm') AND LED.show('stop') ELSE Audio.play('motor_hum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Patrulla de Seguridad Nocturna",
+    "originalIdeaDescription": "Un juego donde el usuario debe 'escanear' el perímetro girando 360 grados completos cada cierto tiempo. La LED muestra una barra de progreso del escaneo. Si no se completa el giro a tiempo, suena una alarma de intruso.",
+    "transformedIdeaTitle": "Patrulla Nocturna",
+    "transformedIdeaDescription": "Eres el guardia de seguridad de un museo famoso. Para asegurarte de que nadie robe nada, debes realizar un escaneo completo de 360 grados cada minuto. Tu pantalla mostrará cuánto te falta por escanear. ¡No dejes ningún punto ciego o sonará la alarma!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "track_rotation += Compass.delta; IF track_rotation < 360 AND timer > limit THEN Audio.play('intruder_alert')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Cuestionario de Preguntas con Respuestas Espaciales",
+    "originalIdeaDescription": "Un sistema de quiz auditivo. Se hace una pregunta por el altavoz (ej. '¿2+2 son 4?'). El usuario gira al Norte para 'Verdadero' o al Sur para 'Falso'. La LED muestra un tick o una cruz y un sonido de éxito o error.",
+    "transformedIdeaTitle": "La Brújula de la Verdad",
+    "transformedIdeaDescription": "Pon a prueba tus conocimientos con movimiento. Escucha la pregunta y decide: ¿Es verdad o mentira? Si es verdad, corre y mira al Norte; si es mentira, gira al Sur. ¡Responde rápido para ganar la puntuación máxima en este quiz físico!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(Question); IF answer == True AND Compass.direction == 'N' THEN success() ELSE fail()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Eficiencia de Energía Eólica",
+    "originalIdeaDescription": "El usuario actúa como una turbina eólica. Debe encontrar la dirección donde el 'viento' es más fuerte (una dirección aleatoria). Al alinearse, el sonido del viento y el giro en la LED se vuelven más rápidos, indicando máxima generación de energía.",
+    "transformedIdeaTitle": "Cazadores de Viento",
+    "transformedIdeaDescription": "¡Generemos energía limpia! Eres una turbina eólica moderna, pero el viento cambia constantemente. Gira para encontrar la racha de aire más fuerte. Sabrás que estás en la posición correcta cuando tus aspas (en la pantalla LED) giren a toda velocidad.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "efficiency = 1 / abs(wind_angle - Compass.heading); Audio.setPitch(efficiency); LED.setSpeed(efficiency)"
+  }
+]

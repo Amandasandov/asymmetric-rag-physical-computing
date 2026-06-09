@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad con Alarma Sonora",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos de valor dentro de una caja oscura. Si la caja se abre y entra luz, el sensor detecta el cambio de intensidad y activa una alarma sonora inmediata para alertar al propietario.",
+    "transformedIdeaTitle": "La Caja Fuerte de los Espías",
+    "transformedIdeaDescription": "¡Protege tus secretos! Crea un sistema de seguridad para tu caja de tesoros. Si alguien la abre y la luz entra (detectado por el sensor), debe sonar una alarma de emergencia para ahuyentar a los intrusos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() > 10 THEN AudioPlayer.play(\"alarm_sound\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Control de Volumen Ambiental Automático",
+    "originalIdeaDescription": "Un sistema de audio inteligente que ajusta el volumen de la música basándose en la luz ambiental. Si hay mucha luz (día), el volumen sube; si está oscuro (noche), el volumen baja para ser más sutil.",
+    "transformedIdeaTitle": "DJ Mágico: Mezclando con el Sol",
+    "transformedIdeaDescription": "Conviértete en un DJ que controla la música con la luz. Programarás el reproductor para que el volumen de la canción cambie automáticamente según cuánta luz reciba el sensor. ¡Tapa el sensor para bajar la música!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.setVolume(LightIntensity.getValue())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Grillos Nocturnos",
+    "originalIdeaDescription": "Un dispositivo que imita el comportamiento de los grillos en la naturaleza. El sistema monitorea la luz constantemente y solo reproduce el sonido de grillos cuando la intensidad de luz cae por debajo de un umbral específico.",
+    "transformedIdeaTitle": "El Grillo Tímido del Bosque",
+    "transformedIdeaDescription": "Vamos a crear un grillo digital que solo canta de noche. Tu misión es programar el sensor para que detecte la oscuridad. Si cubres el sensor con tu mano, el grillo debe empezar a cantar; si lo quitas, debe callarse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() < 20 THEN AudioPlayer.play(\"cricket_chirp\") ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Efecto de Sonido de Trueno Retardado",
+    "originalIdeaDescription": "Simulación física de una tormenta. El sensor detecta un pico repentino de luz (el relámpago) y, tras una breve pausa programada, reproduce un sonido de trueno, enseñando sobre la velocidad de la luz versus el sonido.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Simula una tormenta eléctrica. Usa una linterna para crear un 'rayo' sobre el sensor. El programa debe detectar el flash de luz, esperar unos segundos y luego reproducir un estruendoso trueno.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.getValue() > 90 THEN { Wait(2); AudioPlayer.play(\"thunder\") }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Radio Activada por Energía Solar",
+    "originalIdeaDescription": "Un prototipo que simula una radio ecológica que solo funciona con energía solar suficiente. Si la intensidad de luz es baja, la 'energía' se corta y el audio se detiene.",
+    "transformedIdeaTitle": "La Radio de Supervivencia Marciana",
+    "transformedIdeaDescription": "Estás en Marte y tu radio solo funciona con paneles solares. Programa el sistema para que la transmisión de la base solo se escuche cuando el sol (una lámpara o linterna) ilumine directamente el sensor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() > 50 THEN AudioPlayer.play(\"radio_static\") ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Sombras para Pasillos",
+    "originalIdeaDescription": "Un sistema de notificación para pasillos o entradas. Cuando una persona pasa frente al sensor, bloquea la luz momentáneamente, lo que dispara un efecto sonoro de bienvenida o timbre.",
+    "transformedIdeaTitle": "El Timbre Invisible",
+    "transformedIdeaDescription": "Crea un timbre que no necesita botones. Coloca el sensor donde pase gente; cuando su sombra cubra el sensor, el sistema debe saludar automáticamente o tocar una nota musical.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.change() < -30 THEN AudioPlayer.play(\"doorbell\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Búsqueda del Tesoro Sonoro",
+    "originalIdeaDescription": "Un juego interactivo donde un objeto escondido emite sonidos con diferente frecuencia o volumen dependiendo de cuánta luz recibe, guiando al usuario a descubrirlo con una linterna.",
+    "transformedIdeaTitle": "Exploradores de Cuevas: Encuentra el Oro",
+    "transformedIdeaDescription": "El tesoro está escondido en la oscuridad. Usa tu linterna para buscarlo. Programa el sensor para que, al ser iluminado directamente por el haz de luz, reproduzca el sonido triunfal de ¡Tesoro Encontrado!",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() == 100 THEN AudioPlayer.play(\"win_fanfare\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Arpa Láser Monocromática",
+    "originalIdeaDescription": "Un instrumento musical experimental donde al interrumpir un haz de luz constante (bajar la intensidad bruscamente con la mano), se dispara una nota musical o un sample de audio.",
+    "transformedIdeaTitle": "El Arpa de Rayos Láser",
+    "transformedIdeaDescription": "Construye un instrumento del futuro. Tienes un haz de luz invisible; cuando pasas tu mano a través de él (cortando la luz que llega al sensor), debe sonar una nota musical mágica.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity.getValue() < threshold AND !isPlaying THEN AudioPlayer.play(\"harp_pluck\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de Despertar Gradual",
+    "originalIdeaDescription": "Un reloj despertador biológico que monitorea la luz natural de la ventana. A medida que amanece y la luz incrementa gradualmente, cambia de sonidos de naturaleza suaves a música más enérgica.",
+    "transformedIdeaTitle": "Despertador Inteligente: Amanecer Musical",
+    "transformedIdeaDescription": "Ayuda a la gente a despertar feliz. Si hay poca luz, reproduce pajaritos suaves. Si la luz es muy fuerte (ya es tarde), ¡reproduce una alarma de rock para que se levanten rápido!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 30 THEN Audio.play(\"birds\") ELSE IF Light > 80 THEN Audio.play(\"rock_music\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Monstruos debajo de la Cama",
+    "originalIdeaDescription": "Un juguete divertido que se activa en la oscuridad total. Si el sensor detecta 0% de luz, asume que está 'debajo de la cama' y reproduce sonidos de ronquidos de monstruos.",
+    "transformedIdeaTitle": "¿Dónde duerme el Monstruo?",
+    "transformedIdeaDescription": "¡Crea un detector de monstruos! Programa el dispositivo para que, cuando esté en oscuridad total (como debajo de una cama o dentro de un armario), se escuchen ronquidos graciosos de monstruo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() == 0 THEN AudioPlayer.play(\"monster_snore\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Guía de Museo Automática",
+    "originalIdeaDescription": "Sistema para museos interactivos. Cuando un visitante ilumina una exhibición específica o un foco se enciende sobre ella, el reproductor narra la historia del objeto.",
+    "transformedIdeaTitle": "El Museo del Futuro",
+    "transformedIdeaDescription": "Diseña una exhibición interactiva. Cuando el foco de luz ilumine la obra de arte (el sensor), el sistema debe empezar a contar la historia de esa pieza automáticamente a los visitantes.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.getValue() > 60 THEN AudioPlayer.play(\"history_narration\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Theremin de Proximidad Inversa",
+    "originalIdeaDescription": "Un instrumento donde el tono o la pista de audio cambia según la sombra proyectada por la mano. Al acercar la mano (menos luz), el sonido cambia de carácter.",
+    "transformedIdeaTitle": "La Mano Mágica Musical",
+    "transformedIdeaDescription": "Controla la música sin tocar nada. Mueve tu mano arriba y abajo sobre el sensor. Cuanto más acerques tu mano (más sombra), más agudo o rápido debe sonar el audio.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setPlaybackSpeed(map(LightIntensity.getValue(), 0, 100, 0.5, 2.0))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Lumínico",
+    "originalIdeaDescription": "Herramienta educativa que traduce pulsos de luz en sonidos. Cada vez que la intensidad de luz sube bruscamente (un flash), se reproduce un 'beep' corto, permitiendo 'escuchar' la luz.",
+    "transformedIdeaTitle": "Telégrafo de Luz: Mensajes Secretos",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu amigo usando una linterna. Programa el sensor para que cada vez que reciba un flash de luz, haga un sonido 'BEEP'. ¡Así podrás transmitir código Morse!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity.getValue() > threshold THEN AudioPlayer.play(\"beep\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Monitor de Exceso de Luz para Plantas",
+    "originalIdeaDescription": "Dispositivo para el cuidado de plantas de sombra. Si la planta recibe demasiada luz directa (intensidad muy alta), emite un sonido de advertencia o una voz pidiendo sombra.",
+    "transformedIdeaTitle": "La Planta que Odia el Sol",
+    "transformedIdeaDescription": "Tienes una planta vampiro que se quema con el sol. Crea un sensor que la proteja: si detecta demasiada luz brillante, debe gritar '¡Me quemo!' para que corras a ponerla en la sombra.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() > 95 THEN AudioPlayer.play(\"scream\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo",
+    "originalIdeaDescription": "Un libro o juguete que narra diferentes partes de una historia dependiendo de si está abierto (luz) o cerrado/cubierto (oscuridad), creando una narrativa ramificada.",
+    "transformedIdeaTitle": "El Libro Mágico que Habla",
+    "transformedIdeaDescription": "Haz que tu diario cobre vida. Si el libro está cerrado (oscuro), susurra secretos. Si abres la tapa y entra la luz, empieza a contar una historia de aventuras en voz alta.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 THEN Audio.play(\"whispers\") ELSE Audio.play(\"adventure_story\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Entrenador de Reacción Visual-Auditiva",
+    "originalIdeaDescription": "Un juego de reflejos. El sistema espera un cambio de luz aleatorio (encender una lámpara externa) y el usuario mide su tiempo de reacción; el audio confirma la detección instantánea.",
+    "transformedIdeaTitle": "Reto de Reflejos: ¡Luz Verde!",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos. Espera en silencio... y en el momento exacto en que alguien encienda la luz de la habitación, tu programa debe disparar un sonido de '¡GOL!' instantáneamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WaitUntil(LightIntensity > 80); AudioPlayer.play(\"goal_shout\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas por Parpadeo",
+    "originalIdeaDescription": "Dispositivo lúdico que analiza la estabilidad de la luz. Si la intensidad de la luz fluctúa rápidamente (parpadeo), reproduce sonidos espeluznantes, simulando actividad paranormal.",
+    "transformedIdeaTitle": "Caza-Fantasmas: Detector de Parpadeos",
+    "transformedIdeaDescription": "Dicen que cuando un fantasma está cerca, las luces parpadean. Programa tu detector para que, si la luz sube y baja rápidamente, reproduzca un sonido de fantasma espeluznante.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity.fluctuates() THEN AudioPlayer.play(\"ghost_boo\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Música de 'Reversa'",
+    "originalIdeaDescription": "Una caja de música conceptual que solo funciona cuando se tapa el sensor. Al contrario de lo habitual, requiere oscuridad para sonar, incentivando la interacción táctil.",
+    "transformedIdeaTitle": "La Caja de Música Tímida",
+    "transformedIdeaDescription": "Esta caja de música es muy tímida y no le gusta que la miren. Solo tocará su melodía si cubres el sensor con tus manos para dejarla totalmente a oscuras.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.getValue() < 5 THEN AudioPlayer.play(\"lullaby\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma de Nevera Abierta",
+    "originalIdeaDescription": "Utilidad doméstica simple. Si el sensor detecta luz continua por más de un tiempo determinado (indicando que la puerta de la nevera quedó abierta), emite un sonido recordatorio.",
+    "transformedIdeaTitle": "El Guardián del Helado",
+    "transformedIdeaDescription": "¡No dejes que el helado se derrita! Coloca el sensor en la 'nevera' (una caja). Si detecta luz durante más de 10 segundos (puerta abierta), debe sonar una sirena para avisarte.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 50 FOR 10s THEN AudioPlayer.play(\"warning_beep\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sonar de Profundidad Simulado",
+    "originalIdeaDescription": "Simulación de un submarino descendiendo. A medida que la luz disminuye (simulando profundidad en el océano), el sonido de un sonar cambia su intervalo, haciéndose más lento o profundo.",
+    "transformedIdeaTitle": "Submarino en Misión Profunda",
+    "transformedIdeaDescription": "Baja a las profundidades del océano. A medida que tapas el sensor (haciéndolo más oscuro), el sonido del sonar del submarino debe cambiar para indicar que estás llegando al fondo del mar.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "delay = map(LightIntensity.getValue(), 0, 100, 1000, 100); loop { Audio.play(\"ping\"); wait(delay); }"
+  }
+]

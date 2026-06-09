@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad Sensible",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos valiosos. Utiliza el sensor de inclinación para detectar si el objeto es movido de su posición original y el sensor de ruido para detectar pasos o voces cercanas, activando una sirena de audio.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu cofre del tesoro! Programa el dispositivo para que actúe como un guardián. Si un ladrón intenta inclinar el cofre para abrirlo o hace demasiado ruido al acercarse, el sistema debe gritar una advertencia pirata o sonar una alarma para ahuyentarlo.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination > 15 OR NoiseLevel > 60) THEN AudioPlayer.play('alarma_pirata.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Herramienta de Meditación Interactiva",
+    "originalIdeaDescription": "Un asistente para la relajación que monitorea la postura del usuario mediante inclinación y el ambiente sonoro. Si el usuario se encorva o hay mucho ruido, emite sonidos suaves de corrección; si todo está bien, reproduce sonidos de naturaleza.",
+    "transformedIdeaTitle": "El Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Crea una aplicación para practicar ser un monje Shaolin. Debes mantenerte en perfecto equilibrio (sin inclinar el dispositivo) y en silencio absoluto. Si logras mantener la paz, escucharás el viento soplar; si fallas, un gong te avisará.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination == 0 AND NoiseLevel < 20) THEN AudioPlayer.play('naturaleza.mp3') ELSE AudioPlayer.play('gong.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Sonido DJ",
+    "originalIdeaDescription": "Una mesa de mezclas virtual donde la inclinación del dispositivo controla el 'pitch' o la velocidad de la canción, y el nivel de ruido ambiental se utiliza para disparar efectos de sonido adicionales como aplausos o bocinas.",
+    "transformedIdeaTitle": "Superestrella DJ del Futuro",
+    "transformedIdeaDescription": "¡Convierte tu tablet en una mesa de mezclas! Usa la inclinación para acelerar o desacelerar el ritmo de la música. Pide a tus amigos que griten y aplaudan; cuando el sensor detecte sus gritos, la app lanzará efectos especiales de fiesta.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setSpeed(Inclination.X); IF (NoiseLevel > 80) THEN AudioPlayer.play('airhorn.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Vehículo",
+    "originalIdeaDescription": "Un simulador acústico de conducción. La inclinación del dispositivo actúa como el pedal del acelerador cambiando el tono del motor, y el sensor de ruido detecta si el usuario hace sonidos de 'vrum' para arrancar el coche.",
+    "transformedIdeaTitle": "Simulador de Carreras Fórmula 1",
+    "transformedIdeaDescription": "¡Arranca tus motores! Para encender tu coche de carreras, tienes que hacer ruido de motor con la boca. Luego, inclina el dispositivo hacia adelante para acelerar a fondo y escuchar cómo rugen los pistones en la pista.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (NoiseLevel > 50) THEN AudioPlayer.play('arranque.mp3'); AudioPlayer.setVolume(Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Un dispositivo que se coloca en la cuna. Detecta si la cuna se mece (inclinación) o si el bebé llora (ruido). Dependiendo de la combinación, reproduce una canción de cuna suave o ruido blanco.",
+    "transformedIdeaTitle": "La Niñera Robótica Inteligente",
+    "transformedIdeaDescription": "Diseña un robot que cuide a un bebé virtual. Si el bebé empieza a llorar (ruido alto), el robot debe cantar una nana. Pero cuidado, si meces la cuna demasiado fuerte (inclinación alta), la música debe parar para no marearlo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (NoiseLevel > 70 AND Inclination < 10) THEN AudioPlayer.play('nana.mp3') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica con Conjuros de Voz",
+    "originalIdeaDescription": "Un juguete interactivo que requiere un movimiento gestual específico (inclinación) acompañado de un comando de voz fuerte (ruido) para ejecutar un efecto de sonido 'mágico'.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Hechizos",
+    "transformedIdeaDescription": "Aprende a lanzar el hechizo 'Leviosa'. Tienes que apuntar tu varita hacia arriba (inclinar) y gritar el nombre del hechizo al mismo tiempo. Solo si haces ambas cosas correctamente, escucharás el sonido de la magia funcionando.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (Inclination.Y > 45 AND NoiseLevel > 60) THEN AudioPlayer.play('magia.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de Camarero",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el dispositivo plano como una bandeja. Si se inclina demasiado, suenan platos rotos. El ruido ambiental añade dificultad, haciendo temblar la bandeja virtual.",
+    "transformedIdeaTitle": "El Desafío del Camarero Torpe",
+    "transformedIdeaDescription": "Eres un camarero en un restaurante muy elegante. Debes llevar la bandeja (tu dispositivo) totalmente plana. Si tus amigos hacen ruido para distraerte o si inclinas la mano, ¡CRASH!, escucharás cómo se rompe toda la vajilla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (ABS(Inclination.X) > 10 OR NoiseLevel > 75) THEN AudioPlayer.play('platos_rotos.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Libro de Cuentos Interactivo: La Cueva",
+    "originalIdeaDescription": "Una narración de audio que cambia según las acciones del usuario. Inclinar el dispositivo elige el camino (izquierda/derecha) y hacer ruido (gritar) provoca ecos o despierta criaturas en la historia.",
+    "transformedIdeaTitle": "Exploradores de la Cueva del Eco",
+    "transformedIdeaDescription": "Adéntrate en una cueva oscura. Inclina el dispositivo a la izquierda para ir al lago subterráneo o a la derecha para ver los murciélagos. ¡Prueba a gritar 'HOLA'! Si el sensor de ruido te escucha, la cueva te responderá con un eco misterioso.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Inclination.X < -20) THEN AudioPlayer.play('agua.mp3'); IF (NoiseLevel > 80) THEN AudioPlayer.play('eco.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin Digital",
+    "originalIdeaDescription": "Un instrumento experimental donde el tono de la nota musical cambia con la inclinación del eje X y el volumen se controla mediante la intensidad del ruido soplado al micrófono.",
+    "transformedIdeaTitle": "La Flauta Mágica Invisible",
+    "transformedIdeaDescription": "Crea un instrumento musical que no se toca con los dedos. Inclina el dispositivo para cambiar la nota musical (agudo o grave) y sopla fuerte cerca del micrófono para que suene más fuerte. ¡Compón tu propia melodía!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setPitch(Inclination.X); AudioPlayer.setVolume(NoiseLevel)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos y Pánico",
+    "originalIdeaDescription": "Un sistema de simulación de emergencias. Detecta vibraciones fuertes o cambios bruscos de inclinación (terremoto) y niveles altos de ruido (gritos), reproduciendo instrucciones de evacuación.",
+    "transformedIdeaTitle": "Simulacro de Emergencia Científica",
+    "transformedIdeaDescription": "Vamos a simular un laboratorio sísmico. Programa el dispositivo para detectar un 'terremoto' (sacudidas/inclinación rápida). Si además detecta pánico (mucho ruido), debe activar el altavoz con instrucciones de calma y seguridad.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Change(Inclination) > High AND NoiseLevel > High) THEN AudioPlayer.play('instrucciones.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual: Huevo Eclosionando",
+    "originalIdeaDescription": "Un juego donde el usuario debe cuidar un huevo. Mantenerlo caliente y quieto (inclinación estable) y cantarle suavemente (ruido bajo) hace que se escuchen grietas y el nacimiento de la criatura.",
+    "transformedIdeaTitle": "Mamá Dragón y el Huevo",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. Debes mantenerlo muy quieto (sin inclinar) y hablarle con suavidad para animarlo a salir. Si lo haces bien, escucharás el cascarón rompiéndose. Si gritas o lo mueves, el dragón se asustará.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination < 5 AND NoiseLevel > 10 AND NoiseLevel < 40) THEN AudioPlayer.play('crack.mp3') ELSE AudioPlayer.play('llanto.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Un dispositivo para ejercicio. Se pega al cuerpo y detecta la inclinación al bajar en una sentadilla. El micrófono escucha la respiración o el conteo del usuario para confirmar la repetición y reproducir un sonido de éxito.",
+    "transformedIdeaTitle": "El Entrenador Personal Robótico",
+    "transformedIdeaDescription": "¡Ponte en forma! Sujeta el dispositivo contra tu pecho. Cuando hagas una sentadilla (cambies la inclinación) y cuentes en voz alta '¡UNO!', el entrenador robótico tocará una fanfarria de victoria. ¡Intenta llegar a diez!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination.Y change AND NoiseLevel > Threshold) THEN AudioPlayer.play('victoria.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente",
+    "originalIdeaDescription": "Juego grupal donde el dispositivo se pasa de mano en mano. La música suena mientras se pasa con cuidado. Si se inclina bruscamente o alguien grita, la música se detiene y esa persona pierde.",
+    "transformedIdeaTitle": "La Bomba Musical Sensible",
+    "transformedIdeaDescription": "Pasa el dispositivo a tus amigos en círculo mientras suena la música. ¡Pero cuidado! Es muy sensible. Si lo inclinas demasiado rápido al pasarlo o si alguien se ríe muy fuerte, la música parará y la 'bomba' explotará (sonido de explosión).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Change(Inclination) > Limit OR NoiseLevel > Limit) THEN AudioPlayer.play('boom.mp3'); AudioPlayer.stopMusic()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor Alienígena de Juguete",
+    "originalIdeaDescription": "Un dispositivo de rol. La inclinación selecciona el 'idioma' (diferentes filtros de audio o pistas) y al hablar al micrófono (ruido), el dispositivo reproduce una frase alienígena aleatoria.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Eres un embajador en Marte. Inclina el dispositivo hacia la izquierda para hablar 'Marciano' o a la derecha para 'Jupiteriano'. Cuando hables al micrófono, el dispositivo 'traducirá' tu voz reproduciendo sonidos extraños de alienígenas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (NoiseLevel > Trigger) THEN { IF (Inclination.X < 0) play('marciano.mp3') ELSE play('jupiteriano.mp3') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Sonoro para Construcción",
+    "originalIdeaDescription": "Herramienta para ciegos o para uso sin mirar. Emite un tono continuo cuyo 'pitch' varía con la inclinación para indicar nivelación. Si hay mucho ruido de obra, aumenta el volumen automáticamente.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a construir una torre recta sin mirar. El dispositivo emitirá un sonido que se vuelve más agudo si la torre (el dispositivo) se está cayendo (inclinando). Si tus compañeros de obra hacen mucho ruido, el sonido se hará más fuerte para que lo oigas.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setPitch(Inclination.X); AudioPlayer.setVolume(NoiseLevel)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Sorpresas de Halloween",
+    "originalIdeaDescription": "Un objeto de broma. Cuando está quieto y en silencio, no hace nada. Si detecta que alguien se acerca sigilosamente (ruido bajo) y lo toca ligeramente (pequeña inclinación), suelta un grito terrorífico.",
+    "transformedIdeaTitle": "La Caja Embrujada",
+    "transformedIdeaDescription": "Prepara una broma para Halloween. Esconde el dispositivo en una caja de dulces. Si alguien intenta levantar la caja (inclinación) intentando no hacer ruido (silencio), ¡BUUU! Sonará un grito fantasmal para asustarlo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination.Change > 0 AND NoiseLevel < 30) THEN AudioPlayer.play('grito.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "Permite al usuario dirigir una pieza musical. La inclinación vertical controla el volumen/intensidad, y el nivel de ruido (golpear el podio o zapatear) marca el inicio y final de la pieza.",
+    "transformedIdeaTitle": "Maestro de la Filarmónica",
+    "transformedIdeaDescription": "Toma la batuta. Sube el dispositivo (inclinación hacia arriba) para que la orquesta toque 'fortissimo' (fuerte) o bájalo para 'pianissimo' (suave). Da un golpe fuerte o un zapatazo (ruido) para dar el golpe final de la sinfonía.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.setVolume(Inclination.Y); IF (NoiseLevel > 90) THEN AudioPlayer.play('final_crash.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación para Espías",
+    "originalIdeaDescription": "Gadget de espía que da instrucciones de audio solo cuando el agente está en la posición correcta (inclinación plana) y en silencio total para no ser detectado.",
+    "transformedIdeaTitle": "Misión Imposible: El Mensaje Secreto",
+    "transformedIdeaDescription": "Tienes un mensaje secreto que escuchar. Pero el dispositivo solo lo reproducirá si estás tumbado en el suelo (inclinación plana) y no hay ni un solo ruido a tu alrededor. Si alguien habla, el mensaje se autodestruye (se detiene).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination.isFlat AND NoiseLevel < 10) THEN AudioPlayer.play('secreto.mp3') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Simula una caña de pescar. Se usa la inclinación para lanzar el anzuelo. Cuando se detecta un sonido (pez picando/chapoteo), el usuario debe tirar hacia atrás (inclinación inversa) para reproducir el sonido de carrete.",
+    "transformedIdeaTitle": "Torneo de Pesca Deportiva",
+    "transformedIdeaDescription": "¡Vamos a pescar! Inclina el dispositivo hacia adelante para lanzar el anzuelo. Espera en silencio... cuando la app haga un sonido de '¡CHPLOF!', tira rápidamente hacia atrás (inclinación) para recoger el sedal y capturar al pez.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (AudioIsPlaying('chapoteo') AND Inclination.Y < -45) THEN AudioPlayer.play('ganaste.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Un dispositivo de broma. Mide el 'nerviosismo' a través del temblor de la mano (variación rápida de inclinación) y el tono de voz (nivel de ruido). Si ambos son altos, suena una alarma de 'MENTIRA'.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus amigos. Diles que sostengan el dispositivo y respondan una pregunta. Si les tiembla la mano (inclinación inestable) o hablan demasiado alto (ruido) por los nervios, la máquina gritará '¡MENTIROSO!'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Inclination.Shaking AND NoiseLevel > Medium) THEN AudioPlayer.play('mentira.mp3')"
+  }
+]

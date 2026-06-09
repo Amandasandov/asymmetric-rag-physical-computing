@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea con Pista de Fondo",
+    "originalIdeaDescription": "El sistema reproduce una pista de audio continua. Cuando el sensor de movimiento detecta una agitación fuerte en el eje Y, activa el sonido de la caja (snare) de la batería musical para acompañar la canción.",
+    "transformedIdeaTitle": "Estrella de Rock Invisible",
+    "transformedIdeaDescription": "¡Conviértete en el baterista de una banda famosa! La música de fondo sonará automáticamente, pero tú debes agitar tu dispositivo en el aire justo a tiempo para tocar el tambor y mantener el ritmo de la canción.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('RockTrack'); IF Motion.shake(Y) THEN MusicalDrum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Pasos con Sonido",
+    "originalIdeaDescription": "Utiliza el sensor de movimiento para detectar oscilaciones en el eje Z que simulen caminar. Cada paso activa un sonido de bombo. Si se deja de caminar, el reproductor de audio emite sonido ambiental de naturaleza.",
+    "transformedIdeaTitle": "El Gigante en el Bosque",
+    "transformedIdeaDescription": "Imagina que eres un gigante caminando por un bosque tranquilo. Cuando caminas (mueves el dispositivo arriba y abajo), tus pasos suenan como tambores pesados. Si te detienes, escucharás los pájaros cantar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.oscillation(Z) THEN { AudioPlayer.stop(); MusicalDrum.play('BassDrum') } ELSE AudioPlayer.play('NatureSounds')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Automatizado",
+    "originalIdeaDescription": "El reproductor de audio toca música y se detiene aleatoriamente. Si el sensor de movimiento detecta movimiento durante el silencio, la batería toca un platillo indicando un error.",
+    "transformedIdeaTitle": "El Baile Congelado",
+    "transformedIdeaDescription": "Baila mientras suene la música. ¡Cuidado! Cuando la música pare, debes quedarte totalmente quieto como una estatua. Si te mueves, el platillo sonará y habrás perdido la ronda.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('DancePop'); WAIT(random); AudioPlayer.pause(); IF Motion.isMoving() THEN MusicalDrum.play('Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Kung Fu",
+    "originalIdeaDescription": "Movimientos rápidos y secos activan sonidos de percusión (golpes). El reproductor de audio mantiene una música de tensión de fondo. Diferentes ejes activan diferentes tambores.",
+    "transformedIdeaTitle": "Maestro de Artes Marciales",
+    "transformedIdeaDescription": "Diseña la banda sonora de tu propia película de acción. Mueve el dispositivo como si dieras un golpe de karate: un movimiento horizontal suena como un golpe seco, y uno vertical como una patada poderosa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('TensionLoop'); IF Motion.accelX > 2g THEN MusicalDrum.play('TomHigh'); IF Motion.accelY > 2g THEN MusicalDrum.play('TomLow')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Mochila Antirrobo",
+    "originalIdeaDescription": "El dispositivo está en reposo. Si detecta movimiento continuo por más de 2 segundos, activa una alarma con el Audio Player y redobles de batería constantes.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tus secretos. Coloca el dispositivo sobre tu cuaderno. Si alguien intenta llevárselo (moviéndolo), sonará una sirena y tambores de alerta máxima para atrapar al intruso.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.duration > 2s THEN { AudioPlayer.play('Siren'); REPEAT MusicalDrum.play('SnareRoll') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Ritmo Cardiaco Simulado",
+    "originalIdeaDescription": "Un sonido de audio de fondo simula un monitor de hospital. Al agitar el dispositivo, se incrementa el tempo de un sonido de bombo que simula el latido del corazón.",
+    "transformedIdeaTitle": "Doctor Corazón",
+    "transformedIdeaDescription": "Eres un doctor monitoreando a un paciente que corre una maratón. Si agitas el dispositivo rápido, el corazón (tambor) latirá rápido. Si lo dejas quieto, el latido se calmará.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "rate = Motion.shakeIntensity; MusicalDrum.play('BassDrum', rate); AudioPlayer.play('BeepBackground')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ por Inclinación",
+    "originalIdeaDescription": "Inclinar a la izquierda reproduce una pista de audio (batería), inclinar a la derecha reproduce otra (melodía). Agitar el dispositivo agrega efectos de platillos extra.",
+    "transformedIdeaTitle": "DJ de la Fiesta",
+    "transformedIdeaDescription": "Controla la fiesta con tus manos. Inclina a la izquierda para escuchar solo la base, a la derecha para la melodía, y agita el dispositivo para lanzar el gran final con platillos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.tiltLeft THEN AudioPlayer.play('TrackA'); IF Motion.tiltRight THEN AudioPlayer.play('TrackB'); IF Motion.shake THEN MusicalDrum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Narrativa",
+    "originalIdeaDescription": "El Audio Player narra una historia. En momentos clave, el usuario debe agitar el dispositivo para crear 'truenos' con el bombo y toms de la batería.",
+    "transformedIdeaTitle": "Cuentacuentos de Terror",
+    "transformedIdeaDescription": "Escucha la historia de la casa embrujada. Cuando el narrador diga '¡Y entonces estalló la tormenta!', agita tu dispositivo con fuerza para crear el sonido de los truenos y asustar a todos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('StoryPart1'); WAIT_FOR_SHAKE; MusicalDrum.play('TomFloor'); AudioPlayer.play('StoryPart2')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos",
+    "originalIdeaDescription": "Un movimiento suave circular reproduce un sonido mágico (Audio). Un movimiento brusco (golpe) lanza el hechizo con un sonido de percusión fuerte.",
+    "transformedIdeaTitle": "Escuela de Magos",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Mueve suavemente tu varita para cargar la magia (sonido brillante) y haz un movimiento rápido hacia adelante para lanzar el hechizo con un ¡BUM! de tambor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.smoothCircle THEN AudioPlayer.play('Chimes'); IF Motion.sharpJerk THEN MusicalDrum.play('BassDrum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Trote Musical",
+    "originalIdeaDescription": "Reproduce música motivadora. Si la cadencia de movimiento (eje Y) baja de cierto umbral, la batería toca un ritmo lento y desanimado para avisar al usuario.",
+    "transformedIdeaTitle": "Entrenador Personal Robot",
+    "transformedIdeaDescription": "Sal a correr con tu entrenador robot. Él pondrá música rápida, pero si detecta que te estás cansando y corres lento, tocará tambores lentos y pesados para animarte a acelerar de nuevo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('Techno'); IF Motion.frequency < Target THEN { AudioPlayer.volume(50); MusicalDrum.loop('SlowBeat') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Agitador de Cócteles Virtual",
+    "originalIdeaDescription": "El usuario debe agitar el dispositivo. El Audio hace sonido de líquido. Al detenerse bruscamente, suena un 'Ding' (triángulo o platillo suave) indicando que está listo.",
+    "transformedIdeaTitle": "El Barman Loco",
+    "transformedIdeaDescription": "Prepara la poción perfecta. Agita el dispositivo para mezclar los ingredientes escuchando el líquido. Detente de golpe para servirla y escuchar el '¡Ding!' de la victoria.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Motion.shaking { AudioPlayer.play('LiquidShake') }; IF Motion.stopsAbruptly THEN MusicalDrum.play('OpenHiHat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Cabalgata",
+    "originalIdeaDescription": "El movimiento rítmico genera sonido de cascos de caballo (percusión). Si se detiene el movimiento, el Audio Player reproduce el relincho de un caballo.",
+    "transformedIdeaTitle": "Aventura en el Viejo Oeste",
+    "transformedIdeaDescription": "Sujeta las riendas y galopa. Mueve el dispositivo arriba y abajo para hacer sonar los cascos de tu caballo. Cuando te detengas, tu fiel caballo relinchará para saludarte.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isRhythmic THEN MusicalDrum.play('WoodBlock'); IF Motion.stops THEN AudioPlayer.play('HorseNeigh')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión Espacial",
+    "originalIdeaDescription": "La inclinación en el eje X controla el tono (pitch) de un sonido sintetizado continuo. Golpear el dispositivo (tap) agrega un golpe de bombo electrónico.",
+    "transformedIdeaTitle": "Sintetizador Alienígena",
+    "transformedIdeaDescription": "Crea música del futuro. Inclina el dispositivo de lado a lado para cambiar el sonido de la nave espacial, y dale golpecitos con el dedo para añadir ritmos de tambor galácticos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setPitch(Motion.tiltX); AudioPlayer.play('SynthDrone'); IF Motion.tap THEN MusicalDrum.play('ElectricKick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "La Papa Caliente Explosiva",
+    "originalIdeaDescription": "Música de circo suena (Audio). Se debe pasar el dispositivo suavemente. Si se detecta un tirón fuerte o caída, la música para y suena una explosión de batería.",
+    "transformedIdeaTitle": "La Bomba Musical",
+    "transformedIdeaDescription": "Pasa el dispositivo a tus amigos con mucho cuidado mientras suena la música. Si eres torpe y lo agitas demasiado fuerte al pasarlo, ¡BOOM! La bomba explotará y perderás.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('Circus'); IF Motion.shock > Threshold THEN { AudioPlayer.stop(); MusicalDrum.play('CrashCymbal') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual",
+    "originalIdeaDescription": "Inclinación adelante: Bombo. Inclinación atrás: Caja. Izquierda: Hi-hat. Derecha: Tom. El Audio Player graba y reproduce la secuencia creada.",
+    "transformedIdeaTitle": "Compositor en el Aire",
+    "transformedIdeaDescription": "No necesitas baquetas, solo moverte. Inclina el dispositivo en las cuatro direcciones para descubrir los diferentes sonidos de la batería y crea tu propio ritmo para que tus amigos bailen.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Tilt.Front THEN Drum.Kick; IF Tilt.Back THEN Drum.Snare; IF Tilt.Left THEN Drum.Hat; IF Tilt.Right THEN Drum.Tom"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Audio reproduce sonido de ciudad. Si el sensor de movimiento detecta vibración sutil, la batería inicia un redoble grave (rumble) que aumenta con la intensidad.",
+    "transformedIdeaTitle": "Científico de Sismos",
+    "transformedIdeaDescription": "Construye un sismógrafo. Todo está tranquilo en la ciudad hasta que golpeas la mesa. El dispositivo detectará la vibración y hará sonar un estruendo subterráneo según la fuerza del terremoto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('CityAmbience'); intensity = Motion.vibration; MusicalDrum.play('LowTomRoll', volume=intensity)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Básico",
+    "originalIdeaDescription": "El volumen de la música clásica (Audio) se controla con la altura del dispositivo (eje Y). Un movimiento rápido hacia abajo finaliza la pieza con un golpe de timbal.",
+    "transformedIdeaTitle": "El Gran Maestro",
+    "transformedIdeaDescription": "Toma la batuta. Levanta la mano para que la orquesta toque fuerte, y bájala para que toquen suave. Termina el concierto con un gesto rápido hacia abajo para el gran final.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.setVolume(Motion.positionY); IF Motion.gesture('DownSwing') THEN MusicalDrum.play('Timpani')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Repetición Simón Dice",
+    "originalIdeaDescription": "El sistema toca una secuencia (ej: Bombo, Caja). El usuario debe replicar los movimientos (Izquierda, Derecha) asociados a esos sonidos. Audio confirma éxito o fracaso.",
+    "transformedIdeaTitle": "Desafío de Memoria Rítmica",
+    "transformedIdeaDescription": "Escucha atentamente: Bombo es izquierda, Caja es derecha. Si la batería toca 'Bombo-Bombo-Caja', tú debes mover el dispositivo 'Izquierda-Izquierda-Derecha'. ¡No te equivoques!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Sequence = [Kick, Snare]; Play(Sequence); UserMoves = RecordMotion(); IF UserMoves == Sequence THEN Audio.play('Win') ELSE Audio.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Sonora",
+    "originalIdeaDescription": "Detecta un 'swing' en el eje X. Reproduce un sonido de golpe de raqueta (Audio) y si la velocidad es máxima, agrega un impacto de tambor para simular potencia.",
+    "transformedIdeaTitle": "Campeonato de Tenis Virtual",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una raqueta. Haz el movimiento de golpeo. Si lo haces suave, solo escucharás la red. ¡Si golpeas con todas tus fuerzas, sonará un cañonazo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.swingDetected THEN { AudioPlayer.play('RacketHit'); IF Motion.speed > Max THEN MusicalDrum.play('BassDrum') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Cargador de Energía Cinética",
+    "originalIdeaDescription": "El usuario debe agitar el dispositivo para 'cargar' una batería virtual. El audio hace un sonido de tono ascendente. Al llegar al 100%, la batería toca una fanfarria.",
+    "transformedIdeaTitle": "Recarga el Robot",
+    "transformedIdeaDescription": "Tu robot se ha quedado sin energía. Agita el dispositivo lo más rápido que puedas para recargar sus baterías. Escucharás cómo sube la energía hasta que... ¡Batería llena!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Motion.shake { Energy++; AudioPlayer.setPitch(Energy) }; IF Energy == 100 THEN MusicalDrum.play('Fanfare')"
+  }
+]

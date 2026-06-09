@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Linterna de Mano Básica con Interruptor",
+    "originalIdeaDescription": "Un sistema de iluminación portátil simple donde el usuario puede encender y apagar una luz blanca brillante utilizando un interruptor manual, simulando el funcionamiento de una linterna tradicional para ver en la oscuridad.",
+    "transformedIdeaTitle": "La Linterna del Explorador de Cuevas",
+    "transformedIdeaDescription": "¡Estás a punto de entrar en una cueva oscura llena de tesoros! Programa tu equipo para que cuando actives el interruptor, tu linterna ilumine el camino con una luz blanca potente, y se apague para ahorrar batería cuando lo desactives.",
+    "minAge": 6,
+    "maxAge": 8,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(White) ELSE Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo de Control Manual",
+    "originalIdeaDescription": "Un dispositivo que cambia el color de la luz cada vez que se presiona el interruptor, alternando entre rojo, amarillo y verde para simular el control de tráfico en una intersección.",
+    "transformedIdeaTitle": "El Controlador de Tráfico de la Ciudad",
+    "transformedIdeaDescription": "El semáforo automático se ha roto y tú eres el oficial a cargo. Crea un programa que cambie la luz de Rojo a Verde y luego a Amarillo cada vez que presiones el interruptor para evitar atascos en la ciudad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Switch.press(): state = (state + 1) % 3; IF state==0 Lamp.red() ELSE IF state==1 Lamp.green() ELSE Lamp.yellow()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Visual",
+    "originalIdeaDescription": "Un sistema de comunicación donde la lámpara se enciende solo mientras el interruptor se mantiene presionado, permitiendo al usuario enviar mensajes codificados mediante destellos de luz cortos y largos.",
+    "transformedIdeaTitle": "El Telégrafo Espacial Secreto",
+    "transformedIdeaDescription": "Necesitas enviar un mensaje secreto a la base lunar sin ser detectado por radio. Configura tu botón para que la luz solo brille mientras mantienes el dedo pulsado, permitiéndote enviar puntos y rayas en código Morse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Switch.isPressed() DO Lamp.turnOn() END; Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Sirena de Emergencia",
+    "originalIdeaDescription": "Un dispositivo de alerta que activa una secuencia de luces rojas y azules parpadeantes rápidamente cuando el interruptor está en la posición de encendido, simulando una sirena policial.",
+    "transformedIdeaTitle": "La Patrulla de Policía en Acción",
+    "transformedIdeaDescription": "¡Hay una emergencia en el banco! Programa la sirena de tu patrulla para que, al activar el interruptor, las luces parpadeen rápidamente entre rojo y azul para alertar a los demás conductores y llegar rápido a la escena.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Lamp.setColor(Red); wait(0.5); Lamp.setColor(Blue); wait(0.5))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Lámpara de Lectura con Temporizador",
+    "originalIdeaDescription": "Una luz diseñada para leer que se activa con un interruptor y permanece encendida por un tiempo definido antes de apagarse automáticamente para evitar gastar energía si el usuario se duerme.",
+    "transformedIdeaTitle": "Luz Mágica de Cuentos para Dormir",
+    "transformedIdeaDescription": "Te gusta leer antes de dormir, pero a veces te quedas dormido con la luz encendida. Crea una lámpara inteligente que, al presionar el botón, se encienda por 10 segundos y luego se apague suavemente por sí sola.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.wasPressed() THEN Lamp.on(); wait(10); Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "Un sistema de iluminación ambiental que permite al usuario alternar entre colores fríos (azul/violeta) y colores cálidos (naranja/rojo) usando el interruptor para cambiar la atmósfera de la habitación.",
+    "transformedIdeaTitle": "El Collar de las Emociones",
+    "transformedIdeaDescription": "Diseña una joya tecnológica que muestre cómo te sientes. Si el interruptor está apagado, muestra un azul tranquilo para 'Calma', pero si lo enciendes, cambia a un naranja brillante para mostrar 'Energía' o 'Felicidad'.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Orange) ELSE Lamp.setColor(Blue)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Fuego de Campamento",
+    "originalIdeaDescription": "Una lámpara que recrea el efecto de una fogata mediante el uso de variaciones aleatorias de intensidad en tonos naranjas y rojos cuando el interruptor está activado.",
+    "transformedIdeaTitle": "La Fogata Virtual del Campamento",
+    "transformedIdeaDescription": "Es una noche fría en el bosque digital. Usa tu interruptor para 'encender' la leña. La luz debe parpadear en tonos naranjas y amarillos aleatorios para simular una llama real y mantenernos calientes.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO Lamp.setColor(Random(Orange, Red)); Lamp.setBrightness(Random(50, 100))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Estroboscópica de Discoteca",
+    "originalIdeaDescription": "Un sistema de iluminación para fiestas que emite destellos de luz blanca o de colores a muy alta velocidad mientras el interruptor se mantiene activado para crear un efecto de cámara lenta.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Robótica",
+    "transformedIdeaDescription": "¡Es hora de bailar! Programa las luces de la pista de baile para que, cuando actives el interruptor maestro, la lámpara parpadee en colores aleatorios muy rápido, creando un efecto de fiesta increíble.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Lamp.setColor(RandomColor); wait(0.1); Lamp.off(); wait(0.1))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna Anti-Pesadillas",
+    "originalIdeaDescription": "Una luz de seguridad suave que se enciende en un tono tenue y relajante cuando el niño activa el interruptor, diseñada para proporcionar confort durante la noche sin deslumbrar.",
+    "transformedIdeaTitle": "El Escudo de Luz Anti-Monstruos",
+    "transformedIdeaDescription": "Los monstruos temen a la luz violeta suave. Programa tu escudo (lámpara) para que, al activar el interruptor de defensa, emita una luz violeta tenue que te proteja mientras duermes.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Purple); Lamp.setBrightness(30) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Respuesta de Quiz",
+    "originalIdeaDescription": "Un dispositivo utilizado en juegos de preguntas donde la luz se enciende instantáneamente en color verde cuando un participante presiona su botón, indicando quién respondió primero.",
+    "transformedIdeaTitle": "El Botón del Concurso de TV",
+    "transformedIdeaDescription": "Estás en un concurso de televisión y sabes la respuesta. Programa tu pulsador para que, en el momento exacto en que lo presiones, tu luz se ponga verde brillante para indicar al presentador que quieres responder.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.setColor(Green) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Faro Costero Rotatorio",
+    "originalIdeaDescription": "Una simulación de un faro donde la luz aumenta y disminuye su intensidad cíclicamente cuando el interruptor está encendido, imitando el paso del haz de luz de un faro.",
+    "transformedIdeaTitle": "El Faro del Puerto Brumoso",
+    "transformedIdeaDescription": "Los barcos necesitan guiarse en la niebla. Crea un programa para el faro donde, al encender el sistema, la luz aumente y disminuya de brillo suavemente una y otra vez, guiando a los marineros a casa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(FadeIn(White); FadeOut(White))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores Primarios",
+    "originalIdeaDescription": "Una herramienta educativa que cambia el color de la lámpara entre Rojo, Verde y Azul (RGB) con cada pulsación del interruptor para enseñar los colores aditivos básicos.",
+    "transformedIdeaTitle": "El Laboratorio de Colores Mágicos",
+    "transformedIdeaDescription": "Eres un alquimista de la luz. Tienes tres pociones: Roja, Verde y Azul. Configura tu varita (interruptor) para que cada vez que hagas un 'clic', cambies al siguiente ingrediente (color) en tu ciclo de pociones.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Switch.press(): colorIndex++; Lamp.setColor(Colors[colorIndex % 3])"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma Silenciosa de Intrusos",
+    "originalIdeaDescription": "Un sistema de seguridad visual que parpadea en rojo repetidamente si el interruptor (simulando un sensor de puerta) se activa, alertando visualmente sin hacer ruido.",
+    "transformedIdeaTitle": "La Trampa del Agente Secreto",
+    "transformedIdeaDescription": "Estás protegiendo un diamante valioso. Configura una alarma visual silenciosa: si un ladrón activa el interruptor de la puerta, la luz debe parpadear en rojo urgentemente para avisarte sin que el ladrón lo oiga.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Lamp.setColor(Red); wait(0.2); Lamp.off(); wait(0.2))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Amanecer",
+    "originalIdeaDescription": "Un dispositivo de despertar suave que incrementa gradualmente la intensidad de la luz amarilla cuando se activa el interruptor, imitando la salida del sol.",
+    "transformedIdeaTitle": "Despertador Solar Artificial",
+    "transformedIdeaDescription": "¡Arriba, dormilón! Programa un sol artificial. Cuando actives el interruptor por la mañana, la luz debe comenzar apagada y volverse amarilla brillante poco a poco durante 5 segundos para un despertar natural.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.turnedOn() THEN FOR i=0 to 100 DO Lamp.setBrightness(i); wait(0.05)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos Rápidos",
+    "originalIdeaDescription": "Un juego simple donde la luz se enciende al azar y el usuario debe presionar el interruptor lo más rápido posible para apagarla, probando su tiempo de reacción.",
+    "transformedIdeaTitle": "El Cazador de Fantasmas",
+    "transformedIdeaDescription": "Un fantasma (la luz) aparecerá de repente. Tu misión es 'atraparlo' apagando tu interruptor en cuanto veas la luz encenderse. ¿Puedes programar la lógica para apagar la luz cuando presiones el botón?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Lamp.isOn() AND Switch.isPressed() THEN Lamp.off() -> Win"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Señal de Pista de Aterrizaje",
+    "originalIdeaDescription": "Un sistema de señalización que utiliza pulsos de luz blanca brillantes y rítmicos controlados por el interruptor para guiar vehículos o personas en la oscuridad.",
+    "transformedIdeaTitle": "Guía de Aterrizaje OVNI",
+    "transformedIdeaDescription": "Tus amigos alienígenas quieren visitar la Tierra. Construye una baliza de aterrizaje que, al encenderse, emita dos destellos blancos rápidos seguidos de una pausa, repitiendo el ciclo para mostrarles dónde aparcar la nave.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Flash(); Flash(); Wait(1.0))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador Binario de un Bit",
+    "originalIdeaDescription": "Una demostración fundamental de computación donde el estado del interruptor (encendido/apagado) se refleja directamente en el estado de la lámpara (1/0), representando un bit de datos.",
+    "transformedIdeaTitle": "La Computadora de un Solo Bit",
+    "transformedIdeaDescription": "¡Vamos a construir la computadora más pequeña del mundo! Tiene una memoria de 1 bit. Si el interruptor es 1 (encendido), la luz debe mostrar el dato (encendida). Si es 0, la luz se apaga. ¡Es el lenguaje de las máquinas!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.setState(Switch.getState())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Lámpara de Ahorro de Energía",
+    "originalIdeaDescription": "Un sistema de iluminación inteligente que solo permite que la luz esté encendida si el interruptor se mantiene presionado, garantizando que nunca se quede encendida accidentalmente.",
+    "transformedIdeaTitle": "Eco-Luz del Futuro",
+    "transformedIdeaDescription": "En el futuro, la energía es muy valiosa. Diseña una lámpara que sea imposible de dejar encendida por accidente. Solo debe iluminar mientras tu dedo esté presionando activamente el botón, apagándose al soltarlo.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isHeld() THEN Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Rayos y Truenos",
+    "originalIdeaDescription": "Un efecto especial para teatro donde presionar el interruptor genera destellos blancos erráticos e intensos, simulando una tormenta eléctrica visual.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Estás a cargo de los efectos especiales de una obra de teatro. Cuando el villano entre, presiona el interruptor para crear 'rayos': destellos blancos aleatorios y rápidos que asusten a la audiencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN LOOP(Lamp.on(); wait(Random); Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Latidos del Corazón",
+    "originalIdeaDescription": "Una simulación médica donde la luz parpadea en rojo con un ritmo constante (pulso) cuando el dispositivo está encendido, imitando un monitor cardíaco.",
+    "transformedIdeaTitle": "El Corazón del Robot",
+    "transformedIdeaDescription": "Acabas de construir un robot y necesita un corazón. Programa la lámpara roja para que, al encender el robot (interruptor), pulse rítmicamente (bum-bum... bum-bum) para mostrar que está vivo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LOOP(Lamp.on(); wait(0.1); Lamp.off(); wait(0.1); Lamp.on(); wait(0.1); Lamp.off(); wait(0.8))"
+  }
+]

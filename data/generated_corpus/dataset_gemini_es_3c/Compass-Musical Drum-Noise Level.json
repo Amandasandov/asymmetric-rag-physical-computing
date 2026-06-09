@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Batería Virtual de 360 Grados",
+    "originalIdeaDescription": "El usuario crea un set de batería invisible a su alrededor. Girando el cuerpo hacia el Norte, Sur, Este u Oeste se selecciona un instrumento de percusión diferente, y se activa al aplaudir o hacer un ruido fuerte.",
+    "transformedIdeaTitle": "El Baterista Giratorio",
+    "transformedIdeaDescription": "Conviértete en un músico que toca una batería gigante invisible. Los estudiantes programarán la aplicación para que, dependiendo de hacia dónde miren (Norte, Sur, Este, Oeste), el 'micrófono' (Sensor de Ruido) active un sonido de tambor diferente (Bombo, Caja, Platillo) cuando detecte un aplauso.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 50 THEN { IF Compass < 45 THEN Drum.play('Snare') ELSE IF Compass > 135 THEN Drum.play('Kick') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenamiento de Ninja Silencioso",
+    "originalIdeaDescription": "Un juego de sigilo donde el usuario debe girar hacia una dirección objetivo mostrada en pantalla sin hacer ruido. Si el nivel de ruido supera un umbral mientras se mueven, suena una alarma de tambor.",
+    "transformedIdeaTitle": "Misión: Ninja Sigiloso",
+    "transformedIdeaDescription": "¡Eres un ninja infiltrándote en un castillo! Debes girar tu cuerpo para mirar hacia la salida (Norte) sin despertar a los guardias. Si el sensor de ruido detecta tus pasos o respiración fuerte mientras giras, la alarma (Tambor) sonará y perderás la misión.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 20 AND Compass.isChanging() THEN Drum.play('Alarm')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Para abrir una caja fuerte digital, el usuario debe girar a un grado específico (usando la brújula) y luego hacer un sonido específico (soplido o grito corto) para confirmar el número. Un sonido de tambor indica éxito.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "¡Descifra la combinación secreta! Los estudiantes deben encontrar el ángulo correcto (por ejemplo, Sur-Este). Una vez en posición, deben dar una palmada seca (Ruido) para intentar abrir el cerrojo. Si la posición es correcta, el tambor hará un sonido de 'clic' victorioso.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass == TargetAngle AND Noise > 80 THEN Drum.play('Click') ELSE Drum.play('Error')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Radar de Sonar para Murciélagos",
+    "originalIdeaDescription": "Simulación de ecolocalización. El usuario gira (brújula) y emite un sonido (ruido). Si está mirando hacia el 'objetivo' oculto, el tambor reproduce un eco rápido. Si no, silencio o eco lento.",
+    "transformedIdeaTitle": "El Murciélago Ciego",
+    "transformedIdeaDescription": "Juega como un murciélago buscando comida en la oscuridad. Gira buscando una polilla invisible. Emite un chillido (Ruido); si estás mirando en la dirección correcta (Brújula), escucharás un rebote sónico (Tambor). ¡Usa tus oídos para orientarte!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 60 THEN { Distance = abs(Compass - Target); Drum.play(Rate based on Distance) }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "El dispositivo actúa como un medidor EMF. Al girar buscando fantasmas, si la brújula se alinea con una coordenada generada al azar, el usuario debe quedarse quieto (ruido bajo). Si hace ruido, el fantasma (tambor) ataca.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Tu dispositivo rastrea energía espectral. Gira lentamente hasta encontrar la señal. ¡Cuidado! Cuando encuentres al fantasma (dirección correcta), debes quedarte totalmente callado (Ruido = 0). Si gritas del susto, el fantasma golpeará (Tambor) y escapará.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass == GhostDir AND Noise > 10 THEN Drum.play('Scare') ELSE IF Compass == GhostDir THEN Lamp.Green()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Director de Orquesta de Viento",
+    "originalIdeaDescription": "El usuario controla una sección de percusión. La dirección hacia la que mira selecciona el instrumento (Brújula), y la intensidad con la que sopla al micrófono (Ruido) controla la velocidad del ritmo del tambor.",
+    "transformedIdeaTitle": "El Maestro del Viento",
+    "transformedIdeaDescription": "Controla una orquesta mágica con tu aliento. Mira hacia el Norte para los timbales o al Sur para los platillos. Sopla suavemente en el micrófono para un ritmo lento, o sopla fuerte como un huracán para que los tambores toquen frenéticamente.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Instrument = Select(Compass); Speed = Map(NoiseLevel); Drum.play(Instrument, Speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Navegación en la Tormenta",
+    "originalIdeaDescription": "El usuario debe mantener el rumbo hacia el Norte. El 'Ruido' representa el viento/tormenta. Si el ruido ambiental es alto, la brújula se vuelve inestable y suenan truenos (tambor), obligando al usuario a corregir el rumbo.",
+    "transformedIdeaTitle": "Capitán de la Tormenta",
+    "transformedIdeaDescription": "Eres el capitán de un barco en un huracán. Tus compañeros de clase harán ruido de viento y lluvia. Si el ruido es muy fuerte, tu barco se desviará. Debes luchar contra el ruido y girar para mantener tu barco apuntando siempre al Norte mientras suenan los truenos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise > 70 THEN { Play(Thunder); CompassReading = CompassReading + Random(-20, 20) } Check(IsNorth)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simón Dice Direccional",
+    "originalIdeaDescription": "El juego da instrucciones de audio ('Norte y Aplauso', 'Sur y Silencio'). El usuario debe orientarse correctamente con la brújula y cumplir la condición de ruido. El tambor marca el error o acierto.",
+    "transformedIdeaTitle": "Brújula Loca: Gira y Grita",
+    "transformedIdeaDescription": "Un juego de reflejos rápidos. La app te dirá '¡Norte y Grita!' o '¡Oeste y Silencio!'. Debes girar tu cuerpo rápidamente a la dirección correcta y hacer (o no hacer) ruido. Si fallas, ¡un triste sonido de tambor te eliminará!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass == TargetDir AND (Noise > Threshold == TargetNoiseAction) THEN Score++ ELSE Drum.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Hechicero Elemental",
+    "originalIdeaDescription": "El usuario 'lanza hechizos' apuntando a direcciones cardinales específicas y pronunciando palabras mágicas (detectadas por nivel de ruido). Cada dirección tiene un efecto de sonido de percusión distinto.",
+    "transformedIdeaTitle": "Escuela de Magia Elemental",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Apunta tu varita (dispositivo) al Este para invocar fuego y grita '¡Ignis!'. Si la dirección es correcta y el volumen de tu voz es lo suficientemente alto, escucharás el estruendo mágico (Tambor) de tu hechizo.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass == East AND Noise > 60 THEN Drum.play('FireSpell') ELSE IF Compass == West... "
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "El usuario actúa como una torre de control. Debe girar para encarar aviones entrantes (simulados por brújula) y usar la voz (ruido) para dar permiso de aterrizaje. Si falla, suena un choque de tambor.",
+    "transformedIdeaTitle": "Torre de Control: ¡Aterrizaje!",
+    "transformedIdeaDescription": "Los aviones se acercan desde todas direcciones. La pantalla te dice 'Avión desde el Sur'. Gira al Sur y da la orden '¡Aterrice!' (Ruido fuerte). Si no miras al lugar correcto a tiempo, o no hablas fuerte, escucharás un choque (Tambor).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = RandomDir(); IF Compass == Target AND Noise > 50 THEN Score++ ELSE Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma Despertador Física",
+    "originalIdeaDescription": "Una alarma que no se apaga tocando un botón. El tambor suena en bucle hasta que el usuario se levanta, mira hacia el Este (salida del sol) y grita '¡Buenos días!'.",
+    "transformedIdeaTitle": "El Despertador Imposible",
+    "transformedIdeaDescription": "Diseña la alarma más molesta del mundo. El tambor no dejará de sonar hasta que el usuario demuestre que está despierto. ¿Cómo? Girando hacia el Este (donde sale el sol) y gritando fuerte para apagarla.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE (Compass != East OR Noise < 80) DO Drum.play('Loop')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Explorador de la Selva Ruidosa",
+    "originalIdeaDescription": "El usuario navega una selva invisible. Caminar en ciertas direcciones (Brújula) es seguro, pero otras tienen 'animales'. Si se detecta un animal, el usuario debe quedarse quieto y en silencio, o el animal ataca (Tambor).",
+    "transformedIdeaTitle": "Safari de Supervivencia",
+    "transformedIdeaDescription": "Explora la selva con tu brújula. Si vas al Norte, todo está bien. Pero si giras al Oeste, entras en territorio de leones. El dispositivo detectará si haces ruido: si estás en zona peligrosa y hablas, ¡el león rugirá (Tambor)!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass == DangerZone AND Noise > 15 THEN Drum.play('Roar')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ por Orientación",
+    "originalIdeaDescription": "El usuario crea un ritmo base. Girar el dispositivo actúa como un fader o selector de efectos. El ruido ambiental (aplausos del público) añade capas de percusión extra a la mezcla.",
+    "transformedIdeaTitle": "DJ Brújula Mix",
+    "transformedIdeaDescription": "¡Eres el DJ! Tu cuerpo es la mesa de mezclas. Mira al Norte para el ritmo base. Gira al Este para añadir platillos. Pide a tus amigos que aplaudan (Ruido); cuanto más fuerte aplaudan, más rápido irá el ritmo del tambor.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = Map(Noise); Track = SelectTrack(Compass); Drum.play(Track, BPM)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "El Laberinto de Eco",
+    "originalIdeaDescription": "El usuario está en un laberinto virtual. Debe elegir una dirección (Brújula) y hacer un sonido. Si el camino está bloqueado, el tambor devuelve un sonido 'seco'. Si está libre, devuelve un sonido con 'eco'.",
+    "transformedIdeaTitle": "Escapa del Laberinto Oscuro",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto sin luz. Para saber si puedes avanzar, mira hacia una dirección y grita '¡Hola!'. Si el camino está libre, escucharás un eco agradable. Si hay una pared, escucharás un golpe seco de tambor. ¡Encuentra la salida!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CurrentDir = Compass; IF Map[CurrentDir] == 'Wall' AND Noise > 40 THEN Drum.play('Thud') ELSE Drum.play('Echo')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de Señales Alienígenas",
+    "originalIdeaDescription": "El usuario debe buscar la señal de origen girando (Brújula). Cuando encuentra la interferencia correcta, debe imitar un patrón rítmico con la voz (Ruido) para que la nave responda con tambores.",
+    "transformedIdeaTitle": "Contacto Alienígena",
+    "transformedIdeaDescription": "Sintoniza tu radio espacial girando hasta encontrar la señal clara. Una vez conectado, los aliens esperan un saludo. Haz ruidos cortos y largos con tu voz. Si el patrón es correcto, la nave responderá con una secuencia de tambores.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass == SignalDir THEN { Record(NoisePattern); IF Match(NoisePattern) THEN Drum.play('Response') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Afinador de Batería Humana",
+    "originalIdeaDescription": "Cada dirección cardinal representa una tensión de parche de tambor. El usuario gira para 'afinar'. Al golpear/hacer ruido, el tono del tambor cambia según la orientación.",
+    "transformedIdeaTitle": "El Tambor Melódico",
+    "transformedIdeaDescription": "Crea un instrumento nuevo. Cuando miras al Norte, el tambor suena grave. A medida que giras hacia el Sur, el sonido se vuelve más agudo. Da palmadas mientras giras para tocar una melodía usando solo la orientación de tu cuerpo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pitch = Map(Compass, 0, 360); IF Noise > 40 THEN Drum.play(Note, Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de la Estatua Direccional",
+    "originalIdeaDescription": "Variación de '1, 2, 3, Momia'. El tambor toca un ritmo. Cuando para, el usuario debe congelarse mirando a una dirección específica y en silencio total. Si la brújula se mueve o hay ruido, pierde.",
+    "transformedIdeaTitle": "Estatuas Musicales Cardinales",
+    "transformedIdeaDescription": "Baila mientras suena el tambor. Cuando la música pare, la pantalla dirá '¡NORTE!'. Debes congelarte mirando al Norte y no hacer ni un solo ruido. Si te mueves o ríes (Ruido detectado), quedarás eliminado.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF !Drum.isPlaying() AND (Noise > 10 OR Compass != Target) THEN GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras",
+    "originalIdeaDescription": "Juego de rol. El 'interrogado' debe mirar al frente (Norte). Si gira la cabeza (Brújula) o se pone nervioso y respira fuerte (Ruido) mientras responde, el tambor suena indicando 'Mentira'.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Construye un detector de mentiras. Haz preguntas a tus amigos. Ellos deben mirar fijamente al Norte. Si desvían la mirada (la Brújula cambia) o se ríen nerviosamente (Ruido alto), el sensor activará el tambor para indicar: ¡MENTIRA!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Compass - StartDir) > 20 OR Noise > Threshold THEN Drum.play('LieDetected')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Remero de Canoa Virtual",
+    "originalIdeaDescription": "El usuario se sienta y simula remar. El ruido de esfuerzo ('hup!') impulsa el bote. La brújula dirige el bote. El tambor marca el ritmo de los remeros.",
+    "transformedIdeaTitle": "Carrera de Canoas",
+    "transformedIdeaDescription": "Participa en una regata olímpica. Siéntate y gira el torso para dirigir la canoa. Para avanzar, debes gritar '¡Rema!' rítmicamente. El tambor marcará el paso. Si pierdes el ritmo o la dirección, tu canoa chocará.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > Threshold THEN Speed++; IF Compass != Course THEN Speed--; Drum.play('Beat', Speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Guardián del Faro",
+    "originalIdeaDescription": "El usuario es un faro. Debe rotar constantemente (Compass) para barrer el área. Si escucha un barco (Ruido ambiental alto simulado por otros), debe detenerse y activar la sirena de niebla (Tambor).",
+    "transformedIdeaTitle": "El Faro en la Niebla",
+    "transformedIdeaDescription": "Eres la luz que guía a los barcos. Gira lentamente para iluminar el océano. Tus compañeros harán sonido de olas. Si escuchas un sonido muy fuerte (barco cerca), deja de girar y activa la sirena (Tambor) para avisarles del peligro.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > ShipThreshold THEN { StopRotation(); Drum.play('FogHorn') }"
+  }
+]

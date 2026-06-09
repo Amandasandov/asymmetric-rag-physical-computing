@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Consola de DJ Básica",
+    "originalIdeaDescription": "Un sistema simple donde el interruptor cambia entre dos pistas de fondo diferentes y la batería permite agregar percusión en vivo sobre la música.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "Conviértete en el DJ más famoso de la galaxia. Usa el interruptor para cambiar el ambiente entre 'Modo Espacial' y 'Modo Alinigena', y usa los tambores para animar a la multitud con ritmos explosivos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch is ON THEN Audio.play('SpaceTrack') ELSE Audio.play('AlienTrack'); ON Drum_Tap THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Usar el audio para reproducir sonido de lluvia constante. El interruptor activa o desactiva la lluvia, y la batería simula truenos repentinos.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Eres un meteorólogo controlando el clima. Activa el interruptor para iniciar una lluvia torrencial y golpea la batería para crear truenos impactantes en el momento justo para asustar a tus amigos.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch is ON THEN Audio.loop('RainSound') ELSE Audio.stop(); ON Drum_Tap THEN Drum.play('Heavy_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo con Acentos",
+    "originalIdeaDescription": "El reproductor de audio marca un pulso constante. El interruptor cambia la velocidad del pulso y la batería permite marcar el primer tiempo del compás.",
+    "transformedIdeaTitle": "El Director de Orquesta Robot",
+    "transformedIdeaDescription": "Ayuda a la orquesta de robots a mantener el ritmo. Usa el interruptor para cambiar entre 'Adagio' (lento) y 'Allegro' (rápido), y toca el tambor fuerte cada cuatro tiempos para guiarlos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch ON THEN Audio.setSpeed(Fast) ELSE Audio.setSpeed(Slow); Audio.play('ClickTrack'); ON Drum_Tap THEN Drum.play('Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Efectos de Comedia",
+    "originalIdeaDescription": "El interruptor prepara el chiste silenciando el ambiente, el audio cuenta el chiste y la batería hace el efecto de 'ba-dum-tss' al final.",
+    "transformedIdeaTitle": "Club de Comedia: Noche de Risas",
+    "transformedIdeaDescription": "Programa tu propia rutina de stand-up. Al activar el interruptor, el sistema cuenta un chiste aleatorio. Tu misión es tocar el redoble de batería perfecto (ba-dum-tss) justo cuando termine para ganar aplausos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch toggled THEN Audio.play('Joke'); WAIT_FOR_AUDIO_END; ON Drum_Tap THEN Drum.play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "El interruptor arma el sistema. Si está armado, cualquier toque en la batería (simulando un sensor de vibración) dispara una sirena de audio.",
+    "transformedIdeaTitle": "La Bóveda del Banco Central",
+    "transformedIdeaDescription": "Protege el oro del banco. Activa el interruptor para encender los láseres de seguridad. Si alguien toca la batería (intentando robar), ¡haz sonar la sirena de policía inmediatamente!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch is ON THEN System.Arm(); IF System.Armed AND Drum.Touched THEN Audio.play('Siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales",
+    "originalIdeaDescription": "El audio reproduce música mientras el interruptor está encendido. Al apagarlo, la música para. La batería se usa para reiniciar el juego.",
+    "transformedIdeaTitle": "Congelados en la Pista de Baile",
+    "transformedIdeaDescription": "Programa el juego clásico de las fiestas. La música suena para bailar, pero cuando apagues el interruptor, ¡la música debe cortar al instante! Usa el tambor para anunciar al ganador de la ronda.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('DancePop') ELSE Audio.stop(); ON Drum_Tap THEN Audio.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo",
+    "originalIdeaDescription": "El audio cuenta una historia. El interruptor pausa la narración para permitir que el usuario inserte efectos de sonido con la batería antes de continuar.",
+    "transformedIdeaTitle": "Cuentacuentos Mágico",
+    "transformedIdeaDescription": "Da vida a un cuento de hadas. Escucha la narración y, cuando el interruptor pare la voz, usa los tambores para imitar los pasos del gigante o el galope de los caballos antes de seguir.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Story'); IF Switch OFF THEN Audio.pause(); ON Drum_Tap THEN Drum.play('Horse_Gallop')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Código Morse",
+    "originalIdeaDescription": "El audio reproduce un tono continuo de fondo. El interruptor corta el tono. La batería se usa para practicar los puntos y rayas auditivos.",
+    "transformedIdeaTitle": "Operador de Telégrafo Secreto",
+    "transformedIdeaDescription": "Envía mensajes secretos a los aliados. El interruptor activa la línea de transmisión (sonido de estática) y debes usar la batería para golpear el código Morse: un golpe corto para punto, largo para raya.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('Static'); ON Drum_Press THEN Drum.play('Beep_Short'); ON Drum_Hold THEN Drum.play('Beep_Long')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cambiador de Género Musical",
+    "originalIdeaDescription": "El interruptor alterna entre una pista de Jazz y una de Rock. El usuario debe adaptar su ritmo de batería al estilo que suena.",
+    "transformedIdeaTitle": "Batalla de Bandas: Rock vs Jazz",
+    "transformedIdeaDescription": "¡El público es muy exigente! Si el interruptor está arriba, toca suave para acompañar el Jazz. Si baja, ¡golpea fuerte para el Rock and Roll! El audio cambiará instantáneamente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('JazzLoop') AND Drum.setSensitivity(High) ELSE Audio.play('RockLoop') AND Drum.setSensitivity(Low)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tráfico",
+    "originalIdeaDescription": "Audio reproduce ruido de ciudad. El interruptor cambia el semáforo (imaginario). La batería funciona como el claxon de los coches.",
+    "transformedIdeaTitle": "Control de Tráfico en Hora Punta",
+    "transformedIdeaDescription": "Dirige el tráfico en una ciudad ruidosa. Activa el interruptor para detener el tráfico (sonido de frenazos) y usa la batería para tocar la bocina a los conductores impacientes.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('CityAmbience'); IF Switch Changed THEN Audio.play('Brakes'); ON Drum_Tap THEN Audio.play('CarHorn')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Máquina de Ritmos Lo-Fi",
+    "originalIdeaDescription": "El interruptor activa un filtro de sonido 'viejo' en el audio. La batería agrega un beat suave y relajante.",
+    "transformedIdeaTitle": "Estudio de Grabación Retro",
+    "transformedIdeaDescription": "Crea música relajante para estudiar. Usa el interruptor para añadir un efecto de 'vinilo viejo' a la melodía y toca un ritmo suave con la batería para completar la canción.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch ON THEN Audio.applyEffect('VinylCrackles'); ON Drum_Tap THEN Drum.play('LoFi_Kick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Concurso de Preguntas",
+    "originalIdeaDescription": "El audio hace una pregunta. El interruptor inicia el tiempo de respuesta (música de tensión). La batería sirve como pulsador para responder.",
+    "transformedIdeaTitle": "El Gran Quiz de Conocimiento",
+    "transformedIdeaDescription": "Organiza un concurso de TV. El interruptor inicia la música de 'tiempo agotándose'. El primer jugador en golpear la batería detiene la música y gana el turno para responder.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('CountdownMusic'); ON Drum_Tap THEN Audio.pause() AND Audio.play('Buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Exploración Submarina",
+    "originalIdeaDescription": "Audio de fondo marino. Interruptor enciende el 'motor' (sonido grave). Batería emite sonido de sonar (ping).",
+    "transformedIdeaTitle": "Capitán de Submarino",
+    "transformedIdeaDescription": "Navega las profundidades del océano. Enciende los motores con el interruptor para escuchar el zumbido de las hélices y usa la batería para enviar pings de sonar y detectar obstáculos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch ON THEN Audio.loop('EngineHum'); ON Drum_Tap THEN Drum.play('SonarPing')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor Cardíaco de Hospital",
+    "originalIdeaDescription": "El audio hace un beep constante. El interruptor silencia la alarma. La batería permite simular el latido manual.",
+    "transformedIdeaTitle": "Doctor en la Sala de Urgencias",
+    "transformedIdeaDescription": "El paciente necesita ayuda. El monitor está sonando (audio). Usa el interruptor para estabilizarlo y toca la batería rítmicamente para realizar RCP y mantener el corazón latiendo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('MonitorAlarm'); IF Switch ON THEN Audio.stop(); ON Drum_Tap THEN Drum.play('Heartbeat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Despegue Espacial",
+    "originalIdeaDescription": "Interruptor inicia cuenta regresiva de audio. Al llegar a cero, la batería activa el sonido de los propulsores.",
+    "transformedIdeaTitle": "Misión Apolo: Despegue Lunar",
+    "transformedIdeaDescription": "Prepara el cohete. Acciona el interruptor para iniciar la cuenta atrás de la torre de control: '3, 2, 1...'. ¡Justo al final, golpea la batería con fuerza para encender los motores principales!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('Countdown'); WAIT(3s); ON Drum_Tap THEN Audio.play('RocketRoar')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Baterista Automático vs Manual",
+    "originalIdeaDescription": "El interruptor activa un loop de batería automático (Audio). Si se apaga, el usuario debe tocar la batería manualmente para mantener el ritmo.",
+    "transformedIdeaTitle": "El Reto del Baterista Biónico",
+    "transformedIdeaDescription": "Compite contra la máquina. Cuando el interruptor está encendido, el robot toca la batería perfectamente. Cuando lo apagas, ¡tienes que seguir tocando tú exactamente al mismo ritmo sin perder el compás!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('DrumLoop') ELSE Audio.stop(); ON Drum_Tap THEN Drum.play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Diseñador de Paisajes Sonoros",
+    "originalIdeaDescription": "El interruptor cambia entre día (pájaros) y noche (grillos). La batería agrega sonidos de pasos sobre hojas o agua.",
+    "transformedIdeaTitle": "Explorador del Bosque Encantado",
+    "transformedIdeaDescription": "Crea el ambiente para una película. Usa el interruptor para transicionar del día a la noche en el bosque. Usa los tambores para simular los pasos de un aventurero caminando sobre hojas secas.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch ON THEN Audio.loop('DayAmbience') ELSE Audio.loop('NightAmbience'); ON Drum_Tap THEN Drum.play('LeavesCrunch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "El audio hace un zumbido de fondo. El interruptor cambia a modo 'Verdad' o 'Mentira'. La batería dispara el veredicto sonoro.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus sospechosos. Mantén el ambiente tenso con el audio. Si crees que mienten, cambia el interruptor y golpea el tambor para que suene una alarma de '¡MENTIRA!'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('TensionDrone'); IF Switch ON THEN Drum_Sound = 'Ping' ELSE Drum_Sound = 'Buzz'; ON Drum_Tap THEN Audio.play(Drum_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Boxeo",
+    "originalIdeaDescription": "El audio da instrucciones ('golpe', 'gancho'). El interruptor inicia la ronda. La batería registra los golpes.",
+    "transformedIdeaTitle": "Campeonato de Boxeo Robótico",
+    "transformedIdeaDescription": "Sube al ring. El interruptor suena la campana de inicio. Escucha al entrenador (audio) gritar instrucciones y golpea la batería (el saco de boxeo) cada vez que escuches una orden.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch ON THEN Audio.play('BellStart') AND Audio.playRandom('PunchCommand'); ON Drum_Tap THEN Drum.play('ImpactSound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Rota",
+    "originalIdeaDescription": "El audio reproduce una nana. El interruptor hace que la música falle (pitch bajo). La batería la 'arregla' con un golpe.",
+    "transformedIdeaTitle": "El Reparador de Juguetes Antiguos",
+    "transformedIdeaDescription": "Esta caja de música es muy vieja. Cuando activas el interruptor, la música empieza a sonar lenta y distorsionada. ¡Dale un golpecito técnico a la batería para que vuelva a sonar bien!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Lullaby'); IF Switch ON THEN Audio.setPitch(Low); ON Drum_Tap THEN Audio.setPitch(Normal)"
+  }
+]

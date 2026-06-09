@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad para Cajones Privados",
+    "originalIdeaDescription": "Un sistema de seguridad diseñado para proteger objetos personales dentro de un cajón. El sensor de luz detecta cuando el cajón se abre (cambio de oscuridad a luz), activando una sirena a través del reproductor de audio. El botón táctil sirve como un mecanismo oculto para desactivar o reiniciar la alarma una vez que el propietario ha verificado el contenido.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu botín de los ladrones! Construye una trampa para tu cofre del tesoro. Cuando un ladrón abra el cofre y entre la luz, sonará una alarma muy fuerte. Solo tú, el capitán, sabes dónde está el botón secreto para apagar la alarma y acceder a tus monedas de oro sin hacer ruido.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 THEN Audio.play('Siren'); IF TouchButton.isPressed() THEN Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Despertador Inteligente Solar",
+    "originalIdeaDescription": "Un dispositivo que monitorea la luz ambiental para detectar el amanecer. Cuando la intensidad de la luz supera un umbral específico, el reproductor de audio comienza a reproducir música suave para despertar al usuario. El botón táctil funciona como una función de 'snooze' o apagado para detener la música.",
+    "transformedIdeaTitle": "Despertador del Gallo Madrugador",
+    "transformedIdeaDescription": "Crea un gallo robótico que cante cuando salga el sol. Programarás el sistema para que detecte cuando entra luz por la ventana. En ese momento, sonará un canto de gallo o tu canción favorita. Usa el botón táctil para decirle al gallo que te deje dormir 5 minutos más.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 80 THEN Audio.play('Rooster'); IF TouchButton.isPressed() THEN Audio.pause(300)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Audio Theremin Óptico",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la intensidad de la luz controla el volumen o el tono del audio que se reproduce. Al mover la mano sobre el sensor y crear sombras, el sonido cambia dinámicamente. El botón táctil se utiliza para cambiar entre diferentes pistas de audio o instrumentos base.",
+    "transformedIdeaTitle": "El DJ de las Sombras Mágicas",
+    "transformedIdeaDescription": "Conviértete en un DJ que controla la música sin tocar nada. Mueve tu mano sobre el sensor para hacer sombras; cuanta más sombra haya, más bajo sonará la música, y si hay mucha luz, ¡sonará a todo volumen! Usa el botón mágico para cambiar el estilo de música instantáneamente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP: Audio.setVolume(LightIntensity); IF TouchButton.isPressed() THEN Audio.nextTrack()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Luz y Sonido",
+    "originalIdeaDescription": "Un juego competitivo donde el sistema reproduce un sonido de '¡Ya!' aleatoriamente. El jugador debe cubrir el sensor de luz (simulando apagar una luz) lo más rápido posible. El botón táctil se usa para iniciar una nueva ronda y registrar la puntuación o el tiempo de reacción.",
+    "transformedIdeaTitle": "Ninja de la Oscuridad",
+    "transformedIdeaDescription": "Entrena tus reflejos ninja. Espera a que el Sensei (el audio) grite '¡ATAQUE!'. En ese instante, debes cubrir el sensor con tu mano para esconderte en las sombras lo más rápido posible. Pulsa el botón para iniciar el siguiente desafío de entrenamiento.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Go'); WAIT UNTIL LightIntensity < 20; Audio.play('Success'); IF TouchButton.isPressed() THEN Restart()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Bienestar para Plantas",
+    "originalIdeaDescription": "Un dispositivo para el cuidado de plantas que verifica si están recibiendo suficiente luz. Si la luz es demasiado baja durante el día, el audio reproduce un mensaje de advertencia. El botón táctil permite al usuario realizar una comprobación manual del estado actual de la luz.",
+    "transformedIdeaTitle": "La Planta Parlanchina",
+    "transformedIdeaDescription": "Dale voz a tu planta favorita. Si la planta siente que está en un lugar muy oscuro y triste, te hablará pidiendo sol. Si presionas su botón (una hoja táctil), te dirá si está feliz con la luz que recibe o si necesita mudarse a la ventana.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF LightIntensity < 40 THEN Audio.play('NeedSun') ELSE Audio.play('Happy') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Monstruos Bajo la Cama",
+    "originalIdeaDescription": "Una herramienta lúdica que utiliza el sensor de luz para explorar áreas oscuras. Cuando el sensor detecta oscuridad total, reproduce sonidos de suspenso. El botón táctil enciende una 'linterna sónica' que cambia el audio a un sonido heroico para ahuyentar el miedo.",
+    "transformedIdeaTitle": "El Cazador de Miedos",
+    "transformedIdeaDescription": "Explora los rincones oscuros de tu habitación. Cuando el sensor detecte oscuridad (debajo de la cama), sonará una música de misterio. ¡Pero no temas! Si aprietas el botón de valientes, sonará una música de superhéroe que espantará a cualquier monstruo imaginario.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 10 THEN Audio.play('Mystery'); IF TouchButton.isPressed() THEN Audio.play('HeroTheme')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Sorpresa",
+    "originalIdeaDescription": "Una caja que solo reproduce música cuando está cerrada (oscuridad) y se detiene cuando se abre (luz), invirtiendo la lógica habitual. El botón táctil permite cambiar la melodía que se reproduce en el interior, creando una experiencia de 'radio secreta'.",
+    "transformedIdeaTitle": "La Fiesta Secreta de los Juguetes",
+    "transformedIdeaDescription": "Tus juguetes hacen una fiesta cuando no los miras. Programa el sistema para que la música suene solo cuando la caja de juguetes esté cerrada y oscura. Si la abres (entra luz), la música se para y fingen ser muñecos normales. Usa el botón para elegir qué canción bailan.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 15 THEN Audio.play('DanceMusic') ELSE Audio.stop(); IF TouchButton.isPressed() THEN Audio.nextSong()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Auditivo para Invidentes",
+    "originalIdeaDescription": "Un prototipo de asistencia que detecta el nivel de luz ambiental (ej. faros de coches o luz de día). El sistema informa mediante audio si es seguro cruzar o si hay cambios bruscos de luz. El botón táctil es utilizado por el usuario para solicitar el estado actual o pedir paso.",
+    "transformedIdeaTitle": "El Cruce Seguro del Futuro",
+    "transformedIdeaDescription": "Diseña un semáforo inteligente para ayudar a personas que no pueden ver. El sensor detecta si es de día o de noche. Cuando la persona toca el botón para cruzar, el sistema analiza la luz y emite un sonido: un pitido rápido para 'Esperar' y un sonido agradable para 'Avanzar'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { Audio.play('Checking'); WAIT(2); IF LightIntensity > 50 THEN Audio.play('Walk') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Entrenamiento de Espionaje",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el sensor de luz cubierto mientras realiza otras tareas. Si se detecta luz (el usuario levanta el dedo), suena una alarma de fallo. El botón táctil debe ser presionado periódicamente para 'hackear' el sistema y ganar puntos.",
+    "transformedIdeaTitle": "Misión Imposible: El Dedo de Acero",
+    "transformedIdeaDescription": "Eres un espía desactivando un láser. Debes mantener tu dedo sobre el sensor de luz para taparlo completamente. Mientras lo haces, debes presionar el botón táctil 10 veces para desactivar la seguridad. Si mueves el dedo y entra luz... ¡la alarma sonará y perderás la misión!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 20 THEN Audio.play('Alarm'); IF TouchButton.isPressed() AND LightIntensity < 20 THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Atmosférico",
+    "originalIdeaDescription": "Un dispositivo interactivo para contar historias. Dependiendo de la intensidad de la luz en la habitación (luz tenue vs. luz brillante), el dispositivo reproduce diferentes efectos de sonido de fondo (grillos vs. pájaros). El botón táctil avanza la narración al siguiente capítulo.",
+    "transformedIdeaTitle": "El Libro Mágico de Sonidos",
+    "transformedIdeaDescription": "Crea una banda sonora para tus cuentos. Si apagas la luz de la habitación, el sistema reproducirá sonidos de bosque nocturno y búhos. Si enciendes la luz, sonarán pájaros y ríos. Presiona el botón cada vez que pases de página en tu libro para cambiar la escena.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 30 THEN Audio.play('NightSounds') ELSE Audio.play('DaySounds'); IF TouchButton.isPressed() THEN Audio.play('PageTurn')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Lumínico",
+    "originalIdeaDescription": "El sensor de luz capta parpadeos de una linterna y los traduce en señales auditivas (beeps cortos y largos). El botón táctil se utiliza para borrar el mensaje actual o reproducir la secuencia completa capturada.",
+    "transformedIdeaTitle": "Telégrafo de Linterna Secreto",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando una linterna. Apunta la luz al sensor: cada vez que la luz golpea el sensor, el sistema hará un 'BEEP'. Usa pulsos cortos y largos para crear tu propio código. Presiona el botón para borrar el mensaje y empezar uno nuevo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensityDiff > Threshold THEN Audio.play('Beep'); IF TouchButton.isPressed() THEN ClearMemory()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Fotosensible",
+    "originalIdeaDescription": "Una mascota digital que reacciona al entorno. Necesita ciclos de luz y oscuridad para 'dormir' y 'comer'. Si hay demasiada luz constante, se queja mediante audio. El botón táctil se usa para interactuar, acariciar o alimentar a la mascota, calmándola.",
+    "transformedIdeaTitle": "El Vampiro Tamagotchi",
+    "transformedIdeaDescription": "Adopta a un pequeño vampiro digital. Odia la luz del sol, así que si el sensor detecta mucha luz, empezará a quejarse y llorar. Tienes que tapar el sensor para que esté en la oscuridad. Presiona el botón para darle su 'jugo de tomate' y que esté feliz.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 70 THEN Audio.play('Crying'); IF TouchButton.isPressed() THEN Audio.play('Eating')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión por Sombras",
+    "originalIdeaDescription": "Un sistema donde pasar la mano rápidamente sobre el sensor (cambio brusco de luz) activa un sonido de tambor. El botón táctil cambia el tipo de kit de batería (rock, jazz, electrónico), permitiendo crear ritmos complejos sin tocar ninguna superficie.",
+    "transformedIdeaTitle": "Batería de Aire Invisible",
+    "transformedIdeaDescription": "¡Toca la batería sin baquetas! Mueve tu mano rápidamente sobre el sensor como si golpearas un tambor invisible. El sensor detectará tu sombra y hará sonar el bombo o la caja. Usa el botón para cambiar entre batería de rock, electrónica o sonidos graciosos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightChange > FastThreshold THEN Audio.play('DrumHit'); IF TouchButton.isPressed() THEN ChangeDrumKit()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Interactivo",
+    "originalIdeaDescription": "Crea un ambiente sonoro de clima. El sensor de luz controla la intensidad de la lluvia (menos luz = lluvia más fuerte/nubes oscuras). El botón táctil dispara un efecto de sonido de trueno estruendoso sobre la capa de lluvia.",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Controla el clima de tu habitación. Si tapas el sensor con tus manos (haciendo nubes oscuras), el sonido de la lluvia se hará más fuerte. ¡Cuando quieras asustar a alguien, presiona el botón para lanzar un trueno enorme!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.setVolume('Rain', 100 - LightIntensity); IF TouchButton.isPressed() THEN Audio.play('Thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Escondite de Objetos",
+    "originalIdeaDescription": "Un dispositivo pequeño que se esconde. Mientras detecta luz, permanece en silencio. Cuando se coloca en un lugar oscuro (escondido), comienza a emitir pistas de audio intermitentes para ser encontrado. El botón táctil se usa para confirmar que ha sido encontrado y ganar.",
+    "transformedIdeaTitle": "La Luciérnaga Tímida",
+    "transformedIdeaDescription": "Esconde este dispositivo en un lugar oscuro (un cajón, bajo un cojín). Cuando está a oscuras, empezará a susurrar 'estoy aquí...' cada pocos segundos. Tu amigo debe encontrarlo siguiendo el sonido. Al encontrarlo y sacarlo a la luz, debe pulsar el botón para ganar.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 10 THEN { WAIT(3); Audio.play('Whisper') }; IF TouchButton.isPressed() THEN Audio.play('WinFanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Analizador de Contaminación Lumínica",
+    "originalIdeaDescription": "Una herramienta científica para estudiantes. Mide la intensidad de la luz en diferentes habitaciones. Si la luz es adecuada para leer, reproduce un sonido de aprobación. Si es demasiado tenue o brillante, da un aviso. El botón guarda la lectura en un registro de audio.",
+    "transformedIdeaTitle": "Inspector de Luces de Lectura",
+    "transformedIdeaDescription": "Protege tu vista asegurándote de tener buena luz para leer. Lleva el sensor por la casa. Si la luz es perfecta, sonará un 'Ding' agradable. Si está muy oscuro, dirá '¡Más luz!'. Presiona el botón para guardar los lugares seguros en tu mapa de lectura.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 40 AND LightIntensity < 80 THEN Audio.play('Good') ELSE Audio.play('Bad'); IF TouchButton.isPressed() THEN SaveLog()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Flash",
+    "originalIdeaDescription": "Un secuenciador musical básico. El usuario utiliza una linterna para activar 'pasos' en una secuencia. Cada vez que la luz golpea el sensor, se añade un sonido al bucle. El botón táctil borra el bucle para empezar de nuevo.",
+    "transformedIdeaTitle": "Compositor de Linterna",
+    "transformedIdeaDescription": "Crea música con luz. Tienes una base rítmica sonando. Cada vez que apuntas tu linterna al sensor, añades un nuevo sonido a la canción en ese momento exacto. ¡Crea ritmos complejos encendiendo y apagando tu linterna! Usa el botón para borrar y empezar otra canción.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN AddSoundToLoop(); IF TouchButton.isPressed() THEN ClearLoop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de Lavado de Dientes",
+    "originalIdeaDescription": "Dispositivo para el baño. Al encender la luz del baño (detectado por sensor), saluda. Al presionar el botón, inicia una canción de 2 minutos. Al terminar la canción, avisa que el cepillado ha terminado y espera a que se apague la luz para 'dormir'.",
+    "transformedIdeaTitle": "El Entrenador de Dientes Brillantes",
+    "transformedIdeaDescription": "Hacer que cepillarse los dientes sea divertido. Cuando entras al baño y enciendes la luz, el sistema te saluda. Presiona el botón para iniciar la música de cepillado. ¡No pares hasta que la música termine! El sistema te dará una puntuación final.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 50 AND TouchButton.isPressed() THEN { Audio.play('Song_2min'); WAIT(120); Audio.play('Done') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Falsificación de Monedas",
+    "originalIdeaDescription": "Simula un escáner. Se coloca un objeto sobre el sensor (bloqueando luz). Dependiendo de cuánta luz pase (translucidez), el audio determina si es 'falso' o 'verdadero'. El botón táctil calibra el sensor antes de la prueba.",
+    "transformedIdeaTitle": "Escáner de Piedras Preciosas",
+    "transformedIdeaDescription": "Eres un joyero experto. Coloca diferentes piedras o papeles sobre el sensor. Si la luz logra pasar a través del objeto (es traslúcido), el sistema dirá '¡Es un diamante real!'. Si bloquea toda la luz, dirá '¡Es solo una roca!'. Usa el botón para preparar el escáner.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Calibrate(); IF LightIntensity > 5 THEN Audio.play('RealGem') ELSE Audio.play('FakeRock')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación",
+    "originalIdeaDescription": "Ayuda a la relajación. Si la habitación está oscura, reproduce sonidos de olas y viento. Si se detecta luz brillante, sugiere apagarla. El botón táctil se usa para cambiar entre diferentes paisajes sonoros de meditación.",
+    "transformedIdeaTitle": "El Rincón de la Calma",
+    "transformedIdeaDescription": "Crea tu propio spa relajante. El sistema detecta si has preparado el ambiente apagando las luces. Si está oscuro, te premiará con sonidos relajantes del mar. Si enciendes la luz, el mar se detiene. Usa el botón para viajar del mar a la montaña.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 20 THEN Audio.play('RelaxingWaves'); IF TouchButton.isPressed() THEN ChangeSoundscape()"
+  }
+]

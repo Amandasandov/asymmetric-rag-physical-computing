@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería de Puntos Cardinales",
+    "originalIdeaDescription": "Un sistema que asigna un sonido de percusión diferente a cada uno de los cuatro puntos cardinales principales (Norte, Sur, Este, Oeste), permitiendo al usuario tocar ritmos girando su cuerpo.",
+    "transformedIdeaTitle": "El Baterista Cardinal",
+    "transformedIdeaDescription": "Crea una brújula musical donde el Norte suena como un bombo, el Sur como una caja, el Este como un platillo y el Oeste como un tom. Los estudiantes deben girar físicamente para componer una secuencia rítmica básica, aprendiendo sobre rangos angulares y condicionales.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 315 OR heading < 45 THEN Drum.play('Kick'); ELSE IF heading > 45 AND heading < 135 THEN Drum.play('Cymbal')..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Radar de Sonido para el Norte",
+    "originalIdeaDescription": "Una herramienta de navegación auditiva que incrementa la frecuencia o el tempo de un tambor a medida que el usuario se alinea más perfectamente con el Norte magnético.",
+    "transformedIdeaTitle": "Buscadores del Tesoro Magnético",
+    "transformedIdeaDescription": "Los estudiantes programan un dispositivo que actúa como un detector de metales. El 'tesoro' está siempre al Norte. Deben hacer que el tambor toque más rápido cuanto más cerca esté el ángulo de 0 grados, guiando a un compañero con los ojos vendados hacia la dirección correcta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "error = ABS(heading - 0); delay = error * 5; LOOP { Drum.play('Snare'); WAIT(delay); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Secuenciador de Ritmos por Giro",
+    "originalIdeaDescription": "Un dispositivo que permite grabar una secuencia de golpes de batería basada en los movimientos rotatorios del usuario, creando patrones complejos al dar vueltas.",
+    "transformedIdeaTitle": "DJ Tornado",
+    "transformedIdeaDescription": "Conviértete en un DJ que controla la música girando. Si giras a la derecha (aumenta grados), se añade un ritmo base; si giras a la izquierda, se añade un redoble. El desafío es mantener un ritmo constante controlando la velocidad de rotación corporal.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF delta_heading > 0 THEN Drum.play('Base_Beat') ELSE Drum.play('Fill_In')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Desviación de Rumbo",
+    "originalIdeaDescription": "Un sistema de seguridad para caminatas que hace sonar un tambor de alerta fuerte si el usuario se desvía más de 10 grados de una dirección objetivo preestablecida.",
+    "transformedIdeaTitle": "El Guardián del Sendero",
+    "transformedIdeaDescription": "Simula una misión de exploración en la selva. Los estudiantes deben programar una alarma que se active (sonido de platillo fuerte) solo si el explorador deja de mirar al Este. Esto enseña lógica de comparación y márgenes de error.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "target = 90; IF ABS(heading - target) > 10 THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Un juego donde el usuario debe encontrar una dirección secreta específica girando el dispositivo hasta escuchar un sonido de 'clic' o tambor específico que indica que la caja fuerte está abierta.",
+    "transformedIdeaTitle": "Descifrando el Código Secreto",
+    "transformedIdeaDescription": "El 'candado' invisible se abre solo en un grado específico (ej. 270º). Los estudiantes deben programar pistas: tambores graves si están lejos y agudos si están cerca, hasta que el usuario encuentre el ángulo exacto para 'abrir' la puerta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == secret_angle THEN Drum.play('Open_Sound') ELSE Drum.play('Hint_Sound')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de Audio Espacial",
+    "originalIdeaDescription": "Divide el espacio de 360 grados en 8 secciones, asignando un instrumento de percusión distinto a cada 'rebanada' del pastel para crear una orquesta envolvente.",
+    "transformedIdeaTitle": "La Pizza Musical",
+    "transformedIdeaDescription": "Divide la habitación en 8 porciones de pizza imaginarias. Los estudiantes deben calcular los rangos de grados (0-45, 46-90, etc.) y asignar un sonido de percusión diferente a cada uno. Luego, deben 'recorrer' la pizza para tocar una canción completa.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "slice = FLOOR(heading / 45); SWITCH(slice) { CASE 0: Drum.play('Kick'); CASE 1: Drum.play('Snare'); ... }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simón Dice con Orientación",
+    "originalIdeaDescription": "Un juego interactivo que da instrucciones de dirección y valida si el usuario gira hacia el punto cardinal correcto usando sonidos de aprobación o error.",
+    "transformedIdeaTitle": "El Capitán Percusión Manda",
+    "transformedIdeaDescription": "La aplicación muestra una dirección (ej. '¡Oeste!'). El estudiante tiene 3 segundos para girar el dispositivo hacia el Oeste. Si lo logra, suena un redoble triunfal; si falla, suena un bombo triste. Fomenta el aprendizaje de la orientación espacial rápida.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = RANDOM(0, 90, 180, 270); WAIT(3s); IF ABS(heading - target) < 15 THEN Drum.play('Win') ELSE Drum.play('Lose')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo de Ritmo Variable",
+    "originalIdeaDescription": "Un metrónomo inteligente donde la velocidad de los golpes (BPM) se controla girando el dispositivo en el sentido de las agujas del reloj o al contrario.",
+    "transformedIdeaTitle": "Controlador de Velocidad Sónico",
+    "transformedIdeaDescription": "Los estudiantes crean una herramienta para músicos donde mirar al Norte es un ritmo lento (60 BPM) y girar hacia el Sur acelera el ritmo hasta 180 BPM. Deben mapear la variable de entrada (grados 0-180) a la variable de salida (tiempo de espera entre golpes).",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "bpm = MAP(heading, 0, 180, 60, 180); interval = 60000 / bpm; LOOP { Drum.play('HiHat'); WAIT(interval); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio Auditivo",
+    "originalIdeaDescription": "Un dispositivo de ayuda para el equilibrio que reproduce un ritmo constante cuando el usuario mira al frente y se distorsiona o cambia de instrumento si gira la cabeza.",
+    "transformedIdeaTitle": "Estatua Musical",
+    "transformedIdeaDescription": "El objetivo es quedarse completamente quieto mirando a un punto fijo. Si el compás detecta un cambio en la dirección mayor a 5 grados, la batería empieza a sonar caóticamente. Los estudiantes programan la sensibilidad y la respuesta al movimiento.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ABS(heading - fixed_heading) > 5 THEN Drum.play('Chaos') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efecto Doppler Simulado",
+    "originalIdeaDescription": "Simulación acústica donde el volumen y el tipo de percusión cambian para imitar un objeto que pasa cerca basado en la orientación del usuario respecto a un punto virtual.",
+    "transformedIdeaTitle": "El Tren Fantasma",
+    "transformedIdeaDescription": "Imagina un tren invisible que pasa de Este a Oeste. Los estudiantes deben programar el tambor para que suene suave cuando miran al Norte o Sur, y muy fuerte y rápido cuando miran al Este u Oeste, simulando que el tren les pasa por encima.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "intensity = 100 - ABS(heading - 90); Drum.setVolume(intensity); Drum.play('Train_Beat')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Brújula de Zonas de Peligro",
+    "originalIdeaDescription": "Un sistema de juego donde ciertas direcciones son 'seguras' (silencio) y otras son 'peligrosas' (sonidos de explosión o tambores graves), obligando al usuario a navegar con cuidado.",
+    "transformedIdeaTitle": "Campo Minado Invisible",
+    "transformedIdeaDescription": "El suelo es lava, pero solo en ciertas direcciones. Los estudiantes definen 'zonas prohibidas' (ej. entre 100º y 200º). El usuario debe girar 360 grados y mapear mentalmente dónde están las minas basándose en cuándo suena el tambor de alerta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading > 100 AND heading < 200 THEN Drum.play('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento Virtual",
+    "originalIdeaDescription": "Usar la brújula para seleccionar la 'nota' o el 'tambor' y un soplido (simulado o por botón externo) para tocarlo, pero aquí simplificado a que la dirección selecciona el tono del tambor.",
+    "transformedIdeaTitle": "La Flauta de Tambores",
+    "transformedIdeaDescription": "Construye un instrumento extraño donde, en lugar de dedos, usas tu cuerpo. Mirar a diferentes ángulos selecciona diferentes tambores (bongo, conga, timbal). El reto es tocar una canción simple memorizando qué dirección corresponde a qué sonido.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading < 90 THEN instrument = 'Bongo' ELSE IF heading < 180 THEN instrument = 'Conga'..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Contador de Vueltas Musical",
+    "originalIdeaDescription": "Un dispositivo para deportistas o juegos que cuenta cuántas rotaciones completas ha hecho el usuario, marcando cada vuelta completa con un sonido de platillo distintivo.",
+    "transformedIdeaTitle": "El Torbellino Rítmico",
+    "transformedIdeaDescription": "¡A girar! Los estudiantes deben programar una lógica que detecte cuándo se cruza el Norte (pasa de 359 a 0 grados) para contar una vuelta y tocar un platillo ('Crash'). Deben diferenciar entre girar un poco y dar una vuelta completa.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF previous_heading > 350 AND current_heading < 10 THEN Drum.play('Crash'); laps = laps + 1"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Guía para Invidentes con Ritmo",
+    "originalIdeaDescription": "Sistema de asistencia que utiliza patrones de batería (ej. dos golpes rápidos para izquierda, uno para derecha) para guiar a una persona hacia un destino predefinido.",
+    "transformedIdeaTitle": "El Lazarillo Sonoro",
+    "transformedIdeaDescription": "Diseña un lenguaje de tambores para guiar a un compañero. Si debe ir a la izquierda, el código debe hacer sonar el 'Hi-Hat' repetidamente. Si debe ir a la derecha, el 'Tom'. Si va recto (Norte), silencio. Fomenta la empatía y el diseño de interfaces accesibles.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading < target_heading THEN Drum.play('HiHat') ELSE IF heading > target_heading THEN Drum.play('Tom')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Roles: El Vigía del Barco",
+    "originalIdeaDescription": "Un juego narrativo donde el usuario es un vigía en un barco y debe tocar diferentes alarmas de tambor dependiendo de por dónde se acerquen los 'piratas' (direcciones aleatorias generadas por el sistema).",
+    "transformedIdeaTitle": "¡Piratas a la Vista!",
+    "transformedIdeaDescription": "El sistema grita '¡Barco por el Sur!'. El estudiante debe girar rápidamente al Sur y tocar el tambor para 'disparar' los cañones. Es un juego de reacción que combina coordenadas geográficas con acción rápida.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "enemy_pos = 'Sur'; IF heading is near 180 THEN Drum.play('Cannon_Fire')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Reloj de Sol Auditivo",
+    "originalIdeaDescription": "Una instalación artística que reproduce sonidos ambientales o de percusión suave que varían según la posición simulada del sol (Este al amanecer, Oeste al atardecer).",
+    "transformedIdeaTitle": "El Reloj del Tiempo",
+    "transformedIdeaDescription": "Simula el paso del día. Al mirar al Este (amanecer), suenan tambores suaves y rápidos (despertar). Al mirar al Oeste (atardecer), suenan tambores lentos y profundos. Al mirar al Norte (noche), silencio. Los estudiantes crean una atmósfera sonora basada en la orientación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is East THEN Drum.play('Light_Beat') ELSE IF heading is West THEN Drum.play('Heavy_Beat')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Danza de la Lluvia Direccional",
+    "originalIdeaDescription": "Un juguete interactivo que requiere que el usuario realice una secuencia específica de giros (Norte, luego Oeste, luego Sur) para 'invocar' un sonido de lluvia o tormenta de tambores.",
+    "transformedIdeaTitle": "El Ritual de la Lluvia",
+    "transformedIdeaDescription": "Para hacer que 'llueva' (redoble continuo de tambores), el estudiante debe desbloquear el código secreto: mirar al Norte, esperar 1 segundo, mirar al Oeste. Esto enseña secuenciación lógica y estados en la programación.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "state = 0; IF heading==0 THEN state=1; IF state==1 AND heading==270 THEN Drum.play('Rain')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Estabilidad de Rumbo",
+    "originalIdeaDescription": "Herramienta para practicar la marcha en línea recta. Si el usuario mantiene el rumbo, suena un ritmo agradable; si oscila, el ritmo se rompe o suena desafinado.",
+    "transformedIdeaTitle": "El Caminante de la Cuerda Floja",
+    "transformedIdeaDescription": "Imagina que caminas por una cuerda floja hacia el Norte. Si te desvías un poco a la izquierda o derecha, el tambor empieza a sonar erráticamente para advertirte que te vas a caer. El objetivo es mantener el silencio (equilibrio) mientras caminas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading > 5 AND heading < 355 THEN Drum.play('Wobble_Sound') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aleatoria por Cuadrantes",
+    "originalIdeaDescription": "Dividir el espacio en 4 cuadrantes. Cada vez que se entra en un nuevo cuadrante, se dispara un sonido aleatorio de una lista predefinida para ese cuadrante.",
+    "transformedIdeaTitle": "Explorador de la Jungla Ruidosa",
+    "transformedIdeaDescription": "Cada esquina de la habitación (NE, SE, SO, NO) es un hábitat diferente. Los estudiantes programan listas de sonidos (ej. percusión tipo pájaro, tipo paso de elefante) y usan la función 'Random' para que cada vez que miren a esa esquina suene algo nuevo pero temático.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "quadrant = GET_QUADRANT(heading); sound = RANDOM_FROM_LIST(quadrant); Drum.play(sound)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Eco Direccional",
+    "originalIdeaDescription": "Un efecto de audio donde el retraso (eco) de un golpe de tambor aumenta o disminuye según hacia dónde apunte el dispositivo, simulando el rebote del sonido en paredes virtuales.",
+    "transformedIdeaTitle": "Eco en la Caverna",
+    "transformedIdeaDescription": "Simula estar en una cueva. Si miras al Norte (la salida), el sonido es seco (sin eco). Si miras al Sur (fondo de la cueva), el tambor se repite muchas veces. Los estudiantes aprenden a usar variables para controlar la repetición de un bucle.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "repeats = MAP(heading, 0, 180, 0, 5); FOR i=0 TO repeats { Drum.play('Tap'); WAIT(200); }"
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Controlado por Inclinación",
+    "originalIdeaDescription": "Un dispositivo que funciona como un instrumento musical digital donde la inclinación del eje X selecciona la nota musical y la inclinación del eje Y cambia el patrón visual en la matriz LED, creando una experiencia audiovisual sincronizada.",
+    "transformedIdeaTitle": "El Theremin Espacial",
+    "transformedIdeaDescription": "¡Conviértete en un músico alienígena! Mueve tu dispositivo en el aire para tocar música sin tocar teclas. Al inclinar hacia los lados cambiarás el tono de la melodía cósmica, mientras la pantalla muestra ondas de sonido que reaccionan a tus movimientos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.X > 10 THEN Keyboard.play(C) AND Matrix.show('HighBar'); ELSE IF inclination.X < -10 THEN Keyboard.play(A) AND Matrix.show('LowBar')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto con Sonido",
+    "originalIdeaDescription": "Utiliza la inclinación para mover un punto iluminado (jugador) a través de la matriz LED de 7x7. Si el jugador golpea una 'pared' invisible o el borde de la matriz, el teclado musical emite un sonido de error o rebote.",
+    "transformedIdeaTitle": "El Ratón Escurridizo",
+    "transformedIdeaDescription": "Ayuda al ratón (un punto de luz) a escapar de la caja inclinando tu tableta. Debes tener cuidado de no chocar contra las paredes eléctricas invisibles; si lo haces, ¡el ratón chillará (sonará una nota aguda) y tendrás que volver a empezar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pos.X += inclination.X; IF pos.X > 6 THEN Keyboard.play(ErrorNote) AND pos.X = 6; Matrix.pixel(pos.X, pos.Y, ON)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Interactiva con Movimiento",
+    "originalIdeaDescription": "Una mascota digital que reacciona a cómo se sostiene el dispositivo. Si está plano y estable, la mascota duerme (cara en LED). Si se agita o inclina bruscamente, la mascota se despierta, muestra una cara de sorpresa y emite sonidos.",
+    "transformedIdeaTitle": "Huevo de Dragón Dormilón",
+    "transformedIdeaDescription": "Estás cuidando un huevo de dragón muy sensible. Debes mantener el dispositivo perfectamente equilibrado para que duerma (Zzz en pantalla). Si lo inclinas demasiado, el dragón despertará, verás sus ojos abiertos y rugirá con notas graves.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.total < 5 THEN Matrix.show('SleepFace') ELSE Matrix.show('AwakeFace') AND Keyboard.play(LowNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Musical",
+    "originalIdeaDescription": "Herramienta de nivelación donde la matriz LED muestra una 'burbuja' que se mueve opuestamente a la inclinación. Cuando el dispositivo está perfectamente nivelado (0 grados), el teclado reproduce un acorde armonioso de éxito.",
+    "transformedIdeaTitle": "El Constructor de Pirámides",
+    "transformedIdeaDescription": "Los antiguos arquitectos necesitan tu ayuda para alinear las piedras de la pirámide. Inclina el bloque hasta que la luz esté en el centro exacto. Cuando lo logres, escucharás la fanfarria mágica que indica que la piedra está colocada perfectamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.X == 0 AND inclination.Y == 0 THEN Matrix.show('CenterDot') AND Keyboard.play(ChordC); ELSE Matrix.show('MovingDot')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo con Horizonte Artificial",
+    "originalIdeaDescription": "Simula la cabina de un avión. La matriz LED muestra una línea de horizonte que se inclina opuesta al dispositivo. El teclado cambia el tono del 'motor' basándose en el ángulo de ascenso (inclinación eje Y).",
+    "transformedIdeaTitle": "Piloto de Drones de Rescate",
+    "transformedIdeaDescription": "Pilota tu dron a través de una tormenta. Usa la pantalla como tu horizonte artificial para mantenerte nivelado. Si subes demasiado rápido (inclinas hacia atrás), el motor sonará agudo; si caes en picada, sonará grave. ¡Mantén el vuelo estable!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Matrix.drawLine(horizonAngle); pitch = map(inclination.Y, -90, 90, LowNote, HighNote); Keyboard.play(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica con Efectos Visuales",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Un movimiento rápido de inclinación hacia adelante 'lanzando' un hechizo activa una animación de destellos en la matriz y un sonido de 'bip' mágico en el teclado.",
+    "transformedIdeaTitle": "Aprendiz de Hechicero",
+    "transformedIdeaDescription": "¡Aprende a lanzar hechizos! Apunta tu varita (dispositivo) y haz un movimiento rápido hacia adelante. Si lo haces con la fuerza correcta, verás chispas mágicas en la pantalla y escucharás el sonido del encantamiento completado.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.changeRate > threshold THEN Matrix.animate('Sparkles') AND Keyboard.playSequence([C, E, G, C2])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Volante Interactivo con Intermitentes",
+    "originalIdeaDescription": "Simula un volante de coche. Al inclinar a la izquierda o derecha, la matriz muestra una flecha parpadeante en esa dirección y el teclado hace un sonido de 'clic-clac' rítmico simulando el intermitente.",
+    "transformedIdeaTitle": "Conductor de Fórmula 1",
+    "transformedIdeaDescription": "Toma el control de tu coche de carreras. Cuando llegues a una curva, gira el 'volante'. Verás las flechas de dirección encenderse en tu tablero y escucharás el intermitente activarse para avisar a los otros corredores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.X < -20 THEN Matrix.show('LeftArrow') AND Keyboard.playRhythm('TickTock'); ELSE IF inclination.X > 20 THEN Matrix.show('RightArrow')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Palo de Lluvia Digital",
+    "originalIdeaDescription": "Recrea un instrumento de palo de lluvia. Al inclinar el dispositivo lentamente, se reproducen notas aleatorias rápidas (gotas) y la matriz muestra píxeles 'cayendo' de un lado a otro según la gravedad simulada.",
+    "transformedIdeaTitle": "La Danza de la Lluvia",
+    "transformedIdeaDescription": "Crea una atmósfera relajante transformando tu dispositivo en un palo de lluvia antiguo. Inclínalo suavemente para escuchar cómo caen las piedras preciosas virtuales y observa cómo se deslizan de un lado a otro en la pantalla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "rainIntensity = abs(inclination.X); Matrix.rainSimulation(inclination.X); IF rainIntensity > 0 THEN Keyboard.playRandomNotes(speed=rainIntensity)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Postura para Alarma",
+    "originalIdeaDescription": "Un sistema de seguridad para objetos. Si el dispositivo se deja plano, está 'armado' (matriz apagada). Si se detecta un cambio en la inclinación (alguien lo levanta), suena una alarma en el teclado y la matriz parpadea.",
+    "transformedIdeaTitle": "El Guardián del Tesoro",
+    "transformedIdeaDescription": "Protege tu diario secreto o tus juguetes. Coloca el dispositivo encima. Si un intruso intenta levantarlo (cambiando su inclinación), ¡la alarma sonará fuertemente y una calavera parpadeará en la pantalla para asustarlo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "initialTilt = inclination.current; LOOP: IF abs(inclination.current - initialTilt) > 10 THEN Keyboard.playLoop(Alarm) AND Matrix.blink('Skull')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio Corporal",
+    "originalIdeaDescription": "El usuario debe equilibrar el dispositivo sobre una parte del cuerpo (ej. la palma de la mano). Si se mantiene estable, suena una melodía suave. Si se desequilibra, la matriz muestra una X y la música se detiene o suena disonante.",
+    "transformedIdeaTitle": "El Camarero Robot",
+    "transformedIdeaDescription": "Imagina que eres un robot camarero llevando una bandeja muy cara. Pon el dispositivo en tu palma plana. Mientras lo mantengas nivelado, escucharás música de restaurante elegante. ¡Si se inclina, la música se rompe y los platos virtuales se caen!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(inclination.X) < 5 AND abs(inclination.Y) < 5 THEN Keyboard.playMelody('Classic') AND Matrix.show('Smile'); ELSE Keyboard.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Secuencia de Despegue de Cohete",
+    "originalIdeaDescription": "Requiere que el usuario incline el dispositivo hacia atrás (simulando posición vertical de lanzamiento). La matriz inicia una cuenta regresiva visual. Al llegar a cero, el teclado reproduce una escala ascendente rápida.",
+    "transformedIdeaTitle": "Misión a Marte: Despegue",
+    "transformedIdeaDescription": "Prepara el cohete para el lanzamiento. Coloca el dispositivo en posición vertical apuntando al cielo. La computadora iniciará la cuenta atrás: 3, 2, 1... ¡Despegue! Escucha los propulsores mientras ves el fuego en la pantalla.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.Y > 70 THEN Matrix.countDown(3,0); IF countdown == 0 THEN Keyboard.playScale(Ascending) AND Matrix.show('Fire')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Seguimiento de Flechas (Simon Says)",
+    "originalIdeaDescription": "La matriz LED muestra una flecha (Arriba, Abajo, Izquierda, Derecha). El usuario debe inclinar el dispositivo en esa dirección. Si acierta, suena una nota de confirmación y aparece la siguiente flecha.",
+    "transformedIdeaTitle": "Baile de Robots",
+    "transformedIdeaDescription": "¡Sigue el ritmo del líder robot! Mira la flecha en la pantalla e inclina tu dispositivo en esa dirección lo más rápido posible. Cada movimiento correcto crea una nota musical, ¡formando una canción si no te equivocas!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = random(Arrows); Matrix.show(target); WAIT inclination; IF inclination.matches(target) THEN Keyboard.play(Note) AND score++"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Narración Interactiva de Barco",
+    "originalIdeaDescription": "Acompaña una historia. Al inclinar el dispositivo suavemente, suena el mar tranquilo y la matriz muestra ondas. Al agitarlo o inclinarlo fuerte, suena una tormenta y la matriz muestra rayos.",
+    "transformedIdeaTitle": "Capitán de Altamar",
+    "transformedIdeaDescription": "Tú cuentas la historia. Cuando el mar está en calma, mece suavemente tu dispositivo para escuchar las olas y ver el horizonte tranquilo. ¡Pero cuidado! Si inclinas bruscamente, desatarás una tormenta con truenos y olas gigantes.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(inclination.X) < 15 THEN Matrix.show('Waves') AND Keyboard.play('SoftSea'); ELSE Matrix.show('Lightning') AND Keyboard.play('Thunder')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ondas por Gravedad",
+    "originalIdeaDescription": "Un instrumento experimental donde una 'bola' (pixel) rueda por la matriz según la inclinación. La posición X controla el tono y la posición Y controla la duración o el tipo de nota, tocando continuamente.",
+    "transformedIdeaTitle": "DJ del Futuro: Mesa de Mezclas",
+    "transformedIdeaDescription": "Crea música electrónica extraña. Deja que la bola de energía ruede por tu tablero. Dependiendo de dónde ruede (arriba, abajo, izquierda, derecha), el sonido cambiará completamente. ¡Inclina para mezclar tu propia pista!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Matrix.movePixel(inclination); note = map(pixel.X, 0, 7, C, B); duration = map(pixel.Y, 0, 7, short, long); Keyboard.play(note, duration)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Metales Simulado",
+    "originalIdeaDescription": "Juego de búsqueda. Se define un 'objetivo' en un ángulo específico. A medida que la inclinación del usuario se acerca a ese ángulo, la matriz llena más barras y el teclado emite pitidos más rápidos.",
+    "transformedIdeaTitle": "Buscadores de Oro",
+    "transformedIdeaDescription": "Hay oro enterrado en algún lugar... pero invisible. Mueve tu dispositivo lentamente como un escáner. Cuando escuches pitidos rápidos y veas la barra de señal llena, ¡habrás encontrado el tesoro escondido!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "dist = abs(targetAngle - inclination.current); Matrix.showBarGraph(1/dist); Keyboard.beep(interval=dist*10)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Contador de Sentadillas",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo contra el pecho. Al inclinarse hacia adelante (mala forma) suena error. Al bajar verticalmente (detectando cambios sutiles o manteniéndolo recto), cuenta una repetición en la matriz y suena un 'ding'.",
+    "transformedIdeaTitle": "Entrenador de Superhéroes",
+    "transformedIdeaDescription": "¡Entrena para ser fuerte! Sujeta el dispositivo en tu pecho y haz sentadillas. El dispositivo vigila tu postura: si te inclinas hacia adelante, sonará una alarma. Si te mantienes recto, contarás puntos y escucharás campanas de victoria.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination.Y > threshold (bad form) THEN Keyboard.play(Buzz); ELSE IF vertical_movement_detected THEN count++ AND Matrix.show(count) AND Keyboard.play(Ding)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Máscara Digital de Emociones",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo frente a su cara. Inclinando la cabeza hacia arriba, la matriz muestra una sonrisa y suena un acorde mayor. Inclinando hacia abajo, muestra tristeza y suena un acorde menor.",
+    "transformedIdeaTitle": "El Actor de Teatro Kabuki",
+    "transformedIdeaDescription": "Usa tu tableta como una máscara digital. Expresa tus emociones al público: mira hacia el cielo para mostrar alegría radiante con música feliz, o baja la cabeza para mostrar tristeza dramática con música melancólica.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.Y > 20 THEN Matrix.show('Happy') AND Keyboard.play(MajorChord); ELSE IF inclination.Y < -20 THEN Matrix.show('Sad') AND Keyboard.play(MinorChord)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Física de Partículas en Matriz",
+    "originalIdeaDescription": "Una simulación física simple donde un pixel rebota dentro de la matriz afectado por la inclinación (gravedad). Cada vez que el pixel rebota contra un borde, el teclado toca una nota.",
+    "transformedIdeaTitle": "Meteorito Rebotante",
+    "transformedIdeaDescription": "Atrapa un meteorito en una caja. Inclina la caja para hacer que el meteorito rebote contra las paredes. Cada rebote crea una nota musical. ¿Puedes crear un ritmo rápido agitando el meteorito?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "velocity += inclination; position += velocity; IF position hits boundary THEN velocity = -velocity AND Keyboard.play(BounceNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Selector de Menú por Inclinación",
+    "originalIdeaDescription": "Interfaz de usuario experimental. Inclinar izquierda/derecha desplaza letras o íconos en la matriz. Mantenerlo estable selecciona la opción y el teclado reproduce el nombre o un sonido asociado.",
+    "transformedIdeaTitle": "El Decodificador de Espías",
+    "transformedIdeaDescription": "Selecciona las letras correctas para enviar el mensaje secreto sin usar tus dedos, solo inclinando el dispositivo. Navega por el alfabeto y mantén el pulso firme para 'escribir' la letra con un sonido de confirmación.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "scrollSpeed = inclination.X; index += scrollSpeed; Matrix.showCharacter(alphabet[index]); IF stable_for_2s THEN Select() AND Keyboard.play(TypeSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Carrillón de Viento Digital",
+    "originalIdeaDescription": "Simula campanas de viento. El dispositivo detecta vibraciones o inclinaciones sutiles (viento). La matriz muestra hojas moviéndose y el teclado toca notas pentatónicas aleatorias basadas en la intensidad del movimiento.",
+    "transformedIdeaTitle": "El Jardín Zen Musical",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un adorno de jardín. Cuélgalo o sostenlo suavemente. Cuando sopla el 'viento' (lo mueves suavemente), escucharás campanas relajantes y verás las hojas caer en la pantalla, creando paz instantánea.",
+    "minAge": 6,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "windForce = abs(inclination.change); IF windForce > 0 THEN Keyboard.playPentatonic(random) AND Matrix.animate('Leaves', speed=windForce)"
+  }]

@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Explorador de Sonidos Direccionales",
+    "originalIdeaDescription": "Una aplicación que reproduce diferentes sonidos de la naturaleza dependiendo de la dirección cardinal hacia la que apunte el dispositivo. El norte podría ser viento, el sur el mar, el este pájaros y el oeste lluvia.",
+    "transformedIdeaTitle": "El Safari Invisible",
+    "transformedIdeaDescription": "¡Convierte tu habitación en una reserva natural! Los estudiantes programarán el dispositivo para que, al girar sobre sí mismos, escuchen diferentes animales escondidos en los puntos cardinales. Deben encontrar dónde se esconde el león (Norte) o el elefante (Sur) solo usando sus oídos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.direction == 'North' THEN audio.play('lion.mp3') ELSE IF compass.direction == 'South' THEN audio.play('elephant.mp3')..."
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Radio Sintonizadora de Frecuencias Secretas",
+    "originalIdeaDescription": "Utiliza la brújula como un dial de radio. Al girar el dispositivo a grados específicos, el audio cambia de estática a un mensaje claro, simulando la sintonización de una estación de radio.",
+    "transformedIdeaTitle": "Agente Secreto: Interceptando el Mensaje",
+    "transformedIdeaDescription": "Los estudiantes son espías que deben interceptar una transmisión enemiga. Deben programar la lógica para que solo en un ángulo muy específico (ej. 120 grados) se escuche el mensaje secreto, y en el resto solo se escuche ruido blanco.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees > 115 AND compass.degrees < 125 THEN audio.play('secret_msg.mp3') ELSE audio.play('static_noise.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "El usuario se para en el centro y, dependiendo de hacia dónde apunte, se escucha una sección diferente de la orquesta (violines, percusión, vientos) más fuerte que las demás.",
+    "transformedIdeaTitle": "El Maestro de la Sinfonía",
+    "transformedIdeaDescription": "Los estudiantes aprenden sobre la disposición de una orquesta y programan su batuta digital. Al apuntar a la izquierda suenan los violines, al centro las flautas y a la derecha los chelos, permitiéndoles mezclar la música en tiempo real girando su cuerpo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees < 90 THEN audio.play('strings') ELSE IF compass.degrees < 180 THEN audio.play('winds')..."
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Detector de Metales Simulado",
+    "originalIdeaDescription": "El dispositivo emite un pitido que aumenta de frecuencia o velocidad a medida que el usuario se alinea con una dirección 'objetivo' predefinida donde se supone que hay un tesoro.",
+    "transformedIdeaTitle": "Búsqueda del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Hay un tesoro enterrado en una dirección secreta! Los alumnos deben crear un algoritmo de 'frio o caliente' usando sonido. Si el dispositivo apunta cerca del objetivo secreto, el sonido de 'ping' se reproduce más rápido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "distance = abs(target_angle - compass.degrees); audio.setPlaybackRate(100 / distance)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Narrador de Historias Interactivo",
+    "originalIdeaDescription": "Una historia que cambia según la decisión física del usuario. Si el usuario gira al Este, la historia sigue un camino; si gira al Oeste, sigue otro diferente.",
+    "transformedIdeaTitle": "Cuentos de Caminos Cruzados",
+    "transformedIdeaDescription": "Los estudiantes escriben y programan una aventura de 'elige tu propio camino'. Al llegar a una bifurcación narrativa, el programa espera a que el usuario gire físicamente hacia el Este para entrar a la cueva o al Oeste para subir la montaña, reproduciendo el audio correspondiente.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF story_state == 'choice' AND compass.direction == 'East' THEN audio.play('cave_chapter.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Guía Turístico de Monumentos",
+    "originalIdeaDescription": "Una aplicación para usar en un lugar específico (como el patio de la escuela) donde apuntar a diferentes edificios o áreas reproduce una audioguía explicando qué es ese lugar.",
+    "transformedIdeaTitle": "Museo Escolar de Realidad Aumentada",
+    "transformedIdeaDescription": "Transforma el aula en un museo. Los estudiantes asignan explicaciones de audio a diferentes rincones de la clase. Al apuntar con la tablet hacia la biblioteca, la pizarra o la ventana, el dispositivo explica la función de cada zona.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SWITCH (compass.heading_sector) CASE 'NorthEast': audio.play('library_info.mp3')..."
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Radar Espacial de Planetas",
+    "originalIdeaDescription": "Simula estar en el centro del sistema solar. Al girar el dispositivo, se escuchan sonidos 'espaciales' sintéticos asociados a cada planeta según su posición relativa imaginaria.",
+    "transformedIdeaTitle": "Astronauta Ciego en el Espacio",
+    "transformedIdeaDescription": "Estás flotando en el espacio y no puedes ver. Los estudiantes programan un radar sonoro que asigna un sonido único a Marte, Júpiter y Saturno ubicados en grados específicos alrededor del usuario para poder orientar su nave.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees == 45 THEN audio.play('mars_rover.wav') ELSE IF compass.degrees == 180 THEN audio.play('jupiter_storm.wav')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "El usuario debe girar el dispositivo como si fuera el dial de una caja fuerte. Debe encontrar tres ángulos específicos en orden donde se escuche un 'clic' para desbloquear un sonido de victoria.",
+    "transformedIdeaTitle": "El Gran Robo del Banco",
+    "transformedIdeaDescription": "Los alumnos diseñan un juego de seguridad. Deben programar la lógica para detectar cuando el usuario ha girado exactamente a la derecha 90 grados, luego a la izquierda a 270. Solo si la secuencia es correcta y precisa, suena la alarma de 'bóveda abierta'.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.degrees == target1 THEN play('click'); wait_for(target2); IF compass.degrees == target2 THEN play('click'); play('success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Entrenador de Idiomas Cardinal",
+    "originalIdeaDescription": "Herramienta educativa donde al apuntar al Norte, Sur, Este u Oeste, el audio pronuncia el nombre de esa dirección en un idioma extranjero (ej. Inglés, Francés).",
+    "transformedIdeaTitle": "Brújula Políglota",
+    "transformedIdeaDescription": "Una actividad para combinar geografía e idiomas. Los estudiantes crean una herramienta que enseña cómo se dicen los puntos cardinales en diferentes idiomas. Al apuntar al Norte, el dispositivo debe decir 'North' o 'Nord' dependiendo de la configuración.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.direction == 'East' THEN audio.play('east_french.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Juego de realidad aumentada de audio donde un sonido de 'presencia fantasmal' se vuelve más fuerte y aterrador cuando el usuario mira hacia una dirección aleatoria generada por la app.",
+    "transformedIdeaTitle": "Cazafantasmas: La Habitación Encantada",
+    "transformedIdeaDescription": "¡Hay un fantasma invisible en el aula! Los estudiantes programan un detector de ectoplasma. Deben usar matemáticas para calcular la diferencia entre la dirección actual y la ubicación del fantasma para ajustar el volumen de los aullidos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "volume_level = 100 - (abs(ghost_angle - compass.degrees) / 2); audio.setVolume(volume_level)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Mezclador DJ de 360 Grados",
+    "originalIdeaDescription": "El usuario actúa como una aguja en un vinilo. Diferentes cuadrantes del círculo (0-90, 90-180, etc.) activan diferentes loops de batería o bajo.",
+    "transformedIdeaTitle": "El DJ Giratorio",
+    "transformedIdeaDescription": "¡Crea música con tu cuerpo! Los estudiantes dividen el espacio en 4 zonas de ritmo. Deben programar la app para que al mirar a una zona, suene una base de rap, y al girar a otra, cambie a techno, permitiendo mezclar estilos bailando.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "current_track = floor(compass.degrees / 90); audio.playTrack(tracks[current_track])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Simulador de Viento y Clima",
+    "originalIdeaDescription": "Reproduce sonidos de viento. Si el usuario mira hacia el 'Norte' (de donde viene el viento virtual), el sonido es fuerte y directo; si mira al Sur, el sonido es apagado y protegido.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Simula estar en medio de un huracán. Los estudiantes deben programar la física del sonido para que el viento suene realista. Si encaras la tormenta, el volumen es máximo; si le das la espalda, se escucha amortiguado.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.heading == storm_direction THEN audio.setVolume(100) ELSE audio.setVolume(30)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Navegación para Invidentes (Sonar)",
+    "originalIdeaDescription": "Sistema de asistencia que emite un pulso sonoro constante. El tono del pulso se vuelve más agudo cuanto más alineado está el usuario con el Norte Magnético, ayudando a mantener un rumbo recto.",
+    "transformedIdeaTitle": "El Murciélago Humano",
+    "transformedIdeaDescription": "Los estudiantes exploran la accesibilidad creando una herramienta para navegar sin ver. Deben programar un sistema de 'bio-sonar' donde el tono del audio guía al usuario para caminar en línea recta hacia el Norte sin desviarse.",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch = base_freq + (180 - abs(compass.degrees - 0)); audio.setPitch(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Ruleta de la Fortuna Auditiva",
+    "originalIdeaDescription": "El usuario gira físicamente rápido y se detiene. Dependiendo del grado exacto donde se detenga, la aplicación reproduce un premio ('¡Ganaste 100 puntos!') o un castigo.",
+    "transformedIdeaTitle": "La Ruleta Humana de la Suerte",
+    "transformedIdeaDescription": "Un juego para fiestas escolares. Los alumnos programan una ruleta donde el jugador es la aguja. Al detenerse el giro, el algoritmo detecta el ángulo y selecciona aleatoriamente un sonido de premio o una tarea divertida que el jugador debe realizar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF speed_becomes_zero THEN check(compass.degrees); IF degrees < 180 THEN audio.play('win') ELSE audio.play('lose')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Meditación Zen Orientada",
+    "originalIdeaDescription": "Una app de relajación que cambia el paisaje sonoro según la orientación: Este (Amanecer/Pájaros), Oeste (Atardecer/Grillos), Norte (Montaña/Viento), Sur (Río/Agua).",
+    "transformedIdeaTitle": "El Jardín de la Calma",
+    "transformedIdeaDescription": "Diseña un espacio de relajación. Los estudiantes deben mapear sonidos relajantes a los puntos cardinales, creando transiciones suaves para que el usuario pueda 'visitar' diferentes paisajes naturales simplemente girando su silla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.direction == 'East' THEN audio.crossfade('birds.mp3', 5sec)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "El usuario escucha aviones aproximándose. Debe girar hacia la dirección del sonido (indicada por la brújula) para 'dar permiso' de aterrizaje reproduciendo un sonido de confirmación.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "Los estudiantes asumen el rol de controladores aéreos. El sistema les dice 'Avión aproximándose por el Oeste'. Deben girar rápidamente al Oeste y presionar un botón (o esperar) para enviar la señal de radio de aterrizaje correcta.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = random('N','S','E','W'); audio.say('Look ' + target); IF compass.direction == target THEN audio.play('clear_to_land')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Laberinto Invisible",
+    "originalIdeaDescription": "El usuario camina o gira. Ciertas direcciones están 'bloqueadas' y reproducen un sonido de choque contra una pared. El objetivo es encontrar la única dirección 'abierta' (silencio o pasos).",
+    "transformedIdeaTitle": "Escapando del Laberinto Oscuro",
+    "transformedIdeaDescription": "Desafío de lógica y memoria. Los estudiantes programan un laberinto virtual alrededor del usuario. Si miran hacia una dirección prohibida, suena un '¡Bong!' de choque. Deben encontrar el único ángulo que permite 'caminar' (sonido de pasos) para escapar.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.degrees > 45 AND compass.degrees < 135 THEN audio.play('wall_hit') ELSE audio.play('footsteps')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Scanner de Culturas del Mundo",
+    "originalIdeaDescription": "Al apuntar el dispositivo hacia la dirección real de un país (desde la ubicación del usuario), se reproduce música tradicional de ese país.",
+    "transformedIdeaTitle": "La Vuelta al Mundo Musical",
+    "transformedIdeaDescription": "¡Viaja sin moverte! Los estudiantes investigan dónde están ciertos países respecto a su escuela. Luego programan la brújula para que al apuntar hacia Brasil suene Samba, y al apuntar hacia Japón suene música tradicional Koto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees is within range_of_brazil THEN audio.play('samba.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Buscador de la Meca/Qibla (o sitios sagrados)",
+    "originalIdeaDescription": "Una herramienta simple que reproduce un sonido suave y armonioso cuando el dispositivo está alineado correctamente con una ubicación geográfica específica importante.",
+    "transformedIdeaTitle": "Buscador del Polo Norte Magnético",
+    "transformedIdeaDescription": "Una actividad científica. Los estudiantes crean una herramienta para exploradores que ayuda a identificar el Norte Magnético exacto. El dispositivo debe permanecer en silencio total y solo emitir un tono 'mágico' cuando la alineación es perfecta (0 grados).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.degrees == 0 THEN audio.play('magical_chime.wav') ELSE audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass"
+    ],
+    "originalIdeaTitle": "Reloj de Cuco Direccional",
+    "originalIdeaDescription": "El dispositivo anuncia la hora, pero solo si el usuario lo orienta hacia la posición del sol (Este en la mañana, Oeste en la tarde, etc.), enseñando el movimiento solar.",
+    "transformedIdeaTitle": "El Reloj de Sol Sonoro",
+    "transformedIdeaDescription": "Los estudiantes aprenden astronomía básica. Deben programar un reloj que no funciona con pilas, sino con orientación. Si es de mañana, deben apuntar al Este para escuchar la hora; si es tarde, al Oeste. Si apuntan mal, el reloj dice 'El sol no está ahí'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF time < 12:00 AND compass.direction == 'East' THEN audio.say(time) ELSE audio.play('error')"
+  }
+]

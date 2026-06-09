@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Digital de Precisión",
+    "originalIdeaDescription": "Una herramienta que simula un nivel de burbuja de carpintero. La Matriz LED muestra una línea o un punto que se desplaza según la inclinación del dispositivo. El botón táctil se utiliza para calibrar el 'cero' o centro relativo en una superficie irregular.",
+    "transformedIdeaTitle": "El Ingeniero de Estructuras Espaciales",
+    "transformedIdeaDescription": "Los estudiantes deben reparar una estación espacial inclinada. Deben programar una herramienta que les indique cuándo una superficie está perfectamente plana para soldar. Si la inclinación es 0, la matriz muestra un cuadrado lleno; si no, una flecha indicando hacia dónde ajustar. El botón fija la pieza en su lugar.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 5 THEN Matrix.showArrow('Left') ELSE IF Inclination.X < -5 THEN Matrix.showArrow('Right') ELSE Matrix.showIcon('Check'); IF TouchButton.isPressed() THEN Calibration.setZero()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Controlado por Gravedad",
+    "originalIdeaDescription": "Un juego clásico donde un punto (la canica) se mueve por la matriz LED 7x7 respondiendo a la inclinación del dispositivo hacia adelante, atrás, izquierda o derecha. El botón táctil sirve para reiniciar la posición de la canica al centro si el jugador se queda atascado.",
+    "transformedIdeaTitle": "Escape del Laberinto de Lava",
+    "transformedIdeaDescription": "¡El suelo es lava! Eres un explorador representado por un punto de luz. Debes inclinar el dispositivo para moverte por la cuadrícula sin tocar los bordes imaginarios. Si te pierdes, presiona el botón de 'Teletransporte' para volver al inicio. El desafío es programar la física del movimiento.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Point.X = Point.X + map(Inclination.X); Point.Y = Point.Y + map(Inclination.Y); Matrix.drawPixel(Point.X, Point.Y); IF TouchButton.isPressed() THEN Point.reset(3,3)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Interactiva Basada en Posición",
+    "originalIdeaDescription": "Una cara en la matriz LED que cambia de expresión según cómo se sostenga el dispositivo. Si está boca abajo, se marea; si está de lado, duerme. El botón táctil se usa para 'acariciar' a la mascota y hacerla feliz o despertarla.",
+    "transformedIdeaTitle": "Cuida a tu Alienígena de Bolsillo",
+    "transformedIdeaDescription": "Crea un amigo digital que reacciona al movimiento. Los estudiantes programan emociones: si agitas el dispositivo (cambio rápido de inclinación), el alien se marea. Si lo dejas plano, duerme. Presiona el botón para alimentarlo cuando tenga hambre (icono de comida).",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 160 THEN Matrix.showIcon('Sad') ELSE IF TouchButton.isPressed() THEN Matrix.showIcon('Heart') ELSE Matrix.showIcon('Smile')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Nave Espacial Arcade",
+    "originalIdeaDescription": "Un simulador de vuelo simple donde la inclinación lateral mueve una nave (representada en la fila inferior de la matriz) de izquierda a derecha. El botón táctil activa un 'disparo' láser que sube por la matriz para destruir obstáculos.",
+    "transformedIdeaTitle": "Defensor de la Galaxia Pixelada",
+    "transformedIdeaDescription": "Convierte tu dispositivo en la cabina de una nave. Inclina el tablero para esquivar asteroides y usa el botón táctil para disparar tu cañón láser. El reto es coordinar la lectura de la inclinación para el movimiento lateral mientras se detecta el evento del botón para animar el disparo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Ship.X = map(Inclination.X, -90, 90, 0, 6); Matrix.draw(Ship.X, 6); IF TouchButton.isPressed() THEN Bullet.fire(Ship.X)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Pizarra de Dibujo Etch-a-Sketch",
+    "originalIdeaDescription": "Una aplicación de dibujo donde el cursor se mueve dejando un rastro de luz basado en la inclinación del dispositivo (arriba/abajo/izquierda/derecha). El botón táctil funciona como un agitador para borrar la pantalla y empezar de nuevo.",
+    "transformedIdeaTitle": "El Pincel Mágico de Gravedad",
+    "transformedIdeaDescription": "Dibuja sin usar las manos, ¡solo con gravedad! Los estudiantes crean un programa donde 'inclinarse' es 'pintar'. Deben controlar la sensibilidad para poder hacer dibujos precisos. Si se equivocan, el botón táctil es el borrador mágico que limpia el lienzo digital.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 10 THEN Cursor.X++; IF Inclination.Y > 10 THEN Cursor.Y++; Matrix.setPixel(Cursor.X, Cursor.Y, ON); IF TouchButton.isPressed() THEN Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Caja Fuerte",
+    "originalIdeaDescription": "Un juego donde el usuario debe encontrar una combinación secreta basada en ángulos. La matriz muestra pistas (más caliente/frío). El usuario inclina hasta encontrar el ángulo correcto y presiona el botón para confirmar cada número de la combinación.",
+    "transformedIdeaTitle": "La Bóveda del Banco Secreto",
+    "transformedIdeaDescription": "Eres un espía tratando de abrir una caja fuerte digital. Tienes que rotar el dispositivo hasta sentir (ver en la matriz) que has encontrado el punto exacto del cerrojo. Cuando la luz parpadee, presiona el botón para desbloquear esa fase. Requiere precisión lógica.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "TargetAngle = 45; IF abs(Inclination.X - TargetAngle) < 5 THEN Matrix.showIcon('UnlockReady'); IF TouchButton.isPressed() AND Matrix.isReady THEN Safe.Open()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Direccionales para Bicicleta",
+    "originalIdeaDescription": "Un dispositivo de seguridad vestible. Al inclinar el cuerpo a la izquierda, la matriz muestra una flecha izquierda; a la derecha, una flecha derecha. El botón táctil activa un modo de 'luces de emergencia' o parpadeo continuo.",
+    "transformedIdeaTitle": "Chaleco Inteligente para Ciclistas",
+    "transformedIdeaDescription": "Diseña un sistema de seguridad para ciclistas del futuro. El reto es programar el dispositivo para que detecte cuando el ciclista se inclina para girar y muestre automáticamente la flecha correcta en la espalda (Matriz LED). El botón activa el modo de 'peligro' intermitente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN Matrix.showArrow('Left') ELSE IF Inclination.X > 20 THEN Matrix.showArrow('Right') ELSE Matrix.clear(); IF TouchButton.isPressed() THEN Matrix.blinkAll()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de la Gota de Agua",
+    "originalIdeaDescription": "Un píxel central representa una gota de agua. Si el dispositivo se inclina demasiado, la gota se desliza hacia el borde y 'cae' (Game Over). El objetivo es mantenerla en el centro el mayor tiempo posible. El botón reinicia el juego.",
+    "transformedIdeaTitle": "El Desafío del Equilibrista Zen",
+    "transformedIdeaDescription": "Mantén tu mente y tu mano firmes. Una partícula de luz inestable está en el centro de tu tablero. Si inclinas la mano, la partícula gana velocidad y puede caerse por el borde. Programa la física de aceleración. Presiona el botón para intentar superar tu récord de tiempo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Velocity.X += Inclination.X; Position.X += Velocity.X; IF Position.X > 7 THEN GameOver(); IF TouchButton.isPressed() THEN Game.Restart()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Gestos",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Movimientos específicos de inclinación (ej. un golpe rápido hacia abajo) generan diferentes patrones de luces en la matriz. El botón táctil sirve para 'cargar' el hechizo antes de lanzarlo.",
+    "transformedIdeaTitle": "Academia de Hechicería Digital",
+    "transformedIdeaDescription": "¡Aprende a lanzar hechizos digitales! Los estudiantes programan su varita para reconocer gestos: inclinar bruscamente hacia abajo lanza un 'Rayo' (animación vertical), inclinar hacia arriba lanza 'Fuego' (animación dispersa). Deben mantener el botón presionado para acumular energía mágica primero.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isHeld() AND Inclination.Y_Change > 50 THEN Matrix.playAnimation('Thunder') ELSE Matrix.showIcon('Sparkle')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Dado Electrónico Agitable",
+    "originalIdeaDescription": "Detecta cuando el dispositivo es agitado vigorosamente usando cambios rápidos en la inclinación. Al detenerse, muestra un número aleatorio (1-6) o puntos de dado en la matriz. El botón puede congelar el resultado o cambiar entre 1 dado y 2 dados.",
+    "transformedIdeaTitle": "El Dado de la Suerte Randomizada",
+    "transformedIdeaDescription": "Crea el dado definitivo para juegos de mesa. No necesitas lanzarlo, ¡solo agítalo! El estudiante debe programar la detección de 'agitar' (cambios rápidos de inclinación) y luego usar una función aleatoria para mostrar el resultado. El botón cambia el modo de juego (dado de 6 caras o de 20 caras).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.Magnitude) > ShakeThreshold THEN Matrix.showAnimation('Shuffle'); IF ShakeStops THEN Matrix.showNumber(Random(1,6)); IF TouchButton.isPressed() THEN Mode.Switch()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Horizonte Artificial para Aviación",
+    "originalIdeaDescription": "Simula el instrumento de un avión. Una línea en la matriz se mantiene horizontalmente 'fija' mientras el dispositivo gira alrededor de ella, indicando el alabeo (roll) y el cabeceo (pitch). El botón activa el tren de aterrizaje (icono).",
+    "transformedIdeaTitle": "Entrenamiento de Pilotos de Prueba",
+    "transformedIdeaDescription": "Construye tu propio instrumento de vuelo. La línea del horizonte debe permanecer plana aunque muevas el avión (el dispositivo). Los estudiantes aprenderán sobre ejes de rotación. Si el avión pica hacia abajo demasiado, ¡alarma! El botón despliega el paracaídas de emergencia.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LineAngle = -Inclination.Roll; Matrix.drawLine(Angle=LineAngle); IF Inclination.Pitch > 45 THEN Matrix.blinkRed(); IF TouchButton.isPressed() THEN Matrix.showIcon('Parachute')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas y Postura",
+    "originalIdeaDescription": "El dispositivo se coloca en la pierna o pecho. Si la inclinación indica una sentadilla profunda correcta, la matriz muestra un 'Check' y cuenta una repetición. El botón reinicia el contador de ejercicios.",
+    "transformedIdeaTitle": "Tu Entrenador Personal Robótico",
+    "transformedIdeaDescription": "¡Ponte en forma con tecnología! Programa un dispositivo que cuente tus ejercicios. Debe detectar el cambio de ángulo cuando haces una sentadilla. Si bajas lo suficiente (ángulo correcto), suma un punto en la pantalla LED. El botón pone el contador a cero para la siguiente serie.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < 45 AND State == 'Standing' THEN Count++ AND State = 'Squat'; Matrix.showNumber(Count); IF TouchButton.isPressed() THEN Count = 0"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Decisiones (Sí/No)",
+    "originalIdeaDescription": "Al hacer una pregunta, el usuario inclina el dispositivo. Si lo inclina a la izquierda, la matriz muestra una 'X' (No) con probabilidad aleatoria sesgada; a la derecha un 'Check' (Sí). El botón confirma la decisión y la muestra parpadeando.",
+    "transformedIdeaTitle": "El Oráculo del Destino",
+    "transformedIdeaDescription": "Crea una bola 8 mágica moderna. Formula una pregunta, agita o inclina el dispositivo, y presiona el botón para revelar tu destino. Los estudiantes pueden programar diferentes probabilidades o respuestas (Carita feliz, triste, neutra) dependiendo de hacia dónde inclinen el dispositivo antes de presionar el botón.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Inclination.X > 0 THEN Matrix.show('Yes') ELSE Matrix.show('No') }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualizador de Terremotos (Sismógrafo)",
+    "originalIdeaDescription": "Muestra una línea base en la matriz. Cuando el sensor de inclinación detecta vibraciones o cambios sutiles, la línea se vuelve errática (picos altos). El botón sirve para silenciar la alarma visual o resetear el historial.",
+    "transformedIdeaTitle": "Detector de Temblores Tectónicos",
+    "transformedIdeaDescription": "Construye una estación sísmica. El dispositivo debe estar muy quieto sobre una mesa. Si alguien golpea la mesa o camina fuerte cerca, la inclinación cambiará ligeramente y la matriz LED debe mostrar ondas de choque. El botón reinicia la vigilancia. Ideal para aprender sobre sensibilidad de sensores.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Sensitivity = 2; IF abs(Inclination.Change) > Sensitivity THEN Matrix.plotGraph(Inclination.Change) ELSE Matrix.drawLineFlat(); IF TouchButton.isPressed() THEN Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción 'Simón Dice' con Movimiento",
+    "originalIdeaDescription": "La matriz muestra una flecha (Arriba, Abajo, Izq, Der). El jugador debe inclinar el dispositivo en esa dirección rápidamente. Si acierta, pasa al siguiente nivel. El botón se usa para iniciar el juego.",
+    "transformedIdeaTitle": "Comandante de Reflejos Rápidos",
+    "transformedIdeaDescription": "¡Sigue las órdenes! La matriz te mostrará una dirección. Tienes 2 segundos para inclinar el dispositivo en esa dirección exacta. Si fallas o eres lento, pierdes. Presiona el botón para empezar la ronda. Los estudiantes programan temporizadores y lógica de comparación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Direction = Random('Up', 'Down', 'Left', 'Right'); Matrix.showArrow(Direction); Wait(2s); IF Inclination.Direction == Direction THEN Score++ ELSE GameOver(); IF TouchButton.isPressed() THEN StartGame()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reloj de Arena Digital",
+    "originalIdeaDescription": "Píxeles que 'caen' de la parte superior de la matriz a la inferior simulando arena, controlados por la gravedad (inclinación). Al darle la vuelta al dispositivo, la arena cae al revés. El botón pausa el tiempo.",
+    "transformedIdeaTitle": "El Manipulador del Tiempo y Arena",
+    "transformedIdeaDescription": "Crea un temporizador visual antiguo con tecnología moderna. Los píxeles deben acumularse en el fondo. Si giras el dispositivo 180 grados, la 'arena' debe caer hacia el nuevo fondo. El botón congela el tiempo. Un reto avanzado de lógica de partículas.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "FOR each Pixel: IF Pixel.Below is Empty AND Inclination.Down == True THEN Pixel.MoveDown(); IF TouchButton.isPressed() THEN Pause()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lector de Texto con Desplazamiento (Scroll)",
+    "originalIdeaDescription": "Muestra un mensaje largo en la matriz LED. La velocidad y dirección del desplazamiento del texto se controlan inclinando el dispositivo a la izquierda (rebobinar) o derecha (avanzar). El botón cambia el mensaje.",
+    "transformedIdeaTitle": "El Comunicador Secreto Deslizante",
+    "transformedIdeaDescription": "Envía mensajes que solo se pueden leer si controlas el flujo. Inclina el dispositivo a la derecha para que las letras pasen. Si te perdiste algo, inclina a la izquierda para retroceder. El botón cambia entre diferentes mensajes encriptados. Aprende a controlar velocidades de animación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ScrollSpeed = map(Inclination.X); TextPosition += ScrollSpeed; Matrix.displayTextAt(TextPosition); IF TouchButton.isPressed() THEN NextMessage()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin Visual",
+    "originalIdeaDescription": "Aunque no emite sonido, visualiza 'notas' en la matriz. La altura de la barra en la matriz depende de la inclinación Y (pitch). La inclinación X cambia el patrón. El botón graba la secuencia visual.",
+    "transformedIdeaTitle": "Compositor de Luz y Movimiento",
+    "transformedIdeaDescription": "Crea arte visual con movimiento. Al inclinar el dispositivo hacia arriba y abajo, controlas la altura de las barras de luz en la matriz. Es como dirigir una orquesta de luz. Presiona el botón para 'grabar' tu movimiento y luego reprodúcelo en bucle.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BarHeight = map(Inclination.Y, -90, 90, 0, 7); Matrix.drawColumn(BarHeight); IF TouchButton.isPressed() THEN Recording.Start()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Snake (Serpiente) Giroscópico",
+    "originalIdeaDescription": "El clásico juego de la serpiente, pero en lugar de botones direccionales, usas la inclinación del dispositivo para girar 90 grados. El botón táctil se usa para acelerar la serpiente momentáneamente.",
+    "transformedIdeaTitle": "Serpiente Acrobática",
+    "transformedIdeaDescription": "Revive el clásico juego Snake con un giro. Para que la serpiente doble la esquina, debes girar físicamente el tablero de juego. Requiere reflejos y coordinación. El botón es un 'turbo' para comer manzanas más rápido, pero cuidado con chocar.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Direction = GetDirectionFromTilt(Inclination.X, Inclination.Y); Snake.Move(Direction); IF TouchButton.isPressed() THEN Snake.Speed = Fast"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivelador de Cámara para Fotografía",
+    "originalIdeaDescription": "Ayuda a tomar fotos rectas. Muestra una línea horizontal. Si el dispositivo está inclinado, la línea se rompe o cambia de color. El botón sirve como disparador remoto (simulado con una animación de flash).",
+    "transformedIdeaTitle": "El Asistente del Fotógrafo Profesional",
+    "transformedIdeaDescription": "Ayuda a los fotógrafos a obtener la toma perfecta. Programa una herramienta que muestre un cuadro parpadeante solo cuando el dispositivo esté perfectamente alineado con el horizonte. Si está chueco, muestra hacia dónde girar. El botón toma la 'foto' (flash blanco en la matriz).",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.Roll) < 2 THEN Matrix.showRect() ELSE Matrix.showArrowCorrection(); IF TouchButton.isPressed() AND Aligned THEN Matrix.flashWhite()"
+  }
+]

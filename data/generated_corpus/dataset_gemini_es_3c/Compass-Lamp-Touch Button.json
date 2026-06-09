@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Orientación Geográfica con Validación Táctil Visual",
+    "originalIdeaDescription": "Este sistema utiliza el magnetómetro digital para determinar el acimut magnético del dispositivo en tiempo real. La lámpara LED proporciona retroalimentación visual dinámica, cambiando de color según el cuadrante cardinal hacia el que se apunta. El botón táctil funciona como un mecanismo de bloqueo y validación, permitiendo al usuario 'capturar' una dirección específica y confirmar si la orientación coincide con un objetivo predefinido en la lógica del programa.",
+    "transformedIdeaTitle": "El Explorador Polar: En Busca del Norte",
+    "transformedIdeaDescription": "¡Eres un explorador perdido en el Ártico! Tu misión es encontrar el Norte verdadero para regresar al campamento base. Gira tu dispositivo lentamente; la lámpara cambiará de color según tu dirección. Cuando la luz se vuelva blanca brillante, significará que estás mirando al Norte. ¡Presiona el botón táctil rápidamente para fijar tu rumbo y salvar a tu expedición antes de que llegue la tormenta de nieve!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 350 OR Compass.heading < 10 THEN Lamp.setColor(WHITE); IF TouchButton.pressed THEN ShowSuccess()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mecanismo de Seguridad Angular con Desbloqueo Manual Luminoso",
+    "originalIdeaDescription": "Se implementa una cerradura digital lógica que requiere una alineación angular precisa. El usuario debe rotar el dispositivo a grados específicos detectados por la brújula. La lámpara actúa como indicador de estado (rojo para bloqueado, verde para desbloqueado). El botón táctil sirve para intentar abrir la cerradura una vez que el usuario cree que ha alcanzado la orientación angular correcta definida en el código.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Te has infiltrado en el banco central y estás frente a la gran caja fuerte. Para abrirla, no necesitas una llave, ¡sino la orientación correcta! Gira la 'perilla' (tu dispositivo) hasta el ángulo secreto (por ejemplo, 90 grados Este). La luz te dará pistas volviéndose más brillante. Cuando creas que estás en la posición exacta, presiona el botón táctil para intentar abrir la puerta y llevarte el botín.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == secret_angle AND TouchButton.pressed THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Selección de Elementos Basado en Cuadrantes",
+    "originalIdeaDescription": "Esta aplicación divide el espacio físico de 360 grados en cuatro zonas distintas (Norte, Sur, Este, Oeste). Al orientar el dispositivo hacia una zona, la brújula detecta el cuadrante. El botón táctil activa la función asociada a ese cuadrante, y la lámpara se enciende con un color representativo del elemento seleccionado (Fuego, Agua, Tierra, Aire), permitiendo una interfaz de selección física y espacial.",
+    "transformedIdeaTitle": "Maestro de los Cuatro Elementos",
+    "transformedIdeaDescription": "Conviértete en un hechicero que controla la naturaleza. Cada dirección cardinal representa un elemento: Norte es Agua (Azul), Sur es Fuego (Rojo), Este es Tierra (Verde) y Oeste es Aire (Blanco). Gira hacia la dirección del elemento que quieras invocar y presiona el botón táctil para lanzar tu hechizo. ¡Combina los elementos en el orden correcto para crear magia poderosa!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'North' AND TouchButton.pressed THEN Lamp.color(BLUE) ELSE IF Compass.direction == 'South'..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Señal Oculta con Retroalimentación de Proximidad",
+    "originalIdeaDescription": "Una herramienta de búsqueda que simula la detección de una señal de radio invisible. Se programa un objetivo angular aleatorio. A medida que la lectura de la brújula del usuario se acerca a este objetivo, la intensidad de la lámpara aumenta o su parpadeo se acelera. El botón táctil se utiliza para 'demodular' o capturar la señal una vez que la intensidad de la luz es máxima.",
+    "transformedIdeaTitle": "Cazador de Fantasmas Espectrales",
+    "transformedIdeaDescription": "Hay un fantasma invisible escondido en la habitación. Usa tu dispositivo como un radar espectral. Gira lentamente en círculo. La luz de tu lámpara parpadeará más rápido cuando estés mirando directamente hacia el fantasma. Cuando la luz sea sólida y brillante, ¡significa que lo tienes en la mira! Presiona el botón táctil para activar la trampa de protones y capturarlo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "distance = ABS(Compass.heading - ghost_angle); Lamp.intensity(100 - distance); IF distance < 5 AND TouchButton.pressed THEN Capture()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Marítimo con Control Manual Diurno",
+    "originalIdeaDescription": "Este concepto recrea la funcionalidad de un faro. La luz de la lámpara varía su intensidad simulando un haz giratorio basado en la lectura continua de la brújula, creando un efecto de barrido. El botón táctil actúa como un interruptor de modo, permitiendo al usuario alternar entre el funcionamiento nocturno (luz activa) y el diurno (luz apagada o modo de mantenimiento) o cambiar el color del haz.",
+    "transformedIdeaTitle": "El Guardián del Faro en la Tormenta",
+    "transformedIdeaDescription": "Eres el encargado del faro principal de la costa. Los barcos dependen de tu luz para no chocar. Tu dispositivo es la linterna del faro; al girar tu cuerpo, el haz de luz barre el océano. Debes mantener la luz apuntando hacia el mar (un rango de grados específico). Si ves un barco (señal en pantalla o imaginario), presiona el botón para cambiar el color a rojo y advertirles del peligro.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.on(); IF TouchButton.pressed THEN Lamp.color(RED) ELSE Lamp.color(YELLOW); Log Compass.heading"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Direccional con Validación de Entrada",
+    "originalIdeaDescription": "Un sistema de juego secuencial donde la aplicación genera una serie de instrucciones direccionales (ej. Norte, Oeste, Norte). El usuario debe orientar físicamente el dispositivo hacia cada dirección en orden. La lámpara indica si la orientación actual es correcta (verde) o incorrecta (rojo). El botón táctil se utiliza para confirmar cada paso de la secuencia antes de pasar al siguiente.",
+    "transformedIdeaTitle": "El Capitán Brújula Dice",
+    "transformedIdeaDescription": "¡Atención cadete! El Capitán Brújula te dará órdenes. Si dice 'Norte', gira hasta mirar al Norte y presiona el botón. Si dice 'Oeste', gira a la izquierda. La luz se pondrá verde si aciertas. Pero cuidado, cada vez las órdenes serán más rápidas y complejas. ¿Podrás memorizar la ruta secreta de navegación y completar la misión sin perder el rumbo?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SEQUENCE = [North, West, South]; FOR dir IN SEQUENCE: Wait until (Compass.is(dir) AND TouchButton.pressed); Lamp.flash(Green)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Herramienta de Pintura de Luz Digital Panorámica",
+    "originalIdeaDescription": "Utiliza la orientación del dispositivo para seleccionar colores de una paleta de 360 grados (rueda de color asignada a ángulos). Al presionar y mantener el botón táctil, la lámpara se enciende con el color correspondiente al ángulo actual, permitiendo al usuario realizar fotografía de larga exposición ('light painting') con colores que cambian controladamente según la dirección física del movimiento.",
+    "transformedIdeaTitle": "Pincel Mágico de Arcoíris 360",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un pincel mágico que cambia de color según hacia dónde apuntes. Apunta al Norte para pintar de rojo, al Sur para azul, y todos los colores intermedios. En una habitación oscura, mantén presionado el botón táctil para encender la luz y dibuja en el aire mientras una cámara captura tu arte. ¡Crea esferas de luz multicolores girando sobre ti mismo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Hue = Map(Compass.heading, 0, 360, 0, 255); IF TouchButton.isHeld THEN Lamp.color(Hue) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Direccional de Alta Seguridad",
+    "originalIdeaDescription": "Este dispositivo funciona como un telégrafo óptico que solo se activa cuando está alineado con una estación receptora específica (un rango de grados determinado). Si la brújula no apunta al objetivo, el botón táctil está deshabilitado. Al alinearse correctamente, la lámpara permite transmitir mensajes en código Morse pulsando el botón táctil, enseñando sobre comunicación direccional.",
+    "transformedIdeaTitle": "Espía de la Resistencia",
+    "transformedIdeaDescription": "Eres un espía enviando mensajes secretos a la base rebelde. Para que el enemigo no vea tus señales, tu transmisor solo funciona si apuntas exactamente hacia la base aliada (el Este). Encuentra la dirección correcta: si la luz parpadea azul suavemente, estás listo. Luego, usa el botón para enviar tu mensaje en clave Morse con la lámpara. ¡Si te mueves, la señal se cortará!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading > 85 AND Compass.heading < 95 THEN { Lamp.color(BLUE); IF TouchButton.pressed THEN Lamp.on() }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Físico con Puntos de Control",
+    "originalIdeaDescription": "Diseñado para actividades al aire libre o gimnasios. El usuario debe navegar un espacio físico. La aplicación indica una dirección objetivo. El usuario se mueve y, al llegar a un punto de referencia, presiona el botón. Si la orientación durante el trayecto se mantuvo dentro de los parámetros correctos, la lámpara otorga una 'vida' o punto extra (verde); si se desvió, indica error (rojo).",
+    "transformedIdeaTitle": "Escape del Laberinto del Minotauro",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto invisible. Para escapar, debes caminar siempre en línea recta hacia la salida sin desviarte. Fija tu rumbo hacia el Sur. Mientras caminas, si te desvías del camino recto, la luz roja te avisará. Al llegar a la pared (meta), presiona el botón para abrir la puerta mágica. ¡Mantén el pulso firme y la dirección constante!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "StartHeading = Compass.heading; LOOP: IF ABS(Compass.heading - StartHeading) > 10 THEN Lamp.Red() ELSE Lamp.Green(); IF Button.pressed THEN End()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Analizador de Viento Simulado con Captura de Datos",
+    "originalIdeaDescription": "Simula una veleta digital. El usuario actúa como el viento, girando el dispositivo. La lámpara cambia de color (de azul frío a rojo caliente) dependiendo de la dirección del 'viento' (Norte vs Sur). El botón táctil permite al estudiante registrar la lectura actual, guardando la dirección y la 'temperatura' simulada en una lista de datos para un reporte meteorológico ficticio.",
+    "transformedIdeaTitle": "Cazador de Tornados Meteorológico",
+    "transformedIdeaDescription": "¡Se acerca una tormenta! Eres el meteorólogo encargado de medir los vientos. Gira tu estación meteorológica para ver de dónde viene el viento. Si viene del Norte, la luz será azul (frío); si viene del Sur, roja (calor). Cuando detectes un cambio brusco de dirección, presiona el botón para registrar el dato en tu computadora y predecir si se formará un tornado.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Temperature = Map(Compass.heading, 0, 180, Blue, Red); Lamp.color(Temperature); IF Button.pressed THEN Record(Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Buscador de Satélites con Indicador de Intensidad de Señal",
+    "originalIdeaDescription": "Emula el funcionamiento de una antena parabólica. Se asigna una posición de satélite virtual en el cielo (azimut). El usuario debe escanear el horizonte. La lámpara aumenta su brillo a medida que la brújula se alinea con el azimut del satélite. El botón táctil se usa para 'conectar' y descargar datos una vez que la señal (brillo) es máxima.",
+    "transformedIdeaTitle": "Comunicación con la Estación Espacial",
+    "transformedIdeaDescription": "La Estación Espacial Internacional está pasando sobre nosotros y necesitas enviarle suministros. Gira tu antena (dispositivo) lentamente. La luz se hará más brillante a medida que apuntes correctamente a la Estación. Cuando la luz sea cegadora, ¡estás conectado! Mantén el botón presionado para transferir los datos antes de que la estación desaparezca en el horizonte.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SignalStrength = 100 - ABS(Compass.heading - TargetAngle); Lamp.brightness(SignalStrength); IF SignalStrength > 90 AND Button.pressed THEN Success()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reloj de Sol Digital Interactivo y Cromático",
+    "originalIdeaDescription": "Una representación digital del ciclo solar. Dependiendo de la orientación de la brújula (que simula la posición del sol en el cielo de Este a Oeste), la lámpara cambia de color: amanecer (naranja), mediodía (blanco), atardecer (violeta). El botón táctil permite pausar el ciclo para observar un momento específico del día o establecer una alarma basada en la 'hora solar'.",
+    "transformedIdeaTitle": "El Señor del Tiempo",
+    "transformedIdeaDescription": "Viaja a través del día girando sobre tus pies. Empieza mirando al Este: tu luz será naranja como el amanecer. Gira hacia el Sur y se volverá blanca brillante como el mediodía. Sigue al Oeste para ver el violeta del atardecer. Usa el botón táctil para 'congelar el tiempo' en tu momento favorito del día y usar esa luz como linterna ambiental.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 90 THEN Color=Orange ELSE IF Compass.heading < 180 THEN Color=White ELSE Color=Violet; Lamp.color(Color)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Compás de Decisión Aleatoria con Selector Manual",
+    "originalIdeaDescription": "Funciona como una ruleta digital. El usuario gira físicamente (o gira el dispositivo sobre una mesa). Al presionar el botón táctil, la lectura de la brújula se congela instantáneamente. La aplicación asigna una tarea o resultado basado en el rango angular en el que se detuvo (ej. 0-90 = Tarea A), y la lámpara ilumina el color correspondiente a esa categoría.",
+    "transformedIdeaTitle": "La Ruleta de la Fortuna de Tareas",
+    "transformedIdeaDescription": "¿No sabes qué jugar o quién debe lavar los platos? ¡Deja que la tecnología decida! Coloca el dispositivo en el suelo y gíralo como una botella. Cuando se detenga, presiona el botón. Si apunta al Norte (Luz Roja) te toca correr; si apunta al Sur (Luz Verde) te toca descansar. ¡Programa tus propias reglas y colores para cada dirección!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed THEN { IF Compass.heading < 180 THEN Lamp.color(RED) ELSE Lamp.color(GREEN) }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Control de Tráfico Direccional Simulado",
+    "originalIdeaDescription": "Simula ser un controlador de semáforos en una intersección. Al apuntar el dispositivo hacia una 'calle' específica (norte, sur, este, oeste), se selecciona ese semáforo. El botón táctil alterna el estado de la lámpara entre rojo y verde para esa dirección específica, permitiendo a los estudiantes gestionar el flujo de tráfico imaginario evitando colisiones lógicas.",
+    "transformedIdeaTitle": "Controlador de Tráfico de la Ciudad",
+    "transformedIdeaDescription": "¡Eres el jefe de tránsito en el cruce más ocupado de la ciudad! Apunta tu control hacia la Avenida Norte y presiona el botón para poner su semáforo en Verde (Luz verde). Ahora, gira rápido hacia la Calle Este y ponla en Rojo (presiona botón -> Luz Roja) antes de que los coches choquen. ¡Coordina el tráfico girando y presionando para mantener la ciudad segura!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "CurrentStreet = GetQuadrant(Compass.heading); IF Button.pressed THEN ToggleLight(CurrentStreet, Lamp)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Ángulos Relativos con Reset Táctil",
+    "originalIdeaDescription": "Una herramienta matemática para medir ángulos físicos. El usuario presiona el botón táctil para establecer el 'cero' o punto de referencia en la orientación actual. Al girar el dispositivo, la lámpara cambia de color gradualmente (de azul a rojo) a medida que el ángulo se acerca a 90 o 180 grados respecto al punto inicial, enseñando geometría espacial.",
+    "transformedIdeaTitle": "El Arquitecto de Pirámides",
+    "transformedIdeaDescription": "Los antiguos egipcios necesitan tu ayuda para construir una pirámide perfecta. Coloca tu dispositivo en una pared y presiona el botón para marcar el inicio. Ahora gira para formar una esquina. Si logras un ángulo perfecto de 90 grados (una esquina cuadrada), la luz brillará en dorado. ¡Usa tu herramienta para verificar que todas las esquinas de tu habitación sean cuadradas!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.pressed THEN StartAngle = Compass.heading; CurrentDiff = ABS(Compass.heading - StartAngle); IF CurrentDiff == 90 THEN Lamp.Gold()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Metales Simulado por Orientación Magnética",
+    "originalIdeaDescription": "Aunque usa la brújula, simula un detector de metales mapeando 'tesoros' a orientaciones específicas. Al barrer el área (girar), la lámpara parpadea y cambia de tono auditivo (si hubiera audio, aquí luz). El botón táctil activa la 'pala' para desenterrar el objeto una vez que la lámpara indica la máxima proximidad al objetivo virtual.",
+    "transformedIdeaTitle": "Buscador de Tesoros en la Playa",
+    "transformedIdeaDescription": "Vamos a la playa a buscar monedas de oro. Mueve tu detector de lado a lado (gira tu cuerpo). Hemos escondido tesoros virtuales en direcciones específicas. Si la luz empieza a parpadear amarillo, estás cerca. Si se pone amarilla fija, ¡estás justo encima! Presiona el botón para cavar en la arena y ver qué encontraste.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF IsCloseToTarget(Compass.heading) THEN Lamp.blink(Fast) ELSE Lamp.off(); IF Button.pressed AND IsClose THEN Found = True"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Navegación por Puntos de Referencia con Check-in",
+    "originalIdeaDescription": "Una actividad de orientación (orienteering). El sistema tiene una lista de rumbos. El usuario debe alinear la brújula con el primer rumbo. La lámpara se enciende en azul. El usuario camina X pasos (simulado o real) y presiona el botón para confirmar 'Llegada'. Si el rumbo era correcto al presionar, la lámpara cambia a verde y avanza al siguiente punto de referencia.",
+    "transformedIdeaTitle": "La Vuelta al Mundo en 80 Pasos",
+    "transformedIdeaDescription": "Tu pasaporte está listo. Primera parada: París (Noreste). Gira hasta que la luz sea Azul y camina 5 pasos. ¡Presiona el botón para sellar tu pasaporte! Si acertaste la dirección, la luz verde te enviará a tu siguiente destino: Tokio. Completa el viaje alrededor de la habitación visitando todas las ciudades sin perderte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Checkpoints[Level]; IF Compass.heading == Target AND Button.pressed THEN { Lamp.green(); Level++ } ELSE Lamp.blue()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Interfaz de Selección de Estado de Ánimo Ambiental",
+    "originalIdeaDescription": "Utiliza la brújula para navegar por un espectro de colores que representan emociones (Rojo=Enojo, Azul=Calma, Amarillo=Alegría). El usuario rota el dispositivo para encontrar el color que coincide con su estado de ánimo actual y presiona el botón táctil para fijar ese color, convirtiendo el dispositivo en una lámpara ambiental estática que refleja su emoción.",
+    "transformedIdeaTitle": "Anillo de Humor Gigante",
+    "transformedIdeaDescription": "¿Cómo te sientes hoy? Gira tu dispositivo para explorar las emociones. El Norte es rojo furioso, el Este es amarillo alegre, el Sur es azul relajado. Cuando encuentres el color que representa tu sentimiento, presiona el botón. Tu dispositivo se quedará encendido en ese color para que todos sepan tu humor sin que tengas que decir una palabra.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "MoodColor = Wheel(Compass.heading); Lamp.color(MoodColor); IF Button.pressed THEN StopUpdate() ELSE ContinueUpdate()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Piloto Automático Naval",
+    "originalIdeaDescription": "Simula el timón de un barco. Se establece un rumbo deseado. Si la brújula se desvía de ese rumbo (por movimiento del usuario), la lámpara parpadea en rojo indicando el lado del error (babor/estribor). El usuario debe corregir el rumbo girando hasta que la luz sea verde fija. El botón táctil activa o desactiva el sistema de 'Piloto Automático'.",
+    "transformedIdeaTitle": "Capitán en la Niebla",
+    "transformedIdeaDescription": "Hay una niebla espesa y no puedes ver nada, ¡solo confías en tus instrumentos! Activa el piloto automático con el botón. Debes mantener el barco navegando recto hacia el Norte. Si las olas te giran a la izquierda, la luz parpadeará roja a la izquierda. ¡Corrige el rumbo girando a la derecha hasta que la luz sea verde otra vez! Mantén el barco a salvo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.IsActive: IF Compass.heading < Target THEN Lamp.RightSideRed() ELSE IF Compass.heading > Target THEN Lamp.LeftSideRed() ELSE Lamp.Green()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alineación de Energía Solar para Paneles Virtuales",
+    "originalIdeaDescription": "Juego educativo sobre energías renovables. El usuario actúa como un panel solar móvil. La 'máxima eficiencia' se logra apuntando exactamente al Sur (en hemisferio norte). La lámpara brilla más intensamente cuanto más cerca está del Sur. El botón táctil acumula 'energía' en una batería virtual, pero solo carga si la alineación es óptima (luz brillante).",
+    "transformedIdeaTitle": "Recargando la Nave Espacial",
+    "transformedIdeaDescription": "Tu nave se ha quedado sin energía y necesitas luz solar. Gira tus paneles (el dispositivo) hacia el Sol (Dirección Sur). Observa la lámpara: si es tenue, no estás recibiendo energía. Si brilla muy fuerte, ¡estás en la posición perfecta! Mantén presionado el botón mientras apuntas bien para llenar las baterías al 100% y despegar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Efficiency = 100 - ABS(Compass.heading - 180); Lamp.brightness(Efficiency); IF Efficiency > 90 AND Button.held THEN Battery++"
+  }
+]

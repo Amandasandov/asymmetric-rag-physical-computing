@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Theremin Controlado por Luz y Botón",
+    "originalIdeaDescription": "Un instrumento musical electrónico donde la altura de la nota musical cambia según la cantidad de luz que recibe el sensor. El interruptor sirve para encender o apagar el sonido, permitiendo silencios precisos.",
+    "transformedIdeaTitle": "El Theremin Galáctico",
+    "transformedIdeaDescription": "¡Conviértete en un músico espacial! Mueve tu mano sobre el sensor para bloquear la luz y cambiar las notas musicales mágicamente sin tocar nada. Usa el interruptor principal para activar tu instrumento solo cuando sea el momento de tu solo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (Note = Map(LightIntensity, 0, 100, C4, C6); Keyboard.play(Note)) ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Cajón con Desactivación",
+    "originalIdeaDescription": "Un sistema de seguridad para cajones oscuros. Cuando se abre el cajón y entra luz, suena una alarma repetitiva. El interruptor oculto permite al dueño desactivar la alarma antes de abrir.",
+    "transformedIdeaTitle": "La Trampa del Cofre Pirata",
+    "transformedIdeaDescription": "Protege tu tesoro de los ladrones. Si alguien abre tu cofre y entra la luz del sol, ¡sonará una alarma ruidosa! Solo tú conoces el interruptor secreto para desactivar la trampa antes de abrirlo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() AND LightIntensity > 20 THEN Keyboard.play('C5', loop=True) ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Piano de Sombras Inverso",
+    "originalIdeaDescription": "Un piano que toca notas más graves cuando hay mucha luz y notas agudas cuando hay sombras. El interruptor cambia la escala musical (mayor a menor) para variar la melodía.",
+    "transformedIdeaTitle": "El Piano Fantasma",
+    "transformedIdeaDescription": "Crea música espeluznante usando las sombras de tus manos. Cuanto más oscura sea la sombra sobre el sensor, más agudo será el chillido. ¡Usa el interruptor para cambiar entre modo 'Fantasma Triste' y 'Fantasma Enojado'!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Scale = 'Minor' ELSE Scale = 'Major'; Note = Map(LightIntensity, 0, 100, Scale_High, Scale_Low); Keyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Amanecer Musical",
+    "originalIdeaDescription": "Dispositivo que monitorea la luz ambiental. Cuando la luz supera un umbral específico (amanecer), reproduce una melodía suave. El interruptor se usa para rearmar el sistema para la noche siguiente.",
+    "transformedIdeaTitle": "El Gallo Digital Madrugador",
+    "transformedIdeaDescription": "Construye un despertador que solo suena cuando sale el sol. Cuando la luz de la mañana toque el sensor, tocará una canción de buenos días. Usa el interruptor para apagarlo y dormir 5 minutos más.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 80 AND Switch.isOn() THEN Keyboard.playSequence('MorningSong') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Puntería con Linterna",
+    "originalIdeaDescription": "El usuario debe apuntar con una linterna al sensor. Si la intensidad de luz es máxima, suena un tono de victoria. El interruptor reinicia el juego para un nuevo intento.",
+    "transformedIdeaTitle": "Tiro al Blanco Láser",
+    "transformedIdeaDescription": "¡Pon a prueba tu puntería! Apunta tu linterna al sensor en la oscuridad. Si le das justo en el centro (luz máxima), escucharás el sonido de victoria. Pulsa el interruptor para recargar y jugar otra vez.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN ResetGame(); IF LightIntensity > 95 THEN Keyboard.play('VictoryFanfare')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Luz para Plantas",
+    "originalIdeaDescription": "Herramienta para verificar si una planta recibe suficiente luz. Al presionar el interruptor de prueba, suena una nota aguda si la luz es buena, o grave si es insuficiente.",
+    "transformedIdeaTitle": "El Traductor de Plantas",
+    "transformedIdeaDescription": "¿Tu planta está feliz? Coloca el sensor junto a ella y presiona el botón de 'Escuchar'. Si suena agudo y alegre, tiene suficiente sol. Si suena grave y triste, ¡muévela a la ventana!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN (IF LightIntensity > 50 THEN Keyboard.play('E5') ELSE Keyboard.play('C3'))"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Codificada por Luz",
+    "originalIdeaDescription": "Una caja que solo reproduce música si la intensidad de luz está en un rango medio específico. El interruptor activa el modo de escaneo.",
+    "transformedIdeaTitle": "La Bóveda de Seguridad Musical",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda. Debes ajustar tu linterna a la intensidad exacta (ni muy brillante, ni muy oscura) mientras mantienes presionado el botón para descifrar el código musical y abrir la puerta.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND (LightIntensity > 40 AND LightIntensity < 60) THEN Keyboard.play('UnlockTune') ELSE Keyboard.play('ErrorBuzzer')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Ecolocalización",
+    "originalIdeaDescription": "Simula cómo ven los murciélagos. A menor luz (más oscuridad/profundidad), el sonido cambia de tono, guiando al usuario. El interruptor cambia entre modo activo y pasivo.",
+    "transformedIdeaTitle": "Soy Batman: Navegación Nocturna",
+    "transformedIdeaDescription": "Navega en la oscuridad total. A medida que te adentras en las sombras (menos luz), el sonido se vuelve más rápido, advirtiéndote del peligro. Usa el interruptor para activar tu 'sonar'.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN NoteDuration = Map(LightIntensity, 0, 100, 100ms, 1000ms); PlayBeep(NoteDuration)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna con Canción de Cuna",
+    "originalIdeaDescription": "Detecta cuando la habitación está oscura para encender una melodía de cuna. El interruptor sirve como temporizador manual para apagar la música después de un rato.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "Crea un compañero para dormir. Cuando apagues las luces de tu cuarto, el sensor detectará la oscuridad y tocará una suave canción de cuna. Presiona el botón si ya te vas a dormir para que guarde silencio.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 10 AND Switch.isOff() THEN Keyboard.play('Lullaby') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ritmo Solar",
+    "originalIdeaDescription": "La velocidad (tempo) de una secuencia musical depende de la intensidad de la luz. El interruptor cambia el tipo de instrumento que suena.",
+    "transformedIdeaTitle": "DJ Solar",
+    "transformedIdeaDescription": "¡Controla el ritmo con el sol! Saca tu dispositivo afuera. Si hay mucha luz, la música irá súper rápido. Si tapas el sensor, irá lento. Usa el botón para cambiar de Piano a Órgano.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = Map(LightIntensity, 0, 100, 60bpm, 180bpm); Instrument = Switch.state ? 'Piano' : 'Organ'; Keyboard.playSequence(Tempo, Instrument)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Teclado de Colores (Filtros)",
+    "originalIdeaDescription": "Usando filtros de colores transparentes sobre el sensor, se obtienen diferentes intensidades de luz, mapeadas a notas distintas. El interruptor graba la secuencia.",
+    "transformedIdeaTitle": "El Compositor de Arcoíris",
+    "transformedIdeaDescription": "Usa papeles de colores transparentes sobre el sensor. Cada color deja pasar distinta cantidad de luz y tocará una nota diferente. ¡Presiona el botón para grabar tu canción de colores!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Note = Map(LightIntensity, 0, 100, Scale); IF Switch.pressed() THEN Record(Note) ELSE Keyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Puerta Abierta",
+    "originalIdeaDescription": "Se coloca dentro de un armario o refrigerador. Si detecta luz (puerta abierta), reproduce un sonido recordatorio. El interruptor silencia el dispositivo temporalmente.",
+    "transformedIdeaTitle": "La Alarma de la Nevera",
+    "transformedIdeaDescription": "¿Alguien dejó la nevera abierta? Si el sensor ve la luz de la bombilla interior, tocará una nota molesta hasta que cierres la puerta. Usa el botón secreto para sacar un bocadillo de medianoche en silencio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > Threshold AND Switch.isOff() THEN Keyboard.play('Alert') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo en la Oscuridad",
+    "originalIdeaDescription": "El jugador debe moverse por una habitación oscura. Si una linterna (luz) lo ilumina (detectado por el sensor), suena una alarma de 'perdedor'. El interruptor reinicia la ronda.",
+    "transformedIdeaTitle": "Escape de la Prisión de Luz",
+    "transformedIdeaDescription": "Llevas el sensor en el pecho. Debes cruzar el pasillo oscuro sin que la linterna del guardia (tu amigo) te ilumine. Si el sensor ve luz, suena la sirena y pierdes. El botón reinicia la fuga.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > DetectionLimit THEN (Keyboard.play('Siren'); GameOver = True); IF Switch.pressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Transparencia de Agua",
+    "originalIdeaDescription": "Se usa para experimentos de ciencia. Mide cuánta luz pasa a través de un vaso con agua. Más luz = sonido agudo (limpia), menos luz = grave (sucia). El interruptor guarda la lectura.",
+    "transformedIdeaTitle": "El Científico del Agua Musical",
+    "transformedIdeaDescription": "¿Qué tan sucia está el agua del charco? Pon una muestra frente al sensor y alúmbrala. Si el agua es clara, sonará como una campanita. Si está turbia, sonará grave. Usa el botón para guardar el dato.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tone = Map(LightIntensity, 0, 100, LowC, HighC); Keyboard.play(Tone); IF Switch.pressed() THEN SaveData(LightIntensity)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Morse Óptico Musical",
+    "originalIdeaDescription": "Permite enviar código morse usando una linterna sobre el sensor. El sistema traduce los destellos de luz en sonidos cortos y largos. El interruptor borra el mensaje.",
+    "transformedIdeaTitle": "Telégrafo de Destellos",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu amigo usando una linterna. Cada vez que le des luz al sensor, sonará un 'bip'. Haz destellos cortos y largos para escribir en Morse. El botón borra la memoria para un nuevo mensaje.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN Keyboard.play('Beep') ELSE Keyboard.stop(); IF Switch.pressed() THEN Clear()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura",
+    "originalIdeaDescription": "Dispositivo que se coloca en el libro. Si hay poca luz para leer, emite un sonido de advertencia suave. El interruptor apaga el dispositivo al terminar de leer.",
+    "transformedIdeaTitle": "El Búho de la Biblioteca",
+    "transformedIdeaDescription": "Protege tus ojos al leer. Este pequeño búho vigila tu libro. Si se hace muy oscuro para leer bien, hará un sonido suave para avisarte que enciendas la lámpara. Apágalo con el botón cuando termines el libro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity < SafeReadingLevel THEN Keyboard.play('WarningChime')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Sombra",
+    "originalIdeaDescription": "Al pasar la mano rápidamente sobre el sensor (creando sombras), se disparan sonidos de percusión en el teclado. El interruptor cambia entre bombo y caja.",
+    "transformedIdeaTitle": "Batería de Aire Invisible",
+    "transformedIdeaDescription": "¡Toca la batería sin tocar nada! Pasa tu mano rápido sobre el sensor para hacer un golpe. Si mantienes presionado el botón, sonarás platillos; si lo sueltas, sonarás tambores.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity drops_quickly THEN (IF Switch.pressed() THEN Keyboard.play('HiHat') ELSE Keyboard.play('KickDrum'))"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras (Falso)",
+    "originalIdeaDescription": "Un juego donde se mide la luz reflejada en la piel (o dedo). El interruptor inicia el 'análisis' y produce un sonido aleatorio de verdad o mentira basado en fluctuaciones de luz.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Pon el dedo de tu amigo sobre el sensor. Presiona el interruptor para 'escanear'. La máquina analizará los micro-cambios de luz y tocará un sonido celestial si dice la verdad, o una bocina si miente (¡es azar, pero no se lo digas!).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed() THEN (Wait(2s); RandomResult = (LightIntensity % 2); IF RandomResult THEN Keyboard.play('True') ELSE Keyboard.play('False'))"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Afinador de Ambiente",
+    "originalIdeaDescription": "Genera una nota constante que cambia lentamente según la luz ambiental de la habitación para crear atmósfera. El interruptor congela la nota actual.",
+    "transformedIdeaTitle": "Generador de Atmósferas Sonoras",
+    "transformedIdeaDescription": "Dale sonido a tu habitación. Si el día está brillante, sonará una nota alegre. Si se nubla, la nota bajará. Cuando encuentres el sonido perfecto que te guste, presiona el botón para congelarlo ahí.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOff() THEN CurrentNote = Map(LightIntensity, 0, 100, Scale); Keyboard.play(CurrentNote)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Vueltas para Coches",
+    "originalIdeaDescription": "Se coloca en una pista de juguete. Cuando el coche pasa y bloquea la luz, cuenta una vuelta y toca un sonido. El interruptor resetea el contador.",
+    "transformedIdeaTitle": "Cronometrador de Carreras",
+    "transformedIdeaDescription": "¡Organiza una carrera de autos! Coloca el sensor en la línea de meta. Cada vez que un auto pase y tape la luz, sonará un 'Bip' de vuelta completada. Usa el botón para reiniciar la carrera.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < Threshold THEN (LapCount++; Keyboard.play('LapSound')); IF Switch.pressed() THEN LapCount = 0"
+  }
+]

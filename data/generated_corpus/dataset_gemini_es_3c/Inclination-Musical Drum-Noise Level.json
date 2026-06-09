@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Batería Aérea Selectiva",
+    "originalIdeaDescription": "El usuario inclina el dispositivo para seleccionar qué tambor tocar (Izquierda=Caja, Derecha=Bombo, Arriba=Platillo). Para hacerlo sonar, debe dar un grito corto o palmada (Noise).",
+    "transformedIdeaTitle": "El Baterista Invisible",
+    "transformedIdeaDescription": "Crea un set de percusión en el aire. Si inclinas el dispositivo a la izquierda y haces un ruido con la boca ('¡Pah!'), suena la Caja. Si inclinas a la derecha y haces un sonido grave ('¡Boom!'), suena el Bombo. ¡Coordina inclinación y voz para tocar un ritmo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.roll < -20 AND Noise.peak() THEN Drum.play('Snare'); IF Inclination.roll > 20 AND Noise.peak() THEN Drum.play('Kick')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Avalancha",
+    "originalIdeaDescription": "Un juego de equilibrio. Si el usuario hace mucho ruido (grita), provoca una avalancha (sonido de tambores graves). Debe inclinar el dispositivo para esquivar las rocas.",
+    "transformedIdeaTitle": "Escape de la Montaña Nevada",
+    "transformedIdeaDescription": "Estás en una montaña inestable. Mantén el silencio. Si gritas (Noise > 50), provocarás una avalancha (redoble de Tambor grave). Si esto pasa, inclina rápidamente el dispositivo a izquierda o derecha para esquivar las rocas que caen.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 50 THEN Avalanche=TRUE AND Drum.loop('Rumble'); IF Avalanche AND Inclination.roll > 15 THEN DodgeRight()"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Cohete Controlado por Voz",
+    "originalIdeaDescription": "Inclinar controla la dirección del cohete. El ruido (soplar o imitar motor) controla la potencia del propulsor (frecuencia del tambor).",
+    "transformedIdeaTitle": "Piloto Espacial a Propulsión",
+    "transformedIdeaDescription": "Pilota tu nave. Inclina el dispositivo para girar. Para acelerar, tienes que hacer el sonido del motor con tu boca ('¡Fshhh!'). Cuanto más fuerte soples (Noise), más rápido sonará el motor (Tambor redoblante) y más rápido irá la nave.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ShipDirection = Inclination.roll; Speed = Noise.level; Drum.setRate(Speed); MoveShip(ShipDirection, Speed)"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Caja Fuerte Sensible",
+    "originalIdeaDescription": "Para abrir, hay que inclinar a un ángulo específico y mantener silencio absoluto. Si hay ruido, suena una alarma de tambor.",
+    "transformedIdeaTitle": "El Ladrón Silencioso",
+    "transformedIdeaDescription": "Estás robando un banco. Gira el dial (inclinando el dispositivo) hasta encontrar el número secreto. ¡Pero shhh! Los sensores de sonido están activos. Si haces el menor ruido (Noise > 5) mientras giras, la alarma (Tambor) sonará y te atraparán.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 5 THEN Drum.loop('Alarm'); IF Inclination.pitch == TargetAngle AND Noise.level < 5 THEN Unlock()"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Juego de Bolos Virtual",
+    "originalIdeaDescription": "Inclinar para apuntar. Hacer un ruido de esfuerzo ('¡Haa!') para lanzar la bola. El tambor suena cuando caen los bolos.",
+    "transformedIdeaTitle": "Bolera Sónica",
+    "transformedIdeaDescription": "Apunta a los bolos inclinando el dispositivo. Cuando tengas el tiro perfecto, da una palmada fuerte (Noise) para lanzar la bola. Espera unos segundos... ¡Strike! El Tambor simulará el sonido de los 10 bolos chocando y cayendo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Aim = Inclination.roll; IF Noise.clap() THEN LaunchBall(Aim); WAIT(2s); Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Monstruo Dormido en la Cuna",
+    "originalIdeaDescription": "Hay que mecer el dispositivo (inclinación suave). Si el usuario hace ruido, el monstruo despierta golpeando (tambor).",
+    "transformedIdeaTitle": "Nana para el Ogro",
+    "transformedIdeaDescription": "El ogro bebé necesita dormir. Mécelo inclinando el dispositivo de un lado a otro suavemente. Pero cuidado: ¡no estornudes ni hables! Si el sensor detecta ruido, el ogro se despierta enfadado golpeando los barrotes de la cuna (Tambor fuerte).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.oscillating() AND Noise.level < 10 THEN Sleep++ ELSE Drum.play('Bang')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Cocinero de Wok",
+    "originalIdeaDescription": "Inclinar para saltear la comida. El ruido de 'sishhh' (usuario) hace que se cocine. El tambor marca el momento de servir.",
+    "transformedIdeaTitle": "Chef de Fuego Asiático",
+    "transformedIdeaDescription": "Saltea los fideos. Mueve el dispositivo hacia arriba y abajo (Tilt) para que no se peguen. Haz el sonido de freír 'shhh' (Noise) para cocinar. Cuando estén listos, el Tambor hará un sonido de 'Gong' para avisar que el plato está servido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "CookingTime += Noise.level; IF Inclination.jerk() THEN TossFood(); IF CookingTime > 100 THEN Drum.play('Gong')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Catapulta de Asedio",
+    "originalIdeaDescription": "Inclinar para ajustar el ángulo de tiro. Gritar '¡Fuego!' para lanzar. El tambor suena al impactar.",
+    "transformedIdeaTitle": "Derriba el Castillo",
+    "transformedIdeaDescription": "Ajusta la catapulta. Inclina hacia atrás para subir el ángulo de tiro (45 grados es ideal). Para soltar la piedra, grita '¡DISPARO!' (Noise). El sistema calculará la trayectoria y el Tambor sonará '¡PUM!' si golpeas el muro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Angle = Inclination.pitch; IF Noise.shout() THEN Distance = Calc(Angle); Drum.play('Impact')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Detector de Equilibrio con Castigo",
+    "originalIdeaDescription": "Mantener el dispositivo plano. Si se inclina, un ruido fuerte (usuario) puede 'salvarlo', si no, el tambor suena caída.",
+    "transformedIdeaTitle": "El Equilibrista en la Cuerda Floja",
+    "transformedIdeaDescription": "Camas sobre la cuerda floja. Mantén la inclinación en 0. Si te empiezas a caer (te inclinas), grita rápido (Noise) para recuperar el equilibrio y enderezarte. Si no gritas a tiempo y la inclinación llega al máximo, ¡caerás al vacío (Tambor)!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Abs(Inclination.roll) > 20: IF Noise.scream() THEN Balance=0 ELSE Drum.play('Fall')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Motocicleta Fantasma",
+    "originalIdeaDescription": "Inclinar para tumbarse en curvas. Hacer ruido de motor. El tambor simula los baches de la carretera.",
+    "transformedIdeaTitle": "Carrera de Motocross",
+    "transformedIdeaDescription": "Agarra el manillar. Inclínate para tomar las curvas. Acelera haciendo ruido con la boca. La pista está llena de baches: cada vez que el juego (aleatorio o por tiempo) detecte un salto, el Tambor golpeará fuerte al aterrizar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Speed = Noise.level; Turn = Inclination.roll; IF Terrain == 'Bump' THEN Drum.play('Kick')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Encantador de Serpientes",
+    "originalIdeaDescription": "Tocar la flauta (silbar/tararear Noise). Mover la cesta (Inclination) para que la serpiente baile. Tambor si muerde.",
+    "transformedIdeaTitle": "La Cobra Bailarina",
+    "transformedIdeaDescription": "Hipnotiza a la cobra. Tararea una melodía constante (Noise) para que salga de la cesta. Inclina el dispositivo suavemente para guiar su baile. Si dejas de tararear o haces movimientos bruscos, la cobra atacará (Tambor seco).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.tonal() AND Inclination.smooth() THEN Dance() ELSE Drum.play('Bite')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Volcán en Erupción",
+    "originalIdeaDescription": "Agitar/Inclinar aumenta la presión. El ruido del usuario (retumbar) acelera la lava. Al final, el tambor explota.",
+    "transformedIdeaTitle": "Experimento Volcánico",
+    "transformedIdeaDescription": "Eres la fuerza de la naturaleza. Inclina el dispositivo para mover el magma. Haz ruidos graves con la garganta 'Grrr' (Noise) para aumentar la presión. Cuando la presión sea crítica, ¡el volcán entrará en erupción con un gran redoble de Tambor!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pressure += Noise.level + Abs(Inclination.change); IF Pressure > Max THEN Drum.play('Eruption')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Robot de Demolición",
+    "originalIdeaDescription": "Controlar una bola de demolición (Inclination). Gritar '¡Golpe!' para soltarla. Tambor suena al chocar.",
+    "transformedIdeaTitle": "Operador de Grúa de Demolición",
+    "transformedIdeaDescription": "Destruye el edificio viejo. Balancea la bola de demolición inclinando el dispositivo rítmicamente. Cuando la bola esté en el punto más alto del balanceo, grita '¡AHORA!' para soltar el freno. El Tambor simulará el impacto contra la pared.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SwingAmplitude = Oscillation(Inclination.roll); IF Noise.peak() AND SwingAmplitude > 80 THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Mago de Hielo y Trueno",
+    "originalIdeaDescription": "Inclinar arriba carga hielo (silencio). Inclinar abajo carga trueno (requiere ruido). Tambor dispara el trueno.",
+    "transformedIdeaTitle": "Hechicero del Clima",
+    "transformedIdeaDescription": "Invoca los elementos. Inclina hacia abajo para llamar a la tormenta. Debes gritar al cielo (Noise) para cargar el rayo. Cuando esté cargado, endereza el dispositivo de golpe para lanzar el rayo, acompañado de un estruendo de Tambor.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.pitch < -30 AND Noise.level > 70 THEN Charged=TRUE; IF Charged AND Inclination.pitch > 0 THEN Drum.play('Thunder')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Perros",
+    "originalIdeaDescription": "Dar orden verbal (Noise). Hacer gesto con la mano (Inclination). El tambor es el ladrido de respuesta.",
+    "transformedIdeaTitle": "Escuela de Cachorros",
+    "transformedIdeaDescription": "Enseña trucos a tu perro. Di '¡Siéntate!' (Noise) e inclina el dispositivo hacia atrás (señal visual). Si combinas la orden de voz y el gesto correctamente, el perro ladrará feliz (Tambor) y ganarás una galleta.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.detected() AND Inclination.pitch > 45 THEN Drum.play('Bark')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Guitarra de Aire con Percusión",
+    "originalIdeaDescription": "Inclinar cambia el acorde. Gritar rasguea las cuerdas (sonido distorsionado). Tambor marca el compás.",
+    "transformedIdeaTitle": "Rockstar Total",
+    "transformedIdeaDescription": "Toca un solo épico. La inclinación del 'mástil' (dispositivo) cambia la nota. Para que suene, tienes que gritar o cantar la nota al micrófono (Noise). El Tambor te acompañará automáticamente marcando el ritmo de fondo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Inclination.pitch); Volume = Noise.level; Drum.loop('RockBeat'); PlaySynth(Note, Volume)"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Explorador de Cuevas (Ecolocación)",
+    "originalIdeaDescription": "Inclinar para apuntar. Hacer ruido para 'ver'. El tambor devuelve el eco si hay pared.",
+    "transformedIdeaTitle": "Navegación por Sonar",
+    "transformedIdeaDescription": "Estás a oscuras en un submarino. Inclina el dispositivo para dirigir el sonar. Emite un 'Ping' con tu voz (Noise). Si hay un obstáculo en esa dirección, el Tambor devolverá un golpe seco. Si el camino está libre, habrá silencio.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "TargetDir = Inclination.heading; IF Noise.ping() THEN Dist = Scan(TargetDir); Drum.play('Pong', Delay=Dist)"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Juego de la Piñata",
+    "originalIdeaDescription": "El usuario tiene los ojos vendados (metafóricamente). Se le guía con ruido (aplausos). Inclina para golpear. Tambor suena al romper.",
+    "transformedIdeaTitle": "Rompe la Piñata",
+    "transformedIdeaDescription": "La piñata se mueve. Escucha los aplausos de tus amigos (Noise): si aplauden fuerte, estás cerca. Inclina el dispositivo para apuntar el palo y haz un movimiento seco. Si el ruido es alto (cerca) y golpeas, la piñata se rompe con un redoble de Tambor.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Proximity = Noise.level; IF Proximity > 80 AND Inclination.swing() THEN Drum.play('CandyFall')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Inclinar para guiar el avión. Ruido de motores aumenta al acercarse. Tambor al aterrizar.",
+    "transformedIdeaTitle": "Aterrizaje Forzoso",
+    "transformedIdeaDescription": "El avión tiene problemas. Guíalo a la pista inclinando el dispositivo como un joystick. Haz ruido de motor con la boca para mantener la potencia. Cuando la inclinación sea 0 (nivelado) y el ruido baje (cortar motor), el Tambor sonará el contacto con la pista.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.level() AND Noise.decrease() THEN Drum.play('Touchdown') ELSE Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Inclination", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Francotirador de Ventana",
+    "originalIdeaDescription": "Inclinar para hacer zoom/apuntar. Contener la respiración (Noise bajo) para estabilizar. Tambor dispara.",
+    "transformedIdeaTitle": "El Arquero Zen",
+    "transformedIdeaDescription": "Apunta tu arco al blanco lejano (Inclinación). Tu pulso tiembla si haces ruido. Debes contener la respiración y estar en silencio total (Noise < 5). Cuando estés estable, un movimiento rápido soltará la flecha y el Tambor sonará el impacto.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Stability = 100 - Noise.level; IF Stability > 90 AND Inclination.aimed() THEN Drum.play('Hit')"
+  }
+]

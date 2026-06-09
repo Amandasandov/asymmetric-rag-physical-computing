@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivelación Digital de Alta Precisión",
+    "originalIdeaDescription": "Esta idea consiste en crear una herramienta digital similar a un nivel de burbuja, utilizada en la construcción y carpintería. El dispositivo utiliza el sensor de inclinación para detectar si una superficie está perfectamente horizontal o vertical. El interruptor sirve para calibrar el dispositivo en una superficie de referencia conocida, estableciendo el punto cero. La lámpara actúa como el indicador visual principal, cambiando de color rojo a verde únicamente cuando el sensor detecta que la inclinación es exactamente cero grados.",
+    "transformedIdeaTitle": "El Arquitecto de Pirámides Egipcias",
+    "transformedIdeaDescription": "Los estudiantes asumen el papel de antiguos arquitectos encargados de construir la Gran Pirámide. Para que la estructura no se derrumbe, cada bloque de piedra debe estar perfectamente nivelado. Usando el sensor, deben programar una herramienta que ayude a los trabajadores: la luz debe brillar en verde intenso solo cuando la piedra está perfectamente plana. El botón sirve para 'bloquear' la piedra en su lugar una vez nivelada. Si la piedra está torcida, la luz roja advertirá del peligro de derrumbe inminente.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Reference = 0; IF Inclination.getX() == Reference THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores RGB Basado en Gestos",
+    "originalIdeaDescription": "Un dispositivo interactivo diseñado para enseñar teoría del color mediante el movimiento físico. Al inclinar el dispositivo hacia la izquierda o derecha (eje X), se ajusta la intensidad del canal rojo, y al inclinarlo hacia adelante o atrás (eje Y), se ajusta el canal azul. El interruptor funciona como un botón de 'congelar', permitiendo al usuario fijar un color específico que haya creado mezclando las inclinaciones, manteniendo la lámpara encendida en ese tono exacto para su estudio.",
+    "transformedIdeaTitle": "El Caldero del Pocionista Mágico",
+    "transformedIdeaDescription": "¡Clase de pociones! Los estudiantes deben crear el antídoto perfecto mezclando ingredientes mágicos. Al inclinar su 'caldero' (el sensor) en diferentes direcciones, agregan esencia de Rubí (Rojo) o Zafiro (Azul). El objetivo es encontrar el tono púrpura exacto que indica que la poción está lista. Cuando creen tener el color correcto, deben presionar el interruptor mágico para finalizar la mezcla. Si el color es incorrecto, la poción podría explotar (parpadear rápidamente).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RedVal = Map(Inclination.getX(), -90, 90, 0, 255); BlueVal = Map(Inclination.getY(), -90, 90, 0, 255); IF Switch.isPressed() THEN Lamp.setRGB(RedVal, 0, BlueVal)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma para Detección de Terremotos",
+    "originalIdeaDescription": "Este proyecto simula un sismógrafo sensible diseñado para detectar movimientos de tierra sutiles. El dispositivo permanece en reposo monitoreando constantemente los valores del sensor de inclinación. El interruptor se utiliza para armar el sistema de seguridad. Una vez armado, cualquier desviación significativa en los datos de inclinación, que simularía un temblor o vibración, activará la lámpara en modo de emergencia parpadeante para alertar a los ocupantes del edificio sobre el posible peligro sísmico.",
+    "transformedIdeaTitle": "Guardián del Templo Prohibido",
+    "transformedIdeaDescription": "Eres el guardián de un antiguo templo que protege un tesoro sagrado. Debes crear una trampa para detener a los ladrones de tumbas. El sistema se activa con un interruptor oculto. Si un ladrón intenta mover el tesoro (inclinando el sensor lo más mínimo), la 'maldición' se activa: la lámpara parpadea en rojo furioso para asustar al intruso. Los estudiantes deben calibrar la sensibilidad para que el viento no active la trampa, pero un ladrón sí.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND (abs(Inclination.getX()) > 5 OR abs(Inclination.getY()) > 5) THEN Lamp.blink('Red', Fast)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Aterrizaje de Módulo Lunar",
+    "originalIdeaDescription": "Un juego de simulación física donde el usuario debe controlar el descenso de una nave espacial. La inclinación del dispositivo controla la orientación de la nave. Si la nave se inclina demasiado (más de 15 grados en cualquier eje), se considera un aterrizaje fallido. La lámpara indica el estado de los propulsores y la seguridad del aterrizaje (Verde para seguro, Rojo para peligro). El interruptor activa los motores principales para iniciar la secuencia de descenso controlado.",
+    "transformedIdeaTitle": "Misión Apolo: Aterrizaje en la Luna",
+    "transformedIdeaDescription": "¡Houston, tenemos un desafío! Los estudiantes pilotan el módulo Eagle y deben aterrizar suavemente en la superficie lunar. Deben mantener la nave totalmente recta usando el sensor de inclinación mientras descienden. Si se inclinan demasiado, la nave se estrellará (Lámpara Roja). Deben presionar el interruptor para activar los retrocohetes justo antes de tocar el suelo. Si la nave está nivelada y los cohetes activos, la luz se pone verde: ¡El Águila ha aterrizado!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed(): IF Inclination.getAngle() < 10 THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación de Giro",
+    "originalIdeaDescription": "Este dispositivo emula el mecanismo de una caja fuerte de alta seguridad. En lugar de un teclado numérico, el usuario debe rotar el dispositivo a ángulos específicos (por ejemplo, 45 grados a la derecha, luego 30 a la izquierda) para desbloquearlo. La lámpara proporciona retroalimentación visual, cambiando de color a medida que el usuario se acerca al ángulo correcto. El interruptor se utiliza para confirmar la selección de cada número de la combinación.",
+    "transformedIdeaTitle": "El Ladrón de Bancos Maestro",
+    "transformedIdeaDescription": "Los estudiantes se convierten en expertos en seguridad probando una nueva bóveda bancaria. Deben programar la cerradura para que se abra solo con una secuencia secreta de movimientos. Primero, inclinar a la derecha hasta que la luz se ponga amarilla, luego presionar el interruptor. Después, inclinar a la izquierda hasta que la luz se ponga azul y confirmar. Si la secuencia es correcta, la luz verde indica que la bóveda está abierta y el dinero está seguro.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Step = 1; IF Step == 1 AND Inclination.getX() > 40 AND Switch.clicked() THEN Step = 2; Lamp.setColor('Yellow'); IF Step == 2 AND Inclination.getX() < -30 AND Switch.clicked() THEN Lamp.setColor('Green')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Señalización para Ciclistas",
+    "originalIdeaDescription": "Un prototipo de seguridad vial diseñado para ser montado en un casco de bicicleta o en la espalda de un ciclista. El sistema utiliza el acelerómetro para detectar la inclinación de la cabeza o el cuerpo del ciclista. Si se inclina hacia la izquierda, la lámpara parpadea en ese lado (simulada por color o patrón). El interruptor actúa como el botón de encendido general del sistema, asegurando que no gaste batería cuando no se está utilizando en un viaje.",
+    "transformedIdeaTitle": "Casco Inteligente del Futuro",
+    "transformedIdeaDescription": "Diseña el casco de bicicleta más seguro del mundo. Los estudiantes deben crear un sistema de luces direccionales automáticas. Cuando el ciclista inclina la cabeza hacia la izquierda para mirar el tráfico, el casco debe encender automáticamente una luz intermitente amarilla (izquierda) para avisar a los coches. Si inclina a la derecha, otra señal. El interruptor activa el modo nocturno, haciendo que la luz sea fija y blanca para iluminar el camino.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn(): Lamp.setColor('White'); IF Inclination.getX() < -20 THEN Lamp.blink('Yellow') ELSE IF Inclination.getX() > 20 THEN Lamp.blink('Orange')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Reconocimiento de Gestos",
+    "originalIdeaDescription": "Un juguete interactivo que permite al usuario realizar 'hechizos' mediante movimientos específicos. El sensor de inclinación rastrea la trayectoria del movimiento. Si el usuario realiza un gesto de 'golpe' hacia abajo seguido de una rotación, el sistema reconoce el patrón. El interruptor se mantiene presionado mientras se realiza el hechizo para capturar los datos. La lámpara se ilumina con un color específico asociado al hechizo realizado exitosamente (ej. rojo para fuego).",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Encantamientos",
+    "transformedIdeaDescription": "¡Bienvenidos a Hogwarts! Los estudiantes deben programar sus varitas. Para lanzar el hechizo 'Lumos', deben mantener presionado el botón mágico y levantar la varita hacia el cielo (inclinación vertical). Si lo hacen correctamente, la punta de la varita se iluminará con una luz blanca brillante. Si apuntan al suelo ('Nox'), la luz se apagará. Un movimiento brusco lateral podría lanzar chispas de colores aleatorios.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed(): IF Inclination.getY() > 60 THEN Lamp.turnOn('White') ELSE IF Inclination.getY() < -60 THEN Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Estabilidad para Cargas de Grúa",
+    "originalIdeaDescription": "Un sistema industrial simulado para operadores de grúas. El objetivo es mover una carga pesada sin que se balancee peligrosamente. El sensor de inclinación se coloca en la 'carga'. La lámpara actúa como un semáforo de seguridad: Verde si la carga está estable, Amarillo si hay un balanceo leve, y Rojo si el ángulo supera un umbral crítico. El interruptor se utiliza para activar el motor de elevación solo cuando la luz está en verde.",
+    "transformedIdeaTitle": "Operador de Grúa de Rascacielos",
+    "transformedIdeaDescription": "Estás construyendo el edificio más alto de la ciudad y hace mucho viento. Debes subir vigas de acero con tu grúa. La computadora de a bordo (tu programa) no te dejará subir la carga si se balancea demasiado. Los estudiantes deben programar la lógica: Si el sensor se mueve mucho de lado a lado, la luz roja de 'PELIGRO' se enciende y el botón de 'SUBIR' se desactiva. Solo cuando la viga está quieta (luz verde) pueden presionar el botón para trabajar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stability = abs(Inclination.getX()); IF Stability < 5 THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red'); IF Switch.isPressed() AND Lamp.color == 'Green' THEN WinGame()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Linterna con Zoom y Foco Variable",
+    "originalIdeaDescription": "Esta idea reinventa la linterna tradicional. En lugar de un anillo mecánico para enfocar la luz, el usuario inclina la linterna hacia arriba o hacia abajo para ampliar o reducir el haz de luz (simulado por la intensidad o el color de la lámpara). El interruptor funciona como un selector de modo, alternando entre modo de ajuste de foco y modo de iluminación fija, permitiendo al usuario configurar la luz perfecta para su entorno.",
+    "transformedIdeaTitle": "Explorador de Cavernas Profundas",
+    "transformedIdeaDescription": "Estás explorando una cueva oscura y necesitas ahorrar batería. Los estudiantes crean una linterna inteligente. Cuando apuntan la linterna hacia sus pies (inclinación abajo) para caminar, la luz se vuelve tenue y amplia para ver el suelo. Cuando apuntan hacia adelante (inclinación horizontal) para ver el camino, la luz se vuelve máxima potencia. El interruptor sirve para apagarla rápidamente si ven un murciélago para no asustarlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn(): Brightness = Map(Inclination.getY(), -90, 0, 20, 100); Lamp.setIntensity(Brightness)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto con Retroalimentación Visual",
+    "originalIdeaDescription": "Un juego clásico de habilidad donde el usuario debe guiar una bola virtual a través de un laberinto inclinando el tablero. Aunque no hay pantalla, la lámpara indica la proximidad a las 'paredes' o 'peligros'. Si la inclinación es muy pronunciada (la bola rueda muy rápido), la luz se intensifica en rojo advirtiendo de una caída. El interruptor sirve para reiniciar la posición de la bola al centro del tablero virtual después de perder.",
+    "transformedIdeaTitle": "Escape del Volcán",
+    "transformedIdeaDescription": "Imagina que una canica es un explorador huyendo de la lava dentro de un volcán. El suelo es inestable. Los estudiantes deben equilibrar el tablero. Si inclinan demasiado el sensor, el explorador corre demasiado rápido hacia el borde del cráter y la luz se pone roja brillante (¡Lava!). Deben mantener la luz en color verde (zona segura) mediante movimientos suaves. El botón resucita al explorador si cae a la lava.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = sqrt(Inclination.x^2 + Inclination.y^2); IF Speed > 50 THEN Lamp.setColor('Red') ELSE Lamp.setColor('Green'); IF Switch.clicked() THEN ResetGame()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca Digital",
+    "originalIdeaDescription": "Un dispositivo que imita una caña de pescar. El usuario espera con el dispositivo en posición horizontal. Cuando el sistema decide aleatoriamente que un pez ha picado (indicado por un parpadeo de la lámpara), el usuario debe tirar hacia arriba (inclinación brusca en Y) rápidamente. El interruptor se utiliza para 'lanzar' el sedal al inicio. El éxito depende del tiempo de reacción entre el parpadeo de la luz y el movimiento de inclinación.",
+    "transformedIdeaTitle": "Torneo de Pesca en Alta Mar",
+    "transformedIdeaDescription": "¡Día de pesca! Los estudiantes programan su propia caña de pescar electrónica. Primero, presionan el botón para lanzar el anzuelo al agua. Esperan... la luz parpadea suavemente en azul (el agua se mueve). De repente, la luz cambia a blanco brillante: ¡Un pez picó! Deben levantar el sensor rápidamente (inclinación hacia arriba) para atraparlo. Si tardan mucho, la luz se apaga y el pez escapa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF State == 'Waiting' AND RandomEvent() THEN State = 'Bite'; Lamp.flash('White'); IF State == 'Bite' AND Inclination.getY() > 45 THEN Lamp.setColor('Green') ELSE Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Dron de Rescate",
+    "originalIdeaDescription": "Un sistema de control remoto simplificado para un dron. La inclinación del dispositivo controla la dirección de vuelo (adelante, atrás, izquierda, derecha). La lámpara simula las luces de navegación del dron, cambiando de color según la dirección del movimiento para ayudar en la orientación. El interruptor funciona como el control de altitud: presionar para ascender, soltar para descender o mantener altura, añadiendo una capa de complejidad al control.",
+    "transformedIdeaTitle": "Piloto de Dron de Búsqueda y Rescate",
+    "transformedIdeaDescription": "Hay excursionistas perdidos en la montaña y tú eres el piloto del dron de rescate. Debes volar sobre el bosque. Inclina el sensor para mover el dron: adelante, atrás, izquierda o derecha. La luz del dron cambiará de color según hacia dónde vueles (Norte=Rojo, Sur=Blanco). Para elevarte y tener mejor vista, mantén presionado el botón turbo. Tu misión es mantener el vuelo estable mientras buscas señales.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN Altitude++; IF Inclination.getX() > 20 THEN Lamp.setColor('Red') ELSE IF Inclination.getX() < -20 THEN Lamp.setColor('White')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Fatiga del Conductor",
+    "originalIdeaDescription": "Un dispositivo de seguridad conceptual para prevenir accidentes. El sensor monitorea la posición de la cabeza del conductor. Si detecta movimientos bruscos de 'cabeceo' (signo de quedarse dormido) o una inclinación constante hacia abajo, activa una alerta. La lámpara emite destellos brillantes para despertar al conductor. El interruptor se utiliza para resetear la alarma y confirmar que el conductor está despierto y alerta.",
+    "transformedIdeaTitle": "Copiloto Alerta: ¡No te duermas!",
+    "transformedIdeaDescription": "Los estudiantes diseñan un sistema de seguridad para camioneros que conducen de noche. El sensor va en una gorra. Si el conductor baja la cabeza (se duerme), el sensor detecta la inclinación hacia adelante. El programa debe esperar 2 segundos (para no detectar falsas alarmas) y luego encender la luz intermitente y molesta para despertarlo. El conductor debe presionar el botón para apagar la alarma y demostrar que está bien.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.getY() < -45 FOR 2_Seconds THEN Lamp.strobe('White'); IF Switch.clicked() THEN Lamp.turnOff()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin de Luz",
+    "originalIdeaDescription": "Un instrumento musical experimental donde el sonido (o en este caso, la representación visual del sonido) se controla sin contacto físico directo de manipulación de teclas. La inclinación en el eje X controla el tono (color de la lámpara a través del espectro) y el eje Y controla el volumen (brillo). El interruptor permite cambiar entre diferentes escalas musicales o modos de visualización de colores (ej. arcoíris vs monocromático).",
+    "transformedIdeaTitle": "DJ de Discoteca Espacial",
+    "transformedIdeaDescription": "¡Fiesta en el espacio! Los estudiantes crean un controlador de luces para la pista de baile. Al mover el sensor de izquierda a derecha, cambian el color de las luces de la fiesta (de azul frío a rojo caliente). Al moverlo arriba y abajo, controlan la intensidad de la luz. El botón sirve para activar el modo 'Estroboscópico' para el momento cumbre de la canción. Deben sincronizar sus movimientos con el ritmo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Hue = Map(Inclination.getX(), -90, 90, 0, 360); Brightness = Map(Inclination.getY(), -90, 90, 0, 100); Lamp.setHSV(Hue, 100, Brightness); IF Switch.isOn() THEN StrobeMode()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Regadera para Plantas Virtuales",
+    "originalIdeaDescription": "Una actividad educativa sobre el cuidado de las plantas. El usuario inclina el dispositivo como si fuera una regadera. Al sobrepasar cierto ángulo, la 'cabeza' de la regadera (Lámpara) se ilumina en azul, simulando el flujo de agua. El tiempo que se mantiene inclinado determina cuánta agua recibe la planta. El interruptor se usa para cambiar entre diferentes plantas virtuales, cada una con necesidades de agua distintas.",
+    "transformedIdeaTitle": "Jardín Botánico Digital",
+    "transformedIdeaDescription": "Cuida de un jardín digital. Tienes una planta sedienta. Usa el sensor como una regadera: inclínalo para verter 'agua' (Luz azul). Si viertes muy poca agua (poco tiempo), la luz se pone amarilla (planta seca). Si viertes demasiada, se pone roja (planta ahogada). Si viertes la cantidad justa, la luz parpadea verde (planta feliz). Usa el botón para pasar a la siguiente maceta.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.getX() > 45 THEN WaterCounter++; Lamp.setColor('Blue'); IF Switch.clicked() THEN CheckHealth(WaterCounter)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras por Nerviosismo",
+    "originalIdeaDescription": "Un dispositivo lúdico que intenta detectar si alguien miente basándose en su capacidad para mantener el pulso firme. El sujeto sostiene el dispositivo mientras responde preguntas. El sensor detecta micro-inclinaciones y temblores. Si la variabilidad de la inclinación supera un umbral, la lámpara se enciende en rojo, indicando una 'mentira'. El interruptor se usa para reiniciar el sistema antes de cada nueva pregunta.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Los estudiantes construyen un detector de mentiras para interrogar a un sospechoso (¡un amigo!). El sospechoso debe sostener el sensor totalmente quieto mientras responde. Si está nervioso y le tiembla la mano, el sensor detectará las pequeñas variaciones de inclinación. Si el temblor es mucho, la luz roja se enciende: ¡MENTIRA! El botón reinicia la máquina para la siguiente pregunta difícil.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stability = StandardDeviation(Inclination.Values); IF Stability > Threshold THEN Lamp.setColor('Red') ELSE Lamp.setColor('Green'); IF Switch.pressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Gestual",
+    "originalIdeaDescription": "Un sistema de comunicación que traduce movimientos físicos en señales de luz codificadas. Una inclinación rápida hacia la derecha genera un punto (parpadeo corto), y una inclinación hacia la izquierda genera una raya (parpadeo largo). El interruptor se utiliza para separar letras o enviar el mensaje completo. La lámpara reproduce la secuencia de luz correspondiente al mensaje construido por los gestos del usuario.",
+    "transformedIdeaTitle": "El Telégrafo Secreto de los Espías",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados sin hablar. Los estudiantes crean un telégrafo gestual. Inclinar a la derecha hace que la lámpara haga un parpadeo corto (Punto). Inclinar a la izquierda hace un parpadeo largo (Raya). Combinando estos movimientos pueden deletrear SOS (... --- ...). El botón sirve para borrar el mensaje si se equivocan. ¡Aprende a comunicarte en silencio!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.getX() > 30 THEN Lamp.blink(Short) ELSE IF Inclination.getX() < -30 THEN Lamp.blink(Long); IF Switch.clicked() THEN ClearMessage()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Control de Catapulta Medieval",
+    "originalIdeaDescription": "Un simulador de física para lanzar proyectiles. El usuario ajusta el ángulo de trayectoria inclinando el dispositivo hacia atrás (eje Y). La lámpara cambia de intensidad para mostrar la tensión de la cuerda o la potencia acumulada. El interruptor actúa como el mecanismo de disparo. Al soltarlo, el sistema calcula si el proyectil da en el blanco basándose en el ángulo y la potencia seleccionados.",
+    "transformedIdeaTitle": "Asedio al Castillo: Maestro de Catapultas",
+    "transformedIdeaDescription": "¡Derriba las murallas del castillo enemigo! Eres el comandante de la catapulta. Inclina el sensor hacia atrás para elegir el ángulo de tiro perfecto (45 grados es lo ideal para llegar lejos). La luz se vuelve más brillante cuanto más tensas la catapulta. Cuando tengas el ángulo y la fuerza correctos, ¡presiona el botón para DISPARAR! Si calculaste bien la física, la luz parpadeará victoriosa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Angle = Inclination.getY(); Power = Inclination.getX(); IF Switch.released() THEN Fire(Angle, Power); IF HitTarget(Angle) THEN Lamp.animate('Victory')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Navegador de Brújula Solar",
+    "originalIdeaDescription": "Un dispositivo de orientación que utiliza la posición simulada del sol. Dependiendo de la hora del día (seleccionada por el interruptor), el usuario debe inclinar el dispositivo para apuntar a donde estaría el sol en el cielo. Si la inclinación coincide con la altura solar correcta para esa hora, la lámpara brilla en amarillo intenso (energía solar máxima). Es una herramienta para aprender sobre la trayectoria solar y orientación.",
+    "transformedIdeaTitle": "Cazadores de Energía Solar",
+    "transformedIdeaDescription": "Eres un ingeniero diseñando un panel solar inteligente. Para generar electricidad, el panel debe mirar directamente al sol. A medida que el 'sol' (el profesor o un compañero) se mueve, debes inclinar tu panel para seguirlo. Si apuntas bien, la lámpara brilla amarillo fuerte (¡Mucha energía!). Si apuntas mal, la luz se apaga. Usa el botón para cambiar entre modo 'Mañana', 'Mediodía' y 'Tarde'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TargetAngle = GetSunPosition(TimeMode); IF abs(Inclination.getY() - TargetAngle) < 10 THEN Lamp.setIntensity(100) ELSE Lamp.setIntensity(10); IF Switch.clicked() THEN NextTimeMode()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio de Yoga",
+    "originalIdeaDescription": "Un dispositivo 'wearable' (ponible) para ayudar en la práctica de yoga o ejercicios de equilibrio. Se coloca en la espalda o el pecho. El objetivo es mantener una postura específica. El usuario presiona el interruptor para establecer la postura objetivo. Si el usuario se desvía de esa inclinación inicial, la lámpara cambia suavemente de color (de azul calma a naranja advertencia) para guiarlo de vuelta a la postura correcta sin interrumpir su concentración.",
+    "transformedIdeaTitle": "Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Conviértete en un maestro de artes marciales o yoga. Coloca el sensor sobre tu cabeza (o pecho) e intenta mantenerte en una sola pierna. Presiona el botón para memorizar tu posición perfecta. Ahora cierra los ojos. Si empiezas a caerte o inclinarte, la luz cambiará de color para avisarte. El desafío: Mantener la luz en color 'Azul Zen' durante 30 segundos sin tocar el suelo con el otro pie.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() THEN Target = Inclination.getValues(); IF distance(Inclination, Target) > 15 THEN Lamp.setColor('Orange') ELSE Lamp.setColor('Blue')"
+  }
+]

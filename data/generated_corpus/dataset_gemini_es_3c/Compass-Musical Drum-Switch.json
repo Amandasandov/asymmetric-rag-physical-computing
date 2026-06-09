@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batería de los Puntos Cardinales",
+    "originalIdeaDescription": "Un instrumento musical que asigna un sonido de percusión diferente a cada punto cardinal (Norte, Sur, Este, Oeste). El usuario activa el sonido presionando el interruptor mientras apunta en la dirección deseada.",
+    "transformedIdeaTitle": "El DJ de la Rosa de los Vientos",
+    "transformedIdeaDescription": "¡Conviértete en un DJ que mezcla música usando el planeta Tierra! Los estudiantes programarán el sistema para que, al apuntar al Norte y presionar el botón, suene un bombo; al Este, una caja; y así sucesivamente. Deben moverse físicamente para crear el ritmo perfecto.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Compass.heading == 'North' THEN Drum.play('Kick') ELSE IF Compass.heading == 'East' THEN Drum.play('Snare')...)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Radar de Proximidad Sonora",
+    "originalIdeaDescription": "Un dispositivo que aumenta la frecuencia de un golpe de tambor a medida que la brújula se alinea más cerca de un objetivo específico (ej. 180 grados Sur). El interruptor enciende o apaga el radar.",
+    "transformedIdeaTitle": "El Detector de Tesoros Piratas",
+    "transformedIdeaDescription": "Estás buscando un tesoro enterrado exactamente al Sur. Los estudiantes crearán un detector de metales sonoro: cuando el interruptor esté activo, el tambor sonará lentamente si están lejos del Sur, y muy rápido (como un redoble) cuando apunten exactamente hacia el tesoro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn(): distance = abs(180 - Compass.heading); Drum.play('Tom', interval=distance*10)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Direccional",
+    "originalIdeaDescription": "Un juego donde el usuario debe girar el dispositivo a una serie de ángulos secretos secuenciales. El interruptor confirma la selección y el tambor suena 'éxito' si el ángulo es correcto o 'error' si no lo es.",
+    "transformedIdeaTitle": "La Bóveda Secreta del Banco",
+    "transformedIdeaDescription": "¡Eres un espía intentando abrir una bóveda! La combinación no son números, son direcciones. Primero apunta al Norte y presiona el botón, luego al Oeste y presiona. Si aciertas, el tambor hace un sonido de 'Ding', si fallas, suena una alarma de error.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed(): IF abs(Compass.heading - secretAngle) < 10 THEN Drum.play('Ding'); nextStage() ELSE Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo de Ritmo Variable",
+    "originalIdeaDescription": "Un metrónomo donde la velocidad (BPM) del ritmo de batería se controla girando el cuerpo (brújula). El interruptor inicia y detiene la reproducción del ritmo base.",
+    "transformedIdeaTitle": "El Tambor del Caminante Veloz",
+    "transformedIdeaDescription": "Crea un compañero de caminata inteligente. Si caminas hacia el Norte (cuesta arriba en el mapa imaginario), el ritmo es lento y pesado. Si giras hacia el Sur (cuesta abajo), el ritmo se acelera para correr. Usa el interruptor para empezar tu ejercicio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn(): bpm = map(Compass.heading, 0, 360, 60, 180); Drum.loop('BasicBeat', bpm)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ruleta de la Suerte Percusiva",
+    "originalIdeaDescription": "El usuario gira sobre sí mismo y presiona el interruptor para detenerse. Dependiendo del rango angular en el que se detenga, suena un efecto de batería aleatorio o un premio sonoro.",
+    "transformedIdeaTitle": "La Rueda de la Fortuna Musical",
+    "transformedIdeaDescription": "Un juego de azar para fiestas. Los estudiantes programan una ruleta invisible. Gira con los ojos cerrados y presiona el botón: si caes en el rango 'Noroeste', ganas un solo de batería épico; si caes en 'Sureste', suena un triste platillo roto.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Switch.press: IF Compass.heading > 0 AND Compass.heading < 90 THEN Drum.play('Win') ELSE Drum.play('Lose')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Desviación de Rumbo",
+    "originalIdeaDescription": "Herramienta de navegación que monitorea una dirección fija. Si la brújula detecta una desviación mayor a 15 grados, el tambor suena como alerta. El interruptor 'arma' el sistema.",
+    "transformedIdeaTitle": "El Piloto Automático Ruidoso",
+    "transformedIdeaDescription": "Imagina que pilotas un barco en la niebla y debes mantener el rumbo al Este (90°). Activa el piloto automático con el interruptor. Si tu mano tiembla y te desvías del rumbo, ¡la batería sonará fuertemente para avisarte que corrijas el timón!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND abs(Compass.heading - 90) > 15 THEN Drum.loop('AlarmBeat')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Secuenciador de Pasos en 360 Grados",
+    "originalIdeaDescription": "Permite al usuario grabar una secuencia rítmica. Apuntar a una dirección selecciona el instrumento (N=Bombo, S=Platillo) y el interruptor añade esa nota a la secuencia en bucle.",
+    "transformedIdeaTitle": "Compositor de Ritmos en 360 Grados",
+    "transformedIdeaDescription": "Convierte tu habitación en un estudio de grabación circular. Apunta a la ventana (Norte) para elegir el Bombo y presiona el botón para grabarlo. Apunta a la puerta (Sur) para elegir la Caja. ¡Construye tu propia canción moviéndote!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Switch.press: sound = getSoundFromAngle(Compass.heading); sequence.add(sound); Drum.playSequence(sequence)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Simon Dice Geográfico",
+    "originalIdeaDescription": "El sistema da una instrucción de audio o visual (no incluida, asumida lógica) y el usuario debe orientar la brújula a esa dirección y confirmar con el interruptor. El tambor indica acierto o error.",
+    "transformedIdeaTitle": "El Capitán Dice: ¡Al Norte!",
+    "transformedIdeaDescription": "Un juego de reflejos y orientación. El programa selecciona una dirección al azar (por ejemplo, Oeste). El estudiante debe girar rápidamente hacia el Oeste y presionar el botón. Si es rápido y preciso, suena un redoble de victoria; si no, un golpe sordo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = random(N, S, E, W); WAIT Switch.press; IF isInDirection(Compass.heading, target) THEN Drum.play('Success')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Direccional",
+    "originalIdeaDescription": "Genera sonidos ambientales de tormenta usando la batería. La intensidad depende de la dirección (Norte = Calma, Sur = Huracán). El interruptor activa relámpagos (platillazos).",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Crea una historia interactiva. Hacia el Norte el mar está tranquilo (silencio o golpes suaves). Al girar hacia el Sur, entras en la tormenta (redobles intensos). Usa el interruptor para simular el trueno de un relámpago en el momento dramático perfecto.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "intensity = map(Compass.heading, 0, 180, 0, 100); Drum.roll(intensity); IF Switch.pressed() THEN Drum.play('CrashCymbal')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batería Virtual Espacial",
+    "originalIdeaDescription": "Divide el espacio físico alrededor del usuario en zonas de instrumentos. El usuario configura dónde está cada tambor y usa el interruptor como la baqueta para golpear.",
+    "transformedIdeaTitle": "El Escenario Invisible",
+    "transformedIdeaDescription": "Los estudiantes diseñarán su propia batería invisible. Podrán decidir que entre 0 y 45 grados está su 'Hi-Hat' y entre 45 y 90 su 'Tom'. Para tocar, deben girar a esa zona y pulsar el interruptor como si golpearan el aire.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed(): IF Compass.heading < 45 THEN Drum.play('HiHat') ELSE IF Compass.heading < 90 THEN Drum.play('Tom')..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Centinela de Zona Prohibida",
+    "originalIdeaDescription": "El dispositivo actúa como un guardia. Si la brújula apunta hacia una 'zona prohibida' definida mientras el interruptor de vigilancia está encendido, suena una alarma de tambores.",
+    "transformedIdeaTitle": "El Centinela del Castillo",
+    "transformedIdeaDescription": "Protege la entrada de tu fuerte. Coloca el dispositivo apuntando a la puerta. Si alguien mueve la puerta (y el dispositivo gira) o cambia su orientación hacia la zona prohibida mientras el modo 'Guardia' (interruptor) está activo, ¡los tambores sonarán para despertar a los caballeros!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND (Compass.heading > 350 OR Compass.heading < 10) THEN Drum.loop('IntruderAlert')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Radar de Monstruos (Juego de Rol)",
+    "originalIdeaDescription": "El tambor simula un latido de corazón. La velocidad del latido aumenta cuando la brújula apunta hacia una coordenada 'enemiga' predefinida. El interruptor reinicia la posición del enemigo.",
+    "transformedIdeaTitle": "El Radar de Zombies",
+    "transformedIdeaDescription": "Estás en un apocalipsis zombie. Tu dispositivo detecta dónde se esconden. Gira lentamente... si el sonido del corazón (tambor) se acelera, ¡estás mirando directo al zombie! Usa el interruptor para 'limpiar' la zona y buscar otro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "proximity = 180 - abs(Compass.heading - zombieAngle); beatDelay = map(proximity, 0, 180, 1000, 100); Drum.play('Heartbeat', beatDelay)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de Capas Rítmicas",
+    "originalIdeaDescription": "Diferentes orientaciones activan diferentes capas de un ritmo complejo (ej. Norte=Base, Este=Añadir Platillos). El interruptor bloquea la capa actual para poder girar y buscar otra.",
+    "transformedIdeaTitle": "La Batidora de Sonidos",
+    "transformedIdeaDescription": "Aprende sobre composición musical. Mirando al Norte escuchas solo la base. Al girar al Este, escuchas la base más platillos. Los estudiantes programan cómo se suman los instrumentos según el ángulo, y usan el interruptor para dejar sonando una mezcla favorita.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "layers = checkAngleLayers(Compass.heading); IF Switch.isOff() THEN currentMix = layers; Drum.playMix(currentMix)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio y Postura",
+    "originalIdeaDescription": "Para ejercicios de equilibrio. El usuario debe mantener una orientación exacta. Si se desvía, el tambor toca a destiempo. El interruptor inicia la sesión de entrenamiento.",
+    "transformedIdeaTitle": "El Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Intenta quedarte perfectamente quieto como una estatua mirando al Norte. Activa el modo Zen con el interruptor. Si te balanceas o giras aunque sea un poco, el tambor romperá el silencio indicando que has perdido la concentración.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn(): IF abs(Compass.heading - targetHeading) > 5 THEN Drum.play('WobbleSound')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo Morse Direccional",
+    "originalIdeaDescription": "Permite enviar mensajes en código Morse usando el tambor (puntos y rayas) solo cuando se apunta a la estación receptora correcta. El interruptor actúa como la llave telegráfica.",
+    "transformedIdeaTitle": "Telégrafo de la Isla Desierta",
+    "transformedIdeaDescription": "Estás náufrago y ves un barco a lo lejos (en una dirección específica). Solo si apuntas tu dispositivo hacia el barco, el interruptor funcionará para enviar señales de SOS con el tambor. Si apuntas al mar vacío, no sonará nada.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == shipDirection THEN (IF Switch.pressed() THEN Drum.play('ShortBeat'))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Exploración de Ecos Virtuales",
+    "originalIdeaDescription": "Simula la acústica de una cueva. Dependiendo de la dirección, el 'eco' (repetición del tambor) cambia de delay. El interruptor emite el sonido original.",
+    "transformedIdeaTitle": "El Explorador de Cavernas",
+    "transformedIdeaDescription": "Simula que estás en una cueva oscura. Presiona el interruptor para gritar (golpe de tambor) y escucha. Si miras hacia una pared cercana (Norte), el eco es rápido. Si miras hacia el túnel profundo (Sur), el eco tarda más. ¡Usa el sonido para mapear la cueva!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Switch.press: Drum.play('Hit'); delayTime = map(Compass.heading, 0, 360, 100, 800); wait(delayTime); Drum.play('Echo')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sintonizador de Radio Fantasma",
+    "originalIdeaDescription": "Al girar la brújula se sintonizan 'estaciones' (patrones de batería). Hay estática (ruido aleatorio de batería) entre estaciones. El interruptor guarda la estación favorita.",
+    "transformedIdeaTitle": "Sintonizando la Radio Fantasma",
+    "transformedIdeaDescription": "Gira el dispositivo lentamente como un dial de radio antigua. Entre estaciones escucharás ruido (golpes aleatorios), pero si encuentras el ángulo exacto (ej. 90 grados), escucharás un ritmo de rock claro. Usa el interruptor para memorizar esa frecuencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF abs(Compass.heading - station1) < 5 THEN Drum.loop('Rock') ELSE Drum.play('RandomStatic')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Paneo de Audio",
+    "originalIdeaDescription": "Usa la brújula para controlar el balance de audio (imaginario, representado por tono de tambor) de izquierda a derecha. El interruptor cambia entre tipos de tambores.",
+    "transformedIdeaTitle": "Efecto Ping-Pong Musical",
+    "transformedIdeaDescription": "Experimenta con el sonido estéreo. Al girar a la izquierda (Oeste), el tambor suena grave; al girar a la derecha (Este), suena agudo. El interruptor permite cambiar el tipo de percusión para experimentar con diferentes sonidos mientras te mueves.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "pitch = map(Compass.heading, 270, 90, low, high); IF Switch.pressed() THEN changeInstrument(); Drum.play(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Columpio Musical Pendular",
+    "originalIdeaDescription": "El usuario se balancea en un columpio (o mueve el brazo en arco). Cada vez que la brújula pasa por el centro (Norte), suena un beat, creando ritmo con el movimiento. El interruptor cambia el sonido.",
+    "transformedIdeaTitle": "El Columpio Musical",
+    "transformedIdeaDescription": "¡Haz música con la gravedad! Mueve el dispositivo como un péndulo. Programa el sistema para que suene un bombo cada vez que pases por el centro (Norte). Intenta mantener un ritmo constante con tu propio movimiento y cambia el sonido con el interruptor.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF crossZero(Compass.heading) THEN Drum.play('Kick'); IF Switch.wasPressed() THEN nextSound()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Inverso",
+    "originalIdeaDescription": "La música (batería) suena mientras te mueves (cambia el rumbo de la brújula). Si te detienes (rumbo constante), la música para. El interruptor invierte la lógica.",
+    "transformedIdeaTitle": "La Danza que Genera Música",
+    "transformedIdeaDescription": "Aquí tú eres la fuente de energía de la banda. Mientras gires y cambies de dirección, la batería sonará con marcha. Si te quedas quieto en una dirección, la música muere. Usa el interruptor para jugar al modo inverso: ¡Quédate quieto para que suene!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "delta = abs(Compass.heading - lastHeading); IF delta > threshold THEN Drum.loop('March') ELSE Drum.stop()"
+  }
+]

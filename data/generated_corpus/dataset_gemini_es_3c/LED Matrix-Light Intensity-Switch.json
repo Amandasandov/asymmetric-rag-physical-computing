@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna Automática Inteligente",
+    "originalIdeaDescription": "Un sistema de iluminación que se activa automáticamente solo cuando está oscuro. El interruptor sirve como un control maestro para habilitar o deshabilitar el sistema automático, y el sensor de luz determina si la matriz LED debe encenderse.",
+    "transformedIdeaTitle": "El Guardián de la Noche",
+    "transformedIdeaDescription": "¡Crea tu propio monstruo amigable que brilla en la oscuridad! Programa al guardián para que duerma (matriz apagada) cuando hay luz, pero si apagas las luces de tu habitación, sus ojos brillantes (matriz LED) se abrirán para protegerte. Usa el interruptor para darle descanso durante el día.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light < 20 THEN Matrix.ShowIcon('Eyes') ELSE Matrix.Clear())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Luz para Plantas",
+    "originalIdeaDescription": "Un dispositivo para verificar si una planta está recibiendo suficiente luz solar. El interruptor inicia la medición y el sensor de luz compara el valor con un umbral ideal, mostrando una cara feliz o triste en la matriz.",
+    "transformedIdeaTitle": "El Girasol Digital",
+    "transformedIdeaDescription": "Ayuda a tus plantas a hablar. Construye un dispositivo que, al presionar el interruptor, analice si tu planta favorita tiene suficiente sol. Si el sensor detecta mucha luz, la matriz mostrará una sonrisa radiante; si está muy oscuro, mostrará una cara triste pidiendo sol.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light > 50 THEN Matrix.ShowIcon('Happy') ELSE Matrix.ShowIcon('Sad'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Caja Fuerte Fotosensible",
+    "originalIdeaDescription": "Un sistema de seguridad para una caja oscura. El interruptor arma la alarma. Si alguien abre la caja y entra luz (detectada por el sensor), la matriz LED parpadea una señal de advertencia.",
+    "transformedIdeaTitle": "La Caja Fuerte Anti-Espías",
+    "transformedIdeaDescription": "Protege tus secretos. Programa una alarma para tu caja de tesoros. Activa el sistema con el interruptor antes de cerrar la caja. Si un espía la abre y entra luz, la matriz LED debe mostrar una 'X' gigante parpadeante para alertarte del intruso.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light > 10 THEN Matrix.Blink('X', 500ms)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Faros de Automóvil Automáticos",
+    "originalIdeaDescription": "Simulación de un sistema de coche moderno. El interruptor actúa como el encendido del motor. Cuando el coche entra en un túnel (baja luz), la matriz LED se enciende automáticamente simulando los faros.",
+    "transformedIdeaTitle": "Conductor de Túneles",
+    "transformedIdeaDescription": "Eres el ingeniero de un coche futurista. Tu misión es programar los faros automáticos. Cuando enciendas el motor (interruptor) y pases por un túnel oscuro (cubre el sensor de luz), la matriz debe iluminarse para mostrar el camino.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light < 30 THEN Matrix.Fill() ELSE Matrix.Clear())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Criatura Tímida Interactiva",
+    "originalIdeaDescription": "Un personaje digital que reacciona a la luz. Si el interruptor lo despierta, la criatura se esconderá (apagará la matriz o mostrará ojos cerrados) si hay demasiada luz directa, prefiriendo la oscuridad.",
+    "transformedIdeaTitle": "El Vampiro Tímido",
+    "transformedIdeaDescription": "¡Crea a Drácula en tu dispositivo! A este vampiro no le gusta el sol. Si activas el interruptor para despertarlo y hay mucha luz, mostrará una cara asustada o se esconderá. Solo sonreirá en la matriz si cubres el sensor para crear oscuridad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light > 60 THEN Matrix.ShowIcon('Scared') ELSE Matrix.ShowIcon('Smile'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Eficiencia de Panel Solar",
+    "originalIdeaDescription": "Herramienta educativa que simula la carga solar. El interruptor activa el panel. La matriz LED llena más filas de píxeles cuanto mayor sea la intensidad de luz detectada.",
+    "transformedIdeaTitle": "Cargador de Energía Espacial",
+    "transformedIdeaDescription": "Tu nave espacial necesita energía solar. Activa los paneles con el interruptor y apunta el sensor hacia una luz. Programa la matriz LED para que actúe como una barra de carga: cuanta más luz recibas, más barras se llenarán en la pantalla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN Matrix.Graph(Light, 0, 100)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Secretos",
+    "originalIdeaDescription": "Un sistema que solo muestra información bajo luz brillante. El interruptor enciende el decodificador, y si la luz supera un umbral alto, la matriz revela un símbolo oculto.",
+    "transformedIdeaTitle": "Tinta Invisible Digital",
+    "transformedIdeaDescription": "Conviértete en un agente secreto. Programa tu dispositivo para que oculte un mensaje. Solo cuando el 'Escáner UV' (el interruptor) esté encendido y acerques una linterna (luz intensa) al sensor, la matriz revelará la clave secreta.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light > 80 THEN Matrix.ScrollText('HOLA') ELSE Matrix.Clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Ciclo Día/Noche",
+    "originalIdeaDescription": "Un visualizador ambiental. El interruptor inicia la simulación. Dependiendo de la luz ambiental, la matriz muestra un icono de Sol (luz alta) o de Luna (luz baja).",
+    "transformedIdeaTitle": "Ventana Meteorológica Mágica",
+    "transformedIdeaDescription": "Crea una ventana inteligente. Si activas el interruptor, el dispositivo mirará hacia afuera. Si detecta mucha luz, dibujará un sol brillante en la matriz. Si tapas el sensor simulando la noche, aparecerá una luna creciente.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light > 50 THEN Matrix.ShowImage('Sun') ELSE Matrix.ShowImage('Moon'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ayudante de Fotografía",
+    "originalIdeaDescription": "Dispositivo para verificar condiciones de luz antes de una foto. El interruptor simula el obturador a medio presionar. Si la luz es muy baja, la matriz advierte 'OSCURO'.",
+    "transformedIdeaTitle": "Asistente de Selfies",
+    "transformedIdeaDescription": "¡Toma la foto perfecta! Programa tu asistente de cámara. Al presionar el interruptor para preparar la foto, el sensor medirá la luz. Si está demasiado oscuro para una selfie, la matriz mostrará una 'X' roja; si la luz es perfecta, mostrará un 'Ok'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light < 30 THEN Matrix.ShowIcon('No') ELSE Matrix.ShowIcon('Yes'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Faro de Costa Automático",
+    "originalIdeaDescription": "Modelo de faro funcional. El interruptor activa el mecanismo de rotación. Cuando anochece (luz baja), la matriz muestra un patrón de luz giratoria para guiar barcos.",
+    "transformedIdeaTitle": "El Faro del Puerto",
+    "transformedIdeaDescription": "Los barcos necesitan tu ayuda para no chocar en la oscuridad. Construye un faro que, al activar el sistema (interruptor), detecte cuando cae la noche. Si el sensor de luz marca oscuridad, la matriz debe mostrar un haz de luz girando.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON AND Light < 20 THEN Matrix.PlayAnimation('RotatingBeacon')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Sombras para Teatro",
+    "originalIdeaDescription": "Sistema para juegos de sombras. El interruptor habilita el modo juego. Cuando una sombra pasa sobre el sensor (baja luz rápida), la matriz cambia de personaje o escenario.",
+    "transformedIdeaTitle": "Teatro de Marionetas Digital",
+    "transformedIdeaDescription": "Haz magia con tus manos. Activa el escenario con el interruptor. Cuando pases tu mano sobre el sensor creando una sombra, la matriz cambiará instantáneamente el decorado o el personaje mostrado, permitiéndote contar una historia interactiva.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light < PrevLight - 10 THEN Matrix.NextImage())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Despertador Solar Visual",
+    "originalIdeaDescription": "Alarma silenciosa basada en luz. El interruptor 'arma' la alarma por la noche. Cuando sale el sol y la luz sube, la matriz comienza a parpadear para despertar al usuario.",
+    "transformedIdeaTitle": "Despertador del Amanecer",
+    "transformedIdeaDescription": "Despierta con la energía del sol. Antes de dormir, activa tu alarma con el interruptor. Programa el dispositivo para que, cuando el sol salga por tu ventana e ilumine el sensor, la matriz comience a mostrar una animación de amanecer para despertarte suavemente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light > Threshold THEN Matrix.PlayAnimation('Sunrise')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Ahorro de Energía",
+    "originalIdeaDescription": "Demostración de domótica ecológica. El interruptor es el sistema central. Si hay suficiente luz natural, la matriz (simulando una bombilla) se apaga para ahorrar energía.",
+    "transformedIdeaTitle": "La Casa Eco-Amigable",
+    "transformedIdeaDescription": "Salva el planeta ahorrando energía. Programa una casa inteligente donde, si activas el sistema principal y entra mucha luz por la ventana, la bombilla de la sala (la matriz LED) se apague automáticamente. Si se nubla, debe encenderse de nuevo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light > 60 THEN Matrix.Off() ELSE Matrix.On())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Pez Abisal de Profundidad",
+    "originalIdeaDescription": "Simulación biológica de un pez linterna. El interruptor da vida al pez. Solo en condiciones de oscuridad extrema (luz muy baja), la matriz enciende un único punto brillante (el señuelo).",
+    "transformedIdeaTitle": "El Pez Linterna del Abismo",
+    "transformedIdeaDescription": "Sumérgete en lo profundo del océano. Crea un pez linterna que nada en la oscuridad. Actívalo con el interruptor. Cuando apagues todas las luces (simulando el fondo del mar), la matriz debe encender una pequeña luz para atraer a sus presas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON AND Light < 10 THEN Matrix.Pixel(3,3, ON)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Receptor de Código Morse Óptico",
+    "originalIdeaDescription": "Comunicación mediante luz. El interruptor habilita el modo escucha. Los pulsos de luz intensa se traducen en puntos o rayas en la matriz LED.",
+    "transformedIdeaTitle": "Telégrafo de Linterna",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando una linterna. Activa el receptor con el interruptor. Programa el sensor para que cada vez que detecte un flash de luz, dibuje un punto en la matriz. ¡Podrás escribir en código Morse!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON AND Light > HighThreshold THEN Matrix.PlotNextPixel()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Frasco de Luciérnagas Virtuales",
+    "originalIdeaDescription": "Juguete digital. El interruptor 'abre' el frasco. Cuando el ambiente está oscuro, la matriz muestra píxeles parpadeando aleatoriamente imitando luciérnagas.",
+    "transformedIdeaTitle": "Cazador de Luciérnagas",
+    "transformedIdeaDescription": "Captura la magia del bosque. Construye un frasco digital que, al activarse con el interruptor y estar en la oscuridad, muestre pequeñas luces (luciérnagas) apareciendo y desapareciendo aleatoriamente en la matriz LED.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light < 30 THEN Matrix.RandomPixelBlink()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Modo Cine Automático",
+    "originalIdeaDescription": "Utilidad para salas de TV. El interruptor inicia el modo película. Si las luces están encendidas (luz alta), la matriz muestra un mensaje de 'APAGAR LUCES' o un icono de palomitas tachado.",
+    "transformedIdeaTitle": "Cine en Casa",
+    "transformedIdeaDescription": "¡Es hora de la película! Pero no puedes empezar si hay mucha luz. Programa tu control de cine (interruptor) para que verifique la sala. Si detecta luz, la matriz debe mostrar un aviso parpadeante para que todos apaguen las luces antes de empezar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON AND Light > 20 THEN Matrix.ScrollText('SILENCIO Y OSCURIDAD')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telescopio Espacial",
+    "originalIdeaDescription": "Simulador de observación estelar. El interruptor abre la lente. Solo cuando la luz es cercana a cero (oscuridad total), la matriz muestra un campo de estrellas estático o centelleante.",
+    "transformedIdeaTitle": "Explorador de Galaxias",
+    "transformedIdeaDescription": "Convierte tu habitación en un observatorio. Activa tu telescopio con el interruptor. Para ver las estrellas, debes conseguir oscuridad total. Solo entonces, la matriz LED se llenará de puntos brillantes simulando una galaxia lejana.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light < 5 THEN Matrix.ShowPattern('Stars')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Escondite con Luz",
+    "originalIdeaDescription": "Juego de búsqueda. El interruptor inicia la ronda. La matriz muestra una barra que crece cuanto más se acerca el dispositivo a una fuente de luz (caliente/frío).",
+    "transformedIdeaTitle": "Busca la Luz",
+    "transformedIdeaDescription": "Juega a 'frío o caliente' usando luz. Una persona esconde una linterna encendida. Tú activas el buscador con el interruptor y caminas. La matriz te guiará: se llenará más cuanto más te acerques a la luz oculta.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Matrix.ShowBarGraph(Light)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Clima Nublado",
+    "originalIdeaDescription": "Estación meteorológica básica. El interruptor enciende la estación. El sensor detecta variaciones. Luz media/baja constante se interpreta como nublado, mostrando una nube en la matriz.",
+    "transformedIdeaTitle": "El Meteorólogo Casero",
+    "transformedIdeaDescription": "¿Necesitas paraguas? Construye una estación climática. Enciéndela con el interruptor y colócala cerca de la ventana. Si la luz es tenue (como en un día gris), la matriz mostrará una nube; si es brillante, mostrará un sol.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN (IF Light < 40 THEN Matrix.ShowIcon('Cloud') ELSE Matrix.ShowIcon('Sun'))"
+  }
+]

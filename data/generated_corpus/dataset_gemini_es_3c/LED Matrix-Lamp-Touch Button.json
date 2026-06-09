@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Peatonal Interactivo Manual",
+    "originalIdeaDescription": "Un sistema de control de tráfico donde el usuario presiona el botón para solicitar el paso. La Lámpara cambia de verde a rojo para los autos, y la Matriz LED muestra una figura de 'caminar' o una cuenta regresiva para el peatón.",
+    "transformedIdeaTitle": "El Guardián del Cruce Escolar",
+    "transformedIdeaDescription": "Diseña un sistema de seguridad para el cruce de tu escuela. Los estudiantes deben programar el botón para detener el tráfico (Lámpara Roja) y mostrar una señal segura de 'Adelante' en la Matriz para que los niños crucen a salvo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.isPressed() THEN Lamp.setColor(Red) AND LEDMatrix.show('Walk_Icon') ELSE Lamp.setColor(Green) AND LEDMatrix.show('Stop_Icon')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "La lámpara se enciende en un color aleatorio y el usuario debe presionar el botón lo más rápido posible. La matriz LED muestra el tiempo de reacción o una marca de verificación si fue lo suficientemente rápido.",
+    "transformedIdeaTitle": "Desafío de Reflejos Ninja",
+    "transformedIdeaDescription": "¡Entrena tus reflejos como un ninja! Cuando la Lámpara brille repentinamente, presiona el botón al instante. Si eres rápido, la Matriz te mostrará una estrella shuriken; si eres lento, una tortuga.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.on(RandomTime); IF Button.pressedWithin(1sec) THEN LEDMatrix.show('Star') ELSE LEDMatrix.show('Turtle')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lámpara de Humor con Emojis",
+    "originalIdeaDescription": "Al presionar el botón, el sistema alterna entre diferentes estados de ánimo. La Lámpara cambia de color según la emoción (ej. azul para tristeza, amarillo para alegría) y la Matriz muestra la cara correspondiente.",
+    "transformedIdeaTitle": "El Espejo de las Emociones",
+    "transformedIdeaDescription": "Crea un dispositivo que exprese cómo te sientes sin hablar. Programa el botón para cambiar entre 'Feliz' (Luz Amarilla + Sonrisa) y 'Enojado' (Luz Roja + Ceño fruncido) para comunicar tu estado de ánimo a tus padres.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Count = 0; ON Button.press: Count++; IF Count%2==0 THEN SetHappyMode() ELSE SetAngryMode()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de Lavado de Dientes",
+    "originalIdeaDescription": "Un dispositivo para el baño. Al tocar el botón, comienza una cuenta regresiva de 2 minutos en la Matriz LED mientras la Lámpara parpadea suavemente, indicando cuándo terminar.",
+    "transformedIdeaTitle": "El Entrenador de Sonrisas Brillantes",
+    "transformedIdeaDescription": "¡Haz que cepillarse los dientes sea divertido! Construye un temporizador que, al presionar el botón, inicie una cuenta atrás visual en la Matriz. La Lámpara cambiará de azul a verde cuando tus dientes estén perfectamente limpios.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Button.press: Lamp.blink(Blue); LEDMatrix.countdown(120); END: Lamp.setColor(Green) AND LEDMatrix.show('Smile')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Votación Binaria",
+    "originalIdeaDescription": "Un sistema para votar 'Sí' o 'No'. Un toque corto vota 'Sí' (Verde/Check), un toque largo vota 'No' (Rojo/X). La matriz confirma la selección visualmente.",
+    "transformedIdeaTitle": "La Máquina de Votación del Club Secreto",
+    "transformedIdeaDescription": "Tu club necesita tomar decisiones rápidas. Programa una máquina de votación: un toque rápido muestra un 'Sí' en la Matriz y luz verde; mantener presionado muestra un 'No' y luz roja. ¡Democracia digital!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.pressDuration() < 1sec THEN VoteYes() ELSE VoteNo()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Al activar el botón, el sistema simula una tormenta. La Matriz LED muestra gotas de lluvia cayendo y la Lámpara parpadea aleatoriamente en blanco brillante simulando relámpagos.",
+    "transformedIdeaTitle": "Creador de Tormentas Portátil",
+    "transformedIdeaDescription": "Conviértete en el dios del clima. Programa el botón para desatar una tormenta digital: la Matriz debe mostrar lluvia cayendo mientras la Lámpara crea relámpagos estroboscópicos aleatorios.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Button.isActive(): LEDMatrix.animate('Rain') AND Lamp.strobe(White, RandomInterval)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz Nocturna con Estrellas",
+    "originalIdeaDescription": "Una lámpara de noche para niños. El botón enciende la Lámpara en un tono cálido y tenue, y activa una animación lenta de estrellas parpadeando en la Matriz LED.",
+    "transformedIdeaTitle": "Proyector de Sueños Galácticos",
+    "transformedIdeaDescription": "Ayuda a tu hermano menor a dormir sin miedo. Crea una luz nocturna que, al tocarse, ilumine suavemente la habitación y muestre un cielo estrellado en movimiento en la Matriz para tener dulces sueños.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Button.press: Lamp.setBrightness(20%); Lamp.setColor(WarmWhite); LEDMatrix.animate('TwinklingStars')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Disco",
+    "originalIdeaDescription": "Modo fiesta activado por botón. Cada vez que se presiona el botón, cambia el patrón de luces en la Matriz (líneas, cuadros) y el color de la Lámpara, simulando una pista de baile.",
+    "transformedIdeaTitle": "DJ de Luces de Fiesta",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Programa el sistema para que cada vez que toques el botón, cambie el 'ritmo visual': nuevos colores locos en la Lámpara y patrones de baile diferentes en la Matriz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Variable patternIndex; ON Button.press: patternIndex++; ChangeLampColor(patternIndex); ChangeMatrixPattern(patternIndex)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Visual",
+    "originalIdeaDescription": "El botón actúa como un telégrafo. Al presionarlo, la Lámpara se enciende y la Matriz muestra un punto o una raya dependiendo de la duración, permitiendo enviar mensajes.",
+    "transformedIdeaTitle": "Telégrafo de Espías Aliados",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu equipo. Programa el botón para que funcione como un telégrafo: pulsaciones cortas dibujan puntos y largas dibujan rayas en la Matriz, mientras la lámpara envía la señal luminosa.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.pressed(): Lamp.on(); measureTime(); ON Release: IF time < 0.3s THEN Matrix.add('.') ELSE Matrix.add('-')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Oráculo Mágico de Respuesta",
+    "originalIdeaDescription": "Inspirado en la Bola 8 Mágica. El usuario hace una pregunta y presiona el botón. La Lámpara cicla colores místicos y la Matriz muestra 'SI' o 'NO' aleatoriamente.",
+    "transformedIdeaTitle": "La Adivina Digital",
+    "transformedIdeaDescription": "Construye una máquina que prediga el futuro. Haz una pregunta, presiona el botón mágico y espera mientras las luces giran misteriosamente hasta que la Matriz revele tu destino: ¿SÍ o NO?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Button.press: Lamp.cycleColors(Mystic); Wait(2s); RandomResult = Random(0,1); IF RandomResult==1 THEN Matrix.text('SI') ELSE Matrix.text('NO')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma Silenciosa de Intrusos",
+    "originalIdeaDescription": "Un sistema de seguridad. Si se presiona el botón (simulando un sensor de puerta), la Lámpara parpadea en rojo brillante y la Matriz muestra un icono de 'OJO' vigilante.",
+    "transformedIdeaTitle": "Trampa para Intrusos de Habitacion",
+    "transformedIdeaDescription": "Protege tu habitación de hermanos curiosos. Coloca el botón en la puerta. Si alguien lo toca al entrar, la Lámpara debe parpadear en rojo alerta y la Matriz mostrará un ojo gigante indicando que han sido detectados.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isPressed() THEN Lamp.blink(Red, Fast) AND LEDMatrix.show('Eye_Icon')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Carga de Batería Simulado",
+    "originalIdeaDescription": "Al mantener presionado el botón, se simula la carga de energía. La Matriz llena una barra de progreso píxel por píxel y la Lámpara se intensifica hasta ponerse verde al 100%.",
+    "transformedIdeaTitle": "Recarga de Energía del Superhéroe",
+    "transformedIdeaDescription": "Eres Iron Man recargando su traje. Mantén presionado el botón para cargar energía. Debes programar la Matriz para llenar la barra de energía y hacer que la Lámpara brille al máximo cuando estés listo para volar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Button.held(): IncreaseBrightness(); FillMatrixRow(); IF Full THEN Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de Respiración para Meditación",
+    "originalIdeaDescription": "Ayuda a calmarse. Al tocar el botón, inicia una secuencia donde la Matriz muestra un círculo expandiéndose/contrayéndose y la Lámpara aumenta/disminuye brillo para guiar la respiración.",
+    "transformedIdeaTitle": "El Maestro Zen de Bolsillo",
+    "transformedIdeaDescription": "Diseña una herramienta para calmar la ansiedad antes de un examen. Al tocar el botón, la luz debe brillar y desvanecerse suavemente en sincronía con una animación en la Matriz para guiar una respiración profunda y relajante.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Button.press: LOOP 5 times { Lamp.fadeUp(4s) + Matrix.expandCircle(); Lamp.fadeDown(4s) + Matrix.shrinkCircle() }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lanzamiento de Cohete Espacial",
+    "originalIdeaDescription": "Secuencia de despegue. El botón inicia una cuenta regresiva (10-0) en la Matriz. Al llegar a cero, la Lámpara simula fuego (naranja/rojo parpadeante) y la Matriz muestra una flecha hacia arriba.",
+    "transformedIdeaTitle": "Control de Misión: Despegue a Marte",
+    "transformedIdeaDescription": "¡3, 2, 1, Despegue! Programa la secuencia de lanzamiento de tu cohete. Al presionar el botón rojo, inicia la cuenta regresiva en la pantalla y enciende los motores (luz naranja vibrante) al llegar a cero.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Button.press: FOR i=3 to 1 { Matrix.show(i); Wait(1s) }; Matrix.show('ArrowUp'); Lamp.flicker(Orange)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Tamagotchi",
+    "originalIdeaDescription": "Una mascota simple. La Matriz muestra una cara. Si no se presiona el botón en cierto tiempo, la cara se pone triste y la lámpara azul. Al presionar, se pone feliz y la lámpara amarilla.",
+    "transformedIdeaTitle": "Cuida a tu Pixel-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital necesita amor. Si no juegas con ella (presionando el botón), se pondrá triste y la luz se volverá azul fría. ¡Presiona el botón para alimentarla y verla sonreír con una luz cálida!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Timer++; IF Timer > Limit THEN ShowSadFace() AND Lamp(Blue); IF Button.press() THEN Timer=0 AND ShowHappyFace() AND Lamp(Yellow)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria de Colores",
+    "originalIdeaDescription": "La matriz muestra una letra que representa un color (R, G, B). El usuario debe tocar el botón cuando la Lámpara (que cambia cíclicamente) coincida con el color mostrado.",
+    "transformedIdeaTitle": "Cazador de Colores Coincidentes",
+    "transformedIdeaDescription": "La Matriz te dará una misión: 'R' (Rojo). La Lámpara cambiará de colores rápidamente. ¡Presiona el botón exactamente cuando la lámpara sea Roja para ganar puntos! Si fallas, pierdes una vida.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Random(R,G,B); Matrix.show(Target); Lamp.cycleColors(); IF Button.press() AND Lamp.Color == Target THEN Score++ ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna con Modos Seleccionables",
+    "originalIdeaDescription": "Una linterna inteligente. Un toque enciende la Lámpara (blanca). Dos toques cambia a modo lectura (luz cálida). Tres toques activa modo SOS. La Matriz indica el modo actual (1, 2, 3).",
+    "transformedIdeaTitle": "La Super Linterna de Explorador",
+    "transformedIdeaDescription": "Prepárate para acampar. Programa una linterna multiuso: 1 clic para luz brillante (explorar), 2 clics para luz suave (leer en la carpa), 3 clics para señal de emergencia SOS. La Matriz te dice en qué modo estás.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Clicks = CountClicks(); IF Clicks==1 THEN Lamp(White)+Matrix(1); IF Clicks==2 THEN Lamp(Warm)+Matrix(2); IF Clicks==3 THEN Lamp(SOS)+Matrix(SOS)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Dado Electrónico con Efectos",
+    "originalIdeaDescription": "Reemplazo de dados. Al presionar el botón, la Matriz 'rueda' números rápidamente y se detiene en uno al azar. La Lámpara parpadea en diferentes colores durante el rodaje y se fija al final.",
+    "transformedIdeaTitle": "El Dado de la Suerte Brillante",
+    "transformedIdeaDescription": "No pierdas más los dados de tus juegos de mesa. Crea un dado digital: presiona el botón para 'agitarlo'. La Matriz mostrará números pasando rápido y la luz parpadeará hasta detenerse en tu número de la suerte.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Button.press: Loop 10 times { DisplayRandom(1-6); Lamp.RandomColor(); Wait(Short) }; ShowFinalResult()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual para Músicos",
+    "originalIdeaDescription": "Ayuda para mantener el ritmo. El botón establece el tempo (tap tempo). La Matriz muestra una barra oscilante de izquierda a derecha y la Lámpara parpadea en cada 'beat'.",
+    "transformedIdeaTitle": "Asistente de Banda de Rock",
+    "transformedIdeaDescription": "¡Mantén el ritmo de la banda! Programa un metrónomo donde marques el ritmo golpeando el botón dos veces. Luego, la Matriz y la Lámpara deben seguir ese ritmo para que todos toquen sincronizados.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "TimeDiff = TimeBetween(Press1, Press2); LOOP { Lamp.flash(); Matrix.animateMetronome(); Wait(TimeDiff) }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Turnos para Clases",
+    "originalIdeaDescription": "Gestiona colas. Cada vez que se presiona el botón, el número en la Matriz aumenta en uno y la Lámpara parpadea brevemente para llamar la atención del siguiente en la fila.",
+    "transformedIdeaTitle": "El Gestor de Filas de la Cafetería",
+    "transformedIdeaDescription": "Hay mucho caos en la fila de la merienda. Crea un sistema de turnos. Cada vez que un estudiante sea atendido, el encargado presiona el botón, la luz avisa '¡Siguiente!' y la pantalla muestra el nuevo número de turno.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Variable Turn = 0; ON Button.press: Turn = Turn + 1; LEDMatrix.show(Turn); Lamp.blink(White, 0.5s)"
+  }
+]

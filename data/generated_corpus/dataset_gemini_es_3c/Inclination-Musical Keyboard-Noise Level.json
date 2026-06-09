@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Instrumento de Viento Virtual",
+    "originalIdeaDescription": "Un sistema que simula un instrumento de viento. El usuario debe soplar cerca del micrófono (sensor de ruido) para activar el sonido, mientras inclina el dispositivo hacia arriba o hacia abajo para cambiar la nota musical que se está reproduciendo en la escala.",
+    "transformedIdeaTitle": "La Flauta Mágica de los Elementos",
+    "transformedIdeaDescription": "Los estudiantes crearán una 'flauta mágica' para convocar a los espíritus del bosque. Deberán programar el dispositivo para que solo suene cuando soplen (ruido), y la melodía cambie según si apuntan al cielo (agudos) o a la tierra (graves). Aprenderán sobre umbrales de sonido y mapeo de variables.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN PlayNote(Map(Inclination.Y, -90, 90, C4, C5)) ELSE StopNote()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Sísmica y Acústica",
+    "originalIdeaDescription": "Un dispositivo de seguridad diseñado para detectar intrusos o terremotos. Si el dispositivo se inclina (movimiento físico) o detecta un sonido fuerte (romper un vidrio), activa una secuencia de notas de alerta en el teclado musical.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Prohibido",
+    "transformedIdeaDescription": "Los alumnos deben proteger un diamante virtual. Si alguien intenta levantar el cofre (inclinación) o hace demasiado ruido al acercarse, la alarma debe sonar. Este desafío introduce la lógica booleana usando el operador 'OR' para múltiples condiciones de activación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 10 OR NoiseLevel > 70 THEN PlaySequence(AlarmNotes)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sintetizador de Estilo Theremin",
+    "originalIdeaDescription": "Creación de un instrumento musical experimental donde el eje X de la inclinación controla el tono de la nota y el nivel de ruido ambiental controla la duración o el volumen simulado (intermitencia) de la nota.",
+    "transformedIdeaTitle": "Compositor de Música Alienígena",
+    "transformedIdeaDescription": "Imagina que eres un músico de Marte. Tu instrumento no se toca con teclas, sino moviéndolo en el aire. Los estudiantes programarán el dispositivo para que la inclinación seleccione la nota, y gritar o cantar fuerte cambie el ritmo de la música extraterrestre.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Inclination.X); Rhythm = Map(NoiseLevel); Play(Note, Rhythm)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Silencioso",
+    "originalIdeaDescription": "Un juego de destreza donde el usuario debe mantener el dispositivo perfectamente plano. Si se inclina, suena una nota de error grave. Si el usuario hace ruido por la frustración, suena una nota de error aguda.",
+    "transformedIdeaTitle": "Operación Ninja Sigiloso",
+    "transformedIdeaDescription": "Los estudiantes entrenan para ser ninjas. Deben transportar el dispositivo sin inclinarlo y en absoluto silencio. Si fallan en el equilibrio, suena un 'Gong' grave; si hacen ruido, suena un 'Pitido' agudo. El objetivo es mantener el silencio total.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination > 5 THEN Play(LowNote); IF NoiseLevel > 40 THEN Play(HighNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Sonoros",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Un movimiento brusco de inclinación prepara el hechizo, y una palabra clave dicha en voz alta (pico de ruido) libera el sonido del hechizo a través del teclado.",
+    "transformedIdeaTitle": "Escuela de Hechicería: Varitas Sonoras",
+    "transformedIdeaDescription": "¡Clase de Encantamientos! Los estudiantes programan su varita. Primero deben hacer el gesto correcto (inclinar la varita) y luego pronunciar el hechizo fuerte (ruido) para que el teclado reproduzca el sonido mágico de 'éxito'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 45 AND NoiseLevel > 60 THEN PlayArpeggio(C_Major)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Un dispositivo que monitorea el entorno de una cuna. Si está oscuro y silencioso, no hace nada. Si detecta ruido (llanto) y movimiento (inclinación de la cuna/colchón), toca una canción de cuna suave.",
+    "transformedIdeaTitle": "La Nana Automática del Osito",
+    "transformedIdeaDescription": "Diseña un juguete inteligente para ayudar a dormir a un osito. Si el osito se mueve inquieto (inclinación) y empieza a llorar (ruido), el sistema debe tocar automáticamente una melodía relajante para calmarlo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 40 AND Inclination.Change > 5 THEN PlayMelody(Lullaby)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche Deportivo",
+    "originalIdeaDescription": "Usa la inclinación del dispositivo como pedal de acelerador para subir la escala musical (simulando RPM) y el sensor de ruido para activar la bocina si el usuario grita o aplaude.",
+    "transformedIdeaTitle": "Piloto de Carreras Sónico",
+    "transformedIdeaDescription": "Convierte tu mano en el pedal de un coche de Fórmula 1. Al inclinar hacia adelante, el motor 'acelera' (las notas suben de tono). Si hay un obstáculo, ¡aplaude fuerte para tocar la bocina! Enseña mapeo continuo de variables.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pitch = Map(Inclination.X); Play(Pitch); IF NoiseLevel > 80 THEN Play(HornSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva",
+    "originalIdeaDescription": "Una mascota digital que reacciona a cómo la tratan. Si la inclinan suavemente, ronronea (notas bajas). Si le gritan (ruido alto), se queja (notas disonantes).",
+    "transformedIdeaTitle": "Cuidando al Huevo de Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón delicado. Si lo meces suavemente (inclinación lenta), toca música feliz. Pero cuidado, si hay mucho ruido alrededor, el dragón se asusta y toca notas tristes. Los niños aprenden sobre condicionales anidados.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 70 THEN Play(Sad) ELSE IF Inclination.Change > 0 THEN Play(Happy)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Herramienta de Meditación Interactiva",
+    "originalIdeaDescription": "Ayuda al usuario a meditar. Requiere que el dispositivo esté plano (postura correcta) y el ruido sea bajo. Si se cumplen ambas condiciones, reproduce un tono continuo y relajante.",
+    "transformedIdeaTitle": "Maestro Zen: El Templo del Silencio",
+    "transformedIdeaDescription": "Para entrar al templo, debes estar quieto y en silencio. Los estudiantes programan una lógica que solo premia con un sonido armónico si el sensor está plano y el ruido es inferior a un nivel mínimo, fomentando la paciencia y el control.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Inclination < 5 AND NoiseLevel < 20 DO Play(Om_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Batería Aérea Selectiva",
+    "originalIdeaDescription": "Usa la inclinación para seleccionar qué tambor golpear (izquierda = caja, derecha = bombo) y un sonido fuerte (golpe en la mesa o palmada) para activar el sonido seleccionado.",
+    "transformedIdeaTitle": "Baterista del Futuro",
+    "transformedIdeaDescription": "¡Crea una batería invisible! Inclina a la izquierda para elegir el platillo o a la derecha para el tambor. Para tocarlo, ¡da una palmada al aire! Combina selección de estados (switch/case lógico) con disparadores de eventos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Instrument = (Inclination.X < 0) ? Snare : Kick; IF Noise > 60 THEN Play(Instrument)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Un juguete de exploración. A medida que el usuario camina e inclina el dispositivo buscando 'señales', el ruido ambiental modula una frecuencia de sonido misteriosa.",
+    "transformedIdeaTitle": "Cazadores de Misterios",
+    "transformedIdeaDescription": "Convierte el aula en una mansión embrujada. El dispositivo emite sonidos más agudos cuanto más inclinas el detector buscando 'ectoplasma', y el sonido se vuelve intermitente si detecta voces (ruido), indicando un fantasma cerca.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BaseTone = Map(Inclination.Y); IF Noise > 30 THEN Modulate(BaseTone) ELSE Play(BaseTone)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Para desbloquear una melodía de victoria, el usuario debe colocar el dispositivo en un ángulo específico y luego producir un patrón de dos palmadas.",
+    "transformedIdeaTitle": "El Código Secreto del Espía",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda. La cerradura es sensible a la posición y al sonido. Debes inclinar el dispositivo a exactamente 45 grados y, manteniéndolo ahí, dar dos palmadas para escuchar la melodía de 'Acceso Concedido'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination approx 45 AND DetectClapPattern(2) THEN Play(Victory)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Piano de Gravedad",
+    "originalIdeaDescription": "Las notas se reproducen en cascada (arpegio). La velocidad de la cascada depende de la inclinación (más inclinado = más rápido). El ruido fuerte detiene la cascada (pausa).",
+    "transformedIdeaTitle": "La Cascada Musical",
+    "transformedIdeaDescription": "Imagina que las notas musicales son agua. Cuanto más inclinas el dispositivo, más rápido cae el agua (suenan las notas). Si gritas '¡Congelar!', el sensor de ruido detiene el flujo de música. Excelente para entender bucles y velocidad de ejecución.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Delay = Map(Inclination.Y); IF Noise < 50 THEN Loop(PlayNextNote, Delay)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Entusiasmo de Audiencia",
+    "originalIdeaDescription": "Se usa en un concurso. Se apunta (inclina) hacia un participante, y el nivel de ruido de los aplausos genera una escala musical ascendente que indica el puntaje.",
+    "transformedIdeaTitle": "Jurado del Concurso de Talentos",
+    "transformedIdeaDescription": "Los alumnos crean una máquina de votación. Apuntan a un compañero (inclinación) y la clase aplaude. Cuanto más fuertes sean los aplausos, más alta será la nota musical que suene, indicando un puntaje ganador.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Inclination.Direction; Score = Map(NoiseLevel, 0, 100, C3, C6); Play(Score)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Espada de Luz Interactiva",
+    "originalIdeaDescription": "Genera un zumbido constante cuyo tono varía ligeramente con la inclinación. Al detectar un impacto o sonido fuerte (choque de espadas), reproduce un sonido de colisión.",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada láser. Mientras la mueves (inclinación), debe zumbar suavemente. Pero cuando golpea la espada de otro caballero (detectado por un pico de sonido/ruido), debe sonar un fuerte '¡Clang!'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PlayBackground(Hum, Inclination); IF NoiseLevel > 90 THEN PlayEffect(Clash)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Clima Sonoro",
+    "originalIdeaDescription": "La inclinación controla el sonido del viento (tonos silbantes). El sensor de ruido espera un sonido fuerte para disparar el sonido de un trueno en el teclado.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Conviértete en el dios del clima. Inclina el dispositivo para hacer que el viento aúlle (notas agudas y barridas). Cuando des una palmada fuerte, ¡haz que caiga un trueno (acorde grave y fuerte)! Storytelling interactivo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WindPitch = Map(Inclination); Play(WindPitch); IF Noise > 80 THEN Play(ThunderChord)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Corporal",
+    "originalIdeaDescription": "El usuario se coloca el dispositivo en el cuerpo. Al inclinarse hacia adelante suena un bombo. Al hablar o hacer beatbox (ruido), suena un platillo.",
+    "transformedIdeaTitle": "Traje de Baile Musical",
+    "transformedIdeaDescription": "¡Haz música con tu cuerpo! Pega el sensor a tu pecho. Si te inclinas para hacer una reverencia, suena un 'Boom'. Si dices '¡Chap!', suena un platillo. Crea una coreografía que genere su propia música.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 30 THEN Play(Kick); IF NoiseLevel > 60 THEN Play(HiHat)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Afinador de Voz Lúdico",
+    "originalIdeaDescription": "El sistema toca una nota objetivo basada en la inclinación. El usuario debe cantar (ruido constante) para intentar igualar o mantener esa nota activa.",
+    "transformedIdeaTitle": "Karaoke de Puntería",
+    "transformedIdeaDescription": "Un juego para cantantes. Inclina el dispositivo para elegir una nota en la pantalla (o imaginaria). Debes cantar fuerte y mantener el volumen (ruido) para que la nota siga sonando. Si te quedas sin aire, la nota se apaga.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TargetNote = Map(Inclination); IF NoiseLevel > 30 THEN Play(TargetNote) ELSE Stop()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inverso",
+    "originalIdeaDescription": "La música suena mientras haya ruido en el ambiente. Si hay silencio, la música para. Si el dispositivo se inclina mientras la música está parada (jugador se mueve), pierde.",
+    "transformedIdeaTitle": "Estatuas Musicales: Edición Robot",
+    "transformedIdeaDescription": "Mientras la clase aplaude o canta, el dispositivo toca música y puedes bailar. Si el ruido para, debes congelarte. Si el sensor de inclinación detecta que te mueves en el silencio, ¡suena una bocina de derrota!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 20 THEN PlayMusic() ELSE IF Inclination.Change > 5 THEN Play(LoseSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Narrador de Historias Interactivo",
+    "originalIdeaDescription": "El dispositivo espera una inclinación izquierda/derecha para elegir un camino en una historia. El sensor de ruido confirma la selección y reproduce un 'leitmotif' musical correspondiente a la elección.",
+    "transformedIdeaTitle": "El Libro de Aventuras Sonoro",
+    "transformedIdeaDescription": "Crea una historia de 'Elige tu propia aventura'. Inclina a la izquierda para entrar a la cueva (música oscura) o derecha para ir al castillo (música real). Para confirmar tu decisión, di '¡Vamos!' fuerte. Enseña máquinas de estado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Choice = (Inclination.X < 0) ? Cave : Castle; IF Noise > 50 THEN PlayTheme(Choice)"
+  }
+]

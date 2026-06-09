@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de DJ mediante movimiento físico",
+    "originalIdeaDescription": "Un sistema donde la inclinación del dispositivo hacia la izquierda o derecha activa diferentes sonidos de percusión sobre una pista de música base.",
+    "transformedIdeaTitle": "DJ Motion: El Rey de la Pista",
+    "transformedIdeaDescription": "Conviértete en un DJ futurista. Programa el dispositivo para que reproduzca una base rítmica de fondo. Si inclinas el dispositivo a la izquierda, debe sonar un bombo (Bass Drum), y si lo inclinas a la derecha, una caja (Snare Drum). ¡Crea tu propio remix moviendo tu cuerpo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('beat'); Loop: IF Inclination.X < -20 THEN Drum.play('Bass') ELSE IF Inclination.X > 20 THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de equilibrio con penalización sonora",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo plano mientras suena música tranquila; si se inclina demasiado, la música se detiene y suena un platillo.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que eres un camarero llevando una bandeja muy cara. Mientras mantienes el dispositivo plano, suena música elegante de restaurante. Si pierdes el equilibrio (inclinas el dispositivo), la música para y suena un estruendoso choque de platillos (Cymbal) indicando que se rompieron los platos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('classic'); Loop: IF Inclination.X > 15 OR Inclination.Y > 15 THEN { AudioPlayer.stop(); Drum.play('Crash'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Generador de efectos de tormenta interactiva",
+    "originalIdeaDescription": "Reproduce sonidos de lluvia de fondo y utiliza sacudidas o inclinaciones bruscas para simular truenos con tambores graves.",
+    "transformedIdeaTitle": "El Mago de la Tormenta",
+    "transformedIdeaDescription": "Crea una atmósfera de película. Configura el reproductor para que suene lluvia constante. Tu desafío es detectar cuando el dispositivo se inclina bruscamente hacia adelante para simular un trueno fuerte usando el tambor grave, asustando a tus amigos en el momento justo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('rain'); Loop: IF Inclination.Y_Change > Fast THEN Drum.play('Tom-Low')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de conducción y derrapes",
+    "originalIdeaDescription": "Usa la inclinación como volante. La música es el motor, y al girar mucho (derrapar) suenan redobles de batería.",
+    "transformedIdeaTitle": "Rally Rítmico",
+    "transformedIdeaDescription": "¡Estás en una carrera! La música rock de fondo es tu velocidad. Usa la inclinación para 'girar'. Si giras demasiado cerrado (inclinación alta), debes activar un sonido de redoble de batería rápido para simular las llantas derrapando sobre el asfalto.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('rock'); Loop: IF ABS(Inclination.X) > 45 THEN Drum.play('Snare_Roll')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de postura para sentadillas",
+    "originalIdeaDescription": "Música para ejercicio que añade un golpe de batería cada vez que el usuario baja y sube completando una sentadilla basada en la inclinación vertical.",
+    "transformedIdeaTitle": "Entrenador Personal Musical",
+    "transformedIdeaDescription": "Diseña un asistente de gimnasio. Sujeta el dispositivo contra tu pecho. Mientras suena música energética, el programa debe detectar cuando te inclinas hacia adelante/abajo para hacer una sentadilla y tocar un bombo al bajar y una caja al subir para marcar el ritmo del ejercicio.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('gym_mix'); Loop: IF Inclination.Y < -30 THEN Drum.play('Bass') ELSE IF Inclination.Y > 0 THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita mágica de efectos sonoros",
+    "originalIdeaDescription": "Música mística de fondo; movimientos específicos de la 'varita' (inclinación) lanzan hechizos sonoros (percusión).",
+    "transformedIdeaTitle": "Escuela de Hechicería Digital",
+    "transformedIdeaDescription": "Tu dispositivo es una varita mágica. Con música misteriosa de fondo, programa 'hechizos': inclinar hacia arriba lanza un 'hechizo de luz' (sonido de platillo suave), e inclinar hacia abajo lanza un 'hechizo de tierra' (tambor grave).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('mystery'); IF Inclination.Y > 30 THEN Drum.play('HiHat') ELSE IF Inclination.Y < -30 THEN Drum.play('Tom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma anti-sueño para conductores",
+    "originalIdeaDescription": "Reproduce un sonido suave, pero si la cabeza (dispositivo) cae hacia adelante por sueño, suena una batería fuerte.",
+    "transformedIdeaTitle": "El Copiloto Despierto",
+    "transformedIdeaDescription": "Simula un sistema de seguridad. El usuario escucha una radio suave (Audio Player). Si el sensor de inclinación detecta que la cabeza del conductor 'cae' hacia adelante (simulando quedarse dormido), el sistema debe despertar al usuario con una secuencia ruidosa de batería.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('lullaby'); Loop: IF Inclination.Y < -60 THEN { AudioPlayer.stop(); Drum.playSequence('Crash', 'Snare', 'Crash'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento de percusión tipo shaker",
+    "originalIdeaDescription": "Agitar el dispositivo rítmicamente activa sonidos de maracas o pandereta sobre una melodía.",
+    "transformedIdeaTitle": "La Pandereta Virtual",
+    "transformedIdeaDescription": "Acompaña a tu banda favorita. Mientras el Audio Player reproduce una canción pop, programa el dispositivo para que actúe como una pandereta. Cada vez que cambies rápidamente la inclinación (agitar), debe sonar un 'Hi-Hat' cerrado o abierto.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('pop_song'); Loop: IF ABS(Inclination.Change) > Threshold THEN Drum.play('Closed_HiHat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Cuento interactivo con pasos",
+    "originalIdeaDescription": "Narración de audio donde el usuario debe simular caminar (inclinar izquierda/derecha) para que suenen los pasos del personaje.",
+    "transformedIdeaTitle": "Caminando en el Cuento",
+    "transformedIdeaDescription": "Crea una historia inmersiva. El audio narra: 'El gigante se acercaba...'. Para que la historia avance, el usuario debe simular los pasos del gigante inclinando el dispositivo de un lado a otro. Cada inclinación lateral debe producir un sonido de tambor profundo.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('story'); Loop: IF Inclination.X_Cross_Zero THEN Drum.play('Low_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simón dice con movimientos",
+    "originalIdeaDescription": "El audio da instrucciones de dirección y si el usuario acierta con la inclinación, recibe un premio sonoro de batería.",
+    "transformedIdeaTitle": "Simón Dice: ¡Muévete!",
+    "transformedIdeaDescription": "Un juego de memoria y reacción. El audio dice '¡Izquierda!', y tienes 2 segundos para inclinar el dispositivo a la izquierda. Si lo haces bien, suena un redoble triunfal. Si fallas o tardas mucho, suena un golpe seco de error.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('Left_Command'); Wait(2s); IF Inclination.X < -30 THEN Drum.play('Win') ELSE Drum.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de vuelo con turbulencia",
+    "originalIdeaDescription": "Sonido de viento constante. Inclinaciones extremas generan sonidos de golpes en el fuselaje (batería).",
+    "transformedIdeaTitle": "Piloto de Pruebas",
+    "transformedIdeaDescription": "Programa un simulador de avión. El audio reproduce el zumbido de los motores. Mantén el avión nivelado. Si inclinas demasiado el morro hacia abajo (picada) o hacia arriba, activa sonidos de batería caóticos para simular que el avión está vibrando por la turbulencia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('engine'); Loop: IF ABS(Inclination.Y) > 50 THEN Drum.play('Random_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de música mecánica virtual",
+    "originalIdeaDescription": "Solo suena música si se gira el dispositivo en círculos (inclinación rotativa), con clics de engranajes (batería).",
+    "transformedIdeaTitle": "La Caja de Música Antigua",
+    "transformedIdeaDescription": "Recupera un objeto antiguo. Para que la música suene, el usuario debe girar el dispositivo suavemente en círculos (cambiando la inclinación X e Y). Si deja de moverlo, la música para. Agrega un sonido de 'clic' de percusión con cada vuelta completa para simular el mecanismo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop: IF Inclination.IsRotating() THEN AudioPlayer.resume() ELSE AudioPlayer.pause(); OnCircleComplete -> Drum.play('Stick')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de pinball invisible",
+    "originalIdeaDescription": "Música arcade. Inclinación mueve la 'bola'. Golpes secos de inclinación activan sonidos de rebote.",
+    "transformedIdeaTitle": "Pinball de Bolsillo",
+    "transformedIdeaDescription": "Transforma tu dispositivo en una mesa de Pinball. Suena música retro de 8-bits. Usa la inclinación para guiar la bola imaginaria. Si haces un movimiento rápido hacia atrás (como usando un flipper), activa un sonido agudo de percusión para simular el golpe a la bola.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('arcade'); Loop: IF Inclination.Y_Jerk > Threshold THEN Drum.play('Snare_High')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo corporal interactivo",
+    "originalIdeaDescription": "El usuario marca el tempo balanceándose; el sistema reproduce un beat (batería) sincronizado y una melodía (audio).",
+    "transformedIdeaTitle": "Metrónomo Humano",
+    "transformedIdeaDescription": "Aprende sobre el ritmo. Programa el dispositivo para que detecte tu balanceo de izquierda a derecha. Cada vez que llegues al extremo del balanceo, el sistema debe tocar un golpe de batería, creando un ritmo constante sobre una melodía de fondo. ¡Tú controlas la velocidad de la canción!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('melody'); Loop: Detect Peak(Inclination.X) -> Drum.play('Click')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de pasos de gigante o ratón",
+    "originalIdeaDescription": "Inclinación leve = sonido agudo y rápido. Inclinación fuerte = sonido grave y lento, sobre ambiente de bosque.",
+    "transformedIdeaTitle": "¿Ratón o Elefante?",
+    "transformedIdeaDescription": "Crea un disfraz sonoro. Si caminas (te inclinas) con pasos pequeños y rápidos, el sistema toca sonidos agudos (caja/platillo) como un ratón. Si das pasos grandes (inclinación amplia), tocas bombos pesados como un elefante. El audio de fondo es una selva.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('jungle'); IF Tilt < 10 THEN Drum.play('HiHat') ELSE IF Tilt > 30 THEN Drum.play('Bass')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de skate",
+    "originalIdeaDescription": "Música punk. Inclinar atrás levanta la tabla (sonido pop). Inclinar lado es girar.",
+    "transformedIdeaTitle": "Skater Profesional",
+    "transformedIdeaDescription": "Convierte tu mano en un monopatín. Suena música enérgica. Si inclinas el dispositivo hacia atrás rápidamente, haces un 'Ollie' y debe sonar un golpe seco (Rimshot). Si lo mantienes inclinado lateralmente, es un 'Grind' y suena una repetición rápida de caja.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('punk'); IF Inclination.Y < -40 THEN Drum.play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de pistas por zonas",
+    "originalIdeaDescription": "4 zonas de inclinación (adelante, atrás, izq, der) activan diferentes ritmos de batería sobre una voz grabada.",
+    "transformedIdeaTitle": "La Brújula del Ritmo",
+    "transformedIdeaDescription": "Explora los estilos musicales. El audio reproduce una voz a capela. Si inclinas al Norte, añade un ritmo de Rock (batería fuerte). Al Sur, un ritmo de Jazz (platillos suaves). Este y Oeste añaden otros estilos. ¡Mezcla en vivo!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.play('vocals'); IF Inc.Y > 20 THEN Loop(RockBeat) ELSE IF Inc.Y < -20 THEN Loop(JazzBeat)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de estatua musical",
+    "originalIdeaDescription": "La música suena mientras hay movimiento (cambio de inclinación). Si paras, música para y suena un 'gong' final.",
+    "transformedIdeaTitle": "Estatuas Musicales Automáticas",
+    "transformedIdeaDescription": "El clásico juego de fiesta, pero automatizado. Mientras te mueves (el sensor de inclinación cambia constantemente), la música suena. En el momento en que te quedas totalmente quieto (congelado), la música se corta y suena un golpe final de batería para marcar tu pose.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Loop: IF MotionDetected(Inclination) THEN AudioPlayer.play() ELSE { AudioPlayer.pause(); Drum.play('Gong'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caballo al galope",
+    "originalIdeaDescription": "Música del oeste. Movimiento rítmico de inclinación genera el sonido de cascos (batería).",
+    "transformedIdeaTitle": "El Vaquero Solitario",
+    "transformedIdeaDescription": "¡Yi-ja! Pon una banda sonora del viejo oeste. Tu misión es simular el galope de tu caballo. Agita el dispositivo rítmicamente hacia arriba y abajo. Cada movimiento hacia abajo debe disparar un sonido de percusión de madera (Woodblock) para imitar los cascos del caballo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play('western'); Loop: IF Inclination.Y_Change_Down THEN Drum.play('Woodblock')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Martillo neumático de construcción",
+    "originalIdeaDescription": "Sonido ambiente de ciudad. Al inclinar hacia abajo verticalmente, se activa una repetición rápida de batería.",
+    "transformedIdeaTitle": "Obras en la Ciudad",
+    "transformedIdeaDescription": "Simula ser un trabajador de la construcción. El audio reproduce el bullicio de la ciudad. Cuando colocas el dispositivo verticalmente hacia abajo e inclinas un poco, activas el 'martillo neumático': una serie rapidísima de golpes de caja (Snare) que no para hasta que levantas el dispositivo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('city'); Loop: IF Inclination.Y < -80 THEN Drum.playRepeat('Snare', 100ms)"
+  }
+]

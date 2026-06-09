@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin Óptico",
+    "originalIdeaDescription": "Un instrumento musical sin contacto donde la intensidad de la luz determina la nota del piano, mientras que la oscuridad activa diferentes patrones de percusión para mantener el ritmo.",
+    "transformedIdeaTitle": "El Mago de las Sombras",
+    "transformedIdeaDescription": "Conviértete en un mago musical que toca sin tocar nada. Mueve tu mano sobre el sensor para bloquear la luz y crear melodías mágicas. Si haces mucha sombra, los tambores retumban; si dejas pasar la luz, el piano canta notas agudas.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET note = MAP(LightIntensity, 0, 100, C4, C6); Keyboard.play(note); IF LightIntensity < 20 THEN Drum.play('BassDrum')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Amanecer Progresiva",
+    "originalIdeaDescription": "Un sistema que monitorea la luz ambiental matutina. A medida que aumenta la luz, inicia un ritmo de batería suave que evoluciona a una melodía de piano alegre para despertar al usuario.",
+    "transformedIdeaTitle": "El Gallo Robot Despertador",
+    "transformedIdeaDescription": "Diseña la forma perfecta de despertar. Cuando salga el sol (o enciendas la luz de tu cuarto), tu app empezará a tocar tambores suavemente. Si la luz se vuelve muy fuerte, ¡el piano tocará una fanfarria de victoria para que te levantes!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 10 THEN Drum.play('HiHat'); IF LightIntensity > 80 THEN Keyboard.play('C_Major_Chord')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Ambiente de Cueva",
+    "originalIdeaDescription": "Utiliza la falta de luz para simular una cueva profunda. La oscuridad total activa sonidos de gotas (piano agudo) y ecos retumbantes (batería), que cesan al detectar luz.",
+    "transformedIdeaTitle": "Exploradores de la Caverna Misteriosa",
+    "transformedIdeaDescription": "Estás explorando una cueva oscura. Cuando apagas las luces, escuchas el goteo del agua (piano) y rocas cayendo (tambores). ¡Enciende tu linterna (luz) para ahuyentar los sonidos y encontrar la salida!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 15 THEN { Keyboard.play('High_Note'); Drum.play('Low_Tom') } ELSE { Stop_All_Sounds() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Fotosensible",
+    "originalIdeaDescription": "Una caja de ritmos donde la velocidad (BPM) del patrón de batería y la octava del acompañamiento de piano son controladas directamente por la cantidad de luxes recibidos.",
+    "transformedIdeaTitle": "DJ Solar de Alta Velocidad",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta impulsada por el sol! Cuanta más luz le des a tu sensor, más rápida irá la música y más agudos sonarán los sintetizadores. Si tapas el sensor, la música se vuelve lenta y pesada.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET bpm = MAP(LightIntensity, 0, 100, 60, 180); Drum.setTempo(bpm); Keyboard.playSequence(tempo=bpm)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Cajón",
+    "originalIdeaDescription": "Dispositivo para detectar la apertura de un cajón oscuro. Al detectar un cambio brusco de luz, activa una alarma sonora compuesta por platillos y teclas disonantes.",
+    "transformedIdeaTitle": "La Trampa Anti-Espías",
+    "transformedIdeaDescription": "Protege tus secretos. Esconde el dispositivo en un cajón oscuro. Si tu hermano o hermana lo abre y entra luz, ¡sonará una alarma ruidosa de platillos y teclas locas para que los atrapes con las manos en la masa!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity_Change > 50 THEN { Loop { Drum.play('Crash'); Keyboard.play('Discordant_Note') } }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Simulado",
+    "originalIdeaDescription": "Simula una tormenta donde variaciones rápidas de luz (como relámpagos) disparan un sonido de trueno (batería) seguido de lluvia musical (piano).",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Crea tu propia tormenta eléctrica. Usa una linterna para hacer flashes de luz sobre el sensor. Cada flash es un relámpago que hace sonar un trueno (batería) y luego cae la lluvia musical (piano).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > Threshold THEN { Drum.play('FloorTom'); WAIT(1s); Keyboard.play('Rain_Melody') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Medidor de Salud de Planta",
+    "originalIdeaDescription": "Un sistema que 'canta' el estado de luz de una planta. Luz óptima genera acordes mayores y ritmo estable; poca luz genera acordes menores y ritmo lento.",
+    "transformedIdeaTitle": "La Planta Cantarina",
+    "transformedIdeaDescription": "Dale voz a tus plantas. Pon el sensor junto a una maceta. Si tiene buena luz, cantará feliz con piano y tambores rápidos. Si está muy oscuro, tocará una música triste y lenta pidiendo ayuda.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 60 THEN { Keyboard.play('C_Major'); Drum.play('Fast_Beat') } ELSE { Keyboard.play('A_Minor'); Drum.play('Slow_Beat') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Musical",
+    "originalIdeaDescription": "Utiliza niveles de luz para simular un semáforo. Luz roja (oscuridad) detiene la melodía y solo deja un bombo; luz verde (brillo) activa la melodía completa.",
+    "transformedIdeaTitle": "El Semáforo de la Orquesta",
+    "transformedIdeaDescription": "Tú controlas el tráfico de la música. Tapa el sensor (rojo) y la banda debe detenerse, dejando solo un golpe de tambor de espera. Destápalo (verde) y toda la orquesta de piano arranca a toda velocidad.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 30 THEN { Drum.play('Beat_Keep'); Keyboard.stop() } ELSE { Keyboard.play('Full_Melody') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Secuenciador de Código Morse",
+    "originalIdeaDescription": "Interpreta pulsos de luz cortos y largos para disparar diferentes instrumentos: luz corta para caja (snare), luz larga para una nota de piano sostenida.",
+    "transformedIdeaTitle": "Telégrafo Espía Musical",
+    "transformedIdeaDescription": "Envía mensajes secretos usando una linterna. Un flash corto hace sonar un tambor, un flash largo toca una nota de piano. ¡Crea un código rítmico para hablar con tus amigos sin decir una palabra!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightPulse == SHORT THEN Drum.play('Snare'); IF LightPulse == LONG THEN Keyboard.play('Sustain_Note')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "El usuario debe moverse por una habitación oscura. Si el sensor detecta luz (ser visto), suena un golpe de gong (piano grave + platillo). Si permanece oscuro, silencio absoluto.",
+    "transformedIdeaTitle": "Entrenamiento Ninja en la Oscuridad",
+    "transformedIdeaDescription": "Eres un ninja invisible. Tienes que mover el dispositivo de un lado a otro sin que le dé la luz. Si un rayo de luz te toca, sonará un 'Gong' fuerte y habrás perdido la misión.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 10 THEN { Keyboard.play('Low_C'); Drum.play('Cymbal'); Game_Over() }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Compositor de Ciclo Día/Noche",
+    "originalIdeaDescription": "Monitoreo ambiental continuo que cambia el género musical: Rock (Batería intensa) con luz diurna alta, Balada (Piano suave) con luz tenue.",
+    "transformedIdeaTitle": "Radio Automática del Sol",
+    "transformedIdeaDescription": "Crea una radio inteligente que cambia la música según la hora. Cuando hay mucha luz para jugar, toca rock con mucha batería. Cuando se hace de noche y oscurece, cambia automáticamente a piano relajante para dormir.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 70 THEN { Drum.play('Rock_Beat') } ELSE IF LightIntensity < 40 THEN { Keyboard.play('Lullaby') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Búsqueda del Tesoro Sonoro",
+    "originalIdeaDescription": "Guía al usuario hacia una fuente de luz escondida. El piano toca notas más agudas y la batería acelera a medida que la intensidad de luz aumenta (proximidad).",
+    "transformedIdeaTitle": "Detector de Tesoros Brillantes",
+    "transformedIdeaDescription": "Esconde una lámpara o linterna en el cuarto. Usa tu dispositivo para encontrarla. Cuanto más te acerques a la luz, más agudo sonará el piano y más rápido irán los tambores. ¡Sigue el ritmo hasta el tesoro!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET speed = MAP(LightIntensity, 0, 100, Slow, Fast); Drum.playLoop(speed); Keyboard.setPitch(LightIntensity)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mixer de Efectos de Sombra",
+    "originalIdeaDescription": "Pasar la mano sobre el sensor actúa como un filtro de paso bajo, eliminando la melodía de piano y dejando solo la base rítmica de batería.",
+    "transformedIdeaTitle": "El Túnel del Sonido",
+    "transformedIdeaDescription": "Imagina que la música entra en un túnel. Cuando pasas tu mano sobre el sensor (haciendo sombra), la melodía del piano desaparece como si estuviera lejos, y solo queda el retumbar de los tambores. ¡Quita la mano para que vuelva la música!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 50 THEN Keyboard.mute() ELSE Keyboard.unmute(); Drum.keepPlaying()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Fuegos Artificiales",
+    "originalIdeaDescription": "Detecta picos repentinos de luz en un cuarto oscuro y los sincroniza con sonidos de explosión (batería grave) y brillos (piano agudo en arpegio).",
+    "transformedIdeaTitle": "Creador de Pirotecnia",
+    "transformedIdeaDescription": "Apaga las luces y usa una linterna para 'pintar' fuegos artificiales. Apunta rápido al sensor: cada destello de luz creará una explosión de tambores y una lluvia de notas de piano brillantes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Peak_Detected THEN { Drum.play('Boom'); Keyboard.play('Arpeggio') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Lumínica",
+    "originalIdeaDescription": "El sistema reproduce una secuencia (ej: Piano, Piano, Tambor). El usuario debe replicarla exponiendo el sensor a la luz (Piano) o cubriéndolo (Tambor).",
+    "transformedIdeaTitle": "Simón Dice con Luces y Sombras",
+    "transformedIdeaDescription": "El juego te dará una secuencia de sonidos. Si escuchas piano, apunta a la luz. Si escuchas tambor, tapa el sensor. ¿Podrás recordar la secuencia completa sin equivocarte?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlaySequence(); FOREACH Sound in Sequence: IF (Sound == Piano AND Light > 50) OR (Sound == Drum AND Light < 50) THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Arpa Láser Virtual",
+    "originalIdeaDescription": "Utiliza un puntero láser o linterna focalizada. Al incidir la luz sobre el sensor, se dispara una nota específica y un golpe de platillo, simulando tocar una cuerda de luz.",
+    "transformedIdeaTitle": "El Arpa de Rayos Láser",
+    "transformedIdeaDescription": "Construye un arpa del futuro. Usa una linterna como si fuera tu púa de guitarra. Cada vez que el rayo de luz golpee el sensor, tocarás una nota musical acompañada de un platillo metálico.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 90 THEN { Keyboard.playNextNoteInScale(); Drum.play('OpenHiHat') }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Termómetro frío/oscuro)",
+    "originalIdeaDescription": "Inversión de lógica: la oscuridad se interpreta como presencia paranormal, aumentando el volumen de sonidos de batería irregulares y notas de piano graves.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Busca fantasmas en tu casa. Los fantasmas se esconden en las sombras. Camina con tu sensor; si entras en una zona muy oscura y los tambores empiezan a sonar raro con notas graves, ¡has encontrado uno!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SET volume = MAP(LightIntensity, 100, 0, 0, 100); Drum.play('Random_Spooky', vol=volume); Keyboard.play('Low_Key', vol=volume)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Modulador de Frecuencia Cardíaca",
+    "originalIdeaDescription": "Simula un corazón digital. En reposo (luz media) late (batería) a ritmo normal. Luz intensa (estrés) acelera el ritmo y añade acordes de tensión.",
+    "transformedIdeaTitle": "El Corazón del Robot Asustadizo",
+    "transformedIdeaDescription": "Tu robot tiene miedo a la luz fuerte. Si estás en luz normal, su corazón (batería) late tranquilo. Si lo acercas a una bombilla, se asusta, su corazón se acelera y el piano empieza a gritar de pánico.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET heartRate = MAP(LightIntensity, 20, 100, 60, 160); Drum.beat(heartRate); IF heartRate > 120 THEN Keyboard.play('Tension_Chord')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Control de Motor de Nave Espacial",
+    "originalIdeaDescription": "La intensidad de luz controla la potencia del motor. Batería (redoble) simula la vibración del motor, Piano (pitch ascendente) simula la aceleración.",
+    "transformedIdeaTitle": "Despegue de la Nave Galáctica",
+    "transformedIdeaDescription": "Pilota tu nave acercándola a una estrella (luz). A medida que te acercas, el motor ruge (redoble de tambores) y la turbina silba más agudo (piano subiendo de tono). ¡Cuidado no te quemes!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET vibration = MAP(LightIntensity, 0, 100, SoftRoll, HardRoll); Drum.play(vibration); Keyboard.setPitch(LightIntensity)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Musical de Cuna Automática",
+    "originalIdeaDescription": "Detecta cuando se apagan las luces para dormir. Inicia una secuencia suave de piano y desactiva la percusión fuerte, manteniendo solo un metrónomo suave.",
+    "transformedIdeaTitle": "La Nana Mágica para Dormir",
+    "transformedIdeaDescription": "Programa tu app para que te ayude a dormir. En cuanto apagues la luz de tu cuarto, el dispositivo lo detectará y empezará a tocar una canción de cuna suave en el piano para que tengas dulces sueños.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 5 THEN { Drum.stop(); Keyboard.play('Lullaby_Sequence') }"
+  }
+]

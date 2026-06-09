@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Anti-Robo Personal",
+    "originalIdeaDescription": "Un dispositivo de seguridad diseñado para proteger objetos personales. El usuario activa el sistema presionando el botón táctil. Una vez armado, cualquier movimiento detectado por el sensor de movimiento activará una sirena ruidosa a través del reproductor de audio para alertar al propietario.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Prohibido",
+    "transformedIdeaDescription": "¡Protege tu cofre del tesoro de los piratas! Programarás una trampa de seguridad. Primero, usa el botón táctil para 'armar' la trampa (espera 3 segundos). Luego, crea un bucle que verifique el sensor de movimiento. Si alguien intenta mover tu tesoro (detecta agitación), ¡haz que suene la alarma de intruso inmediatamente!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN armed = TRUE; IF armed AND Motion.shake THEN Audio.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Espada de Energía con Efectos de Sonido",
+    "originalIdeaDescription": "Un juguete interactivo que simula una espada de energía de películas de ciencia ficción. El botón táctil enciende y apaga el 'haz de energía' (sonido de encendido). El sensor de movimiento detecta los balanceos y reproduce sonidos de 'woosh' correspondientes al movimiento.",
+    "transformedIdeaTitle": "Academia de Caballeros Galácticos",
+    "transformedIdeaDescription": "Conviértete en un Caballero Galáctico construyendo tu propio sable de luz. Configura el botón para activar el 'hum' de energía. Luego, usa condicionales para detectar cuando mueves el dispositivo: si la aceleración es alta, reproduce el sonido de batalla 'woosh'. ¡No olvides apagarla con el botón para ahorrar energía!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.pressed THEN Audio.play('hum'); IF Motion.acceleration > threshold THEN Audio.play('swing')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reproductor de Música Basado en Movimiento",
+    "originalIdeaDescription": "Un dispositivo para fomentar la actividad física donde la música solo suena si el usuario se está moviendo. El botón táctil selecciona la canción, pero el sensor de movimiento controla la reproducción: si el usuario deja de moverse, la música se pausa automáticamente.",
+    "transformedIdeaTitle": "¡Fiesta de Baile Infinita!",
+    "transformedIdeaDescription": "¡La fiesta no para hasta que tú pares! Crea un reproductor musical inteligente para una maratón de baile. Usa el botón para elegir tu pista favorita. Luego, programa una lógica constante: MIENTRAS el sensor de movimiento detecte baile (movimiento continuo), la música suena. SI te detienes a descansar, ¡la música se pausa!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Motion.isActive() DO Audio.resume() ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Huevo de Dinosaurio Interactivo",
+    "originalIdeaDescription": "Un juguete que simula un huevo a punto de eclosionar. El niño debe cuidar el huevo. Si lo agita suavemente (sensor de movimiento), el huevo ronronea (audio). Si presiona el botón táctil, ayuda a la criatura a romper el cascarón con un sonido de crujido.",
+    "transformedIdeaTitle": "Incubadora de Dragones",
+    "transformedIdeaDescription": "Tienes un huevo de dragón raro. Tu misión es ayudarlo a nacer. Programa el sensor de movimiento para que, al mecerlo suavemente, reproduzca un sonido feliz. Pero cuidado, si usas el botón táctil, simularás el momento de la eclosión con un gran sonido de 'CRACK'.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.tilt THEN Audio.play('purr'); IF Touch.pressed THEN Audio.play('crack')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas Auditivo",
+    "originalIdeaDescription": "Una herramienta de fitness simple. El usuario presiona el botón para iniciar la sesión. El sensor de movimiento detecta el movimiento vertical (eje Y) de una sentadilla y reproduce un sonido de conteo o un pitido de confirmación por cada repetición completada.",
+    "transformedIdeaTitle": "El Reto del Súper Atleta",
+    "transformedIdeaDescription": "¡Ponte en forma con código! Vamos a crear un contador de ejercicios automático. Presiona el botón para decir '¡Empezar!'. Luego, usa el acelerómetro en el eje Y. Cada vez que bajes y subas (detectando un cambio de gravedad), haz que el reproductor de audio suene como una campana o cuente '¡Uno!'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Touch.start THEN count = 0; IF Motion.Y < low AND Motion.Y > high THEN Audio.play('ding')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ con Efectos de Scratch",
+    "originalIdeaDescription": "Una mesa de mezclas portátil. El botón táctil cambia entre diferentes pistas de batería base. El sensor de movimiento permite al usuario hacer 'scratching' agitando el dispositivo rítmicamente, lo que superpone un efecto de sonido de scratch sobre la música.",
+    "transformedIdeaTitle": "DJ Agitador: El Rey de la Pista",
+    "transformedIdeaDescription": "¡Toma el control de la cabina de DJ! Programa el botón táctil para cambiar el ritmo de fondo (bucle de batería). Ahora, añade tu estilo: usa el sensor de movimiento para detectar sacudidas rápidas. Cada vez que agites el dispositivo, inserta un sonido de 'Scratch' o 'Air Horn' sobre la mezcla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN Audio.nextTrack(); IF Motion.shake THEN Audio.playEffect('scratch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "Un accesorio de juego de rol. El botón táctil permite al usuario 'seleccionar' un hechizo (cambia el archivo de audio cargado). Un movimiento brusco hacia adelante con el sensor de movimiento 'lanzará' el hechizo reproduciendo el sonido seleccionado.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Codificada",
+    "transformedIdeaDescription": "Aprende a encantar objetos. Programa tu varita para que el botón táctil cicla entre hechizos (Fuego, Hielo, Rayo). Una vez elegido el hechizo, detecta un gesto fuerte de 'lanzamiento' con el sensor de movimiento para liberar el sonido mágico. ¡Cuidado con dónde apuntas!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN spell++; IF Motion.gesture('cast') THEN Audio.play(spell)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche",
+    "originalIdeaDescription": "Un juguete que imita el sonido de un coche deportivo. El botón táctil enciende el motor (sonido de arranque). Inclinar el dispositivo hacia adelante o hacia atrás con el sensor de movimiento acelera o desacelera el sonido del motor (cambia el tono o la pista).",
+    "transformedIdeaTitle": "Piloto de Fórmula Code",
+    "transformedIdeaDescription": "¡Arranca tus motores! Crea un simulador de conducción. Usa el botón para reproducir el sonido de arranque del motor. Luego, mapea la inclinación del dispositivo: si lo inclinas hacia adelante, reproduce un sonido de motor acelerando a fondo; si lo enderezas, vuelve al sonido de ralentí.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN Audio.play('start'); IF Motion.tilt > 20 THEN Audio.play('vroom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Meditación Zen",
+    "originalIdeaDescription": "Un dispositivo para ayudar a la concentración. Al presionar el botón, comienza a sonar agua fluyendo o viento. El objetivo es mantener el dispositivo perfectamente quieto. Si el sensor de movimiento detecta vibración, el sonido cambia a una campana suave para recordar al usuario que se relaje.",
+    "transformedIdeaTitle": "El Desafío de la Estatua Zen",
+    "transformedIdeaDescription": "¿Puedes quedarte tan quieto como una piedra? Programa una sesión de meditación. Al tocar el botón, reproduce sonidos relajantes de naturaleza. Pero hay un truco: si el sensor de movimiento detecta que te mueves, el sonido se interrumpe con un 'Gong' suave. ¡Intenta mantener el sonido de la naturaleza fluyendo!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('nature'); IF Motion.movement > 0 THEN Audio.play('gong')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Libro de Aventuras Elige tu Propio Camino",
+    "originalIdeaDescription": "Un dispositivo de narración interactiva. El audio narra una historia y se detiene en momentos clave. El usuario presiona el botón para tomar la 'Opción A' o agita el dispositivo para tomar la 'Opción B', desencadenando diferentes pistas de audio para continuar la historia.",
+    "transformedIdeaTitle": "Narrador de Aventuras Interactivas",
+    "transformedIdeaDescription": "Escribe y codifica tu propia historia hablada. El narrador plantea un dilema: '¿Entras a la cueva o huyes?'. Programa el dispositivo para que, si el usuario presiona el botón, suene el audio de entrar a la cueva. Si el usuario agita el dispositivo, suene el audio de huir corriendo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('intro'); IF Touch.pressed THEN Audio.play('pathA') ELSE IF Motion.shake THEN Audio.play('pathB')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente Musical",
+    "originalIdeaDescription": "Un juego grupal automatizado. Se presiona el botón para iniciar la música. Los jugadores deben pasar el dispositivo. El sensor de movimiento detecta el pase. Después de un tiempo aleatorio o una cantidad de movimientos, la música se detiene y suena una explosión.",
+    "transformedIdeaTitle": "Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "¡Crea el juego definitivo para fiestas! Inicia una cuenta regresiva oculta al presionar el botón mientras suena música tensa. Usa el sensor de movimiento para detectar que el dispositivo se está pasando de mano en mano. Cuando el temporizador (variable aleatoria) llegue a cero, ¡detén la música y reproduce un sonido de explosión!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "timer = Random(); WHILE timer > 0 DO Audio.play('tick'); Audio.play('boom')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión Aérea",
+    "originalIdeaDescription": "Un instrumento virtual que no requiere superficie. El botón táctil cambia el tipo de tambor (caja, bombo, platillo). Un movimiento rápido hacia abajo detectado por el sensor de movimiento hace sonar el tambor seleccionado.",
+    "transformedIdeaTitle": "Batería Invisible del Futuro",
+    "transformedIdeaDescription": "¿Sin batería? ¡No hay problema! Programa tus baquetas invisibles. Usa el botón táctil para cambiar entre sonido de 'Bombo' y 'Platillo'. Luego, detecta una aceleración brusca hacia abajo (como golpeando un tambor) para reproducir el sonido activo. ¡Crea un ritmo en el aire!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.downSwing THEN Audio.play(selectedSound); IF Touch.pressed THEN switchSound()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "Una herramienta educativa para ciencias. El botón inicia la vigilancia sísmica. El dispositivo reposa sobre una mesa. Si se golpea la mesa o se mueve (sensor de movimiento), el audio reproduce un sonido de estruendo y alerta de evacuación, con volumen proporcional a la intensidad del movimiento.",
+    "transformedIdeaTitle": "Sismógrafo de Alerta Temprana",
+    "transformedIdeaDescription": "Conviértete en geólogo. Construye un dispositivo para detectar terremotos. Al pulsar el botón, activa el modo 'Vigilancia'. Si el sensor de movimiento detecta vibraciones sutiles, reproduce un sonido de advertencia bajo. Si la vibración es fuerte, ¡haz sonar la sirena de evacuación máxima!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > level1 THEN Audio.play('rumble'); IF Motion.shake > level2 THEN Audio.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lector de Mente de Juguete",
+    "originalIdeaDescription": "Un truco de magia electrónico. El usuario hace una pregunta y presiona el botón para 'escanear' la mente. Mientras mantiene el botón, inclina sutilmente el dispositivo a la izquierda para una respuesta 'Sí' o a la derecha para un 'No'. Al soltar, el audio reproduce la respuesta seleccionada.",
+    "transformedIdeaTitle": "El Oráculo Digital Mágico",
+    "transformedIdeaDescription": "¡Engaña a tus amigos con magia! Programa un oráculo. Cuando mantengas presionado el botón, el dispositivo 'pensará' (sonido misterioso). Secretamente, lee la inclinación: si inclinas a la izquierda, prepara el audio 'SÍ', si es derecha, prepara 'NO'. Al soltar el botón, revela la predicción.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Touch.held DO checkTilt(); IF release THEN Audio.play(selectedAnswer)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Despegue de Cohete",
+    "originalIdeaDescription": "Un juego de simulación espacial. El botón inicia una cuenta regresiva de audio (10, 9, 8...). Al llegar a cero, el usuario debe agitar el dispositivo violentamente para simular el empuje de los cohetes, lo que activa el sonido de despegue. Si no se agita, el despegue falla.",
+    "transformedIdeaTitle": "Misión a Marte: Lanzamiento",
+    "transformedIdeaDescription": "¡Control de misión a piloto! Programa la secuencia de lanzamiento. Al tocar el botón, reproduce '3, 2, 1...'. Justo después, abre una ventana de tiempo de 2 segundos donde el programa espera una agitación fuerte (Motion). Si el piloto agita a tiempo, reproduce '¡Despegue!', si no, reproduce 'Fallo de motor'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('countdown'); wait(3); IF Motion.shake THEN Audio.play('blastoff') ELSE Audio.play('fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Sonora",
+    "originalIdeaDescription": "Juego deportivo de imitación. El usuario sostiene el dispositivo como una raqueta. El botón táctil sirve para 'lanzar' la pelota (sonido de saque). El sensor de movimiento detecta el swing posterior para reproducir el sonido de golpeo de la pelota.",
+    "transformedIdeaTitle": "Entrenador de Tenis Virtual",
+    "transformedIdeaDescription": "¡Wimbledon en tu salón! Convierte el dispositivo en una raqueta. Paso 1: Botón para 'Lanzar bola' (sonido ascendente). Paso 2: Espera un momento. Paso 3: Si detectas un movimiento rápido de arco (swing), reproduce '¡Plaak!'. ¡Intenta sincronizar el lanzamiento y el golpe!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.pressed THEN Audio.play('toss'); wait(1); IF Motion.swing THEN Audio.play('hit')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Bromas Sensible al Movimiento",
+    "originalIdeaDescription": "Dispositivo para bromas. El usuario presiona el botón para activar un temporizador silencioso. El usuario esconde el dispositivo. Cuando alguien mueve el objeto donde está escondido (sensor de movimiento), se reproduce un sonido gracioso o un grito.",
+    "transformedIdeaTitle": "El Bromista Sigiloso",
+    "transformedIdeaDescription": "Prepara una broma inofensiva. Programa el botón para iniciar un 'Modo Espía' con un retraso de 10 segundos (para que te dé tiempo a esconderlo). Una vez activo, si el sensor de movimiento detecta que alguien levanta el dispositivo, ¡reproduce una risa malvada o un sonido de bocina!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN wait(10); armed = TRUE; IF armed AND Motion.moved THEN Audio.play('laugh')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batidora de Cocina Sonora",
+    "originalIdeaDescription": "Juego de cocina simbólico. El botón enciende la 'batidora' (sonido de motor suave). Al agitar el dispositivo, el sensor de movimiento cambia el audio a un sonido de triturado intenso, simulando que se están mezclando los ingredientes.",
+    "transformedIdeaTitle": "Master Chef: Batidora Loca",
+    "transformedIdeaDescription": "¡A cocinar! Programa una batidora inteligente. El botón es el interruptor de encendido (sonido 'Hummm'). Agrega una condición: SI la batidora está encendida Y la agitas vigorosamente, cambia el sonido a '¡CRASH CRUNCH!' para simular que estás triturando hielo o frutas.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.on THEN Audio.play('hum'); IF Motion.shake THEN Audio.play('crush')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Compañero Robot Emocional",
+    "originalIdeaDescription": "Un 'tamagotchi' físico simple. Si se acaricia (movimiento suave/inclinación), hace sonidos felices. Si se agita fuerte, se marea (sonidos de queja). El botón táctil se usa para 'alimentarlo' con un sonido de comer.",
+    "transformedIdeaTitle": "Tu Mascota Robot con Sentimientos",
+    "transformedIdeaDescription": "Da vida a un robot. Prográmale emociones: 1. Si presionas el botón, aliméntalo (sonido 'Ñam'). 2. Si lo inclinas suavemente, está feliz (sonido 'Beep feliz'). 3. ¡Pero si lo agitas demasiado fuerte! Haz que se enfade o se maree reproduciendo sonidos de error.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.pressed THEN Audio.eat(); IF Motion.gentle THEN Audio.happy() ELSE IF Motion.shake THEN Audio.angry()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Monitor de Caídas para Ancianos (Simulado)",
+    "originalIdeaDescription": "Un prototipo de dispositivo de salud. El sistema monitorea constantemente. Si detecta un impacto repentino seguido de inmovilidad (caída), pregunta '¿Estás bien?'. El usuario debe presionar el botón para cancelar la alerta, de lo contrario, suena una alarma de ayuda.",
+    "transformedIdeaTitle": "Diseñador de Tecnología de Rescate",
+    "transformedIdeaDescription": "Salva vidas con tecnología. Crea un detector de caídas. La lógica es: Si detectas un impacto fuerte (pico alto en acelerómetro), espera 5 segundos. Si el usuario NO presiona el botón 'Estoy bien' en ese tiempo, activa la sirena de emergencia para llamar a una ambulancia.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.impact THEN wait(5); IF NOT Touch.pressed THEN Audio.play('help_alarm')"
+  }
+]

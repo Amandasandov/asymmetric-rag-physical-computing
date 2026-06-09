@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Varita Mágica Elemental",
+    "originalIdeaDescription": "Dependiendo de la inclinación de la varita, la lámpara cambia de color (Hacia abajo=Tierra/Verde, Arriba=Aire/Blanco). Al agitarla fuertemente (Motion), lanza el hechizo con un parpadeo brillante.",
+    "transformedIdeaTitle": "Academia de Magos: Duelo Elemental",
+    "transformedIdeaDescription": "Eres un aprendiz de mago. Inclina tu varita hacia el suelo para cargar magia de Tierra (Luz Verde) o hacia el cielo para Aire (Luz Blanca). Una vez cargada, haz un movimiento brusco de 'lanzamiento' (Motion) para disparar el hechizo. Si agitas sin cargar, la varita falla (Luz Roja).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.pitch > 45 THEN Color='White'; IF Motion.shake() AND Color!='' THEN Lamp.flash(Color)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Luz de Freno para Bicicletas",
+    "originalIdeaDescription": "Un dispositivo para el casco o la bici. Si detecta movimiento constante, la luz es verde/blanca fija. Si detecta una desaceleración brusca o inclinación hacia adelante (frenado), se pone roja intensa.",
+    "transformedIdeaTitle": "Ingeniero de Seguridad Vial",
+    "transformedIdeaDescription": "Diseña la luz trasera inteligente del futuro. Mientras vas en bici (Motion constante), la lámpara brilla suavemente en rojo. Si frenas de golpe (cambio brusco de Motion) o te inclinas hacia adelante, la lámpara debe brillar al 100% de intensidad para avisar a los coches.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration < -5 OR Inclination.pitch < -20 THEN Lamp.setColor(Red, 100) ELSE Lamp.setColor(Red, 30)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Mezclador de Colores Alquímico",
+    "originalIdeaDescription": "Inclinar a la izquierda añade 'líquido' azul (luz azul), a la derecha añade rojo. Agitar el dispositivo mezcla los colores resultando en púrpura.",
+    "transformedIdeaTitle": "El Laboratorio del Alquimista",
+    "transformedIdeaDescription": "Prepara la poción mágica. Inclina el frasco a la izquierda para verter gotas de Zafiro (Luz Azul). Inclina a la derecha para gotas de Rubí (Luz Roja). Ahora, ¡agita con cuidado! Si lo haces bien, la lámpara se tornará Violeta. Si agitas demasiado fuerte, explotará (Parpadeo Rojo).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TiltLeft THEN addBlue(); IF TiltRight THEN addRed(); IF Motion.shake() THEN Lamp.setColor(Blue+Red)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Huevo en la Cuchara Digital",
+    "originalIdeaDescription": "Juego de equilibrio. La lámpara está verde si el dispositivo está plano. Se vuelve amarilla si se inclina un poco y roja si se inclina mucho. Si se detecta un movimiento brusco (caída), se apaga.",
+    "transformedIdeaTitle": "Transporte de Nitroglicerina",
+    "transformedIdeaDescription": "Llevas una carga explosiva muy inestable. Debes caminar manteniendo el dispositivo totalmente plano (Luz Verde). Si te inclinas, cambiará a Naranja (Advertencia). Si corres o saltas (Motion alto) o te inclinas demasiado, la carga explotará (Luz Roja parpadeante).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion > Threshold OR Tilt > 30 THEN Lamp.flash(Red); ELSE IF Tilt > 10 THEN Lamp.set(Orange) ELSE Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Espada de Energía Recargable",
+    "originalIdeaDescription": "La lámpara simula la hoja de energía. Al moverla (blandirla) brilla más. Si se queda quieta, se apaga. La inclinación cambia el color del cristal.",
+    "transformedIdeaTitle": "Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu sable de luz. Inclina el mango hacia abajo para elegir tu color (Rojo o Azul). Para mantener la hoja encendida, debes moverte constantemente. Cada golpe al aire (Motion) hace que la luz brille con máxima intensidad. Si te quedas quieto, la energía se agota.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Color = Map(Inclination); Lamp.setColor(Color, Brightness=Motion.intensity)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Linterna de Dinamo Cinética",
+    "originalIdeaDescription": "La luz empieza apagada. El usuario debe agitar vigorosamente (Motion) para cargarla. La inclinación focaliza la luz (más brillante si apunta al frente).",
+    "transformedIdeaTitle": "Supervivencia en la Cueva",
+    "transformedIdeaDescription": "Tu linterna se quedó sin pilas. Agita el dispositivo con fuerza para cargar la batería (la luz se irá encendiendo poco a poco). Una vez cargada, apunta hacia adelante (nivelado) para obtener el haz de luz blanca más potente. Si dejas de agitar, se desvanecerá.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge += Motion.shake; Lamp.brightness = Charge; IF Charge > 0 THEN Charge--"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Intermitentes para Espalda",
+    "originalIdeaDescription": "El usuario se inclina hacia la izquierda o derecha para activar la luz de ese color/lado (simulado con color de lámpara). Agitar cancela la señal.",
+    "transformedIdeaTitle": "Chaleco Inteligente para Corredores",
+    "transformedIdeaDescription": "Corre seguro. Si vas a girar en una esquina, inclina tu cuerpo hacia ese lado: la Lámpara parpadeará en Amarillo indicando el giro. Al terminar el giro y volver a correr recto (Motion constante y nivelado), la luz vuelve a ser Blanca fija.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Tilt < -20 THEN Lamp.blink(Yellow); ELSE IF Tilt > 20 THEN Lamp.blink(Yellow); ELSE Lamp.set(White)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Nivel de Burbuja Cromático",
+    "originalIdeaDescription": "Herramienta visual. Si la superficie está inclinada, la luz es roja. A medida que se nivela, pasa a naranja, amarillo y finalmente verde brillante cuando está perfecta.",
+    "transformedIdeaTitle": "El Arquitecto Perfecto",
+    "transformedIdeaDescription": "Ayuda a construir una torre recta. Pon el dispositivo sobre la mesa. Si la luz es Roja, está torcido. Ajusta la inclinación suavemente hasta que la luz se vuelva Verde puro. ¡Cuidado! Si golpeas la mesa (Motion), tendrás que volver a calibrar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Error = Abs(Inclination.X) + Abs(Inclination.Y); Color = Map(Error, GreenToRed); Lamp.setColor(Color)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Vela Virtual de Viento",
+    "originalIdeaDescription": "La lámpara imita una llama (naranja vacilante). Si el usuario agita el dispositivo (simulando viento fuerte) o lo pone boca abajo, la llama se apaga.",
+    "transformedIdeaTitle": "Explorador de Tumbas",
+    "transformedIdeaDescription": "Llevas una vela antigua. La luz parpadea en naranja y amarillo. Camina despacio. Si corres (Motion alto) o haces movimientos bruscos, la corriente de aire apagará tu vela y te quedarás a oscuras. Para volver a encenderla, mantenla quieta 3 segundos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.flicker(Orange); IF Motion.intensity > WindThreshold THEN Lamp.off()"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Camaleón de Movimiento",
+    "originalIdeaDescription": "El color de la lámpara cambia según la actividad. Azul si está quieto, verde si camina, rojo si corre/agita. La inclinación modifica el tono.",
+    "transformedIdeaTitle": "Monitor de Energía Personal",
+    "transformedIdeaDescription": "Visualiza tu energía. Si estás sentado y relajado, la luz es Azul suave. Si caminas, cambia a Verde. Si empiezas a saltar o correr, se pone Roja intensa. Usa la inclinación para ajustar tu 'objetivo' de ejercicio diario.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Activity = Motion.average; IF Activity < Low THEN Color=Blue ELSE IF Activity < High THEN Color=Green ELSE Color=Red"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Pincel de Luz (Light Painting)",
+    "originalIdeaDescription": "Herramienta para fotografía de larga exposición. Inclinar cambia el color del pincel. Mover dibuja trazos de luz en el aire.",
+    "transformedIdeaTitle": "Artista de Neón",
+    "transformedIdeaDescription": "Crea arte en el aire. Configura una cámara en larga exposición. Usa el dispositivo como pincel. Inclina hacia arriba para pintar en Rosa, abajo para Cian. Mueve el brazo (Motion) para trazar líneas. Si dejas de moverte, la luz se apaga para no manchar el dibujo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Color = Map(Inclination); IF Motion.isMoving() THEN Lamp.set(Color) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Detector de Terremotos Visual",
+    "originalIdeaDescription": "La lámpara está verde. Si detecta vibración (Motion), cambia de color según la intensidad (Amarillo -> Rojo). La inclinación indica la dirección de la onda.",
+    "transformedIdeaTitle": "Estación Sismológica",
+    "transformedIdeaDescription": "Construye un detector de sismos. Colócalo en el suelo. Luz Verde = Seguro. Golpea el suelo cerca: si la vibración es leve, parpadea Amarillo. Si es fuerte, parpadea Rojo. Inclina el dispositivo para resetear el sistema después de una alerta.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = Motion.shake; IF Intensity > Major THEN Lamp.flash(Red) ELSE IF Intensity > Minor THEN Lamp.flash(Yellow)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Simulador de Vuelo con Postquemador",
+    "originalIdeaDescription": "Inclinar controla el 'avión' (cambia color de alas). Empujar hacia adelante (Motion) activa el turbo (luz blanca brillante).",
+    "transformedIdeaTitle": "Piloto de Caza Nocturno",
+    "transformedIdeaDescription": "Vuelas de noche. Inclina suavemente para patrullar (Luz de posición Verde). Si ves un enemigo, haz un movimiento brusco hacia adelante para activar los postquemadores: la luz se volverá Blanca cegadora y parpadeará simulando velocidad supersónica.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.jerk('Forward') THEN Lamp.strobe(White, Fast) ELSE Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Bola de Disco Interactiva",
+    "originalIdeaDescription": "La luz cambia de color aleatoriamente al ritmo del movimiento (baile). La inclinación cambia la paleta de colores (Cálidos/Fríos).",
+    "transformedIdeaTitle": "Rey de la Pista de Baile",
+    "transformedIdeaDescription": "Engancha el dispositivo a tu ropa. ¡Baila! Cada paso o salto (Motion) cambia el color de la luz al instante. Si te inclinas hacia atrás (estilo limbo), los colores se vuelven 'fiesta tropical' (Rojo/Naranja). Si te inclinas adelante, 'fiesta electrónica' (Azul/Morado).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Palette = (Tilt > 0) ? Warm : Cool; IF Motion.beat() THEN Lamp.set(Random(Palette))"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Bomba de Tiempo Sensible",
+    "originalIdeaDescription": "La luz parpadea rojo cada vez más rápido. Para desactivarla, hay que mantenerla perfectamente nivelada y quieta por 5 segundos.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "La cuenta atrás ha comenzado (Luz roja parpadeando). Para desactivar la bomba, debes sostenerla con pulso de cirujano. Nivélala perfectamente (Inclinación 0) y no te muevas (Motion 0). Si lo logras por 5 segundos, la luz se pondrá Verde. Si fallas, ¡Boom!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination==0 AND Motion==0 THEN Timer++ ELSE Timer=0; IF Timer > 5s THEN Lamp.green() ELSE Lamp.blinkRed(Fast)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Comunicador Morse de Mano",
+    "originalIdeaDescription": "Inclinar hacia arriba enciende la luz. Hacia abajo la apaga. Agitar borra el mensaje.",
+    "transformedIdeaTitle": "Señales de Barco a Barco",
+    "transformedIdeaDescription": "Envía mensajes en el mar. Levanta la punta del dispositivo para encender el foco (Punto/Raya). Bájalo para apagar. Usa el movimiento de tu muñeca para controlar la duración. Si te equivocas, agita el dispositivo para enviar una señal de 'Error' (Roja).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Pitch > 20 THEN Lamp.on() ELSE Lamp.off(); IF Motion.shake() THEN Lamp.flash(Red)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Mascota Virtual en un Huevo",
+    "originalIdeaDescription": "Luz tenue pulsante (vida). Si se enfría (quieto mucho tiempo), se pone azul. Hay que agitarlo para calentarlo (rojo/naranja) y mantenerlo nivelado.",
+    "transformedIdeaTitle": "Incubadora de Dragones",
+    "transformedIdeaDescription": "El huevo necesita calor. Si la luz se pone Azul, ¡tiene frío! Agítalo suavemente (fricción) hasta que la luz se ponga Naranja cálido. Pero cuidado, si lo inclinas, el dragón se marea y la luz se pone Verde.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Heat -= Time; Heat += Motion.shake; Color = Map(Heat, BlueToRed); IF Tilt > 20 THEN Color=Green"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Juego de Estatua Luz Roja/Verde",
+    "originalIdeaDescription": "Cuando la lámpara está verde, el usuario debe correr (agitar). Cuando cambia a roja (aleatorio), debe quedarse quieto y nivelado.",
+    "transformedIdeaTitle": "El Ojo del Robot Gigante",
+    "transformedIdeaDescription": "El Robot te vigila. Luz Verde: ¡Corre en tu sitio (agita el dispositivo)! Luz Roja: ¡Congélate! Debes quedarte totalmente inmóvil y derecho. Si el sensor detecta movimiento o inclinación durante la luz roja, el robot te elimina con un flash blanco.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Mode = Random(Red, Green); Lamp.set(Mode); IF Mode==Red AND (Motion>0 OR Tilt!=0) THEN GameOver()"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Buscador de la Estrella del Norte",
+    "originalIdeaDescription": "Juego de 'caliente o frío'. Se define una inclinación objetivo. La luz se vuelve más brillante y blanca cuanto más cerca esté el usuario de esa posición.",
+    "transformedIdeaTitle": "Navegación Astronómica",
+    "transformedIdeaDescription": "Busca la constelación perdida. Mueve y gira el dispositivo en el aire. La lámpara es tenue y azul (Frío). A medida que te acercas a la posición secreta (coordenadas X, Y, Z correctas), la luz se vuelve rosa, luego roja, y finalmente Blanca brillante al encontrarla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Distance = Dist(CurrentTilt, TargetTilt); Brightness = 100 - Distance; Lamp.set(White, Brightness)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Motion"],
+    "originalIdeaTitle": "Simulador de Pesca",
+    "originalIdeaDescription": "Inclinación es la caña. Esperar con luz azul (agua). Un tirón (Motion) cambia luz a verde (pez picó). Hay que tirar hacia atrás para pescar.",
+    "transformedIdeaTitle": "Pesca Nocturna Luminosa",
+    "transformedIdeaDescription": "Lanza el anzuelo. La luz es Azul profundo. Espera quieto. De repente, el dispositivo vibra (simulado) y la luz parpadea Verde: ¡Picaron! Tira de la caña hacia atrás (inclinación brusca hacia arriba) inmediatamente para sacarlo. Si tardas, la luz se vuelve Roja (escapó).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.set(Blue); WAIT(Random); Lamp.flash(Green); IF Pitch.change('Up') < 1s THEN Win() ELSE Lose()"
+  }
+]

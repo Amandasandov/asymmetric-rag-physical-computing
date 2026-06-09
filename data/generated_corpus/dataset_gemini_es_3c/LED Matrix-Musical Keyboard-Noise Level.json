@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alerta de Silencio en Biblioteca",
+    "originalIdeaDescription": "Un dispositivo diseñado para mantener el silencio en espacios de estudio. El sensor de ruido monitorea el ambiente constantemente. Si el nivel de decibeles supera un umbral establecido, la matriz LED muestra una cara enojada y el teclado emite una secuencia de notas de advertencia.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca Secreta",
+    "transformedIdeaDescription": "¡Shhh! Eres el guardián de una biblioteca mágica donde los libros duermen. Programa al guardián para que detecte si alguien habla demasiado fuerte. Si el ruido es alto, el guardián debe despertar (mostrar una cara molesta en los LEDs) y lanzar un hechizo sónico (tocar notas graves).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 50 THEN LED.show('Angry') AND Keyboard.play('C2') ELSE LED.show('Smile')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de Intensidad Vocal",
+    "originalIdeaDescription": "Esta herramienta permite a los usuarios ver la fuerza de su voz. Al hablar o cantar, el sensor de ruido mide la intensidad, la cual se mapea a la altura de una barra en la matriz LED y cambia la octava de las notas reproducidas en el teclado.",
+    "transformedIdeaTitle": "El Medidor de Superpoderes Vocales",
+    "transformedIdeaDescription": "Imagina que tu voz es un rayo de energía. Vamos a crear un medidor que suba barras de luz en la pantalla cuanto más fuerte grites. Además, tu energía debe sonar: cuanto más fuerte sea el grito, más aguda será la nota musical que suene.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "level = Noise.getValue(); LED.barGraph(level); IF level > 80 THEN Keyboard.play('C5') ELSE Keyboard.play('C3')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Apagado de Velas Digital",
+    "originalIdeaDescription": "Simulación de una tarta de cumpleaños. La matriz LED muestra 'velas' encendidas y el teclado reproduce el 'Cumpleaños Feliz'. El usuario debe soplar fuerte (detectado por el sensor de ruido) para detener la música y apagar los LEDs.",
+    "transformedIdeaTitle": "Sopla la Tarta de Cumpleaños Mágica",
+    "transformedIdeaDescription": "¡Es tu cumpleaños digital! Dibuja velas encendidas en la pantalla y haz que suene una melodía festiva. El desafío es programar el sensor para que, al detectar el sonido de un soplido fuerte, la música se detenga y las velas se apaguen una por una.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Keyboard.play('HappyBirthday'); LED.show('Candles'); IF Noise.level > 90 THEN Keyboard.stop() AND LED.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva",
+    "originalIdeaDescription": "Un compañero virtual simple que reacciona a la presencia del usuario. Si el sensor detecta ruido (la voz del usuario), la matriz muestra una cara feliz y el teclado emite un sonido agradable. En silencio, la mascota duerme.",
+    "transformedIdeaTitle": "Despierta al Monstruo Dormilón",
+    "transformedIdeaDescription": "Tu monstruo mascota está hibernando (Zzz en la pantalla). Tienes que despertarlo hablándole o aplaudiendo. Si te escucha, debe abrir los ojos (LEDs) y saludarte con una melodía alegre. Si te callas, se vuelve a dormir.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.detected() THEN LED.show('Awake') AND Keyboard.playSequence([C, E, G]) ELSE LED.show('Sleep')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor de Aplausos Musical",
+    "originalIdeaDescription": "Sistema de control por aplausos. Un aplauso enciende un patrón en la matriz LED y toca una nota. Un segundo aplauso cambia el patrón y la nota. Un tercer aplauso apaga todo.",
+    "transformedIdeaTitle": "El Mago de los Aplausos",
+    "transformedIdeaDescription": "Conviértete en un mago que controla la luz y el sonido con las manos. Programa el sistema para que cuente tus aplausos: 1 aplauso = Luz Roja y nota DO, 2 aplausos = Luz Azul y nota MI. ¡Haz tu propio código de hechizos rítmicos!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "claps = count(Noise.peaks); IF claps == 1 THEN LED.color(Red) AND Keyboard.play(C) ELSE IF claps == 2..."
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Simulado",
+    "originalIdeaDescription": "Recreación ambiental donde la matriz LED simula lluvia cayendo. Cuando el sensor de ruido detecta un sonido fuerte repentino (simulando un trueno real o aplauso), el teclado reproduce un acorde grave y dramático y los LEDs parpadean.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Vamos a crear una tormenta en una caja. Dibuja lluvia cayendo en la pantalla. Tu misión es hacer el efecto de trueno: cuando golpees la mesa (ruido fuerte), la pantalla debe soltar un 'rayo' (parpadeo blanco) y el teclado debe sonar como un estruendo grave.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP RainAnimation; IF Noise.peak > threshold THEN LED.flash(White) AND Keyboard.playChord(C_Minor)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor Alienígena",
+    "originalIdeaDescription": "Dispositivo lúdico que transforma la voz humana en 'idioma alienígena'. Al hablar al sensor de ruido, el sistema genera notas aleatorias en el teclado y muestra símbolos crípticos aleatorios en la matriz LED.",
+    "transformedIdeaTitle": "El Comunicador Intergaláctico",
+    "transformedIdeaDescription": "¡Hemos contactado con extraterrestres! Pero no entienden nuestro idioma. Crea un dispositivo que, cada vez que hables, traduzca tu voz a sonidos espaciales (notas al azar) y muestre símbolos extraños en la pantalla LED. ¡Intenta mantener una conversación!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise.isActive(): LED.showRandomPixel() AND Keyboard.playRandomNote()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Bebé Inteligente",
+    "originalIdeaDescription": "Un prototipo de monitor de bebé. Si el nivel de ruido es bajo, muestra una luna y no hace sonido. Si el ruido es alto (llanto), la matriz muestra un corazón para calmar y el teclado toca una canción de cuna automáticamente.",
+    "transformedIdeaTitle": "La Nana Automática para Hermanitos",
+    "transformedIdeaDescription": "Ayuda a cuidar al bebé robot. Si está callado, muestra una luna en la pantalla para que duerma. Pero si el sensor detecta que está llorando (mucho ruido), debes programar el sistema para que automáticamente toque 'Estrellita donde estás' y muestre un corazón.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level < 20 THEN LED.show('Moon') ELSE Keyboard.play('Lullaby') AND LED.show('Heart')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "Juego donde el objetivo es moverse en silencio. La matriz LED muestra un camino seguro. Si el sensor de ruido detecta sonido por encima de un mínimo, suena una alarma en el teclado y aparece una 'X' en la matriz.",
+    "transformedIdeaTitle": "Entrenamiento Ninja Silencioso",
+    "transformedIdeaDescription": "Para ser un ninja, debes ser invisible y silencioso. El Sensei (tu programa) te vigila. Intenta moverte cerca del sensor. Si haces el más mínimo ruido, sonará la alarma y aparecerá una X gigante. ¿Cuánto tiempo puedes aguantar sin ser detectado?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "timer.start(); IF Noise.level > 10 THEN Game_Over() AND Keyboard.play('Alarm') AND LED.show('X')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Afinador de Vocales Visual",
+    "originalIdeaDescription": "Herramienta para practicar entonación sostenida. El usuario debe mantener un tono (ruido constante). La matriz LED se llena progresivamente mientras el teclado acompaña con una nota armónica. Si el sonido se corta, el proceso se reinicia.",
+    "transformedIdeaTitle": "El Encantador de Serpientes",
+    "transformedIdeaDescription": "Haz crecer una serpiente de luz en la pantalla usando solo tu voz. Tienes que hacer un sonido largo y constante ('Aaaaaah'). Mientras mantengas el sonido, la serpiente crece y suena música de fondo. Si te quedas sin aire, ¡la serpiente se esconde!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise.level > 40: LED.addPixel() AND Keyboard.playDrone('A3')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo de Ruido Escolar",
+    "originalIdeaDescription": "Semáforo funcional para aulas. Verde = Silencio (nota suave periódica). Amarillo = Murmullo. Rojo = Ruido excesivo (sonido de sirena y matriz llena en rojo).",
+    "transformedIdeaTitle": "El Semáforo de la Fiesta",
+    "transformedIdeaDescription": "Controla el ambiente de la clase. Programa un semáforo: si todos están callados, muestra una carita verde y pon música relajante. Si hay demasiado alboroto, ¡enciende la luz roja de emergencia y haz sonar la sirena de policía!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise < 30 THEN Green/SoftMusic ELSE IF Noise > 80 THEN Red/Siren"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Voz",
+    "originalIdeaDescription": "El usuario hace sonidos percusivos (beatbox) cerca del sensor. Cada pico de sonido dispara una nota de bajo en el teclado y un flash visual en la matriz LED, permitiendo acompañar una base rítmica.",
+    "transformedIdeaTitle": "Tu Propio Beatbox Biónico",
+    "transformedIdeaDescription": "¡Eres el DJ! Usa tu boca para hacer ritmos ('Pum', 'Ka'). Programa el sistema para que cada vez que detecte un golpe fuerte de voz, dispare un sonido electrónico en el teclado y un destello visual. ¡Crea el ritmo más cool!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.derivative > threshold THEN Keyboard.playShort('Kick') AND LED.flash()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Reacción al Grito",
+    "originalIdeaDescription": "Juego de reflejos. La matriz LED hace una cuenta regresiva visual. Al llegar a cero, el usuario debe gritar inmediatamente. El sistema mide el tiempo de reacción y toca una fanfarria si es rápido.",
+    "transformedIdeaTitle": "¡Grita para Ganar!",
+    "transformedIdeaDescription": "Un juego de velocidad. La pantalla cuenta 3, 2, 1... ¡YA! En ese momento exacto debes gritar. Si eres lo bastante rápido, el sistema tocará la canción de victoria. Si tardas mucho, sonará una nota triste de derrota.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.countdown(); t0=time; WAIT UNTIL Noise > 80; score = time - t0; IF score < 0.5s THEN Win()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Efecto de Cueva con Eco",
+    "originalIdeaDescription": "Simulador de eco. El usuario emite un sonido corto. El sistema espera unos milisegundos y luego reproduce una nota que se desvanece en el teclado mientras la matriz muestra ondas expansivas.",
+    "transformedIdeaTitle": "Explorando la Cueva del Eco",
+    "transformedIdeaDescription": "Estamos en una cueva profunda. Grita '¡Hola!'. Tu programa debe escuchar el grito, esperar un segundo y luego responder con un 'eco' musical (notas que bajan de volumen) mientras dibuja ondas en la pantalla LED.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.trigger() THEN wait(500ms); Keyboard.playFadeOut(); LED.rippleEffect()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Aplausómetro de Concurso",
+    "originalIdeaDescription": "Medidor de popularidad. Después de una actuación, el público aplaude. El sistema suma el ruido total durante 5 segundos. Muestra la puntuación en la matriz y toca una escala musical proporcional al nivel alcanzado.",
+    "transformedIdeaTitle": "El Jurado del Talento Musical",
+    "transformedIdeaDescription": "Organiza un concurso de talentos. Después de cada show, pide al público que aplauda. Tu programa debe 'escuchar' durante 5 segundos, calcular cuánto aplaudieron y mostrar una copa de oro, plata o bronce en la pantalla acompañado de una música triunfal.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "score = average(Noise, 5sec); IF score > 90 THEN LED.show('Gold') AND Keyboard.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma Despertador Interactiva",
+    "originalIdeaDescription": "Un reloj despertador que no se apaga con un botón. Comienza a sonar música y parpadear luces. Para apagarlo, el usuario debe gritar 'DESPIERTO' o hacer ruido fuerte y sostenido durante 3 segundos.",
+    "transformedIdeaTitle": "El Despertador Imposible",
+    "transformedIdeaDescription": "Este despertador es muy molesto. Empieza a sonar y a mostrar luces locas. El desafío es programarlo para que SOLO se apague si detecta que haces mucho ruido (como gritar '¡Ya voy!') durante 3 segundos seguidos. ¡Prohibido dormirse!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TRUE: playAlarm(); IF Noise.sustain(3sec) THEN break loop"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Acústico",
+    "originalIdeaDescription": "Sistema de comunicación espía. Ruidos cortos se traducen en un punto en la matriz y una nota aguda. Ruidos largos son una raya y una nota grave. Permite enviar mensajes visuales y sonoros.",
+    "transformedIdeaTitle": "Mensajes Secretos de Espías",
+    "transformedIdeaDescription": "Envía códigos secretos a tu compañero. Un golpe corto en la mesa dibuja un punto (.) y toca una nota alta. Un golpe largo o un soplido dibuja una raya (-) y toca una nota baja. ¿Puedes escribir S.O.S.?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "duration = Noise.measureDuration(); IF duration < 0.5 THEN LED.add('.') ELSE LED.add('-')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Inflado de Globo",
+    "originalIdeaDescription": "Actividad visual. La matriz LED muestra un pequeño punto que crece a medida que el usuario sopla (ruido continuo) en el sensor. El teclado sube de tono (pitch) simulando la tensión del globo hasta que 'explota'.",
+    "transformedIdeaTitle": "Infla el Globo Hasta que Explote",
+    "transformedIdeaDescription": "Sopla en el sensor para inflar un globo digital. Mientras detecte sonido de soplido, el círculo en la pantalla se hará más grande y el sonido se volverá más agudo. ¡Cuidado! Si te pasas, programa una explosión (sonido fuerte + flash).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "size = 1; WHILE Noise.blowing(): size++; LED.circle(size); Keyboard.pitch(size); IF size > max THEN Explode()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Acompañamiento Musical por Ambiente",
+    "originalIdeaDescription": "Generador de ambiente. Si el ruido ambiental es bajo (calma), reproduce acordes lentos y luces azules. Si el ruido ambiental es alto (caos), reproduce melodías rápidas y luces rojas/naranjas.",
+    "transformedIdeaTitle": "El DJ de las Emociones",
+    "transformedIdeaDescription": "Crea una banda sonora para tu vida. Si la habitación está tranquila, haz que suene música relajante y luces suaves. Si entra mucha gente y hay ruido, cambia automáticamente a música de fiesta rápida y luces discotequeras.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "avgNoise = Noise.average(); IF avgNoise < 40 THEN PlaySlow() ELSE PlayFast()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Juguete de exploración. El usuario camina con el dispositivo. El código simula lecturas 'paranormales' aleatorias o basadas en fluctuaciones leves de ruido, activando melodías misteriosas y parpadeos en la matriz.",
+    "transformedIdeaTitle": "Cazafantasmas: El Rastreador PKE",
+    "transformedIdeaDescription": "Construye un detector de actividad paranormal. Camina por la habitación en silencio. Si el sensor detecta un cambio extraño en el ruido (o un valor aleatorio sorpresa), debe activar la alarma de fantasmas (música de miedo) y mostrar dónde está el espectro en la pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.fluctuation() > limit OR Random(1,100) > 95 THEN Play('Spooky') AND LED.flash()"
+  }
+]

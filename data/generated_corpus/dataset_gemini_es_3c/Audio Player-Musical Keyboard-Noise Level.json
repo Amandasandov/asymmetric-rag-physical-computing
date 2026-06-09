@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Piano de la Biblioteca",
+    "originalIdeaDescription": "Un piano que solo funciona si el entorno está silencioso. Si el sensor de ruido detecta voces o ruidos fuertes, el Audio Player emite un sonido de '¡Shhh!' y el teclado se bloquea temporalmente.",
+    "transformedIdeaTitle": "El Bibliotecario Gruñón",
+    "transformedIdeaDescription": "Los estudiantes crean un sistema para una biblioteca mágica. Deben tocar una melodía suave en el teclado. Sin embargo, si alguien en la clase habla o hace ruido (Sensor de Ruido > 50), el Bibliotecario Virtual grita '¡SILENCIO!' (Audio Player) y desactiva las teclas por 5 segundos. El reto es tocar la canción completa sin interrupciones.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 50 THEN Audio.play('Shhh'); Keyboard.disable(5s); ELSE Keyboard.enable()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Sintetizador Activado por Gritos",
+    "originalIdeaDescription": "Un instrumento experimental donde el volumen o la distorsión de la nota que se toca en el teclado depende de qué tan fuerte grite o sople el usuario al micrófono.",
+    "transformedIdeaTitle": "El Amplificador de Energía Saiyan",
+    "transformedIdeaDescription": "¡Eleva tu ki! Toca una nota en el teclado para cargar tu ataque. Para lanzarlo con máxima potencia, debes gritar o soplar fuerte al sensor (Noise Level). Cuanto más ruido hagas, más épico será el efecto de sonido de explosión (Audio Player) que acompañe a tu nota.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Keyboard.pressed() THEN impact = Noise.level; Audio.setVolume(impact); Audio.play('EnergyBlast')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Nana para el Dragón Dormido",
+    "originalIdeaDescription": "El usuario debe tocar una canción de cuna en el teclado. El sensor de ruido monitorea el ambiente; si hay un ruido fuerte repentino, el dragón despierta (audio de rugido).",
+    "transformedIdeaTitle": "No Despiertes al Dragón",
+    "transformedIdeaDescription": "Un dragón duerme custodiando el tesoro (Audio: ronquidos). Debes tocar la 'Canción del Sueño' en el teclado para mantenerlo dormido mientras te acercas. Pero cuidado: si haces algún ruido brusco (estornudar o golpear la mesa), el sensor de ruido lo detectará, el dragón rugirá y perderás el juego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('Snore'); IF Noise.level > threshold THEN Audio.play('Roar'); Game.Over(); IF Keyboard.melody('Lullaby') THEN Game.Win()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Cambiador de Instrumentos por Aplausos",
+    "originalIdeaDescription": "Tocar el teclado produce sonidos. Para cambiar el instrumento (de piano a violín, etc.), el usuario debe dar una palmada fuerte, detectada por el sensor de ruido.",
+    "transformedIdeaTitle": "La Orquesta Mágica de Palmas",
+    "transformedIdeaDescription": "Eres un director de orquesta con poderes. Tocas la melodía con el teclado. ¿Quieres cambiar de sección? ¡Da una palmada fuerte! El sensor detectará el pico de ruido y el Audio Player cambiará instantáneamente el sonido de tus teclas de Piano a Trompetas. Da dos palmadas para Batería.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.peakDetected() THEN instrumentIndex++; Audio.setInstrument(instrumentIndex); IF Keyboard.pressed() THEN Audio.playNote()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Sistema de Seguridad con Contraseña Rítmica",
+    "originalIdeaDescription": "Para desbloquear un mensaje de audio secreto, el usuario debe realizar una secuencia mixta: tocar tres notas específicas y luego dar dos palmadas en un tiempo determinado.",
+    "transformedIdeaTitle": "Agente Secreto: La Bóveda Sónica",
+    "transformedIdeaDescription": "La puerta de la base espía está cerrada. Para entrar, debes introducir el código de seguridad híbrido: Toca 'Do-Mi-Sol' en el teclado y luego da dos palmadas rápidas (Noise Level) en menos de 3 segundos. Si lo logras, el sistema te dirá 'Acceso Concedido' (Audio).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Keyboard.sequence('C-E-G') AND wait(Noise.claps(2)) THEN Audio.play('AccessGranted') ELSE Audio.play('Alarm')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Monitor de Ambiente Escolar",
+    "originalIdeaDescription": "Un dispositivo que reproduce música de fondo (Audio) que cambia según el nivel de ruido del aula. Música feliz si hay silencio, música tensa si hay mucho ruido. El teclado sirve para resetear o calibrar.",
+    "transformedIdeaTitle": "El DJ del Comportamiento",
+    "transformedIdeaDescription": "Programad un asistente de aula. Si la clase está trabajando en silencio (Ruido bajo), el Audio reproduce música Lo-Fi relajante. Si el ruido sube demasiado, la música cambia a una sirena o música de tensión. Usad el teclado para 'votar' por la siguiente canción si os portáis bien.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.average(10s) < 30 THEN Audio.play('Chill'); ELSE Audio.play('Tension'); IF Keyboard.key('A') THEN Audio.nextTrack()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo: Pasos Silenciosos",
+    "originalIdeaDescription": "El audio reproduce pasos de un guardia. El usuario debe tocar una secuencia en el teclado para 'robar' datos, pero debe detenerse y hacer silencio absoluto cuando los pasos del guardia se detienen.",
+    "transformedIdeaTitle": "Infiltración en el Museo",
+    "transformedIdeaDescription": "Estás robando un diamante digital. Toca las teclas rápido para hackear el sistema (cada tecla carga una barra de progreso). Pero escucha: si el Audio de los pasos del guardia se detiene, debes dejar de tocar y quedarte en silencio total (Noise Level 0). Si haces ruido o tecleas, te atrapan.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('GuardSteps'); IF Audio.isPaused() AND (Noise.level > 10 OR Keyboard.pressed()) THEN Audio.play('Caught!'); ELSE progress++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Micrófono de Hechizos Mágicos",
+    "originalIdeaDescription": "El usuario presiona una combinación de teclas (tipo de hechizo) y debe gritar la 'palabra mágica' (ruido) para lanzarlo. El audio reproduce el efecto del hechizo.",
+    "transformedIdeaTitle": "Academia de Hechicería",
+    "transformedIdeaDescription": "Aprende a lanzar magia. Selecciona el elemento con el teclado (Tecla Do = Fuego, Re = Hielo). Mantén la tecla presionada y sopla o grita al sensor de ruido para 'lanzar' el poder. El Audio reproducirá el sonido del elemento con una intensidad igual a tu grito.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "spell = Keyboard.getKey(); IF spell == 'C' AND Noise.level > 60 THEN Audio.play('Fireball', volume=Noise.level)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Grabadora de Beatbox en Capas",
+    "originalIdeaDescription": "Usa el teclado para disparar una base rítmica. El sensor de ruido detecta cuando el usuario hace sonidos de percusión con la boca y los superpone (o dispara samples) sobre la música.",
+    "transformedIdeaTitle": "Estación de Beatbox Loop",
+    "transformedIdeaDescription": "Crea tu propia pista de rap. Presiona una tecla para iniciar una base de batería (Audio). Luego, usa el micrófono (Sensor de Ruido) como disparador: cada vez que hagas un sonido fuerte y corto ('¡Pum!'), el sistema añadirá un efecto de platillo o scratch a la mezcla en tiempo real.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Keyboard.toggle('Start') THEN Audio.loop('Beat'); IF Noise.peak() THEN Audio.playOver('Scratch')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Afinador de Voz Inverso",
+    "originalIdeaDescription": "El audio reproduce un tono. El usuario debe cantar (ruido constante) y buscar la nota en el teclado que coincida armónicamente, silenciando el tono original.",
+    "transformedIdeaTitle": "Armonía Perfecta",
+    "transformedIdeaDescription": "Entrenamiento auditivo. El sistema emite un tono constante (Audio). Debes cantar o tararear una nota sostenida (Noise Level mantiene el sistema activo) y buscar en el teclado la nota que coincida con el tono. Si aciertas, suena un acorde celestial y pasas de nivel.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.playTone(targetNote); WHILE Noise.level > 20: IF Keyboard.pressed(targetNote) THEN Audio.play('Success')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Tráfico de Fiesta",
+    "originalIdeaDescription": "Si el ruido ambiente es alto (fiesta), el teclado reproduce sonidos de bocinas y sintetizadores. Si es bajo, reproduce piano suave.",
+    "transformedIdeaTitle": "El Alma de la Fiesta",
+    "transformedIdeaDescription": "Tu instrumento se adapta a la vibra. Si tus amigos están gritando y aplaudiendo (Ruido Alto), tu teclado se convierte en una mesa de mezclas con bocinas de aire y bajos potentes (Audio). Si todos se callan, se transforma automáticamente en un piano elegante.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 80 THEN mode = 'Party'; ELSE mode = 'Chill'; IF Keyboard.pressed() THEN Audio.play(mode_sound)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Simón Dice con Voz y Teclas",
+    "originalIdeaDescription": "El juego da instrucciones por Audio: '¡Toca Rojo!' (Teclado) o '¡Grita!' (Ruido). El usuario debe reaccionar correctamente.",
+    "transformedIdeaTitle": "El Comandante del Caos",
+    "transformedIdeaDescription": "Escucha las órdenes del Comandante (Audio). Si dice '¡Toca Do!', usa el teclado. Si dice '¡Haz ruido!', grita o aplaude al sensor. ¡Pero cuidado! Si dice '¡Silencio!' y el sensor detecta cualquier sonido, pierdes una vida. El juego se acelera cada ronda.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Command = Random(['Key', 'Noise', 'Quiet']); Audio.say(Command); CHECK inputs match Command"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Caja de Música a Viento",
+    "originalIdeaDescription": "Para que la música (Audio) suene, el usuario debe soplar constantemente al sensor (ruido constante como energía). El teclado cambia la melodía.",
+    "transformedIdeaTitle": "El Piano de Viento",
+    "transformedIdeaDescription": "Este piano no funciona con electricidad, ¡sino con aire! Debes soplar continuamente sobre el sensor (manteniendo el Nivel de Ruido alto) para dar energía al sistema. Mientras soplas, toca las teclas para que suenen. Si te quedas sin aire, la música se detiene.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Noise.level > 40: power = ON; IF Keyboard.pressed() AND power THEN Audio.playNote()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fantasmas por Ectoplasma",
+    "originalIdeaDescription": "El ruido estático (Audio) aumenta. El usuario debe quedarse quieto (silencio). Si el sensor detecta ruido, el fantasma ataca. El teclado se usa para 'atraparlo' cuando la señal es clara.",
+    "transformedIdeaTitle": "Cazafantasmas: La Trampa Sonora",
+    "transformedIdeaDescription": "Estás rastreando un espectro. Escucha la estática (Audio). Debes mantener silencio absoluto (Noise < 10) para no asustarlo. Cuando la estática cambie a una voz clara, ¡toca rápidamente la secuencia de captura en el teclado antes de que huya!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Static'); IF Noise.level > 10 THEN Audio.play('GhostEscapes'); IF RandomTime() THEN Audio.play('Voice') AND EnableCapture()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Traductor de Alienígenas",
+    "originalIdeaDescription": "El audio reproduce un patrón rítmico alienígena. El usuario debe replicar el ritmo dando golpes en la mesa (Ruido) y luego responder con una melodía en el teclado.",
+    "transformedIdeaTitle": "Encuentros en la Tercera Fase",
+    "transformedIdeaDescription": "Una nave aterriza. Escucha su mensaje: 'Beep-Bop-Beep' (Audio). Primero, repite el ritmo dando golpes en la mesa (el sensor de ruido verifica el timing). Si lo haces bien, la nave se abre y puedes usar el teclado para tocar el himno de la paz y ganar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.playPattern(); IF Noise.rhythmMatches() THEN Audio.play('DoorOpen'); IF Keyboard.song('Peace') THEN Win()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "El Juez de Talentos",
+    "originalIdeaDescription": "El usuario toca una canción en el teclado. Al finalizar, el sistema mide el nivel de ruido (aplausos de los compañeros) y el Audio Player anuncia el puntaje o reproduce abucheos.",
+    "transformedIdeaTitle": "Got Talent: Edición Robot",
+    "transformedIdeaDescription": "Toca tu mejor canción en el teclado. Al terminar, pide a tus amigos que aplaudan. El sensor medirá el volumen de los aplausos. Si es alto, el Audio dirá '¡Pase de Oro!'. Si es bajo, sonará una bocina triste de eliminación.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Record Keyboard.performance(); WAIT(3s); score = Noise.maxLevel(); IF score > 80 THEN Audio.play('Cheer') ELSE Audio.play('Boo')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Telégrafo en Zona de Guerra",
+    "originalIdeaDescription": "El usuario debe enviar un mensaje Morse con el teclado. El Audio simula explosiones de fondo. Si una explosión (Ruido simulado o real) ocurre, debe esperar a que pase para seguir transmitiendo.",
+    "transformedIdeaTitle": "El Mensajero del Frente",
+    "transformedIdeaDescription": "Envía el mensaje vital con el teclado (código morse). Pero el campo de batalla es ruidoso. Si el sensor detecta mucho ruido ambiente (explosiones o gritos), tu señal se cortará. Debes esperar los momentos de silencio para teclear el código y que el Audio confirme el envío.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level < 30 AND Keyboard.input() THEN message.append(); Audio.play('Beep'); ELSE Audio.play('Static')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Mezclador de Efectos de Voz",
+    "originalIdeaDescription": "El usuario habla o canta (Ruido). El teclado se usa para seleccionar efectos (reverb, eco, robot) que el Audio Player aplica a la voz (simulado o reproducción de samples asociados).",
+    "transformedIdeaTitle": "La Máscara de Voz",
+    "transformedIdeaDescription": "¡Cambia tu identidad! Haz sonidos o habla fuerte al sensor. Mientras lo haces, presiona las teclas para aplicar 'filtros' mágicos: la tecla 1 hace que el Audio reproduzca una versión robótica, la tecla 2 te convierte en una ardilla. ¡Crea una obra de teatro con una sola persona!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.detected() AND Keyboard.key('1') THEN Audio.playEffect('RobotVoice');"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Alarma de Mascota Virtual",
+    "originalIdeaDescription": "Una mascota virtual que vive en el dispositivo. Si hay mucho ruido, se asusta (Audio de llanto) y debes tocar el teclado para calmarla.",
+    "transformedIdeaTitle": "Cuidando al Alien Bebé",
+    "transformedIdeaDescription": "Tu mascota alienígena es muy sensible. Si la clase es demasiado ruidosa (Sensor > 60), el bebé empezará a llorar (Audio). Debes correr al dispositivo y tocar una melodía suave y lenta en el teclado para que deje de llorar y se duerma de nuevo.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 60 THEN Audio.loop('Cry'); IF Keyboard.melody('Calm') THEN Audio.stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Juego de Preguntas: El Ruidoso gana",
+    "originalIdeaDescription": "Audio hace una pregunta. El primer estudiante en hacer ruido (gritar su nombre) activa su turno para responder usando el teclado (opción A, B, C).",
+    "transformedIdeaTitle": "Quiz Show: ¡Grita y Gana!",
+    "transformedIdeaDescription": "El presentador (Audio) hace una pregunta de matemáticas. El primer jugador que grite o golpee la mesa (Sensor de Ruido) bloquea el turno de los demás. Entonces tiene 5 segundos para presionar la tecla correcta (Do=A, Re=B, Mi=C) y ganar puntos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.ask('Question'); WAIT_FOR(Noise.threshold); activePlayer = TRUE; IF Keyboard.correctAnswer() THEN score++"
+  }
+]

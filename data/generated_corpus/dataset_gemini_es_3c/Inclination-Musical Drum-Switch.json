@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Baquetas de Batería Virtuales",
+    "originalIdeaDescription": "Un sistema que simula el uso de baquetas reales. El interruptor activa el modo de 'golpeo' y la inclinación del dispositivo determina qué tambor o platillo suena (izquierda para caja, derecha para platillo).",
+    "transformedIdeaTitle": "El Baterista Invisible",
+    "transformedIdeaDescription": "¡Convierte tu tablet en una batería de aire! Activa tus baquetas mágicas con el interruptor. Si inclinas la tablet hacia la izquierda, golpearás el redoblante; hacia la derecha, harás sonar los platillos. Crea tu propio solo de rock sin tocar nada físico.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON: (SI InclinaciónX < -20: Drum.play('Snare'); SI InclinaciónX > 20: Drum.play('Cymbal'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Estabilidad de Carga",
+    "originalIdeaDescription": "Dispositivo para detectar si una carga está desequilibrada. El interruptor arma el sistema y cualquier inclinación fuera del eje horizontal dispara un sonido de percusión fuerte como advertencia.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Eres un camarero llevando una bandeja llena de vasos de cristal. Activa el juego con el interruptor y mantén la tablet perfectamente plana. Si te inclinas demasiado, ¡CRASH! Sonará un platillo indicando que se te han caído los platos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON Y (InclinaciónX > 15 O InclinaciónY > 15) ENTONCES Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Ritmos por Pasos",
+    "originalIdeaDescription": "Simulación de caminar donde el movimiento genera sonido. El interruptor habilita el podómetro sonoro y la inclinación alternada entre izquierda y derecha genera sonidos de bombo y caja simulando pasos.",
+    "transformedIdeaTitle": "El Gigante Caminando",
+    "transformedIdeaDescription": "Imagina que eres un gigante haciendo temblar la tierra. Activa tus 'piernas' con el interruptor. Inclina la tablet a la izquierda para dar un paso pesado (Bombo) y a la derecha para el otro pie (Caja). ¡Camina al ritmo!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON: (SI InclinaciónX < -30: Drum.play('Kick'); SI InclinaciónX > 30: Drum.play('Snare'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo de Péndulo Digital",
+    "originalIdeaDescription": "Un metrónomo donde la frecuencia del ritmo se ajusta visualmente mediante la inclinación. El interruptor inicia el ritmo y el ángulo de inclinación aumenta o disminuye la velocidad de los golpes de percusión.",
+    "transformedIdeaTitle": "Director de Orquesta Loco",
+    "transformedIdeaDescription": "Tú controlas la velocidad de la banda. Enciende la música con el interruptor. Si inclinas la tablet hacia arriba, la batería tocará súper rápido; si la inclinas hacia abajo, irá en cámara lenta. ¡Ajusta el ritmo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Switch=ON ENTONCES Esperar(1000 - InclinaciónY*10) Y Drum.play('HiHat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Motor",
+    "originalIdeaDescription": "Simulador de motor de vehículo. El interruptor enciende el 'motor' y la inclinación actúa como pedal de acelerador, disparando sonidos de percusión rápidos que emulan el rugido de un motor.",
+    "transformedIdeaTitle": "Carrera de Fórmula 1",
+    "transformedIdeaDescription": "Convierte tu dispositivo en el volante de un coche de carreras. Enciende el motor con el interruptor. Cuanto más inclines el volante hacia adelante, más rápido sonará el motor (redobles de batería rápidos) como si estuvieras acelerando a fondo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON ENTONCES Repetir Drum.play('Tom') con Retraso(100 / InclinaciónY)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Instrumentos por Gravedad",
+    "originalIdeaDescription": "Interfaz para cambiar sonidos. El interruptor sirve como gatillo para tocar, mientras que la inclinación del dispositivo (arriba, abajo, izquierda, derecha) selecciona qué parte de la batería sonará al presionar.",
+    "transformedIdeaTitle": "La Caja de Música Mágica",
+    "transformedIdeaDescription": "Descubre sonidos ocultos en cada dirección. Inclina la tablet hacia el Norte, Sur, Este u Oeste para elegir un instrumento. Luego, usa el interruptor como botón para tocar el sonido elegido. ¡Crea una melodía explorando el espacio!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=Pressed: (SI InclinaciónY > 20: Drum.play('Kick') SINO SI InclinaciónY < -20: Drum.play('Snare')...)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Maracas Digitales",
+    "originalIdeaDescription": "Instrumento de agitación. El interruptor activa el modo de instrumento. Los cambios rápidos en la inclinación (sacudidas) disparan sonidos de percusión de alta frecuencia como maracas o hi-hats.",
+    "transformedIdeaTitle": "Fiesta de Maracas",
+    "transformedIdeaDescription": "¡Es hora de bailar salsa! Activa el modo fiesta con el interruptor. Ahora, agita tu tablet en el aire como si fuera una maraca real. Cada vez que cambies la inclinación bruscamente, sonará el ritmo.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON Y (Cambio en Inclinación > Umbral) ENTONCES Drum.play('Shaker')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Pinball Sonoro",
+    "originalIdeaDescription": "Simulación acústica de un pinball. El interruptor lanza la bola virtual y la inclinación controla las palancas, generando sonidos de rebote (batería) cuando se alcanzan ciertos ángulos.",
+    "transformedIdeaTitle": "Pinball Ciego",
+    "transformedIdeaDescription": "Juega al Pinball usando tus oídos. Lanza la bola con el interruptor. Inclina la tablet para 'golpear' la bola virtual. Cada vez que aciertes en el ángulo correcto, escucharás un sonido de rebote (tom-tom) ¡Intenta mantener la bola en juego!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Switch=ON Y InclinaciónX == ObjetivoAleatorio ENTONCES Drum.play('TomHigh')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Truenos y Lluvia",
+    "originalIdeaDescription": "Generador de ambiente climático. El interruptor inicia un sonido de lluvia constante (hi-hat suave) y la inclinación brusca dispara un trueno (bombo fuerte y plato).",
+    "transformedIdeaTitle": "El Dios del Trueno",
+    "transformedIdeaDescription": "Controla el clima. Activa la lluvia suave con el interruptor. Cuando quieras asustar a todos con un trueno, inclina bruscamente la tablet hacia adelante para que suene un estruendo (Bombo + Platillo).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON: (Loop('ClosedHiHat'); SI InclinaciónY > 40: Drum.play('Kick+Crash'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Herramienta de Construcción Virtual",
+    "originalIdeaDescription": "Simulador de martillo. El interruptor es el seguro. Al hacer un movimiento de golpeo (cambio rápido de inclinación hacia abajo), se reproduce un sonido de impacto fuerte.",
+    "transformedIdeaTitle": "El Constructor Ruidoso",
+    "transformedIdeaDescription": "¡A construir! Quita el seguro de tu martillo virtual con el interruptor. Ahora, haz el gesto de clavar un clavo moviendo la tablet hacia abajo. Cada golpe exitoso sonará como un golpe fuerte de batería.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON Y InclinaciónY < -45 (Rápido) ENTONCES Drum.play('SnareHit')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse",
+    "originalIdeaDescription": "Sistema de comunicación rítmica. El interruptor habilita la transmisión. Inclinar a la izquierda produce un sonido corto (punto/caja) y a la derecha un sonido largo (raya/platillo).",
+    "transformedIdeaTitle": "Mensajes Secretos Espía",
+    "transformedIdeaDescription": "Envía códigos secretos a tus amigos. Activa el transmisor con el interruptor. Inclina a la izquierda para un sonido corto y a la derecha para uno largo. ¿Puedes deletrear tu nombre en ritmo Morse?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Switch=ON: (SI InclinaciónX < -20: Drum.play('SideStick'); SI InclinaciónX > 20: Drum.play('OpenHiHat'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Pelota que Rebota",
+    "originalIdeaDescription": "Simulación física de rebote. El interruptor suelta una pelota virtual. La inclinación mueve el suelo, y cada vez que la pelota virtual 'toca' el suelo calculado, suena un golpe de batería.",
+    "transformedIdeaTitle": "Rebotes Locos",
+    "transformedIdeaDescription": "Mantén el ritmo del rebote. Suelta la pelota con el interruptor. Inclina la tablet para controlar dónde cae la pelota. Cada vez que rebote en el suelo virtual, escucharás un 'Boing' (sonido de Tom).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Switch=ON Y PosicionBola <= 0 ENTONCES Drum.play('TomLow') Y Rebote()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Scratch DJ",
+    "originalIdeaDescription": "Emulador de DJ. El interruptor activa la pista base. La inclinación se usa para hacer 'scratching', modulando un sonido de percusión repetitivo basado en el ángulo.",
+    "transformedIdeaTitle": "Super DJ Scratch",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Enciende la base rítmica con el interruptor. Mueve la tablet hacia adelante y atrás como si fuera un disco de vinilo para hacer efectos de 'scratch' con los sonidos de la batería.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON: (PlayLoop(); SI CambioInclinaciónY != 0: Drum.play('SnareRoll'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Ladrones",
+    "originalIdeaDescription": "Sistema de seguridad simple. Se activa con el interruptor. Si el dispositivo se mueve o inclina más allá de un umbral sensible, dispara una alarma de percusión continua.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu diario secreto. Coloca la tablet encima y activa la alarma con el interruptor. Si alguien intenta levantarla o moverla (inclinación), ¡la batería empezará a sonar como loca alertándote!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON Y (Inclinación != InclinaciónInicial) ENTONCES Drum.play('CrashRepeat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tenis de Mesa",
+    "originalIdeaDescription": "Juego de audio. El interruptor sirve/inicia. La inclinación hacia los lados determina si golpeas de revés o de derecha, disparando sonidos distintos de impacto.",
+    "transformedIdeaTitle": "Ping Pong Rítmico",
+    "transformedIdeaDescription": "Juega al Ping Pong con sonidos. Saca la bola con el interruptor. Cuando escuches que viene la bola, inclina rápido a la derecha para un golpe fuerte (Bombo) o a la izquierda para un efecto (Caja).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON Y Tiempo=Golpe: (SI InclinaciónX > 0: Drum.play('Kick') SINO Drum.play('Snare'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cocina Virtual: Palomitas",
+    "originalIdeaDescription": "Simulador de cocina. El interruptor enciende el fuego. A medida que se inclina el dispositivo (simulando agitar la olla), se reproducen sonidos aleatorios de percusión (palomitas explotando).",
+    "transformedIdeaTitle": "Chef de Palomitas",
+    "transformedIdeaDescription": "¡Hagamos palomitas! Enciende la estufa con el interruptor. Para que no se quemen, tienes que agitar la olla inclinando la tablet suavemente. Escucharás 'Pop Pop' (rimshots) cada vez que se cocinen.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON Y Inclinación oscila ENTONCES Drum.play('Rimshot') aleatoriamente"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nave Espacial con Propulsores",
+    "originalIdeaDescription": "Control de vehículo aéreo. El interruptor enciende los motores principales. La inclinación controla los propulsores laterales, emitiendo ráfagas de sonido (redobles) según la dirección.",
+    "transformedIdeaTitle": "Aterrizaje Lunar",
+    "transformedIdeaDescription": "Pilota tu nave para aterrizar suavemente. Activa los motores con el interruptor. Usa la inclinación para equilibrar la nave; los propulsores sonarán (redobles de tambor) para corregir tu rumbo si te inclinas mucho.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI Switch=ON: (SI InclinaciónX > 10: Drum.play('RollRight'); SI InclinaciónX < -10: Drum.play('RollLeft'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Corazón Biónico",
+    "originalIdeaDescription": "Simulador de ritmo cardíaco variable. El interruptor 'da vida' al sistema. La inclinación (nivel de esfuerzo simulado) aumenta la frecuencia de un sonido de bombo constante.",
+    "transformedIdeaTitle": "El Corazón Corredor",
+    "transformedIdeaDescription": "Escucha cómo late un corazón digital. Enciéndelo con el interruptor. Si la tablet está quieta, late despacio. Si la inclinas mucho (como si estuviera corriendo), ¡el corazón (bombo) latirá a toda velocidad!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON ENTONCES Loop(Drum.play('Kick'), Intervalo = 1000 - InclinaciónY*10)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Afinador de Precisión (Juego)",
+    "originalIdeaDescription": "Juego de encontrar el 'cero'. El interruptor inicia el reto. El usuario debe encontrar la inclinación 0,0. Cuanto más lejos esté, más rápido suena un redoble; en 0,0 hay silencio o un sonido de éxito.",
+    "transformedIdeaTitle": "Desactivar la Bomba",
+    "transformedIdeaDescription": "¡Tienes que mantener el pulso firme! Activa el modo desactivación con el interruptor. Escucharás un tambor que suena rápido si te tiembla la mano (te inclinas). Si logras mantener la tablet perfectamente plana, el sonido parará y ganarás.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI Switch=ON: (SI Inclinación != 0: Drum.play('HiHat', velocidad=Inclinación) SINO Drum.stop())"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Botón de Pánico Direccional",
+    "originalIdeaDescription": "Sistema de alerta. El interruptor arma el dispositivo. Inclinar hacia adelante dispara una alarma agresiva, inclinar hacia atrás dispara una señal de 'todo bien' más suave.",
+    "transformedIdeaTitle": "El Semáforo Sonoro",
+    "transformedIdeaDescription": "Juega a 'Luz Roja, Luz Verde' con sonidos. Interruptor para empezar. Inclina hacia adelante para 'Luz Roja' (sonido fuerte de alarma/platillos) y hacia atrás para 'Luz Verde' (sonido suave de ritmo).",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI Switch=ON: (SI InclinaciónY > 20: Drum.play('Crash') SINO SI InclinaciónY < -20: Drum.play('HiHat'))"
+  }
+]

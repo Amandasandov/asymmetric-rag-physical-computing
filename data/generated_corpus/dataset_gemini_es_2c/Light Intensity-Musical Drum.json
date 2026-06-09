@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de batería activado por detección de sombras",
+    "originalIdeaDescription": "Esta idea consiste en crear un sistema donde el sensor de intensidad de luz detecta cuando una sombra pasa sobre él. Al disminuir la luz drásticamente, se interpreta como un golpe físico, activando el sonido de un tambor o platillo específico en la batería musical.",
+    "transformedIdeaTitle": "El Baterista Invisible de Sombras",
+    "transformedIdeaDescription": "¡Convierte tu mano en una baqueta mágica! En este desafío, programarás tu dispositivo para que funcione como un tambor de aire. Cuando pases tu mano sobre el sensor creando una sombra, el sistema deberá detectar la caída de luz y tocar un golpe de redoblante. ¿Qué tan rápido puedes tocar sin tocar la pantalla?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 40 THEN Musical_Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de tempo basado en luminosidad ambiental",
+    "originalIdeaDescription": "El sistema ajusta la velocidad (BPM) de un ritmo de batería en bucle basándose en la cantidad de luz ambiental. Habitaciones brillantes generan ritmos rápidos y energéticos, mientras que la oscuridad ralentiza el ritmo para crear una atmósfera más tranquila y relajada.",
+    "transformedIdeaTitle": "DJ Solar: El Ritmo de la Luz",
+    "transformedIdeaDescription": "Imagina que eres un DJ que controla la música con el sol o una linterna. Tu misión es crear un ritmo de fondo que acelere cuando acercas una luz y se vuelva lento y relajante cuando cubres el sensor. Aprenderás a mapear variables numéricas para controlar la velocidad de la música.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET BPM = Light_Intensity * 2; Musical_Drum.playLoop('Rock_Beat', speed=BPM)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de intrusos para cajones oscuros",
+    "originalIdeaDescription": "Un dispositivo de seguridad diseñado para ser colocado dentro de un cajón o caja fuerte oscura. Si el cajón se abre y entra luz, el sensor detecta el cambio y activa una secuencia de batería ruidosa y caótica para alertar sobre la presencia de un intruso.",
+    "transformedIdeaTitle": "La Trampa Ruidosa para Curiosos",
+    "transformedIdeaDescription": "¿Tienes un diario secreto o dulces escondidos? Protege tus tesoros construyendo una alarma sensible a la luz. Esconderás el dispositivo en un lugar oscuro, y programarás una lógica condicional: si alguien abre la caja y entra luz, ¡la batería debe sonar como una explosión para asustarlos!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 10 THEN Musical_Drum.playSequence('Crash', 'Tom_Low', 'Tom_High')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Selector de instrumentos por niveles de luz",
+    "originalIdeaDescription": "Divide el rango de intensidad de luz en tres zonas. Luz baja activa el bombo, luz media activa la caja (redoblante) y luz alta activa los platillos. Esto permite al usuario 'tocar' diferentes partes de la batería simplemente moviendo una linterna más cerca o más lejos.",
+    "transformedIdeaTitle": "La Linterna Musical Multinivel",
+    "transformedIdeaDescription": "Crea un instrumento musical futurista donde la distancia de una luz decide qué sonido se escucha. Usaremos lógica anidada (If-Else): poca luz para sonidos graves (Bombo), luz media para ritmos (Caja) y mucha luz para agudos (Platillos). ¡Afina tu puntería con la linterna!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light < 30 THEN play('Kick') ELSE IF Light < 70 THEN play('Snare') ELSE play('HiHat')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo visual reactivo para práctica musical",
+    "originalIdeaDescription": "Una herramienta para músicos donde el usuario ilumina el sensor rítmicamente con una linterna para establecer un patrón. El sistema registra los intervalos de luz y luego reproduce ese ritmo usando sonidos de percusión, actuando como una grabadora de patrones lumínicos.",
+    "transformedIdeaTitle": "Eco de Luz: Grabadora de Ritmos",
+    "transformedIdeaDescription": "Desafía a tus amigos a un juego de memoria musical. Programarás una aplicación que espere destellos de luz. Cada vez que detecte un destello, tocará un tambor. El reto es usar una linterna para 'escribir' un ritmo que la computadora interpretará al instante.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE True: IF Light_Delta > Threshold THEN Musical_Drum.play('Clap')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta eléctrica interactiva",
+    "originalIdeaDescription": "Este sistema simula el retraso entre el relámpago y el trueno. Cuando el sensor detecta un pico repentino de luz (relámpago), espera un tiempo aleatorio o calculado y luego reproduce un sonido profundo de bombo o tom de piso (trueno).",
+    "transformedIdeaTitle": "Creador de Tormentas: El Efecto Trueno",
+    "transformedIdeaDescription": "¿Sabías que el trueno siempre suena después del relámpago? Vamos a simular este fenómeno natural. Tu código deberá detectar un 'flash' repentino de luz intensa, esperar unos segundos usando un temporizador, y luego hacer retumbar los tambores más graves como si fuera una tormenta real.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity == MAX THEN WAIT(3s) -> Musical_Drum.play('Floor_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería de código Morse lumínico",
+    "originalIdeaDescription": "Un sistema de comunicación que traduce patrones de luz (cortos y largos) en sonidos de percusión distintos. Una luz breve produce un sonido de 'hi-hat' (punto) y una luz larga produce un sonido de 'snare' (raya), permitiendo escuchar mensajes codificados.",
+    "transformedIdeaTitle": "Telégrafo de Tambores Secretos",
+    "transformedIdeaDescription": "Conviértete en un espía y envía mensajes secretos usando luz y sonido. Crearás un decodificador que transforme destellos de luz en sonidos. Si la luz es rápida, sonará un platillo cerrado; si la mantienes, sonará un tambor fuerte. ¡Intenta escribir tu nombre en ritmo Morse!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Duration < 0.5s THEN play('HiHat') ELSE play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Generador de ambiente amanecer/atardecer",
+    "originalIdeaDescription": "El sistema monitorea la luz ambiental durante un largo periodo. A medida que la luz aumenta (amanecer), introduce gradualmente elementos de percusión ligeros. A medida que oscurece (atardecer), cambia a ritmos más lentos y profundos, sirviendo como reloj ambiental.",
+    "transformedIdeaTitle": "La Banda Sonora de tu Día",
+    "transformedIdeaDescription": "Diseña una aplicación que acompañe el paso del día. Usaremos el sensor de luz para detectar si es de día o de noche. Si hay mucha luz, la batería tocará un ritmo pop alegre; si oscurece, cambiará automáticamente a un ritmo suave de jazz. ¡Es música inteligente que reacciona al entorno!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 50 THEN Musical_Drum.loop('Pop_Beat') ELSE Musical_Drum.loop('Jazz_Brush')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de reflejos estroboscópicos",
+    "originalIdeaDescription": "Un juego donde el usuario debe golpear la mesa (o hacer ruido, aunque aquí usamos luz) en sincronía. El sistema reproduce un ritmo base y el usuario debe tapar el sensor de luz en el momento exacto del golpe fuerte ('kick') para ganar puntos o mantener el ritmo sonando.",
+    "transformedIdeaTitle": "Desafío de Ritmo: ¡Tapa la Luz!",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! La computadora tocará un ritmo constante, pero le faltará el golpe principal. Tu misión es tapar el sensor con tu mano en el momento exacto en que debería sonar el bombo. Si lo haces a tiempo, ¡el ritmo sonará completo y ganarás!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Beat_Time AND Light < Threshold THEN Score++ AND Play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Theremin de percusión manual",
+    "originalIdeaDescription": "Inspirado en el Theremin, este instrumento usa la intensidad de la luz (controlada por la altura de la mano sobre el sensor) para variar el tono (pitch) de un tambor electrónico, permitiendo crear efectos de sonido de 'tambor parlante' o glissandos de percusión.",
+    "transformedIdeaTitle": "El Tambor Elástico Mágico",
+    "transformedIdeaDescription": "¿Alguna vez has escuchado un tambor que cambia de tono? Mueve tu mano arriba y abajo sobre el sensor para cambiar cuán agudo o grave suena el tambor. Programaremos el sensor para que la cantidad de luz 'estire' o 'encoja' el sonido digitalmente en tiempo real.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET Pitch = Map(Light_Intensity, 0, 100, Low_Freq, High_Freq); play('Tom', Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de opacidad de materiales sonoro",
+    "originalIdeaDescription": "Una herramienta científica divertida donde los niños colocan diferentes materiales (papel, tela, plástico) sobre el sensor. Según cuánta luz bloquee el material, el sistema asigna y reproduce un sonido de percusión diferente (ej. transparente=platillo, opaco=bombo).",
+    "transformedIdeaTitle": "¿A qué suena este objeto?",
+    "transformedIdeaDescription": "Vamos a investigar la transparencia de los objetos con música. Coloca una hoja, una tela o un vaso sobre el sensor. Si el objeto deja pasar mucha luz, sonará un 'Ting' brillante; si bloquea la luz, sonará un 'Pum' oscuro. ¡Clasifica los objetos de tu clase según su sonido!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Blocked < 20% THEN play('Cymbal') ELSE play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de ritmos aleatoria activada por flash",
+    "originalIdeaDescription": "Un dispositivo para fiestas donde luces intermitentes externas (como las de una discoteca) disparan muestras de batería aleatorias. Cada vez que la luz supera un umbral alto, se dispara un sonido al azar, creando un acompañamiento caótico y divertido.",
+    "transformedIdeaTitle": "Fiesta de Luces y Sonidos Aleatorios",
+    "transformedIdeaDescription": "¡Crea tu propia máquina de acompañamiento para fiestas! Usarás la función 'Random' (Aleatorio). Cada vez que apuntes con una linterna al sensor, la computadora elegirá un sonido de batería sorpresa. ¿Sonará un platillo, un bombo o un cencerro? ¡Nadie lo sabe hasta que la luz lo activa!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 80 THEN play(Random_Drum_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de paso en túneles para juguetes",
+    "originalIdeaDescription": "Pensado para un coche de juguete o robot que lleva el dispositivo. Cuando el robot entra en un túnel (oscuridad), comienza un redoble de tambores que incrementa la tensión, y termina con un platillazo al salir de nuevo a la luz.",
+    "transformedIdeaTitle": "Efectos de Sonido para el Túnel del Terror",
+    "transformedIdeaDescription": "Imagina que estás diseñando los efectos de sonido para una montaña rusa o un tren de juguete. Programarás el dispositivo para detectar cuando entra en un túnel oscuro. Mientras esté oscuro, sonará un redoble de suspenso... ¡y al salir a la luz, un gran platillazo final!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 THEN playLoop('Drum_Roll') ELSE IF Changed_To_Bright THEN play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Control de volumen de percusión solar",
+    "originalIdeaDescription": "Un sistema simple donde la intensidad de la luz controla directamente el volumen de un ritmo de batería constante. Si se tapa el sensor, el ritmo se vuelve un susurro; si se expone a luz directa, suena a máximo volumen.",
+    "transformedIdeaTitle": "Control de Volumen Mágico",
+    "transformedIdeaDescription": "En lugar de usar botones de volumen, ¡usaremos la luz! Tienes un ritmo de batería sonando constantemente. Tu tarea es programar el sensor para que, al cubrirlo con la mano, la música se escuche muy bajito, y al quitar la mano, ¡suene a todo volumen! Aprenderás sobre variables continuas.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SET Volume = Light_Intensity; Musical_Drum.setVolume(Volume)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simon Dice con Linternas",
+    "originalIdeaDescription": "Una variación del juego Simon Dice. El sistema reproduce una secuencia de sonidos (ej. Bombo, Bombo, Caja). El usuario debe replicar la secuencia usando intensidades de luz: Tapar sensor (oscuro) para Bombo, Luz ambiente para Caja, Linterna (brillante) para Platillo.",
+    "transformedIdeaTitle": "Simón Dice: Edición Linterna",
+    "transformedIdeaDescription": "Un reto de memoria y precisión. La computadora tocará una secuencia de sonidos. Tú debes repetirla, pero no pulsando botones, sino manipulando la luz: cubre el sensor para los sonidos graves y alúmbralo con una linterna para los agudos. ¿Podrás recordar la secuencia correcta?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF User_Light_Input matches System_Sound_Sequence THEN Level_Up()"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería inversa para sigilo",
+    "originalIdeaDescription": "Un juego de sigilo donde el objetivo es mantener la habitación oscura. Si alguien enciende la luz, la batería comienza a tocar un ritmo de marcha militar fuerte, indicando que el jugador ha sido descubierto.",
+    "transformedIdeaTitle": "Operación Sigilo Nocturno",
+    "transformedIdeaDescription": "¡Eres un agente secreto y no puedes ser visto! Programa tu dispositivo para que se mantenga en silencio total mientras esté en la oscuridad. Pero cuidado, si alguien enciende la luz del cuarto, ¡se activará la alarma de tambores militares! Un ejercicio perfecto sobre condicionales simples.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > Safe_Level THEN Musical_Drum.playLoop('Military_March')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de capas de percusión",
+    "originalIdeaDescription": "El sistema añade capas de instrumentos a un bucle según la luz. Luz < 30: Solo Bombo. Luz 30-60: Añade Caja. Luz > 60: Añade Hi-Hats. Permite construir una canción progresivamente aumentando la iluminación.",
+    "transformedIdeaTitle": "El Constructor de Canciones Progresivo",
+    "transformedIdeaDescription": "Aprende a construir música capa por capa. Empezarás en la oscuridad con solo un ritmo base. A medida que vayas a un lugar más iluminado, tu código activará más instrumentos automáticamente, haciendo la canción más compleja. ¡Programa cómo crece tu propia orquesta de percusión!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 30 enable(Snare); IF Light > 60 enable(HiHat)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de frecuencia de parpadeo de luz",
+    "originalIdeaDescription": "El sistema analiza luces que parpadean rápidamente (como una luz estroboscópica lenta o una señal) y sincroniza cada golpe de luz con un golpe de batería, permitiendo 'escuchar' la frecuencia de la luz.",
+    "transformedIdeaTitle": "Sincronización: Escucha la Luz",
+    "transformedIdeaDescription": "Algunas luces parpadean, aunque no siempre lo notamos. Crea una herramienta que detecte cada vez que una luz se enciende y se apaga, y asocia un sonido de 'Clap' a cada encendido. Prueba apuntando a luces de navidad o juguetes luminosos para escuchar su ritmo oculto.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Light_Rise_Edge -> Musical_Drum.play('Clap')"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Guía sonora para encontrar la luz",
+    "originalIdeaDescription": "Una herramienta de accesibilidad o juego de búsqueda. Cuanto más se acerca el usuario a una fuente de luz fuerte, más rápido es el redoble de tambores (como el juego 'caliente o frío'). Oscuridad total es silencio.",
+    "transformedIdeaTitle": "Buscadores de Luz: Caliente o Frío",
+    "transformedIdeaDescription": "Vamos a jugar a 'Caliente o Frío' usando tecnología. Esconderás una lámpara en el cuarto. Tu dispositivo debe quedarse callado en lo oscuro, pero empezar a tocar tambores lentamente cuando detecte algo de luz, y acelerar al máximo cuando encuentre la fuente de luz. ¡Encuentra el tesoro luminoso!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET Speed = Map(Light, 0, 100, Slow, Fast); PlayLoop('Drum', Speed)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de música ambiental reactiva",
+    "originalIdeaDescription": "Un dispositivo pasivo que reproduce campanillas de viento (sonidos de percusión metálica suave) de forma intermitente, pero solo cuando detecta cambios naturales en la luz, como nubes pasando frente al sol, creando una experiencia zen.",
+    "transformedIdeaTitle": "Jardín Zen: Campanillas de Luz",
+    "transformedIdeaDescription": "Programa una experiencia relajante. Tu dispositivo detectará cambios suaves en la luz natural (como una nube pasando). Cuando el cambio sea suave y lento, reproducirá sonidos delicados de campanillas o triángulos, creando un ambiente de paz en tu habitación.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ABS(Light_Current - Light_Previous) > Small_Change THEN play('Chime')"
+  }
+]

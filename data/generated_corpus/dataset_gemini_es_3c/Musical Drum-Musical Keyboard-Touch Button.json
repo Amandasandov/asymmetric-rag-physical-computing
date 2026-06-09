@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Cambio de Instrumento",
+    "originalIdeaDescription": "Un sistema donde el usuario toca melodías, pero puede cambiar instantáneamente el tipo de sonido o acompañamiento. El botón funciona como un interruptor que alterna entre un modo de solo piano y un modo donde cada tecla también dispara un golpe de percusión simultáneo.",
+    "transformedIdeaTitle": "El Hombre Orquesta Digital",
+    "transformedIdeaDescription": "¡Conviértete en una banda de una sola persona! En este desafío, programarás un instrumento mágico. Al principio, solo tocas el piano, pero cuando presionas el botón mágico, tu instrumento evoluciona y agrega tambores a cada nota que tocas para darle más potencia a tu concierto.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN toggle(percussionMode); IF key.pressed() THEN { Keyboard.play(note); IF percussionMode THEN Drum.play(beat) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Ritmos de Fondo",
+    "originalIdeaDescription": "El usuario utiliza el botón para iniciar o detener un bucle de batería constante. Mientras el ritmo suena de fondo, el usuario tiene la libertad de improvisar melodías utilizando el teclado musical sin perder el tempo.",
+    "transformedIdeaTitle": "La Base de Rap del DJ",
+    "transformedIdeaDescription": "Eres el DJ principal de la fiesta. Tu tarea es programar el botón para que lance un 'beat' de hip-hop automático. Una vez que el ritmo esté sonando, usarás el teclado para crear melodías pegadizas encima. ¡Si la gente se cansa, usa el botón para cortar la música!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.click() THEN { IF isPlaying THEN stopLoop() ELSE startLoop(Drum.beat1) }; ON loopTick() THEN Drum.play(); ON keyPress THEN Keyboard.play()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Musical Simple",
+    "originalIdeaDescription": "El sistema reproduce una nota de teclado y un sonido de batería. El usuario debe intentar replicar la secuencia. El botón se utiliza para solicitar al sistema que repita la secuencia si el usuario no la escuchó bien la primera vez.",
+    "transformedIdeaTitle": "El Loro Musical Robótico",
+    "transformedIdeaDescription": "Un pájaro robótico te canta una canción extraña mezclando piano y tambores. Tu misión es escuchar atentamente y repetir lo que hizo. Si te olvidas de la melodía, puedes presionar el botón de 'Ayuda' para que el robot te cante la secuencia otra vez.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "playSequence(randomNote, randomDrum); IF TouchButton.pressed() THEN replaySequence(); IF userPlay == sequence THEN win()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Cuentos",
+    "originalIdeaDescription": "Una herramienta para narradores donde el teclado se usa para música ambiental suave y la batería para golpes de efecto repentinos. El botón sirve para cambiar la 'escena', modificando el tono del teclado o el tipo de batería.",
+    "transformedIdeaTitle": "Director de Cine de Terror",
+    "transformedIdeaDescription": "Estás sonorizando una película de misterio. Usarás las teclas para hacer música de suspenso y los tambores para los sustos (¡BUM!). El botón sirve para cambiar de escena: presionalo cuando el héroe entre a una cueva oscura para cambiar los sonidos a algo más tenebroso.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN scene++; IF scene == 1 THEN setInstrument(spookyPiano, thunderDrum); ELSE setInstrument(happyPiano, lightDrum)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Interactivo de Práctica",
+    "originalIdeaDescription": "El botón activa un metrónomo básico usando el sonido de la batería (clic, clic, clic). El usuario debe tocar escalas en el teclado intentando coincidir exactamente con cada golpe de la batería.",
+    "transformedIdeaTitle": "Entrenador de Ritmo Ninja",
+    "transformedIdeaDescription": "Para ser un ninja musical, debes tener un tiempo perfecto. Activa el 'Sensei del Ritmo' con el botón. Él marcará el paso con un tambor constante. Tu desafío es tocar las notas del piano exactamente cuando suena el tambor. ¡No te adelantes ni te atrases!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE TouchButton.active() DO { Drum.play(tick); wait(1000ms); } ON keyPress CHECK temporalAccuracy()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado de Percusión Híbrido",
+    "originalIdeaDescription": "Divide el teclado en dos secciones lógicas. Las teclas graves activan sonidos de batería (bombo, caja) y las teclas agudas tocan notas de piano. El botón cambia el punto de división del teclado.",
+    "transformedIdeaTitle": "El Piano Mutante",
+    "transformedIdeaDescription": "¡Un experimento científico salió mal y tu piano se mezcló con una batería! Ahora, la mitad izquierda de tu teclado hace ruidos de tambor y la derecha suena como piano. Usa el botón rojo para mover la línea de infección y decidir cuántas teclas son tambores y cuántas son piano.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "splitPoint = 5; IF TouchButton.pressed() THEN splitPoint = inputNumber; IF keyIndex < splitPoint THEN Drum.play(mapToDrum(keyIndex)) ELSE Keyboard.play(keyIndex)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Bucles (Looper)",
+    "originalIdeaDescription": "El usuario toca una secuencia corta en la batería o teclado. Al presionar el botón, el sistema comienza a reproducir esa secuencia en bucle indefinidamente, permitiendo al usuario tocar encima.",
+    "transformedIdeaTitle": "La Máquina del Eco Eterno",
+    "transformedIdeaDescription": "Estás en un cañón mágico que repite todo lo que haces. Toca un ritmo genial y presiona el botón para 'capturarlo'. El cañón seguirá repitiendo tu ritmo una y otra vez mientras tú improvisas un solo de piano épico encima.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF recording THEN saveNote(time, note); IF TouchButton.pressed() THEN { recording = false; playingLoop = true }; WHILE playingLoop DO playSavedSequence()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales",
+    "originalIdeaDescription": "El sistema reproduce música (teclado y batería) automáticamente. Cuando el usuario presiona el botón, la música se detiene abruptamente. El objetivo es detener la música en un tiempo específico o nota específica.",
+    "transformedIdeaTitle": "Congelados en la Pista de Baile",
+    "transformedIdeaDescription": "Programa una fiesta automática donde el piano y la batería tocan solos. Tu trabajo es ser el juez del juego 'Congelados'. Mantén tu dedo cerca del botón; cuando lo presiones, ¡toda la música debe parar al instante! Desafía a tus amigos a quedarse quietos justo cuando cortas el sonido.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE NOT TouchButton.pressed() DO { Keyboard.playRandom(); Drum.playRandom(); wait(tempo) }; StopAllSounds()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "El botón alterna entre 'Feliz' y 'Triste'. En modo Feliz, el teclado usa una escala mayor y la batería un ritmo rápido. En modo Triste, usa una escala menor y la batería un ritmo lento y pesado.",
+    "transformedIdeaTitle": "El Camaleón Emocional",
+    "transformedIdeaDescription": "Crea un dispositivo que cambie el ambiente de la habitación. Si presionas el botón una vez, todo se vuelve alegre con música rápida y animada. Si lo presionas otra vez, el robot se pone melancólico, tocando música lenta y triste. ¡Programa las reglas de las emociones!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN mood = !mood; IF mood == HAPPY THEN { scale = Major; tempo = 120 } ELSE { scale = Minor; tempo = 60 }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos con Melodía Aleatoria",
+    "originalIdeaDescription": "Cada vez que se presiona el botón, la batería toca un patrón rítmico aleatorio de 4 tiempos y el teclado genera una nota aleatoria al final del compás.",
+    "transformedIdeaTitle": "La Lotería Musical",
+    "transformedIdeaDescription": "Nunca sabes qué vas a obtener con esta caja misteriosa. Cada vez que presionas el botón, la computadora inventa un ritmo nuevo y loco y termina con una nota sorpresa de piano. ¿Puedes usar el botón para encontrar una combinación que suene bien?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.press() DO { FOR i=1 to 4 { Drum.playRandom(); wait(beat) }; Keyboard.playRandomNote() }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Código Morse Auditivo",
+    "originalIdeaDescription": "El usuario puede enviar mensajes secretos. La batería representa los 'puntos' (sonido corto) y el teclado las 'rayas' (sonido largo). El botón sirve para indicar el final de una letra o palabra.",
+    "transformedIdeaTitle": "El Telégrafo de los Espías",
+    "transformedIdeaDescription": "Eres un espía enviando mensajes cifrados. Usarás el tambor para los puntos cortos y el piano para las rayas largas. Cuando termines una letra, presiona el botón secreto para enviar la señal a la base. ¡Diseña tu propio código secreto!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF key.drumPressed() THEN signal.add('.'); IF key.pianoPressed() THEN signal.add('-'); IF TouchButton.pressed() THEN transmit(signal); clear(signal)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Acompañante de Acordes Automático",
+    "originalIdeaDescription": "El usuario toca una nota fundamental en el teclado. Si mantiene presionado el botón mientras toca, el sistema añade automáticamente un golpe de batería y completa el acorde (tercera y quinta) en el teclado.",
+    "transformedIdeaTitle": "La Banda de Respaldo Mágica",
+    "transformedIdeaDescription": "Tocar solo es aburrido. Programa tu sistema para que, cuando mantengas presionado el 'Botón de Banda', tus notas simples de piano se conviertan en acordes completos acompañados por un baterista profesional. ¡Suelta el botón para volver a tocar solo!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON keyPress(note) DO { Keyboard.play(note); IF TouchButton.isHeld() THEN { Keyboard.play(note+4); Keyboard.play(note+7); Drum.play(Kick) } }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Despertador Musical Progresivo",
+    "originalIdeaDescription": "Una alarma que comienza suavemente con notas de piano. Si el usuario no presiona el botón para 'apagarla' en 10 segundos, comienza a sonar la batería fuertemente.",
+    "transformedIdeaTitle": "La Alarma Insoportable",
+    "transformedIdeaDescription": "Diseña el despertador definitivo. Primero, intenta despertar al usuario amablemente con una melodía de piano. Pero si no presionan el botón de 'Desperté' en 10 segundos, ¡activa el modo Batería Heavy Metal para que salten de la cama!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "startTimer(); WHILE NOT TouchButton.pressed() DO { IF timer < 10 THEN Keyboard.play(Lullaby) ELSE { Drum.play(RockBeat); Keyboard.play(Alarm) } }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de Velocidad (Tempo)",
+    "originalIdeaDescription": "El usuario marca un ritmo presionando el botón repetidamente (tap tempo). El sistema calcula la velocidad y luego reproduce una secuencia de batería y teclado a esa velocidad exacta.",
+    "transformedIdeaTitle": "El Maestro de la Velocidad",
+    "transformedIdeaDescription": "Tú controlas el tiempo. Golpea el botón varias veces tan rápido o lento como quieras. El sistema aprenderá tu velocidad y comenzará a tocar una canción usando el piano y la batería exactamente a la velocidad que marcaste.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Detect TouchButton taps; Calculate BPM; Set MusicSequence.tempo = BPM; Play MusicSequence(Drums, Keys)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento de Preguntas y Respuestas",
+    "originalIdeaDescription": "El sistema toca una nota 'Pregunta' con el teclado. El usuario debe responder tocando la batería. El botón se usa para cambiar de turno (ahora la batería pregunta y el teclado responde).",
+    "transformedIdeaTitle": "Diálogo entre Robots",
+    "transformedIdeaDescription": "Imagina que el piano y la batería son dos robots hablando. Cuando el piano dice algo (una nota), tú debes hacer que la batería responda con un golpe. Usa el botón para cambiar los roles y que sea la batería la que inicie la conversación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF turn == PIANO THEN { Keyboard.playRandom(); waitForUserDrum() }; IF TouchButton.pressed() THEN turn = DRUM"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Secuenciador por Pasos Manual",
+    "originalIdeaDescription": "El botón avanza un paso en una secuencia de 4 tiempos. En cada paso, el usuario toca una tecla o un tambor para 'grabar' ese sonido en ese paso. Al final, se reproduce todo junto.",
+    "transformedIdeaTitle": "Constructor de Canciones Bloque a Bloque",
+    "transformedIdeaDescription": "Vamos a construir una canción paso a paso. Presiona el botón para ir al paso 1 y elige un sonido (piano o tambor). Presiona otra vez para el paso 2. Cuando hayas llenado los 4 pasos, ¡tu mini-obra maestra sonará completa!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "currentStep++; recordInput(Keyboard, Drum); IF currentStep > 4 THEN playSequence(recordedSteps)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Naturaleza",
+    "originalIdeaDescription": "El teclado imita sonidos agudos (lluvia/viento) y la batería sonidos graves (truenos). El botón alterna entre 'Día Soleado' (sin batería, teclado alegre) y 'Tormenta' (batería aleatoria, teclado grave).",
+    "transformedIdeaTitle": "El Simulador de Clima",
+    "transformedIdeaDescription": "Eres el controlador del clima. Si el botón está apagado, es un día soleado: el piano suena brillante y feliz. Si presionas el botón, ¡llega la tormenta! Los tambores retumban como truenos y el piano suena como lluvia cayendo fuerte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isOn() THEN { Drum.play(Thunder); Keyboard.play(RainNotes) } ELSE { Keyboard.play(SunnyMelody) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "Suena una nota de teclado. El usuario debe tocar el botón lo más rápido posible. Si es rápido, suena un platillo de batería (éxito). Si es lento, suena un tono grave de teclado (fallo).",
+    "transformedIdeaTitle": "Reflejos de Gato",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! Espera a escuchar el sonido del piano. En cuanto lo oigas, ¡presiona el botón inmediatamente! Si eres lo bastante rápido, ganarás un premio sonoro de platillos triunfales. Si eres lento... el piano se burlará de ti.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Keyboard.play(Signal); startTime = now(); WAIT TouchButton.press(); IF (now() - startTime) < 500ms THEN Drum.play(Crash) ELSE Keyboard.play(FailTone)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Inversa",
+    "originalIdeaDescription": "La melodía (teclado) y el ritmo (batería) solo suenan mientras el usuario mantenga presionado el botón. Al soltarlo, la música se detiene y se 'rebobina' al inicio.",
+    "transformedIdeaTitle": "La Caja de Música a Cuerda",
+    "transformedIdeaDescription": "Esta caja de música digital solo funciona con tu energía. Mantén presionado el botón para que la orquesta toque. En el momento en que sueltes el botón, la música se detendrá y volverá al principio. ¿Puedes escuchar la canción completa sin soltarlo?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE TouchButton.isPressed() DO { playNextNoteAndBeat() }; resetSongToStart()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Volúmenes (Simulado)",
+    "originalIdeaDescription": "El botón cicla entre 3 modos: 'Solo Piano', 'Solo Batería', 'Ambos'. Permite al usuario escuchar las partes de una canción por separado o juntas.",
+    "transformedIdeaTitle": "El Ingeniero de Sonido",
+    "transformedIdeaDescription": "Estás en el estudio de grabación. Tienes una canción grabada, pero necesitas revisar las pistas. Usa el botón para aislar los instrumentos: presiona una vez para oír solo el piano, otra para oír solo la batería y una tercera para escuchar la mezcla final completa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "mode = (mode + 1) % 3; IF mode==0 THEN Keyboard.unmute() / Drum.mute(); IF mode==1 THEN Drum.unmute() / Keyboard.mute(); IF mode==2 THEN unmuteAll()"
+  }
+]

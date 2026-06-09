@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Consola de DJ para Fiestas",
+    "originalIdeaDescription": "Un sistema simple donde al presionar el botón se activa una pista de música rítmica y la lámpara comienza a cambiar de colores estroboscópicamente para simular una discoteca. Al soltar el botón, la fiesta se detiene.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "¡Eres el DJ encargado de animar la fiesta en una estación espacial! Programa tu consola para que, al mantener presionado el botón de control, suene la música electrónica y las luces de la sala parpadeen en colores neón. Si sueltas el botón, la música para y los alienígenas se aburren.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { AudioPlayer.play('Techno'); Lamp.flashRandomColors(); } ELSE { AudioPlayer.stop(); Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Este proyecto recrea el efecto de un relámpago. Al tocar el botón, se reproduce un sonido fuerte de trueno y la lámpara emite un destello blanco brillante instantáneo que se desvanece rápidamente.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Estás diseñando los efectos especiales para una película de terror. Tu tarea es crear el momento más aterrador: cuando el usuario toca el detonador, debe caer un rayo (luz blanca brillante) seguido inmediatamente por un estruendoso trueno. ¡Sincronízalo bien!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.press: Lamp.setColor('White'); Lamp.setBrightness(100); AudioPlayer.play('Thunder'); WAIT(0.5s); Lamp.off();"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "La lámpara se enciende en un color aleatorio después de un tiempo de espera. El usuario debe presionar el botón lo más rápido posible. Si lo hace rápido, suena un sonido de victoria; si tarda mucho, suena un error.",
+    "transformedIdeaTitle": "Duelo de Reflejos Ninja",
+    "transformedIdeaDescription": "Entrena tus reflejos de ninja. Espera en la oscuridad... en cuanto veas la señal luminosa (Lámpara encendida), ¡ataca el botón! Si eres rápido como el viento, escucharás el gong de la victoria. Si eres lento, fallarás la misión.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WAIT(RandomTime); Lamp.on(); TIMER.start(); IF TouchButton.pressed() AND TIMER < 0.5s THEN AudioPlayer.play('Win') ELSE AudioPlayer.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo Accesible para Peatones",
+    "originalIdeaDescription": "Un sistema de cruce peatonal. La lámpara muestra rojo o verde. Al presionar el botón, cambia a verde y emite un sonido intermitente para ayudar a las personas con discapacidad visual a saber que pueden cruzar.",
+    "transformedIdeaTitle": "Cruce Seguro de la Ciudad Futura",
+    "transformedIdeaDescription": "Diseña un semáforo inteligente para una ciudad inclusiva. El semáforo está en Rojo por defecto. Cuando un peatón solicita paso con el botón, cambia la luz a Verde y activa una señal sonora rítmica para guiar a los ciudadanos invidentes al otro lado de la calle.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setColor('Red'); IF TouchButton.pressed() THEN { Lamp.setColor('Green'); REPEAT 5 TIMES { AudioPlayer.play('Beep'); WAIT(1s); } Lamp.setColor('Red'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Ruido Blanco y Luz Nocturna",
+    "originalIdeaDescription": "Un dispositivo para ayudar a dormir. Al tocar el botón, se enciende una luz cálida y suave, y comienza a reproducirse sonido de lluvia o ruido blanco para relajar el ambiente.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "Crea un dispositivo para ahuyentar las pesadillas. Cuando sea hora de dormir y presiones el botón mágico, la lámpara debe brillar con un color ámbar suave y el audio debe reproducir el sonido relajante de la lluvia en el bosque.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN { Lamp.setColor('Amber'); Lamp.setBrightness(20); AudioPlayer.loop('Rain'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse",
+    "originalIdeaDescription": "Un sistema de comunicación clásico. Cada vez que se presiona el botón, la lámpara se enciende y el audio emite un tono corto, permitiendo enviar mensajes en código Morse mediante pulsaciones.",
+    "transformedIdeaTitle": "Telégrafo de Espías Secretos",
+    "transformedIdeaDescription": "¡Eres un agente secreto enviando mensajes codificados a la base! Configura tu transmisor para que cada toque en el botón envíe un destello de luz y un 'bip' sonoro simultáneamente. Usa pulsaciones cortas y largas para deletrear S-O-S.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isHeld() { Lamp.on(); AudioPlayer.playTone('High'); } Lamp.off(); AudioPlayer.stop();"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Concurso de Preguntas",
+    "originalIdeaDescription": "Un sistema para juegos de trivia. Cuando un jugador sabe la respuesta y presiona el botón, la lámpara se ilumina en su color y suena un efecto de 'ding' para bloquear a otros jugadores.",
+    "transformedIdeaTitle": "El Botón del Saber",
+    "transformedIdeaDescription": "Estás en un programa de televisión de trivia. Programa tu pulsador para que, al presionarlo, bloquee la respuesta: enciende tu luz azul brillante y haz sonar una campana fuerte para que el presentador sepa que tienes la respuesta correcta antes que nadie.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.press: Lamp.setColor('Blue'); AudioPlayer.play('Bell'); WAIT(3s); Lamp.off();"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "El usuario presiona el botón para ciclar entre diferentes estados. Cada pulsación cambia el color de la lámpara y reproduce un clip de audio asociado (ej. Rojo/Grito, Azul/Suspiro, Amarillo/Risa).",
+    "transformedIdeaTitle": "El Emocionario Digital",
+    "transformedIdeaDescription": "Construye un robot que expresa emociones. Cada vez que tocas su botón, cambia su humor. Primero se pone Rojo y gruñe (Enojo), si tocas de nuevo se pone Azul y suspira (Tristeza), y otra vez se pone Amarillo y ríe (Alegría).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Counter = Counter + 1; IF Counter=1 THEN {Lamp.red(); Audio.play('Growl')} ELSE IF Counter=2 THEN {Lamp.blue(); Audio.play('Sigh')}"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Desactivación de Bomba",
+    "originalIdeaDescription": "Un juego de tensión. La lámpara parpadea en rojo y el audio hace tic-tac cada vez más rápido. El usuario debe presionar el botón en el momento exacto (cuando la luz está apagada entre parpadeos) para 'cortar el cable' y ganar.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "¡Cuenta regresiva activa! El dispositivo hace tic-tac y la luz roja parpadea. Debes detener el temporizador presionando el botón exactamente cuando la luz se apague entre parpadeos para salvar la ciudad. Si fallas, ¡BOOM!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP { Lamp.flash('Red'); Audio.play('Tick'); } IF TouchButton.pressed() AND Lamp.isOff() THEN Audio.play('Success') ELSE Audio.play('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Sillas Musicales",
+    "originalIdeaDescription": "Una herramienta para administrar el juego. Al presionar el botón, la música suena y la luz es verde. Al soltarlo sorpresivamente, la música se corta y la luz se pone roja, indicando que todos deben sentarse.",
+    "transformedIdeaTitle": "El Árbitro de las Sillas Musicales",
+    "transformedIdeaDescription": "Eres el juez en el campeonato mundial de Sillas Musicales. Crea el sistema de control: mientras mantienes el dedo en el botón, la música suena y la luz verde indica 'bailar'. En cuanto levantas el dedo, todo se detiene y la luz roja grita '¡SENTARSE!'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isHeld() THEN { Lamp.setColor('Green'); AudioPlayer.resume(); } ELSE { Lamp.setColor('Red'); AudioPlayer.pause(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Audiolibro Interactivo",
+    "originalIdeaDescription": "Un narrador de cuentos simple. Al presionar el botón, se avanza al siguiente capítulo del audio y la lámpara cambia de color para reflejar la atmósfera de esa parte de la historia.",
+    "transformedIdeaTitle": "La Aventura del Libro Mágico",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un libro mágico. El usuario presiona el botón para pasar de página. En la página 1, narra un bosque y la luz es verde. Al tocar de nuevo, narra un volcán y la luz se vuelve roja. ¡Programa la secuencia!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Step++; IF Step==1 THEN {Audio.play('Forest'); Lamp.green()} IF Step==2 THEN {Audio.play('Volcano'); Lamp.red()}"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria de Sonidos",
+    "originalIdeaDescription": "El sistema reproduce un sonido (ej. ladrido). El usuario debe presionar el botón tantas veces como sílabas o golpes tenga el sonido. Si acierta, la lámpara se pone verde; si falla, roja.",
+    "transformedIdeaTitle": "El Loro Repetidor",
+    "transformedIdeaDescription": "Un loro robótico te está probando. Él hará un sonido (como dos silbidos). Debes presionar el botón la misma cantidad de veces (dos veces). Si aciertas el número, el loro se pone verde de felicidad. Si fallas, se pone rojo de rabia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('DoubleWhistle'); count = CountButtonPresses(); IF count == 2 THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Baliza de Emergencia SOS",
+    "originalIdeaDescription": "Un sistema de seguridad personal. Si se mantiene presionado el botón por 3 segundos, se activa una alarma sonora fuerte y la lámpara parpadea en rojo brillante para pedir ayuda.",
+    "transformedIdeaTitle": "Alerta de Rescate en la Montaña",
+    "transformedIdeaDescription": "Eres un explorador perdido. Programa tu baliza de emergencia: para evitar falsas alarmas, el botón debe mantenerse presionado por 3 segundos completos. Solo entonces activará la sirena y la luz roja intermitente para que el helicóptero te encuentre.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.heldTime() > 3000 THEN { AudioPlayer.loop('Siren'); Lamp.strobe('Red'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de Respiración para Meditación",
+    "originalIdeaDescription": "Al activar el botón, el sistema guía una sesión de respiración. La luz aumenta y disminuye de intensidad (fade in/out) sincronizada con un sonido de respiración suave.",
+    "transformedIdeaTitle": "Entrenador de Pulmones Zen",
+    "transformedIdeaDescription": "Ayuda a tus compañeros a relajarse. Crea un programa donde, al tocar el botón, la luz se haga brillante lentamente (inhalar) y luego se atenúe (exhalar), acompañada de un sonido de aire suave. Esto marca el ritmo de respiración perfecto.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Button: LOOP { Lamp.fadeIn(4s); Audio.play('Inhale'); WAIT; Lamp.fadeOut(4s); Audio.play('Exhale'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Sorpresa Aleatoria",
+    "originalIdeaDescription": "Cada vez que se presiona el botón, sucede algo diferente. Puede ser un sonido gracioso con luz verde, o un sonido aterrador con luz roja. Utiliza la generación de números aleatorios.",
+    "transformedIdeaTitle": "La Caja de Bromas Impredecible",
+    "transformedIdeaDescription": "Nunca sabes qué te tocará. Programa la caja para que al tocar el botón elija un número al azar. Si sale 1, reproduce una risa y luz amarilla. Si sale 2, una bocina y luz violeta. ¡Sorprende a tus amigos!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Roll = Random(1,2); IF Roll==1 THEN {Audio.play('Laugh'); Lamp.yellow()} ELSE {Audio.play('Honk'); Lamp.purple()}"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Auditivo",
+    "originalIdeaDescription": "Una herramienta para músicos. El usuario toca el botón para iniciar el metrónomo. Este marca el tempo con un 'clic' de audio y un parpadeo corto de la lámpara simultáneamente en un bucle constante.",
+    "transformedIdeaTitle": "El Director de Orquesta Robot",
+    "transformedIdeaDescription": "Mantén el ritmo de la banda. Crea un metrónomo que ayude a los músicos. Al encenderlo con el botón, debe marcar el compás: un destello de luz y un sonido 'tic' cada segundo exacto, sin detenerse hasta que se presione de nuevo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "State = !State; WHILE State == True { Audio.play('Click'); Lamp.flash(); WAIT(1s); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Sigilo",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse (simulado). Si presiona el botón (simulando un paso en falso), suena una alarma y la luz se pone roja. Si no lo presiona, suena ambiente tranquilo y luz verde tenue.",
+    "transformedIdeaTitle": "Misión Infiltración",
+    "transformedIdeaDescription": "Te estás colando en una base secreta. El sistema está en modo 'Seguro' (Luz verde tenue, sonido de viento). Si accidentalmente tocas el botón (pisas una rama seca), activas la seguridad: Luz Roja máxima y sonido de perros ladrando.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN { Lamp.red(); Audio.play('Bark'); } ELSE { Lamp.green(dim); Audio.play('Wind'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Amanecer",
+    "originalIdeaDescription": "Al presionar el botón, inicia una secuencia larga donde la lámpara pasa de apagada a naranja y luego amarilla brillante, mientras el volumen de un audio de pájaros sube gradualmente.",
+    "transformedIdeaTitle": "Despertar en la Granja",
+    "transformedIdeaDescription": "Simula la salida del sol. Cuando toques el botón, la noche debe convertirse en día. Programa la lámpara para que cambie lentamente de azul oscuro a naranja brillante, mientras el canto de los gallos comienza suave y sube de volumen.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Button: FOR i=0 to 100 { Lamp.setBrightness(i); Audio.setVolume(i); WAIT(0.1s); } Lamp.setColor('Orange');"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Comunicador Alienígena",
+    "originalIdeaDescription": "El usuario ingresa una secuencia de toques en el botón. Dependiendo de la velocidad de los toques, el sistema responde con diferentes colores y sonidos sintetizados extraños.",
+    "transformedIdeaTitle": "Traductor Universal Marciano",
+    "transformedIdeaDescription": "¡Un alienígena intenta hablarte! Si tocas el botón rápidamente muchas veces, él se emociona (Luz Verde, sonido agudo). Si tocas el botón lento y mantienes, él se duerme (Luz Azul, sonido grave). Descifra su lenguaje.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ClickSpeed > 5 THEN { Lamp.green(); Audio.play('HighPitch'); } ELSE { Lamp.blue(); Audio.play('LowPitch'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz por Aplauso (Simulado)",
+    "originalIdeaDescription": "Usando el botón como sensor de sonido simulado. Un toque rápido (aplauso) enciende la luz y reproduce un sonido de 'clic'. Otro toque la apaga con otro sonido.",
+    "transformedIdeaTitle": "Casa Inteligente Activada por Voz",
+    "transformedIdeaDescription": "Estás programando una casa del futuro. Simula que el botón es un sensor de voz. Cuando recibe una señal corta (un toque), debe encender la luz de la sala y decir 'Bienvenido'. Al siguiente toque, apaga todo y dice 'Adiós'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() AND Lamp.isOff() THEN { Lamp.on(); Audio.play('Hello'); } ELSE IF TouchButton.pressed() { Lamp.off(); Audio.play('Bye'); }"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Linterna básica con interruptor de encendido y apagado",
+    "originalIdeaDescription": "Esta idea consiste en crear una funcionalidad de linterna simple donde el usuario puede encender y apagar la luz. Al presionar el botón táctil, el estado de la lámpara cambia. Si la lámpara está apagada, se enciende con una luz blanca brillante, y si ya está encendida, se apaga inmediatamente. Es una introducción fundamental a los interruptores de palanca en la programación.",
+    "transformedIdeaTitle": "La Linterna del Explorador de Cuevas Oscuras",
+    "transformedIdeaDescription": "¡Te estás adentrando en una cueva misteriosa y necesitas luz! En esta actividad, los estudiantes programarán su propia herramienta de supervivencia. Aprenderán a crear una linterna que no solo se enciende, sino que guarda su estado. El desafío es lograr que un solo botón controle ambas acciones (encender y apagar) usando variables para recordar si la luz está activa o no, vital para no quedarse a oscuras.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.isPressed() AND Lamp.isOn() THEN Lamp.off() ELSE Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo visual para enviar mensajes en código Morse",
+    "originalIdeaDescription": "Se trata de simular un antiguo telégrafo pero utilizando luz en lugar de sonido. El usuario debe mantener presionado el botón táctil para encender la lámpara y soltarlo para apagarla. Esto permite al usuario enviar señales de duración variable, como puntos y rayas, para comunicarse utilizando el código Morse internacional a través de destellos de luz controlados manualmente.",
+    "transformedIdeaTitle": "El Mensajero Espía y el Código Secreto",
+    "transformedIdeaDescription": "Eres un espía en una misión encubierta y necesitas enviar un mensaje silencioso a tu compañero. Los estudiantes crearán un dispositivo de comunicación que solo ilumina la lámpara mientras mantienen el dedo en el botón. Aprenderán la diferencia entre un interruptor y un pulsador momentáneo, y practicarán el envío de mensajes secretos como 'SOS' usando patrones de luz cortos y largos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Button.isPressed() DO Lamp.on(); END WHILE; Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo manual para control de tráfico vehicular",
+    "originalIdeaDescription": "Esta aplicación simula un semáforo que cambia de color cada vez que se interactúa con él. Inicialmente la luz está en rojo. Al presionar el botón táctil, la luz cambia a amarillo, y al presionar nuevamente cambia a verde, para luego volver a rojo. Sirve para enseñar secuencias y estados finitos utilizando una sola entrada para ciclar a través de múltiples salidas.",
+    "transformedIdeaTitle": "El Controlador de Tráfico de la Ciudad Futura",
+    "transformedIdeaDescription": "¡El tráfico en la ciudad es un caos y tú eres el encargado de arreglarlo! Los estudiantes programarán un semáforo inteligente. Cada vez que toquen el botón, deberán cambiar el color de la lámpara siguiendo la secuencia correcta: Rojo (parar), Amarillo (precaución) y Verde (avanzar). Deberán usar lógica condicional anidada o contadores para saber qué color toca mostrar a continuación.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "counter++; IF counter=1 THEN Lamp.color(Red) ELSE IF counter=2 THEN Lamp.color(Yellow) ELSE Lamp.color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz de estado de ánimo con selector de colores",
+    "originalIdeaDescription": "Un dispositivo diseñado para cambiar la atmósfera de una habitación. El usuario toca el botón para recorrer una lista predefinida de colores relajantes como azul, violeta y cian. La idea es permitir que el usuario seleccione su color favorito y lo deje fijo para ambientar el espacio según su estado de ánimo actual, utilizando una interacción simple de pulsación.",
+    "transformedIdeaTitle": "El Creador de Ambientes Mágicos para Hechiceros",
+    "transformedIdeaDescription": "Los estudiantes se convierten en aprendices de magia que deben iluminar su torre. Crearán una lámpara que cambia de color con cada toque mágico. El desafío computacional es utilizar listas o arreglos (arrays) para almacenar una paleta de colores 'mágicos' y recorrerlos uno por uno con cada pulsación del botón, volviendo al principio de la lista cuando llegan al final.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "index = (index + 1) % colors.length; Lamp.setColor(colors[index])"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de alerta de emergencia SOS automatizado",
+    "originalIdeaDescription": "Esta idea implementa una señal de socorro automática. Al presionar el botón táctil una vez, la lámpara comienza a emitir la secuencia de código Morse para SOS (tres cortos, tres largos, tres cortos) de forma automática y repetitiva. El usuario no necesita mantener presionado el botón; el sistema ejecuta el bucle de emergencia hasta que se desactiva o termina la secuencia.",
+    "transformedIdeaTitle": "Baliza de Rescate en la Isla Desierta",
+    "transformedIdeaDescription": "¡Has naufragado! Necesitas configurar una baliza de emergencia que funcione sola mientras buscas comida. Los estudiantes programarán un botón de pánico que, al ser presionado, activa un bucle automático de luces. Aprenderán sobre bucles de repetición y temporizadores (esperas) para crear el patrón exacto de tres destellos rápidos, tres lentos y tres rápidos sin tener que pulsar el botón repetidamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.pressed() THEN REPEAT 3 {ShortFlash()}; REPEAT 3 {LongFlash()}; REPEAT 3 {ShortFlash()}"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de prueba de reflejos y velocidad",
+    "originalIdeaDescription": "Un juego simple donde la lámpara se enciende en un color específico (por ejemplo, rojo) después de un tiempo aleatorio. El objetivo del usuario es presionar el botón táctil lo más rápido posible una vez que ve la luz. Si reacciona rápido, la luz cambia a verde indicando victoria; si tarda demasiado o presiona antes, la luz parpadea en rojo indicando fallo.",
+    "transformedIdeaTitle": "Desafío de Reflejos del Caballero Jedi",
+    "transformedIdeaDescription": "Entrena tus sentidos Jedi. La lámpara se encenderá en un momento sorpresa y debes ser el más rápido de la galaxia en desactivarla. Los estudiantes programarán una espera aleatoria y luego medirán el tiempo de reacción. Si el jugador presiona el botón inmediatamente después de que la luz se enciende, la lámpara se pone verde (victoria); si lo presiona antes, roja (falta).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(Random); Lamp.On(); StartTimer(); IF Button.Pressed() AND Time < 0.5s THEN Lamp.Green() ELSE Lamp.Red()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz estroboscópica para fiestas con control manual",
+    "originalIdeaDescription": "Una aplicación para animar fiestas donde la luz parpadea rápidamente creando un efecto estroboscópico. El botón táctil funciona como un interruptor maestro que activa o desactiva este modo. Mientras está activo, la lámpara alterna entre encendido y apagado a alta velocidad (por ejemplo, cada 100ms) para crear el efecto visual de movimiento congelado típico de una discoteca.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Galáctica Intermitente",
+    "transformedIdeaDescription": "¡Es hora de la fiesta en la nave espacial! Los estudiantes programarán el sistema de iluminación de la pista de baile. Al activar el botón, la lámpara debe entrar en un bucle frenético de encendido y apagado muy rápido. El desafío es manejar el bucle infinito que solo se rompe o detiene cuando se vuelve a presionar el botón, controlando el flujo del programa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Toggle() THEN WHILE true DO Lamp.On(); Wait(0.1); Lamp.Off(); Wait(0.1)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Luz nocturna con temporizador de apagado automático",
+    "originalIdeaDescription": "Diseñada para ayudar a las personas a dormirse, esta lámpara se enciende con una luz suave y cálida al presionar el botón. Sin embargo, no se queda encendida para siempre; inicia una cuenta regresiva interna (por ejemplo, 10 segundos para la demostración) y luego se apaga automáticamente suavemente, ahorrando energía y asegurando oscuridad para dormir.",
+    "transformedIdeaTitle": "El Espantamonstruos con Temporizador Mágico",
+    "transformedIdeaDescription": "Los monstruos debajo de la cama odian la luz. Los estudiantes crearán una lámpara de seguridad que les da tiempo para meterse en la cama antes de apagarse. Al tocar el botón, la luz se enciende en un tono cálido. Deberán programar una función de 'espera' o 'delay' prolongado antes de enviar la orden de apagar la lámpara automáticamente, introduciendo el concepto de automatización temporal.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.Pressed() THEN Lamp.Color(Warm); Wait(10s); Lamp.Off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de sirena de policía roja y azul",
+    "originalIdeaDescription": "Este proyecto simula las luces de una patrulla de policía. Al activar el sistema con el botón táctil, la lámpara alterna rápidamente entre los colores rojo y azul. Este efecto visual se mantiene en bucle hasta que el usuario vuelve a presionar el botón para apagar la sirena, imitando el comportamiento de un vehículo de emergencia en persecución.",
+    "transformedIdeaTitle": "Patrulla Espacial en Misión de Rescate",
+    "transformedIdeaDescription": "¡Emergencia! La Patrulla Espacial necesita activar sus sirenas. Los estudiantes programarán una secuencia que alterna colores rojo y azul repetidamente. Aprenderán a anidar un bucle dentro de una condición: mientras el 'interruptor' de la sirena esté activo (variable booleana), la luz debe cambiar de color constantemente. Es un ejercicio excelente para entender estados activos y bucles visuales.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE SirenActive = True DO Lamp.Color(Red); Wait(0.5); Lamp.Color(Blue); Wait(0.5)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de colores aleatorios para juegos de azar",
+    "originalIdeaDescription": "Una herramienta digital para seleccionar un color al azar. Cuando el usuario presiona el botón, la lámpara comienza a cambiar de colores muy rápidamente, y al soltar el botón (o tras unos segundos), se detiene en un color aleatorio. Esto puede usarse para asignar equipos en un juego de mesa o decidir quién toma el primer turno basándose en el color.",
+    "transformedIdeaTitle": "La Ruleta de la Suerte Cromática",
+    "transformedIdeaDescription": "¿Quién será el primero en jugar? ¡Deja que la luz decida! Los estudiantes crearán un juego de azar. Mientras presionan el botón, la luz cicla colores rápidamente. Al soltar, el programa debe seleccionar un color aleatorio final y mantenerlo. Este desafío introduce la generación de números aleatorios asignados a propiedades visuales como el color de la lámpara.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Released() THEN Lamp.Color(RandomColor())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de ocupado o libre para puertas",
+    "originalIdeaDescription": "Un sistema simple de señalización para habitaciones. El botón táctil alterna el color de la lámpara entre Verde (Libre/Pase) y Rojo (Ocupado/No molestar). Es útil para colocar fuera de una habitación o estudio para indicar a otras personas si pueden entrar sin interrumpir, controlado manualmente por la persona que está dentro de la habitación.",
+    "transformedIdeaTitle": "El Escudo de Privacidad de la Base Secreta",
+    "transformedIdeaDescription": "Protege tu base secreta de intrusos (o hermanos menores). Los estudiantes programarán un sistema de estado binario. Un toque pone la luz en Rojo (Escudo Activo/Ocupado), otro toque la pone en Verde (Escudo Desactivado/Pase). Aprenderán sobre variables booleanas (True/False) para representar dos estados opuestos y cómo visualizarlos con colores semánticos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF BusyState == True THEN Lamp.Color(Red) ELSE Lamp.Color(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de latido de corazón con luz pulsante",
+    "originalIdeaDescription": "Esta idea recrea el ritmo de un latido cardíaco utilizando la intensidad de la luz. Al presionar el botón para iniciar, la lámpara parpadea en rojo con un patrón específico: un destello rápido, una pausa muy breve, otro destello y una pausa más larga (lub-dub). Esto simula visualmente un monitor cardíaco médico o la vida de un personaje de videojuego.",
+    "transformedIdeaTitle": "Doctor Robot: Monitor de Signos Vitales",
+    "transformedIdeaDescription": "Los estudiantes diseñarán el corazón de un robot. El desafío es programar un patrón rítmico que no sea uniforme. A diferencia de un parpadeo normal, un latido tiene ritmo (pum-pum... pausa). Deberán secuenciar comandos de encendido y apagado con tiempos de espera precisos y diferentes para lograr el efecto orgánico del latido mientras el sistema esté encendido.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop { Lamp.On(); Wait(0.1); Lamp.Off(); Wait(0.1); Lamp.On(); Wait(0.1); Lamp.Off(); Wait(0.8) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador binario visual de pulsaciones",
+    "originalIdeaDescription": "Una aplicación educativa que cuenta cuántas veces se ha presionado el botón, pero muestra el resultado cambiando el color o parpadeando. Por ejemplo, cada 5 presiones la luz cambia de color. O, más complejo, parpadea tantas veces como el número de pulsaciones acumuladas cuando se mantiene el botón presionado, sirviendo como una memoria rudimentaria.",
+    "transformedIdeaTitle": "El Contador de Pasos del Gigante",
+    "transformedIdeaDescription": "El Gigante quiere saber cuántos pasos ha dado. Los estudiantes crearán un contador. Cada vez que toquen el botón, una variable interna sumará 1. Si la cuenta llega a 5 (o un número X), la lámpara celebrará con un color especial y reiniciará la cuenta. Esto enseña el concepto de variables acumulativas, condicionales de umbral y reinicio de variables.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Count++; IF Count >= 5 THEN Lamp.Color(Gold); Count=0"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Candado de combinación rítmica secreto",
+    "originalIdeaDescription": "Un sistema de seguridad que requiere un patrón específico de pulsaciones para desbloquearse (encender luz verde). El usuario debe presionar el botón con un ritmo específico (ej. dos rápidos, uno lento). Si el ritmo coincide con el programado, la luz se pone verde; si falla, la luz parpadea en rojo indicando acceso denegado.",
+    "transformedIdeaTitle": "La Llave Rítmica de la Bóveda del Tesoro",
+    "transformedIdeaDescription": "La bóveda solo se abre si conoces el toque secreto. Los estudiantes se enfrentan a un desafío lógico avanzado: detectar patrones. Simplificado, pueden programar que se necesiten exactamente 3 toques en menos de 2 segundos para encender la luz verde. Si lo hacen muy lento, se pone roja. Introduce la medición de tiempo entre eventos.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Clicks == 3 AND TimeElapsed < 2s) THEN Lamp.Green() ELSE Lamp.Red()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulación de faro giratorio con desvanecimiento",
+    "originalIdeaDescription": "Recrea el efecto de un faro marítimo. La luz no solo se enciende y apaga, sino que aumenta y disminuye su brillo gradualmente (si el hardware lo permite, o simula rotación con tiempos largos de encendido). El botón táctil activa o desactiva este mecanismo de seguridad costera, guiando barcos imaginarios en la oscuridad.",
+    "transformedIdeaTitle": "El Guardián del Faro en la Tormenta",
+    "transformedIdeaDescription": "Los barcos necesitan guía. Los estudiantes programarán un faro. En lugar de un parpadeo brusco, intentarán simular el giro de la luz. Usarán bucles para cambiar el brillo o el color gradualmente (si es posible) o crearán un patrón de 'Largo encendido, Corto apagado' muy lento. El objetivo es transmitir calma y constancia mediante el control preciso de los tiempos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Active DO Lamp.On(); Wait(2.0); Lamp.Off(); Wait(1.0)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de preguntas Sí/No aleatorio",
+    "originalIdeaDescription": "Un dispositivo simple para tomar decisiones o adivinar el futuro, similar a una Bola 8 Mágica. El usuario hace una pregunta y presiona el botón. La lámpara 'piensa' parpadeando en blanco y luego se ilumina aleatoriamente en Verde (Sí) o Rojo (No) para dar una respuesta definitiva a la pregunta formulada.",
+    "transformedIdeaTitle": "El Oráculo Digital de la Sabiduría",
+    "transformedIdeaDescription": "Construye un oráculo que responde a todas tus dudas. Los estudiantes programarán una 'Bola 8 Mágica' con luz. Al tocar el botón, el programa debe generar un efecto de 'pensando' (parpadeo blanco) y luego usar una condición aleatoria (50/50) para encender la luz Verde o Roja. Es perfecto para entender la probabilidad básica y las sentencias IF/ELSE con valores aleatorios.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Flash(White); IF Random(0,1) == 0 THEN Lamp.Green() ELSE Lamp.Red()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efecto de fuego de campamento parpadeante",
+    "originalIdeaDescription": "Simula el resplandor cálido e inestable de una fogata. Al encenderlo con el botón, la lámpara alterna rápidamente entre tonos de naranja, rojo y amarillo con intensidades o duraciones ligeramente aleatorias. Esto crea un ambiente acogedor para contar historias, utilizando algoritmos de aleatoriedad para evitar patrones repetitivos obvios.",
+    "transformedIdeaTitle": "La Fogata Digital para Cuentos de Terror",
+    "transformedIdeaDescription": "Prepara el ambiente para contar historias de miedo. Los estudiantes crearán un fuego artificial. El reto es usar la función 'Random' (Aleatorio) no solo para el color (entre rojo y naranja) sino también para los tiempos de espera. Esto hace que la luz parpadee de forma irregular como una llama real, enseñando cómo el caos controlado puede simular la naturaleza.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop { Lamp.Color(Random(Red, Orange)); Wait(Random(0.1, 0.4)) }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de bombilla defectuosa o rota",
+    "originalIdeaDescription": "Una broma o efecto teatral donde la luz parece estar rota. Al presionar el botón para 'encenderla', la lámpara a veces se enciende, a veces no, o parpadea erráticamente antes de apagarse sola. Utiliza probabilidad para decidir si el botón funciona correctamente o falla, frustrando intencionalmente al usuario de manera divertida.",
+    "transformedIdeaTitle": "La Bombilla Embrujada de la Mansión",
+    "transformedIdeaDescription": "¡Esta casa está encantada! Los estudiantes programarán una luz que 'falla' a propósito. Al tocar el botón, en lugar de encenderse normal, la luz debe comportarse de forma impredecible: parpadeos cortos, apagones repentinos o no encenderse en absoluto. Aprenderán a romper la relación lógica directa 1:1 entre entrada y salida para crear comportamientos narrativos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Pressed() THEN IF Random() > 0.7 THEN Lamp.On() ELSE FlickerAndDie()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador visual para cepillado de dientes",
+    "originalIdeaDescription": "Una herramienta de salud para niños. Al presionar el botón, la luz se pone verde y permanece encendida durante 2 minutos (tiempo recomendado para cepillarse). Cuando el tiempo está a punto de terminar, parpadea en amarillo y finalmente se pone roja o se apaga para indicar que se ha completado la tarea de higiene.",
+    "transformedIdeaTitle": "El Entrenador de Dientes Brillantes",
+    "transformedIdeaDescription": "¡Asegúrate de cepillarte el tiempo suficiente! Los estudiantes crearán un temporizador visual. Al iniciar, la luz será verde. Deberán usar una función de espera larga (o un bucle contador) para mantenerla así. Luego, programarán una secuencia de advertencia (amarillo parpadeante) antes de apagarla. Es una aplicación práctica de la programación para resolver problemas de la vida diaria.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.Green(); Wait(120s); Flash(Yellow); Lamp.Off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Comunicador de respuesta rápida para concursos",
+    "originalIdeaDescription": "Un sistema de timbre para juegos de preguntas. La lámpara está apagada. Cuando el jugador sabe la respuesta y presiona el botón, la lámpara se enciende y bloquea (se queda encendida), indicando que fue presionado. Se requiere una forma de reiniciar el sistema (como una pulsación larga) para la siguiente pregunta.",
+    "transformedIdeaTitle": "El Botón de la Victoria del Concurso de TV",
+    "transformedIdeaDescription": "¡Sé el primero en responder! Los estudiantes simularán un pulsador de concurso. La lógica clave es el 'bloqueo': una vez que se presiona el botón y la luz se enciende, presionar el botón de nuevo no debe cambiar nada (no debe apagarse inmediatamente) para que el juez vea quién ganó. Se introduce el concepto de cambio de estado que requiere un reinicio manual.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Pressed() AND Locked == False THEN Lamp.On(); Locked = True"
+  }
+]

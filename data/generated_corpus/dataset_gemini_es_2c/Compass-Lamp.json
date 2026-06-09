@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Brújula Visual de Colores Cardinales",
+    "originalIdeaDescription": "Un sistema de orientación que asigna un color específico de la lámpara a cada punto cardinal principal (Norte, Sur, Este, Oeste), permitiendo al usuario identificar su dirección sin leer números, solo observando el cambio de color de la luz.",
+    "transformedIdeaTitle": "La Rosa de los Vientos Mágica",
+    "transformedIdeaDescription": "Eres un mago que necesita viajar al Bosque Encantado. Tu varita mágica (el dispositivo) brilla de diferentes colores para guiarte: Rojo para el Norte peligroso, Verde para el Este seguro, Azul para el Sur helado y Amarillo para el Oeste desértico. ¡Programa tu varita para no perderte!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.direction == 'N' THEN Lamp.color('Red') ELSE IF compass.direction == 'E' THEN Lamp.color('Green')..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de Orientación de Pista de Aterrizaje",
+    "originalIdeaDescription": "Simulación de una ayuda de aterrizaje donde la lámpara se enciende de color verde brillante solo cuando el dispositivo está alineado exactamente con un ángulo predeterminado que representa la pista de aterrizaje, ayudando a la alineación precisa.",
+    "transformedIdeaTitle": "Piloto de Rescate Nocturno",
+    "transformedIdeaDescription": "¡Mayday! Eres un piloto intentando aterrizar en una isla secreta durante una tormenta. La pista está en el ángulo exacto de 270 grados. Programa tu tablero para que muestre una luz verde fija solo cuando tu avión esté perfectamente alineado con la pista, o roja si estás desviado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees >= 265 AND compass.degrees <= 275 THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Buscador de Satélites Espaciales",
+    "originalIdeaDescription": "La intensidad de la lámpara cambia gradualmente dependiendo de qué tan cerca esté el dispositivo de apuntar a una coordenada 'satelital' específica. La luz es tenue cuando está lejos y muy brillante cuando está alineada con el objetivo.",
+    "transformedIdeaTitle": "Comunicación Intergaláctica",
+    "transformedIdeaDescription": "Estamos recibiendo una señal de una civilización alienígena, pero la señal es débil. Debes mover tu antena parabólica. Programa el sistema para que la luz sea más brillante cuanto más te acerques a la dirección de la señal (120 grados) para establecer contacto total.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "brightness = 100 - abs(120 - compass.degrees); Lamp.setBrightness(brightness)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Luces de Navegación Marítima (Babor/Estribor)",
+    "originalIdeaDescription": "Implementación de luces de navegación de barcos donde la lámpara cambia de color rojo a verde dependiendo de si el dispositivo está orientado hacia el lado izquierdo (babor) o derecho (estribor) en relación a un rumbo fijo.",
+    "transformedIdeaTitle": "Capitán de Alta Mar",
+    "transformedIdeaDescription": "Eres el capitán de un gran barco cruzando el Atlántico. Para evitar choques en la niebla, debes encender la luz Roja si el barco mira hacia el Oeste (Babor) y Verde si mira hacia el Este (Estribor). ¡Mantén a tu tripulación a salvo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.degrees > 180 THEN Lamp.color('Red') ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de la Caja Fuerte Giratoria",
+    "originalIdeaDescription": "Un juego de lógica donde el usuario debe girar el dispositivo a una secuencia de ángulos específicos para 'desbloquear' la lámpara, la cual parpadea en color dorado al completar la secuencia correcta.",
+    "transformedIdeaTitle": "El Gran Robo al Banco",
+    "transformedIdeaDescription": "Eres un experto ladrón de guante blanco intentando abrir la bóveda más segura del mundo. La combinación no son números, ¡son direcciones! Gira al Norte, espera la luz azul, luego gira al Sur rápidamente para obtener la luz dorada y abrir la puerta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.degrees == 0 THEN { wait(2); IF compass.degrees == 180 THEN Lamp.blink('Gold') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Indicador de La Meca (Qibla) o Puntos de Interés",
+    "originalIdeaDescription": "Una herramienta que ilumina la lámpara con un color suave y específico únicamente cuando el dispositivo apunta hacia una coordenada geográfica de importancia cultural o personal predefinida.",
+    "transformedIdeaTitle": "Explorador de Maravillas del Mundo",
+    "transformedIdeaDescription": "Tu misión es encontrar las Pirámides de Egipto desde tu aula. Programa tu brújula digital para que se ilumine de color arena mística solo cuando apuntes exactamente en la dirección geográfica donde se encuentran las pirámides.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees == TARGET_AZIMUTH THEN Lamp.on('SandyBrown')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Faro Giratorio de Seguridad",
+    "originalIdeaDescription": "Simulación de un faro costero. La lámpara emite destellos blancos brillantes solo cuando la brújula apunta hacia el 'mar' (un rango de 180 grados), y permanece apagada cuando apunta hacia la 'tierra'.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Es una noche oscura y tormentosa. Los barcos necesitan ver la costa. Programa tu faro para que lance destellos de luz solo cuando mire hacia el océano (entre 90 y 270 grados) y se apague cuando mire hacia el pueblo para no despertar a los vecinos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees > 90 AND compass.degrees < 270 THEN Lamp.blink('White') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Rastreador de Tormentas y Viento",
+    "originalIdeaDescription": "Dispositivo que actúa como una veleta digital, cambiando el color de la lámpara (Azul, Blanco, Gris) basándose en la dirección hacia la que sopla el viento simulado (hacia donde apunta el dispositivo).",
+    "transformedIdeaTitle": "Cazadores de Huracanes",
+    "transformedIdeaDescription": "Eres un meteorólogo rastreando un huracán. Si el viento viene del Norte (frío), enciende una luz Azul. Si viene del Sur (cálido), enciende una luz Roja. ¡Usa tu sensor para visualizar de dónde viene la tormenta!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.direction == 'N' THEN Lamp.color('Blue') ELSE IF compass.direction == 'S' THEN Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Buscador de Constelaciones Astronómicas",
+    "originalIdeaDescription": "Herramienta para astronomía amateur. La lámpara se enciende en un tono rojo tenue (para no afectar la visión nocturna) cuando el dispositivo se alinea con el acimut de una estrella o constelación específica.",
+    "transformedIdeaTitle": "Telescopio Espacial",
+    "transformedIdeaDescription": "Vamos a buscar la estrella Polar. Como está muy oscuro, necesitamos luz roja para leer nuestros mapas sin deslumbrarnos. Programa el dispositivo para encender una luz roja suave solo cuando apuntes exactamente al Norte (0 grados).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees > 355 OR compass.degrees < 5 THEN Lamp.color('DimRed')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Guía de Migración Animal",
+    "originalIdeaDescription": "Simulación del instinto de las aves migratorias. La lámpara parpadea en verde si el dispositivo apunta al Sur (hacia donde migran en invierno) y en rojo si se desvían del rumbo.",
+    "transformedIdeaTitle": "El Vuelo de la Mariposa Monarca",
+    "transformedIdeaDescription": "Ayuda a una mariposa Monarca a volar miles de kilómetros hasta México para el invierno. Debe volar siempre al Sur. Si apuntas al Sur, luz verde (¡buen camino!). Si te desvías a cualquier otro lado, luz roja de advertencia.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading == 'S' THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de Campos Magnéticos Anómalos",
+    "originalIdeaDescription": "Uso de la brújula para detectar interferencias. Si la lectura de la brújula cambia erráticamente o gira muy rápido sin mover el dispositivo (simulado), la lámpara entra en modo estroboscópico de alerta.",
+    "transformedIdeaTitle": "Cazafantasmas: Detector de Espectros",
+    "transformedIdeaDescription": "Los fantasmas alteran los campos magnéticos. Si tu brújula detecta una dirección específica (la 'casa embrujada' al Noroeste), haz que la luz parpadee morada rápidamente para alertar al equipo de que han encontrado un espectro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees > 300 AND compass.degrees < 330 THEN Lamp.blink('Purple', Fast)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Optimizador de Paneles Solares",
+    "originalIdeaDescription": "Un dispositivo educativo que enseña sobre energía renovable. La lámpara brilla con máxima intensidad amarilla cuando se orienta hacia el Sur (en el hemisferio norte) simulando la máxima captación solar.",
+    "transformedIdeaTitle": "Ingeniero de Energía Solar",
+    "transformedIdeaDescription": "Necesitamos instalar paneles solares para alimentar una ciudad ecológica. Los paneles funcionan mejor mirando al Sur. Crea una herramienta que se ilumine de amarillo brillante cuando encuentres la orientación perfecta para instalar el panel.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees > 170 AND compass.degrees < 190 THEN Lamp.setBrightness(100) ELSE Lamp.setBrightness(10)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores RGB por Orientación",
+    "originalIdeaDescription": "Asignar un canal de color a los grados. El ángulo de 0 a 360 se mapea al espectro de color (Hue) de la lámpara, permitiendo seleccionar un color simplemente girando el dispositivo.",
+    "transformedIdeaTitle": "Pintor de 360 Grados",
+    "transformedIdeaDescription": "Convierte tu cuerpo en un pincel. Girando sobre ti mismo, cambia el color de la lámpara recorriendo todo el arcoíris. Norte es rojo, Este es verde, Sur es azul. ¡Gira para encontrar tu color favorito!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "hue = map(compass.degrees, 0, 360, 0, 255); Lamp.setColorHSV(hue, 255, 255)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Señalizador de Giros para Ciclistas",
+    "originalIdeaDescription": "Un chaleco inteligente simulado. Si la brújula detecta un cambio de dirección de 90 grados hacia la izquierda o derecha en poco tiempo, la lámpara parpadea en ámbar como una direccional.",
+    "transformedIdeaTitle": "Chaleco Inteligente del Futuro",
+    "transformedIdeaDescription": "Diseña un chaleco para ciclistas que detecte giros automáticamente. Si el ciclista gira al Oeste, la luz debe parpadear en naranja. Si sigue recto al Norte, la luz se mantiene blanca fija para iluminar el camino.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.direction == 'W' THEN Lamp.blink('Orange') ELSE IF compass.direction == 'N' THEN Lamp.on('White')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Feng Shui Digital",
+    "originalIdeaDescription": "Herramienta de decoración que ilumina la habitación con colores que evocan diferentes 'energías' según la orientación de la pared hacia la que se apunta (ej. Este = Madera/Verde, Sur = Fuego/Rojo).",
+    "transformedIdeaTitle": "Decorador de Interiores Zen",
+    "transformedIdeaDescription": "Vamos a armonizar una casa. Según el Feng Shui, el Sur es Fuego (Rojo) y el Norte es Agua (Azul). Programa tu sensor para que cambie la iluminación ambiental automáticamente según hacia qué pared de la habitación estés mirando.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.degrees < 45 OR compass.degrees > 315 THEN Lamp.color('Blue') ELSE IF compass.degrees > 135 AND compass.degrees < 225 THEN Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego del Laberinto Invisible",
+    "originalIdeaDescription": "El usuario debe navegar un laberinto físico imaginario. La lámpara se enciende solo cuando el usuario está mirando en la dirección 'correcta' del pasillo actual del laberinto invisible pre-programado.",
+    "transformedIdeaTitle": "Escape del Laberinto a Ciegas",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto totalmente oscuro. Solo tu dispositivo sabe la salida. La luz se encenderá si estás mirando hacia la salida correcta. ¡Gira hasta encontrar la luz y camina, luego repite hasta escapar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.degrees == currentPathAngle THEN Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Reloj de Sol Simulado",
+    "originalIdeaDescription": "La lámpara cambia su temperatura de color (cálido a frío) dependiendo de la posición simulada del sol basada en la orientación Este (amanecer) a Oeste (atardecer).",
+    "transformedIdeaTitle": "El Paso del Tiempo",
+    "transformedIdeaDescription": "Simula el ciclo del día. Si apuntas al Este, la luz debe ser naranja suave (amanecer). Al Sur, blanco brillante (mediodía). Al Oeste, rojo intenso (atardecer). ¡Crea un sol artificial en tu mano!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == 'E' Lamp.color('Orange') ELSE IF heading == 'S' Lamp.color('White') ELSE IF heading == 'W' Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de Minerales (Juego de Rol)",
+    "originalIdeaDescription": "En un juego de minería, la lámpara cambia de color indicando qué tipo de 'mineral' se encuentra en esa dirección (ej. Norte = Diamante/Blanco, Sur = Rubí/Rojo).",
+    "transformedIdeaTitle": "Mineros de Minecraft en la Vida Real",
+    "transformedIdeaDescription": "¡Vamos a picar piedra! Tu pico (el dispositivo) detecta minerales. Si miras al Norte hay Diamantes (Luz Cian), si miras al Este hay Oro (Luz Amarilla). Programa tu pico para encontrar los recursos que necesitas.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading == 'N' THEN Lamp.color('Cyan') ELSE IF compass.heading == 'E' THEN Lamp.color('Yellow')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Linterna Táctica de Espionaje",
+    "originalIdeaDescription": "Una linterna que se apaga automáticamente cuando el usuario se da la vuelta (mira hacia atrás/Sur) para ocultar su posición, y se enciende al mirar al frente (Norte).",
+    "transformedIdeaTitle": "Infiltración de Agentes Secretos",
+    "transformedIdeaDescription": "Estás en una misión sigilosa. Necesitas ver hacia adelante (Norte), así que la luz debe estar encendida. Pero si te giras para huir (Sur), la luz debe apagarse inmediatamente para que los guardias no te vean. ¡Prográmalo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.direction == 'N' THEN Lamp.on() ELSE IF compass.direction == 'S' THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Calibrador de Antenas Wifi",
+    "originalIdeaDescription": "Herramienta para encontrar la mejor señal. La lámpara parpadea más rápido cuanto más cerca se esté de una dirección objetivo específica donde se supone que está la torre de transmisión.",
+    "transformedIdeaTitle": "Buscador de Wi-Fi Perdido",
+    "transformedIdeaDescription": "¡El internet se ha caído! Tienes que alinear el router con la torre central que está a 45 grados Noreste. Haz que la luz parpadee muy rápido cuando apuntes exactamente a 45 grados para saber que tendrás la mejor conexión.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "interval = abs(45 - compass.degrees) * 10; Lamp.blink(interval)"
+  }
+]

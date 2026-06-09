@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad Sensible al Movimiento",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos personales detectando cualquier manipulación física. Cuando el sensor de movimiento detecta una aceleración significativa, activa inmediatamente una alarma sonora fuerte a través del reproductor de audio y hace parpadear la lámpara en color rojo brillante para alertar visualmente al propietario y disuadir al intruso.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu cofre del tesoro de los piratas rivales! Programarás el dispositivo para que vigile tus monedas de oro. Si alguien intenta mover tu cofre (detectado por el sensor), el sistema debe activar la 'Sirena de Alerta' y encender luces rojas de emergencia. Aprenderemos sobre condicionales y umbrales de sensibilidad.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion > 50 THEN (Audio.play('siren') AND Lamp.blink('red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Generador de Efectos de Sonido y Luz para Baile",
+    "originalIdeaDescription": "Este sistema convierte el movimiento corporal en una experiencia audiovisual inmersiva. Al detectar movimiento continuo, el dispositivo reproduce pistas de música rítmica y sincroniza la lámpara para que cambie de colores aleatoriamente, creando un ambiente de discoteca instantáneo que responde a la actividad del usuario.",
+    "transformedIdeaTitle": "Zapatos de Baile Mágicos",
+    "transformedIdeaDescription": "Imagina que tus zapatos tienen superpoderes. En esta actividad, crearás un programa que detecte cuando estás bailando. Mientras te muevas, sonará música funky y la luz cambiará de colores como una bola de disco. Si te detienes, la música y las luces se apagan. ¡A mover el esqueleto!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE motion_detected DO (Audio.play('disco') AND Lamp.setColor(random)) ELSE (Audio.stop() AND Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita Interactiva de Lanzamiento de Hechizos",
+    "originalIdeaDescription": "Un dispositivo de mano que simula ser una varita mágica. Al realizar un movimiento brusco o un gesto de 'lanzamiento' hacia adelante, el sensor de movimiento activa un efecto de sonido de brillo mágico y enciende la lámpara en un color místico, proporcionando retroalimentación inmediata a la acción del usuario.",
+    "transformedIdeaTitle": "Academia de Magia: Tu Primera Varita",
+    "transformedIdeaDescription": "¡Bienvenido a la escuela de magia! Tu tarea es encantar tu varita. Debes programarla para que, al agitarla con fuerza, lance un hechizo. Escucharás un sonido de 'chish-pum' y la punta de la varita brillará en color violeta. Ten cuidado de no agitarla demasiado suave o el hechizo fallará.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake == TRUE THEN (Audio.play('magic_spell') AND Lamp.on('purple', 2_seconds))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Espada de Energía de Ciencia Ficción",
+    "originalIdeaDescription": "Este proyecto emula el comportamiento de una espada láser. Mantiene un zumbido constante y una luz fija mientras está encendida. Sin embargo, al detectar una aceleración rápida (un golpe o swing), cambia el sonido a un efecto de choque y la luz parpadea intensamente para simular el impacto contra otra espada.",
+    "transformedIdeaTitle": "Entrenamiento Jedi: El Sable de Luz",
+    "transformedIdeaDescription": "Construye tu propio sable de luz. Programarás el sensor para diferenciar entre mover la espada por el aire (sonido de zumbido suave, luz fija) y golpear un objeto (sonido de choque fuerte, luz parpadeante). Aprenderás a usar sentencias 'If-Else' anidadas para diferentes niveles de fuerza.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion > high_threshold THEN (Audio.play('clash') AND Lamp.blink('white')) ELSE (Audio.play('hum') AND Lamp.on('blue'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Reacción de la Papa Caliente",
+    "originalIdeaDescription": "Una versión digital del clásico juego. El dispositivo reproduce música y parpadea en verde mientras se pasa de mano en mano (detectando movimiento). Un temporizador interno corre en secreto; cuando llega a cero, si el dispositivo detecta movimiento, emite un sonido de explosión y luces rojas, indicando quién perdió.",
+    "transformedIdeaTitle": "¡Cuidado con la Bomba Inestable!",
+    "transformedIdeaDescription": "Estás desactivando una bomba, pero es muy inestable. Debes pasarla a tus compañeros con mucho cuidado. Si el temporizador aleatorio termina y el sensor siente que la estás moviendo, ¡BOOM! Sonará una explosión y la luz se pondrá roja. El objetivo es sostenerla muy quieto cuando la música pare.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE timer > 0 DO (Audio.play('tick_tock') AND Lamp.blink('yellow')); IF motion > 0 THEN (Audio.play('explosion') AND Lamp.on('red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Monitor de Actividad para Mascotas Virtuales",
+    "originalIdeaDescription": "Un juguete que simula una criatura viva. Si se trata con suavidad (movimiento bajo), ronronea y brilla con luz cálida. Si se agita violentamente (movimiento alto), emite sonidos de queja o gruñidos y la luz se torna roja o naranja para indicar molestia.",
+    "transformedIdeaTitle": "Cuida a tu Huevo de Dragón",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. Necesita que lo mezas suavemente para estar feliz (luz verde y sonido suave). Pero si lo agitas demasiado fuerte, el dragón se marea y se enoja (luz roja y rugido). Programa las reacciones emocionales de tu dragón basándote en la fuerza del movimiento.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion < 20 THEN (Audio.play('purr') AND Lamp.color('green')) ELSE IF motion > 50 THEN (Audio.play('roar') AND Lamp.color('red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Pasos Furtivos Ninja",
+    "originalIdeaDescription": "Un dispositivo de entrenamiento que desafía al usuario a moverse lo más lentamente posible. Si el sensor de movimiento detecta una aceleración superior a un umbral mínimo, activa una alarma y una luz brillante, indicando que el usuario ha sido detectado. El objetivo es mover el dispositivo de un punto A a B sin activar las salidas.",
+    "transformedIdeaTitle": "Misión Imposible: El Agente Sigiloso",
+    "transformedIdeaDescription": "Eres un agente secreto intentando cruzar una habitación llena de láseres invisibles. Debes llevar el dispositivo de un lado a otro sin activarlo. Si te mueves demasiado rápido, sonará la alarma y la luz te delatará. Tu desafío es calibrar la sensibilidad del sensor para que sea un reto difícil.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion > low_threshold THEN (Audio.play('alarm') AND Lamp.on('white'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión de Aire (Air Drums)",
+    "originalIdeaDescription": "Permite al usuario tocar una batería invisible. Al realizar un movimiento rápido hacia abajo (como golpeando un tambor), el sistema detecta el pico de aceleración negativa en el eje Y o Z y reproduce un sonido de tambor o platillo, acompañado de un destello de luz rítmico.",
+    "transformedIdeaTitle": "Estrella de Rock: Batería Invisible",
+    "transformedIdeaDescription": "¿Quieres tocar la batería sin tener una? ¡Constrúyela con código! Programa el sensor para que, cada vez que hagas un movimiento seco hacia abajo en el aire, suene un redoblante y la luz parpadee al ritmo. Intenta crear un ritmo constante moviendo tu mano.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.acceleration_Z < -1.5g THEN (Audio.play('snare_drum') AND Lamp.flash('blue'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Automatizado",
+    "originalIdeaDescription": "El dispositivo reproduce música aleatoriamente. Cuando la música se detiene abruptamente (controlado por el programa), el sensor de movimiento comienza a monitorear. Si detecta cualquier movimiento durante el silencio, emite un sonido de 'fail' y enciende una luz roja. Si el usuario permanece quieto, la música se reanuda.",
+    "transformedIdeaTitle": "Congelados: El Juego Musical",
+    "transformedIdeaDescription": "Vamos a programar el juez perfecto para el juego de 'Las Estatuas'. La música sonará y podrás bailar, pero cuando el programa decida parar la música, ¡debes congelarte! Si te mueves aunque sea un poco, el sensor te atrapará, sonará un timbre y perderás. ¿Qué tan quieto puedes quedarte?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF music_playing == FALSE AND motion > 0 THEN (Audio.play('buzzer') AND Lamp.on('red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Motivacional",
+    "originalIdeaDescription": "Un podómetro básico que recompensa la actividad física. Cada vez que detecta un patrón de movimiento rítmico similar a un paso, reproduce un sonido de 'clic' o una nota musical y parpadea la lámpara. Al alcanzar cierto número de pasos, reproduce una fanfarria de victoria.",
+    "transformedIdeaTitle": "El Explorador de Maratones",
+    "transformedIdeaDescription": "¡Prepárate para la carrera! Crea un dispositivo que cuente tus pasos. Cada vez que das un paso (sacudida), debe sonar un 'bip' y encenderse una luz. El reto final: programa una celebración especial con música de victoria y luces de colores cuando llegues a 10 pasos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON motion_step: count++; Audio.play('beep'); Lamp.flash(); IF count == 10 THEN Audio.play('victory')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Agitador de Pociones Mágicas",
+    "originalIdeaDescription": "Simula la preparación de una mezcla química o poción. El usuario debe agitar el dispositivo. Mientras agita, el sonido de líquido burbujeante se reproduce y la luz cambia gradualmente de color (ej. de azul a rojo). Si deja de agitar antes de tiempo, el proceso se reinicia.",
+    "transformedIdeaTitle": "Clase de Pociones: La Mezcla Perfecta",
+    "transformedIdeaDescription": "El profesor te ha pedido crear una poción explosiva. Debes agitar el ingrediente constantemente para que cambie de color de azul frío a rojo caliente. Mientras agitas, escucharás las burbujas. Si dejas de agitar antes de que se ponga roja, la poción se arruina y debes empezar de nuevo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE motion > threshold DO (Audio.play('bubbles') AND Lamp.shiftColor('blue', 'red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Dispositivo de Llamada de Emergencia SOS",
+    "originalIdeaDescription": "Un sistema de seguridad personal. Si el dispositivo detecta una caída libre (gravedad cercana a cero) seguida de un impacto fuerte, asume un accidente. Automáticamente comienza a emitir un patrón de luz SOS (tres cortos, tres largos, tres cortos) y una sirena de ayuda audible.",
+    "transformedIdeaTitle": "Kit de Supervivencia: Detector de Caídas",
+    "transformedIdeaDescription": "Diseña un dispositivo inteligente para escaladores. Si el dispositivo se cae (detecta caída libre e impacto), debe entrar en modo de emergencia automáticamente, haciendo parpadear la luz en código SOS y sonando una alarma para que los rescatistas puedan encontrarte.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF acceleration < 0.2g THEN wait_for_impact(); IF impact THEN (Audio.play('siren') AND Lamp.blinkPattern('SOS'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Vehículo",
+    "originalIdeaDescription": "Utiliza el movimiento para simular las RPM de un motor. Si el dispositivo está inclinado o se mueve ligeramente (ralentí), reproduce un sonido grave y luz tenue. Al moverlo rápidamente (acelerar), el tono del audio sube y la luz se vuelve más brillante e intensa.",
+    "transformedIdeaTitle": "Piloto de Carreras: Tu Propio Motor",
+    "transformedIdeaDescription": "Convierte tu mano en un coche de carreras. Cuando estás quieto, el motor 'ruge' suavemente y la luz es tenue. ¡Pero cuando mueves la mano rápido hacia adelante, aceleras! El sonido del motor debe subir de tono y la luz brillar al máximo. ¡Aprende a controlar la velocidad!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET volume & brightness = MAP(motion_intensity, 0, 100); Audio.play('engine', volume); Lamp.on('orange', brightness)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja de Música Giratoria",
+    "originalIdeaDescription": "Inspirado en las cajas de música de cuerda. El dispositivo solo reproduce una melodía suave y enciende una luz cálida mientras el usuario gira el dispositivo físicamente (detectando rotación/movimiento en ejes X/Y). Si el movimiento cesa, la música se desvanece y la luz se apaga.",
+    "transformedIdeaTitle": "La Caja de Música Encantada",
+    "transformedIdeaDescription": "Esta caja de música solo funciona con tu energía. Tienes que girarla suavemente en tus manos para que suene la canción de cuna y se encienda la luz. Si te cansas y paras, la música se duerme también. Programa la relación directa entre tu movimiento y el volumen de la música.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.rotation > 0 THEN (Audio.play('lullaby') AND Lamp.on('yellow')) ELSE (Audio.fade_out() AND Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Sísmicos",
+    "originalIdeaDescription": "Un dispositivo estacionario que monitorea vibraciones sutiles. En estado normal, muestra una luz verde. Si detecta vibraciones que superan un umbral seguro, cambia la luz a rojo parpadeante y emite un sonido de advertencia de evacuación, simulando un sismógrafo.",
+    "transformedIdeaTitle": "Laboratorio de Geología: Alerta Sísmica",
+    "transformedIdeaDescription": "Vamos a construir un sismógrafo para detectar terremotos. Coloca el dispositivo sobre la mesa. Si la mesa está quieta, luz verde (seguro). Si alguien golpea la mesa o la mueve (terremoto), debe sonar la alarma y encenderse la luz roja. ¿Qué tan sensible puedes hacerlo?",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion > seismic_threshold THEN (Audio.play('alarm') AND Lamp.blink('red')) ELSE Lamp.on('green')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Gestos para Efectos de Tormenta",
+    "originalIdeaDescription": "Permite al usuario controlar el clima virtual. Un movimiento suave crea sonido de viento y luz azul tenue. Una sacudida fuerte simula un trueno, reproduciendo un estruendo fuerte y un destello blanco brillante (relámpago) en la lámpara.",
+    "transformedIdeaTitle": "El Dios del Trueno",
+    "transformedIdeaDescription": "¡Tienes el poder de controlar el clima! Si mueves la mano suavemente, harás que sople el viento (luz azul, sonido de aire). Pero si das un golpe fuerte hacia abajo, ¡invocarás una tormenta! Crea un relámpago (flash blanco) y un trueno. Aprende a diferenciar movimientos suaves de fuertes.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion == 'gentle' THEN (Audio.play('wind') AND Lamp.on('blue')) ELSE IF motion == 'sharp' THEN (Audio.play('thunder') AND Lamp.flash('white'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio",
+    "originalIdeaDescription": "Ayuda a mejorar la estabilidad. El usuario coloca el dispositivo sobre su cabeza o mano. Si el dispositivo se mantiene nivelado y con poco movimiento, suena música armoniosa. Si se detecta inclinación o movimiento excesivo (pérdida de equilibrio), la música se distorsiona o para y la luz se pone roja.",
+    "transformedIdeaTitle": "El Equilibrista de Circo",
+    "transformedIdeaDescription": "¿Puedes caminar con un libro en la cabeza? Intenta hacerlo con este dispositivo. Si mantienes el equilibrio perfecto, escucharás aplausos y música agradable. Si te tambaleas demasiado, sonará un sonido de 'uops' y la luz roja te avisará. ¡Intenta cruzar la habitación sin fallar!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.tilt < tolerance THEN (Audio.play('applause') AND Lamp.color('green')) ELSE (Audio.play('oops') AND Lamp.color('red'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Sonajero Tecnológico",
+    "originalIdeaDescription": "Transforma el dispositivo en un instrumento rítmico. La intensidad de la luz y el volumen del sonido dependen directamente de la fuerza con la que se agita el dispositivo, enseñando la relación entre variables de entrada analógica y salida.",
+    "transformedIdeaTitle": "Maracas Digitales",
+    "transformedIdeaDescription": "Construye tu propio instrumento musical. Cuanto más fuerte agites tu maraca digital, más fuerte sonará y más brillante será la luz. Si la agitas suave, sonará bajito. Aprende cómo convertir la fuerza de tu movimiento en volumen de sonido usando variables.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET output_level = motion_strength; Audio.setVolume(output_level); Lamp.setBrightness(output_level)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Compañero de Trote (Jogging)",
+    "originalIdeaDescription": "Detecta la cadencia del usuario al correr. Si el usuario mantiene un ritmo constante, reproduce música energizante y una luz pulsante verde. Si el usuario se detiene o baja demasiado el ritmo, la música cambia a algo lento o se detiene y la luz cambia a amarillo.",
+    "transformedIdeaTitle": "Entrenador Personal: ¡A Correr!",
+    "transformedIdeaDescription": "Este dispositivo te ayuda a mantener el ritmo mientras corres (o marchas en tu lugar). Si mantienes un buen ritmo, te animará con música rápida y luces verdes. Si te empiezas a cansar y vas lento, la música se pondrá lenta para avisarte. ¡Mantén la energía alta!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF steps_per_minute > target THEN (Audio.play('fast_music') AND Lamp.pulse('green')) ELSE (Audio.play('slow_music') AND Lamp.on('yellow'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Simula una caña de pescar. El usuario espera (quieto) hasta que la lámpara parpadea y suena un sonido de 'chapoteo' (evento aleatorio). Entonces el usuario debe hacer un movimiento rápido hacia arriba para 'enganchar' al pez, lo que dispara un sonido de éxito.",
+    "transformedIdeaTitle": "Torneo de Pesca Profesional",
+    "transformedIdeaDescription": "¡Vamos de pesca! Mantén tu caña (el dispositivo) muy quieta. El programa decidirá cuándo pica un pez (luz azul y sonido de agua). ¡En ese momento tienes 1 segundo para tirar de la caña hacia arriba! Si eres rápido, atraparás al pez; si no, se escapará.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WAIT random_time; Audio.play('splash'); IF motion.upward > threshold within 1_sec THEN Audio.play('success') ELSE Audio.play('fail')"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros Direccional",
+    "originalIdeaDescription": "Un dispositivo de juego donde el usuario debe girar físicamente hacia una dirección cardinal específica (Norte, Sur, Este, Oeste) y presionar el interruptor. Si la dirección es la correcta según el objetivo aleatorio, el reproductor de audio emite un sonido de victoria o monedas.",
+    "transformedIdeaTitle": "El Tesoro de la Isla Calavera",
+    "transformedIdeaDescription": "¡Eres un pirata buscando el oro perdido! El mapa dice que el tesoro está enterrado exactamente al Norte. Gira tu dispositivo hasta encontrar el Norte y presiona el botón 'Cavar' (Interruptor) para ver si encuentras las monedas de oro o solo arena.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() AND Compass.direction == 'North' THEN Audio.play('coins.mp3') ELSE Audio.play('dig_sand.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Radio de Música Mundial",
+    "originalIdeaDescription": "El sistema actúa como una radio que sintoniza diferentes géneros musicales según la dirección hacia la que apunte el usuario. El interruptor sirve para encender o apagar la radio, permitiendo explorar culturas musicales girando el dispositivo.",
+    "transformedIdeaTitle": "Sintonizador Global Mágico",
+    "transformedIdeaDescription": "Viaja por el mundo sin moverte de tu silla. Si apuntas al Este, escucharás música asiática; al Oeste, jazz americano. Usa el interruptor para encender tu radio mágica y explora los sonidos de cada continente girando tu cuerpo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Compass.heading < 90 THEN Audio.play('Europe') ELSE IF Compass.heading < 180 THEN Audio.play('Asia')...)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Una caja fuerte virtual que requiere que el usuario apunte a un grado específico (por ejemplo, 120 grados) y confirme con el interruptor. El audio proporciona pistas de 'clics' cuando se está cerca del número correcto.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Tienes que abrir la bóveda del banco antes de que llegue la policía. Gira el dial (tu dispositivo) lentamente. Escucha atentamente los 'clics' del audio. Cuando encuentres el ángulo secreto, presiona el interruptor para abrir la puerta.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP: IF Compass.heading == secretAngle THEN Audio.play('click'); IF Switch.pressed() AND Compass.heading == secretAngle THEN Audio.play('open')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Navegación para Invidentes",
+    "originalIdeaDescription": "Un prototipo de asistencia que indica mediante voz hacia qué dirección cardinal se está mirando cuando se presiona un botón, ayudando a la orientación espacial sin necesidad de mirar una pantalla.",
+    "transformedIdeaTitle": "El Guía Explorador Ciego",
+    "transformedIdeaDescription": "Diseña una herramienta para ayudar a alguien que no puede ver. Cuando la persona se sienta perdida, presionará el botón y tu programa deberá decirle en voz alta si está mirando al Norte, Sur, Este u Oeste para que pueda orientarse.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { direction = Compass.getCardinal(); Audio.speak(direction); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas Geográficas",
+    "originalIdeaDescription": "El audio hace una pregunta sobre ubicación (ej. '¿Dónde sale el sol?'). El usuario debe apuntar la brújula hacia la respuesta correcta y confirmar con el interruptor para ganar puntos.",
+    "transformedIdeaTitle": "Examen de Supervivencia",
+    "transformedIdeaDescription": "Estás perdido en el bosque y el guardabosques te hace preguntas por radio. 'El musgo crece al Norte, ¿hacia dónde vas?'. Apunta tu dispositivo a la dirección correcta y presiona el botón para enviar tu respuesta y ser rescatado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Question'); WAIT for Switch; IF Compass.direction == 'North' THEN Audio.play('Correct') ELSE Audio.play('TryAgain')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Un juguete que simula detectar entidades paranormales. El ruido estático aumenta de volumen cuando la brújula apunta a una coordenada 'embrujada' predefinida. El interruptor se usa para 'capturar' al fantasma.",
+    "transformedIdeaTitle": "Cazafantasmas: La Mansión Encantada",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Gira lentamente con tu sensor. Si el sonido de estática se vuelve muy fuerte, ¡estás mirando al fantasma! Presiona el botón rápidamente para atraparlo en tu trampa de protones.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "distance = ABS(Compass.heading - ghostHeading); Audio.setVolume(100 - distance); IF Switch.pressed() AND distance < 10 THEN Audio.play('Caught')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Narrador de Historias Ramificadas",
+    "originalIdeaDescription": "Una historia interactiva de audio donde el usuario elige el camino girando hacia la izquierda (Oeste) o derecha (Este) y confirmando con el interruptor para escuchar el siguiente capítulo.",
+    "transformedIdeaTitle": "Tu Propia Aventura: El Bosque Mágico",
+    "transformedIdeaDescription": "Llegas a una bifurcación en el camino. El narrador dice: 'Para ir al castillo del dragón, mira al Este. Para ir a la cueva de los duendes, mira al Oeste'. Gira tu cuerpo para elegir tu destino y presiona el botón para continuar la historia.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Choice'); WAIT Switch; IF Compass.heading > 180 THEN Audio.play('WestStory') ELSE Audio.play('EastStory')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Zoológico de Sonidos Direccional",
+    "originalIdeaDescription": "Al apuntar al Norte se escuchan leones, al Sur pingüinos, al Este elefantes, etc. El interruptor permite alternar entre modo 'Día' (animales despiertos) y 'Noche' (grillos o silencio).",
+    "transformedIdeaTitle": "El Guardián del Zoo",
+    "transformedIdeaDescription": "Eres el encargado de alimentar a los animales. Gira hacia el Norte para visitar a los osos polares o al Sur para ver a los monos. Usa el interruptor para 'apagar las luces' y escuchar qué animales siguen despiertos por la noche.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() THEN PlayDaySounds(Compass.dir) ELSE PlayNightSounds(Compass.dir)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Viento y Clima",
+    "originalIdeaDescription": "Dependiendo de la orientación de la brújula, el reproductor de audio emite sonidos de viento con diferentes intensidades. El interruptor cambia el tipo de clima (tormenta, brisa suave).",
+    "transformedIdeaTitle": "El Hombre del Tiempo",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una veleta sónica. Gira para encontrar de dónde viene el viento. Si apuntas al Norte, escucharás la ventisca fría. Presiona el botón para desatar una tormenta tropical y escucha cómo cambia el sonido del viento.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.state == 0 THEN Audio.play('Breeze_' + Compass.dir) ELSE Audio.play('Storm_' + Compass.dir)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador DJ Giratorio",
+    "originalIdeaDescription": "Usar la brújula como un plato de DJ. Girar el dispositivo hace 'scratching' o cambia el tempo de la pista de audio. El interruptor inicia o detiene la pista base.",
+    "transformedIdeaTitle": "DJ 360: La Fiesta Giratoria",
+    "transformedIdeaDescription": "¡Eres el DJ de la fiesta! Presiona el botón para soltar el ritmo (el beat). Luego, gira tu cuerpo como si fueras un disco de vinilo humano. Dependiendo de hacia dónde mires, añadirás diferentes efectos de sonido a la mezcla.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Audio.playLoop('Beat'); Audio.setEffect(Compass.heading)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Espía",
+    "originalIdeaDescription": "El audio reproduce ruido ininteligible a menos que el usuario apunte a una coordenada secreta muy específica. El interruptor 'graba' el mensaje una vez encontrado.",
+    "transformedIdeaTitle": "Agente Secreto: Frecuencia Cero",
+    "transformedIdeaDescription": "Interceptamos una señal enemiga, pero hay mucha interferencia. Gira tu receptor lentamente. Solo cuando apuntes exactamente a la base enemiga escucharás el mensaje claro. Presiona el botón para grabar la evidencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == Target THEN Audio.play('SecretMessage') ELSE Audio.play('StaticNoise'); IF Switch.pressed() THEN Save()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Meditación Zen",
+    "originalIdeaDescription": "Guía al usuario para saludar al sol. Debe orientarse al Este para iniciar la sesión de audio de meditación matutina activada por el interruptor.",
+    "transformedIdeaTitle": "Maestro Yoga: Saludo al Sol",
+    "transformedIdeaDescription": "Para comenzar tu entrenamiento ninja de relajación, debes encontrar por dónde sale el sol (Este). Usa tu brújula. Cuando estés alineado con la energía del sol, presiona el botón para escuchar al maestro y comenzar tu respiración.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() AND Compass.direction == 'East' THEN Audio.play('Meditation') ELSE Audio.play('FindTheEast')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Radar de Aviones",
+    "originalIdeaDescription": "Simula ser una torre de control. El audio reporta la posición de un avión imaginario. El usuario debe apuntar hacia esa posición y pulsar el interruptor para 'dar permiso de aterrizaje'.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "¡Mayday! Un avión necesita aterrizar y hay niebla. El piloto dice 'Me aproximo desde el Sur'. Gira rápidamente hacia el Sur y presiona el botón para encender las luces de la pista y salvar el vuelo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "planeDir = 'South'; Audio.play('Request_South'); WAIT Switch; IF Compass.dir == planeDir THEN Audio.play('Safe') ELSE Audio.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Orquesta Espacial",
+    "originalIdeaDescription": "Divide el espacio de 360 grados en 4 secciones. Cada sección reproduce una familia de instrumentos (cuerdas, vientos, percusión) cuando se apunta a ella y se mantiene el interruptor presionado.",
+    "transformedIdeaTitle": "Director de Orquesta Invisible",
+    "transformedIdeaDescription": "Tú diriges la sinfonía. Apunta al Norte para escuchar los violines, al Sur para los tambores. Mantén presionado el botón (tu batuta) para que suenen. ¡Gira rápido para combinar los instrumentos y crear tu obra maestra!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isPressed(): IF Compass.dir == 'N' Audio.play('Violins') ELSE IF Compass.dir == 'S' Audio.play('Drums')..."
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simón Dice con Direcciones",
+    "originalIdeaDescription": "Juego de memoria auditiva. El audio dice una secuencia 'Norte, Este, Norte'. El usuario debe replicar los movimientos y confirmar cada uno con el interruptor.",
+    "transformedIdeaTitle": "El Baile del Robot",
+    "transformedIdeaDescription": "El robot comandante te da órdenes: '¡Mira al Norte! ¡Ahora al Este!'. Debes girar y presionar el botón en cada dirección correcta. Si fallas la secuencia, el robot se apaga con un sonido triste.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Sequence = ['N', 'E', 'N']; FOR step IN Sequence: WAIT Switch; IF Compass.dir != step THEN GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Metales Simulado",
+    "originalIdeaDescription": "Se asigna una ubicación aleatoria como 'metal'. A medida que la brújula se acerca a ese ángulo, el tono del audio se vuelve más agudo. El interruptor reinicia el juego.",
+    "transformedIdeaTitle": "Buscadores de Oro en la Playa",
+    "transformedIdeaDescription": "Has perdido tu anillo en la playa. Usa tu detector (dispositivo). Gira en círculo escuchando el 'bip-bip'. Si el pitido se hace muy rápido y agudo, ¡estás apuntando al anillo! Presiona el botón para comenzar una nueva búsqueda.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "frequency = Map(Abs(Compass.heading - target), 0, 180, 1000, 100); Audio.tone(frequency); IF Switch.pressed() ResetTarget()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Brújula Parlante de Idiomas",
+    "originalIdeaDescription": "Herramienta educativa. Al apuntar a una dirección cardinal y pulsar el interruptor, el audio dice el nombre de esa dirección en un idioma extranjero (Inglés, Francés, etc.).",
+    "transformedIdeaTitle": "El Viajero Políglota",
+    "transformedIdeaDescription": "Aprende a navegar en otros idiomas. Apunta hacia una dirección y presiona el botón. Si apuntas al Norte, escucharás 'North' en inglés o 'Nord' en francés. ¡Intenta memorizar los cuatro puntos cardinales en tres idiomas diferentes!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() THEN Audio.play(Translate(Compass.cardinalDirection))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Perimetral",
+    "originalIdeaDescription": "El dispositivo se coloca fijo. Se establece una dirección 'segura' con el interruptor. Si la brújula detecta rotación (alguien mueve el objeto), suena una alarma.",
+    "transformedIdeaTitle": "Trampa para Ladrones de Galletas",
+    "transformedIdeaDescription": "Protege tu tarro de galletas. Coloca el dispositivo encima y presiona el botón para 'armar' la alarma. Si alguien intenta girar el tarro o mover el dispositivo, la brújula detectará el cambio de ángulo y sonará una sirena policial.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "setPoint = Compass.heading; WAIT 5s; LOOP: IF ABS(Compass.heading - setPoint) > 10 THEN Audio.play('Siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Sonoro",
+    "originalIdeaDescription": "Un laberinto invisible donde las paredes emiten un sonido de choque si intentas 'caminar' (apuntar) hacia ellas. El interruptor avanza un paso. El objetivo es encontrar la salida silenciosa.",
+    "transformedIdeaTitle": "Escapando de la Cueva Oscura",
+    "transformedIdeaDescription": "Estás atrapado en una cueva sin luz. Debes encontrar la salida usando tus oídos. Gira buscando una dirección. Si escuchas un golpe, hay una pared. Si escuchas aire fresco, es el camino libre. Presiona el botón para avanzar un paso hacia la libertad.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.dir == currentWallDir THEN Audio.play('Bump') ELSE IF Switch.pressed() THEN Audio.play('Step_Forward')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Preguntas Aleatorias",
+    "originalIdeaDescription": "Funciona como una 'ruleta de la suerte'. El usuario gira físicamente y presiona el interruptor para detenerse. Dependiendo de la dirección final, el audio reproduce una pregunta o reto diferente.",
+    "transformedIdeaTitle": "La Ruleta de la Verdad o Reto",
+    "transformedIdeaDescription": "Siéntate en una silla giratoria con tus amigos alrededor. Gira rápido y presiona el botón para detenerte. Dependiendo de a quién apuntes (dirección), el dispositivo dictará un reto divertido o una pregunta vergonzosa para esa persona.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed() THEN { index = Compass.heading % list.length; Audio.play(challengeList[index]); }"
+  }
+]

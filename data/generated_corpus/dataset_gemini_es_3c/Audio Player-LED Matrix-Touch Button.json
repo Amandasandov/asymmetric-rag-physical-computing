@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control básico de reproducción de música",
+    "originalIdeaDescription": "Un sistema simple donde el botón táctil actúa como un interruptor para iniciar y detener una pista de audio, mostrando un icono de 'Play' o 'Pause' en la matriz LED según el estado actual.",
+    "transformedIdeaTitle": "Tu Propia Consola de DJ",
+    "transformedIdeaDescription": "¡Conviértete en el DJ de la clase! Crea un botón mágico que inicie la música para que todos bailen. Cuando la música suene, muestra un triángulo de 'Play', y cuando la detengas para hablar, muestra dos barras de 'Pausa'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Toggle(Audio.Play/Pause); IF Audio.isPlaying THEN LED.show('PlayIcon') ELSE LED.show('PauseIcon') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre visual y auditivo para accesibilidad",
+    "originalIdeaDescription": "Dispositivo diseñado para ayudar a personas con dificultades auditivas o visuales. Al presionar el botón, suena un timbre fuerte y la matriz LED parpadea con un patrón llamativo simultáneamente.",
+    "transformedIdeaTitle": "El Timbre Inclusivo para Todos",
+    "transformedIdeaDescription": "Diseña un timbre inteligente para una casa moderna. Tu misión es asegurar que todos, incluso quienes no pueden oír bien, sepan que alguien ha llegado. Al tocar el botón, haz que suene 'Ding-Dong' y que la pantalla parpadee.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('Doorbell'); REPEAT 3 { LED.show('FullBrightness'); WAIT(0.5s); LED.clear(); WAIT(0.5s) } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota virtual con respuesta emocional",
+    "originalIdeaDescription": "Simulación de una mascota digital. Al acariciar (tocar) el botón, la mascota emite un sonido de felicidad (ronroneo o ladrido) y la matriz LED muestra una cara sonriente o un corazón.",
+    "transformedIdeaTitle": "Crea tu Monstruito Feliz",
+    "transformedIdeaDescription": "Programa a 'Glitch', tu mascota robot. Le encanta que le hagan cosquillas en su botón. Cuando lo toques, haz que Glitch se ría y muestre un gran corazón pixelado para demostrar que te quiere.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('HappySound'); LED.show('HeartIcon'); WAIT(2s); LED.clear() }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de trivia con revelación de respuesta",
+    "originalIdeaDescription": "El sistema reproduce una pregunta de audio. El usuario piensa la respuesta y presiona el botón para revelar si es correcta o incorrecta visualmente en la matriz y escuchar la solución.",
+    "transformedIdeaTitle": "El Quiz del Tesoro Escondido",
+    "transformedIdeaDescription": "Eres un explorador resolviendo acertijos. Escucha la pregunta del guardián del templo. Cuando creas saber la respuesta, presiona el botón para revelar la verdad en la pantalla y escuchar si has ganado el tesoro.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Question'); WAIT_FOR_TOUCH; IF Touch.isPressed() THEN { Audio.play('AnswerAudio'); LED.scrollText('RESPUESTA') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de respiración para meditación",
+    "originalIdeaDescription": "Al activar el botón, comienza una sesión de relajación. Se reproduce música suave y la matriz LED muestra un círculo que se expande y contrae para guiar el ritmo de la respiración.",
+    "transformedIdeaTitle": "El Entrenador Zen",
+    "transformedIdeaDescription": "Ayuda a tus amigos a relajarse antes de un examen. Crea un dispositivo que, al activarse, toque música de lluvia y muestre un círculo creciendo y encogiéndose para enseñarles a respirar profundamente.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.loop('RelaxingMusic'); LOOP { LED.animate('CircleGrow'); WAIT(2s); LED.animate('CircleShrink'); WAIT(2s) } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Diccionario interactivo de animales",
+    "originalIdeaDescription": "Una herramienta educativa donde el niño presiona el botón y el sistema selecciona aleatoriamente un animal, reproduce su sonido característico y muestra su icono en la matriz.",
+    "transformedIdeaTitle": "La Granja Loca Aleatoria",
+    "transformedIdeaDescription": "¿Qué animal saldrá del granero? Programa un botón misterioso que, cada vez que lo presiones, elija un animal al azar, haga su sonido (¡Muuu! ¡Oink!) y dibuje su cara en las luces.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isPressed() THEN { VAR animal = Random(1,3); IF animal==1 { Audio.play('Cow'); LED.show('CowIcon') } ELSE { Audio.play('Pig'); LED.show('PigIcon') } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo visual y auditivo",
+    "originalIdeaDescription": "Dispositivo para músicos que marca el tiempo. Al presionar el botón se inicia un ritmo constante; suena un 'tic' y la matriz parpadea sincronizadamente con el BPM establecido.",
+    "transformedIdeaTitle": "El Guardián del Ritmo",
+    "transformedIdeaDescription": "¡La banda necesita tu ayuda para no perder el ritmo! Crea un metrónomo que marque el paso. Al encenderlo, debe hacer un sonido 'bip' y encender una luz en el centro cada segundo exacto.",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 2,
+    "algorithmUsed": "STATE listening = false; IF Touch.isPressed() THEN listening = !listening; WHILE listening { Audio.play('Click'); LED.flash(); WAIT(BPM_Delay) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Temporizador de cuenta regresiva con alarma",
+    "originalIdeaDescription": "Al pulsar el botón, inicia una cuenta atrás de 10 segundos visualizada en la matriz. Al llegar a cero, suena una alarma fuerte y la pantalla muestra una explosión o fin.",
+    "transformedIdeaTitle": "Desactivación de la Bomba de Tiempo",
+    "transformedIdeaDescription": "¡Misión Imposible! Tienes 10 segundos. Al presionar el botón, inicia la cuenta regresiva en la pantalla: 9, 8, 7... Si llega a cero, ¡BOOM! suena la explosión. (Reto extra: presiona otra vez para detenerla).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Touch.isPressed() THEN { FOR i=9 TO 0 { LED.showNumber(i); Audio.play('Beep'); WAIT(1s) }; Audio.play('Explosion'); LED.show('X') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de efectos de sonido de terror",
+    "originalIdeaDescription": "Un juguete de broma. El sistema está en silencio hasta que se toca el botón, momento en el cual reproduce un grito o risa malvada y muestra una cara de fantasma o calavera.",
+    "transformedIdeaTitle": "La Caja de Sustos de Halloween",
+    "transformedIdeaDescription": "Prepara una trampa divertida. Deja la caja quieta y oscura. Cuando un amigo curioso toque el botón... ¡BUU! Suena una risa de bruja y aparece una calavera parpadeante.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('EvilLaugh'); LED.show('SkullIcon'); WAIT(3s); LED.clear() }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narrador de cuentos interactivo",
+    "originalIdeaDescription": "Reproduce un segmento de un audiolibro. Al presionar el botón, se avanza al siguiente capítulo y la matriz muestra un icono representativo de la nueva escena (ej. bosque, castillo).",
+    "transformedIdeaTitle": "El Libro de Cuentos Mágico",
+    "transformedIdeaDescription": "Crea un libro que cobra vida. Comienza en un bosque (sonidos de pájaros, icono de árbol). Al tocar el botón, el héroe viaja a un castillo (sonido de trompetas, icono de castillo). ¡Tú controlas la historia!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR chapter = 1; IF Touch.isPressed() THEN { chapter++; IF chapter==2 { Audio.play('Scene2'); LED.show('Castle') } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de aplausos o votos",
+    "originalIdeaDescription": "Cada vez que se presiona el botón, se reproduce un sonido de 'ding' o aplauso corto y se incrementa un contador numérico visible en la matriz LED.",
+    "transformedIdeaTitle": "El Medidor de Votos de Talento",
+    "transformedIdeaDescription": "¡Eres el juez de un concurso de talentos! Cada vez que te guste algo, presiona el botón para dar un voto. Escucharás un aplauso y el número en la pantalla subirá. ¿A cuánto llegará?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR count = 0; IF Touch.isPressed() THEN { count = count + 1; Audio.play('Clap'); LED.showNumber(count) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de código Morse",
+    "originalIdeaDescription": "Herramienta de aprendizaje donde el usuario presiona el botón para generar puntos y rayas. El sistema reproduce el tono correspondiente y visualiza el símbolo (punto o línea) en la matriz.",
+    "transformedIdeaTitle": "Telégrafo de Espías Secreto",
+    "transformedIdeaDescription": "Envía mensajes secretos como los espías antiguos. Si tocas rápido, suena un pitido corto y se ve un punto. Si mantienes presionado, suena largo y se ve una raya. ¡Aprende a decir SOS!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Touch.isPressed() THEN { StartTimer(); WHILE Touch.isPressed() { PlayTone() }; time = StopTimer(); IF time < 0.5s THEN LED.show('.') ELSE LED.show('-') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de lanzamiento espacial",
+    "originalIdeaDescription": "Secuencia dramática de lanzamiento. Al presionar el botón, se reproduce audio de propulsores y comunicaciones de radio, mientras la matriz muestra una animación de un cohete despegando.",
+    "transformedIdeaTitle": "Comandante de la NASA",
+    "transformedIdeaDescription": "3, 2, 1... ¡Despegue! Programa el botón maestro de lanzamiento. Al pulsarlo, debe sonar el estruendo de los motores y mostrarse una animación del cohete subiendo pixel a pixel hacia el espacio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('RocketRumble'); FOR y=7 TO 0 { LED.drawRocket(y); WAIT(0.2s) } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de paisajes sonoros naturales",
+    "originalIdeaDescription": "Permite alternar entre ambientes. Un toque cambia el entorno (ej. de lluvia a bosque). El audio cambia al sonido ambiente y la matriz muestra un icono del clima (nube, sol, árbol).",
+    "transformedIdeaTitle": "La Máquina del Clima",
+    "transformedIdeaDescription": "Controla el tiempo en tu habitación. Un toque: tormenta (truenos y rayos en pantalla). Otro toque: playa (olas y sol). Otro toque: noche (grillos y luna). ¡Crea la atmósfera perfecta!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR mode = 0; IF Touch.isPressed() THEN { mode = (mode + 1) % 3; IF mode==0 { Play('Rain'); Show('Cloud') } ELSE IF mode==1 { Play('Ocean'); Show('Sun') } ... }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de tiempo de reacción",
+    "originalIdeaDescription": "El juego espera un tiempo aleatorio y luego reproduce un sonido. El usuario debe tocar el botón lo antes posible. La matriz muestra el tiempo que tardó o una calificación (rápido/lento).",
+    "transformedIdeaTitle": "Duelo de Reflejos Rápidos",
+    "transformedIdeaDescription": "Espera... espera... ¡AHORA! El sistema emitirá un sonido sorpresa. Debes tocar el botón instantáneamente. Si eres rápido, verás una carita feliz; si eres lento, una tortuga. ¿Tienes reflejos de ninja?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WAIT(RandomTime); Audio.play('Go!'); StartTimer(); WAIT_FOR_TOUCH; time = StopTimer(); IF time < 0.3s THEN LED.show('Flash') ELSE LED.show('Turtle')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo peatonal auditivo",
+    "originalIdeaDescription": "Simulación de seguridad vial. El sistema está en rojo (matriz con X). Al presionar el botón, espera unos segundos, cambia a verde (flecha o muñeco caminando) y emite un sonido de paso rápido.",
+    "transformedIdeaTitle": "Cruce Seguro de Ciudad",
+    "transformedIdeaDescription": "Diseña un semáforo inteligente. Normalmente muestra una mano roja (Alto). Cuando un peatón toca el botón, espera un momento, cambia a un muñeco verde y hace un sonido rápido 'bip-bip-bip' para indicar que es seguro cruzar.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.show('RedHand'); IF Touch.isPressed() THEN { WAIT(3s); LED.show('GreenMan'); Audio.loop('WalkSound'); WAIT(5s); StopAudio(); LED.show('RedHand') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de chistes malos",
+    "originalIdeaDescription": "Entretenimiento simple. Al presionar el botón, se reproduce un chiste corto (audio) y al finalizar, la matriz muestra un 'JA JA' desplazándose o un emoji riendo.",
+    "transformedIdeaTitle": "El Robot Comediante",
+    "transformedIdeaDescription": "¡Programa a un robot que cuenta chistes! Cada vez que toques su nariz (el botón), contará un chiste gracioso. Al terminar, asegúrate de que pida aplausos mostrando 'JA JA JA' en su pantalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('Joke1'); WAIT_UNTIL_DONE; LED.scrollText('JA JA JA') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de las estatuas musicales",
+    "originalIdeaDescription": "Al presionar el botón, la música suena y la matriz muestra animaciones de baile. Aleatoriamente la música para y la matriz muestra 'STOP'. El jugador debe congelarse.",
+    "transformedIdeaTitle": "Fiesta de Estatuas Congeladas",
+    "transformedIdeaDescription": "Crea el árbitro para el juego de las estatuas. Al iniciar, toca música disco y muestra luces locas. De repente, ¡silencio total y una señal de STOP! Quien se mueva, pierde.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isPressed() THEN { LOOP { Audio.play('Music'); LED.animate('Dance'); WAIT(Random(2,5)s); Audio.pause(); LED.show('STOP'); WAIT(3s) } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de alarma de emergencia simulado",
+    "originalIdeaDescription": "Simulación de seguridad. Al presionar el botón, se activa un modo de emergencia: suena una sirena constante y la matriz muestra una señal de advertencia parpadeante o 'SOS'.",
+    "transformedIdeaTitle": "Alerta Roja de la Nave",
+    "transformedIdeaDescription": "¡Intruso detectado! Programa el botón de pánico de tu nave espacial. Si se presiona, debe sonar una sirena ruidosa y la pantalla debe parpadear con un signo de admiración gigante para alertar a la tripulación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Touch.isPressed() THEN { LOOP 5 { Audio.play('Siren'); LED.show('!'); WAIT(0.5s); LED.clear(); WAIT(0.5s) } }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lanzador de hechizos mágicos",
+    "originalIdeaDescription": "Juguete de rol. Al presionar el botón, se reproduce un sonido de 'brillo mágico' o 'rayo' y la matriz muestra un patrón de partículas expandiéndose como si se lanzara un poder.",
+    "transformedIdeaTitle": "La Varita del Mago Digital",
+    "transformedIdeaDescription": "Convierte tu kit en una varita mágica. Cuando presiones el botón para lanzar un hechizo, debe sonar un efecto de polvo de hadas y mostrar destellos brillantes saliendo desde el centro de la pantalla hacia afuera.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Touch.isPressed() THEN { Audio.play('MagicSparkle'); LED.animate('FireworkExplosion') }"
+  }
+]

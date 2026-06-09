@@ -1,2 +1,112 @@
-# asymmetric-rag-physical-computing
-This repo contains code, datasets, and configs to reproduce the study Overcoming the Hardware Barrier: AI-Assisted Instructional Design in Physical Computing Using Asymmetric RAG Architectures. It provides the full pipeline evaluating standard LLMs and RAG models against human collaboration for K-12 educational activity design.
+# Overcoming the Hardware Barrier: Asymmetric RAG Architectures in Physical Computing
+
+This repository contains the code, data, and configuration files necessary to reproduce the findings presented in the study: *"Overcoming the Hardware Barrier: AI-Assisted Instructional Design in Physical Computing Using Asymmetric RAG Architectures"*.
+
+The study evaluates the efficacy of standard Large Language Models (LLMs) and asymmetric Retrieval-Augmented Generation (RAG) architectures against traditional human-to-human collaboration for co-creating physical computing activities with 21 middle and high school teachers.
+
+---
+
+## 📂 Repository Structure
+
+The project is divided into three main components: Corpus Generation, AI Configuration, and Metrics & Analysis.
+
+```text
+├── src/
+│   ├── 01_corpus_generation/      # Scripts for generating the physical computing dataset
+│   ├── 02_ai_configuration/       # System instructions and context for Gemini agents
+│   └── 03_metrics_and_analysis/   # Statistical analysis scripts
+├── data/
+│   ├── raw_metrics/               # Original data and interaction logs collected during the experiment
+│   └── generated_corpus/          # The output JSON and CSV files from Phase 1
+├── requirements.txt               # Python dependencies
+└── README.md                      
+```
+
+---
+
+## 🛠️ Prerequisites and Setup
+
+To run the data generation and statistical analysis pipelines, ensure you have Python 3.8+ installed. 
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Amandasandov/asymmetric-rag-physical-computing.git
+   cd asymmetric-rag-physical-computing
+   ```
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **API Key Configuration:** The dataset generation scripts rely on the Google Gemini API. You must set your API key as an environment variable before running Phase 1:
+   ```bash
+   export GEMINI_API_KEY="your_api_key_here"
+   ```
+
+*Note: The custom AI assistants (Gems) evaluated in this study can be fully replicated and utilized on standard free-tier Google accounts. A paid subscription is not required to reproduce the human-AI interaction phases.*
+
+---
+
+## 🚀 Step-by-Step Reproduction Guide
+
+### Phase 1: RAG Corpus Generation
+The asymmetric RAG architecture relies on a curated database of physical computing activities, generated using strict programmatic boundaries.
+
+1. **Generate Raw Activities:**
+   Execute the generation scripts to prompt the LLM to create valid combinations of hardware components.
+   * `python src/01_corpus_generation/gen-2-components.py`
+   * `python src/01_corpus_generation/gen-3-components.py`
+   *(Note: These scripts will output raw JSON files to the `/dataset_gemini_es_2c` and `/dataset_gemini_es_3c` directories).*
+   
+2. **Data Validation and Repair:**
+   Due to potential API truncation, run the diagnostic and repair scripts to ensure JSON integrity.
+   * `python src/01_corpus_generation/fixbracket.py`
+   * `python src/01_corpus_generation/filter-incomplete.py`
+   * `python src/01_corpus_generation/json-cec.py` 
+
+3. **Consolidation:**
+   Transform the validated JSON files into the flat CSV formats required for the RAG architecture's retrieval system. 
+   * `python src/01_corpus_generation/gen-csv-from-dataset.py`
+   *(Note: This process will generate two distinct files based on the component combinations: `dataset_gemini_es_2c.csv` and `dataset_gemini_es_3c.csv`).*
+
+### Phase 2: AI Assistant (Gem) Configuration
+To replicate the experiment's specific design modalities (Standard AI vs. RAG AI), you must configure two custom conversational agents using the files provided in `src/02_ai_configuration/`.
+
+1. **Standard AI Setup:**
+   * Navigate to https://gemini.google.com/gems/create to create a new custom agent.
+   * Paste the contents of `instructions-standard.docx` into the **"Instructions"** field.
+   * Upload `activity-model.md` and `pseudocode.s.txt` into the **"Knowledge"** section.
+
+2. **RAG AI Setup:**
+   * Create a second custom agent at the same link.
+   * Paste the contents of `Instructions-rag.docx` into the **"Instructions"** field.
+   * Upload `activity-model.md`, `pseudocode.s.txt`, and **both CSV files** (`dataset_gemini_es_2c.csv` and `dataset_gemini_es_3c.csv`) generated in Phase 1 into the **"Knowledge"** section to establish the retrieval-augmented database.
+
+### Phase 3: Metrics & Statistical Analysis
+This repository includes the raw data and calculation scripts to replicate the mixed-methods analysis, including the Chatbot Usability Questionnaire (CUQ) scoring, time efficiency logs, and non-parametric rubric evaluations.
+
+**A. Usability Analysis (CUQ)**
+* Review the raw response data in `data/raw_metrics/CUQ - Results and calculation tool - standard.xslx` and `data/raw_metrics/CUQ - Results and calculation tool - rag.xslx`.
+* These files contain the baseline calculations for the mean CUQ scores out of 100.
+
+**B. Comparative Modality Analysis**
+* **Data:** `Comaprative_questionnaire_results.xslx`
+* **Analysis:** Run `python src/03_metrics_and_analysis/comparative_analysis_metrics.py` to execute the omnibus Friedman test and Wilcoxon signed-rank tests for the post-experimental teacher perceptions.
+
+**C. Time Efficiency & Interaction Dynamics**
+* **Quantitative Data:** `Generation_time_activities.xslx` contains extracted generation times.
+* **Qualitative Data:** The `interaction_logs_summary.pdf` (located in `data/raw_metrics/`) contains the thematic summary of AI chat transcripts and human-to-human audio recordings, capturing the co-creation dynamics, creative blocks, and editing behaviors.
+* **Analysis:** Run `python src/03_metrics_and_analysis/time_metrics.py` to calculate descriptive statistics (mean, SD, median).
+
+**D. Activity Evaluation (Rubric Analysis)**
+* **Data:** `Activities_evaluation_results.xslx` contains the double-blinded expert evaluations across four pedagogical dimensions.
+* **Analysis:** Run `python src/03_metrics_and_analysis/evaluation_metrics.py`. This script performs:
+  1. Calculation of the baseline Intraclass Correlation Coefficient (ICC).
+  2. The omission of highly polarized activities (Standard Deviation ≥ 0.90).
+  3. The Kruskal-Wallis H-test for independent observations on the filtered dataset.
+  4. Dunn's post-hoc tests (with Bonferroni adjustments) for pairwise comparisons.
+
+
+---
+
+## 📜 Ethics and Licensing
+The human-subject data provided in the `raw_metrics` folder has been completely anonymized in accordance with the protocol approved by the *Comité Ético Científico en Ciencias Sociales, Artes y Humanidades* at the Pontificia Universidad Católica de Chile.

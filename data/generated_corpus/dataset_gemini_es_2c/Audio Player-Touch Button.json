@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reproductor de Música Básico",
+    "originalIdeaDescription": "Un sistema simple donde el usuario presiona el botón para iniciar o detener una canción. Funciona como un interruptor de palanca (toggle) para controlar el estado de reproducción del componente de audio.",
+    "transformedIdeaTitle": "El DJ de la Fiesta Escolar",
+    "transformedIdeaDescription": "Conviértete en el DJ de la clase. Programa un botón que controle la música de la fiesta. Si la música está sonando, el botón la detiene para que el director pueda hablar; si está en silencio, el botón hace que empiece la fiesta nuevamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF AudioPlayer.isPlaying() THEN AudioPlayer.pause() ELSE AudioPlayer.play()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Botonera de Efectos de Sonido",
+    "originalIdeaDescription": "Al presionar el botón táctil, se reproduce un efecto de sonido divertido específico, como una bocina de aire o un aplauso. Es útil para reaccionar a eventos en tiempo real.",
+    "transformedIdeaTitle": "La Máquina de Bromas y Risas",
+    "transformedIdeaDescription": "Crea un dispositivo para animar tus conversaciones. Cada vez que tu amigo cuente un chiste, presiona el botón para reproducir un sonido de 'batería de comedia' (Ba Dum Tss) o aplausos grabados para felicitarlo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play('funny_sound.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Secuencial",
+    "originalIdeaDescription": "El sistema reproduce un fragmento de una historia de audio. Al presionar el botón, se pasa a la siguiente pista o capítulo, permitiendo al usuario avanzar en la narrativa a su propio ritmo.",
+    "transformedIdeaTitle": "El Libro de Cuentos Mágico",
+    "transformedIdeaDescription": "Diseña un audiolibro interactivo. El narrador cuenta una parte de la historia y se detiene en un momento de suspenso. El usuario debe presionar el botón mágico para 'pasar la página' y escuchar qué sucede después.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO currentTrack++; AudioPlayer.play(trackList[currentTrack])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Código Morse",
+    "originalIdeaDescription": "Utiliza el botón para emitir sonidos cortos (puntos) y largos (rayas) dependiendo de cuánto tiempo se mantenga presionado, imitando un telégrafo antiguo.",
+    "transformedIdeaTitle": "El Comunicador del Espía Secreto",
+    "transformedIdeaDescription": "Eres un agente secreto enviando mensajes codificados. Si tocas el botón rápido suena un 'bip' corto, pero si lo mantienes presionado suena un tono largo. ¡Aprende a enviar SOS!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressDuration < 0.5 THEN AudioPlayer.play('dot') ELSE AudioPlayer.play('dash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Canciones Aleatorio",
+    "originalIdeaDescription": "Al presionar el botón, el sistema selecciona un archivo de audio al azar de una lista predefinida y lo reproduce, funcionando como un modo 'shuffle' manual.",
+    "transformedIdeaTitle": "La Rueda de la Fortuna Musical",
+    "transformedIdeaDescription": "No sabes qué escuchar. Programa tu dispositivo para que, al tocar el botón, elija una canción sorpresa de tu lista de favoritas. ¿Saldrá rock, pop o música clásica?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO randomSong = random(songList); AudioPlayer.play(randomSong)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Concurso de Trivia",
+    "originalIdeaDescription": "Un sistema simple donde presionar el botón reproduce un sonido de 'ding' o 'chicharra' para indicar que un participante quiere responder una pregunta.",
+    "transformedIdeaTitle": "El Botón del Quiz Show",
+    "transformedIdeaDescription": "Organiza un concurso de preguntas con tus amigos. Cuando sepas la respuesta, golpea el botón táctil lo más rápido posible para que suene la campana y ganes el turno para hablar.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play('bell_sound.wav')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Auditiva",
+    "originalIdeaDescription": "El sistema reproduce un sonido de cuenta regresiva o una señal, y el usuario debe presionar el botón inmediatamente para detener el sonido o 'ganar' la ronda.",
+    "transformedIdeaTitle": "Desactiva la Bomba de Tiempo",
+    "transformedIdeaDescription": "Una cuenta regresiva sonora ha comenzado 'tic-tac, tic-tac'. Tienes que presionar el botón táctil en el momento exacto antes de que suene la explosión para salvar el día.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('ticking'); WAIT_FOR TouchButton.pressed; AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de Audio para Exhibiciones",
+    "originalIdeaDescription": "Diseñado para museos, al presionar el botón frente a una exhibición, se reproduce una pista de audio explicativa sobre el objeto que se está observando.",
+    "transformedIdeaTitle": "El Curador del Museo de Dinosaurios",
+    "transformedIdeaDescription": "Estás frente al esqueleto de un T-Rex. Programa el botón para que, cuando los visitantes lo toquen, el dispositivo ruga y luego explique datos curiosos sobre la era jurásica.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play('TRex_facts.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cambiador de Velocidad de Audio",
+    "originalIdeaDescription": "Mantener presionado el botón cambia la velocidad de reproducción del audio (pitch/speed), creando efectos de voz rápida o lenta.",
+    "transformedIdeaTitle": "El Transformador de Voz Alienígena",
+    "transformedIdeaDescription": "Graba un mensaje y reprodúcelo. Mientras mantienes el dedo en el botón, la voz se acelera y suena como una ardilla o un alienígena pequeño. Al soltarlo, vuelve a la normalidad.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed THEN AudioPlayer.setSpeed(2.0) ELSE AudioPlayer.setSpeed(1.0)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria de Sonidos",
+    "originalIdeaDescription": "El sistema reproduce una secuencia de sonidos y el usuario usa el botón para confirmar que ha identificado el patrón o para solicitar que se repita.",
+    "transformedIdeaTitle": "Simón Dice: Edición Sonora",
+    "transformedIdeaDescription": "El sistema dice '¡Toca!'. Debes tocar el botón. Si el sistema dice '¡No toques!' y tocas el botón, suena un error. Un juego de atención auditiva y reflejos rápidos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF AudioPlayer.said('Touch') AND TouchButton.pressed THEN Score++ ELSE AudioPlayer.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Flashcards de Idiomas",
+    "originalIdeaDescription": "Una herramienta educativa donde cada pulsación del botón reproduce la pronunciación de una palabra nueva en un idioma extranjero.",
+    "transformedIdeaTitle": "El Profesor de Inglés de Bolsillo",
+    "transformedIdeaDescription": "Estás aprendiendo vocabulario nuevo. Configura tu dispositivo para que cada vez que presiones el botón, te diga una palabra nueva en inglés y tú tengas que repetirla en voz alta para practicar.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play(nextWordInVocabularyList)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de Loop de Batería",
+    "originalIdeaDescription": "El botón sirve para activar o desactivar un bucle de batería (loop) de fondo, permitiendo al usuario improvisar sobre él.",
+    "transformedIdeaTitle": "El Creador de Bases de Rap",
+    "transformedIdeaDescription": "Quieres improvisar unas rimas. Programa el botón para que funcione como un pedal de loop: presiona una vez para que empiece el ritmo de hip-hop y presiona otra vez para cortarlo cuando termines tu show.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF AudioPlayer.isLooping() THEN AudioPlayer.stopLoop() ELSE AudioPlayer.startLoop('beat.wav')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Adivinanza de Sonidos de Animales",
+    "originalIdeaDescription": "Al presionar el botón, se reproduce el sonido de un animal misterioso y el usuario debe adivinar cuál es antes de presionar de nuevo para la respuesta.",
+    "transformedIdeaTitle": "Safari Ciego: ¿Qué Animal es?",
+    "transformedIdeaDescription": "Juega con tus ojos cerrados. Toca el botón y escucha rugidos, píos o maullidos. Adivina qué animal es antes de tocar el botón de nuevo para escuchar el nombre correcto del animal.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO play(randomAnimalSound); WAIT; play(AnimalName)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Inteligente",
+    "originalIdeaDescription": "Un sistema de notificación simple que reproduce un sonido de bienvenida o un timbre clásico cuando se detecta la pulsación.",
+    "transformedIdeaTitle": "El Timbre de la Casa del Futuro",
+    "transformedIdeaDescription": "Crea un timbre para tu habitación. En lugar de un sonido aburrido, programa el botón para que, cuando alguien quiera entrar, reproduzca una fanfarria real o una bienvenida robótica personalizada.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play('Royal_Fanfare.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Meditación Guiada",
+    "originalIdeaDescription": "El sistema reproduce instrucciones de respiración (inhalar/exhalar). El botón se usa para iniciar la sesión o pausarla si el usuario necesita un descanso.",
+    "transformedIdeaTitle": "El Entrenador de Respiración Zen",
+    "transformedIdeaDescription": "Si estás estresado antes de un examen, usa esta app. Toca el botón y una voz suave te guiará: 'Inhala...' (espera), 'Exhala...'. Toca el botón de nuevo para terminar la sesión de relajación.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.play('Inhale'); WAIT(4); AudioPlayer.play('Exhale')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efecto de Scratch de DJ",
+    "originalIdeaDescription": "Al tocar el botón repetidamente, se reproduce un sonido corto de 'scratch' de vinilo, simulando la técnica de un DJ sobre una pista musical.",
+    "transformedIdeaTitle": "Super DJ Scratch Master",
+    "transformedIdeaDescription": "Añade estilo a tus canciones favoritas. Mientras suena una canción de fondo, usa el botón táctil para insertar sonidos de 'scratch' de disco de vinilo rítmicamente, ¡como un DJ profesional!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.playOver('vinyl_scratch.wav')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de la Verdad de Juguete",
+    "originalIdeaDescription": "Al presionar el botón después de una pregunta, el sistema reproduce aleatoriamente un sonido de 'Verdad' (campana) o 'Mentira' (bocina de error).",
+    "transformedIdeaTitle": "El Detector de Mentiras Aleatorio",
+    "transformedIdeaDescription": "Hazle una pregunta incómoda a tu amigo y dile que ponga su dedo en el botón. El dispositivo analizará (fingidamente) su respuesta y dirá aleatoriamente '¡VERDAD!' o '¡MENTIRA!'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO IF randomBoolean() THEN AudioPlayer.play('Truth') ELSE AudioPlayer.play('Lie')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Sorpresas de Halloween",
+    "originalIdeaDescription": "El botón activa un temporizador aleatorio que, al finalizar, reproduce un grito o sonido espeluznante para asustar al usuario.",
+    "transformedIdeaTitle": "La Trampa de la Casa Encantada",
+    "transformedIdeaDescription": "Deja el dispositivo en una mesa oscura con un cartel que diga 'No tocar'. Si alguien curioso toca el botón, el dispositivo espera 3 segundos en silencio y luego... ¡suelta un grito espeluznante!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO WAIT(3); AudioPlayer.play('Ghost_Scream.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Auditivo",
+    "originalIdeaDescription": "Cada vez que se presiona el botón (simulando un paso o un conteo manual), el audio dice el número actual en voz alta.",
+    "transformedIdeaTitle": "El Contador Parlante",
+    "transformedIdeaDescription": "¿Necesitas contar cuántas personas entran al auditorio? No pierdas la cuenta mentalmente. Cada vez que presiones el botón, tu dispositivo dirá el número en voz alta: 'Uno', 'Dos', 'Tres'...",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO count++; AudioPlayer.say(count)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Salto de Pista de Podcast",
+    "originalIdeaDescription": "Una función para saltar hacia adelante en un audio largo. Al presionar el botón, el reproductor avanza 30 segundos en la línea de tiempo.",
+    "transformedIdeaTitle": "El Saltador de Anuncios",
+    "transformedIdeaDescription": "Estás escuchando un podcast interesante pero empiezan los anuncios aburridos. Programa tu botón mágico para que, con un solo toque, salte 30 segundos hacia adelante y vuelvas a la acción.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON TouchButton.pressed DO AudioPlayer.seek(currentTime + 30)"
+  }
+]

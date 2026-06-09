@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Piano de Intensidad Variable Controlado por Voz",
+    "originalIdeaDescription": "Un sistema donde el usuario debe mantener presionado un botón para activar el instrumento. Mientras el botón está presionado, el nivel de ruido captado por el micrófono determina qué nota musical se reproduce; un sonido bajo toca notas graves y un grito toca notas agudas.",
+    "transformedIdeaTitle": "La Escalera de Gritos del Gigante",
+    "transformedIdeaDescription": "Imagina que eres un gigante subiendo una escalera mágica. Para dar un paso, debes mantener presionado el 'Botón de Escalada'. Cuanto más fuerte grites o cantes, más alto subirás en la escalera musical. ¡Intenta llegar a la nota más aguda sin soltar el botón!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { Note = Map(NoiseLevel, 0, 100, C4, C6); MusicalKeyboard.play(Note) } ELSE { MusicalKeyboard.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Silencio con Reinicio Manual",
+    "originalIdeaDescription": "Este dispositivo monitorea el ambiente en busca de sonidos fuertes. Si el nivel de ruido supera un umbral establecido, el teclado comienza a tocar una melodía de alarma repetitiva que solo puede detenerse presionando el botón táctil.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca",
+    "transformedIdeaDescription": "Estás a cargo de la biblioteca más silenciosa del mundo. Si alguien habla demasiado fuerte (el sensor de ruido se activa), suena la sirena de advertencia. Tu misión es correr y presionar el botón de 'Silencio' para apagar la alarma antes de que el director se despierte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 70 THEN { Loop { MusicalKeyboard.play(AlarmNote) } UNTIL TouchButton.isPressed() }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Instrumentos por Aplausos",
+    "originalIdeaDescription": "El usuario toca una melodía usando el botón táctil (cada presión es una nota). Sin embargo, para cambiar la octava o el tono de la nota que suena, el usuario debe aplaudir fuertemente. El sensor de ruido detecta el aplauso y cambia la configuración del teclado.",
+    "transformedIdeaTitle": "Director de Orquesta Mágico",
+    "transformedIdeaDescription": "¡Eres el director! Presiona el botón para tocar el ritmo de la canción. Pero aquí está el truco: cada vez que la orquesta necesite subir de tono para el gran final, debes dar un aplauso fuerte. ¡Coordina tus dedos y tus aplausos para crear la sinfonía perfecta!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN ChangeOctave(); IF TouchButton.isPressed() THEN MusicalKeyboard.play(NextNote)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Sorpresa Activada por Voz",
+    "originalIdeaDescription": "Una caja de música digital que requiere dos llaves para funcionar. El usuario debe cantar una nota constante (ruido) y al mismo tiempo presionar el botón táctil. Solo cuando ambas condiciones se cumplen simultáneamente, se reproduce la canción secreta.",
+    "transformedIdeaTitle": "El Hechizo de la Puerta Cantarina",
+    "transformedIdeaDescription": "Para abrir la puerta del tesoro, no basta con empujarla (botón). La puerta está encantada y solo se abre si cantas la nota mágica mientras empujas. Mantén tu canto constante y presiona el botón para escuchar la melodía de la victoria.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() AND NoiseLevel > 50 THEN MusicalKeyboard.playSong('Fantasy') ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Paciencia Sonora",
+    "originalIdeaDescription": "El sistema reproduce una melodía agradable constantemente. El sensor de ruido actúa como una interferencia; si hay mucho ruido ambiental, la música se distorsiona o se detiene. El botón táctil sirve para 'reparar' la música y volver a la normalidad.",
+    "transformedIdeaTitle": "La Radio Antigua y la Tormenta",
+    "transformedIdeaDescription": "Estás escuchando tu canción favorita en una radio vieja, pero una tormenta (ruido ambiental) está causando estática y cortando la música. Cuando el ruido corte la transmisión, presiona rápidamente el botón de 'Sintonizar' para recuperar la señal y seguir bailando.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN MusicalKeyboard.stop(); IF TouchButton.isPressed() THEN MusicalKeyboard.resume()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Ritmos Morse",
+    "originalIdeaDescription": "Utiliza el botón táctil para ingresar un patrón rítmico (como código Morse). Si el sensor de ruido detecta silencio absoluto durante la entrada, el teclado reproduce el ritmo con notas limpias. Si hay ruido, reproduce notas disonantes indicando 'interferencia'.",
+    "transformedIdeaTitle": "Transmisión Secreta de Espías",
+    "transformedIdeaDescription": "Eres un espía enviando un código secreto a la base presionando el botón. Pero cuidado, si hay ruido enemigo cerca (hablar o ruidos fuertes), tu mensaje será interceptado y sonará como ruido basura. ¡Debes enviar tu mensaje en silencio total!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF NoiseLevel < 20 THEN MusicalKeyboard.play(HighNote) ELSE MusicalKeyboard.play(DiscordantNote) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Estatulas Musicales Inverso",
+    "originalIdeaDescription": "La música suena mientras se detecte ruido (baile, aplausos). Cuando el ruido cesa, la música para. El botón táctil se usa como un 'comodín' para mantener la música sonando incluso si hay silencio momentáneo.",
+    "transformedIdeaTitle": "Fiesta Activada por el Baile",
+    "transformedIdeaDescription": "¡Esta fiesta funciona con energía cinética! La música solo suena si todos están haciendo ruido y saltando. Si se cansan y hay silencio, la música muere. El DJ (tú) puede presionar el botón 'Turbo' para mantener la fiesta viva mientras los demás toman aire.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 30 OR TouchButton.isPressed() THEN MusicalKeyboard.playLoop() ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Viento Simulado",
+    "originalIdeaDescription": "El usuario debe soplar sobre el sensor de ruido (simulando un instrumento de viento) para generar sonido. El botón táctil se utiliza para cambiar las notas mientras se sopla, similar a las llaves de una trompeta o flauta.",
+    "transformedIdeaTitle": "La Flauta Digital",
+    "transformedIdeaDescription": "Convierte tu kit en una flauta electrónica. Para que suene, tienes que soplar fuerte cerca del sensor. Mientras soplas, usa el botón táctil para cambiar las notas y tocar una melodía. ¡Sin aire (ruido), no hay sonido!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN { IF TouchButton.isPressed() THEN MusicalKeyboard.play(NoteB) ELSE MusicalKeyboard.play(NoteA) } ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Lúdico",
+    "originalIdeaDescription": "Una persona hace una declaración. Otra persona presiona el botón para analizarla. Si el sensor de ruido detecta titubeos o variaciones extrañas en el volumen de voz justo después de presionar el botón, el teclado toca un sonido de 'Falso'. Si es estable, toca 'Verdadero'.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus amigos. Hazles una pregunta y presiona el botón de 'Escanear' mientras responden. Si hablan con nerviosismo (ruido variable o muy alto), la máquina tocará un tono de error. Si responden calmados, sonará una campanada de verdad.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(TouchButton); Sample(NoiseLevel); IF Variance(NoiseLevel) > Threshold THEN MusicalKeyboard.play(FailSound) ELSE MusicalKeyboard.play(PassSound)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Sigilo",
+    "originalIdeaDescription": "El objetivo es presionar el botón táctil tantas veces como sea posible en un tiempo límite. Sin embargo, si el sensor detecta cualquier ruido por encima de un susurro, el teclado emite un sonido de 'Game Over' y el contador se reinicia.",
+    "transformedIdeaTitle": "Ninja en la Biblioteca",
+    "transformedIdeaDescription": "Eres un ninja robando pergaminos secretos. Cada vez que presionas el botón, robas uno. Pero debes ser absolutamente silencioso. Si haces el más mínimo ruido (respirar fuerte, rozar la mesa), sonará la alarma y perderás todo lo robado.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() AND NoiseLevel < 15 THEN Score++ ELSE IF NoiseLevel >= 15 THEN { MusicalKeyboard.play(Alarm); Score = 0 }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Compositor Aleatorio Ambiental",
+    "originalIdeaDescription": "El sistema escucha el ruido ambiental. Cuando se presiona el botón, captura el nivel de ruido instantáneo y lo usa como semilla para generar una frase musical aleatoria corta. Ambientes ruidosos generan música rápida, ambientes tranquilos música lenta.",
+    "transformedIdeaTitle": "El Pintor de Sonidos",
+    "transformedIdeaDescription": "Captura el ambiente de tu habitación. Si está todo tranquilo, presiona el botón para pintar una melodía suave y lenta. Si hay una fiesta o tráfico, presiona el botón para crear una canción rápida y frenética. ¡Descubre cómo suena tu entorno!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { Tempo = Map(NoiseLevel); MusicalKeyboard.playRandomSequence(Tempo) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Eco en Caverna",
+    "originalIdeaDescription": "El usuario emite un sonido fuerte (grito). El sistema espera. Luego, el usuario debe presionar el botón para 'recibir' el eco, lo que hace que el teclado reproduzca una nota que se desvanece gradualmente.",
+    "transformedIdeaTitle": "Exploradores de Cuevas",
+    "transformedIdeaDescription": "Grita '¡HOLA!' al sensor. Luego, presiona el botón para escuchar cómo tu eco rebota en las paredes de la cueva digital, tocando notas que se hacen cada vez más suaves hasta desaparecer. Experimenta con gritos cortos y largos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Threshold THEN { WaitFor(TouchButton); MusicalKeyboard.playFadeOutEffect() }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de Tráfico Sonoro",
+    "originalIdeaDescription": "Simulación donde el ruido representa el tráfico de autos. El botón es un semáforo. Si hay mucho ruido y se presiona el botón (luz roja), el teclado emite bocinazos simulados. Si hay poco ruido y se presiona, emite un sonido de paso peatonal seguro.",
+    "transformedIdeaTitle": "Policía de Tráfico Urbano",
+    "transformedIdeaDescription": "Controla el cruce más ocupado de la ciudad. El ruido de la clase son los coches. Si intentas detener el tráfico (botón) cuando hay demasiado ruido, los coches te pitarán (sonidos graves). Espera a que baje el ruido para dejar pasar a los peatones (sonido agudo).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF NoiseLevel > 60 THEN MusicalKeyboard.play(Honk) ELSE MusicalKeyboard.play(WalkSignal) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Idioma Alienígena",
+    "originalIdeaDescription": "El usuario habla al sensor de ruido. El sistema toma la duración del sonido. Al finalizar, el usuario presiona el botón para 'traducir', y el teclado reproduce una secuencia de notas correspondiente a la duración del habla.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "¡Hemos contactado con extraterrestres! Habla un mensaje corto al micrófono. Luego presiona el botón 'Traducir' para convertir tu voz humana en la música que hablan los alienígenas. Mensajes largos crean canciones largas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Duration = Timer(NoiseLevel > Threshold); IF TouchButton.isPressed() THEN MusicalKeyboard.playNotesForDuration(Duration)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Humana",
+    "originalIdeaDescription": "El teclado reproduce un metrónomo base. El usuario debe usar el botón para agregar el bombo y hacer un sonido vocal (como 'tss' o un chasquido) para agregar la caja (snare), creando un ritmo compuesto.",
+    "transformedIdeaTitle": "La Banda de un Solo Hombre",
+    "transformedIdeaDescription": "¡Crea tu propio beat de hip-hop! El sistema lleva el tiempo. Usa tu dedo en el botón para hacer el sonido grave (Bum) y haz un ruido con la boca (¡Clap!) para el sonido agudo. ¡Mézclalos para crear un ritmo pegajoso!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Loop { IF TouchButton.pressed() THEN Play(Kick); IF NoiseLevel > Threshold THEN Play(Snare) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Despertador de Monstruos",
+    "originalIdeaDescription": "El teclado emite un sonido de ronquido suave. El usuario debe acercarse sigilosamente y presionar el botón. Si hace ruido antes de presionar el botón, el ronquido cambia a un rugido.",
+    "transformedIdeaTitle": "No Despiertes al Dragón",
+    "transformedIdeaDescription": "Hay un dragón durmiendo (sonido de ronquidos). Tienes que robar su gema (presionar el botón). Si haces ruido al acercarte, el dragón se despertará y rugirá. Si presionas el botón en silencio, ganarás.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(Snore); IF NoiseLevel > 20 THEN Play(Roar); IF TouchButton.isPressed() AND NoiseLevel < 20 THEN Play(Win)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Vocales (Juego)",
+    "originalIdeaDescription": "El teclado toca una nota cuando se presiona el botón. El usuario debe intentar cantar esa nota. Si el nivel de ruido es constante (sostenido) por 3 segundos, el teclado toca una fanfarria de éxito.",
+    "transformedIdeaTitle": "El Reto del Cantante de Ópera",
+    "transformedIdeaDescription": "Presiona el botón para escuchar tu nota objetivo. Ahora, intenta cantar esa nota fuerte y claro. Si logras mantener la nota (ruido constante) durante 3 segundos sin desafinar ni parar, ¡el público te aplaudirá (fanfarria)!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.pressed() THEN Play(Target); IF NoiseLevel > 40 FOR 3 Seconds THEN Play(Applause)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Emergencia Morse",
+    "originalIdeaDescription": "El botón sirve para enviar un S.O.S. (sonidos cortos y largos). Sin embargo, el sistema simula una radio dañada: solo funciona si hay 'estática' de fondo (ruido constante generado por el usuario, como un siseo) para llevar la señal.",
+    "transformedIdeaTitle": "Rescate en la Tormenta",
+    "transformedIdeaDescription": "Tu radio está rota y necesita energía estática. Haz un sonido de 'shhhhh' constante con tu boca para darle energía. Mientras haces el sonido, usa el botón para telegrafiar tu mensaje de rescate. Si dejas de hacer ruido, la radio se apaga.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 30 THEN { IF TouchButton.isPressed() THEN Play(Beep) } ELSE { Stop() }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Efectos de Sonido para Historias",
+    "originalIdeaDescription": "Un sistema para acompañar cuentos. Si se presiona el botón, suena música de suspenso. Si se detecta un ruido fuerte (como un grito o golpe en la mesa), suena un efecto de impacto dramático.",
+    "transformedIdeaTitle": "El Cuentacuentos FX",
+    "transformedIdeaDescription": "Convierte tu lectura en una película. Mientras narras la parte de miedo, mantén presionado el botón para música de tensión. Cuando ocurra algo impactante en la historia, ¡da un golpe en la mesa o grita para activar el sonido de impacto!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Play(Suspense); IF NoiseLevel > 80 THEN Play(Impact)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simón Dice con Voz y Tacto",
+    "originalIdeaDescription": "El juego da una instrucción auditiva (una nota aguda o grave). Si es aguda, el usuario debe presionar el botón. Si es grave, el usuario debe aplaudir. Si se equivoca, suena un tono de error.",
+    "transformedIdeaTitle": "Simón Dice: Toque o Grite",
+    "transformedIdeaDescription": "Escucha atentamente. Si el teclado toca una nota Alta, ¡toca el botón rápido! Si toca una nota Baja, ¡grita o aplaude! Si te confundes y gritas cuando debías tocar, pierdes el juego.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Random(High, Low); Play(Target); WaitInput(); IF (Target==High AND !TouchButton) OR (Target==Low AND Noise < Threshold) THEN Play(Lose)"
+  }
+]

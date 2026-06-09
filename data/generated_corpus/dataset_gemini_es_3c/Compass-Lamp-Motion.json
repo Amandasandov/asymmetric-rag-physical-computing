@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Linterna de Exploración Direccional",
+    "originalIdeaDescription": "Un dispositivo de iluminación portátil que cambia de color según el punto cardinal hacia el que apunta el usuario y solo se enciende cuando el usuario está caminando activamente, detectado por el sensor de movimiento, para ahorrar energía.",
+    "transformedIdeaTitle": "La Antorcha del Explorador de Cuevas",
+    "transformedIdeaDescription": "¡Estás explorando una cueva misteriosa! Para ver el camino, debes caminar (agitar el dispositivo) para generar energía. Además, la antorcha mágica brilla en ROJO si vas al Norte (peligro de lava) y en VERDE si vas al Sur (salida segura).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > 5 THEN (IF Compass.heading < 45 OR Compass.heading > 315 THEN Lamp.color(RED) ELSE Lamp.color(GREEN)) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Gestual",
+    "originalIdeaDescription": "Un sistema de seguridad que requiere que el usuario apunte el dispositivo hacia una dirección específica (ej. Este) y realice un gesto de inclinación específico para desbloquear el sistema, indicado por una luz verde.",
+    "transformedIdeaTitle": "El Ladrón de Bancos y la Bóveda Secreta",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda digital. La combinación no son números, ¡son movimientos! Debes mirar hacia el ESTE exactamente y luego inclinar la mano hacia abajo bruscamente para que la luz verde confirme que la caja se abrió.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'East' AND Motion.tilt == 'Down' THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Marítimo",
+    "originalIdeaDescription": "Simula la operación de un faro giratorio. El usuario debe girar sobre su propio eje. La lámpara emite un destello brillante cada vez que el usuario pasa por el Norte, imitando el haz de luz.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "¡Barcos se acercan en la niebla! Conviértete en un faro humano. Gira sobre ti mismo constantemente. Cada vez que tu pecho apunte al Norte magnético, tu luz debe lanzar un destello blanco brillante para advertir a los marineros.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 0 AND Motion.rotation == TRUE THEN Lamp.flash(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Elementales",
+    "originalIdeaDescription": "Un juguete tipo varita mágica que lanza diferentes 'hechizos' (colores de luz) dependiendo de la dirección cardinal hacia la que se apunta al momento de agitarla fuertemente.",
+    "transformedIdeaTitle": "Aprendiz de Mago: Hechizos Elementales",
+    "transformedIdeaDescription": "En la escuela de magia, el poder cambia según los vientos. Si apuntas al Norte y agitas tu varita, lanzas Hielo (Azul). Si apuntas al Sur y agitas, lanzas Fuego (Rojo). ¡Aprende a controlar los elementos!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake == TRUE THEN (IF Compass.direction == 'North' THEN Lamp.color(BLUE) ELSE IF Compass.direction == 'South' THEN Lamp.color(RED))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Radar de Detectores de Zombis",
+    "originalIdeaDescription": "Un dispositivo de juego que detecta movimiento 'hostil'. Si el usuario se mueve y apunta hacia una dirección aleatoria predefinida como 'zona infectada', la luz parpadea intensamente.",
+    "transformedIdeaTitle": "Supervivencia Zombi: El Radar",
+    "transformedIdeaDescription": "¡Los zombis están en el Oeste! Camina con cuidado (sensor de movimiento activo). Si tu radar apunta hacia el Oeste mientras te mueves, la luz parpadeará en rojo y morado para avisarte que corras.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isWalking == TRUE AND Compass.direction == 'West' THEN Lamp.strobe(RED, PURPLE) ELSE Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Asistente de Yoga y Equilibrio",
+    "originalIdeaDescription": "Herramienta para meditación que requiere que el usuario se mantenga perfectamente inmóvil mirando hacia el Este (salida del sol). Si se detecta movimiento o cambio de dirección, la luz se apaga.",
+    "transformedIdeaTitle": "El Maestro Zen del Amanecer",
+    "transformedIdeaDescription": "Para alcanzar la paz interior, debes hacer la postura del árbol mirando hacia el amanecer (Este). Si te mantienes quieto y en la dirección correcta, la lámpara brillará con una luz dorada suave. Si te tambaleas, se apagará.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'East' AND Motion.movementIntensity < 2 THEN Lamp.color(GOLD) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros Caliente/Frío",
+    "originalIdeaDescription": "Juego donde una dirección objetivo es el tesoro. La luz se intensifica a medida que el usuario se alinea con la dirección correcta y se mueve hacia ella, atenuándose si se desvía.",
+    "transformedIdeaTitle": "Cazadores de Tesoros Piratas",
+    "transformedIdeaDescription": "El capitán enterró el oro hacia el Noroeste. Muévete por la habitación. Si caminas en la dirección correcta (Noroeste), tu detector brillará intensamente. Si te desvías, la luz se desvanecerá. ¡Encuentra el punto exacto!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TARGET = 315; IF abs(Compass.heading - TARGET) < 20 AND Motion.speed > 0 THEN Lamp.brightness(100) ELSE Lamp.brightness(20)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Nave Espacial",
+    "originalIdeaDescription": "Simulador de vuelo donde la inclinación del dispositivo controla la velocidad y la brújula determina el planeta de destino, cambiando el color de la luz según el destino (Marte=Rojo, Tierra=Azul).",
+    "transformedIdeaTitle": "Piloto de la Flota Estelar",
+    "transformedIdeaDescription": "¡Toma el mando, cadete! Inclina tu tableta hacia adelante para acelerar los propulsores. Gira tu nave para elegir destino: apunta al Norte para ir a Marte (Luz Roja) o al Sur para ir a Neptuno (Luz Azul).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltY > 20 THEN (IF Compass.direction == 'North' THEN Lamp.color(RED) ELSE IF Compass.direction == 'South' THEN Lamp.color(BLUE))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Pincel de Luz 360",
+    "originalIdeaDescription": "Herramienta artística que permite 'pintar' con luz. El color cambia suavemente a través del espectro arcoíris mientras el usuario gira 360 grados, activando el 'pincel' con una sacudida.",
+    "transformedIdeaTitle": "Pintor del Arcoíris Invisible",
+    "transformedIdeaDescription": "Convierte el mundo en tu lienzo. Agita tu dispositivo para empezar a pintar. Mientras giras tu cuerpo en círculo, el color de tu 'brocha' cambiará automáticamente. ¡Intenta pintar un círculo de colores completos en el aire!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.shake == TRUE THEN Lamp.on(); Lamp.color(Hue(Compass.heading))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Alarma de Sonámbulo",
+    "originalIdeaDescription": "Dispositivo de seguridad personal. Si detecta movimiento prolongado y cambio errático de dirección durante la noche, enciende una luz de advertencia.",
+    "transformedIdeaTitle": "La Trampa para Fantasmas",
+    "transformedIdeaDescription": "Deja el dispositivo en el suelo. Si un 'fantasma' (o tu hermano) lo mueve y lo gira en diferentes direcciones, la trampa se activará encendiendo una luz blanca parpadeante para asustarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > 5 AND delta(Compass.heading) > 10 THEN Lamp.strobe(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Semáforo Humano Interactivo",
+    "originalIdeaDescription": "Juego educativo de tráfico. El usuario actúa como policía de tránsito. Al levantar la mano (inclinación) mirando al Norte, pone luz roja; mirando al Este, luz verde.",
+    "transformedIdeaTitle": "Policía de Tráfico de la Ciudad",
+    "transformedIdeaDescription": "¡Hay un atasco! Tú controlas el cruce. Mira hacia la calle Norte y levanta tu señal (inclina arriba) para poner el semáforo en ROJO. Mira a la calle Este y bájala para ponerlo en VERDE. ¡Que no choquen!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'North' AND Motion.tilt == 'Up' THEN Lamp.color(RED) ELSE IF Compass.direction == 'East' THEN Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Brújula de Baile",
+    "originalIdeaDescription": "Dispositivo para fiestas que cambia el color de la luz ambiental basándose en la orientación de los bailarines y parpadea al ritmo de los saltos detectados.",
+    "transformedIdeaTitle": "Fiesta de Baile Disco-Tech",
+    "transformedIdeaDescription": "¡A bailar! Pega el dispositivo a tu cintura. Cada vez que saltes, la luz hará un flash. Además, si bailas mirando a la pared Norte serás Azul, y a la pared Sur serás Rosa. ¡Coordínate con tus amigos!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.color(Map(Compass.heading)); IF Motion.jumpDetected THEN Lamp.brightness(100) ELSE Lamp.brightness(50)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Veleta Digital de Viento",
+    "originalIdeaDescription": "Simulador meteorológico. El usuario sopla o agita el dispositivo para simular la velocidad del viento (intensidad de luz) y lo orienta para indicar la dirección (color de luz).",
+    "transformedIdeaTitle": "La Estación Meteorológica Loca",
+    "transformedIdeaDescription": "Eres el hombre del tiempo. Simula una tormenta: agita el dispositivo muy fuerte para indicar vientos huracanados (luz muy brillante). Gira para mostrar de dónde viene la tormenta; Amarillo para viento del Este, Azul para viento del Oeste.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.brightness(Motion.shakeIntensity); IF Compass.direction == 'East' THEN Lamp.color(YELLOW) ELSE Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja con Orientación",
+    "originalIdeaDescription": "Herramienta de construcción. La luz se pone verde solo si la superficie está perfectamente plana (sin inclinación) y alineada exactamente con el Norte magnético.",
+    "transformedIdeaTitle": "El Arquitecto de Pirámides",
+    "transformedIdeaDescription": "El Faraón quiere su pirámide perfecta. Debes colocar la piedra angular perfectamente plana (sin inclinación) y alineada exactamente al Norte sagrado. Solo entonces la piedra brillará en VERDE para sellar la construcción.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.tiltX == 0 AND Motion.tiltY == 0 AND Compass.heading == 0 THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Baliza de Rescate SOS",
+    "originalIdeaDescription": "Dispositivo de emergencia simulado. Requiere agitar para cargar una batería virtual y luego apuntar hacia el Norte para emitir la señal SOS luminosa.",
+    "transformedIdeaTitle": "Perdidos en la Isla Desierta",
+    "transformedIdeaDescription": "Tu avión cayó. Necesitas enviar una señal de ayuda. Primero, agita el dispositivo rápido para cargar la batería. Luego, apunta tu señal al Norte (donde pasan los barcos) para que la luz parpadee S-O-S automáticamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "battery += Motion.shake; IF battery > 50 AND Compass.direction == 'North' THEN Lamp.signal('SOS')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Salvajes",
+    "originalIdeaDescription": "Juego de rol. Diferentes combinaciones de inclinación y dirección revelan diferentes 'animales' representados por colores (ej. León al sur inclinado abajo).",
+    "transformedIdeaTitle": "Safari Fotográfico Nocturno",
+    "transformedIdeaDescription": "Busca animales invisibles. Camina sigilosamente (movimiento lento). Si apuntas al Sur e inclinas la 'cámara' hacia abajo, podrías encontrar un León (Luz Amarilla). Si apuntas al Norte y subes la cámara, ¡quizás veas un Águila (Luz Blanca)!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.speed < 2 THEN (IF Compass.dir == 'S' AND Motion.tilt == 'Down' THEN Lamp.color(YELLOW) ELSE IF Compass.dir == 'N' AND Motion.tilt == 'Up' THEN Lamp.color(WHITE))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Llave de Portal del Tiempo",
+    "originalIdeaDescription": "Mecanismo de juego de ciencia ficción. Para activar el portal, se debe girar en sentido horario (brújula) mientras se agita el dispositivo, cambiando la luz de azul a morado al 'viajar'.",
+    "transformedIdeaTitle": "Viajeros del Tiempo: El Vórtice",
+    "transformedIdeaDescription": "¡El portal se cierra! Para saltar al futuro, debes girar tu cuerpo hacia la derecha constantemente mientras agitas tu crono-dispositivo. Cuando alcances la velocidad correcta y completes una vuelta, la luz se pondrá VIOLETA indicando el salto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.shake == TRUE AND Change(Compass.heading) > 0 THEN Lamp.color(PURPLE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Monitor de Ejercicio Direccional",
+    "originalIdeaDescription": "Herramienta de fitness. Cuenta repeticiones de un ejercicio solo si el usuario está orientado hacia una dirección específica para asegurar la postura.",
+    "transformedIdeaTitle": "El Entrenador Personal Estricto",
+    "transformedIdeaDescription": "Vamos a hacer sentadillas, pero con forma perfecta. Debes mirar al frente (Norte). Si haces la sentadilla (movimiento vertical) mirando al Norte, la luz se pone VERDE (punto válido). Si te giras, se pone ROJA (fallo).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.detectSquat() AND Compass.direction == 'North' THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Místico",
+    "originalIdeaDescription": "Juguete de broma. El 'interrogador' calibra una dirección como 'verdad'. Si el sujeto mueve la mano (nerviosismo) o se desvía de la dirección, la luz roja acusa mentira.",
+    "transformedIdeaTitle": "La Máquina de la Verdad Mágica",
+    "transformedIdeaDescription": "Haz una pregunta a tu amigo. Pídele que sostenga el dispositivo apuntando al Norte. Si su mano tiembla (sensor de movimiento) o si intenta girarse para esconderse, ¡la luz Roja revelará que está mintiendo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction != 'North' OR Motion.shake > 2 THEN Lamp.color(RED) ELSE Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Dron Terrestre",
+    "originalIdeaDescription": "Interfaz para controlar un vehículo virtual. La inclinación avanza/retrocede, la brújula gira el vehículo, la luz indica el estado del motor.",
+    "transformedIdeaTitle": "Comandante de Tanque Robot",
+    "transformedIdeaDescription": "Maneja un tanque a control remoto. Inclina el mando hacia adelante para que el motor ruja (Luz Verde Brillante). Gira tu cuerpo para girar el tanque. Si chocas (sacudida fuerte), la luz parpadeará en Naranja por daños.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > 8 THEN Lamp.strobe(ORANGE) ELSE IF Motion.tilt == 'Forward' THEN Lamp.color(GREEN)"
+  }
+]

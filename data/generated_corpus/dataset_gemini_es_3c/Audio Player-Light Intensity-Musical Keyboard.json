@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Controlado por Luz Ambiental",
+    "originalIdeaDescription": "Un instrumento estilo theremin donde la intensidad de la luz controla qué nota musical se toca en el teclado, mientras una pista de fondo rítmica suena continuamente desde el reproductor de audio para mantener el tempo.",
+    "transformedIdeaTitle": "La Varita Mágica del Hechicero Sonoro",
+    "transformedIdeaDescription": "Los estudiantes crearán una varita mágica que cambia el tono de un hechizo según cuánta luz reciba. Si cubren el sensor (oscuridad), suena un zumbido grave; al exponerlo a la luz, las notas suben agudamente. Deben programar una base mística de fondo y mapear la luz a notas específicas.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play(BackgroundAudio); IF Light < 20 THEN Play(C3) ELSE IF Light < 50 THEN Play(E3) ELSE Play(G3)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma para Cajón Secreto",
+    "originalIdeaDescription": "Un dispositivo para proteger objetos de valor en un cajón. Si está oscuro (cajón cerrado), hay silencio. Si detecta luz (cajón abierto), reproduce una sirena de audio y una secuencia rápida de notas de piano discordantes.",
+    "transformedIdeaTitle": "La Trampa del Cofre del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu oro! Los estudiantes programarán el cofre para que permanezca en silencio mientras está cerrado (oscuro). En el momento en que un ladrón lo abra (luz detectada), el sistema debe disparar una alarma hablada ('¡Intruso!') y tocar una melodía de pánico.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light > Threshold THEN { Play(AlarmSound); PlaySequence(C, C#, D, D#) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Amanecer con Música Progresiva",
+    "originalIdeaDescription": "Un sistema que detecta el aumento gradual de la luz. Con poca luz reproduce sonidos de grillos; a medida que la luz aumenta, cambia a sonidos de pájaros y finalmente toca una melodía alegre en el teclado al haber luz plena.",
+    "transformedIdeaTitle": "Despertador Inteligente de la Granja",
+    "transformedIdeaDescription": "Simula el ciclo del día. Los estudiantes deben usar condicionales para detectar tres estados: Noche (sonidos de grillos), Amanecer (canto de gallo en Audio) y Mañana Soleada (melodía feliz en el Teclado). Aprenderán sobre rangos de valores de sensores.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 THEN Play(Crickets) ELSE IF Light < 80 THEN Play(Rooster) ELSE PlaySequence(MorningSong)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo en la Oscuridad",
+    "originalIdeaDescription": "El usuario debe navegar una habitación oscura. Si el sensor detecta demasiada luz (linterna del guardia), suena una advertencia de audio. Si se mantiene en la oscuridad total por un tiempo, suena una melodía de victoria.",
+    "transformedIdeaTitle": "Misión Espía: Escape del Museo",
+    "transformedIdeaDescription": "Eres un espía escondiéndote de los guardias. Si la linterna del guardia te ilumina (Luz > 50), el Audio Player grita '¡Alto ahí!'. Si logras mantenerte en las sombras (Luz < 10) por 10 segundos, el teclado toca la fanfarria de misión cumplida.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light > 50 THEN Play(StopAudio) ELSE { Wait(10s); IF StillDark THEN PlaySequence(Victory) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Lector de Clave Morse Lumínica",
+    "originalIdeaDescription": "El sistema interpreta pulsos de luz. Un pulso corto toca una nota aguda en el teclado; un pulso largo reproduce un sonido grabado de confirmación. Se usa para decodificar mensajes simples mediante luz.",
+    "transformedIdeaTitle": "Telégrafo Intergaláctico",
+    "transformedIdeaDescription": "Recibe mensajes de una nave alienígena. Los estudiantes programan el sensor para distinguir entre un destello rápido de luz (toca un 'bip' en el teclado) y una luz sostenida (reproduce un mensaje de audio). Deben medir la duración del estímulo.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "StartTimer; WHILE Light > 30 WAIT; Time = StopTimer; IF Time < 0.5 THEN Play(Note) ELSE Play(AudioClip)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Jardín Musical Interactivo",
+    "originalIdeaDescription": "Un dispositivo que monitorea una planta. Si recibe suficiente luz, toca una escala ascendente (crecimiento). Si falta luz, el reproductor de audio emite un sonido de 'marchitarse' o tristeza.",
+    "transformedIdeaTitle": "Tamagotchi Botánico",
+    "transformedIdeaDescription": "Cuida a tu planta digital. Si le das luz solar (iluminas el sensor), la planta 'canta' feliz con el teclado. Si la dejas en la oscuridad, suspira tristemente usando el Audio Player. Los niños aprenden la relación causa-efecto simple.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light > 60 THEN PlaySequence(HappyScale) ELSE Play(SadSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas en la Oscuridad",
+    "originalIdeaDescription": "Funciona al revés de lo habitual: en plena luz no hace nada, pero en la oscuridad total reproduce susurros (Audio) y notas aleatorias espeluznantes (Teclado) para ambientar una historia de terror.",
+    "transformedIdeaTitle": "La Mansión Encantada",
+    "transformedIdeaDescription": "Crea un ambiente para contar historias de miedo. Al apagar las luces, el dispositivo debe activar automáticamente efectos de sonido fantasmales y notas de piano desafinadas. Al encender la luz, los 'fantasmas' deben desaparecer (silencio).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 5 THEN { PlayLoop(GhostAudio); PlayRandomNotes(Keyboard) } ELSE StopAll()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música de Bailarina Solar",
+    "originalIdeaDescription": "Una caja que solo toca música cuando recibe luz solar directa. El teclado toca la melodía principal mientras el audio player añade acompañamiento orquestal. Si se tapa el sol, la música se detiene inmediatamente.",
+    "transformedIdeaTitle": "La Orquesta de Energía Solar",
+    "transformedIdeaDescription": "Construye una caja de música ecológica. Los estudiantes deben sincronizar el inicio del Audio Player y del Teclado solo cuando el sensor detecte luz intensa. Si pasa una nube (baja luz), la música debe pausarse, enseñando control de flujo en tiempo real.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Light > 80 { Play(Orchestra); PlayNextNote(Melody) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Explorador de Cuevas Submarinas",
+    "originalIdeaDescription": "Simula la profundidad del mar. Luz alta (superficie) suena oleaje (Audio). Luz media toca notas agudas. Luz baja (profundidad) activa un sonar grave en el teclado y sonidos de burbujas en el audio.",
+    "transformedIdeaTitle": "Submarino de Investigación: Descenso al Abismo",
+    "transformedIdeaDescription": "Baja a las profundidades del océano cubriendo el sensor. En la superficie (mucha luz), escucha gaviotas. A media profundidad, el piano toca una melodía tranquila. En la oscuridad total, activa el sonar de emergencia. Mapea tres zonas distintas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light > 80 THEN Play(Seagulls) ELSE IF Light > 30 THEN Play(PianoTune) ELSE { Play(Bubbles); Play(LowNote) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Ritmo con Sombras",
+    "originalIdeaDescription": "El usuario debe pasar su mano sobre el sensor al ritmo de una pista de audio. Si acierta el momento (cambio de luz), el teclado suena una nota de éxito. Si falla, el audio hace un sonido de error.",
+    "transformedIdeaTitle": "DJ Sombra: El Rey del Ritmo",
+    "transformedIdeaDescription": "Crea un juego tipo 'Guitar Hero' pero usando sombras. Una pista de batería suena de fondo (Audio). El estudiante debe pasar la mano sobre el sensor justo en el cuarto tiempo. Si la luz baja en el momento correcto, el teclado toca un acorde de poder.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Play(Beat); IF (Time == BeatTime AND LightChangeDetected) THEN Play(Chord) ELSE Play(MissSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Túnel de Lavado de Autos Sonoro",
+    "originalIdeaDescription": "Simula un auto pasando por un túnel de lavado. Oscuridad progresiva activa sonidos de agua (Audio) y escalas descendentes en el teclado. Al volver la luz, suena una campana de 'listo'.",
+    "transformedIdeaTitle": "El Auto-Lavado Robótico",
+    "transformedIdeaDescription": "Programa la secuencia de lavado. Cuando el auto entra (luz disminuye), activa el sonido de chorros de agua. Cuando está totalmente oscuro (cepillos frotando), toca escalas rápidas. Cuando sale a la luz, suena un 'Ding' de finalización.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightDecreasing THEN Play(Water); IF Light < 10 THEN Play(Scales); IF LightIncreasing THEN Play(Ding)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Lumínico",
+    "originalIdeaDescription": "Juego donde el 'sospechoso' pone el dedo sobre el sensor. El operador hace preguntas. Variaciones en la presión/luz (temblor del dedo) disparan un sonido de 'Mentira' (Audio) y una nota dramática.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Construye un detector de mentiras. El interrogado cubre el sensor. Si lo mueve nerviosamente y deja entrar luz, la máquina lo detecta. El sistema debe reproducir un zumbido de error y una nota grave dramática para indicar que '¡Está mintiendo!'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Calibrate(Dark); IF Light > (Dark + Sensitivity) THEN { Play(Buzzer); Play(DramaticNote) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo",
+    "originalIdeaDescription": "El Audio Player narra una historia. Cuando la narración dice 'se hizo de noche', el usuario debe cubrir el sensor. Si lo hace, el teclado toca una canción de cuna. Si no, la historia se pausa.",
+    "transformedIdeaTitle": "El Cuentacuentos Mágico",
+    "transformedIdeaDescription": "Interactúa con la historia. El audio dice: 'El príncipe entró en la cueva oscura...'. El estudiante debe esperar esa señal para cubrir el sensor. Si lo hace correctamente, el teclado toca música de suspenso y la historia continúa.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Play(StoryPart1); Wait(5s); IF Light < 20 THEN { Play(Music); Play(StoryPart2) } ELSE Pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Simula una pista de aterrizaje. Luz intermitente (flash de linterna) solicita permiso. El sistema responde con instrucciones de audio y luces de pista (notas secuenciales en el teclado).",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje Nocturno",
+    "transformedIdeaDescription": "Guía al avión. Envía señales de luz al sensor. Un destello largo solicita pista: el sistema responde con 'Permiso concedido' (Audio). Luego, mientras la luz se mantiene estable, el teclado toca notas simulando las luces de la pista encendiéndose una a una.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightPulse > 1s THEN { Play(Granted); FOR i=1 to 5 Play(Note[i]) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Color (Monocromo)",
+    "originalIdeaDescription": "Usa tarjetas de diferentes tonos de gris. El sensor lee la intensidad reflejada. Cada tono dispara un 'sample' vocal diferente (Audio) y un acorde en el teclado.",
+    "transformedIdeaTitle": "El Lector de Cartas Musicales",
+    "transformedIdeaDescription": "Crea un instrumento que se toca con tarjetas. Prepara tarjetas blancas, grises y negras. Al pasarlas sobre el sensor, el programa debe distinguir la intensidad: Blanca = Batería (Audio), Gris = Bajo (Teclado), Negra = Silencio. ¡Compón una canción barajando cartas!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Read(Light); IF Light > 80 THEN Play(Drum) ELSE IF Light > 40 THEN Play(Bass) ELSE Stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Temporizador de Cocina para Huevos",
+    "originalIdeaDescription": "Se pone el sensor dentro de una olla (simulada). Al 'hervir' (cambio de luz simulado o tiempo), suena una alarma de audio y una melodía de 'desayuno listo' en el teclado.",
+    "transformedIdeaTitle": "Chef Maestro: El Huevo Perfecto",
+    "transformedIdeaDescription": "Ayuda al chef a cronometrar la cocción. Inicia el programa y cubre el sensor (huevo en agua). Después de un tiempo aleatorio programado (cocción), el sistema debe avisar destapando el sensor (luz) seguido de una fanfarria triunfal en el teclado y aplausos en audio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(RandomTime); IF LightDetected THEN { Play(Fanfare); Play(Applause) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Murciélago (Ecolocalización)",
+    "originalIdeaDescription": "En oscuridad, el teclado emite 'pings' constantes (notas cortas y agudas). Si la luz aumenta (obstáculo/día), el audio emite un chillido y los pings se detienen.",
+    "transformedIdeaTitle": "Soy un Murciélago",
+    "transformedIdeaDescription": "Navega en la noche. Mientras el sensor esté oscuro (noche), el teclado emite notas agudas rítmicas (sonar). Si una luz brillante aparece (amanecer o depredador), el murciélago debe 'asustarse' reproduciendo un sonido de aleteo rápido en el Audio y deteniendo el sonar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Light < 30 { Play(Ping); Wait(0.5s) }; Play(FlappingSound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Lumínica",
+    "originalIdeaDescription": "Para abrir, el usuario debe iluminar el sensor con tres niveles de intensidad específicos en orden. Cada acierto suena una nota (Teclado). Al completar, suena 'Click' y música de éxito (Audio).",
+    "transformedIdeaTitle": "Desactiva el Dispositivo de Seguridad",
+    "transformedIdeaDescription": "Juego de lógica y precisión. Debes iluminar el sensor suavemente (nivel 1), luego fuerte (nivel 2), luego taparlo (nivel 3). Cada paso correcto toca una nota. Si fallas el orden, suena una alarma de error. Al final, el audio confirma el desbloqueo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light=Low THEN {Play(N1); Step=1}; IF Step=1 AND Light=High THEN {Play(N2); Step=2}... IF Step=3 Play(Unlock)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Medidor de Ambiente de Fiesta",
+    "originalIdeaDescription": "Mide la luz estroboscópica de una fiesta. Si la luz cambia rápido, toca música dance (Audio) y acompaña con el teclado. Si la luz es estática, música aburrida.",
+    "transformedIdeaTitle": "El Alma de la Fiesta",
+    "transformedIdeaDescription": "Detecta si la fiesta está animada. Los estudiantes deben calcular qué tan rápido cambia la luz. Si cambia rápidamente (luces de disco), el Audio Player toca un ritmo techno y el teclado hace bajos. Si la luz no cambia, toca música de elevador.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CalculateLightVariance(); IF Variance > High THEN Play(Techno) ELSE Play(ElevatorMusic)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Miedosa",
+    "originalIdeaDescription": "Una criatura que odia la luz. Luz baja = Ronroneo (Audio). Luz media = Gruñido (Audio). Luz alta = Grito y notas de piano caóticas (pánico).",
+    "transformedIdeaTitle": "El Monstruo de Debajo de la Cama",
+    "transformedIdeaDescription": "Crea la personalidad de un monstruo tímido. Usa sentencias IF anidadas. Oscuridad: Audio de respiración tranquila. Penumbra: Audio de advertencia. Luz brillante: El monstruo entra en pánico tocando todas las teclas del piano a la vez y gritando.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 10 THEN Play(Breathing) ELSE IF Light < 50 THEN Play(Growl) ELSE { Play(Scream); PlayRandomKeys() }"
+  }
+]

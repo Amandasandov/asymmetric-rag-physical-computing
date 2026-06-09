@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Mezcla para DJ con Efectos y Melodía",
+    "originalIdeaDescription": "Esta idea consiste en crear una consola de mezcla básica donde el Audio Player reproduce una base rítmica de fondo en bucle. El Touch Button funciona como un interruptor de silencio (mute) o pausa para la base rítmica, permitiendo cortes dramáticos, mientras que el Musical Keyboard está habilitado para que el usuario pueda improvisar melodías de piano sobre el ritmo activo.",
+    "transformedIdeaTitle": "DJ Party Rocker: ¡Crea tu Hits!",
+    "transformedIdeaDescription": "¡Conviértete en el DJ de la fiesta! En esta actividad, programarás tu propia mesa de mezclas. Usarás un botón para controlar el 'beat' de fondo, deteniéndolo para animar al público, y usarás el teclado para tocar solos épicos sobre la música. Aprenderás sobre bucles de sonido y control de eventos en tiempo real mientras haces bailar a todos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isPressed() THEN AudioPlayer.togglePause() ELSE AudioPlayer.playLoop(); IF Keyboard.keyPressed() THEN PlayNote()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta Inteligente con Saludo Personalizado",
+    "originalIdeaDescription": "Un sistema de notificación para una entrada. Cuando un visitante presiona el Touch Button (el timbre), el sistema activa primero un sonido de llamada mediante el Audio Player. Después de una breve pausa, el Musical Keyboard reproduce automáticamente una pequeña secuencia de notas preprogramada que sirve como una firma auditiva única o melodía de bienvenida para el hogar.",
+    "transformedIdeaTitle": "El Timbre Musical del Futuro",
+    "transformedIdeaDescription": "¿Aburrido del típico 'Ding-Dong'? Diseña un timbre inteligente para tu habitación. Programarás el botón para que, al ser presionado, anuncie la visita con una grabación de voz y luego toque automáticamente tu canción favorita en el piano. Es una excelente introducción a las secuencias y los tiempos de espera en la programación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHEN Button.click() DO AudioPlayer.play('VoiceMessage'); WAIT 2s; MusicalKeyboard.playSequence([C, E, G])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Adivinanzas Musicales con Validación Sonora",
+    "originalIdeaDescription": "Una actividad educativa donde el Audio Player reproduce el sonido de un instrumento o una nota específica. El usuario debe intentar replicar la nota en el Musical Keyboard. Luego, presiona el Touch Button para confirmar su respuesta. Si coincide, el Audio Player reproduce un sonido de aplausos; si no, un sonido de error.",
+    "transformedIdeaTitle": "Entrenador de Oído Musical: ¿Qué Nota Es?",
+    "transformedIdeaDescription": "Pon a prueba tu oído musical con este desafío. La aplicación tocará un sonido misterioso y tú deberás encontrar la nota correspondiente en el piano. Usa el botón mágico para verificar si acertaste. Si lo logras, recibirás una ovación del público virtual. Aprenderás sobre lógica condicional (Si/Entonces) y comparación de variables.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Play RandomAudioNote; IF Keyboard.lastNote == AudioNote AND Button.pressed() THEN AudioPlayer.play('Applause') ELSE AudioPlayer.play('TryAgain')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos con Banda Sonora Interactiva",
+    "originalIdeaDescription": "El Audio Player narra una historia corta dividida en segmentos. El Touch Button se utiliza para avanzar al siguiente capítulo de la narración. En momentos clave de la historia, el usuario debe tocar una tecla específica en el Musical Keyboard para activar un efecto de sonido o melodía que coincida con la emoción de la escena antes de poder continuar.",
+    "transformedIdeaTitle": "Cuentacuentos Interactivo: La Aventura Sonora",
+    "transformedIdeaDescription": "No solo escuches la historia, ¡sé parte de ella! Programarás un libro de cuentos donde tú controlas el avance con un botón. Pero cuidado, para pasar de escena, deberás resolver acertijos musicales tocando la tecla correcta en el piano para ayudar al protagonista. Ideal para combinar narrativa y lógica secuencial.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('Chapter1'); WAIT for Button; IF Keyboard.key == 'C' THEN AudioPlayer.play('Chapter2')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Efectos de Sonido para Teatro",
+    "originalIdeaDescription": "Una herramienta para obras escolares. El Touch Button alterna entre diferentes 'modos' o escenas (ej. Bosque, Ciudad). Dependiendo del modo, las teclas del Musical Keyboard activan diferentes clips cortos en el Audio Player o tocan notas que ambientan la escena. Permite a un estudiante ser el ingeniero de sonido en tiempo real.",
+    "transformedIdeaTitle": "El Ingeniero de Sonido de Hollywood",
+    "transformedIdeaDescription": "¡Luces, cámara, acción! Crea una consola de efectos especiales para tu propia película. Configura el botón para cambiar de escenario (de una casa embrujada a una playa soleada) y programa el teclado para que lance sonidos o melodías que encajen perfectamente con la escena. Aprenderás a usar variables de estado para cambiar el comportamiento de tu programa.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.click() THEN ChangeScene(); IF Scene == 'Horror' AND KeyPressed() THEN AudioPlayer.play('Scream')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Caja de Música con Cuerda Digital",
+    "originalIdeaDescription": "Simula una caja de música antigua. El usuario debe mantener presionado el Touch Button para 'dar cuerda' (cargar una variable). Al soltarlo, el Musical Keyboard reproduce una melodía automáticamente a una velocidad que disminuye gradualmente, acompañada por un sonido mecánico de fondo del Audio Player.",
+    "transformedIdeaTitle": "Caja de Música Mágica",
+    "transformedIdeaDescription": "Construye una caja de música digital que necesita 'cuerda' para funcionar. Mantén presionado el botón para cargar energía y, al soltarlo, escucha cómo el piano toca una dulce canción de cuna mientras suena el mecanismo de engranajes. El reto es programar la desaceleración de la música a medida que se acaba la energía.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Button.held() DO Energy++; IF !Button.held() AND Energy > 0 DO { PlayMelody(speed=Energy); Energy--; AudioPlayer.play('Gears') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sillas Musicales Automatizado",
+    "originalIdeaDescription": "El Audio Player reproduce música festiva continuamente. El sistema espera una entrada aleatoria o un temporizador. Cuando la música se detiene abruptamente, el usuario debe presionar el Touch Button lo más rápido posible. Si es lo suficientemente rápido, el Musical Keyboard toca una fanfarria de victoria; si no, suena una nota grave.",
+    "transformedIdeaTitle": "El Juego de los Reflejos Musicales",
+    "transformedIdeaDescription": "¿Tienes los reflejos de un ninja? La música sonará y se detendrá en momentos sorpresa. Tu misión es presionar el botón en el instante exacto en que ocurra el silencio. Si eres rápido, el piano celebrará tu victoria; si eres lento, ¡perderás la ronda! Un juego emocionante para entender temporizadores y eventos aleatorios.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "AudioPlayer.play(); WAIT RandomTime(); AudioPlayer.stop(); StartTimer(); IF Button.pressed() AND Timer < 1s THEN Keyboard.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado con Acompañamiento de Acordes Inteligente",
+    "originalIdeaDescription": "El usuario toca una melodía simple en el Musical Keyboard. El Touch Button sirve para cambiar el acorde de acompañamiento que suena de fondo a través del Audio Player (ej. presionar para cambiar de Mayor a Menor, o cambiar la nota base del pad ambiental). Permite una performance musical más rica.",
+    "transformedIdeaTitle": "Compositor Instantáneo: Melodía y Armonía",
+    "transformedIdeaDescription": "Tocar el piano es genial, ¡pero tocar con una orquesta es mejor! En esta actividad, tocarás el teclado con una mano y usarás el botón con la otra para cambiar el ambiente emocional de la música de fondo (de alegre a triste). Explorarás cómo coordinar múltiples salidas de audio para crear una canción completa.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.isON() THEN AudioPlayer.play('MinorPad') ELSE AudioPlayer.play('MajorPad'); Keyboard.enablePlaying()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma con Desactivación por Código",
+    "originalIdeaDescription": "El Audio Player emite un sonido de sirena fuerte y molesto. Para desactivarlo, el usuario debe presionar el Touch Button y luego ingresar una secuencia específica de tres notas en el Musical Keyboard (una contraseña musical). Si es correcta, la alarma se detiene.",
+    "transformedIdeaTitle": "Misión Espía: Desactiva la Alarma",
+    "transformedIdeaDescription": "¡Intruso detectado! Una alarma ruidosa está sonando y solo tú conoces el código secreto para apagarla. Programa un sistema de seguridad donde debas presionar un botón y tocar la clave musical secreta en el piano para salvar el día. Una forma divertida de aprender sobre validación de datos y secuencias lógicas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.loop('Siren'); IF Button.pressed() AND Keyboard.sequence(['C','D','E']) THEN AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Bucles (Loop Station) Básica",
+    "originalIdeaDescription": "El usuario presiona el Touch Button para iniciar un modo de 'grabación' simulada donde toca una secuencia en el Musical Keyboard. Al presionar el botón nuevamente, el Audio Player reproduce una pista de ritmo y el sistema intenta repetir las notas tocadas (o una simulación de ellas) en bucle sobre el ritmo.",
+    "transformedIdeaTitle": "Tu Primera Estación de Loops",
+    "transformedIdeaDescription": "Crea música capa por capa. Usa el botón para iniciar la base rítmica y activar el modo de repetición. Todo lo que toques en el teclado se sumará a la mezcla. Aprenderás conceptos avanzados como listas (arrays) para guardar tus notas y bucles para reproducirlas una y otra vez.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.click() THEN RecordMode = true; WHILE RecordMode DO Array.add(Keyboard.note); IF Button.click() THEN PlayLoop(Array, AudioBacking)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse a Música",
+    "originalIdeaDescription": "El Touch Button se utiliza como un telégrafo para ingresar puntos y rayas. El sistema interpreta la duración de la presión. El Audio Player confirma la entrada (bip corto/largo) y, al completar una letra, el Musical Keyboard toca una nota o acorde asociado a esa letra, creando una melodía basada en palabras.",
+    "transformedIdeaTitle": "Mensajes Musicales Secretos",
+    "transformedIdeaDescription": "¿Sabías que puedes convertir palabras en música? Usa el botón para escribir en código Morse. Tu programa traducirá esos puntos y rayas en notas musicales, permitiéndote enviar mensajes secretos que suenan como canciones. Un reto increíble para dominar el tiempo de pulsación y la lógica de traducción.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.duration < 0.5 THEN Code='.' ELSE Code='-'; AudioPlayer.beep(); IF Code=='.-' THEN Keyboard.play('A')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Género Musical (Jukebox)",
+    "originalIdeaDescription": "El Musical Keyboard actúa como un selector de canciones (Tecla 1 = Rock, Tecla 2 = Jazz). Al seleccionar una tecla, el Audio Player prepara la pista. El Touch Button funciona como 'Play/Pause' para la pista seleccionada. Permite navegar por una biblioteca de audio usando el piano como interfaz.",
+    "transformedIdeaTitle": "La Jukebox de Piano",
+    "transformedIdeaDescription": "Transforma tu teclado en una rockola moderna. Asigna una canción diferente a cada tecla del piano (Rock, Pop, Jazz). Usa el botón táctil para reproducir o pausar tu selección. Diseñarás una interfaz de usuario única donde las notas musicales controlan tu lista de reproducción favorita.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Keyboard.key == 'C' THEN SelectedTrack = 'Rock'; IF Button.pressed() THEN AudioPlayer.play(SelectedTrack)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Ritmo y Coordinación",
+    "originalIdeaDescription": "El Audio Player reproduce un patrón rítmico (ej. boom-clap). El usuario debe usar el Touch Button para marcar el bombo y una tecla específica del Musical Keyboard para marcar la caja (snare), sincronizándose con el audio. El sistema evalúa la precisión del tiempo.",
+    "transformedIdeaTitle": "Maestro del Ritmo: Batería vs Piano",
+    "transformedIdeaDescription": "Pon a prueba tu coordinación mano-ojo (y oído). Escucha el ritmo base y toca encima: usa el botón con la mano izquierda para los bajos y el teclado con la derecha para los agudos. ¡Debes mantenerte en sincronía con la música! Aprenderás sobre sincronización y eventos paralelos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.playBeat(); IF Button.pressedOnBeat() AND Keyboard.pressedOnSnare() THEN Score++ ELSE Score--"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Ambientes de Relajación",
+    "originalIdeaDescription": "El usuario utiliza el Touch Button para ciclar entre sonidos de la naturaleza en el Audio Player (lluvia, bosque, mar). El Musical Keyboard se configura automáticamente con un sonido suave (tipo pad o piano suave) para permitir al usuario tocar melodías relajantes sobre el ambiente seleccionado.",
+    "transformedIdeaTitle": "Oasis de Relajación Zen",
+    "transformedIdeaDescription": "Crea tu propia app de meditación. Programa el botón para cambiar entre sonidos de lluvia, océano o bosque. Luego, configura el teclado para que, sin importar qué toques, suene armonioso y relajante. Es un proyecto perfecto para diseñar experiencias de usuario tranquilas y agradables.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.click() THEN NextEnvironment(); AudioPlayer.play(EnvSound); Keyboard.setInstrument('SoftPiano')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Afinación de Instrumentos",
+    "originalIdeaDescription": "El Audio Player reproduce una nota de referencia perfecta (La 440Hz). El usuario toca la nota correspondiente en el Musical Keyboard. El Touch Button se usa para alternar entre diferentes notas de referencia (cuerdas de guitarra, violín). Sirve como una herramienta utilitaria para músicos.",
+    "transformedIdeaTitle": "Afinador Digital Pro",
+    "transformedIdeaDescription": "¿Tocas la guitarra o el violín? Construye tu propio afinador. Usa el botón para seleccionar qué cuerda quieres afinar y el sistema tocará la nota perfecta. Luego, usa el teclado para comparar y entrenar tu oído. Una herramienta práctica que combina utilidad real con programación lógica.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.click() THEN SelectNextString(); AudioPlayer.playTone(StringPitch); Keyboard.highlightKey(StringPitch)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Velocidad de Audio (Tempo)",
+    "originalIdeaDescription": "El Audio Player reproduce una canción. El usuario presiona el Touch Button repetidamente ('Tap Tempo') para establecer la velocidad. El Musical Keyboard toca un metrónomo sincronizado con esa velocidad detectada, permitiendo ajustar la reproducción a la interacción del usuario.",
+    "transformedIdeaTitle": "DJ de Velocidad: Controla el Tiempo",
+    "transformedIdeaDescription": "¡Tú controlas el tiempo! Golpea el botón al ritmo que quieras y observa cómo la música y el metrónomo del teclado se ajustan mágicamente a tu velocidad. Descubrirás cómo calcular el tiempo entre pulsaciones (matemáticas) y usarlo para controlar la velocidad de reproducción de audio.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Calculate BPM from Button.taps(); AudioPlayer.setSpeed(BPM); Keyboard.playMetronome(BPM)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Voz Musical",
+    "originalIdeaDescription": "El Audio Player tiene cargadas muestras de palabras o sílabas (ej. 'Do', 'Re', 'Mi' cantado). El Touch Button cambia el banco de voces (ej. Voz Robot, Voz Ardilla). El Musical Keyboard dispara estas muestras de audio en diferentes tonos en lugar de las notas de piano estándar.",
+    "transformedIdeaTitle": "Teclado de Voces Locas",
+    "transformedIdeaDescription": "Haz que el piano cante, hable o ladre. Programa el teclado para que, en lugar de notas, dispare grabaciones de voz divertidas. Usa el botón para cambiar entre voz de robot, de monstruo o de ardilla. ¡Risas aseguradas mientras aprendes a manipular recursos de audio (assets) con eventos de teclado!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed() THEN Bank = NextBank(); IF Key.pressed() THEN AudioPlayer.play(Bank + Key.NoteName)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "El Audio Player contiene pistas separadas de una sinfonía (vientos, percusión). El Touch Button activa o desactiva secciones enteras de la orquesta. El Musical Keyboard permite al usuario tocar la melodía principal (violín solista) sobre la mezcla dinámica que está gestionando con el botón.",
+    "transformedIdeaTitle": "El Gran Director de Orquesta",
+    "transformedIdeaDescription": "Toma la batuta y dirige tu propia orquesta. Usa el botón para indicar cuándo entran los tambores y las trompetas, creando una base épica. Tú serás el solista tocando la melodía principal en el teclado. Aprende a gestionar múltiples canales de audio y a liderar una actuación musical compleja.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.toggle() THEN AudioPlayer.unmute('OrchestraLayer'); Keyboard.setSound('Violin')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Quiz de Matemáticas Musicales",
+    "originalIdeaDescription": "El Audio Player enuncia un problema matemático simple ('Dos más dos'). El usuario debe responder tocando la tecla correspondiente al número en el Musical Keyboard (Tecla 4). El Touch Button se usa para pedir que se repita la pregunta. Feedback auditivo inmediato.",
+    "transformedIdeaTitle": "Reto Matemático Musical",
+    "transformedIdeaDescription": "¿Puedes sumar usando un piano? Escucha el problema matemático que te dice la app. Calcula mentalmente y toca la respuesta correcta en el teclado (donde Do=1, Re=2, etc.). Si te pierdes, usa el botón para repetir la pregunta. Una forma genial de combinar aritmética mental con habilidades musicales.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.speak('3 + 2'); IF Keyboard.keyIndex == 5 THEN AudioPlayer.play('Correct') ELSE AudioPlayer.play('Wrong')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Inactividad (Pausa Activa)",
+    "originalIdeaDescription": "Un temporizador corre en segundo plano. Si el usuario no presiona el Touch Button en un intervalo definido, el Audio Player reproduce un aviso de '¡Muévete!'. Para apagar el aviso, el usuario debe tocar una escala ascendente completa en el Musical Keyboard, forzando una interacción cognitiva y física.",
+    "transformedIdeaTitle": "¡Despierta y Toca!",
+    "transformedIdeaDescription": "Evita quedarte dormido frente a la pantalla. Si pasas mucho tiempo sin presionar el botón de actividad, sonará una alarma divertida. Para apagarla, no basta con un clic: ¡tendrás que tocar una escala musical rápida en el teclado! Un programa divertido que te mantiene alerta usando temporizadores y detección de secuencias.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Timer > Limit THEN AudioPlayer.alarm(); IF Keyboard.playedScale() THEN { AudioPlayer.stop(); Timer = 0 }"
+  }
+]

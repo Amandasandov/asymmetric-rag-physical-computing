@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Linterna Indicadora del Norte Magnético",
+    "originalIdeaDescription": "Un dispositivo que funciona como una brújula visual. Al activar el interruptor, la lámpara se enciende, pero solo cambia a color verde brillante cuando el dispositivo apunta exactamente hacia el Norte, ayudando a la orientación básica.",
+    "transformedIdeaTitle": "El Explorador Polar Perdido",
+    "transformedIdeaDescription": "Eres un explorador en el Ártico atrapado en una tormenta de nieve. Tu GPS se ha roto y solo te queda tu brújula de emergencia. Programa el sistema para que, al encender tu equipo de supervivencia (Switch), la luz de señalización (Lamp) se ponga verde solo si caminas hacia el Norte para llegar al campamento base; si vas en otra dirección, la luz debe ser roja para advertirte del peligro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn: IF Compass.heading > 350 OR Compass.heading < 10 THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Rueda de Colores Direccional 360",
+    "originalIdeaDescription": "Un sistema educativo para aprender los puntos cardinales. El interruptor activa el modo de aprendizaje. A medida que el usuario gira el dispositivo, la lámpara cambia suavemente de color representando los 360 grados (Norte=Rojo, Este=Azul, etc.).",
+    "transformedIdeaTitle": "El Camaleón Mágico Navegante",
+    "transformedIdeaDescription": "Un camaleón mágico necesita esconderse de los depredadores cambiando de color según la dirección del viento. Crea un programa donde, al activar sus poderes (Switch), el camaleón cambie el color de su piel (Lamp) dependiendo de hacia dónde mire (Compass). Asigna un color distinto para el Norte, Sur, Este y Oeste.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: angle = Compass.heading; Lamp.color(Map(angle, 0, 360, ColorSpectrum))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Orientación Caliente o Frío",
+    "originalIdeaDescription": "Juego donde se define una dirección objetivo secreta. El interruptor inicia el juego. Si el usuario apunta cerca del objetivo, la luz se vuelve roja (caliente); si se aleja, se vuelve azul (frío) y disminuye su intensidad.",
+    "transformedIdeaTitle": "Radar de Tesoros Enterrados",
+    "transformedIdeaDescription": "Eres un cazador de tesoros con un detector de metales antiguo. El mapa dice que el oro está enterrado hacia el Este (90 grados). Programa tu detector (Switch activado) para que la luz brille intensamente en rojo cuando apuntes hacia el tesoro, y se apague o se ponga azul cuando estés mirando hacia el lado equivocado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: distance = ABS(Compass.heading - 90); IF distance < 20 THEN Lamp.color(RED) ELSE Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Costero Giratorio",
+    "originalIdeaDescription": "El dispositivo simula la luz de un faro. El interruptor enciende la lámpara principal. Al girar físicamente el dispositivo (simulando la rotación de la lente del faro), la luz parpadea intensamente cada vez que pasa por el Norte.",
+    "transformedIdeaTitle": "Guardián del Faro en la Tormenta",
+    "transformedIdeaDescription": "Los barcos necesitan ver la luz del faro cada vez que gira hacia el mar (Norte). Eres el encargado del faro. Usa el interruptor para encender el sistema y programa la lámpara para que emita un destello blanco brillante cada vez que la brújula detecte que el faro apunta hacia el norte (0 grados), guiando a los barcos a salvo.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn AND Compass.heading == 0 THEN Lamp.blink(White, 500ms)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Direccional",
+    "originalIdeaDescription": "Un mecanismo de seguridad donde el usuario debe girar el dispositivo a una secuencia de ángulos específicos. El interruptor confirma la entrada. Si el ángulo es correcto al presionar el interruptor, la luz se pone verde; si no, roja.",
+    "transformedIdeaTitle": "La Bóveda Secreta del Espía",
+    "transformedIdeaDescription": "Para abrir la bóveda del banco, debes girar el dial a la posición correcta. La combinación secreta es 'Sur'. Gira tu dispositivo hasta que la brújula marque 180 grados y presiona el botón (Switch) para intentar abrirla. Si aciertas, la luz verde indicará 'Acceso Concedido'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed: IF Compass.heading == 180 THEN Lamp.color(GREEN) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Iluminación Ambiental Feng Shui",
+    "originalIdeaDescription": "Un sistema de decoración que cambia la atmósfera de la habitación. Al encender el interruptor, la lámpara elige un color suave (ámbar, rosa, cian) basándose en la orientación cardinal de la pared hacia la que apunta.",
+    "transformedIdeaTitle": "El Templo de los Cuatro Elementos",
+    "transformedIdeaDescription": "En un templo antiguo, cada pared representa un elemento: Norte (Agua/Azul), Sur (Fuego/Rojo), Este (Tierra/Verde), Oeste (Aire/Blanco). Programa tu antorcha mística para que, al encenderla (Switch), cambie de color según el elemento al que estés mirando para mostrar respeto a los espíritus.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: IF heading < 45 OR heading > 315 THEN Lamp.color(BLUE) ELSE IF heading < 135 THEN Lamp.color(GREEN) ..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Señalizador Morse Direccional",
+    "originalIdeaDescription": "Dispositivo para enviar mensajes secretos. El interruptor actúa como manipulador telegráfico, pero la lámpara solo emite luz si el usuario está orientado hacia la dirección del receptor aliado (ej. Oeste), evitando ser visto por enemigos en otros lados.",
+    "transformedIdeaTitle": "Mensajero de la Resistencia",
+    "transformedIdeaDescription": "Debes enviar señales de luz a tus aliados que están escondidos en las montañas del Oeste. Programa tu linterna para que el interruptor (Switch) solo encienda la luz (Lamp) si tu brújula indica que estás apuntando correctamente hacia el Oeste (270 grados). Si apuntas a otro lado, la luz debe permanecer apagada para no delatarte.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading > 260 AND Compass.heading < 280: Lamp.state = Switch.state ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Herramienta para simular pistas de aterrizaje. El interruptor activa la pista. Si el dispositivo (avión) se alinea con la pista (rumbo fijo), la luz es verde faja; si se desvía, la luz parpadea en amarillo como advertencia.",
+    "transformedIdeaTitle": "Piloto de Aterrizaje Forzoso",
+    "transformedIdeaDescription": "Tu avión tiene problemas y debes aterrizar en la pista que está orientada al Norte. Activa el tren de aterrizaje (Switch). Si mantienes el avión recto hacia el Norte, la luz de cabina será verde (seguro). Si te desvías más de 20 grados, la luz amarilla parpadeará advirtiendo una posible colisión.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: IF ABS(Compass.heading - 0) < 20 THEN Lamp.color(GREEN) ELSE Lamp.blink(YELLOW)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación Zen",
+    "originalIdeaDescription": "Ayuda a mantener una postura focalizada. El usuario se sienta mirando al Este (amanecer). El interruptor inicia la sesión. La lámpara emite una luz violeta calmante siempre que la orientación se mantenga estable hacia el Este.",
+    "transformedIdeaTitle": "El Monje y el Sol Naciente",
+    "transformedIdeaDescription": "Eres un monje entrenando su concentración. Debes meditar mirando exactamente hacia donde sale el sol (Este). Al presionar el interruptor para comenzar, la lámpara debe brillar con un color violeta suave. Si pierdes la concentración y giras tu cuerpo, la luz se apagará, indicando que debes reenfocarte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn AND Compass.heading == 90 THEN Lamp.color(VIOLET) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Invisible",
+    "originalIdeaDescription": "Juego donde solo ciertas direcciones permiten avanzar. El interruptor verifica el camino. Si la brújula apunta a una 'pared' virtual, la lámpara se pone roja; si es un camino abierto, verde.",
+    "transformedIdeaTitle": "Escape del Laberinto Encantado",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto invisible. Solo puedes moverte hacia el Norte o el Sur; el Este y Oeste están bloqueados por magia. Antes de dar un paso, presiona el interruptor mágico. Si miras a una dirección segura (N o S), la luz verde te dejará pasar. Si miras a las paredes (E u O), la luz roja te detendrá.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed: IF Compass.heading == 0 OR Compass.heading == 180 THEN Lamp.green() ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Amanecer Interactivo",
+    "originalIdeaDescription": "Dispositivo que imita el sol. El interruptor enciende el 'sol'. A medida que se gira el dispositivo de Este a Oeste (trayectoria solar), la lámpara cambia de intensidad y color (naranja a blanco a rojo).",
+    "transformedIdeaTitle": "El Dios del Sol",
+    "transformedIdeaDescription": "Tienes el poder de controlar el ciclo del día. Enciende el sol (Switch). Al girar tu dispositivo desde el Este (90°) hasta el Oeste (270°) pasando por el Sur, haz que la luz cambie de un amanecer naranja suave a un mediodía amarillo brillante y finalmente a un atardecer rojizo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn: intensity = map(Compass.heading, 90, 270, 0, 100); Lamp.set(YELLOW, intensity)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escáner de Seguridad Perimetral",
+    "originalIdeaDescription": "Sistema de vigilancia simulado. El interruptor activa el modo guardia. El usuario gira el dispositivo como una cámara de seguridad. Si detecta un ángulo específico (zona prohibida), la lámpara parpadea como alarma.",
+    "transformedIdeaTitle": "Guardia Robot de la Base Espacial",
+    "transformedIdeaDescription": "Eres un robot centinela vigilando la entrada principal (ubicada al Sur). Activa tus sensores (Switch). Gira constantemente para vigilar. Si tu escáner (Brújula) apunta hacia la zona de peligro en el Sur (entre 170° y 190°), activa la alarma visual (Lámpara parpadeando en rojo) para alertar de intrusos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: IF Compass.heading > 170 AND Compass.heading < 190 THEN Lamp.blink(RED) ELSE Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transportador de Ángulos Digital",
+    "originalIdeaDescription": "Herramienta de medición. El interruptor congela la lectura. La lámpara cambia de color cada 90 grados exactos para ayudar a medir esquinas de habitaciones o muebles.",
+    "transformedIdeaTitle": "El Arquitecto de Pirámides",
+    "transformedIdeaDescription": "Estás construyendo una pirámide perfecta y necesitas esquinas cuadradas exactas. Usa tu herramienta divina. Mantén presionado el interruptor para medir. La luz debe cambiar de color cada vez que completes un giro de 90 grados, ayudándote a colocar las piedras angulares con precisión matemática.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn: IF (Compass.heading % 90) == 0 THEN Lamp.changeColor()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Comunicador Alienígena Cromático",
+    "originalIdeaDescription": "Juguete de rol. El interruptor abre el canal de comunicación. Diferentes orientaciones de la brújula generan diferentes colores de luz, simulando un lenguaje basado en el espectro visible.",
+    "transformedIdeaTitle": "Traductor Universal Galáctico",
+    "transformedIdeaDescription": "Te encuentras con una especie alienígena que habla mediante colores. Activa tu traductor (Switch). Para decir 'Hola' debes girar al Norte (Luz Azul), para decir 'Vengo en Paz' gira al Sur (Luz Blanca). Programa el dispositivo para traducir tus movimientos en los colores correctos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn: IF Compass.heading < 45 THEN Lamp.color(BLUE) ELSE IF Compass.heading > 135 THEN Lamp.color(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Disparos Estático",
+    "originalIdeaDescription": "Videojuego físico simple. El interruptor es el gatillo. La brújula determina la puntería. La lámpara se enciende brevemente al 'disparar' pero solo si se apunta a un rango de grados específico (enemigo).",
+    "transformedIdeaTitle": "Defensor del Castillo",
+    "transformedIdeaDescription": "Un dragón ataca desde el Este. Eres el arquero en la torre. Tienes que apuntar tu arco hacia el Este y presionar el botón (Switch) para disparar flechas de luz. Si disparas hacia otra dirección, desperdicias flechas (Luz roja tenue). Si aciertas al Este, lanzas una flecha brillante (Luz dorada).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.pressed: IF Compass.heading == 90 THEN Lamp.flash(GOLD) ELSE Lamp.flash(DIM_RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Buscador de la Meca (Qibla)",
+    "originalIdeaDescription": "Herramienta cultural. El interruptor enciende el dispositivo. La lámpara se ilumina suavemente y aumenta su brillo a medida que el usuario se alinea con una coordenada geográfica específica pre-programada.",
+    "transformedIdeaTitle": "La Brújula del Viajero del Desierto",
+    "transformedIdeaDescription": "Estás cruzando un vasto desierto y necesitas encontrar el oasis sagrado ubicado en una dirección específica (ej. 120°). Enciende tu guía (Switch). Haz que la lámpara brille más fuerte cuanto más te acerques al ángulo correcto, y se atenúe si te desvías del camino.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn: error = abs(Compass.heading - 120); brightness = 100 - error; Lamp.setBrightness(brightness)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de Pintura Virtual",
+    "originalIdeaDescription": "Herramienta de arte. El interruptor selecciona 'Canal Rojo', 'Canal Verde' o 'Canal Azul'. La rotación de la brújula ajusta la intensidad de ese canal en la lámpara, permitiendo crear colores personalizados.",
+    "transformedIdeaTitle": "El Pincel Mágico de Arcoíris",
+    "transformedIdeaDescription": "Eres un artista digital. Usa el interruptor para elegir qué color quieres mezclar (presiona 1 vez para Rojo, 2 para Verde, 3 para Azul). Luego, gira el dispositivo como un dial para subir o bajar la cantidad de ese color en tu Lámpara. ¡Crea el color púrpura perfecto mezclando Rojo y Azul!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.clickCount == 1: R = Compass.heading; IF Switch.clickCount == 2: G = Compass.heading; Lamp.setColor(R, G, B)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Magnéticas",
+    "originalIdeaDescription": "Juguete de ciencia ficción. El interruptor activa el sensor. Si la brújula cambia de valor rápidamente (se agita), la lámpara parpadea erráticamente simulando interferencia.",
+    "transformedIdeaTitle": "Cazafantasmas: Detector de Espectros",
+    "transformedIdeaDescription": "Los fantasmas alteran los campos magnéticos. Enciende tu equipo de protones (Switch). Camina por la habitación. Si la aguja de la brújula se vuelve loca (cambia de dirección muy rápido sin que tú gires tanto), haz que la lámpara parpadee en blanco y azul para indicar que has atrapado un fantasma.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn: IF delta(Compass.heading) > threshold THEN Lamp.strobe(WHITE_BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caleidoscopio Electrónico",
+    "originalIdeaDescription": "Juguete visual. El interruptor cambia el patrón de parpadeo. La brújula determina la paleta de colores base que se utiliza en la matriz o lámpara, cambiando al girar el dispositivo.",
+    "transformedIdeaTitle": "Varita de Hada Cambia-Colores",
+    "transformedIdeaDescription": "Tienes una varita mágica. Al presionar el botón (Switch), lanzas hechizos de luz. Si agitas la varita hacia el Norte, las chispas (Luz) son de hielo (Cian). Si la agitas hacia el Sur, son de fuego (Naranja). Programa la varita para que el color de la magia dependa de la dirección del movimiento.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.pressed: IF Compass.heading < 180 THEN Lamp.color(CYAN) ELSE Lamp.color(ORANGE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Brújula de Navegación Nocturna (Modo Rojo)",
+    "originalIdeaDescription": "Herramienta táctica. El interruptor alterna entre luz blanca (uso general) y luz roja (preservación de visión nocturna). La brújula se usa para navegar, y la luz roja se mantiene fija para leer mapas sin deslumbrar.",
+    "transformedIdeaTitle": "Operación Comando Nocturno",
+    "transformedIdeaDescription": "Estás en una misión secreta de noche. Necesitas leer tu mapa sin que el enemigo te vea. Si el interruptor está apagado, todo debe estar oscuro. Si lo enciendes, la lámpara debe brillar en ROJO tenue (modo sigilo) para que puedas ver tu rumbo en la brújula sin perder tu visión nocturna.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn THEN Lamp.color(DIM_RED) ELSE Lamp.off()"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Sonido Gestual",
+    "originalIdeaDescription": "Un sistema donde el usuario inclina el dispositivo para cambiar el tono de un sonido continuo y lo agita bruscamente para disparar efectos de sonido percusivos superpuestos.",
+    "transformedIdeaTitle": "DJ del Futuro: Mezcla con Movimiento",
+    "transformedIdeaDescription": "¡Conviértete en un DJ que no necesita botones! Programa tu dispositivo para que al inclinarlo hacia adelante o atrás cambies la velocidad de la música, y al agitarlo lances efectos de sonido especiales para animar la fiesta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake() THEN Audio.play('scratch'); SET Audio.speed = Inclination.x"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Vehículo",
+    "originalIdeaDescription": "Simulación acústica de un motor donde la inclinación controla las revoluciones por minuto (RPM) y una sacudida simula el cambio de marchas con su sonido correspondiente.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1: Motor Rugiente",
+    "transformedIdeaDescription": "Diseña el volante de un coche de carreras. Al girar el dispositivo (inclinar), el motor debe acelerar o desacelerar su sonido. Si agitas el dispositivo hacia adelante, ¡harás el cambio de marcha para ir más rápido!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET Audio.volume = Inclination.y; IF Motion.acceleration > 5 THEN Audio.play('gear_shift')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita Mágica con Feedback Sonoro",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Movimientos suaves generan un zumbido mágico constante, y un movimiento brusco (cast) lanza un hechizo con un sonido fuerte.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Encantada",
+    "transformedIdeaDescription": "Crea tu propia varita mágica. Debe emitir un sonido de energía suave cuando la sostienes en posición horizontal y lanzar un sonido de 'hechizo' explosivo solo cuando haces un movimiento rápido de muñeca.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN Audio.play('spell') ELSE IF Inclination.isFlat() THEN Audio.playLoop('hum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad de Objetos Valiosos",
+    "originalIdeaDescription": "Un sistema antirrobo que reproduce una sirena fuerte si el dispositivo detecta cualquier tipo de movimiento o cambio en su ángulo de reposo predeterminado.",
+    "transformedIdeaTitle": "Guardián del Tesoro del Museo",
+    "transformedIdeaDescription": "Protege el diamante más valioso del mundo. Programa el dispositivo para que esté en silencio total, pero si alguien intenta levantarlo (movimiento) o inclinarlo lo más mínimo, ¡debe sonar una alarma policial!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.detected OR Inclination.changed THEN Audio.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Cuidado de Huevo Virtual",
+    "originalIdeaDescription": "Un juego donde se debe mantener el dispositivo en equilibrio. Si se inclina demasiado, el huevo se rompe (sonido). Si se agita suavemente, el huevo eclosiona (sonido).",
+    "transformedIdeaTitle": "Misión Rescate: El Huevo de Dragón",
+    "transformedIdeaDescription": "Llevas un huevo de dragón en tu mochila. Debes caminar sin inclinarte demasiado o el huevo se romperá (sonido de crack). Si llegas a la meta y lo agitas suavemente, escucharás al dragón nacer.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.angle > 45 THEN Audio.play('crack'); IF Motion.gentleShake() THEN Audio.play('hatch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento de Percusión Tipo Shaker",
+    "originalIdeaDescription": "El dispositivo funciona como una maraca digital. Agitar produce el sonido, e inclinar el dispositivo cambia el tipo de instrumento (ej. de maraca a pandereta).",
+    "transformedIdeaTitle": "La Banda de Rock: Percusión Inteligente",
+    "transformedIdeaDescription": "Construye un instrumento que cambie de sonido mágicamente. Si lo sostienes hacia arriba es una maraca, y si lo inclinas hacia abajo es una pandereta. ¡Agítalo al ritmo de la música para tocar!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.y > 0 THEN SET sound = 'maraca' ELSE SET sound = 'tambourine'; IF Motion.shake() THEN Audio.play(sound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio y Postura",
+    "originalIdeaDescription": "Herramienta para ejercicios que reproduce música relajante solo cuando el usuario mantiene una postura perfectamente equilibrada y sin movimientos bruscos.",
+    "transformedIdeaTitle": "Maestro Zen: El Reto del Equilibrio",
+    "transformedIdeaDescription": "Para meditar necesitas paz absoluta. Programa tu dispositivo para que reproduzca música relajante de flauta solo cuando lo sostengas completamente plano y quieto. Si te mueves, la música se detiene.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.total < 0.1 AND Inclination.isFlat() THEN Audio.play('flute') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Narrador de Historias Interactivo",
+    "originalIdeaDescription": "Una historia de audio donde el usuario toma decisiones inclinando el dispositivo a la izquierda o derecha para seleccionar caminos, y agita para confirmar la acción.",
+    "transformedIdeaTitle": "Tu Propia Aventura: El Bosque Encantado",
+    "transformedIdeaDescription": "Crea un audiolibro interactivo. El narrador pregunta: '¿Izquierda o Derecha?'. Inclina el dispositivo para elegir el camino y agítalo para abrir la puerta secreta. ¡Los sonidos cambiarán según tu elección!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.x < -20 THEN Audio.play('path_left'); IF Motion.shake() THEN Audio.play('open_door')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Espada Láser",
+    "originalIdeaDescription": "Genera el zumbido característico basado en la orientación del dispositivo y sonidos de choque o barrido cuando se detectan movimientos rápidos de aceleración.",
+    "transformedIdeaTitle": "Defensor Galáctico: Sable de Luz",
+    "transformedIdeaDescription": "¡Convierte tu tablet en un sable de luz! Debe hacer el sonido de 'wom-wom' constante, cambiando el tono según cómo lo inclines, y hacer un sonido de choque fuerte ('krrrsch') si detecta un golpe brusco.",
+    "minAge": 9,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.impact() THEN Audio.play('clash') ELSE Audio.playLoop('hum', pitch=Inclination.x)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Pasos de Gigante",
+    "originalIdeaDescription": "Aplicación que reproduce un sonido de pisada pesada y temblorosa cada vez que el sensor de movimiento detecta el impacto de un paso al caminar, ajustando el volumen según la inclinación del terreno.",
+    "transformedIdeaTitle": "El Gigante Camina: Efectos de Película",
+    "transformedIdeaDescription": "Vamos a hacer los efectos de sonido para una película. Mete el dispositivo en tu bolsillo. Cada vez que des un paso fuerte, debe sonar como un T-Rex acercándose. Si te inclinas (subes una colina), el sonido cambia a cansancio.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN Audio.play('giant_step'); IF Inclination.y > 30 THEN Audio.play('heavy_breath')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Aterrizaje Lunar Ciego",
+    "originalIdeaDescription": "Juego de audio donde el usuario debe aterrizar una nave. La inclinación controla la dirección y el audio indica la proximidad al suelo o alertas de velocidad excesiva.",
+    "transformedIdeaTitle": "Aterrizaje Ciego en Marte",
+    "transformedIdeaDescription": "La visibilidad es cero. Eres el piloto y debes aterrizar la nave escuchando solo los instrumentos. Mantén el dispositivo plano para que el motor suene estable; si te inclinas, sonará una alarma de '¡Peligro!' antes de estrellarte.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.deviation > 10 THEN Audio.play('alarm') ELSE Audio.play('thrusters')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Cocina (Sartén)",
+    "originalIdeaDescription": "El dispositivo simula ser una sartén. El sonido de freír es constante, pero al hacer un movimiento rápido hacia arriba (flip), se reproduce el sonido de voltear la comida.",
+    "transformedIdeaTitle": "Master Chef: El Volteo Perfecto",
+    "transformedIdeaDescription": "¡A cocinar! Tu dispositivo es la sartén. Escucha cómo se fríe el huevo. Para ganar puntos, debes hacer el movimiento de 'saltear' (tirar hacia arriba) para escuchar el sonido de la comida volteándose en el aire.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.playLoop('fry'); IF Motion.y > threshold THEN Audio.play('flip_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Radar de Fantasmas",
+    "originalIdeaDescription": "Juego de realidad aumentada auditiva. El sonido de estática aumenta cuando el usuario apunta (inclina) el dispositivo hacia una dirección específica y se agita al 'capturar' el ente.",
+    "transformedIdeaTitle": "Cazafantasmas: El Escáner Espectral",
+    "transformedIdeaDescription": "Hay un fantasma invisible en la habitación. Muévete e inclina el dispositivo como un radar. Cuando encuentres el ángulo correcto, la estática sonará fuerte. ¡Agita el dispositivo rápido para atraparlo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.facing(TARGET) THEN Audio.volume = 100; IF Motion.shake() AND Audio.volume == 100 THEN Audio.play('trap')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Acústico",
+    "originalIdeaDescription": "Herramienta para ciegos o construcción. Emite un tono continuo cuyo pitch varía según la inclinación. Cuando está perfectamente nivelado y quieto, hace un sonido de éxito.",
+    "transformedIdeaTitle": "Constructor Ciego: La Repisa Perfecta",
+    "transformedIdeaDescription": "Ayuda a construir una casa sin mirar. Programa el dispositivo para que emita tonos agudos o graves según lo inclines. El objetivo es encontrar el silencio o un sonido de 'ding' cuando esté perfectamente recto y quieto.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.pitch = map(Inclination.x); IF Inclination.isFlat() AND Motion.isStill() THEN Audio.play('success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Baile Estatua",
+    "originalIdeaDescription": "Reproduce música mientras detecta movimiento. Cuando la música para aleatoriamente, el usuario debe congelarse (sin inclinación ni movimiento) para ganar.",
+    "transformedIdeaTitle": "Fiesta de Baile: ¡Estatuas Musicales!",
+    "transformedIdeaDescription": "¡A bailar! El dispositivo toca música funky mientras detecta que te mueves (bailas). Cuando la música pare, debes quedarte congelado como una estatua. Si te inclinas o mueves, ¡pierdes y suena una bocina!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Music.isPlaying() AND Motion.isZero() THEN Warn(); IF !Music.isPlaying() AND Motion.detected() THEN Audio.play('fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Generador de Tormentas",
+    "originalIdeaDescription": "Simulador ambiental. Inclinar el dispositivo controla la intensidad de la lluvia (sonido) y agitarlo fuertemente provoca truenos aleatorios.",
+    "transformedIdeaTitle": "El Dios del Clima: Crea tu Tormenta",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima. Inclina el dispositivo poco a poco para que empiece a llover suave y luego fuerte. ¡Cuando quieras asustar a todos, agítalo con fuerza para lanzar un trueno!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SET rain_vol = Inclination.x; IF Motion.shake() THEN Audio.play('thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Traductor de Animales de Juguete",
+    "originalIdeaDescription": "Dependiendo de cómo se sostenga (inclinación) y se mueva el dispositivo, este reproduce diferentes sonidos de animales (galope, rugido, pío).",
+    "transformedIdeaTitle": "La Granja Loca: ¿Qué animal eres?",
+    "transformedIdeaDescription": "Si sostienes el dispositivo horizontal y lo agitas, suenas como un caballo galopando. Si lo pones vertical y saltas, suenas como un mono. ¡Programa tres animales diferentes según cómo muevas el aparato!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.flat AND Motion.shake THEN Audio.play('horse'); IF Inclination.upright AND Motion.jump THEN Audio.play('monkey')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Desactivación de Bomba por Pulso",
+    "originalIdeaDescription": "Un temporizador de cuenta regresiva (audio). El usuario debe mantener el dispositivo en un rango de inclinación específico sin moverse. Si falla, explota.",
+    "transformedIdeaTitle": "Agente Especial: Operación Pulso de Acero",
+    "transformedIdeaDescription": "¡La cuenta atrás ha comenzado! Tienes 10 segundos. Debes mantener el dispositivo exactamente a 45 grados sin que te tiemble la mano. Escucha el tic-tac... si te mueves, ¡BOOM!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('tick_tock'); IF Inclination != 45 OR Motion > 0.5 THEN Audio.play('explosion')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo de Avión de Papel",
+    "originalIdeaDescription": "Simula el sonido del viento. Al lanzar (movimiento fuerte) empieza el sonido, la inclinación cambia el pitch del viento (planeo) y el impacto detiene el sonido.",
+    "transformedIdeaTitle": "Avión de Papel Sónico",
+    "transformedIdeaDescription": "Lanza tu dispositivo (¡con cuidado y sin soltarlo!) como un avión de papel. El movimiento activa el sonido del viento. Inclínalo para planear y cambiar el sonido del aire cortando las alas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.throwDetected() THEN Audio.play('wind'); SET Audio.pitch = Inclination.y"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja Musical de Cuerda Virtual",
+    "originalIdeaDescription": "El usuario debe hacer un movimiento circular (como dar cuerda) detectado por inclinación/movimiento para cargar la música, que luego se reproduce y decae.",
+    "transformedIdeaTitle": "La Caja de Música Antigua",
+    "transformedIdeaDescription": "Esta caja de música no tiene pilas. Debes girar el dispositivo en círculos (como dando cuerda) para cargarla. Luego, suéltalo y escucha la melodía hasta que se le acabe la energía y se detenga.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.rotationLoop() THEN energy++; IF !Motion THEN Audio.play('lullaby', duration=energy)"
+  }
+]

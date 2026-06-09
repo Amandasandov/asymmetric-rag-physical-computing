@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema Automático de Iluminación Nocturna Inteligente",
+    "originalIdeaDescription": "Este sistema utiliza el sensor de intensidad de luz para monitorear constantemente el brillo ambiental de una habitación. Cuando el nivel de luz cae por debajo de un umbral específico, la matriz de LED se enciende automáticamente mostrando un icono de luna o una luz suave. El botón táctil se integra como un interruptor manual que permite al usuario anular el sistema automático, apagando la luz o cambiando el icono mostrado en la matriz, proporcionando control directo sobre la automatización.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "¡Construye un compañero nocturno que cuide tu sueño! En esta actividad, programarás al Guardián para que vigile tu habitación. Si detecta que se ha hecho de noche (oscuridad), encenderá su cara brillante en la Matriz LED para que no tengas miedo. Pero cuidado, si quieres dormir totalmente a oscuras, deberás usar el botón secreto para decirle al Guardián que descanse. Aprenderás sobre umbrales de sensores y estados de encendido/apagado.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity < 30 THEN LEDMatrix.showIcon('Moon'); IF TouchButton.isPressed() THEN LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad con Alarma Fotosensible",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos de valor dentro de una caja oscura. El sensor de luz detecta si la caja se abre (entrada de luz repentina). Si esto ocurre, la matriz de LED parpadea con una señal de advertencia o una calavera. El botón táctil sirve como un mecanismo de autenticación oculto; el usuario debe presionar el botón en una secuencia específica o mantenerlo presionado mientras abre la caja para evitar que la alarma visual se active.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu tesoro de los ladrones curiosos. Programarás un sistema de alarma para tu cofre del tesoro. El sistema debe detectar cuándo alguien abre la tapa dejando entrar la luz. Si un ladrón lo abre sin permiso, la Matriz LED mostrará una calavera parpadeante. Solo tú, el capitán, conoces el truco: presionar el botón táctil secreto mientras abres el cofre para desactivar la trampa. ¡Aprende lógica condicional y seguridad!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 50 AND NOT TouchButton.isPressed() THEN LEDMatrix.animate('Skull') ELSE LEDMatrix.show('Check')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Fotosíntesis y Cuidado de Plantas",
+    "originalIdeaDescription": "Este prototipo simula las necesidades biológicas de una planta digital. La matriz LED muestra el estado de ánimo de la planta (feliz, triste, sedienta). El sensor de intensidad de luz determina si la planta está recibiendo suficiente 'sol'. Si hay poca luz por mucho tiempo, la planta se pone triste. El botón táctil simula el riego; el usuario debe presionar el botón para 'dar agua' y combinarlo con buena luz para que la planta florezca en la pantalla.",
+    "transformedIdeaTitle": "Misión: Jardín Espacial",
+    "transformedIdeaDescription": "Eres el botánico de una nave espacial y debes mantener viva a una planta alienígena. Esta planta necesita dos cosas: luz de las estrellas y agua. Usa el sensor de luz para asegurarte de que reciba energía solar (iluminando el sensor) y usa el botón táctil para regarla. Si logras el equilibrio perfecto, verás cómo tu planta crece y sonríe en la pantalla. Si la descuidas, ¡se marchitará! Un reto de gestión de recursos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > 60 AND TouchButton.wasPressed() THEN PlantHealth += 1; LEDMatrix.showImage(PlantState[PlantHealth])"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes con Tinta Invisible Digital",
+    "originalIdeaDescription": "Una aplicación de criptografía lúdica donde la matriz LED muestra un patrón de ruido estático o píxeles aleatorios por defecto. Para revelar el mensaje oculto o el dibujo secreto, el usuario debe iluminar directamente el sensor de luz con una linterna. La intensidad de la luz controla la claridad del mensaje: más luz equivale a mayor visibilidad. El botón táctil permite al usuario alternar entre diferentes mensajes encriptados almacenados en la memoria.",
+    "transformedIdeaTitle": "El Espía y la Tinta Mágica",
+    "transformedIdeaDescription": "¡Conviértete en un agente secreto! Tienes un dispositivo que parece estropeado, mostrando solo puntos revueltos. Pero es un truco. Para leer los mensajes secretos del cuartel general, debes usar tu 'linterna decodificadora' sobre el sensor de luz. Cuanta más luz haya, más claras se verán las letras en la pantalla. Usa el botón para pasar al siguiente mensaje secreto. Aprenderás sobre mapeo de valores de sensores a visualización.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Brightness = Map(LightIntensity, 0, 100, 0, 255); LEDMatrix.setBrightness(Brightness); IF TouchButton.click() THEN NextMessage()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Sombras para Tráfico de Objetos",
+    "originalIdeaDescription": "Un sistema diseñado para contar cuántas veces un objeto interrumpe un haz de luz. Se coloca el dispositivo bajo una fuente de luz constante. Cada vez que una sombra pasa sobre el sensor de intensidad de luz (reducción drástica de valor), el contador interno incrementa. El número actual se muestra en la matriz de LED. El botón táctil se utiliza para reiniciar el contador a cero o para pausar el conteo temporalmente.",
+    "transformedIdeaTitle": "Detector de Fantasmas en el Pasillo",
+    "transformedIdeaDescription": "¿Hay fantasmas pasando por tu pasillo? ¡Vamos a averiguarlo! Coloca tu dispositivo bajo una lámpara. Cada vez que algo (o alguien invisible) pase y haga sombra sobre el sensor, el número en la pantalla aumentará. ¿Podrás llegar a 10 fantasmas detectados? Usa el botón para borrar la cuenta si te da demasiado miedo. Es una excelente introducción a la detección de cambios de estado y contadores.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < Threshold AND PreviousLight > Threshold THEN Counter++; LEDMatrix.showNumber(Counter); IF TouchButton.isPressed() THEN Counter = 0"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Criatura Reactiva Fotofóbica",
+    "originalIdeaDescription": "Simulación de una criatura artificial que 'vive' dentro de la matriz LED. Esta criatura tiene aversión a la luz (fotofobia). Cuando el sensor detecta niveles altos de luz, la criatura en la matriz muestra una expresión de dolor o intenta 'esconderse' en las esquinas de la pantalla. En la oscuridad, muestra una cara feliz. El botón táctil sirve para 'acariciar' a la criatura, lo que la calma momentáneamente incluso si hay luz.",
+    "transformedIdeaTitle": "El Topo Gruñón",
+    "transformedIdeaDescription": "Conoce al Topo Gruñón. Vive en tu Matriz LED y odia la luz brillante del sol. Tu misión es programar sus emociones. Si hay mucha luz, haz que ponga cara de enfado o cierre los ojos. Si tapas el sensor para hacer oscuridad, se pondrá feliz. Si está muy enfadado por la luz, puedes intentar animarlo presionando el botón para hacerle cosquillas. ¡Explora cómo las entradas del entorno afectan el comportamiento!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 80 THEN Face = 'Sad'; IF TouchButton.isPressed() THEN Face = 'Happy'; LEDMatrix.show(Face)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Rastreador de Eficiencia de Panel Solar Simulado",
+    "originalIdeaDescription": "Una herramienta educativa para enseñar sobre energía renovable. La matriz LED actúa como una barra de progreso o un medidor de eficiencia. El usuario debe orientar el sensor de luz hacia la fuente de luz más fuerte. La matriz llena más filas de LEDs cuanto mayor sea la intensidad de luz detectada. El botón táctil captura una lectura y guarda el 'récord' de eficiencia máxima alcanzada en esa sesión.",
+    "transformedIdeaTitle": "Cargando el Rover de Marte",
+    "transformedIdeaDescription": "Tu Rover de Marte se ha quedado sin batería y necesita energía solar máxima. Usa el sensor de luz como si fuera el panel solar del vehículo. Mueve el dispositivo buscando la luz más fuerte. La pantalla te mostrará una barra de energía: ¡llénala hasta el tope! Cuando encuentres el punto de máxima energía, presiona el botón para bloquear los paneles y salvar la misión. Aprende sobre variables y visualización de datos en tiempo real.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Level = Map(LightIntensity, 0, 100, 0, 7); LEDMatrix.showBarGraph(Level); IF TouchButton.click() THEN MaxScore = Level"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo: El Ninja de la Sombra",
+    "originalIdeaDescription": "Un juego interactivo donde un píxel (el personaje) se mueve automáticamente por la matriz LED. El objetivo es mover al personaje de un punto A a un punto B. Sin embargo, el personaje solo puede moverse si el sensor de luz detecta oscuridad (nivel de luz bajo). Si hay luz, el personaje se congela y parpadea (detectado). El botón táctil se usa para activar un 'escudo' temporal que permite moverse en la luz por breves segundos.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Maestros de la Sombra",
+    "transformedIdeaDescription": "Guía a tu píxel ninja a través de la pantalla. Pero recuerda: los ninjas solo se mueven en las sombras. Debes cubrir el sensor de luz con tu mano para que el ninja avance. Si quitas la mano y entra luz, ¡el ninja se congela para no ser visto! Si estás en apuros y hay mucha luz, presiona el botón para lanzar una bomba de humo y avanzar un poco más. Un juego divertido sobre condiciones lógicas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 20 OR ShieldActive THEN NinjaX++; LEDMatrix.plot(NinjaX, 0); IF TouchButton.pressed() THEN ShieldActive = True"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Semáforo Inteligente Adaptativo",
+    "originalIdeaDescription": "Un sistema de control de tráfico simulado. La matriz LED muestra las luces del semáforo (Rojo, Amarillo, Verde). El sensor de luz detecta si es de día o de noche. Durante el día, el ciclo es normal. Durante la noche (baja luz), el semáforo cambia a modo de precaución (amarillo intermitente). El botón táctil actúa como un botón de cruce peatonal que fuerza la luz roja para los coches en modo diurno.",
+    "transformedIdeaTitle": "Ingeniero de Tráfico de la Ciudad Futura",
+    "transformedIdeaDescription": "Diseña el semáforo más inteligente del mundo. Durante el día (mucha luz), el semáforo funciona normal (Verde-Amarillo-Rojo) para que los coches circulen. Pero de noche (poca luz), debe parpadear en amarillo para ahorrar energía. Además, si un peatón quiere cruzar y presiona el botón, ¡el semáforo debe ponerse en rojo inmediatamente para protegerlo! Aprende sobre máquinas de estados y lógica del mundo real.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity < 30 THEN BlinkYellow() ELSE NormalCycle(); IF TouchButton.isPressed() THEN ForceRed()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Frasco de Luciérnagas Digitales",
+    "originalIdeaDescription": "Una recreación artística de luciérnagas. Cuando el sensor detecta oscuridad, píxeles individuales en la matriz LED se iluminan y desvanecen aleatoriamente, simulando el movimiento de luciérnagas. Si hay luz ambiental fuerte, las luciérnagas 'duermen' (pantalla apagada). El botón táctil permite al usuario cambiar el patrón de parpadeo o la cantidad de luciérnagas activas en la simulación.",
+    "transformedIdeaTitle": "El Bosque Encantado",
+    "transformedIdeaDescription": "Atrapa la magia en tu dispositivo. Crea un frasco de luciérnagas digitales que solo salen a bailar cuando está oscuro. Cubre el sensor de luz y observa cómo los píxeles vuelan y brillan aleatoriamente en la pantalla. Si enciendes la luz, se esconderán. ¿Quieres más magia? Presiona el botón para llamar a más luciérnagas o hacer que vuelen más rápido. Una actividad hermosa para aprender sobre aleatoriedad (random) y sensores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity < 20 THEN LEDMatrix.plot(RandomX, RandomY, Brightness); IF TouchButton.click() THEN FireflyCount++"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Analizador de Contaminación Lumínica (Star Gazer)",
+    "originalIdeaDescription": "Herramienta para astrónomos aficionados. La matriz LED muestra una constelación de estrellas. El sensor de luz mide la contaminación lumínica ambiental. Si la luz ambiental es demasiado alta, la matriz borra las estrellas una por una, simulando cómo la contaminación lumínica nos impide ver el cielo. El botón táctil cicla entre diferentes constelaciones (Osa Mayor, Orión, etc.) para probar su visibilidad.",
+    "transformedIdeaTitle": "Observatorio de Estrellas",
+    "transformedIdeaDescription": "¿Puedes ver las estrellas desde tu casa? Conviértete en astrónomo. Tu pantalla mostrará constelaciones brillantes, pero solo si la habitación está lo suficientemente oscura. Si el sensor detecta 'contaminación lumínica' (luz de lámparas), las estrellas desaparecerán de la pantalla. Apaga las luces para verlas brillar. Usa el botón para buscar nuevas constelaciones en el cielo digital. ¡Aprende sobre ecología y sensores!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VisibleStars = Map(LightIntensity, 0, 100, 7, 0); LEDMatrix.showConstellation(Type, VisibleStars); IF TouchButton.pressed() THEN Type++"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Lectura Nocturna",
+    "originalIdeaDescription": "Un dispositivo para fomentar la lectura. El sistema inicia un temporizador cuando detecta que la luz de lectura está encendida (intensidad alta constante). La matriz muestra una animación de progreso o cuenta el tiempo acumulado. Si la luz se apaga, el temporizador se pausa. El botón táctil permite al usuario ver el tiempo total acumulado o reiniciar la sesión de lectura.",
+    "transformedIdeaTitle": "Desafío del Club de Lectura",
+    "transformedIdeaDescription": "¡Es hora de leer! Este dispositivo inteligente controlará cuánto lees cada noche. Colócalo bajo tu lámpara de lectura. Cuando enciendas la luz, el dispositivo comenzará a contar y llenará una barra de progreso en la pantalla. Si apagas la luz, sabrá que paraste. Presiona el botón para ver tu puntuación final. ¿Podrás llenar toda la pantalla leyendo tu libro favorito? Lógica de temporizadores y detección de umbrales.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > ReadingThreshold THEN TimeReading++; LEDMatrix.showProgress(TimeReading); IF TouchButton.pressed() THEN ShowTotalTime()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cámara Fotográfica de Juguete con Flash",
+    "originalIdeaDescription": "Simula el funcionamiento de una cámara digital básica. El usuario apunta el sensor de luz hacia una escena. Al presionar el botón táctil (obturador), el dispositivo evalúa la luz. Si la luz es suficiente, la matriz muestra un icono de 'Foto Guardada' o una carita feliz. Si la luz es insuficiente, la matriz parpadea erráticamente simulando que se necesita flash o muestra una 'X'.",
+    "transformedIdeaTitle": "Fotógrafo de la Naturaleza",
+    "transformedIdeaDescription": "¡Vamos de safari fotográfico! Tu misión es tomar fotos perfectas. Apunta tu dispositivo y presiona el botón para capturar el momento. Pero cuidado, si está demasiado oscuro, la foto saldrá mal y verás una 'X' en la pantalla. Busca lugares bien iluminados para que al disparar aparezca una sonrisa, indicando una foto perfecta. Aprenderás sobre condicionales anidados: SI botón presionado Y luz suficiente ENTONCES foto.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN { IF LightIntensity > 40 THEN LEDMatrix.showIcon('Smile') ELSE LEDMatrix.showIcon('X') }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Faro Costero Automatizado con Niebla",
+    "originalIdeaDescription": "Modelo de un faro giratorio. La matriz LED muestra una línea de píxeles que 'rota' simulando el haz de luz. El sensor de luz detecta la claridad ambiental. Si la luz baja (simulando niebla o tormenta), la rotación del faro se vuelve más lenta y potente (más brillo) para ser vista mejor. El botón táctil activa la sirena de niebla visual (parpadeo de toda la pantalla) para emergencias.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Los barcos dependen de ti. Programa la luz del faro para que gire en la Matriz LED. El sensor de luz detectará el clima: si hay buena luz, el faro gira rápido y feliz. Pero si oscurece (llega la niebla), el haz de luz debe girar lento y con fuerza para guiar a los marineros. Si ves un peligro inminente, ¡toca el botón de emergencia para lanzar destellos de alerta a todos los barcos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RotationSpeed = Map(LightIntensity, 0, 100, Slow, Fast); LEDMatrix.rotateLine(RotationSpeed); IF TouchButton.pressed() THEN LEDMatrix.flashAll()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Óptico",
+    "originalIdeaDescription": "Un dispositivo de comunicación manual. El botón táctil actúa como el manipulador telegráfico: presiones cortas y largas dibujan puntos y rayas en la matriz LED. El sensor de luz añade una capa de seguridad: el sistema solo permite transmitir si el entorno está oscuro (modo sigilo), evitando que el mensaje sea visto si hay demasiada luz ambiental que lave el contraste de los LEDs.",
+    "transformedIdeaTitle": "Telégrafo Secreto Nocturno",
+    "transformedIdeaDescription": "Envía mensajes en clave a tus aliados. Usarás el botón táctil para escribir puntos y rayas en la pantalla (Código Morse). Pero recuerda, un espía nunca transmite a plena luz del día. Tu dispositivo solo funcionará si estás en la oscuridad (cubre el sensor). Si hay luz, el sistema se bloquea para proteger tu identidad. ¡Aprende historia de la comunicación y lógica booleana (AND)!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() AND LightIntensity < 20 THEN LEDMatrix.pixelOn() ELSE LEDMatrix.pixelOff()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Despertador Solar Interactivo",
+    "originalIdeaDescription": "Un reloj despertador que reacciona al amanecer. El sistema monitorea el aumento gradual de la luz. Cuando la luz cruza un umbral de 'amanecer', la matriz comienza una animación de sol saliendo. El botón táctil funciona como 'Snooze' (posponer), apagando la animación por 5 minutos, pero solo si la luz no ha alcanzado un nivel máximo de brillo (mediodía), momento en el que el botón se desactiva para obligar a despertar.",
+    "transformedIdeaTitle": "Gallo-Bot 3000",
+    "transformedIdeaDescription": "¡Arriba dormilón! Construye un robot que te despierte con el sol. Cuando el sensor de luz detecte que está amaneciendo, el Gallo-Bot mostrará un sol naciente en la pantalla. Puedes presionar el botón para pedir '5 minutos más', pero cuidado: si ya hay mucha luz (es muy tarde), el botón dejará de funcionar y el Gallo-Bot no parará hasta que te levantes. Lógica de umbrales progresivos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > WakeThreshold THEN LEDMatrix.animate('Sun'); IF TouchButton.pressed() AND LightIntensity < MaxLight THEN Snooze()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Reflejos de Luz",
+    "originalIdeaDescription": "Un juego de velocidad y reacción. La matriz LED muestra una cuenta regresiva. Al terminar, la matriz se apaga. El usuario debe usar una linterna para iluminar el sensor de luz lo más rápido posible. El tiempo que tarda desde que la matriz se apaga hasta que el sensor detecta el 'disparo' de luz se muestra en la pantalla. El botón táctil reinicia la ronda.",
+    "transformedIdeaTitle": "Duelo de Láseres Rápidos",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos de vaquero espacial. El juego comienza: 3, 2, 1... ¡YA! En cuanto la pantalla se apague, debes desenfundar tu linterna y disparar un rayo de luz al sensor lo más rápido posible. La pantalla te dirá cuántos milisegundos tardaste. Desafía a tus amigos a ver quién tiene el 'disparo de luz' más rápido de la galaxia. Usa el botón para recargar y jugar de nuevo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Random); TimerStart(); WAIT UNTIL LightIntensity > 80; Show(Timer.Elapsed()); IF TouchButton.pressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Simulador médico. El usuario coloca el dedo suavemente sobre el sensor de luz (variando la cantidad de luz que pasa ligeramente). El programa interpreta las pequeñas fluctuaciones de luz (o un umbral fijo pulsado por el usuario con una linterna) para mostrar un gráfico de electrocardiograma (ECG) desplazándose en la matriz LED. El botón táctil congela la imagen para 'analizar' el pulso.",
+    "transformedIdeaTitle": "Doctor Robot: Escáner Vital",
+    "transformedIdeaDescription": "Convierte tu kit en un escáner médico del futuro. Al pasar tu dedo o una luz rítmicamente sobre el sensor, verás cómo se dibuja el latido del corazón en la pantalla, igual que en los hospitales. Si detectas un latido extraño, presiona el botón de 'Congelar' para detener la imagen y examinar al paciente. ¡Una forma genial de ver cómo los datos invisibles se convierten en gráficos visibles!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlotY = Map(LightIntensity, Min, Max, 0, 7); LEDMatrix.scrollLeft(PlotY); IF TouchButton.isPressed() THEN PauseScrolling()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Monstruos debajo de la Cama",
+    "originalIdeaDescription": "Un dispositivo de exploración para niños. Se usa en oscuridad total. La matriz muestra un radar giratorio. Si el sensor de luz detecta un destello (ojos de monstruo reflejando luz o una linterna externa), la matriz marca la ubicación del 'monstruo' y parpadea. El botón táctil activa un modo de 'escudo' que llena la matriz de luz para ahuyentar lo detectado.",
+    "transformedIdeaTitle": "Radar de Monstruos",
+    "transformedIdeaDescription": "¿Tienes miedo a la oscuridad? ¡Usa el Radar de Monstruos! La pantalla muestra un radar que busca peligros. Si ves un destello de luz en la oscuridad (alguien usando una linterna), el radar te avisará con una alerta. ¡Rápido! Presiona el botón de 'Super Escudo' para iluminar toda la pantalla y asustar al monstruo para que se vaya. Programación de eventos y respuestas rápidas.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "LEDMatrix.animate('Radar'); IF LightIntensity > DarkThreshold THEN { LEDMatrix.show('Alert'); IF TouchButton.pressed() THEN LEDMatrix.allOn() }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Comprobador de Baterías (Simulado)",
+    "originalIdeaDescription": "Herramienta de utilidad simulada. El sensor de luz actúa como la entrada de voltaje (más luz = más carga). El usuario acerca una fuente de luz al sensor. La matriz LED llena una batería gráfica según la intensidad recibida. Verde (lleno), Amarillo (medio), Rojo (bajo). El botón táctil cambia el modo de visualización entre barras gráficas y porcentaje numérico.",
+    "transformedIdeaTitle": "Probador de Energía Alienígena",
+    "transformedIdeaDescription": "Has encontrado cristales de energía (linternas) en un planeta extraño. Necesitas saber cuánta energía tienen. Acerca el cristal al sensor: si brilla mucho, la batería en tu pantalla se llenará hasta el tope. Si brilla poco, verás que está casi vacía. Usa el botón para cambiar el modo de ver la energía: ¿prefieres ver una barra de carga o un número exacto? Aprende a visualizar datos analógicos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge = Map(LightIntensity, 0, 100, 0, 100); IF Mode == 'Bar' THEN DrawBar(Charge) ELSE ShowNumber(Charge); IF TouchButton.click() THEN ToggleMode()"
+  }
+]

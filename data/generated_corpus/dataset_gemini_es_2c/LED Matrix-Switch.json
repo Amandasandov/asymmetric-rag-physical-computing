@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Estado Simple",
+    "originalIdeaDescription": "Un sistema básico de iluminación donde la matriz de LED se enciende completamente en blanco para iluminar cuando el interruptor está activado y se apaga completamente cuando el interruptor está desactivado.",
+    "transformedIdeaTitle": "La Linterna Anti-Monstruos",
+    "transformedIdeaDescription": "¡Crea tu propia linterna de seguridad! Programa la Matriz LED para que brille con máxima intensidad y ahuyente a los monstruos debajo de la cama cuando actives el interruptor, y apágala para dormir tranquilo.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.show(WHITE_FULL) ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Emociones Binario",
+    "originalIdeaDescription": "Un dispositivo que muestra una cara feliz en la matriz de LEDs cuando el interruptor está en una posición y una cara triste cuando está en la posición contraria.",
+    "transformedIdeaTitle": "El Robot Bipolar",
+    "transformedIdeaDescription": "Diseña la cara de un robot que cambia de humor instantáneamente. Dibuja una sonrisa pixelada para cuando el interruptor esté encendido y una cara triste o enojada para cuando esté apagado.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(SMILE) ELSE LEDMatrix.showIcon(SAD)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Control de Señal de Tráfico",
+    "originalIdeaDescription": "Simulación de una señal de tráfico manual. El interruptor controla si se muestra un símbolo de 'Pare' (X o Rojo) o un símbolo de 'Siga' (Flecha o Verde).",
+    "transformedIdeaTitle": "Control de Tráfico Espacial",
+    "transformedIdeaDescription": "Eres el controlador de una estación espacial. Usa el interruptor para dar permiso de aterrizaje (Flecha Verde) o denegar el acceso (X Roja) a las naves que se aproximan.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showImage(ARROW) ELSE LEDMatrix.showImage(CROSS)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Visualizador de Clima Estático",
+    "originalIdeaDescription": "Un dispositivo simple para mostrar el estado del tiempo. El interruptor alterna entre mostrar un icono de un sol brillante y un icono de una nube con lluvia.",
+    "transformedIdeaTitle": "La Ventana Mágica",
+    "transformedIdeaDescription": "Crea una ventana digital que cambia el clima exterior con un clic. Si enciendes el interruptor, harás que salga el sol; si lo apagas, atraerás una tormenta lluviosa.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(SUN) ELSE LEDMatrix.showIcon(RAIN)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Sueño de Mascota",
+    "originalIdeaDescription": "El sistema simula una mascota virtual. Cuando el interruptor está apagado, muestra una animación de 'Zzz', y cuando se enciende, muestra unos ojos abiertos.",
+    "transformedIdeaTitle": "Despierta al Ciber-Gato",
+    "transformedIdeaDescription": "Tu mascota digital está durmiendo. Programa el sistema para que muestre una animación de sueño cuando el interruptor esté apagado, y haz que abra sus grandes ojos pixelados al encenderlo.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(EYES_OPEN) ELSE LEDMatrix.playAnimation(SLEEPING)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Letrero de Privacidad",
+    "originalIdeaDescription": "Un indicador para puertas. Si el interruptor está activado, muestra un símbolo de prohibido o 'Busy', si está desactivado, la pantalla se borra o muestra 'Free'.",
+    "transformedIdeaTitle": "Señal de Cuarto Secreto",
+    "transformedIdeaDescription": "Protege tu laboratorio secreto. Configura el interruptor para activar un letrero brillante de 'NO ENTRAR' en la puerta cuando estés trabajando en experimentos importantes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.scrollText('BUSY') ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Enseñanza de Código Binario",
+    "originalIdeaDescription": "Herramienta educativa donde el estado físico del interruptor se refleja directamente en la pantalla mostrando el número '1' o el número '0'.",
+    "transformedIdeaTitle": "El Traductor de Máquinas",
+    "transformedIdeaDescription": "Aprende a hablar como las computadoras. Crea un dispositivo que muestre un '1' gigante cuando hay energía (interruptor ON) y un '0' cuando no la hay (interruptor OFF).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showChar('1') ELSE LEDMatrix.showChar('0')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cambio de Identidad Digital",
+    "originalIdeaDescription": "Un wearable simulado que cambia el patrón mostrado entre dos logotipos o símbolos diferentes dependiendo de la posición del interruptor.",
+    "transformedIdeaTitle": "Insignia de Superhéroe",
+    "transformedIdeaDescription": "¡Mantén tu identidad secreta a salvo! Usa el interruptor para cambiar tu insignia: apagado muestra tu inicial de civil, encendido muestra tu logo de superhéroe.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showImage(HERO_LOGO) ELSE LEDMatrix.showChar('A')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Candado",
+    "originalIdeaDescription": "Visualización del estado de seguridad. Muestra un icono de un candado cerrado cuando el interruptor está activado y un candado abierto cuando está desactivado.",
+    "transformedIdeaTitle": "La Caja Fuerte Digital",
+    "transformedIdeaDescription": "Simula el mecanismo de una caja fuerte de alta tecnología. Programa la matriz para mostrar un candado cerrado bloqueando el acceso hasta que alguien mueva el interruptor para 'abrirla'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(LOCK_CLOSED) ELSE LEDMatrix.showIcon(LOCK_OPEN)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Latido Cardíaco",
+    "originalIdeaDescription": "Al activar el interruptor, la matriz de LED comienza a reproducir una animación de un corazón latiendo (grande a pequeño). Al apagarlo, se detiene.",
+    "transformedIdeaTitle": "El Corazón de Iron Man",
+    "transformedIdeaDescription": "Construye tu propio reactor de energía. Cuando actives el interruptor, el núcleo (la matriz LED) debe comenzar a latir con una animación rítmica para dar energía a tu traje.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO LEDMatrix.playAnimation(HEARTBEAT) END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Secuencia de Cuenta Regresiva",
+    "originalIdeaDescription": "El interruptor actúa como un disparador. Al pasar de OFF a ON, inicia una cuenta regresiva visual (3, 2, 1) en la matriz.",
+    "transformedIdeaTitle": "Lanzamiento de Cohete",
+    "transformedIdeaDescription": "¡Prepárate para el despegue! Configura el sistema para que, al activar el interruptor de lanzamiento, la pantalla inicie una cuenta atrás automática: 3, 2, 1... ¡FUEGO!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isSwitchedOn() THEN FOR i=3 to 1 DO LEDMatrix.showNumber(i); wait(1s) END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Dirección Izquierda/Derecha",
+    "originalIdeaDescription": "Sistema de señalización simple. El interruptor define la dirección: encendido muestra una flecha a la derecha, apagado muestra una flecha a la izquierda.",
+    "transformedIdeaTitle": "El Explorador de Cuevas",
+    "transformedIdeaDescription": "Estás perdido en una cueva y necesitas dejar señales. Usa el interruptor para indicar al resto del equipo si deben ir a la izquierda o a la derecha en la bifurcación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(ARROW_RIGHT) ELSE LEDMatrix.showIcon(ARROW_LEFT)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Animación de Carga de Batería",
+    "originalIdeaDescription": "Simula el proceso de carga. Cuando el interruptor está encendido, muestra una animación de una barra de batería llenándose repetidamente.",
+    "transformedIdeaTitle": "Estación de Recarga",
+    "transformedIdeaDescription": "Tu vehículo eléctrico necesita energía. Conecta el cable (activa el interruptor) y programa una animación que muestre cómo la batería se llena poco a poco.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO LEDMatrix.playAnimation(BATTERY_FILL) END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Números Aleatorios",
+    "originalIdeaDescription": "Al activar el interruptor, la matriz muestra un número aleatorio entre 1 y 6, simulando un dado digital.",
+    "transformedIdeaTitle": "El Dado Mágico",
+    "transformedIdeaDescription": "No necesitas dados físicos para jugar juegos de mesa. Crea un dado digital que, al activar el interruptor, 'ruede' y muestre un número sorpresa en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isSwitchedOn() THEN LEDMatrix.showNumber(RANDOM(1,6))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Baliza de Señal SOS",
+    "originalIdeaDescription": "Sistema de emergencia. Al encender el interruptor, la matriz reproduce continuamente el patrón visual de código Morse para SOS (... --- ...).",
+    "transformedIdeaTitle": "Baliza de Rescate",
+    "transformedIdeaDescription": "Estás varado en una isla desierta. Configura tu transmisor de emergencia para que envíe una señal visual de S.O.S. constante en cuanto actives el interruptor de pánico.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO LEDMatrix.showText('SOS') END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Modo Fiesta Estroboscópico",
+    "originalIdeaDescription": "Generador de patrones de luz. Al encender el interruptor, la matriz muestra patrones aleatorios de píxeles parpadeando rápidamente.",
+    "transformedIdeaTitle": "Fiesta de Píxeles",
+    "transformedIdeaDescription": "¡Es hora de bailar! Convierte tu matriz LED en una bola de discoteca. Al encender el interruptor, haz que las luces parpadeen con patrones locos y divertidos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO LEDMatrix.showPattern(RANDOM_PATTERN); wait(0.1s) END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ciclo Día y Noche",
+    "originalIdeaDescription": "Representación visual del ciclo diario. Interruptor encendido muestra el sol, interruptor apagado muestra la luna y estrellas.",
+    "transformedIdeaTitle": "Controlador del Tiempo",
+    "transformedIdeaDescription": "Tienes el poder de controlar la rotación de la Tierra. Mueve el interruptor para traer el día (Sol) o la noche (Luna) a tu pequeña ciudad digital.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(SUN) ELSE LEDMatrix.showIcon(MOON)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juez de Aprobación",
+    "originalIdeaDescription": "Sistema para votar sí o no. El interruptor activado muestra un 'Check' (Visto bueno), desactivado muestra una 'X' (Rechazo).",
+    "transformedIdeaTitle": "El Juez Electrónico",
+    "transformedIdeaDescription": "¿Te gusta la comida o no? Crea una máquina de votación simple. Si el interruptor está arriba, muestra un 'Visto Bueno' gigante; si está abajo, una 'X' de desaprobación.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.showIcon(CHECK) ELSE LEDMatrix.showIcon(CROSS)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escáner de Radar Simulado",
+    "originalIdeaDescription": "Simulación de un radar. Cuando el interruptor está encendido, una línea gira alrededor del centro de la matriz como un radar buscando objetos.",
+    "transformedIdeaTitle": "Escáner de Alienígenas",
+    "transformedIdeaDescription": "Convierte tu matriz en un radar de alta tecnología. Al encender el interruptor, haz que una línea de luz gire buscando señales de vida extraterrestre en la oscuridad.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO LEDMatrix.playAnimation(RADAR_SPIN) END"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Estado de Pausa de Videojuego",
+    "originalIdeaDescription": "Indicador de estado de juego. Interruptor encendido muestra una animación de juego (ej. Pacman moviéndose), interruptor apagado muestra el símbolo de Pausa (||).",
+    "transformedIdeaTitle": "Consola Retro",
+    "transformedIdeaDescription": "¡Estás en medio de un nivel difícil! Si el interruptor está encendido, muestra a tu personaje corriendo; si necesitas ir al baño y apagas el interruptor, muestra el símbolo de PAUSA.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN LEDMatrix.playAnimation(GAME_RUN) ELSE LEDMatrix.showIcon(PAUSE_SYMBOL)"
+  }
+]

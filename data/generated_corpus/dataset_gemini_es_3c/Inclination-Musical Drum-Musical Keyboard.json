@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Ritmos y Melodías por Ejes",
+    "originalIdeaDescription": "Un sistema que divide la creación musical en dos ejes físicos: la inclinación en el eje X activa diferentes ritmos de percusión, mientras que la inclinación en el eje Y selecciona y reproduce notas musicales específicas del teclado, permitiendo una composición simultánea.",
+    "transformedIdeaTitle": "La Orquesta en la Palma de tu Mano",
+    "transformedIdeaDescription": "Conviértete en un director de orquesta mágico. Mueve tu mano hacia adelante y hacia atrás para controlar a los pianistas, y de izquierda a derecha para controlar a los bateristas. ¡Debes coordinar tus movimientos para crear una sinfonía perfecta sin que suene caótico!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 20 THEN MusicalDrum.play('Beat1'); IF Inclination.Y > 20 THEN MusicalKeyboard.play('C4')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Efectos de Sonido para Caminar",
+    "originalIdeaDescription": "Dispositivo vestible que detecta el movimiento de caminar mediante cambios bruscos de inclinación. Cada paso genera un golpe de tambor, y si el usuario se inclina hacia adelante (corre), se añade una melodía de piano acelerada.",
+    "transformedIdeaTitle": "Zapatos de Gigante Musical",
+    "transformedIdeaDescription": "¡Imagina que eres un gigante en una película! Cada vez que das un paso fuerte (sacudes el dispositivo), suena un gran tambor. Si te inclinas para correr, suena una música de persecución en el piano. Diseña los efectos sonoros de tus propios pasos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Shake > threshold THEN MusicalDrum.play('Boom'); IF Inclination.X > 45 THEN MusicalKeyboard.play('RunTheme')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Sonoro",
+    "originalIdeaDescription": "Un desafío de destreza donde el usuario debe mantener el dispositivo perfectamente plano. Cualquier desviación en la inclinación dispara sonidos de advertencia: tambores para el eje X y notas disonantes de piano para el eje Y.",
+    "transformedIdeaTitle": "El Camarero Robot en la Cuerda Floja",
+    "transformedIdeaDescription": "Ayuda al camarero robot a llevar una bandeja llena de vasos. Si se inclina a los lados, los vasos chocan (suena el piano desafinado); si se inclina adelante/atrás, la bandeja golpea su cuerpo (suena la batería). ¡Mantén el silencio para ganar!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) > 10 THEN MusicalDrum.play('Crash') ELSE IF abs(Inclination.Y) > 10 THEN MusicalKeyboard.play('Dissonant')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Vehículo Virtual",
+    "originalIdeaDescription": "Uso del sensor de inclinación como volante. Girar a la izquierda/derecha activa sonidos de intermitentes (percusión rítmica), mientras que inclinar hacia atrás (acelerar) sube el tono de una nota continua en el teclado simulando un motor.",
+    "transformedIdeaTitle": "Piloto de Carreras Sónicas",
+    "transformedIdeaDescription": "Construye el volante de tu propio coche de carreras invisible. Al girar, activas el sonido de los intermitentes con la batería. Al inclinar el volante hacia atrás, el motor (piano) ruge más agudo. ¡Completa el circuito sin salirte de la pista!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "MusicalKeyboard.playNote(Map(Inclination.Y, -90, 90, C3, C5)); IF Inclination.X > 30 THEN MusicalDrum.play('Click')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música Gravitatoria",
+    "originalIdeaDescription": "Simulación física donde la inclinación determina la velocidad de reproducción de una melodía pregrabada en el teclado, acompañada de un ritmo de batería que solo suena cuando el dispositivo está invertido (boca abajo).",
+    "transformedIdeaTitle": "La Caja de Música Embrujada",
+    "transformedIdeaDescription": "Has encontrado una caja musical antigua. Solo funciona si la inclinas en el ángulo correcto. Si la pones boca abajo, ¡un fantasma empieza a tocar la batería! Programa la lógica para que la música suene más rápido cuanto más la inclines.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SetTempo(abs(Inclination.X)); MusicalKeyboard.play('Melody'); IF Inclination.Z < 0 THEN MusicalDrum.play('SpookyBeat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Lluvia y Truenos",
+    "originalIdeaDescription": "Generación de paisajes sonoros ambientales. Inclinaciones suaves producen notas de piano aleatorias (gotas de lluvia), mientras que una sacudida brusca (cambio rápido de inclinación) activa un golpe de tambor (trueno).",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar la tormenta. Inclina suavemente tu varita para hacer caer gotas de lluvia (notas suaves de piano). Cuando quieras asustar a todos, ¡agita la varita con fuerza para invocar un trueno (batería)!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.ChangeRate > High THEN MusicalDrum.play('Thunder') ELSE MusicalKeyboard.playRandom('Pentatonic')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Crossfader Físico",
+    "originalIdeaDescription": "Utiliza el eje X de inclinación como un crossfader. A la izquierda total suena solo la pista de batería, a la derecha total solo la melodía de teclado, y en el centro suenan ambas mezcladas.",
+    "transformedIdeaTitle": "Batalla de DJ: Ritmo vs. Melodía",
+    "transformedIdeaDescription": "Eres el DJ principal de la fiesta. A tu izquierda tienes a los bateristas y a tu derecha a los pianistas. Inclina tu mesa de mezclas para decidir quién suena más fuerte o encuentra el equilibrio perfecto en el centro para que todos bailen.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VolumeDrum = Map(Inclination.X, -90, 0, 100, 0); VolumeKeys = Map(Inclination.X, 0, 90, 0, 100)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Postura Corporal Musical",
+    "originalIdeaDescription": "Dispositivo para ergonomía que se adhiere a la espalda. Si el usuario se encorva (inclinación > umbral), suena un piano triste. Si está erguido, suena un ritmo de batería animado.",
+    "transformedIdeaTitle": "El Entrenador Personal Musical",
+    "transformedIdeaDescription": "¡Siéntate derecho! Este dispositivo vigila tu postura. Si te encorvas como una tortuga, tocará una música triste. Si te sientas derecho como un soldado, te premiará con un ritmo de marcha triunfal.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < -20 THEN MusicalKeyboard.play('SadChord') ELSE MusicalDrum.play('MarchBeat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento Virtual",
+    "originalIdeaDescription": "Simula un instrumento donde la inclinación vertical (Y) selecciona la nota del teclado (agudo arriba, grave abajo) y un golpe seco (percusión) sirve para iniciar la nota o darle ataque.",
+    "transformedIdeaTitle": "Flauta Mágica de Aire",
+    "transformedIdeaDescription": "Crea una flauta que se toca moviéndola en el aire. Apunta hacia el cielo para notas agudas y al suelo para graves. Para 'soplar' la nota, da un pequeño golpe de muñeca que activará el sonido.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Note = Map(Inclination.Y, -90, 90, C3, C6); IF Inclination.Shake DETECTED THEN MusicalKeyboard.play(Note) + MusicalDrum.play('Tap')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad con Alarma Sonora",
+    "originalIdeaDescription": "Un objeto que debe permanecer inmóvil. Si se detecta cualquier cambio en la inclinación, se dispara una alarma compuesta por redobles de tambor y sirenas de teclado alternadas.",
+    "transformedIdeaTitle": "Protege el Tesoro del Dragón",
+    "transformedIdeaDescription": "El dispositivo es un huevo de dragón muy valioso. Si un ladrón intenta robarlo (moverlo o inclinarlo), debes programar la alarma más ruidosa posible usando sirenas de piano y golpes de batería para alertar a los guardias.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.IsMoving() THEN LOOP(MusicalDrum.play('Roll'), MusicalKeyboard.play('Siren'))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Interactivo (Efectos Foley)",
+    "originalIdeaDescription": "Herramienta para acompañar historias. Inclinar a la derecha activa sonidos de 'acción' (batería), inclinar a la izquierda activa sonidos de 'emoción' (teclado), permitiendo al usuario sonorizar un cuento en tiempo real.",
+    "transformedIdeaTitle": "Director de Cine Sonoro",
+    "transformedIdeaDescription": "Tus amigos están contando una historia de aventuras. Tu trabajo es poner los efectos de sonido. Inclina a la derecha cuando haya peleas (¡Bam! ¡Pum! con la batería) y a la izquierda cuando haya momentos tristes o románticos (piano).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 30 THEN MusicalDrum.play('Action') ELSE IF Inclination.X < -30 THEN MusicalKeyboard.play('Emotion')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Baile 'Simon Dice' por Inclinación",
+    "originalIdeaDescription": "El sistema reproduce una secuencia (ej: Tambor-Piano-Tambor). El usuario debe replicarla inclinando el dispositivo: Izquierda para Tambor, Derecha para Piano.",
+    "transformedIdeaTitle": "Desafío de Baile Robótico",
+    "transformedIdeaDescription": "El ordenador maestro te envía un código sonoro: ¡Pum, Pling, Pum! Debes descifrarlo moviendo tu cuerpo. Inclínate a la izquierda para los graves y a la derecha para los agudos para pasar al siguiente nivel.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Sequence = [Drum, Key, Drum]; FOREACH Sound in Sequence: Check(Inclination.Direction)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo Espacial",
+    "originalIdeaDescription": "La inclinación controla el 'motor'. Hacia atrás activa propulsores (batería grave continua). Al aterrizar (inclinación plana = 0), suena una fanfarria de teclado. Inclinación extrema dispara alarmas.",
+    "transformedIdeaTitle": "Aterrizaje en Marte",
+    "transformedIdeaDescription": "Pilota tu nave espacial. Inclina hacia atrás para encender los propulsores (ruido de tambores graves) y frenar la caída. Si logras poner la nave totalmente horizontal (plana), sonará la música de victoria. ¡Cuidado con volcar!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < -45 THEN MusicalDrum.play('Rumble'); IF Inclination.Flat == TRUE THEN MusicalKeyboard.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "Agitar el dispositivo como un dado. Dependiendo de la cara (eje) en la que aterrice la inclinación, se genera un patrón rítmico (batería) y melódico (teclado) aleatorio único.",
+    "transformedIdeaTitle": "Dados Musicales de la Suerte",
+    "transformedIdeaDescription": "¿Te has quedado sin ideas para tu canción? Agita la 'Caja Mágica' y déjala sobre la mesa. Dependiendo de cómo caiga, creará un estilo musical diferente (Jazz, Rock, Pop) combinando piano y batería automáticamente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON ShakeStop: IF Inclination.Face == UP THEN PlayStyle('Rock') ELSE PlayStyle('Jazz')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Medidor de Nivel de Burbuja Acústico",
+    "originalIdeaDescription": "Herramienta para ciegos o construcción lúdica. Cuanto más cerca está el dispositivo de estar perfectamente nivelado (0 grados), más armónica es la música (teclado). Si está desnivelado, suena una percusión irregular.",
+    "transformedIdeaTitle": "El Constructor a Ciegas",
+    "transformedIdeaDescription": "Tienes que colocar un estante perfecto, pero no puedes mirar el nivel. Usa tus oídos: si escuchas tambores desordenados, está torcido. Mueve el estante hasta que escuches una nota de piano clara y sostenida. ¡Ahí está perfecto!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Error = abs(Inclination.X); IF Error < 2 THEN MusicalKeyboard.play('PureTone') ELSE MusicalDrum.play('RandomBeats', Speed=Error)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Teremin Basado en Inclinación",
+    "originalIdeaDescription": "Replica el funcionamiento de un Teremin. El eje Y controla el tono (Teclado) y el eje X controla el ritmo de un acompañamiento de percusión, permitiendo tocar melodías sobre una base variable.",
+    "transformedIdeaTitle": "Instrumento Fantasma",
+    "transformedIdeaDescription": "Crea música espeluznante sin tocar ninguna tecla. Mueve el dispositivo en el aire: arriba y abajo para cambiar las notas fantasmales, y de lado a lado para acelerar o frenar los latidos del corazón (batería) de fondo.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tone = Map(Inclination.Y); BeatInterval = Map(Inclination.X); MusicalKeyboard.play(Tone); MusicalDrum.play('Beat', BeatInterval)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Traductor de Emociones Animales",
+    "originalIdeaDescription": "Juguete de simulación. Inclinación hacia abajo (cabeza baja) simula un animal triste (piano lento). Inclinación hacia arriba (cabeza alta) simula un animal excitado (batería rápida + piano agudo).",
+    "transformedIdeaTitle": "Mascota Virtual Sonora",
+    "transformedIdeaDescription": "Programa la voz de tu mascota robot. Si mira al suelo, está triste y toca notas graves y lentas. Si mira al cielo, está feliz y quiere jugar, tocando ritmos rápidos y alegres. ¡Enséñale a expresarse!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -30 THEN Play('Sad') ELSE IF Inclination.Y > 30 THEN Play('Happy')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Videojuego Retro",
+    "originalIdeaDescription": "Simula sonidos de juegos de 8-bits. Inclinar a la derecha es 'saltar' (nota ascendente de teclado). Inclinar hacia adelante es 'disparar' (ruido blanco/snare drum).",
+    "transformedIdeaTitle": "Arcade Humano",
+    "transformedIdeaDescription": "¡Tú eres el mando y el videojuego! Diseña los efectos de sonido para un juego de plataformas. Salta inclinándote a un lado (¡Piunnn! en el piano) y dispara inclinándote hacia el frente (¡Krassh! en la batería).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Roll > Threshold THEN MusicalKeyboard.play('SlideUp'); IF Inclination.Pitch > Threshold THEN MusicalDrum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Reloj de Péndulo Musical",
+    "originalIdeaDescription": "Usa la oscilación rítmica del dispositivo (simulando un péndulo) para mantener el tempo. Cada paso por el centro (0 grados) activa un 'tic' de batería, y en los extremos suena una nota de teclado.",
+    "transformedIdeaTitle": "El Reloj del Abuelo",
+    "transformedIdeaDescription": "Convierte el dispositivo en el péndulo de un reloj antiguo. Balancéalo de izquierda a derecha con un ritmo constante. En el centro debe hacer 'Tic' (batería) y en los extremos 'Toc' (piano). Si pierdes el ritmo, el reloj se rompe.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination crosses 0 THEN MusicalDrum.play('Tick'); IF Inclination reaches Peak THEN MusicalKeyboard.play('Tock')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escala Musical por Gravedad",
+    "originalIdeaDescription": "Visualiza una canica rodando dentro del dispositivo. Al inclinar, la 'canica' rueda virtualmente golpeando 'paredes' que suenan como batería, y rodando sobre 'teclas' que suenan como piano según la posición.",
+    "transformedIdeaTitle": "Laberinto de Canicas Musical",
+    "transformedIdeaDescription": "Imagina que hay una canica suelta dentro de tu dispositivo. Al inclinarlo, la canica rueda. Programa el sistema para que cuando ruede rápido suene como un redoble de tambor, y cuando golpee los bordes suenen notas musicales.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Change(Inclination); MusicalDrum.play('Roll', Speed); IF Inclination == Max THEN MusicalKeyboard.play('Ding')"
+  }
+]

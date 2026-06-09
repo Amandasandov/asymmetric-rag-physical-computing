@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Virtual Aérea",
+    "originalIdeaDescription": "Un sistema que permite al usuario tocar una batería invisible moviendo el dispositivo en el aire. Diferentes tipos de movimientos bruscos (sacudidas) activan diferentes sonidos de percusión, simulando baquetas virtuales.",
+    "transformedIdeaTitle": "¡Rockstar Invisible!",
+    "transformedIdeaDescription": "Convierte tu dispositivo en unas baquetas mágicas. Muévelo con fuerza hacia abajo para golpear el bombo y hacia los lados para tocar la caja. ¡Crea tu propio solo de rock sin tocar ningún instrumento físico!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > threshold THEN MusicalDrum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Pasos Rítmico",
+    "originalIdeaDescription": "Una aplicación que detecta el movimiento vertical al caminar y reproduce un sonido de bombo con cada paso, permitiendo al usuario crear un ritmo constante simplemente caminando.",
+    "transformedIdeaTitle": "Zapatillas Musicales",
+    "transformedIdeaDescription": "¡Ponte el dispositivo en el bolsillo y empieza a marchar! Cada vez que des un paso, sonará un tambor grave. Intenta caminar al ritmo de una canción o corre para acelerar el tempo de tu propia banda de marcha.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.Y_acceleration > step_threshold THEN MusicalDrum.play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Maraca Digital Interactiva",
+    "originalIdeaDescription": "Simulación de una maraca o shaker donde el sonido de percusión aguda se reproduce continuamente mientras el dispositivo detecte movimiento constante, deteniéndose cuando el dispositivo está quieto.",
+    "transformedIdeaTitle": "La Fiesta de la Maraca Loca",
+    "transformedIdeaDescription": "Agita tu dispositivo como si fuera un salero gigante para hacer sonar las maracas. Si dejas de moverte, la música para. ¡Ideal para jugar a las estatuas musicales con tus amigos!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Motion.isMoving() DO MusicalDrum.play('Shaker')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Alarma de Movimiento Antirrobo",
+    "originalIdeaDescription": "Un dispositivo de seguridad simple que, al activarse, espera a detectar cualquier movimiento en los ejes X, Y o Z. Si se detecta movimiento, dispara una secuencia rápida y ruidosa de platillos y tambores.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu diario o tus juguetes. Coloca el dispositivo sobre tu 'tesoro'. Si alguien intenta moverlo, una ruidosa batería de alarma sonará para alertarte de que hay un intruso intentando robarte.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > 0 THEN MusicalDrum.playSequence('Crash', 'Snare')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Boxeo Sonoro",
+    "originalIdeaDescription": "Una herramienta para ejercicio que detecta aceleraciones rápidas hacia adelante (eje Z) simulando un golpe de puño, respondiendo con un sonido de impacto de percusión fuerte.",
+    "transformedIdeaTitle": "Guantes de Poder Sónico",
+    "transformedIdeaDescription": "Sujeta el dispositivo con cuidado y lanza un puñetazo al aire (¡sin golpear nada!). Si lo haces con suficiente fuerza y rapidez, escucharás un potente '¡PUM!' de batería. ¿Cuántos golpes sónicos puedes dar en un minuto?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Z_acceleration > punch_threshold THEN MusicalDrum.play('TomLow')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Generador de Redobles por Inclinación",
+    "originalIdeaDescription": "Utiliza la inclinación del dispositivo para controlar la velocidad de un redoble de tambores. Al inclinar más el dispositivo, el intervalo entre los golpes de tambor disminuye.",
+    "transformedIdeaTitle": "El Gran Redoble de Circo",
+    "transformedIdeaDescription": "¡Damas y caballeros! Eres el director del circo. Inclina tu tableta hacia adelante para hacer que el redoble de tambores vaya cada vez más rápido hasta llegar al gran final del acto de magia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "interval = map(Motion.tilt, 0, 90, 500ms, 50ms); LOOP MusicalDrum.play('Snare', interval)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Robot",
+    "originalIdeaDescription": "Una aplicación de disfraces que reproduce sonidos de percusión metálica y mecánica cuando el usuario se mueve de manera rígida, simulando los servos y pasos de un robot.",
+    "transformedIdeaTitle": "Soy un Robot Gigante",
+    "transformedIdeaDescription": "Camina como un robot: movimientos secos y paradas bruscas. Cada vez que te muevas, tu cuerpo sonará como metal chocando. ¡Perfecto para completar tu disfraz de cyborg!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.start OR Motion.stop THEN MusicalDrum.play('Cowbell')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "Un generador de ideas musicales que selecciona y reproduce un sonido de percusión aleatorio (bombo, caja, platillo, tom) cada vez que el usuario agita el dispositivo.",
+    "transformedIdeaTitle": "La Caja de Sorpresas Rítmicas",
+    "transformedIdeaDescription": "No sabes qué sonido va a salir. Agita el dispositivo y crea una canción loca. A veces será un bombo grave, otras un platillo brillante. ¡Júntate con amigos y cread una orquesta del caos!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Shake -> MusicalDrum.play(Random(['Kick', 'Snare', 'HiHat', 'Crash']))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Galope",
+    "originalIdeaDescription": "Detecta el patrón de movimiento rítmico de arriba a abajo y reproduce un sonido de bloques de madera o percusión similar para imitar el galope de un caballo.",
+    "transformedIdeaTitle": "Carrera de Caballos del Oeste",
+    "transformedIdeaDescription": "Sujeta las riendas (tu dispositivo) y empieza a galopar. El dispositivo detectará tus saltos y hará sonar los cascos del caballo. ¡Corre más rápido para escapar de los bandidos!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Y_oscillation matches 'gallop' THEN MusicalDrum.play('Woodblock')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Truenos",
+    "originalIdeaDescription": "Una aplicación de juego de rol donde un movimiento de 'lanzamiento' (arco amplio) activa un sonido de percusión profunda y resonante, simulando un trueno o explosión mágica.",
+    "transformedIdeaTitle": "El Hechicero de las Tormentas",
+    "transformedIdeaDescription": "Aprende el hechizo del trueno. Dibuja un círculo en el aire y luego empuja hacia adelante con fuerza. Si lo haces bien, invocarás un poderoso estruendo de tambores que hará temblar el suelo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('CastSpell') THEN MusicalDrum.play('FloorTom')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Batería XY",
+    "originalIdeaDescription": "Mapea los ejes X e Y a diferentes instrumentos. Inclinar a la izquierda activa el Hi-Hat, a la derecha el Crash, adelante el Bombo y atrás la Caja.",
+    "transformedIdeaTitle": "Piloto de la Nave Musical",
+    "transformedIdeaDescription": "Pilota tu nave espacial inclinando la tablet. Si giras a la izquierda suenan los platillos, si vas hacia adelante activas los propulsores (bombo). ¡Aprende a volar con ritmo!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.X < -5 THEN Drum('HiHat'); IF Motion.X > 5 THEN Drum('Crash'); IF Motion.Y > 5 THEN Drum('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente Musical",
+    "originalIdeaDescription": "Un temporizador oculto cuenta hacia atrás. Mientras el dispositivo se pasa (detecta movimiento), suena un ritmo constante. Cuando el temporizador llega a cero, suena un estruendo final.",
+    "transformedIdeaTitle": "La Bomba Rítmica",
+    "transformedIdeaDescription": "Pasa el dispositivo a tu amigo con cuidado pero rápido. Mientras se mueva, el ritmo es suave. Pero ten cuidado, en cualquier momento... ¡BOOM! Sonará el platillo final y quien lo tenga pierde.",
+    "minAge": 8,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Timer > 0 AND Motion.detected DO Play('Click'); IF Timer == 0 THEN Play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo Gestual",
+    "originalIdeaDescription": "Permite al usuario establecer el BPM (golpes por minuto) de un metrónomo de percusión agitando el dispositivo al ritmo deseado durante unos segundos.",
+    "transformedIdeaTitle": "Marca tu Propio Ritmo",
+    "transformedIdeaDescription": "¿Tienes una canción en la cabeza? Agita el dispositivo al ritmo de esa canción tres veces. El sistema aprenderá tu velocidad y seguirá tocando la batería automáticamente a tu ritmo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = CalculateAverageInterval(Motion.shakeTimestamps); Loop MusicalDrum.play('Snare', BPM)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "Un sismógrafo educativo que reproduce sonidos de percusión graves y retumbantes proporcionales a la intensidad de la vibración detectada en la mesa.",
+    "transformedIdeaTitle": "El Guardián del Templo",
+    "transformedIdeaDescription": "Deja la tableta en la mesa. Si alguien golpea la mesa o salta cerca, el 'Templo' se enfadará y empezará a rugir con tambores graves. ¡Intenta moverte sin despertar al guardián!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Volume = Motion.intensity * scale; MusicalDrum.play('Timpani', Volume)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Dribbling de Baloncesto",
+    "originalIdeaDescription": "Detecta el movimiento de empuje hacia abajo simulando el bote de un balón y reproduce un sonido seco de percusión para dar feedback rítmico sin usar un balón real.",
+    "transformedIdeaTitle": "Rey de la Cancha Invisible",
+    "transformedIdeaDescription": "Practica tu técnica de bote de baloncesto sin molestar a los vecinos. Haz el gesto de botar el balón y escucharás el sonido exacto. Intenta hacer botes cruzados y mantén el ritmo.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Y_accel < negative_threshold THEN MusicalDrum.play('RimShot')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería de Bolsillo para Correr",
+    "originalIdeaDescription": "Ajusta un ritmo de batería (loop) basado en la cadencia de carrera del usuario. Si el usuario corre más rápido, el loop de batería se acelera.",
+    "transformedIdeaTitle": "Entrenador Personal DJ",
+    "transformedIdeaDescription": "Sal a correr y tu música se adaptará a ti. Si sprintas, la batería se vuelve frenética y rápida. Si caminas para descansar, el ritmo se relaja. ¡Tu movimiento controla la música!",
+    "minAge": 13,
+    "maxAge": 18,
+    "difficultyLevel": 3,
+    "algorithmUsed": "CurrentCadence = Motion.getStepsPerMinute(); MusicalDrum.setTempo(CurrentCadence)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Silencioso",
+    "originalIdeaDescription": "El objetivo es mantener el dispositivo perfectamente plano. Cualquier inclinación o movimiento brusco provoca un sonido de 'platillo roto', indicando un fallo.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que llevas una bandeja llena de vasos de cristal. Tienes que caminar hasta la meta manteniendo la tablet plana. Si te inclinas, ¡CRASH!, se romperá la vajilla (sonará un platillo).",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.tilt > tolerance THEN MusicalDrum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Efecto de Látigo Sonoro",
+    "originalIdeaDescription": "Detecta un movimiento rápido de arco seguido de una parada brusca (gesto de látigo) para reproducir un sonido de 'crack' usando una caja (snare) aguda.",
+    "transformedIdeaTitle": "El Látigo del Aventurero",
+    "transformedIdeaDescription": "Haz el gesto de lanzar un látigo como en las películas de aventuras. Si haces el movimiento de muñeca correcto, escucharás un chasquido seco. ¡Perfecto para explorar la selva del salón!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.peakAccel followedBy Motion.stop THEN MusicalDrum.play('HighSnare')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Constructor de Canciones por Agitación",
+    "originalIdeaDescription": "Cada vez que el usuario agita el dispositivo, se añade una nueva capa de percusión (primero bombo, luego hi-hat, luego caja) construyendo un ritmo complejo progresivamente.",
+    "transformedIdeaTitle": "Construye tu Banda",
+    "transformedIdeaDescription": "Empieza en silencio. Agita una vez: entra el bombo. Agita otra vez: se suman los platillos. ¡Sigue agitando para añadir más instrumentos y crear una canción completa capa por capa!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Counter++; IF Counter==1 Add(Kick); IF Counter==2 Add(HiHat); IF Counter==3 Add(Snare)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Tenis de Mesa Sonoro",
+    "originalIdeaDescription": "Detecta movimientos laterales rápidos y cortos, reproduciendo sonidos de 'ping' o 'pong' (bloques de madera agudos y graves) alternativamente.",
+    "transformedIdeaTitle": "Ping Pong Aéreo",
+    "transformedIdeaDescription": "Juega al ping pong sin mesa. Haz un movimiento de derecha y sonará 'Ping'. Haz un revés y sonará 'Pong'. Juega contra un amigo invisible y mantén la pelota en juego.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.SwingRight THEN Drum('WoodblockHigh') ELSE IF Motion.SwingLeft THEN Drum('WoodblockLow')"
+  }
+]

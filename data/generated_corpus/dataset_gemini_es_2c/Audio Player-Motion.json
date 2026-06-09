@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Reproducción musical basada en el movimiento continuo",
+    "originalIdeaDescription": "Un sistema que reproduce música solo cuando el dispositivo detecta que el usuario se está moviendo y la detiene inmediatamente cuando el usuario se queda quieto.",
+    "transformedIdeaTitle": "Las Estatuas Musicales Automáticas",
+    "transformedIdeaDescription": "¡Crea el árbitro perfecto para el juego de las estatuas! Programa el dispositivo para que toque tu canción favorita mientras bailas, pero cuidado: si el sensor deja de sentir tu baile, la música se cortará automáticamente. ¡El que se mueva sin música pierde!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isMoving() THEN Audio.play() ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Alarma de seguridad contra robos",
+    "originalIdeaDescription": "Un dispositivo de seguridad que activa un sonido de sirena ruidoso cuando detecta cualquier tipo de movimiento en el objeto protegido.",
+    "transformedIdeaTitle": "El Guardián de la Mochila",
+    "transformedIdeaDescription": "¿Hermanos curiosos o compañeros de clase bromistas? Protege tu mochila o diario secreto. Configura el sensor para que, al detectar el más mínimo movimiento no autorizado, suene una alarma ensordecedora.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > 0 THEN Audio.play('siren.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Efectos de sonido para espada de juguete",
+    "originalIdeaDescription": "Uso del sensor para detectar el balanceo del dispositivo y reproducir sonidos de 'woosh' o choques metálicos sincronizados con la acción.",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Jedi",
+    "transformedIdeaDescription": "Convierte un palo de escoba o un tubo de cartón en una espada láser. Programa el dispositivo para que suene un zumbido eléctrico cuando lo muevas suavemente y un sonido de choque cuando hagas un movimiento brusco de ataque.",
+    "minAge": 9,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration > high_threshold THEN Audio.play('clash') ELSE IF Motion.acceleration > low_threshold THEN Audio.play('hum')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Contador de saltos sonoro",
+    "originalIdeaDescription": "El dispositivo detecta el movimiento vertical brusco (salto) y reproduce un sonido de videojuego cada vez que ocurre.",
+    "transformedIdeaTitle": "Súper Mario en la Vida Real",
+    "transformedIdeaDescription": "¡Convierte tu recreo en un videojuego! Ponte el dispositivo en el bolsillo y configúralo para que cada vez que saltes, suene el clásico sonido de 'moneda' o 'boing'. ¿Cuántas monedas puedes recolectar en un minuto?",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.Y > jump_threshold THEN Audio.play('coin_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita mágica interactiva",
+    "originalIdeaDescription": "Al realizar un gesto específico o agitar el dispositivo, se reproduce un sonido de 'chispas mágicas' o encantamiento.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Hechizos",
+    "transformedIdeaDescription": "No eres un muggle cualquiera. Programa tu varita para que responda a tus gestos. Si agitas la varita con fuerza, lanza un hechizo sonoro. ¡Perfecto para obras de teatro o juegos de rol!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.gesture == 'shake' THEN Audio.play('magic_spell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de ritmo para correr",
+    "originalIdeaDescription": "El reproductor de audio cambia el tempo o el tipo de música basándose en la intensidad del movimiento del usuario (caminar vs. correr).",
+    "transformedIdeaTitle": "DJ Maratonista",
+    "transformedIdeaDescription": "Diseña una aplicación deportiva inteligente. Si estás caminando, suena música relajante. Pero si el sensor detecta que empiezas a correr rápido, ¡cambia automáticamente a rock o electrónica de alta energía para motivarte!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.magnitude > run_threshold THEN Audio.play('fast_song') ELSE Audio.play('slow_song')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Instrumento de percusión aérea",
+    "originalIdeaDescription": "Simulación de una pandereta o maracas donde el sonido se reproduce cada vez que el dispositivo se agita.",
+    "transformedIdeaTitle": "Banda de Rock Invisible",
+    "transformedIdeaDescription": "¡Crea música sin instrumentos! Configura el dispositivo para que actúe como una pandereta digital. Tendrás que programar la sensibilidad para que suene exactamente al ritmo que agitas la mano.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shakeDetected() THEN Audio.play('tambourine_hit')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de terremotos simulado",
+    "originalIdeaDescription": "Un sistema que monitorea la estabilidad de una superficie y reproduce una alerta de evacuación si detecta vibraciones.",
+    "transformedIdeaTitle": "Sismógrafo de Alerta Temprana",
+    "transformedIdeaDescription": "Aprende sobre geología y seguridad. Construye una estación sísmica que monitoree la mesa. Si alguien la golpea o la mueve simulando un terremoto, el sistema debe activar la alarma de evacuación inmediatamente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.vibration > safe_limit THEN Audio.play('evacuate_warning')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Narración de historias interactiva",
+    "originalIdeaDescription": "Un audiolibro que pausa la narración y espera a que el usuario agite el dispositivo para 'pasar la página' y continuar con el siguiente capítulo.",
+    "transformedIdeaTitle": "El Libro Mágico de Aventuras",
+    "transformedIdeaDescription": "Crea una historia donde el oyente es el protagonista. El audio cuenta una parte de la historia y se detiene. Para saber qué pasa después, el niño debe agitar el dispositivo como si estuviera pasando una página mágica pesada.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Audio.finished AND Motion.shake == true THEN Audio.playNextTrack()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de la patata caliente",
+    "originalIdeaDescription": "Reproduce un sonido de tic-tac mientras se pasa el dispositivo. Si detecta un movimiento brusco (caída) o el tiempo termina, suena una explosión.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Digital",
+    "transformedIdeaDescription": "Programa el clásico juego de la patata caliente. El dispositivo hará tic-tac mientras lo pasáis con cuidado. Si alguien lo lanza demasiado fuerte o se acaba el tiempo aleatorio... ¡BOOM! Sonido de explosión.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE timer > 0: play('tick'); IF Motion.impact > limit THEN play('boom') AND stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Entrenador de sentadillas",
+    "originalIdeaDescription": "Cuenta las repeticiones detectando el movimiento de bajar y subir, reproduciendo un número o una palabra de aliento en cada repetición.",
+    "transformedIdeaTitle": "Tu Entrenador Personal Robot",
+    "transformedIdeaDescription": "¡Ponte en forma con código! Sujeta el dispositivo a tu pecho. Cada vez que bajes y subas completando una sentadilla, el dispositivo te felicitará con un '¡Uno!', '¡Dos!', '¡Vamos!'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.Y_axis changes_low_to_high THEN Audio.play('count_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mascota virtual quejica",
+    "originalIdeaDescription": "Un dispositivo que emite sonidos de ronroneo cuando está quieto, pero se 'enfada' y gruñe si se agita demasiado.",
+    "transformedIdeaTitle": "El Huevo de Dragón Delicado",
+    "transformedIdeaDescription": "Tienes un huevo de dragón a punto de nacer. Debes mantenerlo tranquilo. Si está quieto, escucharás latidos suaves. Si lo mueves bruscamente, el dragón rugirá enfadado. ¡Cuidado no lo rompas!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > threshold THEN Audio.play('growl') ELSE Audio.play('heartbeat')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Simulador de coche de carreras",
+    "originalIdeaDescription": "Reproduce sonido de motor al ralentí cuando está quieto, y sonido de aceleración cuando se inclina hacia adelante.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Transforma tu mano en un pedal de acelerador. Si mantienes el dispositivo plano, el motor ronronea. Al inclinarlo hacia adelante, ¡el motor ruge y acelera! Compite con tus amigos haciendo los mejores efectos sonoros.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tiltX > 20 THEN Audio.play('rev_engine') ELSE Audio.play('idle_engine')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Nivel de burbuja sonoro para ciegos",
+    "originalIdeaDescription": "Herramienta que reproduce un tono continuo que cambia de frecuencia según la inclinación, ayudando a encontrar la horizontalidad sin mirar.",
+    "transformedIdeaTitle": "El Constructor a Ciegas",
+    "transformedIdeaDescription": "Crea una herramienta inclusiva. El reto es nivelar una mesa o un estante usando solo el oído. Si el dispositivo está inclinado suena agudo, si está recto suena un tono agradable y grave. ¿Puedes ponerlo recto con los ojos cerrados?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "tone_frequency = map(Motion.tilt, 0, 90, 440, 880); Audio.playTone(tone_frequency)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de pasos sigilosos",
+    "originalIdeaDescription": "Juego donde el usuario debe moverse muy despacio; si la aceleración supera un mínimo, suena un timbre de error.",
+    "transformedIdeaTitle": "Entrenamiento Ninja",
+    "transformedIdeaDescription": "Los ninjas deben ser silenciosos. Camina de un extremo a otro de la habitación con el sensor. Si te mueves demasiado rápido o brusco, sonará un 'Gong' y tendrás que volver a empezar. ¿Puedes llegar sin hacer ruido?",
+    "minAge": 7,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > stealth_limit THEN Audio.play('gong')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Caja de sorpresas aleatorias",
+    "originalIdeaDescription": "Cada vez que se agita la caja, reproduce un sonido divertido al azar de una lista predefinida.",
+    "transformedIdeaTitle": "La Caja de las Risas",
+    "transformedIdeaDescription": "Prepara una broma para tus amigos. Esconde el dispositivo en una caja. Programa una lista de sonidos ridículos (pedos, risas, bocinas). Cada vez que alguien mueva la caja, ¡sonará algo diferente e inesperado!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeDetected() THEN Audio.play(randomSoundList[])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Guía de meditación por movimiento",
+    "originalIdeaDescription": "Reproduce sonidos de la naturaleza, pero si el usuario se mueve inquieto, el sonido se detiene o cambia a ruido, fomentando la quietud.",
+    "transformedIdeaTitle": "Maestro Zen",
+    "transformedIdeaDescription": "Un desafío de autocontrol. Siéntate en posición de loto con el sensor en la mano. Si te mantienes perfectamente quieto, escucharás un relajante río. Si te mueves, el río se seca (silencio). ¿Cuánto tiempo puedes mantener el río fluyendo?",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isStill() THEN Audio.play('river') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Efecto de sonido de lanzamiento",
+    "originalIdeaDescription": "Detecta el movimiento de lanzar (sin soltar el dispositivo) y reproduce un sonido de silbido cayendo.",
+    "transformedIdeaTitle": "Lanzamiento de Cohetes Espaciales",
+    "transformedIdeaDescription": "Simula que lanzas un cohete al espacio. Haz el movimiento de lanzar hacia arriba con el brazo. El dispositivo debe detectar la aceleración vertical y reproducir un sonido de despegue 'Whoooosh'.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.accelZ > launch_threshold THEN Audio.play('rocket_launch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ por inclinación",
+    "originalIdeaDescription": "Inclinar el dispositivo a la izquierda reproduce una pista de batería, a la derecha agrega una pista de bajo.",
+    "transformedIdeaTitle": "DJ de Movimiento",
+    "transformedIdeaDescription": "Conviértete en un DJ que no usa botones. Inclina el dispositivo a la izquierda para que suene la batería, y a la derecha para añadir el bajo. ¡Encuentra el equilibrio perfecto en el centro para mezclar ambas!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.tilt < -10 THEN play('drums') ELSE IF Motion.tilt > 10 THEN play('bass')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Aviso de caída para ancianos",
+    "originalIdeaDescription": "Detecta un impacto fuerte seguido de inmovilidad y reproduce un mensaje preguntando si está bien o una alarma.",
+    "transformedIdeaTitle": "El Botiquín Inteligente",
+    "transformedIdeaDescription": "Diseña un prototipo para ayudar a los abuelos. Si el dispositivo detecta una caída brusca (impacto fuerte), debe preguntar en voz alta '¿Estás bien?' o emitir una señal de ayuda. Es programación con un propósito social.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.impact > high_G AND Motion.wait(3s).isStill() THEN Audio.play('help_alert')"
+  }
+]

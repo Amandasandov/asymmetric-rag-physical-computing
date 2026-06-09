@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Batería Aérea Interactiva",
+    "originalIdeaDescription": "Un sistema que permite simular tocar una batería en el aire. El usuario sujeta el dispositivo y al realizar un movimiento brusco (sacudida), se reproduce un sonido de percusión. El botón táctil se utiliza para cambiar el tipo de tambor (caja, bombo, platillo) que suena con el movimiento.",
+    "transformedIdeaTitle": "Entrenamiento de Estrella de Rock",
+    "transformedIdeaDescription": "¡Conviértete en una leyenda del rock! En esta actividad, programarás tu propio instrumento invisible. Deberás configurar el acelerómetro para detectar tus 'golpes' en el aire y asignarles sonidos de batería potentes. Usa el botón mágico para cambiar tu kit de batería en medio del concierto y sorprender a tus fans.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI movimiento > umbral ENTONCES reproducir(Tambor); SI boton_tocado ENTONCES cambiar_instrumento()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Movimiento Personal",
+    "originalIdeaDescription": "Dispositivo de seguridad simple. El usuario coloca el dispositivo sobre un objeto valioso y presiona el botón táctil para 'armar' el sistema. Si el sensor de movimiento detecta cualquier desplazamiento posterior, comienza a sonar una secuencia rápida de tambores como alerta sonora.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu cofre del tesoro de los ladrones. Programarás una trampa de alta tecnología: al pulsar el botón secreto, el sistema se activa. Si alguien intenta mover tu tesoro (el dispositivo), sonará una alarma de tambores ensordecedora para ahuyentar al intruso.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI boton_tocado ENTONCES alarma_activa = VERDADERO; SI alarma_activa Y movimiento_detectado ENTONCES reproducir_bucle(Tambor)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Rítmico",
+    "originalIdeaDescription": "Una herramienta para caminar o correr que reproduce un ritmo de batería cada vez que el usuario da un paso, detectado por el movimiento vertical. El botón táctil sirve para pausar o reiniciar el conteo y el acompañamiento musical.",
+    "transformedIdeaTitle": "Caminata Musical Mágica",
+    "transformedIdeaDescription": "Haz que cada paso cuente creando tu propia banda sonora. Programarás el dispositivo para que suene un ritmo de marcha cada vez que tu cuerpo se mueva al caminar. ¡Si te detienes, la música para! Usa el botón para reiniciar tu viaje musical.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI eje_Y_movimiento > umbral ENTONCES reproducir(Tambor_Bombo); SI boton_tocado ENTONCES reiniciar_sistema()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente Sonora",
+    "originalIdeaDescription": "Un juego grupal donde el dispositivo se pasa de mano en mano. Mientras se detecta movimiento constante, no pasa nada, pero si el movimiento se detiene o el botón se presiona, suena un redoble de tambor indicando 'explosión' o eliminación.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Rítmica",
+    "transformedIdeaDescription": "Programa un juego de alta tensión para jugar con amigos. El dispositivo es una 'bomba' que debe pasarse con mucho cuidado. Si el sensor detecta una sacudida demasiado fuerte al pasarla, ¡BOOM! suena el tambor. El botón sirve para reiniciar el temporizador de la bomba.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI movimiento > limite_seguro ENTONCES reproducir(Tambor_Explosion); SI boton_tocado ENTONCES reiniciar_juego()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Boxeo Virtual",
+    "originalIdeaDescription": "El usuario sujeta el dispositivo y lanza puñetazos al aire. El sensor de movimiento detecta la aceleración frontal rápida y reproduce un sonido de impacto de batería. El botón táctil permite seleccionar entre modo 'entrenamiento' o modo 'combate'.",
+    "transformedIdeaTitle": "Campeón de los Guantes Sonoros",
+    "transformedIdeaDescription": "¡Sube al ring! Vas a crear un entrenador personal que le pone sonido a tus golpes. Cada vez que lances un puñetazo rápido, el dispositivo debe reconocerlo y hacer sonar un fuerte 'PUM' de percusión. Usa el botón para iniciar la ronda de 30 segundos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI aceleracion_X > umbral_alto ENTONCES reproducir(Tambor_Snare); SI boton_tocado ENTONCES iniciar_temporizador()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Historias",
+    "originalIdeaDescription": "Dispositivo para acompañar la narración de cuentos. Al agitar el dispositivo suavemente suena como lluvia (platillos), y al agitarlo fuerte suena como truenos (bombo). El botón táctil se usa para un sonido de impacto dramático final.",
+    "transformedIdeaTitle": "El Narrador de Efectos Especiales",
+    "transformedIdeaDescription": "Dale vida a tus cuentos favoritos. Programarás el dispositivo para que sea tu máquina de efectos especiales. Si agitas suave, crearás lluvia; si agitas fuerte, ¡truenos! Usa el botón para el golpe final de la historia. Aprende a diferenciar la intensidad del movimiento.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI movimiento < 5 ENTONCES reproducir(HiHat); SINO SI movimiento > 5 ENTONCES reproducir(Bombo); SI boton ENTONCES reproducir(Platillo)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Gestual",
+    "originalIdeaDescription": "Herramienta para músicos donde el tempo se define agitando el dispositivo al ritmo deseado. El sistema calcula el intervalo entre sacudidas y luego reproduce un sonido de batería a esa velocidad constante. El botón fija el ritmo.",
+    "transformedIdeaTitle": "Maestro del Ritmo Automático",
+    "transformedIdeaDescription": "Crea una herramienta inteligente que aprenda tu ritmo. Muévete al ritmo que quieras y pulsa el botón para que el dispositivo memorice la velocidad. Luego, el dispositivo seguirá tocando el tambor a esa velocidad exacta para que puedas practicar tu instrumento.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "REPETIR: calcular_tiempo_entre_movimientos(); SI boton_tocado ENTONCES establecer_BPM_y_reproducir(Tambor)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Baile 'Estatua'",
+    "originalIdeaDescription": "Un juego donde suena un ritmo de batería mientras el sensor detecta movimiento continuo. Si el usuario deja de moverse (se queda como estatua), la música se detiene automáticamente. El botón sirve para iniciar la ronda.",
+    "transformedIdeaTitle": "Fiesta de Baile Congelado",
+    "transformedIdeaDescription": "¡A bailar hasta caer rendido! Programarás el juego de las estatuas al revés: la música solo suena si tú te mueves. Si te quedas quieto, el silencio reina. Usa el botón para empezar la fiesta y programa el sensor para detectar tu baile continuo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI boton_estado == ON Y movimiento_detectado ENTONCES reproducir(Tambor); SINO detener_sonido()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Cabalgata",
+    "originalIdeaDescription": "Simula el sonido de los cascos de un caballo. El usuario agita el dispositivo rítmicamente (arriba/abajo) para generar el sonido de galope usando sonidos de percusión. El botón cambia entre paso, trote y galope (velocidad de respuesta).",
+    "transformedIdeaTitle": "El Jockey Digital",
+    "transformedIdeaDescription": "Sube a tu caballo virtual. Usando el sensor de movimiento, harás que suenen los cascos del caballo (tambores) al ritmo de tu mano. Programa el botón para cambiar la dificultad: ¿puedes mantener el ritmo al paso, al trote y al galope?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI movimiento_detectado ENTONCES reproducir_secuencia_galope(velocidad_actual); SI boton_tocado ENTONCES cambiar_velocidad()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Agitador de Cócteles Musical",
+    "originalIdeaDescription": "Un juguete digital que simula una maraca o 'shaker'. Al agitar el dispositivo se reproduce un sonido de 'hi-hat' cerrado. Si se mantiene presionado el botón táctil mientras se agita, el sonido cambia a un 'hi-hat' abierto o pandereta.",
+    "transformedIdeaTitle": "Maracas Electrónicas Pro",
+    "transformedIdeaDescription": "Forma parte de la banda de salsa. Crearás unas maracas digitales que reaccionan a tu muñeca. El desafío es programar una condición compuesta: si agitas SIN tocar el botón suena corto, pero si agitas TOCANDO el botón, el sonido cambia y se alarga.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI movimiento > 0: SI boton_presionado ENTONCES reproducir(HiHat_Abierto) SINO reproducir(HiHat_Cerrado)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Lúdico",
+    "originalIdeaDescription": "El dispositivo se deja en una mesa. Si la mesa se mueve (simulando un terremoto), el sensor de movimiento activa un sonido grave de bombo continuo. El botón táctil sirve para 'resetear' el sismógrafo.",
+    "transformedIdeaTitle": "Sismógrafo de Juguete",
+    "transformedIdeaDescription": "Construye una estación científica. Tu misión es detectar vibraciones en la superficie. Si alguien golpea la mesa, tu dispositivo debe alertar con un sonido de tambor grave. Programa el botón para reiniciar el sistema después de la 'emergencia'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI magnitud_movimiento > umbral_sismo ENTONCES reproducir(Bombo_Largo); SI boton_tocado ENTONCES detener_sonido()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Percusión",
+    "originalIdeaDescription": "El usuario realiza gestos específicos en el aire (círculos o líneas) con el dispositivo. Un movimiento suave hacia adelante dispara un sonido de platillos brillantes. El botón táctil cambia el 'hechizo' (conjunto de sonidos).",
+    "transformedIdeaTitle": "Hechicero de Sonidos",
+    "transformedIdeaDescription": "Tu varita mágica no lanza chispas, ¡lanza ritmos! Programa el sensor para que un movimiento suave hacia adelante haga un sonido brillante de platillos. Usa el botón para cambiar el tipo de magia y descubrir nuevos sonidos de percusión.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "SI movimiento_eje_Z > umbral ENTONCES reproducir(Platillos); SI boton_tocado ENTONCES cambiar_set_sonidos()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "El usuario presiona el botón para iniciar. Después de un tiempo aleatorio, el dispositivo vibra o espera. El usuario debe agitarlo lo más rápido posible. Al detectar el movimiento, suena un tambor y se muestra el tiempo de reacción (si hubiera pantalla, aquí solo sonido de éxito).",
+    "transformedIdeaTitle": "Duelo de Reflejos Rápidos",
+    "transformedIdeaDescription": "Pon a prueba tus reflejos. Pulsa el botón y espera... cuando sientas o intuyas la señal (o tras 3 segundos mentales), ¡agita el dispositivo! Si lo haces rápido, sonará un premio de batería. Si eres lento, sonará un tambor triste.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI boton_tocado ENTONCES esperar(random); SI movimiento_detectado ENTONCES reproducir(Tambor_Premio)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ayudante de Carpintero (Martillo)",
+    "originalIdeaDescription": "Simula la acción de martillar. El usuario hace el gesto de golpear hacia abajo. El sensor de movimiento detecta la parada brusca (impacto) y reproduce un sonido de golpe seco (caja/snare). El botón cambia el material (madera/metal).",
+    "transformedIdeaTitle": "El Constructor Virtual",
+    "transformedIdeaDescription": "¡A construir sin herramientas peligrosas! Convierte tu dispositivo en un martillo inteligente. Debes programarlo para detectar cuando haces el gesto de golpear hacia abajo y frenas de golpe. ¡Clack! Sonará el tambor. Usa el botón para cambiar de herramienta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI aceleracion_Y_negativa > limite Y parada_brusca ENTONCES reproducir(Snare); SI boton_tocado ENTONCES cambiar_sonido()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador DJ por Inclinación",
+    "originalIdeaDescription": "El usuario inclina el dispositivo a la izquierda para activar el bombo y a la derecha para activar la caja. El botón táctil se usa como un efecto de 'break' o pausa momentánea en la mezcla.",
+    "transformedIdeaTitle": "DJ de Movimiento",
+    "transformedIdeaDescription": "¡Controla la pista de baile con tus manos! No necesitas girar discos, solo inclinar tu dispositivo. Programa la inclinación izquierda para los graves y la derecha para los agudos. Usa el botón táctil para hacer un 'drop' espectacular en la música.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI inclinacion_X < -20 ENTONCES reproducir(Bombo); SI inclinacion_X > 20 ENTONCES reproducir(Caja); SI boton ENTONCES pausar()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de 'Saltos'",
+    "originalIdeaDescription": "El dispositivo se sujeta en la cintura. Al detectar un salto (aceleración vertical fuerte hacia arriba y luego caída), reproduce un efecto de sonido de salto de videojuego usando percusión aguda. El botón reinicia el contador de saltos.",
+    "transformedIdeaTitle": "Saltarín de Videojuegos",
+    "transformedIdeaDescription": "¿Quieres sonar como un personaje de videojuego? Programa tu dispositivo para detectar cuando saltas en la vida real. Al despegar del suelo, debe sonar un efecto divertido de batería. Usa el botón para empezar una nueva partida de saltos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI aceleracion_Z > umbral_salto ENTONCES reproducir(Tom_Agudo); SI boton_tocado ENTONCES reset_contador()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Código Morse de Percusión",
+    "originalIdeaDescription": "Sistema de comunicación secreta. Un toque en el botón es un 'punto' (sonido corto de hi-hat). Una sacudida del dispositivo es una 'raya' (sonido largo de platillo). Permite enviar mensajes rítmicos.",
+    "transformedIdeaTitle": "El Telégrafo Secreto de Espías",
+    "transformedIdeaDescription": "Envía mensajes en clave a tus compañeros espías. Usarás una combinación de toques y movimientos. Programa el botón para sonidos cortos y una sacudida para sonidos largos. ¡Crea tu propio lenguaje rítmico que nadie más entienda!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI boton_tocado ENTONCES reproducir(Corto); SI movimiento_detectado ENTONCES reproducir(Largo)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Sonora",
+    "originalIdeaDescription": "Simulador deportivo. El usuario hace el gesto de 'swing' de tenis. El sensor detecta el arco del movimiento y reproduce el sonido de golpe (tambor) en el punto de máxima velocidad. El botón sirve para 'sacar' (iniciar punto).",
+    "transformedIdeaTitle": "Tenis Sónico",
+    "transformedIdeaDescription": "Juega al tenis en tu habitación. Programa el dispositivo para reconocer tu 'swing' de derecha o revés. Justo cuando tu brazo vaya más rápido, debe sonar el golpe de la raqueta. Usa el botón para lanzar la pelota al aire antes de golpear.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI boton_tocado ENTONCES preparar_saque(); SI modo_juego Y movimiento_arco_detectado ENTONCES reproducir(Golpe_Seco)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Compositor Aleatorio",
+    "originalIdeaDescription": "Cada vez que el usuario agita el dispositivo, se selecciona y reproduce un sonido de batería al azar. El usuario puede presionar el botón para 'guardar' el último sonido en una secuencia (loop).",
+    "transformedIdeaTitle": "Lotería Musical",
+    "transformedIdeaDescription": "Descubre nuevos ritmos por azar. Agita el dispositivo para obtener un sonido sorpresa. ¿Te gusta ese sonido? ¡Rápido, presiona el botón para atraparlo! Intenta coleccionar sonidos hasta armar una canción completa.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SI movimiento ENTONCES sonido_actual = random(Tambores); reproducir(sonido_actual); SI boton ENTONCES guardar_en_lista(sonido_actual)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Acústico",
+    "originalIdeaDescription": "Herramienta para nivelar superficies. Si el dispositivo no está plano (detectado por Motion/Inclinación), suena un redoble de tambor rápido. Cuando está perfectamente plano, el sonido se detiene o suena un golpe único. El botón calibra el 'cero'.",
+    "transformedIdeaTitle": "El Equilibrista Perfecto",
+    "transformedIdeaDescription": "Ayuda a mantener el equilibrio. Programarás una herramienta que se queja (con ruido de tambores) si está torcida. Tu objetivo es mover el dispositivo hasta encontrar el silencio absoluto, lo que significa que está perfectamente plano. Usa el botón para definir qué es 'plano'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SI abs(inclinacion_X) > 2 O abs(inclinacion_Y) > 2 ENTONCES reproducir(Redoble); SI boton ENTONCES calibrar_cero()"
+  }]

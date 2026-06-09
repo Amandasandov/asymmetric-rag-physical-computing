@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Luz Nocturna Automática",
+    "originalIdeaDescription": "Un sistema que monitorea constantemente la luz ambiental y enciende un ícono reconfortante en la matriz LED cuando la habitación se oscurece, sirviendo como luz de noche.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "Programa a tu 'Guardián' para que duerma cuando hay luz, pero si detecta que la habitación se oscurece para dormir, despierte mostrando unos ojos protectores en la pantalla para cuidarte toda la noche.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN LED_Matrix.show('Eyes') ELSE LED_Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Indicador Visual de Carga Solar",
+    "originalIdeaDescription": "Una barra de progreso gráfica que se llena o vacía en la matriz LED dependiendo de la intensidad de la luz directa que recibe el sensor, simulando un panel solar.",
+    "transformedIdeaTitle": "Recargando el Robot Mars Rover",
+    "transformedIdeaDescription": "¡Tu Rover está en Marte! Necesita energía solar. Escribe un código que llene la barra de batería en la pantalla proporcionalmente a cuánta luz de linterna (sol) le apuntes al sensor.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "level = map(Light_Intensity, 0, 100, 0, 7); LED_Matrix.showBarGraph(level)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Proximidad por Sombra",
+    "originalIdeaDescription": "El dispositivo detecta cuando un objeto proyecta una sombra sobre el sensor (disminución rápida de luz) y muestra un símbolo de alerta en la matriz.",
+    "transformedIdeaTitle": "La Cueva del Dragón Dormido",
+    "transformedIdeaDescription": "El dragón duerme tranquilo. Si tu mano pasa sobre el sensor y crea una sombra, el dragón se despierta y muestra una cara enojada en la matriz. ¡No lo despiertes!",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity drops_suddenly THEN LED_Matrix.show('Angry_Face')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Secretos",
+    "originalIdeaDescription": "Un sistema que mantiene la pantalla apagada en condiciones normales, pero revela un texto o código secreto en la matriz LED solo cuando hay oscuridad total.",
+    "transformedIdeaTitle": "Agente Secreto: Mensajes en la Oscuridad",
+    "transformedIdeaDescription": "Eres un espía. El código de la misión es ultra secreto y solo debe aparecer cuando escondes el dispositivo bajo tu manta o en una caja oscura. Programa la pantalla para revelar el código solo si la luz es cero.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity == 0 THEN LED_Matrix.scroll('CODIGO_77') ELSE LED_Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Monitor de Fotosíntesis Simulado",
+    "originalIdeaDescription": "Muestra una cara feliz en la matriz cuando hay suficiente luz para una 'planta virtual' y una cara triste o marchita cuando los niveles de luz son demasiado bajos.",
+    "transformedIdeaTitle": "Tamagotchi Botánico",
+    "transformedIdeaDescription": "Tu planta digital necesita sol para vivir. Crea un programa donde la planta sonría si la pones cerca de una ventana (luz alta), pero llore si la dejas en un cajón oscuro.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN LED_Matrix.show('Happy') ELSE LED_Matrix.show('Sad')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulación de Pupila de Gato",
+    "originalIdeaDescription": "Una animación en la matriz LED que cambia el tamaño de un círculo (pupila) inversamente proporcional a la cantidad de luz detectada.",
+    "transformedIdeaTitle": "Ojo de Gato Robótico",
+    "transformedIdeaDescription": "Los gatos tienen ojos increíbles. Programa la matriz para dibujar una pupila que se hace muy fina (una línea) cuando apuntas con una linterna, y se hace redonda y grande cuando apagas la luz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 80 THEN LED_Matrix.show('Line') ELSE LED_Matrix.show('Circle')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma Visual de Exceso de Luz",
+    "originalIdeaDescription": "Un dispositivo para bibliotecas o museos que muestra una señal de advertencia parpadeante si la luz solar directa golpea un área sensible.",
+    "transformedIdeaTitle": "El Vampiro Digital",
+    "transformedIdeaDescription": "Tu dispositivo es un vampiro alérgico al sol. Si detecta luz brillante, debe mostrar una animación de 'quemadura' o calavera. Mantenlo a salvo en la sombra.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 70 THEN LED_Matrix.animate('Skull') ELSE LED_Matrix.show('Heart')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Telégrafo Óptico Espacial",
+    "originalIdeaDescription": "Detecta pulsos de luz (flashes de linterna) y cambia el estado de los LEDs, permitiendo enviar señales visuales simples basadas en la duración de la luz.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Estás en una nave espacial. Usa tu linterna para enviar señales a la base. Programa el sistema para que cada vez que reciba un 'flash' de luz, encienda un nuevo píxel en la matriz hasta completar el mensaje.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity changes_from_low_to_high THEN LED_Matrix.pixel_on(next_index)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Generador de Luciérnagas Aleatorias",
+    "originalIdeaDescription": "Cuando el sensor detecta oscuridad, la matriz LED enciende píxeles en posiciones aleatorias intermitentemente, simulando insectos brillantes.",
+    "transformedIdeaTitle": "Frasco de Luciérnagas Virtuales",
+    "transformedIdeaDescription": "Atrapa la magia del bosque. Crea un programa que, al apagar las luces del aula, haga que aparezcan puntitos de luz parpadeando aleatoriamente en la pantalla como si fueran luciérnagas en un frasco.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN LED_Matrix.setPixel(randomX, randomY, ON)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Apertura de Cofre",
+    "originalIdeaDescription": "Detecta la transición repentina de oscuridad a luz cuando se abre una caja cerrada y activa una animación sorpresa en la matriz.",
+    "transformedIdeaTitle": "La Trampa del Cofre del Tesoro",
+    "transformedIdeaDescription": "Protege tus tesoros. Coloca el dispositivo dentro de una caja cerrada. Programa una trampa: si alguien abre la caja y entra luz, la pantalla debe mostrar una cuenta regresiva de explosión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > threshold THEN LED_Matrix.startCountdown(5)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Estación Meteorológica de Íconos",
+    "originalIdeaDescription": "Interpreta la luz ambiental para mostrar un sol (día despejado) o una nube/luna (día nublado o noche) automáticamente.",
+    "transformedIdeaTitle": "Ventana Meteorológica Inteligente",
+    "transformedIdeaDescription": "¿Está soleado o nublado? No mires afuera, mira tu dispositivo. Prográmalo para que dibuje un Sol brillante si el sensor recibe mucha luz, o una Nube si la luz es tenue.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 60 THEN LED_Matrix.show('Sun') ELSE LED_Matrix.show('Cloud')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Vela Digital Interactiva",
+    "originalIdeaDescription": "Muestra una animación de llama que se 'apaga' (la matriz se oscurece) si el usuario sopla fuerte cerca del sensor (bloqueando momentáneamente la luz) o cubre el sensor.",
+    "transformedIdeaTitle": "Sopla la Vela de Cumpleaños",
+    "transformedIdeaDescription": "¡Pide un deseo! Dibuja una vela encendida en la matriz. El reto es hacer que se apague cuando pasas tu mano rápidamente sobre el sensor (simulando soplar o tapar el aire).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity drops_fast THEN LED_Matrix.animate('Extinguish')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad Láser",
+    "originalIdeaDescription": "Utiliza un puntero láser (o linterna enfocada) apuntando al sensor. Si el haz de luz se corta (alguien pasa), la matriz muestra una 'X' grande.",
+    "transformedIdeaTitle": "Misión Imposible: Rayos Láser",
+    "transformedIdeaDescription": "Protege el diamante del museo. Apunta una linterna fijamente al sensor. Si un ladrón pasa y corta el rayo de luz (la intensidad baja), ¡activa la alarma visual en la pantalla!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < expected_beam_value THEN LED_Matrix.flash('ALARM')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Eclipse",
+    "originalIdeaDescription": "Representa gráficamente un cuerpo celeste cubriendo a otro basándose en la reducción gradual de la luz en el sensor.",
+    "transformedIdeaTitle": "El Gran Eclipse Solar",
+    "transformedIdeaDescription": "Recrea un evento astronómico. Usa una lámpara como Sol. Mueve tu mano lentamente sobre el sensor. Programa la matriz para mostrar cómo la Luna cubre el Sol paso a paso.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "phase = map(Light_Intensity, 0, 100, 0, 5); LED_Matrix.showEclipsePhase(phase)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Radar de Exploración de Cuevas",
+    "originalIdeaDescription": "Muestra un patrón de radar giratorio cuando está oscuro (modo exploración) y un ícono de 'Check' cuando encuentra una salida iluminada.",
+    "transformedIdeaTitle": "Explorador de Cavernas Profundas",
+    "transformedIdeaDescription": "Estás perdido en una cueva. Si está oscuro, tu radar (animación giratoria) debe estar buscando la salida. En cuanto detectes luz natural, muestra una flecha indicando '¡Salida encontrada!'",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN LED_Matrix.animate('Radar') ELSE LED_Matrix.show('Arrow')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Brillo Adaptativo",
+    "originalIdeaDescription": "Ajusta el número de píxeles encendidos en la matriz para igualar el nivel de luz ambiental, actuando como un espejo de luz.",
+    "transformedIdeaTitle": "El Espejo Camaleón",
+    "transformedIdeaDescription": "¿Puede tu tecnología imitar a la naturaleza? Crea un patrón que brille intensamente si la habitación tiene mucha luz, pero que se atenúe y casi desaparezca si apagas la luz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "brightness_level = Light_Intensity; LED_Matrix.setBrightness(brightness_level)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Fotónica",
+    "originalIdeaDescription": "El usuario debe cubrir el sensor lo más rápido posible cuando la matriz LED muestra una señal específica, midiendo el tiempo de reacción.",
+    "transformedIdeaTitle": "Reflejos Ninja: Apaga la Luz",
+    "transformedIdeaDescription": "Entrenamiento Ninja. Cuando la matriz muestre un 'Flash', debes cubrir el sensor con tu mano instantáneamente para dejarlo a oscuras. Si eres rápido, ganarás un punto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LED_Matrix.isShowing('Flash') AND Light_Intensity < 10 THEN score++"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Despertador para Gallos Digitales",
+    "originalIdeaDescription": "Detecta el aumento gradual de luz (amanecer) y activa una animación de un animal despertando cuando se supera un umbral.",
+    "transformedIdeaTitle": "Gallo Madrugador Tecnológico",
+    "transformedIdeaDescription": "Eres un gallo robot. Tu misión es despertar a la granja. Programa el sensor para detectar cuando sale el sol (aumenta la luz) y muestra un 'Kikirikí' visual en la pantalla.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > dawn_threshold THEN LED_Matrix.animate('Rooster')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Medidor de Contaminación Lumínica",
+    "originalIdeaDescription": "Muestra una escala de 'estrellas' en la matriz. Cuanta más luz ambiental haya, menos estrellas se muestran, educando sobre la contaminación lumínica.",
+    "transformedIdeaTitle": "Cazador de Estrellas Perdidas",
+    "transformedIdeaDescription": "En la ciudad no se ven las estrellas por las luces. Crea un simulador: si hay mucha luz en el sensor, la pantalla está vacía. Si tapas el sensor (oscuridad de campo), ¡aparecen las estrellas!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "visible_stars = map(Light_Intensity, 100, 0, 0, 20); LED_Matrix.showStars(visible_stars)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Theremin Visual de Sombras",
+    "originalIdeaDescription": "Al mover la mano arriba y abajo sobre el sensor (variando la sombra), cambia la altura o forma de una onda mostrada en la matriz LED.",
+    "transformedIdeaTitle": "El Mago de las Ondas",
+    "transformedIdeaDescription": "Crea un instrumento musical visual. Sin tocar el dispositivo, mueve tu mano arriba y abajo sobre el sensor. La sombra de tu mano debe hacer que las barras en la pantalla suban y bajen mágicamente.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "height = map(Light_Intensity, 0, 100, 0, 7); LED_Matrix.showColumn(height)"
+  }
+]

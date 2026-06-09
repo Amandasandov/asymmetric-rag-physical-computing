@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad por Sombra",
+    "originalIdeaDescription": "Un sistema de seguridad simple que utiliza el sensor de luz para detectar cuando una sombra pasa sobre el dispositivo (intruso), activando inmediatamente una luz roja intermitente y un sonido de tambor fuerte como alarma.",
+    "transformedIdeaTitle": "La Trampa del Agente Secreto",
+    "transformedIdeaDescription": "¡Eres un espía protegiendo documentos secretos! Crea una trampa que detecte cuando un enemigo intenta robar tus archivos. Si la luz es bloqueada por la mano de un ladrón, activa la sirena y la luz de alerta.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN { Lamp.setColor('Red'); MusicalDrum.play('Snare_Roll'); } ELSE { Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Linterna",
+    "originalIdeaDescription": "Un instrumento musical interactivo donde la intensidad de una linterna apuntada al sensor controla la velocidad de un ritmo de batería y el color de la lámpara, permitiendo 'tocar' música con luz.",
+    "transformedIdeaTitle": "DJ de Luces Mágicas",
+    "transformedIdeaDescription": "Conviértete en un DJ futurista. Usa una linterna para controlar el ritmo de la fiesta. Cuanta más luz reciba tu consola, más rápido sonará la batería y más brillantes serán las luces de la pista de baile.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop { BPM = Map(Light_Intensity, 0, 100, 60, 180); MusicalDrum.setTempo(BPM); Lamp.setBrightness(Light_Intensity); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Amanecer con Audio",
+    "originalIdeaDescription": "Un dispositivo que simula el amanecer aumentando gradualmente el brillo de la lámpara cuando detecta un incremento en la luz ambiental natural, acompañado de un ritmo de tambor suave que se intensifica.",
+    "transformedIdeaTitle": "Despertador Solar Inteligente",
+    "transformedIdeaDescription": "Diseña el despertador perfecto para no llegar tarde a la escuela. Cuando el sol salga por tu ventana, tu dispositivo debe acompañarlo con una luz suave y un ritmo de percusión que te despierte con energía.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > Threshold THEN { Lamp.fadeOn(Yellow); MusicalDrum.playLoop('Soft_Beat'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Cuevas Oscuras",
+    "originalIdeaDescription": "Una herramienta para exploradores que enciende automáticamente una linterna y emite sonidos de eco (tambor) cuando el nivel de luz cae por debajo de un cierto umbral, simulando la entrada a una cueva.",
+    "transformedIdeaTitle": "El Explorador de Cavernas",
+    "transformedIdeaDescription": "Estás explorando una cueva profunda. Programa tu equipo para que, cuando entres en la zona oscura, se encienda tu linterna automáticamente y suene un tambor que simule tus pasos haciendo eco.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN { Lamp.on(); MusicalDrum.play('Tom_Tom'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Fotosensible",
+    "originalIdeaDescription": "Una mascota digital que reacciona a la luz. Si hay demasiada luz, se 'asusta' (luz roja y tambores rápidos); en la oscuridad, se 'duerme' (luz tenue y silencio).",
+    "transformedIdeaTitle": "Monstruito de la Oscuridad",
+    "transformedIdeaDescription": "Tu mascota virtual es un pequeño monstruo que ama la oscuridad. Si lo expones a mucha luz, se enojará, se pondrá rojo y golpeará el suelo. Mantenlo en la sombra para que duerma tranquilo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 80 THEN { Lamp.setColor('Red'); MusicalDrum.play('Crash'); } ELSE { Lamp.setColor('Blue'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Luces de Fiesta Estroboscópicas Automáticas",
+    "originalIdeaDescription": "Un sistema de iluminación para fiestas que activa una luz estroboscópica y un ritmo de baile fuerte solo cuando la habitación se oscurece lo suficiente para crear ambiente.",
+    "transformedIdeaTitle": "Modo Fiesta Nocturna",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Pero la fiesta solo empieza cuando se apagan las luces principales. Programa el sistema para que lance luces de colores y un ritmo bailable en cuanto alguien apague el interruptor de la sala.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN { Lamp.strobe(MultiColor); MusicalDrum.playLoop('Dance_Beat'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo y Semáforo",
+    "originalIdeaDescription": "Un juego interactivo similar a 'Luz Roja, Luz Verde'. La lámpara indica cuándo moverse; si el sensor detecta un cambio de sombra (movimiento) durante la luz roja, suena un tambor de eliminación.",
+    "transformedIdeaTitle": "Estatuas Musicales de Luz",
+    "transformedIdeaDescription": "Crea un juego de '1, 2, 3, Momia'. La lámpara cambia de color. Si intentas bloquear el sensor con tu mano cuando la luz es roja, ¡perdiste! El tambor sonará para indicar que estás fuera.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.setColor('Red'); WAIT(2s); IF Light_Change_Detected THEN MusicalDrum.play('Fail_Sound');"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Monitor de Planta con Alerta Sonora",
+    "originalIdeaDescription": "Un dispositivo que simula el cuidado de una planta. Si no recibe suficiente luz durante el día, la lámpara parpadea en amarillo y suena un tambor grave indicando 'tristeza'.",
+    "transformedIdeaTitle": "Salva a la Planta Alienígena",
+    "transformedIdeaDescription": "Tienes una planta espacial que necesita luz de estrella para vivir. Si detecta que está en la sombra, haz que pida ayuda parpadeando en amarillo y haciendo sonidos graves con el tambor.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < Required_Level THEN { Lamp.blink('Yellow'); MusicalDrum.play('Low_Tom'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual Adaptativo",
+    "originalIdeaDescription": "Un metrónomo donde la frecuencia de los golpes de tambor y los pulsos de luz se ajustan automáticamente según la claridad de la habitación (más luz = ritmo más rápido).",
+    "transformedIdeaTitle": "El Corazón de la Luz",
+    "transformedIdeaDescription": "Crea un 'corazón' digital. Cuando hay mucha luz (actividad), el corazón late rápido (tambor y luz rápida). Cuando oscurece (descanso), el latido se vuelve lento y relajante.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "DelayTime = 1000 - (Light_Intensity * 10); Loop { MusicalDrum.play('Beat'); Lamp.pulse(); Wait(DelayTime); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El sistema detecta destellos de luz externos (como relámpagos reales o simulados) y responde con un trueno (tambor) y un parpadeo de la lámpara con retraso.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Recrea una tormenta. Usa una linterna para hacer 'relámpagos' sobre el sensor. Tu programa debe detectar ese destello y responder con un sonido de trueno y una réplica de luz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity_Spike_Detected THEN { Wait(1s); MusicalDrum.play('Thunder'); Lamp.flash('White'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Codificada por Luz",
+    "originalIdeaDescription": "Un mecanismo que 'abre' una caja fuerte (luz verde + sonido de éxito) solo si se expone a un nivel de luz muy específico, ni muy brillante ni muy oscuro.",
+    "transformedIdeaTitle": "La Bóveda Secreta",
+    "transformedIdeaDescription": "Protege el tesoro. La bóveda solo se abre si usas una linterna a la distancia exacta. Si la luz es muy fuerte o muy débil, falla. Si es perfecta, ¡luz verde y sonido de victoria!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity > 40 AND Light_Intensity < 60 THEN { Lamp.setColor('Green'); MusicalDrum.play('Open_Sound'); } ELSE { Lamp.setColor('Red'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Lucérnaga Artificial Reactiva",
+    "originalIdeaDescription": "Un dispositivo que imita a una lucérnaga. Solo se activa en la oscuridad total, emitiendo pulsos suaves de luz amarillo-verdosa y un sonido de 'clic' rítmico.",
+    "transformedIdeaTitle": "Robot Lucérnaga",
+    "transformedIdeaDescription": "Construye un insecto robótico que solo sale de noche. Cuando apagues todas las luces, tu robot debe brillar suavemente y hacer pequeños ruidos para comunicarse con otras lucérnagas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 5 THEN { Lamp.pulse('Lime'); MusicalDrum.play('Click'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura Nocturna",
+    "originalIdeaDescription": "Un sistema que detecta si está oscureciendo mientras lees. Enciende la lámpara automáticamente y reproduce un sonido de percusión suave para avisar que es hora de descansar la vista.",
+    "transformedIdeaTitle": "Guardián de los Libros",
+    "transformedIdeaDescription": "No te quedes leyendo a oscuras. Programa un asistente que detecte si la luz natural se está yendo. Si se pone muy oscuro, debe encender tu lámpara de lectura y avisarte con un sonido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < Reading_Threshold THEN { Lamp.on(); MusicalDrum.play('Chime'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Reflejos de Batería",
+    "originalIdeaDescription": "La lámpara se enciende aleatoriamente y el usuario debe cubrir el sensor de luz (golpear el tambor imaginario) lo más rápido posible para que suene el tambor real.",
+    "transformedIdeaTitle": "Reto de Velocidad Ninja",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! Cuando la luz se encienda, tienes que 'golpear' el sensor (tapar la luz con tu mano) lo más rápido posible. Si eres rápido, el tambor sonará.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.onRandom(); Timer.start(); IF Light_Blocked THEN { MusicalDrum.play('Hit'); Timer.showScore(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Farus de Niebla Automático",
+    "originalIdeaDescription": "Simulación de un faro costero. La lámpara gira (parpadea secuencialmente) constantemente, pero si la 'visibilidad' (luz) baja, activa una bocina de niebla (tambor grave).",
+    "transformedIdeaTitle": "El Faro en la Niebla",
+    "transformedIdeaDescription": "Eres el guardián del faro. Tu luz debe guiar a los barcos siempre. Pero si hay mucha niebla (poca luz en el sensor), debes activar la sirena de niebla (tambor) para evitar choques.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.blinkSequence(); IF Light_Intensity < Fog_Level THEN MusicalDrum.playLoop('Fog_Horn');"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Un juguete que usa lecturas fluctuantes de luz. Si la luz parpadea o cambia erráticamente, el dispositivo interpreta que hay un fantasma, encendiendo luces moradas y sonidos de tambores misteriosos.",
+    "transformedIdeaTitle": "Caza-Fantasmas 3000",
+    "transformedIdeaDescription": "¡Hay algo aquí! Crea un dispositivo que busque actividad paranormal. Si las luces de la habitación cambian de repente sin explicación, activa la alerta espectral con luces moradas y sonidos de miedo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Light_Intensity - Last_Light) > Variance THEN { Lamp.setColor('Purple'); MusicalDrum.play('Spooky_Roll'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Arpa Láser Inversa",
+    "originalIdeaDescription": "Un instrumento donde se crean diferentes notas de tambor y colores de lámpara dependiendo de cuánta sombra se proyecta sobre el sensor (como pasar la mano sobre cuerdas invisibles).",
+    "transformedIdeaTitle": "Piano de Sombras",
+    "transformedIdeaDescription": "Construye un instrumento que se toca sin tocarlo. Mueve tu mano arriba y abajo sobre el sensor. Dependiendo de cuánta sombra hagas, sonarán diferentes tambores y la luz cambiará de color.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Light_Intensity, 0, 100, 1, 8); MusicalDrum.playNote(Note); Lamp.setColor(Note_Color);"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rastreador de Energía Solar",
+    "originalIdeaDescription": "Un dispositivo para encontrar el punto más luminoso de una habitación. Aumenta el ritmo del tambor y el brillo de la lámpara a medida que se acerca a la fuente de luz más fuerte.",
+    "transformedIdeaTitle": "Buscador de Sol",
+    "transformedIdeaDescription": "Ayuda a tu robot a recargar energía. Camina por la habitación con el dispositivo; cuanto más cerca estés de una fuente de luz fuerte, más rápido sonará el tambor y más brillará la lámpara de 'carga'.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Speed = Map(Light_Intensity, 0, 100, Slow, Fast); MusicalDrum.playLoop(Speed); Lamp.brightness(Light_Intensity);"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Semáforo de Ruido Escolar",
+    "originalIdeaDescription": "Aunque usa luz, simula un control de ruido visual. Si se tapa el sensor (simulando 'silencio' o 'noche'), la lámpara se pone verde. Si hay mucha luz (día/actividad), suena un tambor cada cierto tiempo.",
+    "transformedIdeaTitle": "El Semáforo de la Biblioteca",
+    "transformedIdeaDescription": "Imagina que la luz representa el ruido. Si hay mucha 'luz' (ruido), enciende una luz roja y haz sonar una advertencia. Si tapas el sensor (bajas el ruido), pon la luz verde de 'silencio'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > Max_Level THEN { Lamp.setColor('Red'); MusicalDrum.play('Warning'); } ELSE { Lamp.setColor('Green'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Código Morse Óptico",
+    "originalIdeaDescription": "El usuario usa una linterna para enviar señales largas y cortas al sensor. El sistema traduce estos patrones de luz en golpes de tambor cortos y largos para decodificar mensajes auditivamente.",
+    "transformedIdeaTitle": "Telégrafo de Luz",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos. Usa una linterna para hacer parpadeos cortos y largos sobre el sensor. El sistema debe convertir esos destellos en sonidos de tambor para que tu amigo escuche el mensaje.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Pulse_Duration < Short THEN MusicalDrum.play('Short_Beat') ELSE MusicalDrum.play('Long_Beat');"
+  }
+]

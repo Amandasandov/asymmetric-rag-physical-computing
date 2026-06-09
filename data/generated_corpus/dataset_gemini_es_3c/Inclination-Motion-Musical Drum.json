@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Batería Aérea Gestual",
+    "originalIdeaDescription": "Un sistema donde el usuario simula tocar una batería en el aire. La inclinación del dispositivo selecciona qué tambor o platillo se va a tocar (izquierda para hi-hat, derecha para crash), y un movimiento brusco de sacudida (Motion) activa el sonido del instrumento seleccionado.",
+    "transformedIdeaTitle": "Estrella de Rock: La Batería Invisible",
+    "transformedIdeaDescription": "¡Conviértete en el baterista de una banda de rock sin instrumentos físicos! Programarás tu dispositivo para que se comporte como baquetas mágicas. Si inclinas a la izquierda y agitas, sonará el platillo; si inclinas a la derecha y agitas, sonará el bombo. ¡Crea tu propio solo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN Drum.select('HiHat'); IF Inclination.X > 20 THEN Drum.select('Crash'); IF Motion.shake THEN Drum.play()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivelación con Alerta Sonora",
+    "originalIdeaDescription": "Una herramienta digital para construcción o carpintería. Utiliza la inclinación para detectar si una superficie es plana. Si el dispositivo se inclina demasiado (no está nivelado), utiliza el sensor de movimiento para detectar vibración y emite un redoble de advertencia.",
+    "transformedIdeaTitle": "El Constructor de Torres Perfectas",
+    "transformedIdeaDescription": "Eres el ingeniero jefe de un rascacielos. Debes crear una herramienta para asegurar que el edificio no se caiga. Si tu dispositivo (la pared) se inclina, debe sonar una alarma de percusión para avisar a los obreros. Si hay un terremoto (movimiento brusco), ¡toca el gong!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination > 5 OR Inclination < -5 THEN Drum.play('Snare'); IF Motion.magnitude > 10 THEN Drum.play('Gong')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Efectos de Sonido de Pasos",
+    "originalIdeaDescription": "Un dispositivo que se sujeta al tobillo o zapato. Detecta el movimiento al caminar para reproducir un sonido de tambor grave (paso). La inclinación detecta si el pie apunta hacia arriba o abajo para cambiar el tono del paso, simulando diferentes terrenos.",
+    "transformedIdeaTitle": "Caminata de Gigantes y Ratones",
+    "transformedIdeaDescription": "Programaremos efectos especiales para una película. Cuando el actor camine (movimiento), sonará un golpe fuerte como un gigante. Pero si camina de puntillas (inclinando el dispositivo), el sonido cambiará a un golpe suave y rápido. ¡Sincroniza el sonido con tus pasos!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake AND Inclination.Y < 10 THEN Drum.play('BassDrum'); ELSE IF Motion.shake THEN Drum.play('TomTom')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de la Bandeja",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo perfectamente plano como una bandeja de camarero. Si la inclinación excede un umbral en cualquier eje, o si hay un movimiento brusco (tropezón), se reproduce un sonido de choque de platillos simbolizando platos rotos.",
+    "transformedIdeaTitle": "El Camarero en Patines",
+    "transformedIdeaDescription": "¡Eres un camarero sirviendo sopa en un restaurante muy concurrido! Tu misión es llevar el pedido sin derramar nada. Programa el dispositivo para que, si te inclinas demasiado o te mueves muy rápido, suene un 'Crash' indicando que se cayeron los platos. ¿Cuánto tiempo puedes aguantar?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 15 OR Motion.shake THEN Drum.play('CymbalCrash') ELSE Wait"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Volante de Coche de Carreras Percusivo",
+    "originalIdeaDescription": "Un simulador de conducción donde inclinar el dispositivo gira el vehículo imaginario. Los movimientos bruscos (baches) activan sonidos de percusión graves, y girar bruscamente activa sonidos de platillos para simular derrapes.",
+    "transformedIdeaTitle": "Piloto de Rally Extremo",
+    "transformedIdeaDescription": "Convierte tu tablet en el volante de un coche de rally. Al girar (inclinar) a los lados, controlas el coche. Si pasas por un bache (agitas el dispositivo), debe sonar un golpe seco. ¡Programa los efectos de sonido para sentir la carrera en tus manos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake THEN Drum.play('LowTom'); IF Inclination.X > 45 THEN Drum.play('OpenHiHat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Rítmicos",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Un movimiento suave de 'lanzamiento' (inclinación hacia adelante) carga el hechizo, y un movimiento fuerte (shake) lo dispara con un efecto de sonido de tambor reverberante.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Hechizos",
+    "transformedIdeaDescription": "Aprende el movimiento 'Wingardium Leviosa'. Primero debes inclinar la varita suavemente hacia arriba para concentrar energía, y luego dar un golpe seco para lanzar el hechizo. Si lo haces en el orden correcto, sonará el efecto mágico de percusión. ¡Cuidado con no explotar nada!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 30 THEN state = 'charged'; IF state == 'charged' AND Motion.shake THEN Drum.play('ElectricSnare')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas y Postura",
+    "originalIdeaDescription": "Dispositivo para ejercicio. Detecta el movimiento vertical (sentadilla) usando Motion. Usa Inclination para asegurar que la espalda esté recta. Si la postura es mala (mucha inclinación) durante el movimiento, suena un tambor de error; si es buena, un tambor de éxito.",
+    "transformedIdeaTitle": "El Entrenador Personal Robótico",
+    "transformedIdeaDescription": "Diseña un asistente de gimnasio inteligente. El dispositivo contará tus sentadillas detectando el movimiento. Pero hay un truco: si te inclinas demasiado hacia adelante (mala postura), sonará un tambor grave de 'Error'. ¡Solo los movimientos perfectos obtienen el sonido de victoria!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.active AND Inclination.Z < 10 THEN Drum.play('Clap') ELSE IF Motion.active THEN Drum.play('LowTom')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria por Agitación",
+    "originalIdeaDescription": "Un generador de ritmos caótico. Agitar el dispositivo (Motion) genera notas de batería al azar. La inclinación controla el 'tempo' o la velocidad de repetición de estos sonidos aleatorios.",
+    "transformedIdeaTitle": "La Maraca Loca del Futuro",
+    "transformedIdeaDescription": "Vamos a crear un instrumento que nunca suena igual dos veces. Al agitar el dispositivo, tocará notas de batería al azar. Si inclinas el dispositivo hacia arriba, los sonidos serán muy rápidos; si lo inclinas hacia abajo, irán a cámara lenta. ¡Experimenta con el caos musical!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Tempo = Map(Inclination.Y); IF Motion.shake THEN Drum.play(Random) AT Tempo"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma para Puerta",
+    "originalIdeaDescription": "El dispositivo se cuelga en el pomo de una puerta. Si la puerta se abre lentamente (cambio de inclinación) o se golpea (movimiento), se activa una secuencia rápida de tambores como alarma.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu habitación de hermanos molestos o espías. Coloca el dispositivo en la manija de la puerta. Programa una alarma que suene una batería frenética si alguien gira la manija (inclinación) o golpea la puerta (movimiento). ¡Nadie podrá entrar sin ser detectado!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.change > 10 OR Motion.magnitude > 5 THEN Drum.playSequence('FastRock')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca Táctil",
+    "originalIdeaDescription": "Simula una caña de pescar. Un movimiento brusco (tirón del pez) hace vibrar/sonar el tambor. El usuario debe inclinar hacia atrás para 'sacar' al pez, lo que dispara un sonido de éxito.",
+    "transformedIdeaTitle": "Torneo de Pesca Digital",
+    "transformedIdeaDescription": "¡Vamos de pesca al lago digital! Mantén tu dispositivo quieto. Cuando el programa detecte un 'pique' (simulado con un sonido), debes tirar de la caña inclinando el dispositivo hacia atrás rápidamente. Si combinas el movimiento correcto con la inclinación, ¡pescarás el premio gordo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF GameState == 'Bite' AND Inclination.Y < -45 AND Motion.shake THEN Drum.play('Splash') AND Score++"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador DJ de Efectos",
+    "originalIdeaDescription": "Usa el dispositivo como una mesa de efectos DJ. La inclinación en el eje X selecciona el tipo de tambor (Kick, Snare, HiHat) y la inclinación en Y modula el volumen. El movimiento activa el sonido (trigger).",
+    "transformedIdeaTitle": "DJ Espacial: Mezcla con Movimiento",
+    "transformedIdeaDescription": "Olvida los botones, ¡los DJs del futuro usan gestos! Inclina a la izquierda para preparar el bombo, a la derecha para la caja. Cuanto más inclines hacia adelante, más fuerte sonará. ¡Haz un movimiento de 'golpe' en el aire para soltar el beat y hacer bailar a la multitud!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Vol = Map(Inclination.Y); Inst = (Inclination.X > 0 ? 'Snare' : 'Kick'); IF Motion.shake THEN Drum.play(Inst, Vol)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente Sensible",
+    "originalIdeaDescription": "Los jugadores pasan el dispositivo suavemente. Si se detecta un movimiento demasiado brusco (Motion) o si se inclina más allá de cierto ángulo (caída), la 'bomba' explota con un sonido de tambor fuerte.",
+    "transformedIdeaTitle": "Desactiva la Bomba Sensible",
+    "transformedIdeaDescription": "Tenéis una 'bomba' muy inestable (el dispositivo). Debéis pasarla de un compañero a otro en círculo. El reto: si alguien la agita demasiado o la inclina mucho, ¡BOOM! sonará una explosión. Programad la sensibilidad para hacer el juego imposiblemente difícil.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > 8 OR Inclination.X > 30 THEN Drum.play('Explosion') ELSE KeepSilent"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Instrumento Tipo Theremin de Percusión",
+    "originalIdeaDescription": "Un instrumento experimental donde la inclinación continua cambia la frecuencia o tono de un redoble de tambores constante, y sacudirlo cambia el patrón rítmico.",
+    "transformedIdeaTitle": "El Sintetizador de Ritmos Alienígena",
+    "transformedIdeaDescription": "Crea un instrumento que no existe en la Tierra. Mientras mantengas el dispositivo inclinado, sonará un redoble continuo que cambia de grave a agudo según el ángulo. Si lo agitas, el ritmo cambiará de estilo. ¡Compón la banda sonora de una invasión alienígena!",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP: Drum.pitch = Map(Inclination.X); Drum.playRoll(); IF Motion.shake THEN ChangeRhythmPattern()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Casero",
+    "originalIdeaDescription": "Un sismógrafo simple. El dispositivo descansa sobre una mesa plana. Cualquier inclinación (ondas) o movimiento (vibración) dispara sonidos de tambor de diferente intensidad según la magnitud del evento.",
+    "transformedIdeaTitle": "Sismólogo Junior: Alerta de Terremotos",
+    "transformedIdeaDescription": "Construye un detector de terremotos para tu clase. Deja el dispositivo en la mesa. Si alguien golpea la mesa (movimiento pequeño), debe sonar un 'tap' suave. Si mueven la mesa y cambia el ángulo (inclinación), ¡debe sonar una alarma de evacuación potente!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = Motion.magnitude + Inclination.change; IF Intensity > 2 THEN Drum.play('Tom', Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Motocicleta",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo como un manillar. Inclinar gira la moto. Hacer un movimiento de rotación rápido hacia atrás (como acelerar el puño) usando Motion/Inclinación combinados activa un sonido de motor/tambor rápido.",
+    "transformedIdeaTitle": "Moto GP: Aceleración Máxima",
+    "transformedIdeaDescription": "Agarra el manillar de tu súper moto. Inclina para tomar las curvas. Para acelerar, tienes que hacer el gesto de 'dar gas' (una rotación rápida hacia atrás). Configura el sonido de la batería para que suene como un motor rugiendo más rápido cuanto más aceleres.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y_Change > FastThreshold THEN Drum.play('SnareRoll_Fast') ELSE Drum.play('SnareRoll_Slow')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Cocinero: Salteado de Sartenes",
+    "originalIdeaDescription": "Juego de cocina. El usuario debe hacer un movimiento de 'flick' hacia arriba (Motion + Inclinación) para voltear una tortita imaginaria. Si el movimiento es correcto, suena un sonido de éxito; si no, un sonido de caída.",
+    "transformedIdeaTitle": "Master Chef: El Rey de las Tortitas",
+    "transformedIdeaDescription": "Estás en un concurso de cocina. Tienes que voltear la tortita en el aire con tu sartén (dispositivo). Programa el sensor para detectar un movimiento rápido hacia arriba y una inclinación específica. Si lo logras, suena un 'Clap' de aplausos, si fallas, un 'Bong' triste.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Z > 15 AND Inclination.Y > 20 THEN Drum.play('Applause') ELSE Drum.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Controlador de Videojuego de Nave",
+    "originalIdeaDescription": "El dispositivo controla una nave espacial invisible. Inclinación para dirección. Un movimiento brusco hacia adelante (Motion) dispara los láseres (sonidos de percusión electrónica).",
+    "transformedIdeaTitle": "Defensor Galáctico",
+    "transformedIdeaDescription": "Pilota tu nave estelar a través de un campo de asteroides. Usa la inclinación para esquivar. Cuando veas un enemigo, ¡empuja el dispositivo hacia adelante rápidamente para disparar tus cañones de plasma (sonidos de batería electrónica)! Crea la lógica de control completa.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ShipDirection = Inclination.X; IF Motion.acceleration.Z > 10 THEN Drum.play('ElectronicTom')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inversa",
+    "originalIdeaDescription": "El sonido de la batería suena mientras el usuario se mueva (Motion). Si se queda quieto o mantiene una inclinación específica (pose), el sonido se detiene. El objetivo es mantener el ritmo moviéndose constantemente.",
+    "transformedIdeaTitle": "¡No Pares el Ritmo!",
+    "transformedIdeaDescription": "Al revés que el juego de las estatuas: ¡si te paras, pierdes! Programa el dispositivo para que toque un ritmo funky siempre que detecte que estás bailando (movimiento y cambio de inclinación). Si te quedas quieto más de 1 segundo, la música muere y pierdes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.active OR Inclination.changing THEN Drum.loop('FunkyBeat') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Paciencia Zen",
+    "originalIdeaDescription": "Un desafío de meditación. El usuario debe sostener el dispositivo en una posición inclinada específica (ej. 45 grados) sin moverse. Si tiembla (Motion) o cambia el ángulo, suena un gong rompiendo la meditación.",
+    "transformedIdeaTitle": "El Desafío del Monje Shaolin",
+    "transformedIdeaDescription": "Pon a prueba tu pulso y paciencia. Debes mantener el dispositivo inclinado exactamente a 30 grados sin mover ni un músculo. Si tu mano tiembla (movimiento) o el ángulo cambia, sonará el Gong de la Vergüenza. ¿Cuántos segundos puedes aguantar en silencio?",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination NOT close_to(30) OR Motion.shake THEN Drum.play('Gong') AND ResetTimer()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Motion",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Espada Láser",
+    "originalIdeaDescription": "Usa el dispositivo como empuñadura de espada. El movimiento suave genera un zumbido (redoble suave), el movimiento rápido (ataque) genera un golpe fuerte. La inclinación cambia el tono del zumbido.",
+    "transformedIdeaTitle": "Caballero Jedi: Duelos de Sonido",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una espada de luz. Si la mueves despacio, debe sonar un redoble suave y continuo (el zumbido de la energía). Si haces un ataque rápido (movimiento brusco), debe sonar un golpe de choque fuerte. La inclinación modificará el tono del zumbido.",
+    "minAge": 9,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > 20 THEN Drum.play('Crash') ELSE Drum.play('SnareRoll', Pitch=Inclination.X)"
+  }
+]

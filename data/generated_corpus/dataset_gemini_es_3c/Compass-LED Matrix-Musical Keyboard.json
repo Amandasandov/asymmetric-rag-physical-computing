@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Brújula Musical Interactiva",
+    "originalIdeaDescription": "Un dispositivo de navegación que asigna una nota musical específica y un símbolo visual en la matriz LED a cada uno de los cuatro puntos cardinales (Norte, Sur, Este, Oeste), permitiendo a los usuarios 'escuchar' su orientación.",
+    "transformedIdeaTitle": "El Bosque Encantado Cantarín",
+    "transformedIdeaDescription": "Imagina que estás perdido en un bosque mágico donde el viento canta para guiarte. Los estudiantes programarán su dispositivo para que al apuntar al Norte suene una nota alta y aparezca un árbol, y al apuntar al Sur una nota grave y aparezca una cueva.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 45 THEN Play('C4'), Matrix.show('Tree'); ELSE IF Compass.heading > 135 THEN Play('G3'), Matrix.show('Cave')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Craqueo de Cajas Fuertes",
+    "originalIdeaDescription": "Un juego donde el usuario debe girar el dispositivo hasta encontrar un ángulo secreto específico. Al encontrar el ángulo correcto, la matriz muestra un candado abierto y el teclado reproduce una melodía de victoria.",
+    "transformedIdeaTitle": "Misión Espía: La Bóveda Secreta",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una bóveda digital. Debes girar el dispositivo lentamente. La matriz mostrará pistas y, cuando encuentres el grado exacto invisible, sonará la alarma de éxito para abrir la puerta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TARGET = 180; IF Compass.heading == TARGET THEN Matrix.show('Unlock'), Keyboard.playMelody('Victory'); ELSE Matrix.show('Lock')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Radar de Sonar para Detectores",
+    "originalIdeaDescription": "Simulación de un radar que escanea el entorno. La matriz LED muestra una línea de barrido giratoria y el teclado emite un 'ping' de sonar cuya frecuencia cambia según la dirección hacia la que se apunta.",
+    "transformedIdeaTitle": "Cazafantasmas: El Detector de Espectros",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un detector de actividad paranormal. Mientras giras en círculo, la matriz busca 'energía'. Si apuntas hacia el Este, donde se esconde el fantasma, el dispositivo emitirá un sonido agudo y mostrará un espectro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Matrix.showAnimation('Radar'); IF Compass.heading > 80 AND Compass.heading < 100 THEN Keyboard.playNote('B5'), Matrix.show('Ghost')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de 360 Grados",
+    "originalIdeaDescription": "Un instrumento musical experimental donde el tono de la nota cambia continuamente basándose en los 360 grados de la brújula, visualizando la altura de la nota en la matriz LED.",
+    "transformedIdeaTitle": "El Theremin Giratorio",
+    "transformedIdeaDescription": "Crea un instrumento musical invisible que se toca con el cuerpo. Los estudiantes deben mapear los 360 grados del círculo a la escala musical completa, haciendo que girar el cuerpo sea como deslizar el dedo por las teclas de un piano.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "NOTE = map(Compass.heading, 0, 360, 48, 72); Keyboard.playNote(NOTE); Matrix.showBarGraph(NOTE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Simón Dice Direccional",
+    "originalIdeaDescription": "La matriz muestra una letra de dirección (N, S, E, O). El usuario debe girar físicamente hacia esa dirección. Si lo logra a tiempo, suena un acorde positivo; si falla, un tono de error.",
+    "transformedIdeaTitle": "Capitán del Barco: ¡A las órdenes!",
+    "transformedIdeaDescription": "¡Todos a cubierta! El capitán (la Matriz LED) te dará una orden como 'Norte' o 'Este'. Debes girar el timón (tu cuerpo) rápidamente hacia esa dirección. Si aciertas, la tripulación canta; si fallas, el barco choca.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = Random('N','S','E','W'); Matrix.show(target); IF Compass.isFacing(target) THEN Keyboard.play('Chord') ELSE Keyboard.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Búsqueda del Tesoro Frío/Caliente",
+    "originalIdeaDescription": "El usuario busca un 'tesoro' virtual en una orientación fija. La música se vuelve más rápida y la matriz parpadea más intensamente cuanto más cerca esté el usuario de la dirección objetivo.",
+    "transformedIdeaTitle": "El Detector de Metales Playero",
+    "transformedIdeaDescription": "Programa tu dispositivo para encontrar monedas de oro enterradas en una dirección secreta (ej. 270°). A medida que giras y te acercas al objetivo, el 'beep' del detector debe sonar más rápido y la luz de la matriz brillar más fuerte.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "diff = abs(Target - Compass.heading); speed = map(diff, 0, 180, 100, 1000); Keyboard.beep(speed); Matrix.brightness(180-diff)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Veleta de Viento Virtual",
+    "originalIdeaDescription": "Simula una veleta meteorológica. La matriz muestra una flecha que siempre apunta al 'viento' (Norte simulado) y el teclado reproduce efectos de sonido de viento que cambian de tono si el usuario se enfrenta o da la espalda al viento.",
+    "transformedIdeaTitle": "Cazadores de Tornados",
+    "transformedIdeaDescription": "Estás en el ojo de la tormenta. Debes usar la brújula para determinar de dónde viene el viento más fuerte. La matriz mostrará la nube de tormenta y el sonido cambiará de un silbido agudo a un estruendo grave según tu posición.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Matrix.show('Cloud'); IF Compass.heading < 180 THEN Keyboard.play('HighWind') ELSE Keyboard.play('LowRumble')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Ruleta de la Suerte Musical",
+    "originalIdeaDescription": "El usuario gira físicamente sobre sí mismo. La matriz muestra una animación de giro. Al detenerse, la brújula detecta la dirección final y selecciona una canción y un ícono de premio al azar.",
+    "transformedIdeaTitle": "La Rueda de la Fortuna Humana",
+    "transformedIdeaDescription": "¡Gira para ganar! Los estudiantes crearán un juego donde ellos mismos son la ruleta. Al girar y detenerse, dependiendo de si miran al Norte, Sur, Este u Oeste, ganarán diferentes premios virtuales (sonidos y emojis).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE turning: Matrix.animate('Spin'), Keyboard.play('Click'); ON STOP: IF heading=N THEN Matrix.show('Star'), Keyboard.play('Win')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Navegador de Laberinto Invisible",
+    "originalIdeaDescription": "La matriz muestra las paredes cercanas de un laberinto virtual. El usuario debe girar para encontrar la salida abierta. Si camina hacia una pared (dirección incorrecta), suena un tono discordante.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto oscuro. Solo tu dispositivo puede ver las paredes. Gira lentamente; si la matriz muestra una 'X' y oyes un ruido feo, hay una pared. Si ves una flecha y oyes una campana, ¡es el camino libre!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "MazeMap = [N, N, E]; IF Compass.heading != MazeMap[currentStep] THEN Matrix.show('X'), Keyboard.play('Buzz') ELSE Matrix.show('Arrow')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita de Hechizos Direccional",
+    "originalIdeaDescription": "Al apuntar la 'varita' a coordenadas específicas y presionar un botón, se lanzan diferentes 'hechizos' representados por patrones LED y arpegios musicales únicos.",
+    "transformedIdeaTitle": "Academia de Magia: Defensa Contra las Artes Oscuras",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Apuntar al Este lanza 'Lumos' (luz brillante y nota aguda), apuntar al Oeste lanza 'Nox' (pantalla oscura y nota grave). Debes programar las direcciones precisas para que la magia funcione.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 80 AND heading < 100 THEN Matrix.show('Light'), Keyboard.playArpeggio('Cmaj');"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Explorador del Sistema Solar",
+    "originalIdeaDescription": "Mapea los planetas a direcciones reales relativas al usuario. Al apuntar hacia la ubicación de 'Marte' o 'Júpiter', la matriz muestra el planeta y suena un tema musical espacial.",
+    "transformedIdeaTitle": "Viaje Intergaláctico desde el Aula",
+    "transformedIdeaDescription": "Convierte el aula en una nave espacial. El Sol está al Este y la Luna al Oeste. Los estudiantes programarán el panel de control para identificar cuerpos celestes al girar la nave, mostrando el planeta y reproduciendo su 'sonido' característico.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is East THEN Matrix.show('Sun'), Keyboard.play('SunTheme'); ELSE IF heading is West THEN Matrix.show('Moon'), Keyboard.play('MoonTheme')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Yoga y Equilibrio",
+    "originalIdeaDescription": "Ayuda a mantener una postura. Si el usuario se desvía de la dirección central (Norte) durante una pose, la música se distorsiona y la matriz muestra hacia dónde corregir.",
+    "transformedIdeaTitle": "El Monje Zen: Maestro del Equilibrio",
+    "transformedIdeaDescription": "Mantén la concentración absoluta. Debes sostener una postura de yoga mirando exactamente al Norte. Si tu cuerpo gira aunque sea un poco, la música de meditación se desafinará y la pantalla te regañará indicando el error.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "deviation = abs(Compass.heading - 0); pitchBend = deviation * 2; Keyboard.playTone(440 + pitchBend); Matrix.showArrow(correction)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música Bailarina",
+    "originalIdeaDescription": "Una caja de música que solo reproduce la melodía correctamente si el usuario gira constantemente en círculos a una velocidad específica, visualizando notas musicales en la matriz.",
+    "transformedIdeaTitle": "Baila para que Suene la Música",
+    "transformedIdeaDescription": "La música se ha quedado sin batería y funciona con energía cinética. Debes girar sobre ti mismo para 'darle cuerda'. Si giras suavemente, la canción suena bien y ves notas en la pantalla; si paras, la música muere.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "prevHeading = heading; WAIT 0.1s; speed = abs(heading - prevHeading); IF speed > 5 THEN Keyboard.nextNote(), Matrix.scroll('Music')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Alienígenas",
+    "originalIdeaDescription": "Se escucha estática (ruido aleatorio) en todas las direcciones excepto en una 'frecuencia' (grado) específica, donde se escucha una melodía clara y se decodifica un mensaje en la matriz.",
+    "transformedIdeaTitle": "S.O.S. desde el Espacio Profundo",
+    "transformedIdeaDescription": "Estás recibiendo una transmisión galáctica, pero hay mucha interferencia. Debes girar la antena (tu dispositivo) hasta encontrar la señal limpia. Cuando el ruido cese y escuches la melodía, lee el mensaje secreto en la pantalla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == 120 THEN Keyboard.playMelody('Message'), Matrix.print('HELLO'); ELSE Keyboard.playRandom(), Matrix.show('Static')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Virtual",
+    "originalIdeaDescription": "Divide los 360 grados en secciones de orquesta (Violines N, Percusión S, etc.). El usuario apunta para activar esa sección, viendo el instrumento en la matriz.",
+    "transformedIdeaTitle": "Maestro de la Filarmónica",
+    "transformedIdeaDescription": "Toma la batuta. Tienes toda una orquesta a tu alrededor. Apunta a la izquierda para que suenen los violines agudos, apunta a la derecha para los trombones graves. ¡Mezcla los sonidos girando rápidamente!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SECTION = heading / 90; SWITCH(SECTION) { case 0: Play('Violin'); Show('ViolinIcon'); case 1: Play('Trumpet'); ... }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Candado de Combinación Direccional",
+    "originalIdeaDescription": "Para desbloquear el dispositivo, el usuario debe realizar una secuencia de giros: Norte, luego Este, luego Oeste. Cada paso correcto emite un tono y muestra un check en la matriz.",
+    "transformedIdeaTitle": "La Llave Maestra del Castillo",
+    "transformedIdeaDescription": "El castillo está cerrado con magia antigua. Para entrar, no necesitas una llave, sino una danza. Gira al Norte, espera el 'ding', luego gira al Este, espera el 'ding'. ¡Solo la secuencia correcta bajará el puente levadizo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SEQ = ['N','E','S']; IF Compass.heading == SEQ[step] THEN step++, Keyboard.play('Ding'), Matrix.show('Check')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Salvajes",
+    "originalIdeaDescription": "Un entorno de safari donde diferentes direcciones contienen diferentes animales virtuales. Al apuntar a ellos, se escucha su 'leitmotiv' musical y se ve su huella.",
+    "transformedIdeaTitle": "Safari Fotográfico Sonoro",
+    "transformedIdeaDescription": "Estamos en la selva. No podemos ver a los animales, pero podemos rastrearlos. Usa la brújula para encontrar dónde se esconden. Al Norte ruge el León (notas graves), al Este pía el pájaro (notas agudas). ¡Encuéntralos todos!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading < 90 THEN Matrix.show('LionPaw'), Keyboard.play('LowChord'); ELSE IF heading > 270 THEN Matrix.show('Bird'), Keyboard.play('HighTrill')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Faro Guardián",
+    "originalIdeaDescription": "Simula ser un faro. La matriz muestra un haz de luz girando. Cuando la brújula del usuario se alinea con el 'mar' (una dirección definida), suena una sirena de niebla.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Es una noche de niebla y los barcos dependen de ti. Eres el faro. Debes barrer el horizonte girando constantemente. Cuando tu luz (la matriz) apunte hacia el mar abierto (Sur), haz sonar la sirena para avisar a los navegantes.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Matrix.rotateLine(); IF Compass.heading > 160 AND Compass.heading < 200 THEN Keyboard.play('Foghorn')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Giroscópico",
+    "originalIdeaDescription": "Usa la brújula para controlar el balance o el tempo de una pista musical base, visualizando los niveles de audio en la matriz LED.",
+    "transformedIdeaTitle": "DJ Rotativo: La Fiesta Giratoria",
+    "transformedIdeaDescription": "¡Tú eres el DJ! Pero no usas manos, usas giros. Si miras al Norte, la base rítmica es lenta y tranquila. Si giras hacia el Sur, el ritmo se acelera y la fiesta explota. ¡Controla la energía de la pista de baile con tu dirección!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "bpm = map(Compass.heading, 0, 180, 60, 140); Keyboard.setTempo(bpm); Matrix.showEqualizer(bpm)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas Geográficas",
+    "originalIdeaDescription": "El sistema pregunta '¿Dónde está París?'. El usuario debe apuntar su brújula en la dirección cardinal correcta aproximada. Respuesta correcta = Fanfarria y bandera.",
+    "transformedIdeaTitle": "Vuelta al Mundo en 80 Segundos",
+    "transformedIdeaDescription": "Pon a prueba tu geografía. El dispositivo te mostrará una letra 'P' (París) o 'Tokio'. Desde tu ciudad, ¿hacia dónde queda? Apunta con tu brújula. Si aciertas la dirección real, ganarás puntos y escucharás el himno de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TargetAngle = getCityAngle('Paris'); IF abs(Compass.heading - TargetAngle) < 20 THEN Matrix.show('Flag'), Keyboard.play('Anthem')"
+  }
+]

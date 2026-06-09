@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz y Sonido por Aplauso",
+    "originalIdeaDescription": "Un sistema simple de automatización del hogar donde un aplauso fuerte detectado por el sensor de ruido enciende la lámpara y reproduce un sonido de confirmación en la batería.",
+    "transformedIdeaTitle": "El Mago de la Luz y el Trueno",
+    "transformedIdeaDescription": "¡Eres un mago aprendiendo hechizos! Programa tu varita mágica para que, al dar una palmada fuerte (lanzar el hechizo), ilumines la habitación con un color místico y provoques un sonido de tambor mágico.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 70 THEN Lamp.turnOn(Gold) AND MusicalDrum.play(Snare)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Monitor de Nivel de Ruido para Bibliotecas",
+    "originalIdeaDescription": "Un dispositivo que monitorea el ruido ambiental. Si el nivel es bajo, la luz es verde. Si sube demasiado, la luz se pone roja y suena un redoble de advertencia.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca Secreta",
+    "transformedIdeaDescription": "Protege los antiguos pergaminos. Si los espías hacen mucho ruido, la gema del guardián (Lámpara) se pondrá roja y sonará el tambor de alarma para advertirles que guarden silencio.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < 40 THEN Lamp.color(Green) ELSE Lamp.color(Red) AND MusicalDrum.play(TomTom)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El sistema simula una tormenta. Cuando se detecta un ruido fuerte repentino (como un trueno real o simulado), la lámpara parpadea como un rayo y la batería reproduce un sonido grave.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "¡Controla el clima! Grita '¡Trueno!' al sensor y haz que tu dispositivo responda con un destello de relámpago (Lámpara) seguido del estruendo del trueno (Batería).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN Lamp.flash(White) AND WAIT(1 sec) AND MusicalDrum.play(BassDrum)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo de Percusión",
+    "originalIdeaDescription": "Una herramienta musical donde golpear una mesa o hacer un sonido rítmico hace que la lámpara cambie de color y la batería digital acompañe el golpe.",
+    "transformedIdeaTitle": "Batería Invisible del Futuro",
+    "transformedIdeaDescription": "No necesitas una batería real. Golpea el aire o tu mesa al ritmo de tu canción favorita. Tu código convertirá esos golpes en luces de neón y sonidos de percusión electrónica.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON NoisePeak DETECTED -> Lamp.setColor(Random) AND MusicalDrum.play(HiHat)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Musical Drum",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo y Movimiento",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse sin hacer ruido. Si el sensor de ruido detecta sonido, se enciende una luz roja y suena un platillo indicando 'Game Over'.",
+    "transformedIdeaTitle": "Entrenamiento Ninja Silencioso",
+    "transformedIdeaDescription": "Debes cruzar la habitación sin ser detectado. Si haces el más mínimo ruido al caminar, la alarma de seguridad se activará (Luz Roja) y sonará el gong del fracaso.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 20 THEN Lamp.color(Red) AND MusicalDrum.play(Cymbal)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "Dispositivo para juzgar al ganador de un concurso basado en el volumen de los aplausos. Más ruido equivale a una luz más brillante y un redoble de tambores más rápido.",
+    "transformedIdeaTitle": "El Juez del Show de Talentos",
+    "transformedIdeaDescription": "¡El público decide! Programa el sistema para que escuche los aplausos. Si son muy fuertes, enciende la luz dorada y toca un redoble de victoria para el ganador.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 90 THEN Lamp.intensity(100) AND MusicalDrum.roll() ELSE Lamp.intensity(50)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma Despertador Sensible a la Luz",
+    "originalIdeaDescription": "Una alarma inversa. Si hay mucho ruido por la mañana, la lámpara se enciende suavemente para despertar al usuario, acompañada de un ritmo suave.",
+    "transformedIdeaTitle": "Amanecer Musical",
+    "transformedIdeaDescription": "Crea un despertador amable. Cuando escuches que la casa se despierta (ruido ambiental), enciende una luz de amanecer (naranja) y toca un ritmo suave para empezar el día.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE NoiseLevel > 30 THEN Lamp.fadeIn(Orange) AND MusicalDrum.playPattern(SoftBeat)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Musical Drum",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de Gritos de Terror",
+    "originalIdeaDescription": "Para una casa embrujada, si el sensor detecta un grito fuerte, las luces parpadean erráticamente y suenan tambores graves para asustar más.",
+    "transformedIdeaTitle": "La Cueva del Monstruo",
+    "transformedIdeaDescription": "¡Cuidado! Si gritas dentro de la cueva oscura, despertarás al monstruo. Programa la reacción: si se detecta un grito, las luces parpadean y el monstruo pisotea el suelo (tambores).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 95 THEN Lamp.strobe(Red) AND MusicalDrum.play(BassDrum)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Beatbox",
+    "originalIdeaDescription": "El usuario hace sonidos con la boca (beatbox) y el sistema los amplifica traduciéndolos a sonidos de batería digital y pulsos de luz.",
+    "transformedIdeaTitle": "Superestrella del Beatbox",
+    "transformedIdeaDescription": "Convierte tu voz en un espectáculo. Haz sonidos cortos y secos ('Puh', 'Kuh') para activar diferentes colores de luces y sonidos de batería electrónica al instante.",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseType == 'Low' THEN Drum.Kick() AND Lamp.Blue() ELSE IF NoiseType == 'High' THEN Drum.Snare() AND Lamp.Yellow()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Comunicación Morse Acústico",
+    "originalIdeaDescription": "Detecta golpes cortos y largos (ruido) y los traduce a señales de luz (cortas/largas) y sonidos de percusión para enviar mensajes secretos.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu compañero. Un golpe en la mesa enciende la luz y suena un 'tic'. Usa el código Morse para transmitir información vital sin hablar.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < 0.5 THEN Lamp.flash(Short) AND Drum.tap() ELSE Lamp.flash(Long) AND Drum.bang()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo del Ruido Escolar",
+    "originalIdeaDescription": "Un semáforo que cambia de Verde (silencio) a Amarillo (murmullo) y Rojo (ruido). En rojo, suena una percusión molesta.",
+    "transformedIdeaTitle": "Control de Tráfico Sonoro",
+    "transformedIdeaDescription": "Mantén el orden en el aula. Diseña un semáforo que escuche. Si hay silencio, luz verde. Si hay escándalo, luz roja y un sonido de 'choque' en la batería.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < 30 THEN Lamp(Green) ELSE IF Noise < 60 THEN Lamp(Yellow) ELSE Lamp(Red) AND Drum.crash()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Velas Electrónicas Apagables",
+    "originalIdeaDescription": "La lámpara imita una vela. Al detectar un ruido de soplido constante (ruido blanco alto), la luz se atenúa hasta apagarse y cesa un ritmo de fondo.",
+    "transformedIdeaTitle": "Sopla la Vela Mágica",
+    "transformedIdeaDescription": "Es tu cumpleaños virtual. La luz brilla como una vela y suena una canción. Sopla fuerte sobre el sensor para 'apagar' la luz y detener la música con un final triunfal.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 60 (Sustained) THEN Lamp.brightness(0) AND MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de las Estatuas Musicales Automático",
+    "originalIdeaDescription": "El sistema toca un ritmo de batería y enciende una luz verde. Aleatoriamente se detiene y pone luz roja. Si detecta ruido después de eso, el jugador pierde.",
+    "transformedIdeaTitle": "Robot Juez de Estatuas",
+    "transformedIdeaDescription": "Baila mientras el tambor suena y la luz es verde. Cuando se detengan y la luz sea roja, ¡congélate! Si el robot te escucha moverte, perderás la ronda.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE GameActive: PlayDrum() AND Lamp(Green); STOP; Lamp(Red); IF Noise > 10 THEN GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Emociones por Voz",
+    "originalIdeaDescription": "Analiza el volumen de la voz. Voz suave = Luz Azul y ritmo lento. Voz fuerte = Luz Roja y ritmo rápido/agresivo.",
+    "transformedIdeaTitle": "El Anillo de Humor",
+    "transformedIdeaDescription": "¿Cómo te sientes? Háblale a tu dispositivo. Si susurras, creará un ambiente relajante azul con tambores suaves. Si gritas emocionado, se pondrá rojo con ritmos rápidos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < 40 THEN Lamp(Blue) + Drum(Slow) ELSE Lamp(Red) + Drum(Fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de Respiración y Meditación",
+    "originalIdeaDescription": "Guía al usuario para inhalar y exhalar. La luz pulsa y el tambor marca el tiempo. Si el usuario hace ruido (rompe la concentración), la luz cambia de color.",
+    "transformedIdeaTitle": "Maestro Zen Digital",
+    "transformedIdeaDescription": "Aprende a relajarte. Sigue la luz que se enciende y apaga lentamente para respirar. El tambor marca los segundos. Mantente en silencio total para mantener la luz en color paz (cian).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop: Lamp.FadeInOut(5sec); IF Noise > 10 THEN Lamp.Color(Red) ELSE Lamp.Color(Cyan)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Eco de Luz y Sonido",
+    "originalIdeaDescription": "El sistema graba el patrón de volumen del ruido ambiental y luego lo 'repite' usando destellos de luz y golpes de batería.",
+    "transformedIdeaTitle": "El Loro Cibernético",
+    "transformedIdeaDescription": "Haz un ritmo con tus manos: 'Clap, Clap, Pausa, Clap'. El Loro Cibernético escuchará y luego intentará imitarte usando destellos de luz y sonidos de tambor.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Record NoisePattern; REPLAY Pattern using Lamp.flash() AND Drum.hit()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad para Caja Fuerte",
+    "originalIdeaDescription": "Para abrir la 'caja', el usuario debe recrear un patrón de golpes (ruido) específico. Si es correcto, luz verde y sonido de apertura. Si falla, luz roja y alarma.",
+    "transformedIdeaTitle": "La Bóveda Secreta",
+    "transformedIdeaDescription": "Guarda tus tesoros. Programa una contraseña secreta basada en golpes rítmicos. Si alguien intenta entrar sin conocer el ritmo, ¡suena la alarma de tambores y luces rojas!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF InputPattern == SecretRhythm THEN Lamp(Green)+OpenSound ELSE Lamp(Red)+AlarmDrum"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Luces de Fiesta Aleatorias",
+    "originalIdeaDescription": "Cuando la música externa (detectada por el sensor de ruido) alcanza ciertos picos, la lámpara cambia a un color aleatorio y la batería añade un efecto de sonido.",
+    "transformedIdeaTitle": "DJ de Luces Automático",
+    "transformedIdeaDescription": "¡Monta tu propia discoteca! Pon tu canción favorita en la radio y deja que tu dispositivo escuche el ritmo para cambiar las luces de color y añadir efectos de percusión automáticamente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseDelta > Threshold THEN Lamp.randomColor() AND Drum.play(Cowbell)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Tenis para Ciegos (Simulado)",
+    "originalIdeaDescription": "Se usa el sonido para indicar la posición de la 'pelota'. El jugador debe hacer ruido (aplaudir) en el momento justo cuando el tambor indica que la pelota está cerca.",
+    "transformedIdeaTitle": "Tenis Sónico",
+    "transformedIdeaDescription": "Cierra los ojos. Escucha el ritmo del tambor que se acelera. Cuando creas que la 'pelota' está frente a ti, ¡da una palmada fuerte! Si aciertas, la luz brillará verde.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Play DrumSequence; IF ClapDetected within TimeWindow THEN ScorePoint() AND Lamp(Green)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Ronquidos",
+    "originalIdeaDescription": "Si el sensor detecta un ruido rítmico y constante (ronquido) durante la noche, la lámpara parpadea brevemente y el tambor hace un sonido suave para que la persona cambie de postura.",
+    "transformedIdeaTitle": "El Ayudante del Sueño",
+    "transformedIdeaDescription": "¿Alguien ronca en casa? Programa un dispositivo amable. Si escucha ronquidos fuertes, dará un pequeño aviso con una luz suave y un 'tap' de tambor para detener el ruido sin despertar a todos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoisePattern == Snore THEN Lamp.pulse(Soft) AND Drum.play(Rimshot_Soft)"
+  }
+]

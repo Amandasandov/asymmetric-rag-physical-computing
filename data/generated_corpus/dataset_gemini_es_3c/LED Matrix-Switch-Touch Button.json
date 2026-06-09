@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Contador Manual Digital",
+    "originalIdeaDescription": "Un dispositivo simple para contar personas o eventos. El interruptor enciende o apaga el dispositivo para ahorrar energía, el botón táctil incrementa el contador y la matriz LED muestra el número actual o un gráfico representativo.",
+    "transformedIdeaTitle": "El Contador de Estrellas Mágicas",
+    "transformedIdeaDescription": "¡Ayuda al mago a contar cuántas estrellas fugaces atrapa! Usa el interruptor para abrir tu red mágica (encender sistema) y presiona el botón cada vez que veas una estrella para guardarla en tu frasco brillante (Matriz LED).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch IS On THEN (Show Count; IF Button Pressed THEN Count = Count + 1) ELSE Screen Off"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Mascota Virtual",
+    "originalIdeaDescription": "Una recreación básica de un Tamagotchi. El interruptor determina si la mascota está despierta o durmiendo, el botón táctil sirve para alimentar a la mascota y la matriz LED muestra su cara feliz o durmiendo.",
+    "transformedIdeaTitle": "Tu Propio Robot Compañero",
+    "transformedIdeaDescription": "Programa un pequeño robot amigo. Usa el interruptor para ponerlo en 'Modo Descanso' o 'Modo Activo'. Cuando esté activo, dale energía presionando el botón táctil para ver cómo sonríe en la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS Sleep THEN Show('Zzz') ELSE (Show('Face'); IF Button Pressed THEN Show('Happy'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "Un sistema de seguridad básico. El interruptor arma o desarma la alarma. Si el sistema está armado y se presiona el botón táctil (simulando un sensor de presión), la matriz LED parpadea con una señal de alerta.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu cofre del tesoro. Activa la trampa secreta con el interruptor. Si un pirata enemigo pisa el sensor (presiona el botón), ¡la calavera de advertencia aparecerá en la pantalla!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS Armed AND Button Pressed THEN Blink_Matrix('Danger Icon')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Dado Electrónico Configurable",
+    "originalIdeaDescription": "Un dado digital para juegos de mesa. El interruptor selecciona entre un dado de 6 caras o una moneda (cara/cruz). El botón táctil inicia la animación de 'lanzamiento' y muestra el resultado aleatorio en la matriz.",
+    "transformedIdeaTitle": "El Generador de Destino del Aventurero",
+    "transformedIdeaDescription": "Crea una herramienta para tus juegos de rol. Usa el interruptor para elegir entre 'Espada' (ataque) o 'Escudo' (defensa), y presiona el botón para ver qué tan fuerte es tu movimiento en la pantalla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS Mode A THEN (IF Button Pressed THEN Random(1-6)) ELSE (IF Button Pressed THEN Random(Heads/Tails))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Visual",
+    "originalIdeaDescription": "Dispositivo para comunicación silenciosa. El interruptor habilita el modo de transmisión. El botón táctil actúa como la llave del telégrafo, y la matriz LED se enciende completamente mientras el botón está presionado.",
+    "transformedIdeaTitle": "Comunicador Secreto de Espías",
+    "transformedIdeaDescription": "Envía mensajes codificados a tus aliados sin hacer ruido. Activa el transmisor con el interruptor y usa el botón para enviar destellos de luz en la pantalla. ¡Aprende a decir SOS!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS On THEN (IF Button Pressed THEN Matrix.Fill(On) ELSE Matrix.Fill(Off))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "Un indicador visual para escritorios. El botón táctil cicla a través de diferentes emojis (feliz, ocupado, triste) en la matriz LED. El interruptor bloquea la selección actual para que no cambie accidentalmente.",
+    "transformedIdeaTitle": "La Insignia de Emociones",
+    "transformedIdeaDescription": "Diseña una insignia digital para mostrar cómo te sientes hoy. Presiona el botón para buscar la cara que te representa y usa el interruptor para fijarla en la pantalla para que todos la vean.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch IS Unlocked THEN (IF Button Pressed THEN Next_Icon()) ELSE Keep_Current_Icon()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "Juego simple donde la matriz muestra una señal después de un tiempo aleatorio. El usuario debe presionar el botón rápidamente. El interruptor reinicia el juego o cambia la dificultad.",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula 1",
+    "transformedIdeaDescription": "¡Espera la señal de salida! Enciende tu motor con el interruptor. Cuando la matriz muestre la luz verde, presiona el botón lo más rápido posible para ganar la carrera.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch IS On THEN (Wait Random Time; Show Signal; Measure Time Until Button Press)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Semáforo con Control Manual",
+    "originalIdeaDescription": "Un modelo de semáforo. La matriz LED muestra rojo, amarillo o verde. El interruptor cambia entre modo automático (ciclo de tiempo) y modo manual (el botón cambia la luz).",
+    "transformedIdeaTitle": "Controlador de Tráfico de la Ciudad",
+    "transformedIdeaDescription": "Tú controlas el cruce más ocupado de la ciudad. Usa el interruptor para tomar el control manual y presiona el botón para cambiar las luces y dejar pasar a las ambulancias.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS Manual THEN (IF Button Pressed THEN ChangeColor) ELSE Auto_Cycle_Colors"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Lámpara Nocturna con Temporizador",
+    "originalIdeaDescription": "Una luz nocturna para leer. El interruptor enciende la luz (Matriz en blanco). El botón táctil activa un temporizador que atenúa la luz gradualmente hasta apagarla.",
+    "transformedIdeaTitle": "Luz Anti-Monstruos",
+    "transformedIdeaDescription": "Crea una lámpara que espante la oscuridad. Enciéndela con el interruptor. Antes de dormir, presiona el botón mágico para que la luz se desvanezca lentamente mientras te quedas dormido.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS On THEN Matrix.On(); IF Button Pressed THEN Fade_Out_Over_Time()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Piedra, Papel o Tijera",
+    "originalIdeaDescription": "Juego clásico digitalizado. El usuario presiona el botón para 'lanzar' su mano. La matriz muestra aleatoriamente uno de los tres símbolos. El interruptor apaga el juego.",
+    "transformedIdeaTitle": "Duelo de Magos Elementales",
+    "transformedIdeaDescription": "Enfréntate a la computadora en un duelo mágico. Elige Fuego, Agua o Planta. Enciende el juego con el interruptor y presiona el botón para lanzar tu hechizo al azar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS On AND Button Pressed THEN Show_Random(Rock, Paper, Scissors)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Vuelta Simple",
+    "originalIdeaDescription": "Herramienta para medir tiempo. El interruptor inicia o detiene el conteo principal. El botón táctil marca una 'vuelta' haciendo parpadear el tiempo actual en la matriz sin detener el reloj.",
+    "transformedIdeaTitle": "Entrenador de Atletas Olímpicos",
+    "transformedIdeaDescription": "Mide el tiempo de tus corredores. Usa el interruptor para empezar la carrera. Cada vez que el corredor pase por la meta, presiona el botón para registrar su vuelta en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch IS Start THEN (Run Timer; IF Button Pressed THEN Flash Current Time)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación",
+    "originalIdeaDescription": "Simulación de cerradura. El usuario debe presionar el botón táctil un número específico de veces. El interruptor se usa como 'Enter' para validar. La matriz muestra un candado abierto o cerrado.",
+    "transformedIdeaTitle": "La Bóveda del Banco",
+    "transformedIdeaDescription": "Programa una cerradura de seguridad. Presiona el botón secreto 5 veces y luego usa el interruptor para intentar abrir la bóveda. Si el número es correcto, verás el candado abrirse.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Count Button Presses; IF Switch Toggled THEN (IF Count == SecretNumber THEN Show(Open) ELSE Show(Closed))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Animación de Lluvia y Sol",
+    "originalIdeaDescription": "Visualizador de clima simple. El interruptor alterna entre dos estados: día soleado o día lluvioso. El botón táctil acelera la animación (gotas cayendo o rayos de sol girando).",
+    "transformedIdeaTitle": "El Controlador del Clima",
+    "transformedIdeaDescription": "¿Quieres sol o lluvia? Usa el interruptor para cambiar el clima en tu ventana digital. Si presionas el botón, harás que llueva más fuerte o que el sol brille más rápido.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch IS Rain THEN (Animate Rain; IF Button Pressed THEN SpeedUp) ELSE (Animate Sun)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Verdad o Mentira (Juguete)",
+    "originalIdeaDescription": "Un juguete de broma. El 'interrogador' usa el interruptor discretamente para predeterminar el resultado (Verdadero/Falso). El 'sospechoso' pone el dedo en el botón y la matriz revela el resultado.",
+    "transformedIdeaTitle": "El Escáner de la Verdad",
+    "transformedIdeaDescription": "Juega a ser un detective. Pídele a un amigo que ponga su dedo en el escáner (botón). Tú controlas secretamente con el interruptor si la máquina dirá que dice la verdad o miente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait for Button Press; IF Switch IS Up THEN Show('Tick') ELSE Show('Cross')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual Ajustable",
+    "originalIdeaDescription": "Ayuda visual para músicos. La matriz muestra una barra oscilante. El botón táctil se usa para marcar el tempo (tap tempo) y el interruptor enciende o apaga el dispositivo.",
+    "transformedIdeaTitle": "Director de Orquesta Digital",
+    "transformedIdeaDescription": "Mantén el ritmo de la banda. Enciende tu batuta digital con el interruptor. Golpea el botón varias veces al ritmo de la música y la pantalla seguirá ese ritmo visualmente.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Calculate Time Between Button Taps; Loop Animation at Calculated Speed"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Esquivar Obstáculos",
+    "originalIdeaDescription": "Juego simple de una línea. El jugador (un punto en la fila inferior) debe saltar obstáculos. El botón hace saltar al jugador. El interruptor pausa el juego.",
+    "transformedIdeaTitle": "Carrera de Obstáculos del Dinosaurio",
+    "transformedIdeaDescription": "¡Corre y salta! Eres un dinosaurio pixelado. Usa el interruptor para empezar a correr y presiona el botón justo a tiempo para saltar sobre los cactus que se acercan en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Scroll Obstacles; IF Button Pressed THEN PlayerY=Jump; IF Collision THEN Game Over"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualizador de Latidos Cardíacos",
+    "originalIdeaDescription": "Simulador médico. El interruptor enciende el monitor. El usuario debe presionar el botón rítmicamente para simular el latido, y la matriz muestra un corazón expandiéndose y contrayéndose.",
+    "transformedIdeaTitle": "Doctor de Robots",
+    "transformedIdeaDescription": "Tu paciente robot necesita un nuevo corazón. Enciende el sistema y bombea energía presionando el botón al ritmo correcto para ver cómo su corazón digital vuelve a la vida.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch On THEN (IF Button Pressed THEN Animate Heart Beat)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de la Suerte",
+    "originalIdeaDescription": "Juego de azar. El botón táctil hace girar una luz alrededor del borde de la matriz LED. Al soltarlo, se detiene gradualmente. El interruptor reinicia la posición.",
+    "transformedIdeaTitle": "La Rueda de Premios de la Feria",
+    "transformedIdeaDescription": "¡Prueba tu suerte! Presiona y mantén el botón para dar fuerza a la rueda de la fortuna. Suéltalo para ver dónde se detiene la luz y descubre qué premio imaginario ganaste.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "While Button Pressed Increase Speed; On Release Decrease Speed until Stop"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Editor de Píxeles Simple",
+    "originalIdeaDescription": "Herramienta de dibujo muy básica. El botón táctil enciende el píxel actual. El interruptor cambia el modo entre 'Mover cursor' (el botón mueve el punto) y 'Dibujar' (el botón pinta).",
+    "transformedIdeaTitle": "Artista de Píxeles Retro",
+    "transformedIdeaDescription": "Dibuja arte digital punto por punto. Usa el interruptor para elegir entre 'Moverte' o 'Pintar'. Muévete por la pantalla con el botón y cambia el interruptor para dejar un punto de luz.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch IS Move THEN (Button -> Move Cursor) ELSE (Button -> Toggle Pixel On/Off)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador Binario Educativo",
+    "originalIdeaDescription": "Herramienta para aprender binario. El interruptor selecciona la posición del bit (columna). El botón táctil invierte el valor (0 o 1) de ese bit en la matriz.",
+    "transformedIdeaTitle": "Decodificador de Lenguaje Alienígena",
+    "transformedIdeaDescription": "Los alienígenas usan ceros y unos. Usa el interruptor para elegir qué parte del mensaje quieres cambiar y el botón para alternar los símbolos. ¡Aprende cómo cuentan las computadoras!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Select Column with Switch; Toggle LED State with Button"
+  }
+]

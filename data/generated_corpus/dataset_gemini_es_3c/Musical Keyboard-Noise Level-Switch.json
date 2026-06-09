@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Biblioteca",
+    "originalIdeaDescription": "Un dispositivo diseñado para mantener el silencio en una biblioteca. El interruptor activa el modo de monitoreo. Cuando el sensor de ruido detecta niveles superiores a un umbral establecido, el teclado musical emite una secuencia de notas agudas y molestas para alertar a los usuarios.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "¡Eres el guardián de la biblioteca secreta! Construye un sistema que vigile el silencio. Usa el interruptor para 'armar' tu sistema de seguridad. Si alguien habla demasiado fuerte, el teclado debe tocar una melodía de advertencia para proteger los libros antiguos.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.value > 60 THEN MusicalKeyboard.play('WarningMelody')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Escala Musical Activada por Voz",
+    "originalIdeaDescription": "Una herramienta experimental donde el volumen de la voz controla la altura de la nota. El interruptor enciende el sistema. A medida que el nivel de ruido aumenta, el teclado toca notas más agudas, y si el ruido es bajo, toca notas graves.",
+    "transformedIdeaTitle": "El Ascensor Musical",
+    "transformedIdeaDescription": "Crea un ascensor mágico que sube con la fuerza de tu voz. Cuando activas el interruptor, grita o susurra para moverte entre los pisos. Cuanto más fuerte grites, más aguda será la nota que toque el piano, ¡llevándote al ático!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN note = Map(NoiseLevel.value, 0, 100, C3, C6); MusicalKeyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Tímida",
+    "originalIdeaDescription": "Una caja de música inversa que solo funciona cuando hay silencio absoluto. El interruptor enciende el dispositivo. Si el sensor de ruido detecta sonido, la música se detiene. Si hay silencio, el teclado reproduce una melodía suave.",
+    "transformedIdeaTitle": "El Hada Tímida",
+    "transformedIdeaDescription": "Un hada musical quiere cantar, pero es muy tímida y se asusta con el ruido. Programa el sistema para que, al encender el interruptor, el hada (teclado) toque una canción hermosa solo si todos en la clase están completamente en silencio.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.value < 20 THEN MusicalKeyboard.play('Lullaby') ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos de Concurso",
+    "originalIdeaDescription": "Un dispositivo para juzgar concursos basado en la intensidad de los aplausos. El interruptor reinicia la medición. El teclado toca un acorde triunfal solo si el nivel de ruido supera un umbral muy alto, indicando un ganador claro.",
+    "transformedIdeaTitle": "El Aplausómetro de Talentos",
+    "transformedIdeaDescription": "¡Organiza un show de talentos! Tu misión es programar el juez automático. Activa el interruptor cuando termine una actuación. Si el público aplaude lo suficientemente fuerte (mucho ruido), el teclado debe tocar la 'Fanfarria de la Victoria'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.value > 85 THEN MusicalKeyboard.play('Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Instrumento de Viento",
+    "originalIdeaDescription": "Un instrumento digital que se toca soplando (haciendo ruido constante) cerca del micrófono. El interruptor cambia entre dos tonalidades o escalas diferentes. El teclado suena mientras el nivel de ruido se mantenga estable.",
+    "transformedIdeaTitle": "La Flauta Mágica Digital",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una flauta mágica. Usa el sensor de ruido para detectar cuándo estás soplando. Si soplas, suena una nota larga. Usa el interruptor para cambiar mágicamente el tipo de sonido de grave a agudo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel.value > 30 THEN IF Switch.isOn() THEN MusicalKeyboard.play('C5') ELSE MusicalKeyboard.play('C3')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Bebé Llorando",
+    "originalIdeaDescription": "Un monitor para bebés. El interruptor activa el modo nocturno. Si el sensor detecta un nivel de ruido alto (llanto), el teclado reproduce automáticamente una canción de cuna para intentar calmar al bebé.",
+    "transformedIdeaTitle": "La Niñera Robot",
+    "transformedIdeaDescription": "Diseña una niñera robótica inteligente. Cuando activas el 'Modo Noche' con el interruptor, el robot escucha. Si el bebé empieza a llorar (ruido fuerte), el robot debe tocar automáticamente 'Estrellita, ¿dónde estás?' para calmarlo.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.value > 70 THEN MusicalKeyboard.playSequence(['C', 'C', 'G', 'G', 'A', 'A', 'G'])"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse sin hacer ruido. El interruptor inicia el desafío. Si el nivel de ruido supera un mínimo mientras el juego está activo, el teclado emite un sonido de 'Game Over'.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Pasos de Gato",
+    "transformedIdeaDescription": "Entra al dojo. Activa el interruptor para comenzar tu prueba de sigilo. Debes moverte por la habitación sin hacer ningún ruido. Si el sensor te escucha, el teclado tocará un gong fuerte y habrás fallado la misión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN IF NoiseLevel.value > 15 THEN MusicalKeyboard.play('Gong') ELSE Wait()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ritmo por Golpes",
+    "originalIdeaDescription": "Un sistema para crear ritmos básicos. El interruptor habilita el micrófono. Cada vez que se detecta un pico repentino de ruido (un golpe o palmada), el teclado toca una nota de percusión o bajo, permitiendo crear un ritmo.",
+    "transformedIdeaTitle": "Batería Invisible",
+    "transformedIdeaDescription": "¡Crea música con el aire! Activa tu batería invisible con el interruptor. Ahora, cada vez que des una palmada fuerte al aire o golpees la mesa, el teclado tocará una nota grave como si fuera un tambor. ¡Intenta hacer un ritmo constante!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.delta > 40 THEN MusicalKeyboard.play('C2')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Contraseña Acústica",
+    "originalIdeaDescription": "Un sistema de seguridad que requiere un patrón de ruido. El interruptor prepara el sistema para escuchar. Si el usuario hace dos ruidos cortos y fuertes (como dos golpes), el teclado toca una melodía de 'Acceso Concedido'.",
+    "transformedIdeaTitle": "La Puerta de la Cueva Secreta",
+    "transformedIdeaDescription": "Programas la entrada a tu base secreta. Activa la escucha con el interruptor. La puerta solo se abrirá (tocando una melodía mágica) si detecta la contraseña secreta: ¡Dos aplausos rápidos! Si no, permanece en silencio.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND DetectDoubleClap(NoiseLevel) THEN MusicalKeyboard.play('OpenSesameTheme')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Visualizador Auditivo de Tormenta",
+    "originalIdeaDescription": "Un generador de ambiente. El interruptor activa la simulación. El ruido ambiental bajo genera notas suaves, pero picos repentinos de ruido (simulando truenos) hacen que el teclado toque acordes dramáticos y fuertes.",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Convierte los sonidos de tu clase en una tormenta musical. Con el interruptor encendido, el ruido de fondo suave es lluvia (notas suaves), pero si alguien grita o golpea algo, ¡el teclado debe simular un trueno dramático!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN IF NoiseLevel.value > 80 THEN MusicalKeyboard.play('ThunderChord') ELSE MusicalKeyboard.play('RainDropNote')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Sonoro",
+    "originalIdeaDescription": "Dispositivo de comunicación. El interruptor abre el canal de transmisión. Los ruidos detectados se traducen en notas cortas (puntos) o largas (rayas) en el teclado, permitiendo enviar mensajes codificados.",
+    "transformedIdeaTitle": "El Espía Telégrafo",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus aliados. Cuando el interruptor está activado, usa tu voz o golpes en la mesa. Un golpe corto hace que el piano toque una nota corta, un sonido largo toca una nota larga. ¡Escribe tu nombre en código Morse musical!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN IF NoiseDuration < 0.5s THEN MusicalKeyboard.play('Short') ELSE MusicalKeyboard.play('Long')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Control de Volumen",
+    "originalIdeaDescription": "Herramienta educativa para aprender a controlar la voz. El interruptor selecciona el objetivo (Alto o Bajo). El teclado da retroalimentación auditiva positiva (acorde mayor) si el usuario mantiene su voz en el rango seleccionado.",
+    "transformedIdeaTitle": "El Domador de Voces",
+    "transformedIdeaDescription": "¡Entrena tu voz! Si el interruptor está apagado, debes susurrar para que el piano suene feliz. Si enciendes el interruptor, ¡debes cantar fuerte para ganar! Si no cumples el objetivo de volumen, el piano tocará una nota triste.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Switch.isOff() AND Noise < 30) OR (Switch.isOn() AND Noise > 70) THEN MusicalKeyboard.play('MajorChord') ELSE MusicalKeyboard.play('MinorChord')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "Un generador de música aleatoria. El interruptor enciende el generador. El nivel de ruido ambiental se usa como una semilla (seed) para seleccionar qué notas aleatorias tocará el teclado, creando una melodía caótica basada en el entorno.",
+    "transformedIdeaTitle": "El Compositor Caótico",
+    "transformedIdeaDescription": "Deja que el ruido de la cafetería componga música. Activa el interruptor y observa qué pasa. El programa leerá el nivel de ruido y elegirá notas al azar basadas en qué tan ruidoso es el lugar. ¡Crea una obra maestra del caos!",
+    "minAge": 14,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN randomNote = Random(NoiseLevel.value); MusicalKeyboard.play(randomNote)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Fiesta Musical",
+    "originalIdeaDescription": "Sistema de entretenimiento. El interruptor activa el modo fiesta. Si hay mucho ruido (gente hablando/bailando), el teclado toca música rápida. Si el ruido baja, la música se vuelve lenta y ambiental.",
+    "transformedIdeaTitle": "DJ Inteligente de Fiesta",
+    "transformedIdeaDescription": "Eres el DJ de la fiesta. Programa el sistema para que detecte el ambiente. Si el interruptor está encendido y hay mucho ruido, la gente quiere bailar: ¡toca música rápida! Si el ruido baja, la gente está cansada: ¡toca música lenta!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN IF Noise > 60 THEN MusicalKeyboard.play('FastTempo') ELSE MusicalKeyboard.play('SlowTempo')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Susto",
+    "originalIdeaDescription": "Juguete de broma. El interruptor 'arma' la broma después de un retardo. Si se detecta un grito repentino (pico de ruido), el teclado acompaña el susto con un glissando descendente cómico.",
+    "transformedIdeaTitle": "La Trampa de Risas",
+    "transformedIdeaDescription": "Prepara una broma divertida. Activa el interruptor y escóndete. El programa esperará en silencio. Si tu amigo entra y grita de sorpresa (ruido fuerte), el teclado debe tocar un sonido de 'dibujos animados cayendo' para hacerlos reír.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel.delta > 50 THEN MusicalKeyboard.play('CartoonFall')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Afinador de Ecos",
+    "originalIdeaDescription": "Sistema de eco retardado. El interruptor activa el efecto. El sistema escucha un sonido corto y, después de 1 segundo, el teclado reproduce una nota que coincide con la intensidad del sonido original.",
+    "transformedIdeaTitle": "La Cueva del Eco",
+    "transformedIdeaDescription": "Estás explorando una cueva profunda. Cuando el interruptor está encendido, cualquier cosa que grites debe tener eco. Programa el sistema para que espere un segundo después de detectar un ruido y luego toque una nota con el mismo volumen.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND Noise > Threshold THEN Wait(1s); MusicalKeyboard.playNote(Velocity=Noise)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo de Ruido Escolar",
+    "originalIdeaDescription": "Herramienta de gestión del aula. El interruptor cambia el modo (Examen/Recreo). En modo Examen, cualquier ruido dispara una nota de alerta. En modo Recreo, el ruido dispara notas alegres.",
+    "transformedIdeaTitle": "Monitor de Examen vs. Recreo",
+    "transformedIdeaDescription": "Ayuda a tu profesor a controlar la clase. Si el interruptor está apagado (Modo Examen), cualquier ruido debe activar una alarma grave. Si el interruptor está encendido (Modo Recreo), el ruido debe generar sonidos de campanitas felices.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() AND Noise > 20 THEN Play('Alarm') ELSE IF Switch.isOn() AND Noise > 20 THEN Play('Bells')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin de Volumen",
+    "originalIdeaDescription": "Instrumento experimental. El interruptor mantiene la nota sostenida (drone). El nivel de ruido detectado modula la frecuencia o el tono de esa nota sostenida en tiempo real.",
+    "transformedIdeaTitle": "El Theremin de Voz",
+    "transformedIdeaDescription": "Crea un instrumento futurista. Cuando enciendas el interruptor, el teclado empezará a sonar continuamente. Acércate al micrófono y haz ruidos: el volumen de tu voz cambiará la nota que suena, ¡sin tocar ninguna tecla!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO Note = Map(NoiseLevel, 0, 100, C4, C5); MusicalKeyboard.play(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inverso",
+    "originalIdeaDescription": "Juego grupal. La música suena por el teclado mientras el interruptor está encendido. Cuando el interruptor se apaga, la música para. Si el sensor de ruido detecta sonido (alguien moviéndose o riendo) mientras está apagado, emite un sonido de eliminación.",
+    "transformedIdeaTitle": "Estatuas Musicales: Edición Estricta",
+    "transformedIdeaDescription": "¡Juguemos a las estatuas! Mientras el interruptor esté ON, el teclado toca música de baile. Cuando lo apagues (OFF), todos deben congelarse y callarse. Si alguien se ríe o se mueve (hace ruido), ¡el teclado toca un bocinazo de 'FUERA'!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Play('DanceMusic') ELSE IF Noise > 10 THEN Play('Buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Sonido",
+    "originalIdeaDescription": "Juego de puzzle. El interruptor reinicia el candado. El usuario debe mantener un nivel de ruido preciso (ni muy alto ni muy bajo, ej. entre 40-50) durante 3 segundos para que el teclado toque la melodía de apertura.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Para abrir la caja fuerte, no necesitas una llave, ¡necesitas el tono de voz perfecto! Activa el sistema y mantén un zumbido constante (nivel de ruido medio) durante 3 segundos. Si lo logras, el teclado tocará el sonido de 'Caja Fuerte Abierta'.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND (Noise > 40 AND Noise < 60) FOR 3s THEN MusicalKeyboard.play('Unlock')"
+  }
+]

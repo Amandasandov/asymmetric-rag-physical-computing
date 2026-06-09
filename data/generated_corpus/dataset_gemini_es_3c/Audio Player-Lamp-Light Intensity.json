@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Despertador Solar Inteligente",
+    "originalIdeaDescription": "Este sistema simula un amanecer artificial. El sensor de intensidad de luz monitorea el ambiente; cuando detecta que la luz natural comienza a entrar en la habitación (o se simula con una linterna), activa gradualmente la lámpara en tonos cálidos y reproduce sonidos de pájaros o música suave para despertar al usuario de manera natural y progresiva.",
+    "transformedIdeaTitle": "El Gallo Robot Madrugador",
+    "transformedIdeaDescription": "¡Ayuda a tu robot a despertarse con el sol! En este desafío, programarás al robot para que duerma cuando esté oscuro. Pero cuidado, en cuanto salga el 'sol' (una linterna apuntando al sensor), el robot debe encender sus ojos (Lámpara) y cantar como un gallo (Audio Player) para despertar a toda la granja virtual.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN Lamp.setColor(YELLOW) AND AudioPlayer.play('Rooster') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Ambiente de Cueva Misteriosa Reactiva",
+    "originalIdeaDescription": "Un dispositivo diseñado para casas embrujadas o juegos de escape. Cuando el sensor de luz detecta oscuridad total (como cuando se apagan las luces principales o alguien entra en una zona oscura), enciende una luz roja tenue y reproduce sonidos de gotas de agua cayendo o viento espeluznante para crear atmósfera.",
+    "transformedIdeaTitle": "La Cueva del Dragón Dormido",
+    "transformedIdeaDescription": "Imagina que entras en la cueva de un dragón. Si hay luz, el dragón sabe que estás ahí y ruge. Pero tu misión es crear el modo 'sigilo': cuando apagas las luces (oscuridad), el dragón se duerme, su respiración se ilumina suavemente en rojo y se escuchan ronquidos profundos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 20 THEN Lamp.setColor(RED) AND AudioPlayer.play('Snore') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Controlador de Fiesta Disco Fotosensible",
+    "originalIdeaDescription": "Un sistema de entretenimiento que reacciona a los cambios rápidos de luz estroboscópica externa. Si el sensor detecta fluctuaciones rápidas o niveles altos de luz intermitente, el sistema acompaña reproduciendo música de baile enérgica y sincronizando su propia lámpara para cambiar de colores aleatorios al ritmo.",
+    "transformedIdeaTitle": "¡Fiesta de Baile Galáctica!",
+    "transformedIdeaDescription": "Eres el DJ de una fiesta espacial. Tu misión es hacer que la música suene solo cuando las luces de la pista estén encendidas. Si tapas el sensor con la mano (oscuridad), la música se detiene y la luz se apaga. Si destapas el sensor, ¡que empiece la música pop y las luces de colores!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 60 THEN AudioPlayer.play('DanceMusic') AND Lamp.blink(RANDOM) ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad con Combinación de Luz",
+    "originalIdeaDescription": "Un mecanismo de seguridad lúdico donde el 'candado' se abre mediante luz. El usuario debe apuntar una luz de cierta intensidad específica al sensor. Si la intensidad coincide con el rango objetivo, la lámpara se pone verde y suena un efecto de 'desbloqueo'; de lo contrario, permanece roja.",
+    "transformedIdeaTitle": "La Bóveda Secreta de Espías",
+    "transformedIdeaDescription": "Como agente secreto, debes abrir la bóveda del banco. No usas llaves, ¡usas una linterna! Programa el sistema para que solo se abra (Luz Verde + Sonido de 'Cling') si acercas la linterna lo suficiente para que la intensidad sea muy alta. Si la luz es débil, la bóveda sigue cerrada (Luz Roja).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 90 THEN Lamp.setColor(GREEN) AND AudioPlayer.play('Unlock') ELSE Lamp.setColor(RED)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Monitor de Crecimiento de Planta Virtual",
+    "originalIdeaDescription": "Este dispositivo simula las necesidades de una planta. Si recibe suficiente luz ambiental durante el día, la lámpara brilla en verde (fotosíntesis) y emite un zumbido feliz. Si está en la oscuridad por mucho tiempo durante el día simulado, la luz se vuelve marrón y emite un sonido de marchitamiento.",
+    "transformedIdeaTitle": "Flori, la Planta Cantarina",
+    "transformedIdeaDescription": "Conoce a Flori, una planta digital que ama el sol. Tu tarea es cuidarla. Programa a Flori para que cante una melodía alegre y brille en verde brillante cuando la pongas cerca de una ventana (mucha luz). Si la escondes en un cajón (poca luz), debe llorar y ponerse de color amarillo triste.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 70 THEN Lamp.setColor(GREEN) AND AudioPlayer.play('HappySong') ELSE Lamp.setColor(YELLOW) AND AudioPlayer.play('SadSound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Theremin Óptico de Música Electrónica",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la intensidad de la luz controla el volumen o el tono de una pista de audio. Al mover la mano sobre el sensor de luz (creando sombra), el usuario altera el sonido y cambia el color de la lámpara simultáneamente, creando una performance audiovisual.",
+    "transformedIdeaTitle": "El Instrumento Musical Invisible",
+    "transformedIdeaDescription": "¡Crea música sin tocar nada! Vas a construir un instrumento mágico. Cuando muevas tu mano arriba y abajo sobre el sensor (cambiando la luz que recibe), el volumen de la música subirá o bajará, y la luz cambiará de intensidad. ¡Intenta tocar una canción moviendo solo tu mano en el aire!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "AudioPlayer.setVolume(Light_Intensity) AND Lamp.setBrightness(Light_Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica Ambiental",
+    "originalIdeaDescription": "Un generador de ambiente que reacciona a la oscuridad. Cuando la luz baja a un nivel de 'nublado', inicia sonidos de lluvia suave. Si la luz baja repentinamente o oscila (simulando nubes densas), activa sonidos de truenos y la lámpara emite destellos blancos simulando relámpagos.",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "¡Vamos a controlar el clima! Programa tu dispositivo para que cuando cubras el sensor con tus manos (como nubes negras tapando el sol), se escuche un trueno fuerte y la lámpara lance un destello blanco como un rayo. Si quitas las manos, vuelve la calma.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN AudioPlayer.play('Thunder') AND Lamp.blink(WHITE, FAST) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Guardián de Museo Anti-Robo",
+    "originalIdeaDescription": "Un sistema de seguridad para exhibiciones. El dispositivo espera en una habitación oscura. Si detecta el haz de luz de una linterna de un intruso (aumento repentino de intensidad), dispara una alarma sonora ruidosa y hace parpadear la lámpara en rojo y azul como la policía.",
+    "transformedIdeaTitle": "Protege la Galleta de Oro",
+    "transformedIdeaDescription": "Eres el guardián del museo donde se guarda la legendaria Galleta de Oro. La sala está oscura. Si un ladrón entra con una linterna e ilumina el sensor, ¡debes atraparlo! Programa la alarma para que suene una sirena y las luces parpadeen en rojo y azul en cuanto detecten luz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 80 THEN AudioPlayer.play('Siren') AND Lamp.blink(RED_BLUE) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Asistente de Lectura Nocturna",
+    "originalIdeaDescription": "Una lámpara inteligente que acompaña la lectura. Cuando el sensor detecta que el ambiente está oscuro pero hay una luz focalizada (modo lectura), enciende la lámpara en tono ámbar para ayudar a la vista y reproduce ruido blanco o lluvia para mejorar la concentración.",
+    "transformedIdeaTitle": "La Lámpara Mágica de Cuentos",
+    "transformedIdeaDescription": "Diseña la mejor compañía para leer bajo las sábanas. Cuando sea de noche (oscuridad detectada por el sensor), tu dispositivo debe encender una luz suave y cálida automáticamente y poner música de fondo relajante para que puedas leer tus cuentos favoritos sin miedo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 40 THEN Lamp.setColor(WARM_WHITE) AND AudioPlayer.play('RainSounds') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Juego de Búsqueda del Tesoro por Proximidad",
+    "originalIdeaDescription": "Un juego interactivo donde el jugador usa una linterna para encontrar el objetivo oculto. A medida que la luz de la linterna se acerca al sensor (aumentando la intensidad), el audio reproduce un 'ping' de sonar más rápido y la lámpara brilla con mayor intensidad hasta indicar que se encontró el tesoro.",
+    "transformedIdeaTitle": "Cazadores de Tesoros con Linternas",
+    "transformedIdeaDescription": "Esconde el dispositivo en una habitación oscura. Tus amigos tienen que encontrarlo usando linternas. Programa el dispositivo para que, cuando la luz de una linterna lo toque un poco, haga 'bip'. ¡Pero si la luz le da de lleno (muy fuerte), debe celebrar con música de victoria y luces de colores!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity > 90 THEN AudioPlayer.play('Win') ELSE IF Light_Intensity > 20 THEN AudioPlayer.play('Ping') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Lumínico",
+    "originalIdeaDescription": "Un dispositivo de comunicación que recibe señales de luz. El usuario envía destellos de luz al sensor (puntos y rayas). El sistema traduce cada pico de luz detectado en un tono de audio ('bip') y un parpadeo de confirmación de la lámpara, permitiendo 'escuchar' la luz.",
+    "transformedIdeaTitle": "Telégrafo de Luz Secreto",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando una linterna. Programa tu receptor para que cada vez que detecte un destello de luz, emita un sonido corto ('bip') y encienda su propia luz. Así podrás practicar Código Morse: un destello corto es un punto, uno largo es una raya.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity_Change > Threshold THEN AudioPlayer.playTone('Bip') AND Lamp.on() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Faro Costero Automatizado con Niebla",
+    "originalIdeaDescription": "Simulación de un faro inteligente. Funciona monitoreando la luz ambiental. Durante el día está inactivo. Al anochecer (baja luz), enciende la lámpara giratoria/intermitente. Si la luz es extremadamente baja (simulando niebla densa), activa también una bocina de niebla periódica.",
+    "transformedIdeaTitle": "Capitán del Faro",
+    "transformedIdeaDescription": "Los barcos necesitan tu ayuda para no chocar. Construye un faro inteligente. Cuando empiece a oscurecer (tapa el sensor un poco), la luz debe empezar a girar o parpadear. Pero si está totalmente oscuro (tápalo por completo), significa que hay niebla: ¡activa también la bocina de niebla!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN AudioPlayer.play('FogHorn') AND Lamp.blink() ELSE IF Light_Intensity < 50 THEN Lamp.blink() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja de Sorpresas de Cumpleaños",
+    "originalIdeaDescription": "Un dispositivo para colocar dentro de una caja de regalo. El sensor detecta oscuridad mientras la caja está cerrada. En el momento en que se abre la tapa y entra la luz, el dispositivo activa la canción de 'Feliz Cumpleaños' y la lámpara parpadea festivamente.",
+    "transformedIdeaTitle": "La Caja de Regalo Sorpresa",
+    "transformedIdeaDescription": "¡Prepara la mejor broma de cumpleaños! Esconde el dispositivo dentro de una caja oscura. Prográmalo para que esté en silencio mientras esté oscuro. En el momento exacto en que tu amigo abra la caja y entre la luz, ¡debe sonar 'Cumpleaños Feliz' y encenderse una luz de fiesta!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 20 (Suddenly) THEN AudioPlayer.play('HappyBirthday') AND Lamp.blink(MULTI) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Luciérnagas en Frasco",
+    "originalIdeaDescription": "Un objeto decorativo que imita la naturaleza. Al detectar oscuridad, la lámpara realiza pulsaciones suaves en color amarillo-verde (como una luciérnaga) y se reproducen sonidos de grillos y naturaleza nocturna. La luz intensa detiene la simulación.",
+    "transformedIdeaTitle": "Frasco de Luciérnagas Mágicas",
+    "transformedIdeaDescription": "Vamos a capturar la magia del bosque. Programa tu 'frasco' digital para que sepa cuándo es de noche. Si el sensor detecta oscuridad, haz que la luz parpadee suavemente en color amarillo verdoso y suenen grillos. Si enciendes la luz de la habitación, las luciérnagas deben esconderse (apagarse).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN Lamp.pulse(YELLOW_GREEN) AND AudioPlayer.play('Crickets') ELSE All.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Entrenador de Reflejos de Portero",
+    "originalIdeaDescription": "Un juego de reacción. El sistema emite un sonido de '¡Chuta!' y enciende la lámpara. El usuario debe bloquear el sensor de luz con la mano lo más rápido posible. El sistema mide el tiempo entre el encendido de la lámpara y la caída de la intensidad de luz, dando feedback de audio según la velocidad.",
+    "transformedIdeaTitle": "Portero Super Rápido",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! El juego funciona así: El dispositivo grita '¡Ya!' y enciende una luz. Tu misión es tapar el sensor con tu mano tan rápido como puedas. Si lo haces muy rápido (la luz baja enseguida), ganas un sonido de aplausos. Si eres lento, suena un silbato de falta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.on(); WAIT; IF Light_Intensity drops quickly THEN AudioPlayer.play('Cheer') ELSE AudioPlayer.play('Whistle')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Medidor de Contaminación Lumínica Educativo",
+    "originalIdeaDescription": "Herramienta científica para estudiantes. Mide la intensidad de luz en diferentes áreas. Si la luz es demasiado fuerte (contaminación), la lámpara se pone roja y suena una alerta. Si la luz es adecuada y baja, la lámpara se pone verde y suena un tono armonioso.",
+    "transformedIdeaTitle": "Detective de Energía",
+    "transformedIdeaDescription": "¿Se está desperdiciando energía en tu escuela? Conviértete en un Detective de Energía. Crea una herramienta que te avise si una habitación está demasiado iluminada innecesariamente. Si el sensor capta demasiada luz, debe sonar una alarma y encenderse una luz roja de advertencia.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > Threshold_High THEN Lamp.setColor(RED) AND AudioPlayer.play('Alert') ELSE Lamp.setColor(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Narrador de Historias de Sombras",
+    "originalIdeaDescription": "Un dispositivo para teatro de sombras. Se coloca detrás de una sábana. Cuando los actores (manos u objetos) bloquean la luz que llega al sensor, el sistema cambia la iluminación de fondo (ej. de día a atardecer) y dispara efectos de sonido correspondientes a la escena.",
+    "transformedIdeaTitle": "Teatro de Sombras Automático",
+    "transformedIdeaDescription": "Crea una obra de teatro moderna. Coloca el sensor en el escenario. Cuando pase tu marioneta y haga sombra sobre el sensor, el escenario debe cambiar de color automáticamente (Lámpara) y hacer un sonido gracioso. ¡Así podrás actuar y controlar los efectos especiales al mismo tiempo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity_Change (Shadow) THEN Lamp.nextColor() AND AudioPlayer.playNextSound()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Submarino de Profundidad",
+    "originalIdeaDescription": "Simula el descenso al océano. A medida que se reduce la luz (tapando el sensor progresivamente), el sonido cambia de ruido de superficie (gaviotas) a sonar de submarino y burbujas, y la lámpara cambia de blanco brillante a azul profundo.",
+    "transformedIdeaTitle": "Viaje al Fondo del Mar",
+    "transformedIdeaDescription": "Transforma tu habitación en un submarino. Al principio hay mucha luz y se oyen gaviotas. A medida que tapas el sensor lentamente con la mano, estás 'bajando' al fondo del mar: la luz debe volverse azul oscura y empezar a sonar el 'ping' del radar submarino.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 30 THEN Lamp.setColor(BLUE) AND AudioPlayer.play('Sonar') ELSE Lamp.setColor(WHITE) AND AudioPlayer.play('Seagulls')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Vela Electrónica Sensible al Viento",
+    "originalIdeaDescription": "Aunque no usa sensor de viento, usa la luz para simularlo. Si el usuario pasa la mano rápido sobre el sensor (cambio brusco de luz), la 'vela' (Lámpara) parpadea como si el viento la moviera y el audio reproduce un soplido. Si se cubre totalmente por 3 segundos, se 'apaga'.",
+    "transformedIdeaTitle": "La Vela que No Quema",
+    "transformedIdeaDescription": "Programemos una vela mágica. La lámpara será la llama. Si pasas tu mano rápido por encima (haciendo sombra momentánea), la llama debe temblar y hacer un sonido de viento. Si dejas la mano encima tapándola por completo, ¡la vela se apaga con un sonido de humo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Blocked_Duration > 2s THEN Lamp.off() ELSE IF Light_Fluctuation THEN Lamp.flicker() AND AudioPlayer.play('Wind')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Lamp",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Semáforo Auditivo Accesible",
+    "originalIdeaDescription": "Un prototipo de accesibilidad. Utiliza la lámpara como semáforo visual (Rojo/Verde) basado en un temporizador o disparador. El sensor de luz verifica el estado de la lámpara (retroalimentación) y el Audio Player emite un sonido rápido para 'cruce permitido' (Verde) y lento para 'esperar' (Rojo).",
+    "transformedIdeaTitle": "Cruce Seguro para Todos",
+    "transformedIdeaDescription": "Ayuda a las personas que no pueden ver bien a cruzar la calle. Crea un semáforo inteligente. Cuando la luz se ponga verde (brillante), debe emitir un sonido rápido y alegre para indicar que se puede caminar. Cuando la luz se apague o sea roja (poca intensidad/color), debe hacer un sonido lento de advertencia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Lamp_State == GREEN (detected by light sensor logic) THEN AudioPlayer.play('FastBeep') ELSE AudioPlayer.play('SlowBeep')"
+  }
+]

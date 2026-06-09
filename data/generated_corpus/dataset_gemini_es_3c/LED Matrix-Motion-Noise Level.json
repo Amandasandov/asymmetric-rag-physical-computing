@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Mascota Digital Emocional",
+    "originalIdeaDescription": "Una cara en la matriz LED que cambia de expresión. Si se agita suavemente (Motion), sonríe. Si hay mucho ruido (Noise), pone cara de susto o enfado.",
+    "transformedIdeaTitle": "El Monstruito Sensible",
+    "transformedIdeaDescription": "Programa a 'Pixel', tu mascota. Dibuja una cara feliz por defecto. Si el sensor de ruido detecta gritos (Nivel > 80), la Matriz debe mostrar una 'X' de ojos asustados. Si agitas el dispositivo para acunarlo (Motion suave), vuelve a sonreír. Aprende sobre condicionales y estados.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 80 THEN LED.show('Scared'); ELSE IF Motion.shake() THEN LED.show('Happy')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Sistema de Alarma Visual",
+    "originalIdeaDescription": "Dispositivo de vigilancia. Si detecta movimiento o ruido, la matriz LED parpadea con una señal de advertencia o sirena visual.",
+    "transformedIdeaTitle": "El Ojo que Todo lo Ve",
+    "transformedIdeaDescription": "Protege tu diario secreto. Dibuja un ojo cerrado en la Matriz. Si alguien mueve el diario (Motion) o hace ruido cerca (Noise), el ojo debe abrirse y parpadear en alerta. El reto es calibrar la sensibilidad para que no se active por error.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > 10 OR Noise.level > 30 THEN LED.flash('AlertIcon')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Vela Digital de Viento",
+    "originalIdeaDescription": "La matriz muestra una llama animada. Para 'apagarla', el usuario debe soplar fuerte (Ruido). Para volver a encenderla, debe agitar el dispositivo (fósforo).",
+    "transformedIdeaTitle": "La Llama Olímpica Eterna",
+    "transformedIdeaDescription": "Mantén la llama encendida. La Matriz muestra fuego. Si soplas al micrófono (detectado como ruido constante), la intensidad de la luz baja hasta apagarse (LEDs apagados). Agita el dispositivo rápidamente para generar 'chispas' y volver a encenderla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.blow() THEN FlameLevel--; IF Motion.shake() THEN FlameLevel++; LED.plotBar(FlameLevel)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo: 1, 2, 3, Momia",
+    "originalIdeaDescription": "La matriz muestra un semáforo (Pixel verde/rojo). Cuando está rojo, el usuario no debe moverse ni hacer ruido. Si falla, aparece una calavera.",
+    "transformedIdeaTitle": "Escape del Museo",
+    "transformedIdeaDescription": "Eres una estatua de día, ladrón de noche. La Matriz muestra un guardia mirando (Ojos abiertos). Debes quedarte quieto (Motion 0) y callado (Noise 0). Cuando el guardia duerma (Ojos cerrados), agita el dispositivo para 'correr' y sumar puntos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF GuardAwake AND (Motion.detected OR Noise.detected) THEN LED.show('GameOver') ELSE Score++"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Sismógrafo Visualizador de Voz",
+    "originalIdeaDescription": "Un medidor que usa la altura de las barras en la matriz LED para mostrar la intensidad de un 'terremoto' (movimiento) o de un 'grito' (ruido).",
+    "transformedIdeaTitle": "Laboratorio de Temblores y Gritos",
+    "transformedIdeaDescription": "Construye un instrumento científico. Modo 1: Golpea la mesa y mira cómo las barras LED suben según la fuerza del golpe (Motion). Modo 2: Grita y mira cómo la matriz se llena según el volumen (Noise). ¿Qué genera una señal más fuerte?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "GraphHeight = Max(Motion.strength, Noise.level); LED.plotBarGraph(GraphHeight)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Bola Mágica 8 Interactiva",
+    "originalIdeaDescription": "El usuario hace una pregunta en voz alta (Ruido). Luego agita el dispositivo (Motion). La matriz muestra una respuesta (Sí, No, Quizás).",
+    "transformedIdeaTitle": "El Oráculo del Futuro",
+    "transformedIdeaDescription": "Pregunta al Oráculo. El dispositivo espera que hables (Sensor de Ruido detecta voz). Luego, agítalo para 'mezclar' el destino. La Matriz LED mostrará un icono al azar: un Check (Sí), una X (No) o un ? (Duda).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WAIT_FOR(Noise); WAIT_FOR(Motion.shake); Result = Random(['V', 'X', '?']); LED.show(Result)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Juego de Pesca en Hielo",
+    "originalIdeaDescription": "La matriz muestra un agujero. El usuario espera en silencio. Si hace ruido, el pez huye. Si siente un tirón (Motion), debe sacudir para pescar.",
+    "transformedIdeaTitle": "Pesca Silenciosa",
+    "transformedIdeaDescription": "Paciencia. La Matriz muestra un pez nadando. Debes estar en silencio absoluto. Si haces ruido, el pez desaparece. Cuando el pez 'pique' (el LED parpadea), haz un movimiento rápido hacia arriba (Motion) para capturarlo y ver una animación de victoria.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 10 THEN LED.clear(); IF FishBite AND Motion.jerk('Up') THEN LED.animate('FishCaught')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Controlador de Cohete",
+    "originalIdeaDescription": "Agitar para cargar combustible (llenar matriz). Gritar '3, 2, 1' para despegar (animación de cohete subiendo).",
+    "transformedIdeaTitle": "Misión a Marte",
+    "transformedIdeaDescription": "Prepara el lanzamiento. Agita el dispositivo frenéticamente para llenar la barra de combustible en la Matriz LED. Cuando esté llena, haz la cuenta regresiva en voz alta. Al detectar el ruido final, la Matriz mostrará la animación del despegue.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Fuel += Motion.shake; LED.plot(Fuel); IF Fuel==Max AND Noise.peak() THEN LED.animate('BlastOff')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Nivel de Burbuja con Voz",
+    "originalIdeaDescription": "Herramienta de construcción. Un punto en la matriz indica la inclinación (Motion). Si está nivelado, el usuario debe decir '¡Listo!' para fijarlo.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "Nivela el estante. Mueve el dispositivo hasta que el punto LED esté exactamente en el centro (Tilt X/Y). Cuando lo logres, grita '¡YA!' para congelar la imagen y confirmar que la construcción es perfecta.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "X = Map(Motion.TiltX); Y = Map(Motion.TiltY); LED.plot(X,Y); IF X==3 AND Y==3 AND Noise.loud() THEN Freeze()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Tamagotchi Dormilón",
+    "originalIdeaDescription": "La cara en la matriz duerme (Zzz). Si se mueve o hay ruido, se despierta (Ojos abiertos). El objetivo es mantenerlo dormido.",
+    "transformedIdeaTitle": "No Despiertes al Bebé",
+    "transformedIdeaDescription": "El bebé está durmiendo (Animación Zzz en LED). Pásale el dispositivo a un compañero sin despertarlo. Si detecta sacudidas (Motion) o susurros fuertes (Noise), el bebé se despertará llorando (Animación triste) y perderás el turno.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > 5 OR Noise.level > 20 THEN LED.show('Cry') ELSE LED.show('Sleep')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Luciérnagas",
+    "originalIdeaDescription": "Agitar el dispositivo 'atrapa' luciérnagas (puntos en la matriz). Si hay mucho ruido, se apagan/escapan.",
+    "transformedIdeaTitle": "Frasco de Luz",
+    "transformedIdeaDescription": "Atrapa luces mágicas. Agita suavemente el dispositivo en el aire para que aparezcan puntos brillantes en la Matriz LED. Pero son tímidas: si alguien habla o grita (Noise), las luces se apagarán una por una. ¿Cuántas puedes mantener encendidas?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake() THEN LED.randomPlot(); IF Noise.detected() THEN LED.clearOnePixel()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Juego de Baile y Congelado",
+    "originalIdeaDescription": "La matriz muestra flechas de baile. El usuario debe moverse. Si aparece un icono de 'Stop', debe congelarse y callarse.",
+    "transformedIdeaTitle": "Ritmo Robot",
+    "transformedIdeaDescription": "Sigue el ritmo. Si la Matriz muestra flechas, muévete (Motion detectado). Si muestra un Octágono de PARE, ¡congélate! No te muevas ni hables (Noise < 5). Si fallas, aparecerá una 'X' grande.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mode = Random(Dance, Stop); IF Mode==Stop AND (Motion>0 OR Noise>0) THEN LED.show('Fail')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Varita de Hechizos Visuales",
+    "originalIdeaDescription": "Hacer un gesto (círculo) y decir una palabra mágica (Ruido) dibuja un patrón específico en la matriz.",
+    "transformedIdeaTitle": "Aprendiz de Mago",
+    "transformedIdeaDescription": "Crea hechizos. Programa el dispositivo para que si lo agitas hacia adelante (Motion) y gritas '¡FUEGO!' (Noise), la Matriz LED se llene de una animación de llamas. Si lo giras y soplas, que aparezca hielo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.gesture('Cast') AND Noise.peak() THEN LED.animate('FireSpell')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Contador de Pasos con Ánimo",
+    "originalIdeaDescription": "Podómetro. Muestra el número de pasos en la matriz. Si el usuario se detiene, debe animarse a sí mismo (gritar '¡Vamos!') para reactivar el contador.",
+    "transformedIdeaTitle": "Entrenador Personal",
+    "transformedIdeaDescription": "Sal a correr. La Matriz cuenta tus pasos (Motion). Si te cansas y paras, la pantalla se apaga. Para reactivarla y seguir sumando, tienes que gritar '¡PUEDO HACERLO!' al sensor de ruido.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.step() THEN Steps++; LED.show(Steps); IF Motion.idle() AND Noise.shout() THEN Resume()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Etch-a-Sketch Sonoro",
+    "originalIdeaDescription": "Mover el dispositivo inclinado mueve un punto de dibujo. Agitar borra la pantalla. Gritar cambia el brillo del punto.",
+    "transformedIdeaTitle": "Pizarra Mágica de Neón",
+    "transformedIdeaDescription": "Dibuja con luz. Inclina el dispositivo para mover el cursor y pintar en la Matriz LED. Si quieres borrar todo, agítalo fuerte como una pizarra mágica (Motion). Si quieres cambiar el pincel, da una palmada (Noise).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "X += TiltX; Y += TiltY; LED.plot(X,Y); IF Motion.shake() THEN LED.clear(); IF Noise.clap() THEN ToggleMode()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "La matriz muestra 'estática' (píxeles aleatorios). Si hay un pico de ruido y movimiento, la matriz forma la cara de un fantasma.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar",
+    "transformedIdeaDescription": "Busca actividad paranormal. Camina por la habitación (Motion). La Matriz muestra ruido aleatorio. Si de repente hay un sonido fuerte (un golpe o grito), el radar se fija y muestra la ubicación o la cara del fantasma en los LEDs.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LED.showRandom(); IF Motion.walking() AND Noise.spike() THEN LED.show('GhostFace')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Lámpara de Minero Inteligente",
+    "originalIdeaDescription": "Si el usuario camina (Motion), los LEDs se encienden para iluminar. Si hay un ruido fuerte (derrumbe simulado), los LEDs parpadean SOS.",
+    "transformedIdeaTitle": "Exploración en la Cueva",
+    "transformedIdeaDescription": "Adéntrate en la mina. Para ahorrar batería, la luz de la Matriz (todos los LEDs blancos) solo se enciende si estás caminando (Motion). Si el sensor detecta un estruendo fuerte (Ruido), la luz cambia automáticamente a modo parpadeo de emergencia SOS.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active() THEN LED.allOn(); ELSE LED.off(); IF Noise.crash() THEN LED.signal('SOS')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Duelo de Vaqueros",
+    "originalIdeaDescription": "El dispositivo está en la cintura. Al detectar el movimiento de 'desenfundar', mide el tiempo hasta que el usuario grita '¡Bang!'. Muestra el tiempo en la matriz.",
+    "transformedIdeaTitle": "El Pistolero Más Rápido",
+    "transformedIdeaDescription": "Duelo al mediodía. Pon el dispositivo en tu bolsillo. A la señal, sácalo rápido (Motion de desenfunde) y grita '¡PUM!' (Noise). La Matriz LED mostrará tus milisegundos de reacción. ¡Compite con tus amigos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "StartTimer when Motion.jerk(); StopTimer when Noise.peak(); LED.scrollNumber(Time)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta de Nieve",
+    "originalIdeaDescription": "Agitar el dispositivo hace caer 'copos' (LEDs bajando). Soplar (ruido) hace que los copos se muevan lateralmente (viento).",
+    "transformedIdeaTitle": "Bola de Nieve Digital",
+    "transformedIdeaDescription": "Crea un invierno portátil. Agita el dispositivo para que empiece a nevar en la pantalla (píxeles cayendo). Si soplas al micrófono, activarás el viento y los copos de nieve volarán hacia un lado en la Matriz.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SnowAmount = Motion.shake; Wind = Noise.blow; AnimateSnow(Amount, Direction=Wind)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Motion", "Noise Level"],
+    "originalIdeaTitle": "Batidora de Colores",
+    "originalIdeaDescription": "Representar ingredientes como píxeles. Agitar para mezclar (animación de giro). El ruido del motor (usuario haciendo 'brrr') acelera la mezcla visual.",
+    "transformedIdeaTitle": "Chef de Batidos",
+    "transformedIdeaDescription": "Prepara un licuado. Agita el dispositivo para mezclar los píxeles en la pantalla. Para que la licuadora tenga potencia, tienes que hacer el sonido del motor '¡Rrrrrr!' con tu voz. Si dejas de hacer ruido, la mezcla se detiene.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "MixSpeed = Motion.shake + Noise.level; LED.rotateAnimation(MixSpeed)"
+  }
+]

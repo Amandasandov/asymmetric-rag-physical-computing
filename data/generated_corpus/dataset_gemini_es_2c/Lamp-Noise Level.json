@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alerta por Volumen Excesivo",
+    "originalIdeaDescription": "Un sistema de monitoreo ambiental que utiliza el sensor de ruido para detectar cuando el sonido ambiente supera un umbral específico, encendiendo la lámpara en color rojo como advertencia visual.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca Secreta",
+    "transformedIdeaDescription": "¡Eres el guardián de una biblioteca mágica! Los libros antiguos son muy sensibles al ruido. Debes programar el sistema de seguridad para que la luz sea verde cuando hay silencio, pero si alguien habla demasiado fuerte, la luz debe cambiar a rojo para advertirles antes de que los libros se despierten.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN Lamp.setColor(Red) ELSE Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Control de Brillo por Intensidad Sonora",
+    "originalIdeaDescription": "Una instalación artística interactiva donde la intensidad del brillo de la lámpara se ajusta dinámicamente en tiempo real proporcionalmente al nivel de decibelios detectado en la habitación.",
+    "transformedIdeaTitle": "El Aliento de Fuego del Dragón",
+    "transformedIdeaDescription": "Tu dispositivo es un dragón dormido. Cuanto más fuerte ruges hacia el sensor, más brillante debe brillar su fuego (la lámpara). ¡Intenta controlar tu voz para hacer que el fuego sea tenue como una vela o brillante como el sol!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.setBrightness(map(NoiseLevel, 0, 100, 0, 255))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor Activado por Aplausos",
+    "originalIdeaDescription": "Un sistema de automatización del hogar que permite al usuario encender o apagar la lámpara dando una palmada fuerte, detectando el pico repentino de sonido.",
+    "transformedIdeaTitle": "El Mago de la Luz",
+    "transformedIdeaDescription": "Crea una varita mágica que responda a tus hechizos. Cuando das una palmada fuerte (lanzas el hechizo), la luz debe encenderse o apagarse. ¡Sorprende a tus amigos controlando la luz sin tocarla!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Threshold AND Lamp.isOff THEN Lamp.on() ELSE IF NoiseLevel > Threshold THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de Semáforo de Ruido",
+    "originalIdeaDescription": "Una herramienta para el aula que cambia el color de la lámpara entre verde, amarillo y rojo dependiendo de tres niveles distintos de ruido ambiental para gestionar el comportamiento.",
+    "transformedIdeaTitle": "Misión Sigilosa Ninja",
+    "transformedIdeaDescription": "Estás entrenando para ser un ninja. Debes cruzar la habitación sin hacer ruido. Si haces poco ruido, la luz es verde (seguro). Si haces un poco de ruido, se pone amarilla (cuidado). Si haces mucho ruido, se pone roja (¡descubierto!).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < 30 THEN Green ELSE IF Noise < 70 THEN Yellow ELSE Red"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Vela Digital Sensible al Viento",
+    "originalIdeaDescription": "Simulación de una vela que se apaga cuando el sensor de ruido detecta un sonido fuerte y sostenido similar a un soplido cerca del micrófono.",
+    "transformedIdeaTitle": "La Vela de Cumpleaños Infinita",
+    "transformedIdeaDescription": "Programa una vela digital para tu pastel de cumpleaños virtual. La luz debe estar encendida parpadeando como fuego, pero si detecta un sonido fuerte de soplido, debe apagarse lentamente como si la hubieras extinguido.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > BlowThreshold THEN Lamp.fadeTo(0)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luz de Fiesta Rítmica",
+    "originalIdeaDescription": "Un sistema de iluminación para entretenimiento que cambia el color de la lámpara aleatoriamente cada vez que detecta un golpe fuerte o un ritmo en la música.",
+    "transformedIdeaTitle": "DJ de la Fiesta de Robots",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Programa las luces de la discoteca robot. Cada vez que el sensor escuche un golpe fuerte de la batería en la música, la lámpara debe cambiar a un color aleatorio nuevo para animar el baile.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > BeatThreshold THEN Lamp.setColor(Random)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Susurros Nocturnos",
+    "originalIdeaDescription": "Una lámpara que solo se enciende con una luz tenue y cálida cuando el nivel de ruido es muy bajo pero no nulo, incentivando el habla en voz baja.",
+    "transformedIdeaTitle": "El Bosque de las Hadas Tímidas",
+    "transformedIdeaDescription": "Las hadas (la luz) son muy tímidas. Si hay mucho ruido, se esconden (luz apagada). Solo si susurras muy suavemente, ellas brillarán con una luz tenue y mágica. ¡Encuentra el tono de voz perfecto para llamarlas!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 0 AND Noise < 20 THEN Lamp.on(Dim) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Un efecto ambiental que produce un destello de luz blanca brillante (relámpago) inmediatamente después de detectar un sonido fuerte y repentino (trueno simulado).",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Conviértete en el dios del clima. Cuando golpees la mesa simulando un trueno, tu programa debe hacer que la lámpara destelle en blanco rápidamente como un relámpago. ¡Coordina el sonido y la luz!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > ThunderThreshold THEN Lamp.flash(White, Fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Dispositivo que mantiene la luz apagada mientras hay silencio, pero enciende una luz suave y relajante si detecta llanto o ruido para calmar al bebé.",
+    "transformedIdeaTitle": "La Mascota Robot Miedosa",
+    "transformedIdeaDescription": "Tu mascota robot tiene miedo a la oscuridad si se despierta. Si hay silencio total, déjala dormir (luz apagada). Pero si detecta algún ruido, enciende una luz violeta suave para que no tenga miedo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > WakeThreshold THEN Lamp.setColor(Purple) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Cambiador de Color por Tono de Voz",
+    "originalIdeaDescription": "Un sistema experimental que asigna diferentes rangos de volumen a colores específicos del espectro visible (bajo=azul, medio=verde, alto=rojo).",
+    "transformedIdeaTitle": "Traductor Alienígena",
+    "transformedIdeaDescription": "Los alienígenas no hablan con palabras, ¡hablan con colores! Usa tu voz para comunicarte. Habla bajito para decir 'Hola' (Azul), habla normal para decir 'Tengo hambre' (Verde) y grita para decir '¡Vamos a volar!' (Rojo).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Color = Map(NoiseLevel, Ranges[Low, Med, High], Colors[Blue, Green, Red])"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Fantasma Sensible al Ruido",
+    "originalIdeaDescription": "Una luz que permanece encendida constantemente pero se apaga inmediatamente ('se asusta') cuando detecta un ruido fuerte, volviendo a encenderse después de un tiempo de silencio.",
+    "transformedIdeaTitle": "El Fantasma Asustadizo",
+    "transformedIdeaDescription": "Hay un fantasma brillante en la habitación. Le gusta la oscuridad y el silencio. Si haces un ruido fuerte, el fantasma se asustará y desaparecerá (la luz se apaga) por 5 segundos antes de volver a aparecer.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > ScareLimit THEN Lamp.off(); Wait(5s); Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Barra de Energía de Carga por Voz",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener un ruido constante para 'cargar' la intensidad de la luz hasta que llegue al máximo y cambie de color indicando carga completa.",
+    "transformedIdeaTitle": "Recarga el Escudo de Energía",
+    "transformedIdeaDescription": "¡La nave espacial se ha quedado sin energía! Debes gritar o hacer ruido constante para recargar el escudo. La luz se volverá más brillante a medida que mantengas el ruido. Cuando llegue al máximo brillo, ¡cambia a verde para despegar!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "While Noise > 0: Brightness++; IF Brightness == Max THEN Color = Green"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Código Morse de Luz por Sonido",
+    "originalIdeaDescription": "Sistema que traduce golpes cortos y largos detectados por el micrófono en encendidos cortos y largos de la lámpara para enviar mensajes visuales.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu compañero al otro lado del salón. Si golpeas la mesa corto, la luz parpadea rápido. Si golpeas largo, la luz se mantiene más tiempo. ¡Crea tu propio código secreto!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < Short THEN Flash(Short) ELSE Flash(Long)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos por Vibración",
+    "originalIdeaDescription": "Dispositivo de seguridad que se coloca cerca de una puerta y hace parpadear la luz en rojo y azul (policía) si detecta el ruido/vibración de la puerta abriéndose.",
+    "transformedIdeaTitle": "Trampa para Hermanos Menores",
+    "transformedIdeaDescription": "Protege tu habitación. Coloca el sensor cerca de la puerta. Si alguien intenta entrar y hace ruido al abrir la manija, ¡activa la alarma policial! La luz debe parpadear rojo y azul rápidamente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > DoorCreakLevel THEN Loop(Flash Red/Blue)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Temporizador de Meditación Silenciosa",
+    "originalIdeaDescription": "Herramienta de bienestar que mantiene una luz de color relajante (cian o lavanda) encendida siempre que el nivel de ruido se mantenga por debajo de un mínimo estricto.",
+    "transformedIdeaTitle": "El Desafío del Monje Zen",
+    "transformedIdeaDescription": "¿Cuánto tiempo puedes permanecer en silencio absoluto? La luz será de un color azul relajante mientras estés callado. Al menor ruido, la luz se pondrá roja y perderás el desafío. ¡Intenta aguantar 1 minuto!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < SilenceLimit THEN Lamp.setColor(Cyan) ELSE Lamp.setColor(Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de Ecos",
+    "originalIdeaDescription": "Sistema que enciende la luz con un retraso después de detectar un sonido, simulando cómo un eco regresa visualmente.",
+    "transformedIdeaTitle": "Explorando la Cueva Oscura",
+    "transformedIdeaDescription": "Estás en una cueva enorme. Cuando gritas '¡Hola!', el eco tarda en volver. Programa la luz para que se encienda 1 segundo después de que hagas un ruido, imitando el retorno de tu eco visual.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise detected THEN Wait(1s); Lamp.pulse()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Patrones de Golpes",
+    "originalIdeaDescription": "Cerradura electrónica simulada que cambia la luz a verde solo si detecta dos golpes rápidos seguidos (doble clic sonoro).",
+    "transformedIdeaTitle": "La Llave Secreta",
+    "transformedIdeaDescription": "Solo los miembros del club conocen el golpe secreto. Programa el sensor para que si escucha 'Toc-Toc' (dos ruidos rápidos), la luz se ponga verde y te deje entrar. Un solo golpe no debe hacer nada.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoisePulse count == 2 within 1s THEN Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Indicador de Fatiga de Voz",
+    "originalIdeaDescription": "Dispositivo para cantantes o profesores que acumula la cantidad de tiempo que hay ruido alto y cambia la luz de verde a rojo gradualmente para indicar fatiga vocal.",
+    "transformedIdeaTitle": "Barra de Vida del Cantante",
+    "transformedIdeaDescription": "Imagina que eres una estrella de rock. Tu voz tiene energía limitada. Empieza con luz verde. A medida que cantas (haces ruido), la luz va cambiando lentamente a amarillo y luego rojo. ¡Cuando llegue a rojo, debes descansar!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Accumulator += NoiseLevel; Lamp.setColor(Map(Accumulator))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Luz de Respiración Asistida",
+    "originalIdeaDescription": "La luz aumenta y disminuye su brillo siguiendo un patrón rítmico, y se sincroniza o reinicia si detecta el sonido de la respiración (exhalación fuerte).",
+    "transformedIdeaTitle": "Sincronización con el Dragón",
+    "transformedIdeaDescription": "Hay un dragón durmiendo y quieres respirar a su ritmo. La luz pulsa suavemente. Intenta exhalar fuerte justo cuando la luz esté más brillante para sincronizar tu respiración con la luz del dragón.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Loop { FadeIn; FadeOut }; IF Noise > BreathSound THEN SyncLoop()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Insectos Nocturnos",
+    "originalIdeaDescription": "Simula una trampa de luz que parpadea erráticamente (efecto de fallo eléctrico) cuando detecta zumbidos constantes de alta frecuencia.",
+    "transformedIdeaTitle": "El Bosque Encantado Roto",
+    "transformedIdeaDescription": "Estás reparando una farola en un bosque embrujado. Funciona bien en silencio, pero cuando los insectos mágicos zumban (ruido constante), la luz empieza a fallar y parpadear. ¡Programa este efecto de 'fallo'!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise is Constant THEN FlickerLamp() ELSE Lamp.steadyOn()"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Sistema de Alarma Doméstica",
+    "originalIdeaDescription": "Un sistema que protege una 'casa'. Si se enciende la luz (ladrón con linterna) o se hace ruido (romper vidrio), la alarma suena en el teclado.",
+    "transformedIdeaTitle": "La Bóveda de los Secretos",
+    "transformedIdeaDescription": "Protege tu diario o caja de tesoros. Coloca el dispositivo dentro de una caja oscura. Si alguien abre la caja (entra Luz) o intenta moverla haciendo ruido (Sensor de Ruido), la alarma se dispara tocando notas agudas en el teclado. Debes ingresar tu código PIN para desactivarla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 10 OR Noise.level > 50 THEN Alarm=TRUE; IF Alarm AND Keyboard.pin('1234') THEN Alarm=FALSE"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Nana Automática para Bebés",
+    "originalIdeaDescription": "Monitor que detecta si la habitación está oscura y el bebé llora. Si ambas condiciones se cumplen, toca una canción de cuna.",
+    "transformedIdeaTitle": "Niñera Robot",
+    "transformedIdeaDescription": "Programad un robot que cuide el sueño. Si las luces están apagadas (Noche) y el sensor detecta un llanto o ruido fuerte, el teclado debe tocar automáticamente 'Estrellita, dónde estás' para calmar al bebé virtual hasta que el ruido baje.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level > 60 THEN Keyboard.playSong('Lullaby') UNTIL Noise.level < 30"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "El jugador debe moverse en la oscuridad y en silencio. Si hay luz o hace ruido, pierde.",
+    "transformedIdeaTitle": "Escape del Castillo Samurai",
+    "transformedIdeaDescription": "Eres un ninja escapando. Debes presionar las teclas para avanzar paso a paso. Pero solo puedes moverte si estás en la sombra (tapa el sensor de luz) y en silencio absoluto. Si te mueves cuando hay luz o haces ruido al respirar, los guardias te atrapan.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Keyboard.pressed(): IF Light.level > 10 OR Noise.level > 10 THEN GameOver() ELSE Score++"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Sintetizador Ambiental",
+    "originalIdeaDescription": "El instrumento cambia su sonido base según el entorno. Luz controla octavas, Ruido controla distorsión.",
+    "transformedIdeaTitle": "El Piano Camaleónico",
+    "transformedIdeaDescription": "Crea un instrumento que reacciona a la sala. Si tocas en un lugar oscuro, el teclado suena grave y misterioso. Si acercas una linterna (Luz alta), suena agudo y feliz. Si gritas mientras tocas (Ruido), el sonido se vuelve distorsionado y eléctrico.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Octave = Map(Light.level); Effect = Map(Noise.level); Keyboard.setSound(Octave, Effect)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Coordinación de efectos. El usuario debe crear truenos (ruido) cuando ve un relámpago (luz) y tocar la lluvia en el teclado.",
+    "transformedIdeaTitle": "Dios del Trueno",
+    "transformedIdeaDescription": "Dirige la tormenta. Cuando alguien flashee una luz (Relámpago), tienes 1 segundo para golpear la mesa o aplaudir (Trueno). Mientras tanto, usa el teclado para simular el golpeteo constante de la lluvia. La precisión otorga puntos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.flashDetected(): StartTimer(); IF Noise.peak() AND Timer < 1s THEN Score++; Keyboard.playLoop('Rain')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Mascota: Búho Nocturno",
+    "originalIdeaDescription": "Una mascota virtual que duerme de día (luz). Se despierta de noche. Si hay mucho ruido, se asusta.",
+    "transformedIdeaTitle": "El Búho Guardián",
+    "transformedIdeaDescription": "Cuida a tu búho. Si hay mucha luz, duerme (no hace nada). Si tapas el sensor (Noche), se despierta y sus ojos brillan. Debes mantener silencio; si haces ruido fuerte, se asustará y volará. Toca el teclado suavemente para alimentarlo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 THEN State='Sleep'; ELSE IF Noise.level > 70 THEN State='Scared' ELSE State='Awake'; IF State=='Awake' AND Keyboard.pressed() THEN Feed()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Hechizo Mágico de Carga",
+    "originalIdeaDescription": "Para lanzar un hechizo, el mago debe acumular energía de luz y recitar palabras mágicas (ruido) antes de disparar con el teclado.",
+    "transformedIdeaTitle": "Academia de Magia: Bola de Luz",
+    "transformedIdeaDescription": "Carga tu varita. Apunta a una fuente de luz (Light Intensity) para llenar la barra de maná. Una vez llena, grita el conjuro '¡LUMOS!' (Sensor de Ruido). Cuando el sistema lo reconozca, presiona la tecla final para lanzar el hechizo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana += Light.level; IF Mana >= 100 AND Noise.level > 80 THEN SpellReady=TRUE; IF SpellReady AND Keyboard.pressed() THEN Cast()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Cocinero de Palomitas",
+    "originalIdeaDescription": "Simulador de microondas. Luz encendida (calor). El usuario escucha los 'pops' (ruido). Teclado para detener.",
+    "transformedIdeaTitle": "Maestro Popcorn",
+    "transformedIdeaDescription": "Haz palomitas perfectas. Enciende el horno (Luz alta). Escucha los estallidos (haz ruidos cortos con la boca 'Pop!'). El sensor cuenta los ruidos. Cuando la frecuencia de los 'Pops' baje (silencio), presiona la tecla 'Stop' antes de que se quemen.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.on: CountPops(Noise.peaks); IF PopRate < Threshold AND Keyboard.key('Stop') THEN Win() ELSE Burn()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Fiesta Sorpresa",
+    "originalIdeaDescription": "El dispositivo espera en la oscuridad y silencio. Al encender la luz y gritar 'Sorpresa', toca música.",
+    "transformedIdeaTitle": "El Organizador de Fiestas",
+    "transformedIdeaDescription": "Prepara la broma. Deja el dispositivo en una habitación oscura y silenciosa. Cuando el homenajeado entre, encienda la luz y todos griten '¡SORPRESA!', el dispositivo detectará el cambio brusco de luz y sonido y tocará 'Cumpleaños Feliz' en el teclado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Dark AND Quiet); IF Light.jump() AND Noise.jump() THEN Keyboard.play('HappyBirthday')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Despertador Solar Interactivo",
+    "originalIdeaDescription": "La alarma suena cuando sale el sol. Para apagarla, hay que hacer ruido (aplaudir) o tocar una melodía.",
+    "transformedIdeaTitle": "Gallo Electrónico",
+    "transformedIdeaDescription": "Programa un despertador natural. Cuando el sensor de luz detecte que amaneció (Luz > 60), el teclado empezará a tocar una alarma. Para apagarlo, no hay botón: ¡tienes que cacarear o gritar '¡Buenos días!' (Ruido alto) para detenerlo!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 AND !Dismissed THEN Keyboard.play('Alarm'); IF Noise.level > 80 THEN Dismissed=TRUE"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Detector de Murciélagos (Sonar)",
+    "originalIdeaDescription": "En la oscuridad, el usuario emite un chirrido. El dispositivo responde con una nota si hay un obstáculo cerca (simulado).",
+    "transformedIdeaTitle": "Exploración de Ecos",
+    "transformedIdeaDescription": "Navega la cueva oscura (Luz < 10). Da una palmada (Ruido). El sistema calculará la 'distancia' a la pared y el teclado tocará una nota: aguda si estás cerca, grave si estás lejos. Úsalo para encontrar el tesoro invisible.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.level < 10 AND Noise.peak() THEN Dist = Random(); Keyboard.playTone(Map(Dist))"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Planta Virtual Cantarina",
+    "originalIdeaDescription": "La planta necesita luz y que le canten para crecer. El teclado muestra el nivel de crecimiento con notas ascendentes.",
+    "transformedIdeaTitle": "Jardinero Musical",
+    "transformedIdeaDescription": "Haz crecer tu flor mágica. Ponla al sol (Luz alta) y cántale una canción suave (Ruido constante medio). Si cumples ambas condiciones, presiona las teclas para ver cómo crece (do-re-mi-fa-sol). Si dejas de cantar o tapas el sol, se marchita.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 70 AND Noise.level > 40 THEN Growth++; Keyboard.playScale(Growth)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Túnel del Terror (Tren)",
+    "originalIdeaDescription": "El tren entra en oscuridad. Los pasajeros gritan. El maquinista debe encender luces (teclado).",
+    "transformedIdeaTitle": "Tren Fantasma",
+    "transformedIdeaDescription": "Conduce el vagón. Cuando entres en un túnel oscuro (tapa sensor), los pasajeros virtuales gritarán de miedo (el sensor de ruido espera gritos reales de tus amigos). Tu misión es tocar las teclas blancas rápidamente para encender las luces de emergencia y calmar los gritos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 THEN Panic=TRUE; IF Panic AND Noise.level > 50 AND Keyboard.pressed() THEN LightsOn(); Panic=FALSE"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Espía: Clave Morse Luminosa",
+    "originalIdeaDescription": "El usuario recibe señales de luz (linterna) y debe traducirlas y confirmarlas con ruido (golpes) o teclado.",
+    "transformedIdeaTitle": "Agente Secreto: Decodificador",
+    "transformedIdeaDescription": "Tu contacto te envía un código con una linterna al sensor. Corto-Largo-Corto. Debes reconocer el patrón y validarlo dando un golpe seco en la mesa (Ruido). Si es correcto, usa el teclado para ingresar la letra descifrada.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Code = ReadLightPulses(); IF Noise.knock() THEN Verify(Code); Keyboard.input(DecodedChar)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Audiencia",
+    "originalIdeaDescription": "El usuario actúa en el escenario (Luz foco). Si la audiencia aplaude (ruido), el teclado permite tocar el bis.",
+    "transformedIdeaTitle": "Superestrella de Rock",
+    "transformedIdeaDescription": "Sube al escenario. Asegúrate de que el foco (linterna) te ilumine (Luz > 80). Toca tu solo en el teclado. Al terminar, el sistema espera aplausos (Ruido). Si los aplausos son fuertes, desbloqueas el modo 'Guitarra Eléctrica' en el teclado.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 AND Keyboard.playedSolo() THEN WaitForApplause; IF Noise.level > 90 THEN UnlockBonusMode()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Monstruo de las Sombras",
+    "originalIdeaDescription": "Un monstruo vive en la oscuridad. Si bajas la luz, gruñe. Si haces ruido, ataca. Debes usar el teclado para encender una vela.",
+    "transformedIdeaTitle": "Sobrevive la Noche",
+    "transformedIdeaDescription": "Está oscureciendo (Luz baja). El monstruo despierta. Debes mantenerte en silencio absoluto (Noise < 5). Si toses o te mueves, el monstruo se acerca. Toca rápidamente la tecla 'C' repetidamente para generar luz virtual y ahuyentarlo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level > 5 THEN Danger++; IF Keyboard.mash('C') THEN LightLevelVirtual++ AND Danger--"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Buscador de Grillos",
+    "originalIdeaDescription": "Simulación de buscar grillos. Solo cantan (Ruido virtual) de noche (Luz baja). Si haces ruido (Ruido real), se callan.",
+    "transformedIdeaTitle": "Cazador de Insectos",
+    "transformedIdeaDescription": "Busca el grillo dorado. Apaga las luces. Escucharás el canto (melodía en teclado). Acércate sigilosamente. Si haces cualquier ruido (Sensor de Ruido), el teclado dejará de sonar (el grillo se esconde). Si llegas en silencio, presiona una tecla para atraparlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level < 10 THEN CricketSinging=TRUE (Keyboard plays); IF Noise.level > 10 THEN Silence(); IF Singing AND Keyboard.catch() THEN Win"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Semáforo por Voz",
+    "originalIdeaDescription": "Controlar el tráfico. Luz roja/verde en pantalla. El usuario cambia la luz gritando '¡Verde!' y los coches (teclado) avanzan.",
+    "transformedIdeaTitle": "Controlador de Tráfico Urbano",
+    "transformedIdeaDescription": "Hay un atasco. El sensor de luz detecta si es de día o de noche (cambia la dificultad). Para cambiar el semáforo y dejar pasar los coches, debes gritar '¡CAMBIO!' al micrófono. Mientras los coches pasan, toca notas rítmicas en el teclado para mantener el flujo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "TrafficJam=TRUE; IF Noise.shout('Change') THEN Light=Green; WHILE Light==Green: Keyboard.playRhythm()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Caja de Música Eólica",
+    "originalIdeaDescription": "La música suena si hay luz (energía) y viento (soplar al micro).",
+    "transformedIdeaTitle": "Molino de Viento Musical",
+    "transformedIdeaDescription": "Haz funcionar el molino. Necesita sol (apunta a la luz) y viento (sopla fuerte al micrófono). Cuando tengas ambos, el molino girará y podrás tocar melodías en el teclado. Si falta uno de los dos, las teclas no sonarán.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Power = Light.level + Noise.level; IF Power > Threshold THEN Keyboard.enable() ELSE Keyboard.disable()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras Interrogatorio",
+    "originalIdeaDescription": "Sala oscura. Luz a la cara (sensor). Preguntas fuertes (ruido). Teclado sentencia.",
+    "transformedIdeaTitle": "El Interrogatorio Policial",
+    "transformedIdeaDescription": "Eres el detective. Ilumina la cara del sospechoso con una linterna (Luz alta) para presionarlo. Grítale '¿LO HICISTE?' (Ruido alto). Si mantiene la calma, presiona la tecla verde (Inocente). Si se pone nervioso, tecla roja (Culpable).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pressure = Light.level + Noise.level; Display(Pressure); IF Keyboard.key('Green') THEN Release() ELSE Jail()"
+  }
+]

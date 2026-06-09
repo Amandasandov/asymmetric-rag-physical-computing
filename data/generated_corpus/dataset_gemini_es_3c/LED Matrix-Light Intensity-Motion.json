@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luz de Bicicleta Inteligente",
+    "originalIdeaDescription": "Una luz trasera para bicicletas que se enciende automáticamente cuando oscurece (sensor de luz). Si el ciclista frena (cambio brusco de movimiento/desaceleración), la matriz LED muestra una señal de 'STOP'.",
+    "transformedIdeaTitle": "Seguridad Vial Ciclista",
+    "transformedIdeaDescription": "Diseña la luz de bici del futuro. Prográmala para que se active sola al entrar en un túnel (Luz < 30). Además, usa el sensor de movimiento para detectar frenazos: si la velocidad baja bruscamente, la Matriz debe parpadear en rojo para avisar a los coches de atrás.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 30 THEN LED.turnOn(); IF Motion.deceleration > Threshold THEN LED.showIcon('Stop') ELSE LED.showPattern('Ride')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Mascota Solar",
+    "originalIdeaDescription": "Una mascota virtual que come luz solar. La matriz muestra su cara. Si hay luz, se pone feliz y carga energía. Si se agita, gasta energía jugando.",
+    "transformedIdeaTitle": "El Robot Fotosintético",
+    "transformedIdeaDescription": "Tu robot se alimenta del Sol. Ponlo bajo una lámpara (Luz alta) para ver cómo su batería se llena en la pantalla LED. Una vez cargado, agítalo (Motion) para jugar con él; verás cómo gasta la energía haciendo muecas divertidas hasta que necesite recargar.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 THEN Energy++; IF Motion.shake() THEN Energy--; LED.plotBar(Energy)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Alarma de Cajón Secreto",
+    "originalIdeaDescription": "Dispositivo para proteger un cajón. Si detecta movimiento (abrir el cajón) y luz (la luz entra al abrir), la matriz muestra una calavera parpadeante.",
+    "transformedIdeaTitle": "Trampa para Curiosos",
+    "transformedIdeaDescription": "Protege tus secretos. Esconde el dispositivo en tu cajón. Debe estar oscuro y quieto. Si tu hermano abre el cajón, el sensor detectará luz Y movimiento simultáneamente. ¡Programa la Matriz para mostrar una señal de ALERTA parpadeante para asustarlo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 10 AND Motion.magnitude > 5 THEN LED.flash('Skull', speed=Fast)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "El jugador debe moverse hacia la meta, pero solo puede hacerlo cuando está oscuro. Si hay luz y se mueve, la matriz muestra 'Game Over'.",
+    "transformedIdeaTitle": "Infiltración en la Sombra",
+    "transformedIdeaDescription": "Eres un espía. Tu misión es avanzar (agitar el dispositivo simulando pasos) para llenar la barra de progreso en la Matriz. Pero cuidado: los focos de vigilancia se encienden y apagan (linterna del profesor). Solo puedes moverte cuando el sensor de luz marque oscuridad.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 50 AND Motion.isMoving() THEN LED.show('X'); ELSE IF Motion.step() THEN Progress++"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Pez Abisal",
+    "originalIdeaDescription": "Simulación de criatura de fondo marino. La matriz solo enciende su 'luz' (un punto) si el entorno es muy oscuro. El movimiento hace que el pez nade.",
+    "transformedIdeaTitle": "Monstruo de las Profundidades",
+    "transformedIdeaDescription": "Crea una criatura que viva en la Fosa de las Marianas. Si hay luz en la habitación, se esconde (LED apagado). Si apagas la luz (oscuridad), la criatura enciende su bioluminiscencia en la Matriz. Inclina el dispositivo para hacerla nadar por la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 THEN Fish.visible = TRUE; Fish.move(Motion.tilt); LED.draw(Fish)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Cristal Mágico de Adivinación",
+    "originalIdeaDescription": "El usuario tapa el sensor (oscuridad) para concentrarse y agita el dispositivo. Al destaparlo, la matriz muestra una predicción.",
+    "transformedIdeaTitle": "La Bola de Cristal Digital",
+    "transformedIdeaDescription": "Pregunta al futuro. Cubre el sensor con tu mano para iniciar el ritual místico (Luz baja). Agita el dispositivo para invocar a los espíritus (Motion). Al quitar la mano y dejar entrar la luz, la Matriz revelará tu suerte (Icono de Corazón, Dinero o Suerte).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait(Light < 10); Wait(Motion.shake); Wait(Light > 50); LED.showRandomIcon()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Vampiro en el Ataúd",
+    "originalIdeaDescription": "Si el dispositivo está quieto y oscuro, muestra Zzz. Si se mueve o le da la luz, el vampiro se despierta enfadado en la matriz.",
+    "transformedIdeaTitle": "El Despertar de Drácula",
+    "transformedIdeaDescription": "Drácula duerme en su ataúd (tu caja). Manténlo oscuro y sin movimiento para ver 'Zzz' en los LEDs. Si alguien mueve la caja o abre la tapa (entra luz), Drácula se despierta: muestra unos ojos rojos furiosos en la matriz.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 20 OR Motion.shake > 0 THEN LED.show('AngryEyes') ELSE LED.show('Zzz')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Rover de Exploración Espacial",
+    "originalIdeaDescription": "Vehículo solar. Se mueve (animación en matriz) solo si hay suficiente luz para sus paneles. La inclinación controla la dirección.",
+    "transformedIdeaTitle": "Misión a Marte: Rover Solar",
+    "transformedIdeaDescription": "Pilota el Rover en Marte. Tus paneles solares necesitan energía: apunta a la luz. Si la carga es suficiente (Light > 60), inclina el dispositivo (Motion) para conducir el vehículo a través del terreno rocoso mostrado en la Matriz LED.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 60 THEN Speed = 1 ELSE Speed = 0; Position += Motion.tilt * Speed; LED.plot(Position)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Linterna de Explorador de Cuevas",
+    "originalIdeaDescription": "Agitar para cargar batería. La matriz ilumina más fuerte. Si hay luz ambiental, se apaga para ahorrar.",
+    "transformedIdeaTitle": "Supervivencia Subterránea",
+    "transformedIdeaDescription": "Estás atrapado en una cueva. Agita el dispositivo para generar electricidad estática (Motion). La Matriz se encenderá como una linterna. Pero sé eficiente: si sales al exterior (detecta luz solar), la linterna debe apagarse automáticamente para no gastar batería.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Battery += Motion.shake; IF Light.level < 20 THEN LED.brightness(Battery) ELSE LED.off()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Monitor de Sueño de Bebé",
+    "originalIdeaDescription": "Detecta si el bebé se mueve mucho o si se enciende la luz. La matriz muestra un gráfico del nivel de tranquilidad.",
+    "transformedIdeaTitle": "Asistente de Sueño",
+    "transformedIdeaDescription": "Analiza la calidad del sueño. Deja el dispositivo en la cama. Si hay oscuridad y quietud, la Matriz muestra un corazón latiendo lento. Si detecta movimiento (vueltas en la cama) o luz repentina, registra el evento con un icono de exclamación.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Disturbance = Motion.magnitude + Light.change; IF Disturbance > Threshold THEN LED.show('!') ELSE LED.show('Heart')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Frasco de Luciérnagas",
+    "originalIdeaDescription": "Al agitar, aparecen puntos en la matriz. Brillan más en la oscuridad. Si hay luz, se apagan.",
+    "transformedIdeaTitle": "Coleccionista de Insectos de Luz",
+    "transformedIdeaDescription": "Atrapa luciérnagas virtuales. Ve a un cuarto oscuro. Agita el frasco (dispositivo) para despertarlas. Verás puntos parpadeando en la Matriz LED. Si enciendes la luz de la habitación, las luciérnagas se asustan y la pantalla se apaga.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 15 AND Motion.shake() THEN LED.sparkle() ELSE LED.clear()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Decodificador de Mensajes Secretos",
+    "originalIdeaDescription": "El mensaje en la matriz solo es visible bajo cierta luz (filtro rojo simulado o oscuridad). Agitar borra el mensaje.",
+    "transformedIdeaTitle": "Agente Secreto 007",
+    "transformedIdeaDescription": "Recibes un mensaje clasificado. Para leerlo en la Matriz LED, debes estar bajo una 'cobertura' segura (oscuridad total, tapando el sensor). Si alguien te ilumina con una linterna (Luz alta), debes agitar rápidamente el dispositivo para borrar los datos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 THEN LED.scroll('SECRET CODE'); IF Motion.shake() OR Light.level > 50 THEN LED.clear()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Juego de Reacción Flash",
+    "originalIdeaDescription": "La matriz muestra una cuenta atrás. Cuando se detecta un flash de luz externo, el usuario debe agitar lo más rápido posible. Muestra el tiempo de reacción.",
+    "transformedIdeaTitle": "Duelo de Reflejos",
+    "transformedIdeaDescription": "Pon a prueba tu velocidad. Espera... espera... ¡FLASH! En cuanto tu compañero dispare la linterna hacia el sensor, agita el dispositivo. La Matriz LED cronometrará cuánto tardaste en reaccionar desde el estímulo de luz hasta el movimiento.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(Light.spike); Timer.start(); Wait(Motion.shake); Time = Timer.stop(); LED.scroll(Time)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Bola de Disco Interactiva",
+    "originalIdeaDescription": "Agitar hace girar patrones en la matriz. La luz ambiental cambia la velocidad o los patrones (estroboscópico en oscuridad).",
+    "transformedIdeaTitle": "Fiesta de Bolsillo",
+    "transformedIdeaDescription": "¡Que empiece el baile! Agita el dispositivo para generar patrones psicodélicos en la Matriz. Si apagas las luces de la sala, el sensor lo detecta y cambia los patrones a modo 'Estroboscópico' rápido para animar la fiesta.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SpinSpeed = Motion.shakeAmount; Pattern = (Light.level < 20) ? 'Strobe' : 'Rainbow'; LED.show(Pattern, SpinSpeed)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Estación Meteorológica Portátil",
+    "originalIdeaDescription": "Muestra icono de Sol o Luna según la luz. Muestra icono de viento si se agita (simulando anemómetro).",
+    "transformedIdeaTitle": "El Hombre del Tiempo",
+    "transformedIdeaDescription": "Reporta el clima. Si el sensor detecta mucha luz, la Matriz muestra un Sol radiante. Si hay poca luz, una Luna. Si agitas el dispositivo simulando el viento golpeando los sensores, aparecerá un icono de ráfaga de viento o tornado.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake() THEN LED.show('Wind'); ELSE IF Light.level > 50 THEN LED.show('Sun') ELSE LED.show('Moon')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Cámara Fotográfica Antigua",
+    "originalIdeaDescription": "El usuario debe estar quieto (Motion bajo) y tener buena luz. Al 'pulsar' (inclinar), la matriz muestra una foto (cara feliz). Si falta luz, sale oscura.",
+    "transformedIdeaTitle": "Fotógrafo Profesional",
+    "transformedIdeaDescription": "Toma la foto perfecta. Encuadra inclinando el dispositivo. Asegúrate de tener buena iluminación (Luz > 40) y buen pulso (Motion < 5). Si disparas bajo estas condiciones, la Matriz revelará una imagen nítida. Si te mueves, saldrá borrosa.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ButtonPressed: IF Light > 40 AND Motion.stable THEN LED.show('Pic') ELSE LED.show('Blurry')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Coche de Carreras Solar",
+    "originalIdeaDescription": "Juego donde el coche avanza más rápido cuanta más luz hay. Se controla girando (Motion).",
+    "transformedIdeaTitle": "Grand Prix Solar",
+    "transformedIdeaDescription": "Compite en la pista LED. Tu motor es híbrido: necesita luz para correr. Pon el dispositivo bajo una lámpara para máxima velocidad. Usa la inclinación para esquivar otros coches en la pantalla. Si tapas el sensor, te quedas sin gasolina.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Map(Light.level); CarPos += Motion.tilt; UpdateGameLoop(Speed, CarPos)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Radar de Fantasmas",
+    "originalIdeaDescription": "Muestra estática. Si se detecta movimiento anómalo en oscuridad, muestra la ubicación del fantasma.",
+    "transformedIdeaTitle": "Cazadores de Ectoplasma",
+    "transformedIdeaDescription": "Explora la casa encantada. Ve a oscuras. La Matriz muestra ruido estático. Camina despacio. Si el sensor de movimiento detecta una vibración extraña (sacudida simulada por el 'fantasma'), la pantalla fijará la posición del espectro.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.spikeDetected() THEN LED.show('GhostIcon') ELSE LED.show('Static')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Incubadora de Huevos",
+    "originalIdeaDescription": "El huevo necesita calor (luz) y rotación suave (motion) para eclosionar. La matriz muestra el progreso.",
+    "transformedIdeaTitle": "Mamá Pájaro",
+    "transformedIdeaDescription": "Ayuda a nacer al pollito. Mantén el huevo caliente acercándolo a una luz suave. Gíralo lentamente (Motion tilt) para que se desarrolle bien. La Matriz mostrará cómo se rompe el cascarón poco a poco hasta que nazca.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.warmth() AND Motion.gentleRotation() THEN HatchProgress++; LED.showCrack(HatchProgress)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luz de Lectura Interactiva",
+    "originalIdeaDescription": "Se enciende al levantar el dispositivo (Motion). Ajusta el brillo de la matriz según la luz ambiental (más luz ambiente = menos brillo LED).",
+    "transformedIdeaTitle": "Linterna Inteligente de Libro",
+    "transformedIdeaDescription": "Diseña una luz de lectura que no cansa la vista. Al levantar el dispositivo (Motion), la Matriz se enciende en blanco. Si la habitación ya está iluminada, los LEDs bajan su intensidad automáticamente. Si está muy oscuro, brillan al máximo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.lifted() THEN LED.on(); Brightness = 100 - Light.level; LED.setBrightness(Brightness)"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Batería con Seguro",
+    "originalIdeaDescription": "Un sistema donde el botón táctil reproduce un sonido de batería, pero solo si el interruptor de seguridad está activado. Esto evita que el sonido se dispare accidentalmente.",
+    "transformedIdeaTitle": "El Tambor de Seguridad",
+    "transformedIdeaDescription": "Imagina que estás diseñando un instrumento para una misión secreta que no puede hacer ruido por accidente. Crea un programa donde el tambor solo suene al presionar el botón táctil si el interruptor maestro está en 'ON'.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN MusicalDrum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Instrumentos de Percusión",
+    "originalIdeaDescription": "Utilizar el interruptor para cambiar el tipo de sonido que produce el botón táctil. En una posición es un bombo y en la otra es una caja.",
+    "transformedIdeaTitle": "La Caja de Ritmos Dual",
+    "transformedIdeaDescription": "Conviértete en un DJ. Programa tu consola para que el botón táctil sirva para dos cosas: si el interruptor está arriba, toca un 'Bombo' (Kick), y si está abajo, toca una 'Caja' (Snare). ¡Alterna rápido para crear un ritmo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN MusicalDrum.play('Kick') ELSE MusicalDrum.play('Snare'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo con Acento Manual",
+    "originalIdeaDescription": "El interruptor inicia un ritmo base constante (metrónomo). El usuario utiliza el botón táctil para agregar sonidos de percusión extra sobre el ritmo base.",
+    "transformedIdeaTitle": "Director de Orquesta Rítmica",
+    "transformedIdeaDescription": "El interruptor controla la banda base (un ritmo automático). Tu trabajo es usar el botón táctil para agregar platillos y efectos especiales en el momento justo para que la canción suene genial.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Loop(MusicalDrum.play('BaseBeat')); IF TouchButton.isPressed() THEN MusicalDrum.play('Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo de Código Morse Sonoro",
+    "originalIdeaDescription": "Usar el interruptor para seleccionar entre 'punto' (sonido corto/agudo) y 'raya' (sonido largo/grave). El botón táctil envía la señal seleccionada.",
+    "transformedIdeaTitle": "Mensajero de la Selva",
+    "transformedIdeaDescription": "Envía mensajes secretos a través de la selva usando tambores. Usa el interruptor para elegir entre un sonido de tambor agudo (punto) o grave (raya), y el botón táctil para enviarlo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN MusicalDrum.play('HighTom') ELSE MusicalDrum.play('LowTom'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Efecto de Repetición (Stutter)",
+    "originalIdeaDescription": "El botón táctil reproduce un sonido una vez. Si el interruptor está activado, el sonido se repite rápidamente como un efecto de ametralladora o tartamudeo mientras se mantenga el botón.",
+    "transformedIdeaTitle": "El Repetidor Sónico",
+    "transformedIdeaDescription": "Crea un efecto de videojuego. Si el 'Modo Turbo' (Interruptor) está apagado, el botón dispara un solo sonido. Si está encendido, ¡dispara una ráfaga rápida de sonidos de batería mientras lo tocas!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN Repeat(MusicalDrum.play('Snare'), 100ms) ELSE MusicalDrum.play('Snare'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Puerta Silenciable",
+    "originalIdeaDescription": "El sistema simula una alarma. Si el interruptor (alarma armada) está activo, tocar el botón (sensor de puerta) dispara un ritmo fuerte. Si el interruptor está apagado, no suena nada.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu base secreta. Configura el sistema de seguridad (Interruptor). Si un intruso toca el sensor de la puerta (Botón Táctil) mientras el sistema está armado, ¡haz sonar los tambores de alerta máxima!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN MusicalDrum.playLoop('AlarmBeat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Rítmica",
+    "originalIdeaDescription": "El usuario debe replicar un patrón. El interruptor cambia entre modo 'Escuchar' (el sistema toca) y modo 'Repetir' (el usuario toca con el botón).",
+    "transformedIdeaTitle": "Simón Dice: Edición Tambor",
+    "transformedIdeaDescription": "Entrena tu oído musical. Pon el interruptor en 'Escuchar' para oír un patrón de batería. Luego, cambia a 'Repetir' e intenta tocar el mismo ritmo usando el botón táctil. ¿Podrás recordarlo?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN PlayPattern() ELSE (IF TouchButton.isPressed() THEN MusicalDrum.play('Tap'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Botón de Pánico Inverso",
+    "originalIdeaDescription": "El tambor suena en un bucle continuo. El botón táctil detiene el sonido momentáneamente. El interruptor apaga el sistema completamente.",
+    "transformedIdeaTitle": "El Tambor Imparable",
+    "transformedIdeaDescription": "Un tambor mágico no para de sonar. Tu desafío es programar el botón táctil para pausar el sonido mientras lo mantienes presionado, dando un respiro al silencio. El interruptor apaga la magia por completo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NOT TouchButton.isPressed() THEN MusicalDrum.playLoop('Beat')) ELSE StopAudio()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "El interruptor activa un sonido de fondo de lluvia suave (platos/escobillas). El botón táctil activa un sonido fuerte de trueno (tom grave o bombo).",
+    "transformedIdeaTitle": "Creador de Tormentas",
+    "transformedIdeaDescription": "Eres el encargado de los efectos de sonido de una película. Usa el interruptor para iniciar la lluvia constante (sonidos suaves) y presiona el botón táctil para crear truenos impactantes en el momento dramático.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.play('Brushes'); IF TouchButton.isPressed() THEN MusicalDrum.play('ThunderTom')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Tap Tempo Manual",
+    "originalIdeaDescription": "El interruptor activa el metrónomo. El botón táctil se usa para definir la velocidad del metrónomo golpeando dos veces.",
+    "transformedIdeaTitle": "Controlador de Velocidad",
+    "transformedIdeaDescription": "¡El baterista va muy lento! Diseña un sistema donde puedas marcar la velocidad deseada golpeando el botón táctil dos veces. Luego, al activar el interruptor, el tambor tocará a esa nueva velocidad.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Var bpm = CalculateInterval(TouchButton); IF Switch.isOn() THEN MusicalDrum.playLoop(bpm)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Contador Binario Auditivo",
+    "originalIdeaDescription": "El interruptor representa un bit (0 o 1). El botón táctil confirma la entrada y reproduce un sonido diferente según el estado del interruptor.",
+    "transformedIdeaTitle": "La Computadora Musical",
+    "transformedIdeaDescription": "Aprende cómo hablan las computadoras. Si el interruptor es 0, el botón suena 'bip' (platillo). Si es 1, suena 'bop' (bombo). Usa esto para transmitir códigos binarios a tus amigos.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN MusicalDrum.play('One_Kick') ELSE MusicalDrum.play('Zero_HiHat'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cambio de Kit de Batería",
+    "originalIdeaDescription": "El botón táctil siempre toca una secuencia de ritmo. El interruptor cambia el 'kit' de sonidos (ej. Electrónico vs Acústico).",
+    "transformedIdeaTitle": "Viajero del Tiempo Musical",
+    "transformedIdeaDescription": "Viaja entre décadas. Toca un ritmo con el botón táctil. Usa el interruptor para viajar entre los 80s (batería electrónica) y el presente (batería acústica) cambiando cómo suena tu ritmo instantáneamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "InstrumentSet = Switch.isOn() ? 'Electronic' : 'Acoustic'; IF TouchButton.isPressed() THEN MusicalDrum.play(InstrumentSet)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos",
+    "originalIdeaDescription": "El sistema espera un tiempo aleatorio y suena un aviso. El usuario debe tocar el botón. El interruptor reinicia el juego.",
+    "transformedIdeaTitle": "Duelo de Tambores",
+    "transformedIdeaDescription": "¡Desenfunda rápido! Activa el juego con el interruptor. Espera en silencio... cuando oigas el primer golpe de tambor automático, presiona el botón táctil lo más rápido posible para ganar el duelo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (WaitRandom(); MusicalDrum.play('Go'); CheckReaction(TouchButton))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Bucles Simple",
+    "originalIdeaDescription": "El interruptor pone el sistema en modo 'Grabar'. El usuario toca ritmos con el botón táctil. Al apagar el interruptor, se reproduce lo grabado.",
+    "transformedIdeaTitle": "El Looper de Bolsillo",
+    "transformedIdeaDescription": "Crea tu propia base musical. Enciende el interruptor para 'Grabar' y toca tu ritmo con el botón. Al apagar el interruptor, ¡escucha cómo tu creación se repite una y otra vez!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Record(TouchButton) ELSE PlayLoop(RecordedSequence)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Ánimo",
+    "originalIdeaDescription": "El interruptor selecciona 'Feliz' (ritmo rápido) o 'Triste' (ritmo lento). El botón táctil ejecuta una frase musical de batería basada en esa selección.",
+    "transformedIdeaTitle": "El Robot Emocional",
+    "transformedIdeaDescription": "Dale sentimientos a tu robot. Si pones el interruptor en modo 'Feliz', el botón táctil hará que toque un ritmo rápido y energético. En modo 'Cansado', tocará un ritmo lento y pesado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN MusicalDrum.play('FastBeat') ELSE MusicalDrum.play('SlowBeat'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Respiración",
+    "originalIdeaDescription": "El interruptor activa el modo ejercicio. El tambor marca tiempos de inhalación y exhalación. El botón táctil permite pausar el ejercicio.",
+    "transformedIdeaTitle": "Entrenador de Respiración Zen",
+    "transformedIdeaDescription": "Usa la tecnología para relajarte. Activa el interruptor para iniciar un ritmo suave de tambor que te guía: 'Inhala... Exhala...'. Usa el botón táctil si necesitas pausar para recuperar el aliento.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NOT TouchButton.isPressed() THEN (MusicalDrum.play('Inhale'); Wait; MusicalDrum.play('Exhale'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria",
+    "originalIdeaDescription": "El botón táctil reproduce un sonido. Si el interruptor está activado, el sonido elegido es aleatorio cada vez que se toca el botón.",
+    "transformedIdeaTitle": "La Batería Loca",
+    "transformedIdeaDescription": "¡Sorpresa en cada toque! Si el interruptor de 'Caos' está apagado, el botón siempre suena igual. Pero si lo enciendes, el botón tocará una parte diferente de la batería cada vez que lo presiones.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN (IF Switch.isOn() THEN MusicalDrum.play(Random) ELSE MusicalDrum.play('Snare'))"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta con Privacidad",
+    "originalIdeaDescription": "El botón táctil actúa como timbre (suena tambores). El interruptor es el modo 'No Molestar', que desactiva el sonido del timbre.",
+    "transformedIdeaTitle": "Habitación Privada",
+    "transformedIdeaDescription": "Programa el timbre de tu habitación. El botón táctil toca un redoble de tambor para anunciar visitas, pero si activas el interruptor 'No Molestar', el botón no hará ningún sonido.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() AND Switch.isOff() THEN MusicalDrum.play('DoorbellRoll')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Latidos",
+    "originalIdeaDescription": "El interruptor cambia entre estado 'Reposo' y 'Ejercicio'. El botón táctil dispara el latido. En ejercicio, el sonido cambia o requiere pulsaciones más rápidas.",
+    "transformedIdeaTitle": "Doctor Corazón",
+    "transformedIdeaDescription": "Simula un corazón humano. En modo 'Reposo' (Interruptor Off), el botón hace un sonido suave 'Lub-Dub'. En modo 'Carrera' (Interruptor On), el sonido es más fuerte y rápido.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Sound = Switch.isOn() ? 'LoudHeart' : 'SoftHeart'; IF TouchButton.isPressed() THEN MusicalDrum.play(Sound)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Sonoro",
+    "originalIdeaDescription": "El interruptor enciende el metrónomo. El botón táctil silencia el sonido pero mantiene el ritmo interno (útil para practicar mentalmente), reactivándolo al soltar.",
+    "transformedIdeaTitle": "El Reto del Ritmo Mental",
+    "transformedIdeaDescription": "Mejora tu ritmo interno. El interruptor inicia el metrónomo. Mantén presionado el botón táctil para silenciarlo e intenta seguir llevando el ritmo en tu cabeza. ¡Suéltalo para ver si sigues sincronizado!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NOT TouchButton.isPressed() THEN MusicalDrum.play('Click'))"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Brújula Melódica Interactiva",
+    "originalIdeaDescription": "Un sistema donde la dirección hacia la que apunta el dispositivo cambia la pista de fondo que se reproduce, y el teclado permite al usuario tocar una melodía solista sobre esa base armónica específica para cada punto cardinal.",
+    "transformedIdeaTitle": "El Bardo de los Cuatro Reinos",
+    "transformedIdeaDescription": "Los estudiantes programan una aventura donde cada punto cardinal (Norte, Sur, Este, Oeste) representa un 'Reino' diferente con su propia música de fondo (Audio Player). El usuario debe girar hacia el reino correcto y usar el teclado para tocar la 'canción de la paz' y desbloquear el siguiente nivel.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Audio.play('IceKingdom'); IF Keyboard.play('C-D-E') THEN Audio.play('UnlockSound')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sonora",
+    "originalIdeaDescription": "Un juego de seguridad donde el usuario debe girar el dispositivo a grados específicos. Al encontrar el grado correcto, suena un 'click' de audio. El usuario debe confirmar la posición tocando una nota específica en el teclado.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Conviértete en un espía tratando de abrir una bóveda antigua. Gira la brújula lentamente; cuando escuches el sonido de un mecanismo (Audio), detente y presiona la 'llave maestra' (una nota del teclado). Si aciertas tres veces, la bóveda se abre.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == targetDegree THEN Audio.play('Click'); IF Keyboard.onNote('C') THEN unlocked = TRUE"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Radar de Fantasmas Musicales",
+    "originalIdeaDescription": "Usar la brújula para detectar 'entidades' invisibles en una habitación. El audio reproduce estática que se aclara cuando se apunta al fantasma, y el teclado se usa para 'capturarlo' tocando una secuencia.",
+    "transformedIdeaTitle": "Cazadores de Ectoplasma",
+    "transformedIdeaDescription": "Hay fantasmas escondidos en el aula. Usa tu dispositivo como radar: el ruido blanco (Audio) se vuelve más intenso o cambia a voces cuando apuntas en la dirección correcta (Compass). ¡Rápido! Toca la secuencia mágica en el teclado para atraparlo antes de que escape.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET distance = ABS(Compass.heading - ghostLocation); Audio.setVolume(100 - distance); IF distance < 10 AND Keyboard.sequence('C-E-G') THEN capture()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Director de Orquesta 360",
+    "originalIdeaDescription": "Dependiendo de hacia dónde mire el usuario, se activa una sección diferente de una orquesta (cuerdas al Norte, percusión al Sur). El teclado permite añadir toques personales a la sinfonía.",
+    "transformedIdeaTitle": "El Maestro de la Sinfonía Giratoria",
+    "transformedIdeaDescription": "Eres el director en el centro del escenario. Gira hacia el Norte para activar los violines, o al Este para las trompetas (Audio Player). Usa el teclado para improvisar un solo de piano que acompañe a la sección que estás mirando.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 90 THEN Audio.play('Violins'); ELSE IF Compass.heading < 180 THEN Audio.play('Trumpets'); Keyboard.enable()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Navegación Marítima a Ciegas",
+    "originalIdeaDescription": "Un simulador de barco donde la niebla impide ver. El audio da instrucciones de navegación y sirenas de niebla. La brújula dirige el barco y el teclado activa la bocina para evitar colisiones.",
+    "transformedIdeaTitle": "Capitán en la Niebla",
+    "transformedIdeaDescription": "¡Tu barco está perdido en la niebla! Escucha al primer oficial (Audio) gritar direcciones ('¡Rumbo al Norte!'). Gira tu cuerpo (Compass) para ajustar el rumbo. Si escuchas otro barco cerca, toca la nota grave en el teclado para hacer sonar tu bocina de niebla y evitar el choque.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Go North'); WAIT_FOR_INPUT; IF Compass.heading == 'North' THEN Audio.play('Good Job') ELSE Audio.play('CrashSound'); IF Keyboard.Note('LowC') THEN Audio.play('FogHorn')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Sintonizador de Radio Mundial",
+    "originalIdeaDescription": "Simular una radio de onda corta donde girar la brújula sintoniza 'estaciones' de diferentes países (música pregrabada). El teclado se usa para guardar favoritos o añadir efectos de sonido.",
+    "transformedIdeaTitle": "El Viajero del Tiempo Radial",
+    "transformedIdeaDescription": "Tu dispositivo intercepta señales de radio del pasado. Gira (Compass) para buscar frecuencias claras entre la estática. Al encontrar una transmisión histórica (Audio), usa el teclado para decodificar el mensaje en código morse musical.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 45 THEN Audio.track('1940s_Broadcast'); IF Keyboard.input == '...---...' THEN Audio.play('SecretRevealed')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Theremin Direccional",
+    "originalIdeaDescription": "Un instrumento experimental donde la brújula controla el 'vibrato' o la distorsión del sonido base, y el teclado selecciona el tono base. Crea sonidos espaciales y continuos.",
+    "transformedIdeaTitle": "Sintetizador Espacial Alienígena",
+    "transformedIdeaDescription": "Crea música de otro planeta. Mantén presionada una tecla (Teclado) para generar un rayo láser de sonido. Gira tu cuerpo (Brújula) para deformar la onda de sonido (Audio) y crear efectos 'wah-wah' extraños. Graba tu mejor composición.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Keyboard.isPressed(): Audio.playTone(Key.Note); Audio.setEffectLevel(Compass.heading / 360)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Guía de Meditación Sonora",
+    "originalIdeaDescription": "Aplicación de bienestar que pide al usuario orientarse hacia la salida del sol (Este) o puesta (Oeste). Al lograrlo, reproduce mantras. El teclado permite tocar campanadas relajantes.",
+    "transformedIdeaTitle": "El Jardín Zen Digital",
+    "transformedIdeaDescription": "Busca la armonía. El guía (Audio) te pedirá que encuentres el Este para saludar al sol. Gira suavemente. Cuando estés alineado, sonará un viento suave. Toca las teclas lentamente para añadir campanadas de viento a tu jardín sonoro.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'East' THEN Audio.fadeIn('WindLoop'); IF Keyboard.anyKey() THEN Audio.play('Chime')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Rol: El Escudo Mágico",
+    "originalIdeaDescription": "El usuario debe bloquear ataques virtuales girando la brújula hacia la dirección del sonido del enemigo. El teclado se usa para lanzar contrahechizos.",
+    "transformedIdeaTitle": "Defensor del Castillo de Cristal",
+    "transformedIdeaDescription": "¡Estás rodeado! Escucha por dónde vienen los orcos (Audio: pasos a la izquierda/derecha). Gira tu escudo (Compass) hacia el sonido para bloquear. Luego, presiona una combinación de teclas para lanzar una bola de fuego y contraatacar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('EnemyLeft'); IF Compass.heading == 'West' THEN blockSuccess = TRUE; IF Keyboard.combo('C-E') THEN attack()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Rastreador de Animales",
+    "originalIdeaDescription": "Herramienta educativa donde se escucha el sonido de un animal y se debe apuntar hacia su hábitat natural geográfico (Norte=Oso Polar, Sur=Pingüino). El teclado reproduce el llamado del animal.",
+    "transformedIdeaTitle": "Rescate en el Zoológico Global",
+    "transformedIdeaDescription": "Los animales se han escapado. Escucharás un sonido (ej. un león). Debes girar hacia su continente de origen (África/Sur) usando la brújula. Si aciertas, usa el teclado para 'hablar' su idioma y calmarlo para que regrese.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('LionRoar'); IF Compass.heading > 135 AND Compass.heading < 225 THEN Audio.play('Correct'); IF Keyboard.pressed() THEN score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Mezclador de DJ Giratorio",
+    "originalIdeaDescription": "El usuario actúa como una aguja en un vinilo. Girar la brújula hace 'scratching' o cambia la velocidad de la pista de audio. El teclado dispara samples (bocinas, voces).",
+    "transformedIdeaTitle": "DJ Torbellino en Vivo",
+    "transformedIdeaDescription": "¡La fiesta depende de ti! La música base suena (Audio). Gira tu cuerpo rápidamente para hacer efectos de 'scratch' o acelerar el ritmo (Compass). Usa el teclado para soltar efectos de sonido (Airhorn, Láser) en el momento justo del drop.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setPlaybackSpeed(1 + (Compass.deltaHeading / 100)); IF Keyboard.key('C') THEN Audio.playSample('AirHorn')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Cuento Interactivo de Caminos",
+    "originalIdeaDescription": "Una historia de audio tipo 'elige tu propia aventura'. Para elegir el camino A, gira al Norte; para el camino B, gira al Sur. El teclado se usa para interactuar con objetos en la historia.",
+    "transformedIdeaTitle": "La Cueva de las Dos Voces",
+    "transformedIdeaDescription": "Escucha la narración. Llegas a una bifurcación: 'Para ir al bosque elfo, mira al Norte. Para bajar a la mina enana, mira al Sur'. Gira para elegir. Si encuentras un cofre en la historia, toca una melodía en el teclado para abrirlo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Narrative_Choice'); WAIT(5); IF Compass.heading == 'North' THEN Audio.play('ElfStory'); ELSE Audio.play('DwarfStory')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Instrumento de Viento Virtual",
+    "originalIdeaDescription": "Simula un instrumento donde la inclinación o dirección (brújula) controla el flujo de aire/volumen, y las teclas definen la nota. Requiere coordinación.",
+    "transformedIdeaTitle": "La Gaita Electrónica",
+    "transformedIdeaDescription": "Construye un instrumento extraño. Debes girar constantemente en círculos (como cargando aire) para mantener el volumen del sonido (Audio). Mientras giras, toca la melodía en el teclado. Si dejas de girar, la música se 'desinfla' y se apaga.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "volume = Compass.rotationSpeed * factor; Audio.setVolume(volume); IF Keyboard.pressed(Note) THEN Audio.playTone(Note)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Buscador de Tesoros Submarinos",
+    "originalIdeaDescription": "Simulación de sonar. El audio hace 'ping' con frecuencia variable según la cercanía al objetivo (dirección correcta). El teclado activa el brazo robótico para recoger el tesoro.",
+    "transformedIdeaTitle": "Operación: Atlantis",
+    "transformedIdeaDescription": "Pilota un submarino a oscuras. El sonar hace 'ping' (Audio). Gira hasta que el 'ping' sea muy rápido (indicando que miras al tesoro). Luego, introduce el código de recuperación en el teclado para enviar el gancho y sacar el oro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetDir = 180; pingInterval = ABS(Compass.heading - targetDir); Audio.loop('Ping', rate=pingInterval); IF pingInterval < 5 AND Keyboard.code('123') THEN success()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Simón Dice: Orientación y Ritmo",
+    "originalIdeaDescription": "Una versión avanzada de Simón Dice. Instrucciones mixtas: 'Mira al Norte', 'Toca Do', 'Mira al Este', 'Toca Fa'. El audio da las órdenes y verifica el cumplimiento.",
+    "transformedIdeaTitle": "El Comandante Rítmico",
+    "transformedIdeaDescription": "Sigue las órdenes del Comandante. Él dirá cosas como '¡Norte!' o '¡Nota Azul!'. Debes girar la brújula o tocar el teclado instantáneamente. El juego se vuelve más rápido cada ronda. Si fallas, suena una explosión cómica.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "command = Random(['North', 'South', 'KeyC', 'KeyD']); Audio.say(command); CHECK input == command WITHIN timeLimit"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Escultor de Paisajes Sonoros",
+    "originalIdeaDescription": "Permite 'pintar' sonidos en el aire. El usuario selecciona un sonido con el teclado y lo 'coloca' en una dirección específica de la brújula, creando un entorno inmersivo.",
+    "transformedIdeaTitle": "Arquitecto de Realidad Invisible",
+    "transformedIdeaDescription": "Diseña tu propia habitación sonora. Mira al Norte y toca una tecla para 'dejar' un sonido de lluvia allí. Mira al Sur y toca otra tecla para poner un fuego crepitante. Luego gira para escuchar tu creación envolvente.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Keyboard.pressed('A') THEN SoundMap.add(Compass.heading, 'Rain'); LOOP: Audio.play(SoundMap.getClosestSound(Compass.heading))"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Mentiras Direccional",
+    "originalIdeaDescription": "Juego social. Un usuario hace una pregunta, el otro gira la brújula para seleccionar 'Verdad' o 'Mentira' (zonas invisibles). El teclado dispara el veredicto con sonidos dramáticos.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tus amigos. Haz una pregunta. Tu amigo gira secretamente el dispositivo: el Norte es 'Verdad', el Sur es 'Mentira'. Tú presionas una tecla para revelar el resultado, y el Audio Player gritará '¡VERDAD!' o sonará una alarma de mentiroso.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 180 AND Keyboard.pressed() THEN Audio.play('Truth'); ELSE IF Keyboard.pressed() THEN Audio.play('Lie_Alarm')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Sistema de Alarma Perimetral",
+    "originalIdeaDescription": "Configura el dispositivo para vigilar una dirección. Si la brújula detecta movimiento (cambio de dirección al ser movido), suena una alarma y el teclado se usa para ingresar el PIN de desactivación.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu diario o mochila. Activa la guardia apuntando al Norte. Si alguien mueve o gira tu dispositivo (cambiando el rumbo), sonará una sirena policial (Audio). Solo tú puedes apagarla tocando tu código secreto en el teclado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET guardHeading = Compass.heading; IF ABS(Compass.heading - guardHeading) > 20 THEN Audio.loop('Siren'); IF Keyboard.code('C-D-E') THEN Audio.stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Batería Aérea",
+    "originalIdeaDescription": "Divide los 360 grados en zonas de instrumentos (bombo, caja, platillo). El usuario gira hacia la zona y usa el teclado como baqueta para golpear ese instrumento específico.",
+    "transformedIdeaTitle": "Baterista Giratorio 360",
+    "transformedIdeaDescription": "No necesitas una batería gigante, ¡tú eres la batería! Gira a la izquierda para seleccionar el Platillo, al centro para la Caja, a la derecha para el Bombo. Presiona cualquier tecla para golpear el tambor que estás mirando. Crea un ritmo moviéndote.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "instrument = map(Compass.heading, [HiHat, Snare, Kick]); IF Keyboard.AnyKey() THEN Audio.play(instrument)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo Musical",
+    "originalIdeaDescription": "El usuario debe dirigir 'aviones' (sonidos que se acercan) a pistas específicas (grados de la brújula). El teclado confirma el aterrizaje.",
+    "transformedIdeaTitle": "Torre de Control: Emergencia Musical",
+    "transformedIdeaDescription": "Los aviones musicales quieren aterrizar. El audio te dirá 'Vuelo Jazz llegando por el Este'. Debes apuntar al Este (Compass) rápidamente para captar la señal y tocar una escala descendente en el teclado para guiar su aterrizaje suave.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.announce('Jazz from East'); timer.start(); IF Compass.heading == 'East' AND Keyboard.scale('Down') THEN score += 100"
+  }
+]

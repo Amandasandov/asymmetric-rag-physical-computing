@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de monitoreo de bebés con nana automática",
+    "originalIdeaDescription": "Un sistema diseñado para habitaciones de bebés que detecta cuando el niño comienza a llorar o hacer ruido fuerte. Al detectar el llanto, el sistema activa automáticamente una melodía suave o una nana para intentar calmar al bebé sin intervención de los padres.",
+    "transformedIdeaTitle": "El Guardián de Sueños Robotizado",
+    "transformedIdeaDescription": "¡Ayuda al robot niñera a calmar al bebé alienígena! Los estudiantes programarán un dispositivo que debe permanecer en silencio mientras el bebé duerme, pero si el sensor detecta un llanto fuerte (nivel de ruido alto), debe reproducir inmediatamente una canción de cuna espacial para que vuelva a dormir.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN AudioPlayer.play(\"lullaby.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma de seguridad activada por sonido de intrusos",
+    "originalIdeaDescription": "Un dispositivo de seguridad para el hogar que monitorea el silencio de una habitación vacía. Si se detecta un ruido repentino, como pasos o una ventana rompiéndose, el dispositivo activa una sirena de alarma fuerte y un mensaje de advertencia.",
+    "transformedIdeaTitle": "La Trampa para el Ladrón de Galletas",
+    "transformedIdeaDescription": "Alguien está robando las galletas de la cocina por la noche. Los estudiantes crearán una trampa invisible: el sistema debe estar escuchando atentamente y, si detecta el más mínimo crujido (ruido > 30), activará una sirena de policía y un ladrido de perro para asustar al ladrón.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 30 THEN AudioPlayer.play(\"siren.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de música activado por aplausos",
+    "originalIdeaDescription": "Un sistema de interfaz natural que permite al usuario controlar la reproducción de música sin usar las manos. Un aplauso fuerte inicia la música, y otro aplauso fuerte la detiene, actuando como un interruptor de palanca basado en sonido.",
+    "transformedIdeaTitle": "DJ Mágico sin Manos",
+    "transformedIdeaDescription": "¡Conviértete en un DJ que controla la fiesta con magia! En este desafío, los estudiantes deben programar el sistema para que la música empiece o pare mágicamente solo cuando escuchen un aplauso fuerte, ignorando el ruido de fondo suave de la gente hablando.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN AudioPlayer.togglePlayPause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de silencio para bibliotecas escolares",
+    "originalIdeaDescription": "Un dispositivo automatizado para ayudar a los bibliotecarios a mantener el orden. Mide constantemente el nivel de ruido ambiental y, si supera un umbral permitido, reproduce un sonido de 'Shhh' o un recordatorio verbal cortés para guardar silencio.",
+    "transformedIdeaTitle": "El Bibliotecario Cyborg Gruñón",
+    "transformedIdeaDescription": "El Bibliotecario Cyborg necesita concentrarse. Los estudiantes programarán sus oídos electrónicos. Si la clase habla demasiado fuerte y supera el nivel de 'susurro', el Cyborg debe emitir automáticamente un sonido de '¡Shhh!' para recordarles las reglas de la biblioteca.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN AudioPlayer.play(\"shhh.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego interactivo de sigilo contra el dragón",
+    "originalIdeaDescription": "Un juego físico donde los jugadores deben moverse silenciosamente. El sistema actúa como un dragón dormido; si el sensor de ruido detecta sonidos por encima de un nivel mínimo, el dragón 'despierta' con un rugido fuerte, indicando que el jugador ha perdido.",
+    "transformedIdeaTitle": "Escapa de la Cueva del Dragón",
+    "transformedIdeaDescription": "Los estudiantes son aventureros intentando robar un tesoro. Deben programar al 'Dragón' para que duerma (sin audio) mientras hay silencio, pero si alguien hace ruido al moverse (cruje una rama), el Dragón debe despertar con un rugido terrorífico. ¡El objetivo es probar quién puede ser más sigiloso!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 20 THEN AudioPlayer.play(\"roar.mp3\") ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Adaptador de volumen ambiental para fiestas",
+    "originalIdeaDescription": "Un sistema de audio inteligente que ajusta el volumen de la música basándose en el ruido de la multitud. Si la gente habla muy fuerte, la música sube de volumen para ser escuchada; si la sala está tranquila, la música baja a un nivel de fondo.",
+    "transformedIdeaTitle": "Fiesta Inteligente Auto-Ajustable",
+    "transformedIdeaDescription": "En una fiesta, a veces no se oye la música porque todos hablan. Los estudiantes crearán un algoritmo 'DJ Automático' que suba el volumen de la canción proporcionalmente a qué tan fuerte esté gritando o hablando la multitud, manteniendo siempre la música por encima del ruido ambiente.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET AudioPlayer.volume = NoiseLevel + 10"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de eco en cueva o cañón",
+    "originalIdeaDescription": "Una instalación recreativa que imita el efecto de eco. Cuando el sensor detecta un grito o sonido fuerte y corto, el reproductor de audio espera un segundo y luego reproduce una grabación preestablecida que suena como un eco desvaneciéndose.",
+    "transformedIdeaTitle": "El Valle del Eco Misterioso",
+    "transformedIdeaDescription": "Explora un valle digital. Los estudiantes deben programar el sistema para detectar un grito fuerte. Una vez detectado, el sistema debe esperar brevemente y luego reproducir un efecto de sonido de eco, simulando que están en una inmensa caverna vacía.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 70 THEN WAIT(1s); AudioPlayer.play(\"echo_effect.wav\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Narrador de historias sensible a interrupciones",
+    "originalIdeaDescription": "Un audiolibro interactivo que se detiene cuando hay ruido externo. Si el usuario o el entorno hacen ruido, la narración se pausa automáticamente para que no se pierda información, y se reanuda solo cuando vuelve el silencio.",
+    "transformedIdeaTitle": "El Cuentacuentos Tímido",
+    "transformedIdeaDescription": "Han conocido a un robot cuentacuentos muy tímido. Solo cuenta su historia si todos están en absoluto silencio. Los estudiantes deben programar la lógica para que el audio del cuento se reproduzca SOLO si el nivel de ruido es casi cero, y se pause inmediatamente si alguien habla.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < 15 THEN AudioPlayer.resume() ELSE AudioPlayer.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de voz para control de intensidad",
+    "originalIdeaDescription": "Una herramienta para cantantes o actores que ayuda a controlar la proyección de voz. Si el usuario mantiene un volumen constante dentro de un rango específico, suena una armonía de acompañamiento; si es muy bajo o muy alto, el acompañamiento se detiene.",
+    "transformedIdeaTitle": "El Desafío de la Nota Perfecta",
+    "transformedIdeaDescription": "¡Ayuda al cantante a mantener el volumen! Los estudiantes programarán un 'entrenador vocal'. Si el jugador mantiene su voz en un nivel medio (ni muy bajo ni gritando), sonará una música de acompañamiento exitosa. Si gritan o susurran, la música fallará y se detendrá.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 40 AND NoiseLevel < 70 THEN AudioPlayer.play(\"harmony.mp3\") ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Frasco de gritos para aliviar el estrés",
+    "originalIdeaDescription": "Un juguete terapéutico conceptual. Cuando el usuario grita fuerte hacia el sensor, el sistema transforma esa entrada agresiva reproduciendo inmediatamente un sonido cómico o relajante, como un pato de goma o agua fluyendo.",
+    "transformedIdeaTitle": "La Máquina Transmutadora de Gritos",
+    "transformedIdeaDescription": "¿Estás enojado? ¡Grita a la máquina! Los estudiantes diseñarán un dispositivo mágico que toma un grito fuerte y furioso como entrada y, instantáneamente, lo convierte en un sonido ridículo (como un 'cuac' de pato o un resorte cómico) para hacer reír a todos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 90 THEN AudioPlayer.play(\"funny_quack.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Grabadora espía activada por pasos",
+    "originalIdeaDescription": "Un dispositivo de espionaje de juguete que comienza a reproducir un sonido de obturador de cámara o 'grabando' cuando detecta el sonido sutil de pasos acercándose, simulando una vigilancia encubierta.",
+    "transformedIdeaTitle": "El Espía Invisible",
+    "transformedIdeaDescription": "Estás en una misión secreta. Debes proteger tu base. Crea un programa que detecte el sonido sutil de pasos enemigos (ruido medio). Al detectarlos, el dispositivo debe reproducir un sonido de 'cámara tomando fotos' para capturar al intruso 'in fraganti'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 25 AND NoiseLevel < 50 THEN AudioPlayer.play(\"shutter_click.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor universal de alienígenas simulado",
+    "originalIdeaDescription": "Un juguete de rol que 'traduce' lo que dice el niño. Cuando el niño habla al sensor, el sistema espera a que termine y luego reproduce una secuencia de sonidos electrónicos aleatorios o galimatías alienígenas como si fuera la traducción.",
+    "transformedIdeaTitle": "El Traductor Intergaláctico",
+    "transformedIdeaDescription": "¡Comunícate con los marcianos! Los estudiantes programarán un dispositivo que escuche su voz. Cuando detecte que están hablando, debe esperar un momento y responder reproduciendo sonidos extraños de robots o aliens, simulando que ha traducido sus palabras al idioma 'Marciano'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN WAIT_UNTIL_SILENCE(); AudioPlayer.playRandom(\"alien_speech.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Árbitro automático para el juego de estatuas",
+    "originalIdeaDescription": "Un sistema que gestiona el juego de 'Las Estatuas de Marfil'. Reproduce música aleatoriamente y la detiene. Inmediatamente después de detenerla, si el sensor de ruido detecta sonido (movimiento o risas), reproduce un sonido de 'eliminado'.",
+    "transformedIdeaTitle": "El Juez Robot de las Estatuas Musicales",
+    "transformedIdeaDescription": "Nadie puede engañar al Juez Robot. Los estudiantes deben crear la lógica del juego: la música suena y para aleatoriamente. El desafío lógico es: una vez que la música para, si el sensor detecta CUALQUIER ruido (risas o pies moviéndose), debe sonar un timbre de error.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF !AudioPlayer.isPlaying() AND NoiseLevel > 10 THEN AudioPlayer.play(\"buzzer.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta interactivo",
+    "originalIdeaDescription": "Un entorno sonoro donde un aplauso fuerte o un golpe en la mesa simula un trueno. El sistema responde al pico de ruido repentino reproduciendo un sonido de trueno retumbante y lluvia intensa.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Tú controlas el clima. Los estudiantes programarán un sistema donde un aplauso fuerte (el relámpago) active inmediatamente el sonido de un trueno poderoso. Pueden experimentar con diferentes niveles de aplausos para activar diferentes intensidades de truenos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 85 THEN AudioPlayer.play(\"thunder.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota virtual sensible al tono de voz",
+    "originalIdeaDescription": "Una mascota digital sin pantalla que responde a la voz. Si se le habla suavemente (ruido bajo), ronronea o emite sonidos felices. Si se le grita (ruido alto), emite sonidos de miedo o quejidos.",
+    "transformedIdeaTitle": "Tu Mascota Invisible: Fuzz",
+    "transformedIdeaDescription": "Fuzz es una mascota tímida que no puedes ver, solo oír. Los estudiantes deben programar su comportamiento: si le hablas bajito con cariño, Fuzz debe ronronear. Pero cuidado, si detecta gritos o ruidos fuertes, Fuzz llorará y se esconderá.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < 30 THEN AudioPlayer.play(\"purr\") ELSE IF NoiseLevel > 70 THEN AudioPlayer.play(\"whimper\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita mágica activada por conjuros vocales",
+    "originalIdeaDescription": "Un accesorio para disfraces que añade efectos de sonido a la magia. Cuando el niño grita una palabra mágica (pico de sonido), la varita reproduce un sonido de destellos mágicos o campanillas.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita de Sonido",
+    "transformedIdeaDescription": "Para lanzar el hechizo, debes decirlo con convicción. Los estudiantes convertirán el kit en una varita mágica. Deben programarla para que al detectar un comando de voz fuerte (como '¡Abracadabra!'), la varita recompense al mago con un sonido de hechizo exitoso.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 75 THEN AudioPlayer.play(\"magic_chime.wav\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de meditación y enfoque",
+    "originalIdeaDescription": "Un dispositivo para ayudar a la concentración. Monitorea el ambiente y solo cuando el ruido desciende por debajo de un umbral muy bajo durante 5 segundos, comienza a reproducir sonidos de naturaleza o cuencos tibetanos.",
+    "transformedIdeaTitle": "El Templo del Silencio Zen",
+    "transformedIdeaDescription": "El maestro Zen busca la paz absoluta. Los estudiantes deben crear un algoritmo que premie la paciencia: el audio relajante de un río solo comenzará a sonar si la clase logra mantener un silencio casi total durante varios segundos continuos.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel < 10 FOR 5s THEN AudioPlayer.play(\"nature_sounds.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Motor de coche de juguete interactivo",
+    "originalIdeaDescription": "Un módulo de sonido para un coche de cartón o juguete. Si el niño hace el sonido 'Vroom' o ruido constante, el motor 'acelera' reproduciendo sonido de motor. Si hay silencio, el motor pasa a sonido de 'ralentí'.",
+    "transformedIdeaTitle": "El Super Auto de Carreras Vocal",
+    "transformedIdeaDescription": "¡Tú eres el motor! Los estudiantes diseñarán el sistema de sonido de un coche de carreras. Si hacen ruido continuo con la boca ('brummm'), el coche debe sonar como si estuviera acelerando a máxima velocidad. Si dejan de hacer ruido, el motor debe sonar detenido.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN AudioPlayer.play(\"engine_rev.mp3\") ELSE AudioPlayer.play(\"engine_idle.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de actividad paranormal (Cazafantasmas)",
+    "originalIdeaDescription": "Un juguete de simulación para buscar fantasmas. Utiliza el nivel de ruido de fondo; si es extremadamente bajo (silencio sepulcral), introduce sonidos de estática o susurros fantasmales para asustar al usuario.",
+    "transformedIdeaTitle": "Detector de Fantasmas",
+    "transformedIdeaDescription": "Los fantasmas aparecen cuando todo está demasiado tranquilo. Los estudiantes programarán un detector paranormal que monitorea el silencio. Si la habitación está demasiado callada (Noise < 5), el dispositivo empezará a reproducir ruidos espeluznantes y cadenas arrastrándose.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel < 5 THEN AudioPlayer.play(\"spooky_whispers.mp3\")"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de aplausos con fanfarria de victoria",
+    "originalIdeaDescription": "Un sistema para concursos escolares. Mide la intensidad de los aplausos de la audiencia. Si el nivel de ruido supera el máximo posible (aplausos frenéticos), reproduce una fanfarria de victoria triunfal.",
+    "transformedIdeaTitle": "El Aplausómetro de la Fama",
+    "transformedIdeaDescription": "¿Quién es el ganador del concurso de talentos? Los estudiantes construirán un 'Aplausómetro'. Deben programarlo para que, si el público aplaude tan fuerte que rompe el récord (Ruido > 95), suene automáticamente la música de victoria y confeti sonoro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 95 THEN AudioPlayer.play(\"victory_fanfare.mp3\")"
+  }
+]

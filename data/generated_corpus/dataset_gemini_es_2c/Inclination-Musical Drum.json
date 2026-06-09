@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Gesture Controlled Drum Kit",
+    "originalIdeaDescription": "A system where tilting the device in different cardinal directions triggers specific drum sounds. For example, tilting left plays the snare, tilting right plays the hi-hat, tilting forward plays the kick drum, and tilting backward plays a cymbal crash.",
+    "transformedIdeaTitle": "Baterista en el Aire",
+    "transformedIdeaDescription": "¡Convierte tu dispositivo en una batería invisible! Los estudiantes programarán el dispositivo para que actúe como baquetas virtuales. Al inclinarlo bruscamente a la izquierda sonará la caja, y a la derecha los platillos. El reto es coordinar los movimientos para crear un ritmo de rock básico.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.X < -30 THEN Drum.play('Snare') ELSE IF inclination.X > 30 THEN Drum.play('HiHat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Balance Failure Alarm",
+    "originalIdeaDescription": "A balance training game where the user must keep the device perfectly flat. If the inclination exceeds a certain threshold on any axis, a loud drum roll or crash cymbal plays to indicate the user has lost their balance.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que eres un camarero llevando una bandeja llena de vasos de cristal. Debes mantener el dispositivo totalmente plano. Si te inclinas demasiado, ¡CRASH! sonará un platillo indicando que se ha roto todo. ¿Cuánto tiempo puedes aguantar en silencio?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(inclination.X) > 10 OR abs(inclination.Y) > 10 THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rhythmic Steering Wheel",
+    "originalIdeaDescription": "Using the device as a steering wheel for a game. Turning the wheel (tilting) not only controls direction but generates a rhythmic beat, where the speed of the beat corresponds to the angle of the turn.",
+    "transformedIdeaTitle": "Carrera de Ritmos",
+    "transformedIdeaDescription": "Los estudiantes crean un volante musical. Al girar a la izquierda para tomar una curva, suena un tambor grave; al girar a la derecha, un tambor agudo. Deben 'conducir' al ritmo de una canción imaginaria, haciendo que los giros coincidan con el compás.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.Y < -20 THEN Drum.play('Tom1') ELSE IF inclination.Y > 20 THEN Drum.play('Tom2')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Digital Rainstick Simulation",
+    "originalIdeaDescription": "Simulating a traditional rainstick instrument. As the user slowly tilts the device from one end to the other, a series of rapid, soft percussion sounds are triggered to mimic the sound of falling rain or pebbles.",
+    "transformedIdeaTitle": "Palo de Lluvia Digital",
+    "transformedIdeaDescription": "Recrea el sonido relajante de un palo de lluvia. El objetivo es inclinar el dispositivo muy suavemente. Si el ángulo cambia poco a poco, sonarán clics suaves (shakers). Si se inclina muy rápido, el sonido se detiene o suena desordenado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.changeRate is LOW AND inclination.Z changes THEN Drum.play('Shaker')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Walking Rhythm Generator",
+    "originalIdeaDescription": "A device attached to the leg that plays a heavy bass drum sound every time the leg is lifted (tilted up) and planted down, allowing the user to create a beat simply by walking around the room.",
+    "transformedIdeaTitle": "Pasos de Gigante",
+    "transformedIdeaDescription": "¡Siéntete como un gigante de hierro! Programarás el dispositivo para que detecte cuando levantas la rodilla (inclinación del muslo). Cada paso activará un sonido de bombo profundo, convirtiendo tu caminata en una marcha poderosa y rítmica.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.X > 45 THEN Drum.play('Kick_Bass') WAIT 0.5s"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Interactive Storytelling Sound Effects",
+    "originalIdeaDescription": "A tool for reading stories aloud. Specific gestures mapped to inclination angles trigger sound effects. For example, tilting forward abruptly triggers a 'knock on the door' drum sound to accompany the narrative.",
+    "transformedIdeaTitle": "Cuentacuentos Interactivo",
+    "transformedIdeaDescription": "Los estudiantes narrarán una historia de misterio. En momentos clave (ej. 'y alguien golpeó la puerta...'), deben realizar un gesto brusco de inclinación hacia adelante con el dispositivo para que suene un 'toc-toc' hecho con sonidos de percusión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch > 60 THEN Drum.play('Woodblock_Series')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Virtual Construction Hammer",
+    "originalIdeaDescription": "The device acts as a hammer handle. A rapid downward tilt mimics a hammering motion, triggering a sharp percussion sound on impact, used for role-playing or virtual construction games.",
+    "transformedIdeaTitle": "El Constructor Rítmico",
+    "transformedIdeaDescription": "Transforma el dispositivo en un martillo. Los niños deben hacer el gesto de clavar un clavo (inclinación rápida hacia abajo) para producir un sonido metálico. El desafío es clavar 10 clavos virtuales siguiendo un ritmo constante.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.Y decreases_rapidly THEN Drum.play('Cowbell')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Motorcycle Throttle Simulator",
+    "originalIdeaDescription": "Simulates a motorcycle throttle handle. Tilting the device back (rolling on the throttle) increases the tempo of a repeating drum roll, simulating an engine revving up.",
+    "transformedIdeaTitle": "Moto GP Musical",
+    "transformedIdeaDescription": "Usa el dispositivo como el manillar de una moto. Al inclinarlo hacia atrás (acelerar), se disparará un redoble de tambores que se vuelve más rápido cuanto más inclinas, imitando el rugido de un motor acelerando en la línea de salida.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET Drum.tempo = map(inclination.X, 0, 90, 60, 200); Drum.playLoop('Snare_Roll')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Orchestral Conductor Baton",
+    "originalIdeaDescription": "The user acts as a conductor. Smooth up and down tilting motions control the volume or intensity of a percussion loop. An abrupt downward tilt signals the final beat or a crash.",
+    "transformedIdeaTitle": "Director de Orquesta",
+    "transformedIdeaDescription": "Conviértete en el director. Mueve el dispositivo suavemente arriba y abajo para mantener un ritmo base de timbales. ¡Pero cuidado! Un movimiento fuerte y seco hacia abajo indicará el final de la sinfonía con un gran platillazo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.Z change is SMOOTH THEN Drum.play('Timpani') ELSE IF inclination.Z drops_sharp THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Basketball Dribble Simulation",
+    "originalIdeaDescription": "Simulates dribbling a basketball. The user makes a pushing down motion (tilting device forward/down). Upon reaching the inflection point, a 'bounce' sound is played by the drum module.",
+    "transformedIdeaTitle": "Dribling Sónico",
+    "transformedIdeaDescription": "Sin balón, pero con ritmo. Haz el gesto de botar una pelota de baloncesto. El sensor detectará la inclinación hacia el suelo y reproducirá el sonido del bote. Los estudiantes pueden competir para ver quién hace más botes por minuto.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch < -45 THEN Drum.play('Floor_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Anti-Sleep Head Nod Detector",
+    "originalIdeaDescription": "A wearable application (hat or headband) that monitors head position. If the user's head nods forward (indicating sleepiness), a loud drum beat is triggered to wake them up.",
+    "transformedIdeaTitle": "Alarma Anti-Siesta",
+    "transformedIdeaDescription": "¡Diseña una gorra inteligente para no dormirte en clase! Si la cabeza se inclina hacia adelante (te estás quedando dormido), el dispositivo activará una secuencia de batería ruidosa para despertarte. Una forma divertida de aprender sobre umbrales de sensores.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch > 50 (nodding) THEN Drum.play('Snare_Rapid')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Magic Potion Stirring",
+    "originalIdeaDescription": "The user mimics stirring a large cauldron by tilting the device in a circular motion. Successful continuous circular tilting creates a swirling, rhythmic beat pattern.",
+    "transformedIdeaTitle": "La Olla de la Bruja",
+    "transformedIdeaDescription": "Eres una bruja o un mago preparando una poción. Debes inclinar el dispositivo describiendo círculos (como removiendo una olla). Si el movimiento es fluido y circular, sonará un ritmo mágico constante. Si paras, la poción (y la música) se arruina.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination changes in CIRCULAR_PATTERN THEN Drum.play('Mystic_Beat')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Safe Cracker Game",
+    "originalIdeaDescription": "A game where the user must find a specific 'unlock' angle. They tilt the device slowly; as they get closer to the secret angle, a drum beats faster, culminating in a 'click' sound when the correct angle is held.",
+    "transformedIdeaTitle": "La Caja Fuerte Musical",
+    "transformedIdeaDescription": "Eres un ladrón de guante blanco intentando abrir una caja fuerte. Inclina el dispositivo muy despacio. Escucharás un golpeteo que se acelera a medida que te acercas al ángulo secreto. ¡Cuando aciertes el ángulo exacto, sonará un 'clic' de apertura!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF abs(inclination.X - secretAngle) < 5 THEN Drum.play('Click') ELSE Drum.play('Tapping', speed_based_on_distance)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Virtual Sword Fight",
+    "originalIdeaDescription": "Using the device as a sword handle. Swiping the device (tilting rapidly) triggers 'swish' sounds, while sudden stops or blocks trigger 'clash' percussion sounds.",
+    "transformedIdeaTitle": "Duelo de Espadas Sonoras",
+    "transformedIdeaDescription": "Coreografía una lucha de espadas. Un movimiento rápido de corte (inclinación lateral veloz) hace sonar un efecto de aire, mientras que detener el dispositivo en seco (bloqueo) hace sonar un choque de metales. Ideal para teatro o juegos de rol.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.changeSpeed > HIGH THEN Drum.play('Swish') ELSE IF inclination.stop SUDDEN THEN Drum.play('Clang')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rowing Boat Rhythm",
+    "originalIdeaDescription": "Simulates rowing a boat. The user tilts back and forth rhythmically. The 'pull' phase triggers a deep drum sound, establishing a rowing cadence for exercise or play.",
+    "transformedIdeaTitle": "Remando en el Río",
+    "transformedIdeaDescription": "¡Todos a remar! Siéntate en el suelo e inclínate hacia atrás y hacia adelante como si remaras. Al ir hacia atrás (fuerza), sonará un bombo fuerte. Debes mantener el ritmo con tus compañeros para que el barco virtual avance suavemente.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch goes from 0 to -30 THEN Drum.play('Deep_Tom')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Dancing Robot Controller",
+    "originalIdeaDescription": "The user teaches a robot to dance by tilting the controller. A combination of Up-Down-Left-Right tilts creates a programmed beat loop, functioning like a simple step sequencer.",
+    "transformedIdeaTitle": "Coreógrafo de Robots",
+    "transformedIdeaDescription": "Programa los pasos de baile de un robot. Inclinar Arriba añade un 'Hi-Hat', Abajo un 'Bombo', Izquierda una 'Caja'. Los estudiantes deben crear una secuencia de movimientos para componer un ritmo de hip-hop completo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination.Y > 30 add_to_loop('HiHat'); IF inclination.Y < -30 add_to_loop('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Horse Riding Simulator",
+    "originalIdeaDescription": "Simulates holding the reins of a horse. Rhythmic bobbing (small up and down tilts) generates a galloping hoofbeat sound effect using the drums.",
+    "transformedIdeaTitle": "Galope en la Pradera",
+    "transformedIdeaDescription": "Sujeta las riendas y galopa. Mueve el dispositivo con un rebote rítmico. El sensor detectará la oscilación constante y reproducirá el sonido de cascos de caballo (usando bloques de madera o toms). Si paras, el caballo se detiene.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.Z oscillates_frequency > 2Hz THEN Drum.play('Gallop_Pattern')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Pinball Flipper Control",
+    "originalIdeaDescription": "The user holds the device like a pinball table. Tilting sharply to the left triggers the left bumper sound, and tilting to the right triggers the right bumper sound, simulating the mechanics of keeping a ball in play.",
+    "transformedIdeaTitle": "Pinball Humano",
+    "transformedIdeaDescription": "Conviértete en una máquina de Pinball. Debes reaccionar rápido. Cuando el profesor diga '¡Izquierda!', inclinas a la izquierda y suena el 'Flipper L'. Si dice '¡Derecha!', suena el 'Flipper R'. Un juego de reflejos auditivos y motores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.roll < -20 THEN Drum.play('Bumper_Left') ELSE IF inclination.roll > 20 THEN Drum.play('Bumper_Right')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Fishing Cast Simulator",
+    "originalIdeaDescription": "Simulates casting a fishing line. The user tilts the device back, then snaps it forward. The forward snap triggers a 'splash' sound effect indicating the lure hitting the water.",
+    "transformedIdeaTitle": "Día de Pesca",
+    "transformedIdeaDescription": "Lanza la caña lo más lejos posible. Primero inclina atrás para coger impulso, y luego lanza rápido hacia adelante. Al final del movimiento, sonará un 'Splash' (platillo y tom) indicando que el anzuelo ha caído en el agua.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination sequence (Back -> Fast_Forward -> Stop) THEN Drum.play('Splash_Effect')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Skateboard Trick Detector",
+    "originalIdeaDescription": "Device attached to a toy skateboard or fingerboard. If the board is flipped (inclination rolls 360 degrees or turns upside down), a crowd cheering sound or a victorious drum fanfare is played.",
+    "transformedIdeaTitle": "Trucos de Skate",
+    "transformedIdeaDescription": "Usa el dispositivo como un monopatín de dedos (Fingerboard). Intenta hacer un 'Flip' (girar el dispositivo sobre sí mismo). Si el sensor detecta que se ha puesto boca abajo y ha vuelto a la normalidad, sonará una fanfarria de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination.roll changes 0->180->0 THEN Drum.play('Victory_Fanfare')"
+  }
+]

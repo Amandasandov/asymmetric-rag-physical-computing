@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Batería Aérea por Gestos",
+    "originalIdeaDescription": "Un sistema donde la inclinación del dispositivo determina qué instrumento de percusión está seleccionado (caja, bombo, platillo) y el botón táctil actúa como el gatillo para reproducir el sonido. Permite tocar ritmos en el aire.",
+    "transformedIdeaTitle": "La Batería Invisible del Rock",
+    "transformedIdeaDescription": "¡Conviértete en una estrella de rock sin instrumentos físicos! En esta actividad, programarás tu dispositivo para que funcione como una batería mágica. Si inclinas el dispositivo a la derecha, seleccionarás el platillo; a la izquierda, la caja. Usa el botón táctil para golpear el instrumento seleccionado y crea tu propio solo de batería.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 20 THEN SelectedDrum = 'Cymbal' ELSE IF Inclination.X < -20 THEN SelectedDrum = 'Snare'; IF TouchButton.IsPressed THEN Play(SelectedDrum)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Pasos y Salto",
+    "originalIdeaDescription": "Utiliza el sensor de inclinación para detectar el balanceo rítmico al caminar, reproduciendo un sonido de tambor grave por cada paso, y el botón táctil para simular un sonido de salto o acción especial.",
+    "transformedIdeaTitle": "El Gigante Caminante",
+    "transformedIdeaDescription": "Imagina que eres un gigante cuyos pasos hacen temblar la tierra. Programarás el dispositivo para detectar cuando te balanceas al caminar (inclinación) y reproducirás un sonido de bombo fuerte 'BOOM'. Cuando presiones el botón, el gigante saltará, haciendo un sonido de platillo 'CRASH'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Change > Threshold THEN Play('BassDrum'); IF TouchButton.IsPressed THEN Play('CrashCymbal')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio con Penalización Sonora",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo perfectamente plano. Si la inclinación supera un umbral en cualquier eje, suena un redoble de tambor indicando inestabilidad. El botón táctil reinicia el juego.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Eres un camarero llevando una bandeja llena de vasos de cristal. Debes mantener el dispositivo plano. Si lo inclinas demasiado, escucharás un redoble de tambor que simula los vasos cayendo. Usa el botón táctil para recoger el desastre y empezar de nuevo. ¿Cuánto tiempo puedes aguantar?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) > 15 OR abs(Inclination.Y) > 15 THEN Play('DrumRoll'); IF TouchButton.IsPressed THEN ResetSystem()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Ritmos con Tempo Variable",
+    "originalIdeaDescription": "El botón táctil inicia o detiene un bucle de batería básico. La inclinación del dispositivo hacia adelante o hacia atrás ajusta la velocidad (BPM) del ritmo en tiempo real.",
+    "transformedIdeaTitle": "DJ Acelerador de Partituras",
+    "transformedIdeaDescription": "¡Toma el control de la pista de baile! Presiona el botón para soltar el beat. Luego, inclina tu dispositivo hacia adelante para acelerar la música y poner a todos a saltar, o inclínalo hacia atrás para un efecto de cámara lenta genial. Aprenderás sobre bucles y variables de velocidad.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.WasPressed THEN ToggleLoop(); LoopSpeed = Map(Inclination.Y, -90, 90, 60, 180); PlayLoop(Speed=LoopSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Herramienta de Construcción Virtual",
+    "originalIdeaDescription": "Simula el uso de un martillo. Se levanta el dispositivo (inclinación hacia arriba) para cargar y se baja rápidamente. Al presionar el botón simultáneamente con el movimiento hacia abajo, suena un golpe seco de tambor.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "¡Es hora de construir una casa! Tu dispositivo es el martillo. Levántalo inclinándolo hacia atrás y golpear hacia adelante. Para que el clavo entre, debes presionar el botón justo en el momento del impacto. Si lo coordinas bien, escucharás un golpe seco satisfactorio.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -30 AND TouchButton.IsPressed THEN Play('SnareDrum') ELSE Wait()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Angular",
+    "originalIdeaDescription": "El usuario debe inclinar el dispositivo a un ángulo específico secreto. Cuando está cerca, el tambor hace 'clics' suaves. El botón táctil confirma el intento de desbloqueo.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Estás frente a una caja fuerte antigua. Gira el dial (inclinando el dispositivo) lentamente. Escucha los clics del tambor; cuando el sonido cambie, habrás encontrado el número secreto. ¡Presiona el botón rápido para abrirla antes de que llegue la policía!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF abs(Inclination.X - SecretAngle) < 5 THEN Play('HiHat_Closed'); IF TouchButton.IsPressed AND abs(Inclination.X - SecretAngle) < 2 THEN Play('Open_Cymbal_Win')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche",
+    "originalIdeaDescription": "El botón táctil arranca el 'motor'. La inclinación actúa como pedal del acelerador; a mayor inclinación, más rápida es la repetición de los sonidos de percusión, simulando revoluciones por minuto.",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula 1",
+    "transformedIdeaDescription": "Súbete a tu bólido. Pulsa el botón para encender el motor. Ahora, pisa el acelerador inclinando el dispositivo hacia adelante. Cuanto más lo inclines, más rápido rugirá el motor (usando sonidos de tambor rápidos). ¡Cuidado no te pases de revoluciones en la curva!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.IsPressed THEN EngineOn = TRUE; IF EngineOn THEN DrumInterval = Map(Inclination.Y, 0, 90, 500ms, 50ms); PlayDrumEvery(DrumInterval)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Rítmicos",
+    "originalIdeaDescription": "Diferentes gestos de inclinación (arriba, abajo, izquierda, derecha) preparan diferentes 'hechizos' sonoros. El botón táctil lanza el hechizo reproduciendo una secuencia de tambores específica.",
+    "transformedIdeaTitle": "Escuela de Magia Rítmica",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos sonoros. Inclina la varita (dispositivo) hacia arriba para el hechizo de Trueno, o hacia abajo para el de Terremoto. Una vez que hayas apuntado, presiona el botón mágico para liberar el poder y escuchar el efecto de sonido correspondiente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 45 THEN Spell = 'Thunder'; IF TouchButton.IsPressed THEN PlaySequence(Spell)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Se usa el botón para lanzar la línea. Se espera un tiempo aleatorio hasta que suene un tambor (pez picando). El usuario debe inclinar rápidamente el dispositivo hacia atrás para 'tirar' y capturarlo.",
+    "transformedIdeaTitle": "Pesca Extrema en el Río",
+    "transformedIdeaDescription": "Lanza tu caña presionando el botón y espera en silencio... Cuando escuches el golpe del tambor, ¡un pez ha picado! Tienes que inclinar el dispositivo hacia atrás rápidamente para sacarlo del agua. Si eres lento, el pez se escapará.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.Pressed THEN Wait(Random); Play('FishBite'); IF Inclination.Y < -45 Within 1s THEN Play('Fanfare') ELSE Play('FailSound')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Interactivo",
+    "originalIdeaDescription": "Un metrónomo que marca el paso con un sonido de caja. La inclinación izquierda/derecha ajusta el compás (4/4, 3/4, etc.), y el botón táctil sincroniza el primer tiempo fuerte.",
+    "transformedIdeaTitle": "El Director de Orquesta",
+    "transformedIdeaDescription": "Dirige a tu orquesta digital. Inclina el dispositivo para cambiar el tipo de compás: un vals (3/4) o una marcha (4/4). Usa el botón para marcar el 'UNO' y que todos los músicos (el tambor) te sigan al unísono. ¡Mantén el ritmo constante!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X > 20 THEN TimeSignature = 3 ELSE TimeSignature = 4; IF TouchButton.Pressed THEN ResetBeat(); PlayMetronome(TimeSignature)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "El dispositivo monitorea la estabilidad. Si se detecta agitación (cambios rápidos en inclinación), suena una alarma de tambores graves. El botón táctil reinicia el sismógrafo.",
+    "transformedIdeaTitle": "Alerta de Sismógrafo",
+    "transformedIdeaDescription": "Construye una estación de detección de terremotos. Coloca el dispositivo sobre la mesa. Si alguien golpea la mesa o la mueve, el sensor de inclinación detectará la vibración y activará la alarma de tambores de emergencia. Usa el botón para resetear el sistema después del temblor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF RateOfChange(Inclination) > Limit THEN Loop('AlarmDrum'); IF TouchButton.IsPressed THEN StopSound()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nave Espacial con Propulsores",
+    "originalIdeaDescription": "La inclinación controla la dirección de la nave. El botón táctil activa los propulsores principales, lo que genera un sonido de redoble continuo mientras se mantenga presionado.",
+    "transformedIdeaTitle": "Aterrizaje en Marte",
+    "transformedIdeaDescription": "Estás pilotando el módulo de aterrizaje. Inclina el dispositivo para mantener la nave nivelada mientras desciendes. Mantén presionado el botón para activar los retrocohetes (sonido de redoble) y frenar la caída. ¡Aterriza suavemente!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Navigation = GetInclination(); IF TouchButton.IsHeld THEN Play('DrumRoll_Continuous') ELSE StopSound()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "El dispositivo se sujeta al cuerpo. Al bajar (cambio de inclinación/altura), no suena nada. Al subir y recuperar la verticalidad, suena un bombo y se cuenta una repetición. El botón pone el contador a cero.",
+    "transformedIdeaTitle": "El Entrenador Personal Robótico",
+    "transformedIdeaDescription": "¡Hora de hacer ejercicio! Sujeta el dispositivo en tu pecho. Cuando hagas una sentadilla correctamente y vuelvas a estar recto, el robot te felicitará con un golpe de tambor. Usa el botón para reiniciar tu contador de ejercicios. ¿Puedes hacer 10 seguidas?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Z goes Low THEN State='Down'; IF State=='Down' AND Inclination.Z goes High THEN {Play('Kick'); Count++}; IF TouchButton THEN Count=0"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Sonoro",
+    "originalIdeaDescription": "El usuario guía una 'bola' virtual inclinando el dispositivo. Si la inclinación es excesiva (choca con la pared), suena un golpe. El botón sirve para 'saltar' trampas.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Imagina que mueves una canica por un laberinto, pero con los ojos cerrados. Inclina el dispositivo suavemente. Si lo inclinas mucho, chocarás contra la pared y sonará un golpe seco. Usa el botón para saltar agujeros en el suelo. ¡Llega a la meta sin chocar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) > 30 OR abs(Inclination.Y) > 30 THEN Play('WallHit'); IF TouchButton.Pressed THEN Jump()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Secuenciador de Lluvia",
+    "originalIdeaDescription": "La inclinación controla la intensidad de una tormenta simulada con tambores (poca inclinación = gotas sueltas, mucha inclinación = tormenta fuerte). El botón detiene la lluvia instantáneamente.",
+    "transformedIdeaTitle": "El Dios de la Tormenta",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima. Mantén el dispositivo plano para un día tranquilo. Inclínalo poco a poco para empezar una lluvia suave (golpes lentos), o inclínalo totalmente para desatar una tormenta furiosa de tambores. Presiona el botón para que salga el sol de golpe.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Intensity = Map(Inclination.Angle, 0, 90, 0, 100); PlayRainSound(Intensity); IF TouchButton.Pressed THEN StopAll()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Batería Simulado",
+    "originalIdeaDescription": "El usuario selecciona un tambor con el botón. Luego inclina el dispositivo para cambiar el tono (pitch) de ese tambor hacia arriba o abajo hasta encontrar el sonido deseado.",
+    "transformedIdeaTitle": "Luthier de Instrumentos",
+    "transformedIdeaDescription": "Los instrumentos están desafinados antes del concierto. Presiona el botón para elegir un tambor. Luego, inclina el dispositivo a la derecha para tensar el parche (sonido más agudo) o a la izquierda para aflojarlo (más grave) hasta que suene perfecto.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.Pressed THEN SelectNextDrum(); Pitch = Map(Inclination.X, -90, 90, 0.5, 2.0); SetDrumPitch(Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Simón Dice con Gestos",
+    "originalIdeaDescription": "El sistema reproduce un sonido (ej. Caja). El usuario debe realizar el gesto asociado (ej. Inclinar izquierda) y confirmar con el botón. Si acierta, pasa al siguiente nivel.",
+    "transformedIdeaTitle": "Simón Dice: Edición Musical",
+    "transformedIdeaDescription": "El ordenador tocará un instrumento. Tú debes responder con el movimiento correcto: Bombo = Inclinar al frente, Caja = Inclinar atrás. Coloca el dispositivo en la posición correcta y pulsa el botón para confirmar. ¡A ver cuántos aciertas seguidos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Play(RandomDrum); IF (CorrectInclination AND TouchButton.Pressed) THEN Score++ ELSE GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Caballo al Galope",
+    "originalIdeaDescription": "Simula montar a caballo. Inclinarse hacia adelante aumenta la velocidad del ritmo de galope (batería). El botón hace que el caballo 'salte' (sonido de crash).",
+    "transformedIdeaTitle": "Carrera de Caballos Derby",
+    "transformedIdeaDescription": "Sujeta las riendas. Inclínate hacia adelante para que tu caballo empiece a galopar; cuanto más te inclines, más rápido sonarán los cascos (ritmo de batería). Cuando veas una valla (imaginaria), presiona el botón para saltar por encima.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "GallopSpeed = Inclination.Y; PlayRhythm('Gallop', GallopSpeed); IF TouchButton.Pressed THEN Play('JumpSound')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Sonoro",
+    "originalIdeaDescription": "Herramienta para colgar cuadros. Si el dispositivo no está perfectamente horizontal, suena un ritmo rápido. Cuando está nivelado (inclinación 0), se hace silencio o suena un 'ding' de platillo. El botón calibra.",
+    "transformedIdeaTitle": "El Ayudante de Carpintería",
+    "transformedIdeaDescription": "Ayuda a colgar un cuadro recto sin mirar. Si el dispositivo está torcido, escucharás un redoble molesto. Mueve el dispositivo hasta que el ruido pare y suene un platillo brillante. ¡Ahí está perfectamente recto! Usa el botón para ajustar la posición inicial.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) < 2 THEN Play('Ping') ELSE Play('RapidDrum'); IF TouchButton.Pressed THEN Calibrate()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria por Agitación",
+    "originalIdeaDescription": "El botón graba un patrón rítmico. Agitar el dispositivo (cambios bruscos de inclinación) mezcla y altera aleatoriamente los sonidos del patrón grabado.",
+    "transformedIdeaTitle": "La Coctelera Musical",
+    "transformedIdeaDescription": "¡Mezcla tu propia música como si fuera un batido! Presiona el botón para establecer un ritmo base. Luego, agita el dispositivo como una maraca. Cada vez que lo agites, los instrumentos cambiarán de lugar creando ritmos locos y nuevos. ¿Qué saldrá?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.Pressed THEN RecordPattern(); IF Shake(Inclination) THEN Shuffle(DrumPattern)"
+  }]

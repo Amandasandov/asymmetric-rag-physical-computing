@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Girasol Musical Robótico",
+    "originalIdeaDescription": "Un sistema que simula una flor buscando el sol. El usuario debe orientar el dispositivo hacia la fuente de luz más fuerte. Cuando la brújula y la luz se alinean, el teclado permite tocar una 'canción de crecimiento'.",
+    "transformedIdeaTitle": "El Girasol Digital",
+    "transformedIdeaDescription": "Eres una planta que necesita energía solar. Gira tu cuerpo (Compass) buscando la ventana o una lámpara. Cuando el sensor detecte mucha luz (Light Intensity > 80), tu energía estará al máximo. ¡Rápido! Toca la 'Melodía de la Fotosíntesis' en el teclado para crecer y ganar el nivel.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 AND Compass.heading == SunDirection THEN Energy = 100; IF Energy == 100 AND Keyboard.melody() THEN Grow()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Cueva de los Murciélagos",
+    "originalIdeaDescription": "El dispositivo actúa como un murciélago. Solo funciona en la oscuridad. El usuario usa la brújula para navegar y el teclado para emitir chirridos (sonar). Si hay luz, el murciélago se esconde.",
+    "transformedIdeaTitle": "Escape del Murciélago",
+    "transformedIdeaDescription": "Eres un murciélago nocturno. Debes encontrar la salida de la cueva guiándote por el Norte (Compass). Pero cuidado: si el sensor detecta luz (Light Intensity > 20), significa que es de día o hay depredadores, y debes quedarte quieto. Usa el teclado para usar tu eco-localización en la oscuridad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20: AllowMovement(); IF Compass.heading == 'North' AND Keyboard.pressed() THEN Score++ ELSE IF Light.level > 20 THEN GameOver()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Sombra y Rumbo",
+    "originalIdeaDescription": "Para abrir la caja, el usuario debe apuntar al Oeste y tapar el sensor de luz con la mano (crear sombra) simultáneamente, luego ingresar el PIN.",
+    "transformedIdeaTitle": "El Tesoro del Vampiro",
+    "transformedIdeaDescription": "Estás robando el tesoro de un vampiro. La bóveda solo se abre en la oscuridad absoluta y mirando al Oeste. Tapa el sensor con tu mano (Light < 10), gira al Oeste (Compass) y teclea el código secreto sin destapar el sensor.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Light.level < 10 THEN SecurityOff = TRUE; IF SecurityOff AND Keyboard.code('1234') THEN Open()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Instrumento Theremin de Luz",
+    "originalIdeaDescription": "La dirección de la brújula selecciona la nota base, y la cantidad de luz que incide en el sensor controla el volumen o la octava de la nota que suena al tocar el teclado.",
+    "transformedIdeaTitle": "Arpa Láser Invisible",
+    "transformedIdeaDescription": "Crea un instrumento futurista. Gira sobre tu eje para seleccionar la cuerda (Norte=Grave, Sur=Agudo). Luego, pasa tu mano sobre el sensor de luz para rasguear (cambios de intensidad de luz). Toca las teclas para cambiar el sonido del instrumento (de Piano a Sintetizador).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = Map(Compass.heading); Octave = Map(Light.level); IF Keyboard.pressed() THEN Play(Note, Octave)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Faro Marítimo Automatizado",
+    "originalIdeaDescription": "Simulación de un faro. Cuando baja la luz (noche), el usuario debe girar constantemente (Compass) para barrer el horizonte. El teclado activa la sirena de niebla.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Cae la noche. Cuando el sensor de luz detecte oscuridad, debes empezar a girar 360 grados constantemente para guiar a los barcos. Si detectas mucha niebla (simulado por el juego), usa el teclado para hacer sonar la sirena grave de advertencia.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 30 THEN ActivateRotationCheck(); IF Compass.isRotating() THEN Score++; IF Keyboard.key('Low') THEN FogHorn()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Fantasmas Fotosensibles",
+    "originalIdeaDescription": "Los fantasmas están en una dirección específica. Para verlos, hay que apuntar con una linterna (sensor de luz alto). Al revelarlos, se atrapan con el teclado.",
+    "transformedIdeaTitle": "Cazafantasmas: Espectro de Luz",
+    "transformedIdeaDescription": "Hay un fantasma invisible al Este. Gira hacia allá (Compass). No puedes verlo hasta que lo ilumines: apunta una linterna real al sensor (Light > 90). Cuando el sistema pite indicando que es visible, toca rápido la secuencia de captura en el teclado.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == GhostDir AND Light.level > 90 THEN GhostVisible = TRUE; IF GhostVisible AND Keyboard.sequence('Capture') THEN Win()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Reloj de Sol Sonoro",
+    "originalIdeaDescription": "El usuario actúa como el gnomon de un reloj de sol. Dependiendo de dónde venga la luz y su orientación, el teclado toca campanadas indicando la hora simulada.",
+    "transformedIdeaTitle": "El Cronometrador Solar",
+    "transformedIdeaDescription": "Aprende cómo funcionaban los relojes antiguos. Oriéntate al Sur. Si tapas la luz parcialmente (sombra de tarde), el teclado debe dar 5 campanadas. Si hay luz directa (mediodía), debe dar 12 campanadas. ¡Programa tu propio reloj!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Time = Calculate(Light.level, Compass.heading); Keyboard.playChimes(Time)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Agente Secreto: Decodificador",
+    "originalIdeaDescription": "Para leer el mensaje secreto, el usuario debe usar 'luz ultravioleta' (linterna al sensor) y estar en la ubicación correcta (Norte). El teclado escribe el mensaje descifrado.",
+    "transformedIdeaTitle": "Espía: Tinta Invisible",
+    "transformedIdeaDescription": "Tienes documentos secretos, pero están en blanco. Para revelarlos, ve a la ventana (Norte) y asegúrate de que haya mucha luz (Light > 70) para simular el revelado químico. Cuando las condiciones se cumplan, toca las teclas para que aparezcan las letras en pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Light.level > 70 THEN RevealMode = ON; IF RevealMode AND Keyboard.pressed() THEN PrintChar()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Sistema de Alarma de Museo",
+    "originalIdeaDescription": "El usuario coloca el dispositivo vigilando una dirección. Si detecta un cambio de luz (alguien pasa y hace sombra) o cambio de dirección, suena la alarma (teclado).",
+    "transformedIdeaTitle": "Trampa Láser de Seguridad",
+    "transformedIdeaDescription": "Protege el diamante. Apunta el dispositivo hacia la puerta. Calibra el nivel de luz normal. Si un ladrón pasa y su sombra hace caer el nivel de luz, o si mueve el dispositivo, el teclado debe tocar una sirena policial estridente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BaseLight = Light.level; IF Abs(Light.level - BaseLight) > 20 OR Compass.delta > 5 THEN Keyboard.playLoop('Alarm')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Telescopio Espacial",
+    "originalIdeaDescription": "El usuario debe evitar apuntar al sol (luz alta daña el lente). Debe buscar estrellas en zonas oscuras girando la brújula y registrando hallazgos con el teclado.",
+    "transformedIdeaTitle": "Astrónomo de Espacio Profundo",
+    "transformedIdeaDescription": "Manejas el Hubble. Gira buscando exoplanetas. ¡Cuidado! Si apuntas a una fuente de luz fuerte (el Sol), el sensor te avisará y deberás girar rápido o perderás. Busca zonas oscuras y toca el teclado para tomar fotos de las galaxias.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.level > 80 THEN Warning('Sun Damage'); ELSE IF Compass.heading == TargetStar THEN Keyboard.play('ShutterSound')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Escondite Ninja",
+    "originalIdeaDescription": "El usuario debe moverse hacia un objetivo (Dirección) pero solo puede avanzar cuando está en la sombra (Luz baja). El teclado se usa para atacar al llegar.",
+    "transformedIdeaTitle": "Ninja de las Sombras",
+    "transformedIdeaDescription": "Infíltrate en el castillo del Shogun que está al Norte. Solo puedes moverte cubriendo el sensor de luz con tu mano (modo camuflaje). Si destapas el sensor (Luz alta), te ven. Al llegar al Norte, presiona 'Espacio' para completar la misión.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 15 THEN Hidden = TRUE; IF Hidden AND Compass.heading == 'North' THEN Move(); IF Keyboard.pressed() THEN Attack()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Traductor Morse Óptico",
+    "originalIdeaDescription": "El usuario recibe señales de luz (flashes de una linterna al sensor). El dispositivo interpreta los flashes y el usuario responde con el teclado.",
+    "transformedIdeaTitle": "Telégrafo de Barco a Barco",
+    "transformedIdeaDescription": "Estás en alta mar. Otro barco te hace señales con luces. Usa el sensor para leer los flashes (Corto-Largo). Debes descifrar el mensaje y contestar tocando el código Morse correspondiente en tu teclado musical (Nota corta - Nota larga).",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pattern = Record(Light.changes); IF Pattern == '...---...' THEN Decoded = 'SOS'; IF Keyboard.input() == 'OK' THEN SendReply()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Panel Solar",
+    "originalIdeaDescription": "Juego de gestión de recursos. El usuario debe orientar el panel (Compass) para mantener la carga máxima de luz. El teclado consume energía para activar máquinas.",
+    "transformedIdeaTitle": "Ingeniero de Energía Renovable",
+    "transformedIdeaDescription": "Mantén la ciudad iluminada. Gira tu panel solar (dispositivo) siguiendo la luz de una linterna que mueve tu profesor. Mantén la intensidad al 100%. Usa la energía acumulada presionando teclas para encender las farolas de la ciudad virtual.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge += Light.level; IF Compass.heading != LightSourceDir THEN Charge -= 10; IF Keyboard.pressed() AND Charge > 10 THEN LightCity()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Exploración Submarina Abisal",
+    "originalIdeaDescription": "Simulador de batiscafo. Oscuridad total (Luz baja). La brújula guía. El teclado enciende el sonar o luces externas momentáneas.",
+    "transformedIdeaTitle": "Misión: Fosa de las Marianas",
+    "transformedIdeaDescription": "Desciende a lo profundo. Tapa el sensor (Luz 0) para simular la profundidad. Navega al Sur. De repente, ¡un monstruo! Destapa el sensor un segundo (flash de luz) para asustarlo y toca una nota aguda en el teclado para acelerar los propulsores.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 AND Compass.heading == 'South' THEN Depth++; IF Monster AND Light.change(High) AND Keyboard.key('C') THEN Escape()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Director de Orquesta Día y Noche",
+    "originalIdeaDescription": "La música cambia según la luz. Luz alta = Música rápida y alegre (Allegro). Luz baja = Lenta y suave (Adagio). La dirección añade instrumentos.",
+    "transformedIdeaTitle": "Sinfonía del Amanecer",
+    "transformedIdeaDescription": "Controla el ambiente musical. Empieza con el sensor tapado (Noche): toca notas lentas en el teclado. Destapa el sensor lentamente (Amanecer): el ritmo base se acelera. Gira al Este para añadir pájaros y flautas a tu composición.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Tempo = Map(Light.level, [40, 160]); Instrument = Map(Compass.heading); Keyboard.setMode(Instrument, Tempo)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Ceremonia del Eclipse",
+    "originalIdeaDescription": "El usuario debe alinear el dispositivo con el 'sol' y la 'luna'. Cuando la luz baja (eclipse simulado), debe tocar un himno en el teclado.",
+    "transformedIdeaTitle": "El Ritual del Eclipse Solar",
+    "transformedIdeaDescription": "Predice el eclipse. Apunta al 'Sol' (lámpara). Pasa tu mano lentamente sobre el sensor para bloquear la luz. Justo en el momento de oscuridad total (la corona solar), toca la tecla maestra para completar el fenómeno astronómico.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == SunAngle AND Light.trend == 'Decreasing' THEN Phase = 'Partial'; IF Light.level < 10 AND Keyboard.key('Master') THEN Success()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Buscador de Luciérnagas Mágicas",
+    "originalIdeaDescription": "Las luciérnagas solo salen al anochecer (luz media). Hay que buscarlas girando. El teclado las mete en el frasco.",
+    "transformedIdeaTitle": "Coleccionista de Insectos Brillantes",
+    "transformedIdeaDescription": "Crea una penumbra en la habitación (Luz media). Gira lentamente buscando el destello. Cuando el indicador en pantalla brille, presiona suavemente una tecla para atrapar la luciérnaga sin lastimarla. Si hay mucha luz, se esconden.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 30 AND Light.level < 60 AND Compass.scan() THEN FireflyFound; IF Keyboard.pressed() THEN Catch()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Candado de Combinación Cromática",
+    "originalIdeaDescription": "Idea abstracta donde la 'Luz' representa colores (usando filtros). Apuntar al Norte con filtro Rojo (Luz X), luego Sur con filtro Azul (Luz Y). Teclado confirma.",
+    "transformedIdeaTitle": "El Prisma Mágico",
+    "transformedIdeaDescription": "Resuelve el puzzle de colores. Pon un papel rojo translúcido sobre el sensor y mira al Norte. El sensor leerá una intensidad específica. Luego pon uno azul y mira al Sur. Si la secuencia de intensidades y direcciones es correcta, el teclado tocará una fanfarria.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "val1 = ReadLight(North); val2 = ReadLight(South); IF Match(val1, RedPattern) AND Match(val2, BluePattern) AND Keyboard.key('Enter') THEN Unlock()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Navegación en Túnel",
+    "originalIdeaDescription": "Simulador de tren. Entrar en túnel (Luz baja) requiere encender luces (Teclado). Salir (Luz alta) requiere apagar luces y tocar bocina.",
+    "transformedIdeaTitle": "Maquinista de Tren Expreso",
+    "transformedIdeaDescription": "Conduce el tren. Mantén el rumbo en la vía (Compass). Cuando entres en un túnel (tapa el sensor), enciende rápidamente las luces del vagón tocando las teclas blancas. Al salir a la luz, toca las teclas negras para pitar y saludar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 (Tunnel): Check(Keyboard.WhiteKeys); ELSE (Daylight): Check(Keyboard.BlackKeys)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Fotógrafo de Naturaleza Virtual",
+    "originalIdeaDescription": "El usuario debe buscar el ángulo perfecto (Compass) y la iluminación perfecta (Light) para tomar una foto (Teclado).",
+    "transformedIdeaTitle": "Safari Fotográfico",
+    "transformedIdeaDescription": "Busca al animal. El sistema te dice 'Jirafa al Noroeste con mucha luz'. Gira (Compass) y acércate a una lámpara (Light Intensity). Cuando los indicadores estén en verde, presiona la tecla como disparador para obtener la mejor puntuación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetDir = 'NW'; targetLight = 90; IF Compass.heading == targetDir AND Light.level >= targetLight AND Keyboard.pressed() THEN PhotoTaken()"
+  }
+]

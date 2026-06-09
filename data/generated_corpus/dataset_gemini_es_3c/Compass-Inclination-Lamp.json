@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de navegación personal con indicador de estabilidad",
+    "originalIdeaDescription": "Este dispositivo está diseñado para ayudar a los excursionistas a mantener un rumbo constante mientras aseguran que están caminando sobre terreno nivelado. La brújula determina la dirección cardinal hacia la que se dirige el usuario, mientras que el sensor de inclinación monitorea el ángulo del terreno bajo sus pies. La lámpara actúa como un indicador visual de seguridad, cambiando de color si el usuario se desvía del rumbo norte o si la pendiente se vuelve demasiado pronunciada y peligrosa para continuar caminando.",
+    "transformedIdeaTitle": "La Búsqueda del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Eres un pirata buscando un tesoro enterrado! El mapa dice que el oro está exactamente al Norte, pero el camino es traicionero. Debes programar tu brújula mágica para que brille en verde intenso solo cuando estés mirando al Norte y manteniendo el mapa (tu dispositivo) perfectamente plano. Si inclinas el mapa o cambias de dirección, la luz se volverá roja, indicando que te estás perdiendo en la selva.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.isFlat() THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Asistente de aterrizaje para aeronaves a control remoto",
+    "originalIdeaDescription": "Un sistema de ayuda visual para pilotos de drones o aviones a escala que facilita el aterrizaje nocturno. El dispositivo utiliza la brújula para asegurar que la nariz de la aeronave esté alineada con la pista de aterrizaje designada. Simultáneamente, el sensor de inclinación verifica que el ángulo de descenso no sea demasiado pronunciado. La lámpara emite luces estroboscópicas blancas cuando la alineación y el ángulo son perfectos para un aterrizaje seguro y suave.",
+    "transformedIdeaTitle": "Simulador de Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "Tu avión ha perdido comunicación con la torre y es de noche. Debes aterrizar usando solo tus instrumentos. Programa tu tablero de control para que la luz de aterrizaje se encienda solo si estás alineado con la pista (Rumbo 0 grados) y tu nariz no está apuntando ni muy arriba ni muy abajo. ¡La seguridad de los pasajeros depende de tu código y de tu pulso firme!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.degrees < 10 AND Inclination.pitch < 5 THEN Lamp.blink('White') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Optimizador de posición para paneles solares portátiles",
+    "originalIdeaDescription": "Una herramienta técnica para maximizar la eficiencia energética en campamentos base. Utiliza la brújula para orientar el panel solar directamente hacia el sur geográfico (en el hemisferio norte) y el sensor de inclinación para ajustar el ángulo vertical del panel según la latitud actual para captar mejor los rayos solares. La lámpara aumenta su intensidad lumínica gradualmente para indicar al usuario que ha encontrado la posición de máxima eficiencia energética posible.",
+    "transformedIdeaTitle": "Cargando el Robot Solar",
+    "transformedIdeaDescription": "Tu robot explorador se ha quedado sin batería en Marte. Para recargarlo, debes orientar sus paneles solares. El sol está hacia el Sur y a una altura media. Mueve tu dispositivo hasta encontrar el 'punto dulce' donde la brújula marca Sur y la inclinación es de 45 grados. Cuando lo logres, la lámpara brillará en amarillo al máximo, indicando que la energía está fluyendo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'South' AND Inclination.angle == 45 THEN Lamp.brightness(100) ELSE Lamp.brightness(10)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Varita interactiva para control gestual de luces",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que permite al usuario controlar el color y el estado de una luz ambiental mediante gestos específicos en el aire. La brújula detecta hacia qué pared de la habitación está apuntando el usuario para seleccionar el color base, mientras que el sensor de inclinación detecta movimientos de 'muñeca' hacia arriba o abajo para encender o apagar la luz. La lámpara responde instantáneamente a estos comandos físicos creando una experiencia mágica.",
+    "transformedIdeaTitle": "Academia de Magia Elemental",
+    "transformedIdeaDescription": "¡Aprende a lanzar hechizos elementales! Cada dirección cardinal representa un elemento: Norte es Hielo (Azul), Sur es Fuego (Rojo). Pero el hechizo solo se activa si haces el movimiento correcto con tu varita: inclínala bruscamente hacia arriba para 'lanzar' el poder. Programa tu varita para reconocer la dirección y el gesto, iluminándose con el color del elemento invocado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.pitch > 60 THEN (IF Compass.heading == 'North' THEN Lamp.color('Blue') ELSE IF Compass.heading == 'South' THEN Lamp.color('Red'))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mecanismo de seguridad para caja fuerte digital",
+    "originalIdeaDescription": "Un sistema de bloqueo conceptual que no utiliza llaves ni códigos numéricos, sino la posición física del objeto. Para desbloquear el mecanismo, el usuario debe rotar el dispositivo a una coordenada de brújula secreta y específica, y simultáneamente inclinarlo en un ángulo preciso en el eje X. La lámpara permanece roja (bloqueado) y solo cambia a verde (desbloqueado) cuando ambas condiciones físicas secretas se cumplen simultáneamente con alta precisión.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Eres un experto abriendo cajas fuertes antiguas. Esta caja fuerte requiere una combinación de movimiento muy delicada. Debes girar el dial (tu cuerpo) hacia el Oeste y, con mucho cuidado, inclinar el dispositivo exactamente 30 grados a la derecha para escuchar el 'clic'. Si lo logras, la luz verde se encenderá y la puerta se abrirá. ¡Cuidado, si fallas la luz roja activará la alarma!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 270 AND Inclination.roll == 30 THEN Lamp.color('Green') ELSE Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Faro automatizado con control de haz variable",
+    "originalIdeaDescription": "Un modelo funcional de un faro costero inteligente. La brújula se utiliza para monitorear la rotación continua de la luz del faro, sabiendo siempre hacia dónde apunta el haz. El sensor de inclinación permite a un operador remoto ajustar la altura del haz de luz; si el mar está picado, el haz baja. La lámpara simula la potente luz del faro, cambiando su color a niebla (amarillo) o peligro (rojo) según la inclinación detectada.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Hay una tormenta y los barcos necesitan tu ayuda. Tú controlas el faro. Debes girar constantemente (usando la brújula para saber dónde miras) para barrer el océano. Si detectas olas gigantes (simuladas inclinando el dispositivo hacia atrás), debes cambiar la luz a rojo para advertir peligro. Si el mar está calmo (dispositivo plano), mantén la luz blanca brillante para guiar a los marineros.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP: Lamp.on(); IF Inclination.pitch > 20 THEN Lamp.color('Red') ELSE Lamp.color('White')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Herramienta de pintura con luz y mezcla de colores",
+    "originalIdeaDescription": "Un dispositivo artístico para fotografía de larga exposición o 'light painting'. El usuario mueve el dispositivo en el aire para pintar. La brújula determina el matiz (hue) del color según la orientación magnética (0-360 grados), permitiendo un arcoíris circular. La inclinación del dispositivo controla la saturación o el brillo de la lámpara, permitiendo al artista crear trazos que se desvanecen o cambian de intensidad simplemente girando la muñeca.",
+    "transformedIdeaTitle": "Pincel Mágico de Arcoíris",
+    "transformedIdeaDescription": "¡Convierte tu dispositivo en un pincel mágico! Vamos a pintar en el aire. Programa el dispositivo para que el color de la luz cambie según hacia dónde apuntes (Norte=Rojo, Este=Verde, etc.). Además, usa la inclinación para controlar el grosor del trazo: si lo inclinas hacia abajo, la luz se apaga (dejas de pintar); si está plano, pintas con luz brillante. ¡Crea obras de arte invisibles!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.color(Compass.degrees_to_color()); IF Inclination.pitch < -10 THEN Lamp.off() ELSE Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Entrenador de equilibrio para camareros y servicio",
+    "originalIdeaDescription": "Un dispositivo de entrenamiento para ayudar a las personas a mejorar su equilibrio al caminar con bandejas. La brújula rastrea si el usuario está girando demasiado rápido al caminar, lo que causaría derrames por fuerza centrífuga. El sensor de inclinación detecta si la bandeja no está perfectamente horizontal. La lámpara proporciona retroalimentación inmediata, encendiéndose en rojo si se detecta cualquier inestabilidad o giro brusco que pudiera causar un accidente.",
+    "transformedIdeaTitle": "La Carrera del Camarero Robot",
+    "transformedIdeaDescription": "Trabajas en el restaurante más elegante de la galaxia y debes llevar una bandeja con bebidas alienígenas muy inestables. Debes caminar por el salón girando suavemente (Brújula) y manteniendo la bandeja perfectamente recta (Inclinación). Si te inclinas o giras muy rápido, la lámpara se pondrá roja indicando que derramaste el jugo espacial. ¡Intenta llegar a la meta con la luz apagada!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.tilt > 5 OR Compass.rotationSpeed > HIGH THEN Lamp.color('Red') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Localizador de constelaciones y cuerpos celestes",
+    "originalIdeaDescription": "Una herramienta educativa de astronomía que guía al usuario para encontrar estrellas o planetas específicos en el cielo nocturno. Utiliza la brújula para determinar el acimut (dirección horizontal) y el sensor de inclinación para determinar la altitud (ángulo vertical) del objeto celeste. La lámpara cambia de rojo tenue a verde brillante a medida que el usuario acerca el dispositivo a las coordenadas exactas de la estrella buscada.",
+    "transformedIdeaTitle": "Cazador de Estrellas",
+    "transformedIdeaDescription": "¡Vamos a encontrar el planeta Júpiter! Los astrónomos nos dicen que está al Sureste y a 45 grados de altura en el cielo. Programa tu telescopio digital para que te guíe. La luz debe ser azul fría mientras buscas, pero debe volverse blanca brillante cuando tu brújula apunte al SE y tu inclinación sea exactamente 45 grados. ¡Ahí está el planeta!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "distance = abs(Compass.heading - TARGET_AZ) + abs(Inclination.pitch - TARGET_ALT); Lamp.brightness(100 - distance)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de actividad paranormal simulado",
+    "originalIdeaDescription": "Un juguete diseñado para juegos de rol de misterio. El dispositivo genera aleatoriamente una 'ubicación fantasma' definida por una dirección de brújula y una inclinación específica. El usuario debe escanear la habitación moviendo el dispositivo. A medida que la orientación y el ángulo del dispositivo coinciden con los valores generados aleatoriamente, la lámpara parpadea con mayor frecuencia e intensidad, simulando un contador Geiger o detector de energía espectral.",
+    "transformedIdeaTitle": "Cazafantasmas: El Espectro Invisible",
+    "transformedIdeaDescription": "Hay un fantasma escondido en esta habitación, pero es invisible. Tu sensor puede detectarlo. El fantasma está flotando en una dirección y altura específica. Camina y mueve tu sensor. Programa la lógica: si te acercas a la dirección del fantasma (Brújula) Y a su altura (Inclinación), la luz debe parpadear erráticamente. ¡Si la luz se queda fija en violeta, lo has atrapado!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF (Compass.heading == GHOST_DIR) AND (Inclination.pitch == GHOST_HGT) THEN Lamp.color('Violet') ELSE Lamp.blink('Random')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Controlador para laberinto virtual en pantalla",
+    "originalIdeaDescription": "Un periférico de entrada para un videojuego de laberinto. El sensor de inclinación controla el movimiento de una bola virtual, permitiéndole rodar en las direcciones X e Y. La brújula controla la rotación de todo el mapa del laberinto en la pantalla, añadiendo una capa de complejidad estratégica. La lámpara se ilumina con diferentes colores para indicar colisiones con paredes virtuales o la recolección de premios dentro del juego.",
+    "transformedIdeaTitle": "El Laberinto Mágico",
+    "transformedIdeaDescription": "Imagina que tienes una canica sobre una tabla. Usa la inclinación de tu dispositivo para hacer rodar la canica (luz) hacia adelante, atrás, izquierda o derecha. Pero hay un truco: para abrir las puertas mágicas del laberinto, debes girar todo tu cuerpo (Brújula) hacia el Este. Si chocas con una pared (inclinación excesiva), la luz se pondrá roja.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.x > 0 THEN moveBall(); IF Compass.heading == 'East' THEN openDoor(); IF Collision THEN Lamp.color('Red')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Asistente de alineación corporal para Yoga",
+    "originalIdeaDescription": "Un dispositivo 'wearable' que se coloca en el pecho o espalda del usuario durante la práctica de yoga. Ayuda a mantener posturas correctas verificando la orientación del cuerpo (hacia dónde mira el torso) con la brújula y la rectitud de la columna o el ángulo de la pose con el sensor de inclinación. La lámpara proporciona una retroalimentación suave de color azul cuando la postura se mantiene correctamente durante un tiempo determinado.",
+    "transformedIdeaTitle": "Maestro Zen de Yoga",
+    "transformedIdeaDescription": "Vamos a practicar la postura del 'Guerrero'. Debes mirar hacia el frente (Norte) con el pecho orgulloso y mantenerte muy quieto, sin inclinarte hacia los lados. Programa tu asistente Zen: si tu brújula marca Norte y tu inclinación lateral es cero, la luz se iluminará en un azul relajante. Si pierdes el equilibrio, la luz se apagará. ¿Cuánto tiempo puedes mantener la luz azul?",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.roll == 0 THEN Lamp.color('Blue') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de periscopio de submarino",
+    "originalIdeaDescription": "Un juguete que simula la operación de un periscopio. El usuario sostiene el dispositivo verticalmente. Al girar el cuerpo 360 grados, la brújula cambia la vista simulada. El sensor de inclinación permite mirar hacia arriba (cielo/superficie) o abajo (mar). La lámpara cambia de color para indicar el entorno: azul claro para superficie, azul oscuro para profundidad, y parpadeo rojo si se detecta un 'enemigo' en una dirección específica.",
+    "transformedIdeaTitle": "Capitán de Submarino",
+    "transformedIdeaDescription": "¡Inmersión! Estás bajo el agua. Usa tu periscopio para escanear el horizonte. Gira en círculo para buscar barcos enemigos. Si apuntas al Oeste, hay una base enemiga; programa la luz para que parpadee en rojo (¡Alerta!). Si inclinas el periscopio hacia arriba para ver el cielo, la luz debe ser blanca (Superficie). ¡Navega con cuidado!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.pitch > 45 THEN Lamp.color('White') ELSE IF Compass.heading == 'West' THEN Lamp.blink('Red') ELSE Lamp.color('Blue')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Medidor de nivelación y orientación para construcción",
+    "originalIdeaDescription": "Una herramienta utilitaria compacta para carpinteros o albañiles aficionados. Funciona como un nivel de burbuja digital pero con orientación. La inclinación verifica si una superficie está perfectamente plana (nivelada). La brújula verifica si una pared o mueble está alineado con los puntos cardinales deseados. La lámpara sirve como indicador de éxito, poniéndose verde solo cuando ambas métricas están perfectamente centradas.",
+    "transformedIdeaTitle": "El Arquitecto Perfecto",
+    "transformedIdeaDescription": "Estamos construyendo una torre y debe ser perfecta. No puede estar torcida ni mal orientada. Usa tu dispositivo como herramienta de control de calidad. Colócalo sobre la 'mesa'. Si la mesa está plana (Inclinación = 0) Y la torre mira hacia la salida del sol (Este), la luz se pondrá verde. Si está chueca, la luz será naranja. ¡Asegúrate de que la construcción sea sólida!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.isLevel() AND Compass.heading == 'East' THEN Lamp.color('Green') ELSE Lamp.color('Orange')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de alerta meteorológica personal",
+    "originalIdeaDescription": "Un dispositivo conceptual que simula una estación meteorológica. El usuario actúa como una veleta. La brújula detecta la dirección del 'viento' (hacia donde apunta el usuario). La inclinación se usa para simular la presión barométrica (inclinar hacia adelante baja presión/tormenta). La lámpara muestra el pronóstico: amarillo para sol, azul para lluvia, y parpadeo blanco para tormenta eléctrica si la presión baja drásticamente desde una dirección específica.",
+    "transformedIdeaTitle": "El Hombre del Tiempo",
+    "transformedIdeaDescription": "Eres el meteorólogo de la ciudad. Debes predecir el clima. Si el viento viene del Norte (Brújula) y la presión baja (inclinas el dispositivo hacia abajo), ¡significa que viene una tormenta de nieve! Haz que la luz parpadee en blanco. Si miras al Sur y el dispositivo está plano (buen tiempo), la luz debe ser un amarillo soleado.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Inclination.pitch < -30 THEN Lamp.blink('White') ELSE Lamp.color('Yellow')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Controlador de grúa de construcción a escala",
+    "originalIdeaDescription": "Un sistema de control remoto intuitivo para una grúa de juguete. La brújula controla la rotación de la cabina de la grúa sobre su eje vertical. El sensor de inclinación controla la elevación y descenso del gancho o del brazo principal. La lámpara actúa como luz de advertencia de seguridad, parpadeando en naranja siempre que la grúa esté en movimiento (rotando o inclinándose) y quedándose fija cuando está estática.",
+    "transformedIdeaTitle": "Operador de Grúa Gigante",
+    "transformedIdeaDescription": "Tienes el control de una grúa enorme en un rascacielos. Gira tu cuerpo para rotar la grúa (Brújula) e inclina el mando hacia adelante para bajar el gancho. Por seguridad, las normas de la obra dicen que la luz de advertencia naranja debe estar encendida siempre que la grúa se mueva. Si estás quieto, la luz se apaga. ¡Mueve la carga con seguridad!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.isChanging() OR Inclination.isChanging() THEN Lamp.blink('Orange') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Libro de cuentos interactivo con decisiones físicas",
+    "originalIdeaDescription": "Un dispositivo que acompaña la narración de historias. En puntos clave de la historia, el niño debe tomar decisiones físicas. La brújula selecciona el camino (Norte al castillo, Sur al bosque). La inclinación determina la acción (Arriba para escalar, Abajo para esconderse). La lámpara ilumina la habitación con el color correspondiente a la atmósfera de la escena elegida (ej. verde lúgubre para bosque, dorado para castillo).",
+    "transformedIdeaTitle": "Tu Propia Aventura: El Bosque Encantado",
+    "transformedIdeaDescription": "Llegas a un cruce de caminos en el cuento. El narrador pregunta: '¿Vas al Castillo del Norte o a la Cueva del Sur?'. Si giras tu dispositivo al Norte, la luz se vuelve dorada y real. Si giras al Sur, la luz se vuelve azul oscuro y misteriosa. Además, si inclinas el dispositivo hacia abajo, tu personaje se agacha, atenuando la luz para esconderse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Lamp.color('Gold') ELSE Lamp.color('DarkBlue'); IF Inclination.pitch < 0 THEN Lamp.brightness(20)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Explorador de terreno para vehículo espacial (Rover)",
+    "originalIdeaDescription": "Un simulador de telemetría para un vehículo en un planeta alienígena. La brújula indica la dirección de viaje del rover. El sensor de inclinación alerta sobre pendientes peligrosas que podrían volcar el vehículo. La lámpara funciona como un indicador de estado del sistema: verde para terreno seguro, amarillo para precaución y rojo intermitente si la inclinación supera el umbral de seguridad en cualquier dirección.",
+    "transformedIdeaTitle": "Misión a Marte: Rover Explorer",
+    "transformedIdeaDescription": "Conduces un vehículo en Marte. El terreno es muy rocoso. Mientras exploras en cualquier dirección (Brújula), debes vigilar que el vehículo no se vuelque. Programa una alarma visual: si el vehículo se inclina más de 20 grados en cualquier dirección, la luz roja debe parpadear para alertar al control de la misión. Si el terreno es plano, luz verde.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.x) > 20 OR abs(Inclination.y) > 20 THEN Lamp.blink('Red') ELSE Lamp.color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Vela digital sensible al viento",
+    "originalIdeaDescription": "Una recreación artística de una vela. La lámpara imita la llama con colores cálidos. El sensor de inclinación detecta si la vela se 'vuelca', apagando la luz. La brújula se utiliza de forma creativa para simular corrientes de aire; si se gira el dispositivo rápidamente (cambio brusco de brújula), la llama parpadea o cambia de color como si el viento generado por el movimiento la afectara.",
+    "transformedIdeaTitle": "La Vela Mágica",
+    "transformedIdeaDescription": "Tienes una vela digital que nunca se derrite. La luz debe parpadear suavemente como fuego real. Pero ten cuidado, si inclinas demasiado la vela, la 'cera' se caerá y la luz se apagará. Además, si giras muy rápido sobre ti mismo, crearás 'viento' y la llama se volverá azul y temblará. ¡Mantenla encendida y tranquila!",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.tilt > 45 THEN Lamp.off() ELSE IF Compass.rotationSpeed > FAST THEN Lamp.color('Blue') ELSE Lamp.effect('Flicker')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de efectos para DJ y pista de baile",
+    "originalIdeaDescription": "Un controlador de efectos de luz para fiestas. El usuario sostiene el dispositivo mientras baila. La brújula cambia la paleta de colores base (ej. Norte=Colores fríos, Sur=Colores cálidos). El sensor de inclinación controla la velocidad del estroboscopio o el patrón de parpadeo. La lámpara ejecuta los comandos en tiempo real, sincronizando la iluminación con el movimiento físico del DJ o bailarín.",
+    "transformedIdeaTitle": "Rey de la Pista de Baile",
+    "transformedIdeaDescription": "¡Eres el DJ de luces! Controla la fiesta con tus movimientos. Si apuntas hacia el público (Norte), las luces son neón. Si apuntas a la cabina (Sur), son pastel. Lo más divertido: ¡salta y muévete! Usa la inclinación para el ritmo: inclina rápido arriba y abajo para hacer que la luz parpadee al ritmo de la música (estroboscopio).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.color(Compass.heading); IF Inclination.shakeDetected() THEN Lamp.strobe(FAST) ELSE Lamp.on()"
+  }
+]

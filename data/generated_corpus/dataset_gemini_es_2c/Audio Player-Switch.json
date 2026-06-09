@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Reproductor de música básico con control manual",
+    "originalIdeaDescription": "Un sistema simple donde un interruptor físico controla el estado de reproducción de una pista de audio. Al activar el interruptor, la música comienza; al desactivarlo, la música se detiene inmediatamente.",
+    "transformedIdeaTitle": "DJ de la Fiesta Escolar",
+    "transformedIdeaDescription": "¡Tú eres el DJ principal de la fiesta de fin de curso! Tu tarea es controlar la música para que todos bailen. Programa el sistema para que cuando actives tu mesa de mezclas (el interruptor), empiece a sonar el último éxito musical y la fiesta comience.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('PartyMusic') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de alarma de emergencia manual",
+    "originalIdeaDescription": "Un dispositivo de seguridad diseñado para emitir un sonido de alerta fuerte y continuo cuando un operador humano activa un interruptor de emergencia en caso de peligro.",
+    "transformedIdeaTitle": "Alerta Roja en la Nave Espacial",
+    "transformedIdeaDescription": "¡Comandante, nos atacan alienígenas! Necesitamos activar la alerta roja inmediatamente. Crea un programa que haga sonar la sirena de emergencia de la nave espacial cuando pulses el interruptor de seguridad para avisar a toda la tripulación.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('SirenAlarm') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de puerta digital simple",
+    "originalIdeaDescription": "Una simulación de un timbre residencial donde al presionar y soltar (o activar) el interruptor, se reproduce un efecto de sonido de 'ding-dong' para anunciar una visita.",
+    "transformedIdeaTitle": "El Timbre de la Casa Domótica",
+    "transformedIdeaDescription": "Estás diseñando una casa inteligente. Programa el interruptor de la entrada para que funcione como un timbre moderno. Cuando un visitante lo presione, debe sonar un agradable 'ding-dong' para avisar que alguien ha llegado.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isSwitchedOn() THEN AudioPlayer.play('Doorbell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Máquina de efectos de sonido para concursos",
+    "originalIdeaDescription": "Un dispositivo utilizado en juegos de trivia que reproduce un sonido de 'respuesta correcta' o 'fanfarria' cuando el concursante presiona su interruptor asignado.",
+    "transformedIdeaTitle": "El Gran Concurso de TV",
+    "transformedIdeaDescription": "Eres el presentador de un famoso programa de televisión. Cuando un concursante acierte la pregunta del millón, debes activar el interruptor para lanzar el sonido de victoria y aplausos. ¡Haz que el momento sea emocionante!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('VictoryFanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de ambiente para casa embrujada",
+    "originalIdeaDescription": "Un sistema para atracciones de terror que reproduce sonidos espeluznantes (fantasmas, cadenas, gritos) cuando se activa un interruptor oculto por el operador.",
+    "transformedIdeaTitle": "Director de Cine de Terror",
+    "transformedIdeaDescription": "Estás filmando una película de miedo. Justo cuando el protagonista abre la puerta vieja, necesitas crear suspenso. Programa el interruptor para que, al activarlo, suene un chirrido terrorífico o un viento fantasmal.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('SpookySound') ELSE AudioPlayer.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Audioguía de museo activada manualmente",
+    "originalIdeaDescription": "Un dispositivo educativo situado junto a una exhibición que reproduce una narración explicativa sobre el objeto expuesto cuando el visitante activa el interruptor.",
+    "transformedIdeaTitle": "Curador del Museo de Historia",
+    "transformedIdeaDescription": "Los visitantes están frente al esqueleto de un Tiranosaurio Rex. Configura el sistema para que, cuando activen el interruptor de información, el dispositivo les cuente la historia de este poderoso dinosaurio.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('DinoFacts') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de arranque de motor",
+    "originalIdeaDescription": "Una aplicación lúdica que imita el sonido de un motor de coche arrancando y acelerando cuando se gira un interruptor que simula ser la llave de encendido.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Estás en la línea de salida del Gran Premio. Tu coche está listo. Programa tu volante para que, al girar el interruptor de encendido, el potente motor de tu coche de carreras ruga y estés listo para acelerar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('CarEngineStart')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transmisor de código Morse sonoro",
+    "originalIdeaDescription": "Una herramienta de comunicación donde el audio reproduce un tono ('beep') solo mientras el interruptor se mantiene en la posición de encendido, permitiendo enviar mensajes cortos.",
+    "transformedIdeaTitle": "Mensajero Secreto Espía",
+    "transformedIdeaDescription": "Eres un espía en una misión secreta. Necesitas enviar un mensaje en código Morse a tu base. Configura el interruptor para que emita un pitido corto cada vez que lo actives rápidamente. ¡No dejes que te descubran!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('BeepTone') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Máquina de ruido blanco para dormir",
+    "originalIdeaDescription": "Un dispositivo de bienestar que reproduce sonidos relajantes constantes (lluvia, ventilador, océano) cuando se activa el interruptor para ayudar a conciliar el sueño.",
+    "transformedIdeaTitle": "El Creador de Sueños",
+    "transformedIdeaDescription": "Ayuda al bebé a dormirse creando un ambiente relajante. Programa el interruptor de la cuna para que, al encenderlo, comience a sonar una suave lluvia o el sonido de las olas del mar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.loop('RainSound') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de las estatuas musicales",
+    "originalIdeaDescription": "Un controlador para el juego infantil donde la música suena mientras el interruptor está encendido y se detiene abruptamente al apagarlo, indicando que los jugadores deben congelarse.",
+    "transformedIdeaTitle": "Juez del Baile Congelado",
+    "transformedIdeaDescription": "¡Es hora de jugar a las estatuas! Tú controlas la diversión. Programa el sistema para que la música suene mientas el interruptor esté activo. En el momento que lo apagues, la música debe cortarse y todos deben quedarse inmóviles.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.resume() ELSE AudioPlayer.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Identificador de sonidos de animales",
+    "originalIdeaDescription": "Un juguete educativo donde al activar un interruptor específico asociado a una imagen, se reproduce el sonido característico del animal correspondiente.",
+    "transformedIdeaTitle": "Cuidador del Zoológico",
+    "transformedIdeaDescription": "Estamos aprendiendo sobre los animales de la selva. Crea un programa donde, al activar el interruptor etiquetado como 'León', se reproduzca un fuerte rugido para enseñar a los visitantes cómo suena el rey de la selva.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('LionRoar')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo sonoro para peatones",
+    "originalIdeaDescription": "Un sistema de accesibilidad urbana que emite un sonido intermitente específico cuando se activa el interruptor, indicando a personas con discapacidad visual que es seguro cruzar.",
+    "transformedIdeaTitle": "Ingeniero de Ciudad Segura",
+    "transformedIdeaDescription": "Diseña un cruce peatonal inclusivo. Cuando el semáforo se ponga en verde (simulado activando el interruptor), debe sonar una señal auditiva clara para ayudar a las personas ciegas a saber que pueden cruzar la calle con seguridad.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.loop('CrossingSignal') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Lanzador de pistas de acompañamiento (Backing Track)",
+    "originalIdeaDescription": "Herramienta para músicos que permite iniciar una base rítmica o instrumental pregrabada mediante un interruptor de pie o manual para tocar encima.",
+    "transformedIdeaTitle": "Estrella de Rock Solista",
+    "transformedIdeaDescription": "Vas a tocar un solo de guitarra increíble, pero necesitas una batería que te acompañe. Programa tu pedal (interruptor) para que inicie la base de batería rockera justo cuando estés listo para empezar tu concierto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('RockDrums')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de chistes automática",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que reproduce aleatoriamente una pista de audio con un chiste corto cada vez que se acciona el interruptor.",
+    "transformedIdeaTitle": "El Robot Comediante",
+    "transformedIdeaDescription": "Programa a tu robot para que sea el alma de la fiesta. Cada vez que alguien active su interruptor de 'Humor', el robot debe contar un chiste gracioso para hacer reír a tus amigos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.playRandom('JokesArray')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta eléctrica",
+    "originalIdeaDescription": "Un sistema de efectos para teatro que reproduce el sonido de un trueno fuerte instantáneo cuando se activa el interruptor en el momento preciso de la obra.",
+    "transformedIdeaTitle": "Mago del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar el clima en esta obra de teatro. Justo cuando el villano levante su varita, activa tu interruptor para que suene un trueno ensordecedor y asustes a la audiencia.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('ThunderClap')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Intercomunicador de juguete",
+    "originalIdeaDescription": "Simulación de un walkie-talkie donde se reproduce estática o una voz pregrabada simulando una transmisión entrante al encender el interruptor.",
+    "transformedIdeaTitle": "Explorador Espacial",
+    "transformedIdeaDescription": "Estás en Marte y recibes una transmisión de la Tierra. Activa el interruptor de tu comunicador para escuchar el mensaje de la base y saber cuál es tu próxima misión en el planeta rojo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('IncomingMessage')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta regresiva de lanzamiento",
+    "originalIdeaDescription": "Un sistema que inicia una pista de audio con una cuenta regresiva (10, 9, 8...) para coordinar el inicio de un evento o carrera al activar el interruptor.",
+    "transformedIdeaTitle": "Control de Misión NASA",
+    "transformedIdeaDescription": "El cohete está en la plataforma. Eres el director de lanzamiento. Cuando todos los sistemas estén listos, activa el interruptor maestro para iniciar la cuenta regresiva de audio: '10, 9, 8...' ¡y despegar hacia la luna!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('Countdown')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de mentiras de juguete",
+    "originalIdeaDescription": "Un juego de rol donde el operador activa discretamente un sonido de 'Verdad' (campana) o 'Mentira' (buzzer) según su criterio mientras interroga a alguien.",
+    "transformedIdeaTitle": "Detective de la Verdad",
+    "transformedIdeaDescription": "Estás interrogando a un sospechoso. Si crees que está mintiendo, activa discretamente el interruptor para que suene un 'BZZZT' de error. ¡Usa tu instinto para atrapar al culpable!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('WrongBuzzer')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de música mecánica digital",
+    "originalIdeaDescription": "Recreación de una caja de música antigua donde la melodía de 'nana' suena suavemente solo mientras el interruptor (simulando la cuerda) está activo.",
+    "transformedIdeaTitle": "Restaurador de Antigüedades",
+    "transformedIdeaDescription": "Has encontrado una vieja caja de música digital. Prográmala para que, al activar el mecanismo (interruptor), toque una melodía clásica suave, como si estuviera girando una bailarina en su interior.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('Lullaby') ELSE AudioPlayer.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de anuncio de bienvenida",
+    "originalIdeaDescription": "Un dispositivo para tiendas que reproduce un mensaje de bienvenida grabado ('Bienvenido a nuestra tienda') cuando el empleado activa el interruptor manualmente.",
+    "transformedIdeaTitle": "Gerente de la Tienda de Juguetes",
+    "transformedIdeaDescription": "¡Hoy es la gran inauguración de tu tienda! Quieres ser muy amable. Configura el sistema para que, cada vez que veas entrar a un cliente y presiones el interruptor, suene una voz alegre diciendo: '¡Bienvenido al paraíso de la diversión!'",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.play('WelcomeMessage')"
+  }
+]

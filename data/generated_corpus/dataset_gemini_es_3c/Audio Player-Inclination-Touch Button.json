@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de efectos de sonido DJ",
+    "originalIdeaDescription": "Un dispositivo que permite mezclar música variando la velocidad o el tono según la inclinación del dispositivo, y disparar efectos de sonido específicos (como bocinas o scratch) al presionar el botón.",
+    "transformedIdeaTitle": "El DJ Galáctico",
+    "transformedIdeaDescription": "¡Conviértete en el DJ de una fiesta espacial! Los estudiantes programarán un controlador donde al inclinar la placa hacia la derecha, la música se acelera (como un viaje warp), y al inclinarla a la izquierda, se ralentiza. El botón táctil lanzará efectos láser para animar a la multitud alienígena.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Audio.playEffect('Laser'); Speed = Map(Inclination.X, -90, 90, 0.5, 2.0); Audio.setSpeed(Speed);"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Volante interactivo para historias de audio",
+    "originalIdeaDescription": "Un sistema de narración donde el usuario simula conducir un vehículo. La inclinación dirige la historia hacia diferentes caminos (izquierda o derecha) y el botón arranca el motor o selecciona la opción.",
+    "transformedIdeaTitle": "Aventura en el Autobús Mágico",
+    "transformedIdeaDescription": "Crea una historia interactiva donde eres el conductor. El audio narra: '¿Vamos al bosque (izquierda) o a la playa (derecha)?'. Los niños deben inclinar la placa para decidir. El botón sirve como acelerador para confirmar la decisión y reproducir el sonido del motor viajando al nuevo destino.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Inclination.X < -20 THEN Audio.play('Story_Forest') ELSE IF Inclination.X > 20 THEN Audio.play('Story_Beach') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel de burbuja sonoro para construcción",
+    "originalIdeaDescription": "Una herramienta que ayuda a nivelar superficies. Si el dispositivo no está plano, emite un sonido de advertencia cuyo tono varía según el ángulo. El botón guarda la medición actual o silencia el dispositivo.",
+    "transformedIdeaTitle": "Constructor de Pirámides",
+    "transformedIdeaDescription": "Ayuda a los antiguos egipcios a colocar las piedras perfectamente rectas. Si la piedra (el dispositivo) está inclinada, el audio reproduce un sonido de 'deslizamiento' peligroso. Si está perfectamente plana (inclinación 0), y presionas el botón para 'colocarla', suena una fanfarria de éxito.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ABS(Inclination.X) > 5 OR ABS(Inclination.Y) > 5 THEN Audio.play('Sliding_Rock') ELSE IF TouchButton.isPressed() THEN Audio.play('Success_Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de vuelo con efectos de viento",
+    "originalIdeaDescription": "Un juguete que simula un avión. Al inclinar hacia arriba o abajo cambia el tono del motor simulando ascenso o descenso. El botón activa el tren de aterrizaje con un sonido mecánico.",
+    "transformedIdeaTitle": "Escuela de Aviación: Piloto de Drones",
+    "transformedIdeaDescription": "Los estudiantes programan un dron de rescate. Al inclinar hacia adelante, el dron 'baja' (el sonido del motor se hace más grave), y hacia atrás 'sube' (más agudo). El botón táctil se usa para soltar el paquete de ayuda con un sonido de paracaídas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pitch = Map(Inclination.Y, -90, 90, 0.5, 1.5); Audio.setPitch(Pitch); IF TouchButton.isPressed() THEN Audio.play('Drop_Package')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja fuerte con combinación de inclinación",
+    "originalIdeaDescription": "Un juego donde se debe encontrar el ángulo 'secreto' inclinando el dispositivo. El audio hace clics como una caja fuerte. El botón intenta abrir la cerradura en la posición actual.",
+    "transformedIdeaTitle": "El Tesoro del Pirata Barbanegra",
+    "transformedIdeaDescription": "Para abrir el cofre del tesoro, debes girar el candado (inclinar el dispositivo) hasta escuchar un 'clic' diferente. Si crees que tienes la posición correcta, presiona el botón. Si aciertas, suena dinero cayendo; si fallas, suena una alarma.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Inclination.X == SecretAngle THEN Audio.play('Gold_Coins') ELSE Audio.play('Alarm') } ELSE Audio.play('Click')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento musical tipo Theremin",
+    "originalIdeaDescription": "Un instrumento donde el tono de la nota musical cambia continuamente según la inclinación del eje Y, y el volumen según el eje X. El botón activa o desactiva el sonido.",
+    "transformedIdeaTitle": "El Violín Fantasma",
+    "transformedIdeaDescription": "Crea un instrumento invisible que suena como un violín encantado. Los estudiantes deben mapear la inclinación de su mano para hacer notas más agudas o graves. El botón actúa como el arco: solo suena si se mantiene presionado el botón táctil.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE TouchButton.isPressed() { Note = Map(Inclination.X, -90, 90, 200, 1000); Audio.playTone(Note) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador personal de sentadillas",
+    "originalIdeaDescription": "Dispositivo que se adhiere al cuerpo y cuenta las repeticiones de ejercicio basándose en el cambio de inclinación vertical. El botón reinicia el contador y el audio dice los números.",
+    "transformedIdeaTitle": "Entrenador de Robots Atletas",
+    "transformedIdeaDescription": "Diseña un sistema para entrenar robots para las Olimpiadas. El dispositivo detecta cuando el estudiante hace una sentadilla completa (cambio de inclinación vertical) y el audio cuenta '¡Uno!', '¡Dos!'. El botón sirve para iniciar la sesión de entrenamiento con un silbato.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN Count = 0; IF Inclination.Y_Change > Threshold THEN { Count = Count + 1; Audio.playNumber(Count) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de equilibrio de bandeja",
+    "originalIdeaDescription": "Simula llevar una bandeja con objetos frágiles. Si la inclinación supera un umbral, suena un estruendo de platos rotos. El botón sirve para 'servir' la mesa y ganar puntos.",
+    "transformedIdeaTitle": "El Camarero Torpe",
+    "transformedIdeaDescription": "Eres un camarero en un restaurante de lujo. Debes mantener el dispositivo perfectamente plano mientras caminas. Si lo inclinas demasiado, ¡CRASH!, suenan platos rotos y pierdes. Debes llegar a la meta y presionar el botón para entregar la comida a salvo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ABS(Inclination.X) > 15 OR ABS(Inclination.Y) > 15 THEN Audio.play('Crash_Sound'); IF TouchButton.isPressed() THEN Audio.play('Bell_Ding')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Explorador de sonido direccional",
+    "originalIdeaDescription": "Al apuntar (inclinar) el dispositivo en diferentes direcciones como una brújula o linterna, se reproducen diferentes pistas de audio ambiental. El botón captura el sonido.",
+    "transformedIdeaTitle": "Safari de Sonidos",
+    "transformedIdeaDescription": "Convierte tu clase en una selva invisible. Si inclinas el dispositivo hacia la izquierda, escuchas un río; hacia adelante, leones; hacia la derecha, pájaros. Los estudiantes deben encontrar dónde se esconde el león guiándose por el sonido y presionar el botón para 'tomar una foto' (sonido de cámara).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -30 THEN Audio.play('River') ELSE IF Inclination.X > 30 THEN Audio.play('Birds') ELSE Audio.play('Lion'); IF TouchButton.isPressed() THEN Audio.play('Camera_Shutter')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita mágica con hechizos de audio",
+    "originalIdeaDescription": "Detecta un gesto específico (como un movimiento rápido de inclinación hacia abajo) mientras se mantiene presionado el botón para lanzar un 'hechizo' sonoro.",
+    "transformedIdeaTitle": "Academia de Magia: Clase de Encantamientos",
+    "transformedIdeaDescription": "Los aprendices de mago deben programar su varita. Para lanzar el hechizo 'Leviosa', deben mantener presionado el botón mágico y hacer un movimiento suave hacia arriba (inclinación positiva). Si lo hacen bien, suena un tintineo mágico; si no, una explosión cómica.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() AND Inclination.Y > 45 THEN Audio.play('Magic_Spell') ELSE IF TouchButton.isPressed() THEN Audio.play('Fizzle')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de pesca",
+    "originalIdeaDescription": "Usa el acelerómetro/inclinación para detectar el movimiento de lanzar la caña hacia atrás y adelante. El botón se usa para recoger el sedal con un sonido de carrete.",
+    "transformedIdeaTitle": "Pesca Deportiva Digital",
+    "transformedIdeaDescription": "¡Vamos de pesca sin mojarnos! Inclina el dispositivo hacia atrás rápidamente para lanzar el anzuelo (sonido 'woosh' y 'splash'). Espera... cuando escuches un sonido de burbujas aleatorio, ¡presiona el botón rápido para recoger el pez con sonido de carrete!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y < -60 THEN Audio.play('Cast_Sound'); WAIT_RANDOM; Audio.play('Bite_Alert'); IF TouchButton.isPressed() THEN Audio.play('Reel_In')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de idioma o respuesta",
+    "originalIdeaDescription": "Inclinar el dispositivo selecciona entre opciones pregrabadas (ej. Sí/No o Inglés/Español), el audio anuncia la selección y el botón confirma.",
+    "transformedIdeaTitle": "El Robot Traductor Universal",
+    "transformedIdeaDescription": "Construye un comunicador para hablar con alienígenas. Inclina a la izquierda para seleccionar 'Saludos' (audio dice 'Hola'), inclina a la derecha para 'Despedida' (audio dice 'Adiós'). Presiona el botón para enviar el mensaje intergaláctico.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X < -20 THEN Audio.play('Hola_Preview'); IF TouchButton.isPressed() THEN Audio.play('Send_Message')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de la bomba de tiempo sensible al movimiento",
+    "originalIdeaDescription": "El usuario debe pasar el dispositivo a otro sin inclinarlo demasiado. Un temporizador de audio suena (tic-tac). El botón se usa para 'desactivar' la bomba antes de pasarla.",
+    "transformedIdeaTitle": "Escuadrón de Desactivación",
+    "transformedIdeaDescription": "Un juego de 'papa caliente' de alta tensión. El dispositivo hace tic-tac. Debes mantenerlo muy quieto (sin inclinar). Para pasar el turno, presiona el botón para reiniciar el temporizador y pásalo con cuidado a tu compañero. Si se inclina mucho, ¡BOOM!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE GameActive: Audio.play('TickTock'); IF ABS(Inclination.Magnitude) > SafeLimit THEN Audio.play('Explosion'); IF TouchButton.isPressed() THEN ResetTimer()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de ingredientes de cocina",
+    "originalIdeaDescription": "Simula verter ingredientes inclinando el dispositivo y mezclarlos con el botón, con sonidos de líquidos y batidora.",
+    "transformedIdeaTitle": "Chef de Cocina Virtual",
+    "transformedIdeaDescription": "¡Hora de cocinar! Inclina el dispositivo para verter la masa de panqueques en la sartén (sonido de líquido cayendo). Luego, mantén presionado el botón para encender la batidora (sonido de motor). ¡Cuidado no inclines demasiado o se derramará!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 45 THEN Audio.play('Pouring'); IF TouchButton.isPressed() THEN Audio.play('Mixer_Sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Control de vehículo lunar",
+    "originalIdeaDescription": "Inclinación controla la dirección de un rover imaginario. El audio da feedback de terreno (rocas, arena). El botón activa el modo turbo.",
+    "transformedIdeaTitle": "Exploración Lunar Rover",
+    "transformedIdeaDescription": "Maneja un rover en la Luna. La inclinación controla la dirección. El reto: el audio cambia según el terreno (grava ruidosa o polvo suave). Si escuchas que estás atascado en el barro espacial, mantén el botón presionado para activar los propulsores turbo y salir.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Terrain == 'Mud' AND TouchButton.isPressed() THEN Audio.play('Boost') ELSE IF Inclination.X != 0 THEN Audio.play('Driving_Sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de laberinto invisible",
+    "originalIdeaDescription": "El usuario navega un laberinto imaginario inclinando el dispositivo. El audio indica si choca contra una pared (izquierda/derecha). El botón pide una pista.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Debes escapar guiando una bola virtual inclinando la placa. Si inclinas y escuchas un 'GOLPE', chocaste con una pared. Si escuchas viento, vas bien. El botón es tu sonar: púlsalo para escuchar qué tan lejos está la salida.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X > Wall_Limit THEN Audio.play('Wall_Hit'); IF TouchButton.isPressed() THEN Audio.play('Ping_Distance')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de patineta/skate",
+    "originalIdeaDescription": "El dispositivo actúa como una patineta de dedo. Inclinar para girar (sonido de ruedas), botón para hacer trucos (sonido de salto/ollie).",
+    "transformedIdeaTitle": "Campeonato de Finger-Skate",
+    "transformedIdeaDescription": "Usa la placa como una patineta. Inclínala para simular que patinas por la rampa (sonido de ruedas rodando). ¡Llega el momento del truco! Presiona el botón justo cuando inclines hacia arriba para hacer un 'Ollie' perfecto con sonido de aplausos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X != 0 THEN Audio.play('Rolling'); IF TouchButton.isPressed() AND Inclination.Y > 30 THEN Audio.play('Trick_Success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Director de orquesta",
+    "originalIdeaDescription": "El dispositivo funciona como una batuta. La intensidad del movimiento/inclinación controla el volumen de la música clásica. El botón inicia o detiene la pieza.",
+    "transformedIdeaTitle": "El Maestro de la Música",
+    "transformedIdeaDescription": "Dirige a la orquesta filarmónica. Presiona el botón para empezar. Si mantienes la batuta (dispositivo) baja, la música suena suave (piano). Si levantas la batuta inclinándola hacia arriba, la orquesta toca con fuerza (forte). ¡Controla la dinámica!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.wasPressed() THEN TogglePlay(); Volume = Map(Inclination.Y, 0, 90, 20, 100); Audio.setVolume(Volume)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de mentiras de juguete",
+    "originalIdeaDescription": "El 'interrogado' sostiene el dispositivo. Si su mano tiembla (cambios rápidos en inclinación), suena una alarma. El botón lo controla el 'interrogador' para resetear.",
+    "transformedIdeaTitle": "Detector de Nervios Espía",
+    "transformedIdeaDescription": "Un juego para espías. Un estudiante sostiene el dispositivo e intenta responder preguntas sin ponerse nervioso. Si su mano tiembla (la inclinación varía rápido), el dispositivo delata su nerviosismo con una alarma. Otro estudiante usa el botón para reiniciar el test.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stability = CalculateStability(Inclination); IF Stability < Threshold THEN Audio.play('Alarm'); IF TouchButton.isPressed() THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Tamagotchi/Mascota virtual física",
+    "originalIdeaDescription": "Una mascota que reacciona al movimiento. Si la meces (inclinación suave) ronronea. Si la agitas fuerte se queja. El botón es para darle comida.",
+    "transformedIdeaTitle": "Huevo de Dragón Virtual",
+    "transformedIdeaDescription": "Cuidar un huevo de dragón es difícil. Debes mecerlo suavemente (inclinación lenta de lado a lado) para que duerma y ronronee. Si lo inclinas brusco, llorará. Presiona el botón para alimentarlo cuando tenga hambre (sonido de comer).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF SineWaveMotion(Inclination) THEN Audio.play('Purr') ELSE IF Shaking(Inclination) THEN Audio.play('Cry'); IF TouchButton.isPressed() THEN Audio.play('Eat')"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin Controlado por Gestos",
+    "originalIdeaDescription": "Un instrumento digital que cambia el tono de la nota musical basándose en el ángulo de inclinación del eje X, mientras que la intensidad o el color de la luz cambia según la inclinación del eje Y, imitando un Theremin sin contacto físico.",
+    "transformedIdeaTitle": "El Violín Mágico Invisible",
+    "transformedIdeaDescription": "¡Conviértete en un virtuoso de la música sin tocar un instrumento! Mueve tu mano en el aire como si sostuvieras un arco mágico. Si inclinas hacia arriba, la nota sube y tu violín brilla en azul; hacia abajo, la nota baja y brilla en rojo. ¿Puedes tocar una melodía perfecta?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 20 THEN Play(Note_C5), Lamp.color(Blue) ELSE IF Inclination.X < -20 THEN Play(Note_C3), Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivel de Burbuja con Audio",
+    "originalIdeaDescription": "Un dispositivo utilitario que ayuda a encontrar el nivel horizontal perfecto. Reproduce un tono continuo que se vuelve más agudo y una luz que pasa de rojo a verde a medida que el dispositivo se acerca a la posición de cero grados de inclinación.",
+    "transformedIdeaTitle": "El Constructor de Pirámides",
+    "transformedIdeaDescription": "Eres el arquitecto principal del Faraón. Debes asegurarte de que los bloques de la pirámide estén perfectamente rectos. Si el bloque está torcido, suena una alarma grave y luz roja. Si logras el equilibrio perfecto, escucharás una fanfarria triunfal y verás luz verde.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X == 0 THEN Lamp.color(Green), Play(Victory_Chord) ELSE Lamp.color(Red), Play(Low_Buzz)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Volante de Coche de Carreras",
+    "originalIdeaDescription": "Un sistema de control para juegos donde inclinar el dispositivo a la izquierda o derecha activa luces direccionales (intermitentes) y sonidos de motor que cambian de tono simulando la aceleración en curvas.",
+    "transformedIdeaTitle": "Gran Premio Galáctico",
+    "transformedIdeaDescription": "Pilota tu nave espacial a través de un campo de asteroides. Gira el dispositivo a la izquierda para esquivar y activar el propulsor izquierdo (luz amarilla + sonido agudo), o a la derecha para el propulsor derecho. ¡Mantén la nave estable para la máxima velocidad!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -30 THEN Lamp.blink(Yellow), Play(High_Engine) ELSE IF Inclination.Y > 30 THEN Lamp.blink(Purple), Play(High_Engine)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Especiales",
+    "originalIdeaDescription": "Un juguete interactivo que detecta movimientos bruscos o inclinaciones específicas para 'lanzar hechizos', produciendo combinaciones predefinidas de colores brillantes y arpegios musicales mágicos.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Encantamientos",
+    "transformedIdeaDescription": "Aprende el hechizo 'Lumos Musicalis'. Apunta tu varita hacia arriba para cargar energía. Cuando hagas un movimiento rápido hacia adelante (cambio de inclinación), la varita destellará en blanco brillante y soltará un sonido mágico centelleante.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 45 AND Inclination.X_Speed > Threshold THEN Lamp.on(White), Play(Arpeggio)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Postura para Yoga",
+    "originalIdeaDescription": "Un dispositivo wearable que se coloca en la espalda o brazo. Si el usuario mantiene la inclinación correcta para una pose específica durante 5 segundos, emite un sonido relajante y una luz suave; si falla, avisa con un tono discordante.",
+    "transformedIdeaTitle": "El Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Practica tu postura de 'El Árbol'. Coloca el sensor en tu brazo extendido. Si logras mantenerlo horizontal y quieto, el sensor brillará con una luz turquesa y tocará una melodía de flauta suave. ¡Si te tambaleas, la luz se vuelve naranja!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) < 5 THEN Lamp.color(Cyan), Play(Flute_Note) ELSE Lamp.color(Orange)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación de Inclinación",
+    "originalIdeaDescription": "Un juego de rompecabezas donde el usuario debe rotar el dispositivo a ángulos secretos específicos (ej. 30°, -15°, 90°) en secuencia. Cada acierto enciende una luz y toca una nota de confirmación hasta desbloquearla.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Estás frente a la bóveda más segura del mundo. Gira el dial (tu dispositivo) lentamente. Debes encontrar el 'punto dulce' secreto. Cuando la luz se ponga verde y escuches un 'Click' (nota C), detente y busca el siguiente número.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X == Target_Angle THEN Lamp.color(Green), Play(Click_Sound), Next_Level()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca Interactiva",
+    "originalIdeaDescription": "Utiliza el acelerómetro para detectar el movimiento de lanzar la caña (inclinación rápida hacia adelante) y luego esperar en posición horizontal. Cuando 'pican', se enciende la luz y el usuario debe inclinar hacia atrás para reproducir sonidos de carrete.",
+    "transformedIdeaTitle": "Torneo de Pesca en Alta Mar",
+    "transformedIdeaDescription": "¡Lanza tu anzuelo! Haz un movimiento rápido hacia adelante con el dispositivo. Ahora espera... ¡La luz parpadea! ¡Un pez mordió! Tira hacia atrás rápidamente (inclina hacia arriba) para sacarlo mientras suena el carrete recogiendo línea.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Fishing_Mode AND Inclination.Y > 60 THEN Lamp.blink(Blue), Play(Reel_Sound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto de Canicas",
+    "originalIdeaDescription": "Un juego clásico donde la inclinación del dispositivo controla la dirección de una 'canica' virtual. Al chocar con paredes virtuales (límites de inclinación), suena un golpe y la luz parpadea en rojo.",
+    "transformedIdeaTitle": "Escape del Laberinto de Cristal",
+    "transformedIdeaDescription": "Guía la bola de energía a través de un laberinto inestable inclinando el tablero. Ten cuidado, si inclinas demasiado, la bola golpeará el cristal (sonido de choque y luz roja). Mantén el equilibrio suave para llegar a la meta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > 20 THEN Play(Clink_Sound), Lamp.flash(Red) ELSE IF Inclination.X < -20 THEN Play(Clink_Sound), Lamp.flash(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de Color y Sonido",
+    "originalIdeaDescription": "Una herramienta artística donde el eje X controla el matiz del color de la lámpara (ciclo RGB) y el eje Y controla la escala musical, permitiendo 'pintar' con luz y sonido simultáneamente.",
+    "transformedIdeaTitle": "Pincel Sinestésico",
+    "transformedIdeaDescription": "Crea una obra de arte viva. Inclina a la derecha para colores cálidos y notas agudas; a la izquierda para colores fríos y notas graves. ¡Mezcla tus movimientos para componer una sinfonía de luz y color!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setHue(map(Inclination.X)), Play(map(Inclination.Y, Scale))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos para Puertas",
+    "originalIdeaDescription": "El dispositivo se cuelga en el pomo de una puerta. Si la inclinación cambia (la puerta se abre), dispara una sirena ruidosa y luces estroboscópicas rojas y azules.",
+    "transformedIdeaTitle": "Trampa para Espías",
+    "transformedIdeaDescription": "Protege tu base secreta. Coloca el sensor en la manija de tu puerta. Si un espía (o tu hermano pequeño) intenta entrar y mueve la manija, ¡la alarma policial sonará y las luces parpadearán para ahuyentarlo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.Change) > Sensitivity THEN Loop(Play(Siren), Lamp.alternate(Red, Blue))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Espada Láser",
+    "originalIdeaDescription": "Genera un zumbido constante que cambia de tono según la velocidad de cambio de inclinación (swing). La luz permanece encendida del color elegido, parpadeando al detectar un impacto (cambio brusco de dirección).",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Jedi",
+    "transformedIdeaDescription": "Construye tu propio sable de luz. Al moverlo suavemente, escucharás el zumbido característico y verás el brillo constante. ¡Haz un movimiento de corte rápido para escuchar el sonido de choque y ver un destello blanco!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Speed > High THEN Play(Clash), Lamp.flash(White) ELSE Play(Hum), Lamp.on(Green)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Asistente de Aterrizaje de Avión",
+    "originalIdeaDescription": "Un juego donde el usuario debe mantener el dispositivo plano para aterrizar. Si se inclina mucho (morro abajo/arriba), suena una alarma de proximidad y la luz se pone roja. El objetivo es mantenerlo verde hasta el final.",
+    "transformedIdeaTitle": "Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "¡Mayday! Los pilotos automáticos fallaron. Tú tienes el control. Mantén las alas niveladas (eje X) y el morro en el ángulo correcto (eje Y). Si la luz es verde, vas bien. Si se pone roja y suena la alarma, ¡corrige el rumbo antes de tocar tierra!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X) < 5 AND abs(Inclination.Y) < 5 THEN Lamp.color(Green), Play(Success) ELSE Lamp.color(Red), Play(Alarm)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Baton de Director de Orquesta",
+    "originalIdeaDescription": "Usa el dispositivo como una batuta. La inclinación vertical controla el volumen/intensidad de la luz, y los movimientos rítmicos marcan el tempo de las notas que se reproducen automáticamente.",
+    "transformedIdeaTitle": "Director de la Filarmónica",
+    "transformedIdeaDescription": "¡La orquesta espera tu señal! Levanta tu batuta para que la música suene fuerte y la luz brille intensamente. Bájala para un susurro suave y luz tenue. Marca el ritmo con golpes firmes para guiar a los músicos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Volume = map(Inclination.Y); IF Rhythm_Detected THEN Play(Next_Note_In_Song)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Emocional",
+    "originalIdeaDescription": "Un 'huevo' digital que reacciona a cómo se sostiene. Si está boca abajo, llora (notas tristes, luz azul). Si se mece suavemente, ronronea (notas graves, luz rosa).",
+    "transformedIdeaTitle": "Cuidando al Huevo de Dragón",
+    "transformedIdeaDescription": "Acabas de encontrar un huevo de dragón. Es muy sensible. No lo pongas boca abajo o se mareará (luz verde + sonido enfermo). Mécelo suavemente de lado a lado para que esté feliz (luz cálida + ronroneo).",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 150 THEN Play(Sick_Sound), Lamp.color(Green) ELSE IF Swinging THEN Play(Purr), Lamp.color(Orange)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Motocicleta",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo como un manillar. Inclinar para girar activa luces de señalización. Girar el dispositivo hacia atrás (eje Y) simula acelerar el motor con sonido ascendente.",
+    "transformedIdeaTitle": "Moto GP: Vuelta Rápida",
+    "transformedIdeaDescription": "Agarra el manillar. Para acelerar, gira tus muñecas hacia atrás (inclina el dispositivo) y escucha cómo ruge el motor mientras la luz se pone blanca intensa. Inclina a los lados para tomar las curvas peligrosas sin salirte de la pista.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y_Rotation > 20 THEN Play(Rev_Engine), Lamp.brightness(100) ELSE Lamp.brightness(50)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente",
+    "originalIdeaDescription": "El dispositivo detecta si se está pasando (cambio de inclinación/movimiento). Reproduce música rápida y luces parpadeantes. Aleatoriamente se detiene y quien lo tenga inclinado pierde.",
+    "transformedIdeaTitle": "La Bomba de Tiempo",
+    "transformedIdeaDescription": "¡Pásalo rápido! El dispositivo es una bomba de tiempo musical. Mientras la música suene y las luces giren, estás a salvo. Pásaselo a un amigo con cuidado. ¡Si la música para y lo tienes en la mano, BOOM (sonido de explosión y luz roja)!",
+    "minAge": 7,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Timer > 0 DO Play(Music), Lamp.cycle() END; Play(Explosion), Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Casero",
+    "originalIdeaDescription": "El dispositivo monitorea la estabilidad. Si detecta vibraciones o cambios de inclinación que superan un umbral de seguridad, activa una alarma sonora y visual.",
+    "transformedIdeaTitle": "Sismógrafo de Alerta Temprana",
+    "transformedIdeaDescription": "Construye una estación científica. Deja el dispositivo quieto en una mesa. Si alguien golpea la mesa o el suelo tiembla, el sensor detectará el movimiento, encenderá una luz roja de peligro y hará sonar la sirena de evacuación.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.Current - Inclination.Previous) > Limit THEN Lamp.flash(Red), Play(Siren)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Libro de Cuentos Interactivo",
+    "originalIdeaDescription": "Al inclinar el dispositivo como si se pasara la página de un libro, se activan efectos de sonido y ambientes de luz correspondientes a la siguiente escena de una historia narrada.",
+    "transformedIdeaTitle": "El Libro de los Sonidos Perdidos",
+    "transformedIdeaDescription": "Narra tu propia historia. Cuando digas 'Y entonces subieron la montaña...', inclina el dispositivo hacia arriba para que suene viento y la luz sea blanca. Cuando digas 'Y bajaron a la cueva...', inclina hacia abajo para sonidos oscuros y luz tenue.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 30 THEN Lamp.color(White), Play(Wind) ELSE IF Inclination.Y < -30 THEN Lamp.dim(), Play(Cave_Echo)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Dispositivo montado en la pierna. Detecta cuando el fémur está paralelo al suelo (90 grados). Emite un sonido de 'ding' y luz verde para contar una repetición válida.",
+    "transformedIdeaTitle": "El Robot Atleta",
+    "transformedIdeaDescription": "¡Ponte en forma! Pega el sensor a tu muslo. Haz una sentadilla. Tienes que bajar hasta que el sensor esté horizontal. Solo entonces escucharás el 'Ding' de victoria y verás la luz verde. ¿Cuántas puedes hacer en un minuto?",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X approx 0 (Horizontal) AND Previous_Pos == Standing THEN Count++, Play(Ding), Lamp.pulse(Green)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo de Dragón",
+    "originalIdeaDescription": "El usuario abre los brazos sosteniendo el dispositivo. Aletear (cambios rítmicos en inclinación Z) produce sonidos de alas. Inclinar el cuerpo gira al dragón (luz cambia de color según el bioma sobre el que vuela).",
+    "transformedIdeaTitle": "Entrenador de Dragones",
+    "transformedIdeaDescription": "Extiende tus brazos, eres un dragón. Mueve tus 'alas' arriba y abajo para ganar altura (sonido de aleteo). Inclínate hacia adelante para caer en picada escupiendo fuego (luz roja parpadeante + sonido de fuego).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < -45 THEN Lamp.flicker(Red), Play(Fire) ELSE IF Wing_Flap THEN Play(Flap_Sound)"
+  }
+]

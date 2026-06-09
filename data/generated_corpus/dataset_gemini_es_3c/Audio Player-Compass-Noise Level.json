@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de navegación para exploradores silenciosos",
+    "originalIdeaDescription": "Un dispositivo que ayuda a los usuarios a navegar en la oscuridad. El usuario gira buscando el norte; cuando está alineado correctamente, el audio emite un zumbido bajo. Sin embargo, si el usuario hace demasiado ruido, el sistema se apaga para evitar ser detectado por enemigos imaginarios.",
+    "transformedIdeaTitle": "Misión: El Ninja Invisible",
+    "transformedIdeaDescription": "¡Eres un ninja en una misión secreta! Debes encontrar el camino hacia el Norte Sagrado. Gira tu dispositivo hasta escuchar el sonido guía. ¡Pero cuidado! Si haces algún ruido fuerte (aplaudí, pasos), los guardias te oirán y la misión fallará (sonido de alarma).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == North THEN Audio.play('guide_tone'); IF Noise.level > 50 THEN Audio.play('alarm')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja fuerte de combinación direccional y sonora",
+    "originalIdeaDescription": "Una caja fuerte virtual que solo se abre si el usuario apunta el dispositivo hacia una dirección específica (por ejemplo, Este) y produce un sonido fuerte (como un aplauso) simultáneamente para activar el mecanismo de desbloqueo.",
+    "transformedIdeaTitle": "La Bóveda del Tesoro Pirata",
+    "transformedIdeaDescription": "El Capitán Barbanegra escondió su tesoro usando magia. Para abrir el cofre, debes apuntar tu brújula exactamente al Este y gritar '¡Ábrete Sésamo!'. Si la dirección y el volumen de voz son correctos, escucharás el sonido de monedas de oro cayendo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading > 80 AND Compass.heading < 100 AND Noise.level > 80 THEN Audio.play('coins_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Herramienta de detección de actividad paranormal simulada",
+    "originalIdeaDescription": "El dispositivo actúa como un escáner de fantasmas. Al apuntar a diferentes direcciones, el sonido de estática cambia. Si se detecta un ruido ambiental fuerte, el dispositivo asume que hay un fantasma cerca y reproduce un sonido de captura.",
+    "transformedIdeaTitle": "Cazafantasmas: Escáner Espectral",
+    "transformedIdeaDescription": "Convierte tu habitación en una mansión embrujada. Gira lentamente para escanear el área con tu radar espectral (sonido de estática). Si alguien grita o hace un ruido fuerte cerca de ti mientras apuntas al Oeste, ¡activarás la trampa de protones para atrapar al fantasma!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.volume = Compass.heading / 3; IF Noise.level > 70 THEN Audio.play('trap_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de orquesta basado en orientación",
+    "originalIdeaDescription": "El usuario actúa como director de orquesta. Apuntar al Norte activa los violines, al Sur los tambores, etc. El volumen de la música depende de qué tan fuerte el usuario tararea o canta hacia el dispositivo.",
+    "transformedIdeaTitle": "El Maestro de la Sinfonía",
+    "transformedIdeaDescription": "Dirige tu propia orquesta digital. Gira hacia el Norte para activar las cuerdas o al Sur para la percusión. Controla la intensidad de la música con tu voz: canta suave para un pianissimo o grita para un fortissimo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == North THEN Audio.track('violins'); Audio.volume = Noise.level"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de ecolocalización de murciélagos",
+    "originalIdeaDescription": "Una aplicación educativa que enseña cómo ven los murciélagos. El usuario debe hacer un sonido de 'clic' (ruido corto). Dependiendo de hacia dónde apunte la brújula, el dispositivo devuelve un eco de audio diferente indicando 'obstáculos' virtuales.",
+    "transformedIdeaTitle": "Soy un Murciélago",
+    "transformedIdeaDescription": "Navega en la oscuridad total usando tus oídos. Aplaude fuerte para enviar una onda de sonido. Si estás mirando hacia el 'muro' (Norte), escucharás un rebote rápido. Si miras al 'espacio abierto' (Sur), el sonido será lejano. ¡Encuentra la salida!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level > 60 THEN { IF Compass.heading < 45 THEN Audio.play('close_echo') ELSE Audio.play('far_echo') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Radio de espionaje de frecuencia secreta",
+    "originalIdeaDescription": "El usuario debe sintonizar una frecuencia secreta girando el dispositivo como un dial. Cuando encuentra la dirección correcta, el ruido blanco desaparece. Para descifrar el mensaje, debe mantenerse en absoluto silencio.",
+    "transformedIdeaTitle": "Agente Secreto: Decodificador",
+    "transformedIdeaDescription": "Intercepta comunicaciones enemigas. Gira tu dispositivo hasta que la estática desaparezca y encuentres la señal clara. Pero cuidado, el mensaje es ultra-sensible: si respiras demasiado fuerte o hablas, la señal se perderá y volverá la estática.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 270 AND Noise.level < 10 THEN Audio.play('secret_message') ELSE Audio.play('static')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de meditación direccional",
+    "originalIdeaDescription": "Fomenta la calma. El usuario debe mirar hacia el Este (salida del sol) para iniciar una pista de audio relajante. La pista solo se reproduce si el nivel de ruido ambiental se mantiene por debajo de un umbral mínimo.",
+    "transformedIdeaTitle": "El Templo Zen",
+    "transformedIdeaDescription": "Encuentra tu paz interior construyendo un templo virtual. Mira hacia el amanecer (Este) para comenzar la meditación. Debes mantener el silencio total en la clase; si alguien habla, la música relajante se detendrá y tendrás que empezar de nuevo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == East AND Noise.level < 20 THEN Audio.play('meditation_music') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Rastreador de animales salvajes virtuales",
+    "originalIdeaDescription": "Un juego donde el usuario busca animales invisibles. Girar cambia el sonido ambiental (bosque, río). Cuando se escucha un animal, el usuario debe hacer el sonido del animal (ruido) para 'llamarlo' y registrarlo.",
+    "transformedIdeaTitle": "Safari en el Aula",
+    "transformedIdeaDescription": "Explora la selva girando tu dispositivo. Cuando escuches el rugido de un león en la dirección Oeste, ¡ruge tú también para comunicarte con él! Si tu rugido es lo suficientemente fuerte, el león te responderá y ganarás puntos.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == West THEN Audio.play('lion_growl'); IF Noise.level > 60 THEN Audio.play('success_fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de tráfico aéreo simulado",
+    "originalIdeaDescription": "El usuario gestiona pistas de aterrizaje. Debe mirar hacia una dirección específica donde se aproxima un avión (audio de motor). Debe soplar fuerte (ruido de viento) hacia el sensor para 'despejar la niebla' y permitir el aterrizaje.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje Forzoso",
+    "transformedIdeaDescription": "¡Emergencia! Un avión se aproxima desde el Sur entre la niebla. Gira rápidamente hacia el Sur para localizarlo por el sonido de sus motores. Luego, sopla fuerte sobre el sensor para despejar la pista y permitir que aterrice seguro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 180 THEN Audio.play('plane_engine'); IF Noise.level > 75 THEN Audio.play('landing_success')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita mágica de lanzamiento de hechizos",
+    "originalIdeaDescription": "Para lanzar un hechizo, el usuario debe realizar una secuencia: mirar al Norte, luego al Sur, y finalmente gritar la palabra mágica. El audio confirma el éxito con un efecto de sonido mágico.",
+    "transformedIdeaTitle": "Escuela de Magia: Duelo de Hechiceros",
+    "transformedIdeaDescription": "Aprende el hechizo 'Sonorus'. Primero, apunta tu varita al Norte para cargar energía, luego gira rápidamente al Sur para apuntar a tu objetivo y grita '¡Abracadabra!'. Si lo haces en orden, lanzarás un rayo mágico sonoro.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == North THEN state=1; IF state==1 AND Compass.heading == South AND Noise.level > 60 THEN Audio.play('spell_cast')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de alarma perimetral para campamentos",
+    "originalIdeaDescription": "El dispositivo se coloca en una posición fija mirando al Norte. Si se detecta un cambio en la dirección (alguien lo mueve) o un ruido fuerte (pasos cercanos), se dispara una sirena de audio.",
+    "transformedIdeaTitle": "Guardián del Fuerte",
+    "transformedIdeaDescription": "Protege tu base secreta. Configura el dispositivo mirando al Norte y déjalo quieto. Programa la trampa: si un intruso mueve el dispositivo (cambia la brújula) o hace ruido al acercarse, ¡la sirena de policía sonará a todo volumen!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading != InitialHeading OR Noise.level > Threshold THEN Audio.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Navegación de barco en la niebla",
+    "originalIdeaDescription": "Simula un barco en alta mar. Si el usuario navega hacia el Norte, el mar está en calma. Si se desvía, el sonido del mar se vuelve agitado. Si hay mucho ruido ambiental (simulando tormenta), debe tocar la bocina del barco.",
+    "transformedIdeaTitle": "Capitán de Alta Mar",
+    "transformedIdeaDescription": "Navega tu barco a través de una tormenta ciega. Mantén el rumbo Norte para escuchar el mar tranquilo. Si tus compañeros de clase hacen ruido (la tormenta arrecia), debes mantener el rumbo firme para no naufragar. ¡No te desvíes o chocarás con las rocas!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 50 THEN Audio.play('storm_sounds'); IF Compass.heading != 0 THEN Audio.play('crash_warning')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Brújula parlante para invidentes",
+    "originalIdeaDescription": "Una herramienta de accesibilidad. El dispositivo permanece en silencio hasta que el usuario da una palmada o comando de voz. Entonces, el dispositivo anuncia verbalmente la dirección cardinal hacia la que está apuntando.",
+    "transformedIdeaTitle": "El Robot Navegante",
+    "transformedIdeaDescription": "Construye un asistente para personas que no pueden ver. El robot debe estar siempre listo, pero en silencio para no molestar. Solo cuando el usuario aplaude (ruido fuerte), el robot debe decir en voz alta hacia dónde está mirando: 'Norte', 'Sur', 'Este' u 'Oeste'.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 70 THEN { IF Compass.heading < 45 THEN Audio.play('voice_north') ELSE ... }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de mentiras direccional",
+    "originalIdeaDescription": "Un juego de fiesta. El 'interrogador' apunta el dispositivo al 'sospechoso'. Si el sospechoso habla (ruido) mientras el dispositivo apunta al 'Este' (zona de verdad), suena un timbre positivo. Si apunta al 'Oeste' (zona de mentira), suena una alarma.",
+    "transformedIdeaTitle": "Detector de Verdades y Mentiras",
+    "transformedIdeaDescription": "Juega a los detectives. Configura tu máquina de la verdad. Si apuntas al sospechoso (Oeste) y él habla para responder tu pregunta, la máquina analizará su voz. ¡Programa la máquina para que suene una alarma de 'MENTIRA' si detecta voz en esa dirección!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == West AND Noise.level > 40 THEN Audio.play('lie_buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "El Girasol Cantante",
+    "originalIdeaDescription": "Una planta virtual que necesita sol y amor. El usuario debe orientar el dispositivo hacia el Sol (sur en hemisferio norte) y cantar suavemente para que la planta crezca, indicado por una melodía ascendente.",
+    "transformedIdeaTitle": "Jardín Musical: Cuida tu Flor",
+    "transformedIdeaDescription": "Tienes una flor mágica que solo crece con luz solar y canciones. Gira hacia el Sur para encontrar el sol. Una vez allí, cántale una canción de cuna. Si lo haces bien, escucharás cómo la flor crece y florece con una melodía feliz.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading > 160 AND Compass.heading < 200 AND Noise.level > 30 THEN Audio.play('growing_tune')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de turbina eólica",
+    "originalIdeaDescription": "El usuario debe encontrar la dirección del viento (Norte simulado). Una vez orientado, debe soplar en el micrófono. La velocidad de reproducción del audio de la turbina aumenta cuanto más fuerte sopla.",
+    "transformedIdeaTitle": "Ingeniero de Energía Eólica",
+    "transformedIdeaDescription": "¡Genera electricidad para la ciudad! Primero, busca la dirección del viento girando hacia el Norte. Luego, sopla tan fuerte como puedas hacia el dispositivo para hacer girar las aspas. Cuanto más fuerte soples, más rápido sonará la turbina generando energía.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == North THEN Audio.play('turbine_sound'); Audio.playbackRate = Noise.level / 10"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Comunicador con alienígenas",
+    "originalIdeaDescription": "El usuario escanea el cielo (gira el dispositivo). En ciertos grados aleatorios, se escucha estática. El usuario debe gritar un saludo para ver si recibe una respuesta de audio alienígena.",
+    "transformedIdeaTitle": "Contacto Extraterrestre",
+    "transformedIdeaDescription": "Eres un astrónomo buscando vida en el espacio. Gira tu antena parabólica (dispositivo) lentamente. Cuando escuches una señal extraña en el grado 120, grita '¡HOLA!' para enviar un mensaje. Si los aliens te escuchan, te devolverán un mensaje en su idioma.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 120 AND Noise.level > 80 THEN Audio.play('alien_response')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de biblioteca inteligente",
+    "originalIdeaDescription": "Un dispositivo que vigila el silencio en zonas específicas. Si la brújula apunta a la zona de lectura y el ruido supera un nivel, reproduce un sonido de 'Shhh'. Si apunta al pasillo, permite más ruido.",
+    "transformedIdeaTitle": "El Bibliotecario Robot",
+    "transformedIdeaDescription": "Programa al robot para mantener el orden. Si el robot mira hacia las mesas de lectura (Este), debe ser estricto: cualquier pequeño ruido activará un sonido de '¡Silencio por favor!'. Pero si mira al patio (Oeste), ignorará el ruido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == East AND Noise.level > 30 THEN Audio.play('shhh_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de ritmos direccional",
+    "originalIdeaDescription": "Dividir el espacio en 4 zonas. Norte = Bombo, Sur = Caja, Este = Hi-hat, Oeste = Platillo. El usuario gira y hace un ruido con la boca (beatbox) para activar el sonido del instrumento seleccionado por la dirección.",
+    "transformedIdeaTitle": "DJ Brújula: Crea tu Beat",
+    "transformedIdeaDescription": "¡Conviértete en un DJ humano! Cada dirección es un instrumento diferente. Mira al Norte para el bombo, al Sur para la caja. Haz un ruido corto con tu voz ('¡Pum!') para tocar el instrumento hacia el que estás mirando. ¡Gira rápido para crear un ritmo completo!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Instrument = Map(Compass.heading); IF Noise.level > Threshold THEN Audio.play(Instrument)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de 'Simón Dice' auditivo y físico",
+    "originalIdeaDescription": "El juego da instrucciones de audio ('Gira al Norte y aplaude'). El sistema verifica si la brújula coincide con la instrucción y si el sensor de ruido detecta el aplauso en el momento correcto.",
+    "transformedIdeaTitle": "Simón Dice: Edición Explorador",
+    "transformedIdeaDescription": "Sigue las órdenes del Comandante Simón. Si él dice 'Norte y Grita', debes girar rápido al Norte y pegar un grito. Si dice 'Sur y Silencio', gira al Sur y quédate callado. Si te equivocas de dirección o haces ruido cuando no debes, ¡pierdes!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Play Instruction; Wait; IF Compass.heading == Target AND Noise.level == TargetLevel THEN Score++ ELSE GameOver"
+  }
+]

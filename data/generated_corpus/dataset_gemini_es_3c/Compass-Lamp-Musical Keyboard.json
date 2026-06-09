@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Basado en Orientación",
+    "originalIdeaDescription": "Un sistema que asigna una nota musical específica y un color distinto a cada uno de los cuatro puntos cardinales. Al girar el dispositivo, la nota y la luz cambian suavemente para reflejar la dirección actual.",
+    "transformedIdeaTitle": "El Violín Invisible de 360 Grados",
+    "transformedIdeaDescription": "¡Conviértete en un músico mágico! No necesitas cuerdas, solo girar tu cuerpo. Si miras al Norte, tu violín tocará una nota Do y brillará en azul; al Este, un Mi verde. Crea una melodía simplemente bailando y girando en círculos para componer tu propia sinfonía de luz y sonido.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 315 OR heading < 45 THEN Lamp.setColor(Blue) AND Keyboard.play(C); ELSE IF heading > 45 AND heading < 135 THEN Lamp.setColor(Green) AND Keyboard.play(E)..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mecanismo de Desbloqueo de Caja Fuerte",
+    "originalIdeaDescription": "Simulación de un dial de caja fuerte. El usuario debe girar el dispositivo hasta un grado específico. La luz se vuelve roja si está lejos, amarilla si está cerca, y verde con un sonido de triunfo al encontrar el ángulo correcto.",
+    "transformedIdeaTitle": "El Ladrón de la Caja Fuerte",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte antigua. Gira el dispositivo lentamente. La luz roja indica que estás frío, pero si se pone amarilla, ¡estás cerca! Encuentra el punto exacto donde la luz se pone verde y suena el acorde de victoria para recuperar el tesoro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == targetAngle THEN Lamp.setColor(Green) AND Keyboard.playChord(C_Major); ELSE IF abs(heading - targetAngle) < 20 THEN Lamp.setColor(Yellow); ELSE Lamp.setColor(Red)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Radar de Proximidad Sonoro",
+    "originalIdeaDescription": "El dispositivo actúa como un radar que busca un objetivo invisible en una dirección fija. A medida que el usuario se alinea con el objetivo, el tono del sonido aumenta y la intensidad de la luz se incrementa.",
+    "transformedIdeaTitle": "Cazafantasmas Espectrales",
+    "transformedIdeaDescription": "¡Hay un fantasma invisible en la habitación! Usa tu escáner espectral para encontrarlo. Gira lentamente: el sonido se volverá más agudo y la luz más brillante cuanto más te acerques a la dirección donde se esconde el fantasma. ¡Atrápalo antes de que escape!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "diff = abs(target - heading); Lamp.setBrightness(100 - diff); Keyboard.playNote(frequencyMappedTo(diff))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Guía de Navegación Marítima",
+    "originalIdeaDescription": "Una herramienta que simula un faro. El usuario debe mantener el dispositivo apuntando al Norte para mantener una luz blanca y un sonido constante. Si se desvía, la luz cambia a rojo y suena una alarma.",
+    "transformedIdeaTitle": "El Capitán del Barco en la Tormenta",
+    "transformedIdeaDescription": "¡Mayday! Estás navegando en una tormenta espesa y debes mantener el rumbo al Norte para no chocar contra las rocas. Si tu luz se pone roja y escuchas la sirena de alarma, corrige el rumbo rápidamente. Mantén la luz blanca y el sonido suave para llegar a puerto seguro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 350 OR heading < 10 THEN Lamp.setColor(White) AND Keyboard.play(LowDrone); ELSE Lamp.setColor(Red) AND Keyboard.play(Siren)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Estaciones del Año",
+    "originalIdeaDescription": "Divide los 360 grados en 4 zonas. Cada zona representa una estación, cambiando el color de la lámpara (ej. Naranja para otoño) y tocando una melodía que evoca esa temporada.",
+    "transformedIdeaTitle": "El Mago del Tiempo",
+    "transformedIdeaDescription": "Tienes el poder de controlar las estaciones. Gira hacia el Sur para traer el Verano (luz amarilla y notas alegres), o hacia el Norte para invocar el Invierno (luz azul helada y notas agudas como cristales). ¡Viaja por todo el año en un solo giro!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading is North THEN Lamp.setColor(Blue) AND Keyboard.play(WinterTheme); IF heading is South THEN Lamp.setColor(Yellow) AND Keyboard.play(SummerTheme)..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Direccional",
+    "originalIdeaDescription": "El sistema indica una secuencia de colores/notas asociados a direcciones (Norte-Rojo, Sur-Azul). El usuario debe replicar la secuencia girando el dispositivo hacia esas direcciones en orden.",
+    "transformedIdeaTitle": "Simón Dice: Edición Brújula",
+    "transformedIdeaDescription": "El dispositivo te desafía: '¡Norte, Oeste, Norte!'. Debes girar tu cuerpo para apuntar a esas direcciones exactas. Si aciertas, escucharás una fanfarria y verás luces de fiesta. Pon a prueba tu memoria y tu sentido de la orientación.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "FOREACH direction IN sequence: IF currentHeading == direction THEN PlaySuccess() ELSE PlayFail()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Theremin Visual",
+    "originalIdeaDescription": "Usa la lectura continua de la brújula (0-360) para modular el tono de una nota musical de grave a agudo, mientras la lámpara cicla a través del espectro del arcoíris.",
+    "transformedIdeaTitle": "Pintando el Aire con Música",
+    "transformedIdeaDescription": "Crea una obra de arte invisible. Al girar lentamente, el sonido sube y baja como una ola, y los colores cambian fluyendo por todo el arcoíris. Intenta encontrar dónde 'viven' el color violeta y la nota más aguda, y úsalos para terminar tu canción.",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "pitch = map(heading, 0, 360, 200Hz, 800Hz); color = map(heading, 0, 360, 0, 255); Keyboard.playTone(pitch); Lamp.setHue(color)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Metales (Simulado)",
+    "originalIdeaDescription": "Se programa una ubicación 'objetivo' aleatoria al inicio. Al girar, el dispositivo hace 'clic' (nota corta) con frecuencia variable y parpadea la luz según la cercanía angular al objetivo.",
+    "transformedIdeaTitle": "Buscadores de Oro",
+    "transformedIdeaDescription": "¡Hay oro enterrado en alguna dirección! Tu dispositivo es un detector antiguo. Gira en círculo; los 'bips' se harán más rápidos y la luz parpadeará frenéticamente cuando estés apuntando directamente a la veta de oro. ¡Cava ahí!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "frequency = map(abs(target-heading), 0, 180, 50ms, 1000ms); Loop: Lamp.flash(); Keyboard.playNote(C); wait(frequency)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Diferentes rangos de la brújula representan pistas de aterrizaje. El usuario debe apuntar a la pista correcta solicitada por el sistema (indicada por un color) y presionar una tecla para 'autorizar' el aterrizaje.",
+    "transformedIdeaTitle": "Torre de Control",
+    "transformedIdeaDescription": "¡Avión aproximándose! Necesita aterrizar en la Pista Verde (Este). Gira rápidamente hasta que tu luz se ponga verde y toca una tecla para enviar la señal de radio de 'Permiso Concedido'. ¡No los mandes a la pista equivocada!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetDir = Random(N, S, E, W); IF heading == targetDir AND keyPressed THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Narrador de Historias Interactivo",
+    "originalIdeaDescription": "Cada punto cardinal activa un fragmento de audio (nota musical leitmotiv) y un ambiente de luz diferente, representando diferentes ubicaciones en una historia (ej. Bosque, Cueva, Castillo).",
+    "transformedIdeaTitle": "El Libro de Cuentos 3D",
+    "transformedIdeaDescription": "Entra en el cuento. Si miras al Norte, estás en el 'Bosque Encantado' (Luz Verde, música misteriosa). Al Sur está la 'Cueva del Dragón' (Luz Roja, notas graves). Gira para decidir a dónde va el héroe de tu historia a continuación.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading is North THEN StoryMode(Forest); IF heading is South THEN StoryMode(Cave)..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual Direccional",
+    "originalIdeaDescription": "La velocidad del metrónomo (tempo de las notas) y el parpadeo de la luz se controlan mediante la orientación de la brújula. El Norte es lento, el Sur es muy rápido.",
+    "transformedIdeaTitle": "DJ de la Fiesta Giratoria",
+    "transformedIdeaDescription": "Tú controlas el ritmo de la fiesta. Si miras al Norte, la música va lenta y relajada. ¡Gira hacia el Sur para acelerar el ritmo y hacer que las luces parpadeen a toda velocidad! Haz que todos bailen a tu velocidad.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "tempo = map(heading, 0, 180, 60bpm, 180bpm); PlayBeat(tempo); FlashLight(tempo)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Brújula de 'Caliente o Frío'",
+    "originalIdeaDescription": "Se establece un rumbo objetivo. La lámpara cambia de azul (frío) a rojo (caliente) y las notas musicales ascienden en escala a medida que el usuario se alinea con el rumbo correcto.",
+    "transformedIdeaTitle": "El Rastreador de Alienígenas",
+    "transformedIdeaDescription": "Una señal alienígena viene del espacio. Tu misión es localizar su origen. Si tu luz es azul y el sonido es grave, estás mirando al vacío. Busca el punto donde la luz se pone roja brillante y el sonido es agudo. ¡Ahí está la nave nodriza!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "score = 180 - abs(heading - target); Lamp.setColor(Gradient(Blue, Red, score)); Keyboard.playNote(Scale(score))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Acordes Ambientales",
+    "originalIdeaDescription": "Divide el espacio en 8 sectores. Cada sector reproduce un acorde continuo diferente y muestra un color pastel, permitiendo al usuario crear paisajes sonoros girando suavemente.",
+    "transformedIdeaTitle": "Jardín Zen de Sonidos",
+    "transformedIdeaDescription": "Relájate y crea paz. Gira muy despacio. Cada dirección tiene un acorde suave y un color relajante. Encuentra la combinación perfecta de luz y sonido para meditar. No hay prisa, solo armonía.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "sector = floor(heading / 45); PlayChord(Chords[sector]); Lamp.setColor(Colors[sector])"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Perimetral",
+    "originalIdeaDescription": "El dispositivo se coloca en el suelo. Si se gira (la brújula detecta cambio), se activa una luz estroboscópica y un sonido de alarma fuerte.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu habitación. Coloca el dispositivo apuntando a la puerta y actívalo. Si alguien lo mueve o lo gira aunque sea un poco, ¡la alarma sonará y las luces parpadearán para ahuyentar al intruso!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "startHeading = Compass.getHeading(); IF abs(Compass.getHeading() - startHeading) > 5 THEN Lamp.strobe() AND Keyboard.play(Alarm)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Explorador del Sistema Solar",
+    "originalIdeaDescription": "Simulación donde direcciones específicas corresponden a la ubicación de planetas. Al apuntar a Marte, la luz es roja y suena una nota marcial. Al apuntar a Neptuno, luz azul y sonido ventoso.",
+    "transformedIdeaTitle": "Viaje Espacial desde tu Cuarto",
+    "transformedIdeaDescription": "Convierte tu habitación en el centro del sistema solar. ¿Dónde está Marte? Gira hasta ver la luz roja y oír los tambores de guerra. ¿Y el Sol? Busca la luz amarilla brillante y la nota más fuerte. ¡Aprende astronomía girando!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == MarsDir THEN Lamp.setColor(Red) & Play(MarsTune); ELSE IF heading == SunDir..."
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Ruleta de la Suerte Digital",
+    "originalIdeaDescription": "El usuario gira físicamente y se detiene al azar. El dispositivo lee el ángulo final y asigna un premio (color/sonido) basado en la sección donde se detuvo.",
+    "transformedIdeaTitle": "La Rueda de la Fortuna Musical",
+    "transformedIdeaDescription": "Juega con tus amigos. Gira sobre ti mismo con los ojos cerrados y detente de golpe. El dispositivo decidirá tu suerte: Luz Verde es un premio, Luz Roja es un castigo, y cada uno tiene su propio sonido divertido.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait for rotation stop; result = heading % 4; IF result == 0 THEN Win() ELSE Lose()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Oráculo de Respuestas (Si/No)",
+    "originalIdeaDescription": "El usuario hace una pregunta, gira el dispositivo y este responde basándose en si el grado final es par o impar, usando Verde (Sí) + Nota Alta o Rojo (No) + Nota Baja.",
+    "transformedIdeaTitle": "La Bola de Cristal Mágica",
+    "transformedIdeaDescription": "Hazle una pregunta al oráculo: '¿Aprobaré el examen?'. Gira el dispositivo tres veces y detente. Si se ilumina en verde y suena un '¡Ding!', la respuesta es SÍ. Si es rojo y suena un '¡Bong!', la respuesta es NO.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF floor(heading) is EVEN THEN Lamp.setColor(Green) AND Play(HighNote) ELSE Lamp.setColor(Red) AND Play(LowNote)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Laberinto de Audio Invisible",
+    "originalIdeaDescription": "El usuario navega un mapa virtual. Ciertas direcciones están 'bloqueadas' (Luz roja + sonido de error). Solo una dirección está 'abierta' (Luz verde) permitiendo avanzar al siguiente nodo del laberinto.",
+    "transformedIdeaTitle": "El Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto invisible. Gira para buscar la salida. Si oyes un zumbido grave y ves rojo, hay una pared. Sigue girando hasta que veas verde y oigas una campana: ¡ese es el camino libre! Memoriza los giros para escapar.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF heading == correctPath[currentStep] THEN Lamp.Green() & Step++ ELSE Lamp.Red() & ErrorSound()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Equilibrio Cromático",
+    "originalIdeaDescription": "Requiere que el usuario mantenga un rumbo exacto (ej. 90 grados Este). Cualquier desviación cambia el color de la luz y desafina la nota musical que se reproduce constantemente.",
+    "transformedIdeaTitle": "El Monje Shaolin",
+    "transformedIdeaDescription": "Pon a prueba tu pulso y concentración. Debes mantener la luz perfectamente blanca y la nota musical pura apuntando exactamente al Este. Si tiemblas o te giras, la luz se manchará de color y la música sonará desafinada. ¿Cuánto tiempo puedes aguantar?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "deviation = abs(90 - heading); Lamp.setSaturation(deviation * 5); Keyboard.detune(deviation)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Cronómetro de Cocina Visual",
+    "originalIdeaDescription": "El usuario 'da cuerda' al reloj girando la brújula (cada 90 grados añade 1 minuto). Al soltar, comienza la cuenta regresiva con pulsos de luz y sonido.",
+    "transformedIdeaTitle": "La Bomba de Tiempo",
+    "transformedIdeaDescription": "¡Tic, tac! Configura la cuenta atrás girando el dispositivo: una vuelta completa es mucho tiempo, un cuarto de vuelta es poco. Pásaselo a un amigo antes de que la luz se ponga roja y 'explote' con un sonido final. ¡No dejes que estalle en tus manos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "time = (rotations * 60); WHILE time > 0 DO { Wait(1s); Lamp.blink(); time-- }; Play(Explosion)"
+  }
+]

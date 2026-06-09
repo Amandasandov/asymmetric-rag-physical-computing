@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Controlador de Volumen Gestual",
+    "originalIdeaDescription": "Un sistema que ajusta el volumen de la reproducción de música basándose en el ángulo de inclinación vertical del dispositivo. Al inclinar hacia arriba aumenta el volumen y hacia abajo lo disminuye.",
+    "transformedIdeaTitle": "El DJ de la Gravedad",
+    "transformedIdeaDescription": "¡Conviértete en un DJ futurista! Crea un controlador donde la música obedece a tus manos. Programa el sistema para que, al levantar la punta de tu dispositivo, la música explote con potencia, y al bajarla, se desvanezca suavemente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET Volume = MAP(Inclination.Y, -90, 90, 0, 100); AudioPlayer.setVolume(Volume)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Simulador de Bandeja de Camarero",
+    "originalIdeaDescription": "Un dispositivo para entrenamiento de equilibrio que reproduce un sonido de cristales rotos si la inclinación del eje X o Y supera un umbral seguro establecido previamente.",
+    "transformedIdeaTitle": "El Desafío del Camarero Torpe",
+    "transformedIdeaDescription": "Trabajas en el restaurante más elegante de la ciudad y no puedes tirar nada. Programa tu 'bandeja inteligente' para que detecte si pierdes el equilibrio. Si te inclinas demasiado... ¡CRASH! Sonará el desastre.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ABS(Inclination.X) > 15 OR ABS(Inclination.Y) > 15 THEN AudioPlayer.play('crash.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Sonora",
+    "originalIdeaDescription": "Un juego de puzzle donde el usuario debe encontrar un ángulo específico de inclinación. El reproductor de audio emite un sonido de 'clic' mecánico solo cuando el dispositivo está en el ángulo correcto.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte antigua. Gira el dial (tu dispositivo) muy lentamente. Debes encontrar el ángulo secreto exacto donde el mecanismo hace 'clic' para abrir la puerta y ganar el tesoro.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X == 45 THEN AudioPlayer.play('click.mp3') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Cuento Interactivo de Elecciones",
+    "originalIdeaDescription": "Un narrador de historias que cambia la trama según la inclinación. Inclinar a la izquierda reproduce la pista de audio de la opción A, e inclinar a la derecha reproduce la pista de la opción B.",
+    "transformedIdeaTitle": "Tu Propia Aventura Hablada",
+    "transformedIdeaDescription": "Crea un libro que se escucha. Al llegar a una bifurcación en el camino, inclina tu dispositivo a la izquierda para entrar en la cueva oscura, o a la derecha para subir la montaña. ¡Tú decides cómo sigue la historia!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN AudioPlayer.play('cave.mp3') ELSE IF Inclination.X > 20 THEN AudioPlayer.play('mountain.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido de Motor",
+    "originalIdeaDescription": "Simulador acústico para juguetes de vehículos. El sonido del motor cambia de 'ralentí' a 'aceleración' dependiendo de cuánto se incline el dispositivo hacia adelante.",
+    "transformedIdeaTitle": "Simulador de Moto de Carreras",
+    "transformedIdeaDescription": "Convierte tu dispositivo en el manillar de una supermoto. Manténlo recto para escuchar el motor al ralentí, pero inclínalo hacia adelante para acelerar a fondo y escuchar cómo ruge el motor en la recta final.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 30 THEN AudioPlayer.play('vroom.mp3') ELSE AudioPlayer.play('idle.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Accesible",
+    "originalIdeaDescription": "Una herramienta para nivelar superficies que utiliza tonos de audio. Un tono continuo suena cuando la superficie está perfectamente plana (0 grados en ambos ejes), ayudando a personas con discapacidad visual.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a construir una casa perfecta sin usar los ojos. Programa una herramienta que emita un sonido angelical solo cuando tu estantería esté perfectamente recta. Si se inclina, el sonido debe parar o cambiar a un tono de error.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF ABS(Inclination.X) < 2 AND ABS(Inclination.Y) < 2 THEN AudioPlayer.play('success_tone.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Somnolienta",
+    "originalIdeaDescription": "Un juguete digital que reacciona a ser 'acunado'. Si se mueve suavemente de lado a lado (cambios lentos en inclinación), reproduce un sonido de ronquido o respiración tranquila.",
+    "transformedIdeaTitle": "Nana para el Dragón Bebé",
+    "transformedIdeaDescription": "Tienes un huevo de dragón que necesita dormir. Debes mecerlo suavemente de un lado a otro. Si lo haces con el ritmo correcto, escucharás sus ronquidos felices. ¡Cuidado no lo despiertes!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Oscillate(Inclination.X, slow) THEN AudioPlayer.play('snore.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Espada Láser Sensible al Ángulo",
+    "originalIdeaDescription": "Un objeto de juego de rol. Al sostener el dispositivo verticalmente suena un zumbido constante. Al inclinarlo rápidamente para 'atacar', cambia el sonido a un efecto de golpe.",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Jedi",
+    "transformedIdeaDescription": "Construye tu propio sable de luz. Prográmalo para que zumbe cuando estés en guardia (vertical), pero que haga sonidos de batalla 'WUSH' y 'CLASH' cuando inclines el sable para atacar a tus enemigos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF ChangeRate(Inclination) > Threshold THEN AudioPlayer.play('swing.mp3') ELSE AudioPlayer.play('hum.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Instrumento Theremin por Inclinación",
+    "originalIdeaDescription": "Un instrumento musical experimental donde el tono (pitch) o la nota seleccionada cambia basándose en el eje X, y el volumen se controla con el eje Y.",
+    "transformedIdeaTitle": "La Orquesta Invisible",
+    "transformedIdeaDescription": "Crea música moviendo las manos en el aire. Inclina tu dispositivo hacia los lados para cambiar de nota y hacia adelante para subir el volumen. ¡Compón una melodía futurista sin tocar ninguna tecla!",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SelectTrack(Inclination.X); SetVolume(Inclination.Y); AudioPlayer.play()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas Verdadero o Falso",
+    "originalIdeaDescription": "Sistema de respuestas gestuales. El audio hace una pregunta. El usuario inclina a la izquierda para 'Verdadero' o a la derecha para 'Falso', recibiendo retroalimentación auditiva inmediata.",
+    "transformedIdeaTitle": "El Quiz del Movimiento",
+    "transformedIdeaDescription": "¡Pon a prueba tus conocimientos! El dispositivo te hará una pregunta. Si crees que es verdad, inclínate a la izquierda; si es mentira, a la derecha. Escucharás aplausos si aciertas o abucheos si fallas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioPlayer.play('Question'); WAIT; IF Inclination.X < -30 AND Answer==True THEN AudioPlayer.play('win.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Alarma de Postura Corporal",
+    "originalIdeaDescription": "Un dispositivo wearable que se coloca en la espalda. Si el usuario se encorva (inclinación hacia adelante excesiva), reproduce un sonido de advertencia para corregir la postura.",
+    "transformedIdeaTitle": "El Entrenador de Espalda Recta",
+    "transformedIdeaDescription": "¡No te encorves! Diseña un dispositivo inteligente que vigile tu postura mientras estudias. Si te inclinas demasiado sobre la mesa, el entrenador te avisará con un pitido molesto para que te sientes bien.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 45 THEN AudioPlayer.play('alert.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Palo de Lluvia Digital",
+    "originalIdeaDescription": "Simulación de un instrumento de percusión tradicional. Al inclinar el dispositivo lentamente de un extremo a otro, se reproduce un sonido continuo de agua fluyendo o lluvia.",
+    "transformedIdeaTitle": "El Chamán de la Lluvia",
+    "transformedIdeaDescription": "Recrea el sonido relajante de la lluvia. Programa tu dispositivo para que, al inclinarlo lentamente como si fuera un palo lleno de semillas, suene el agua caer. Si lo detienes, la lluvia para.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF ABS(Inclination.X) > 10 THEN AudioPlayer.playLoop('rain.mp3') ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Bola Mágica 8 Sonora",
+    "originalIdeaDescription": "Un dispositivo de adivinación. El usuario hace una pregunta y agita/invierte el dispositivo. Al volver a ponerlo boca arriba, se reproduce una respuesta aleatoria (Sí, No, Quizás).",
+    "transformedIdeaTitle": "El Oráculo de Bolsillo",
+    "transformedIdeaDescription": "Hazle una pregunta al futuro. Pon tu dispositivo boca abajo para 'mezclar' el destino y, al darle la vuelta rápidamente, el Oráculo te hablará con la respuesta definitiva a tu problema.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Z flips THEN AudioPlayer.play(RandomAnswer())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Controlador de Despegue Espacial",
+    "originalIdeaDescription": "Simulador de lanzamiento. El audio reproduce una secuencia de cuenta regresiva y despegue solo cuando el dispositivo se coloca en posición vertical (90 grados) apuntando al cielo.",
+    "transformedIdeaTitle": "Misión a Marte: Despegue",
+    "transformedIdeaDescription": "El cohete está en la plataforma horizontal. Para iniciar la misión, debes levantar el cohete a posición vertical exacta. En ese momento, comenzará la cuenta atrás: 3, 2, 1... ¡Despegue!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 80 THEN AudioPlayer.play('countdown_launch.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Mapa Sonoro Direccional",
+    "originalIdeaDescription": "Un explorador de entornos. Inclinar el dispositivo hacia adelante (Norte), atrás (Sur), izquierda (Oeste) o derecha (Este) reproduce sonidos característicos de diferentes biomas (bosque, océano, desierto, ciudad).",
+    "transformedIdeaTitle": "Explorador de Mundos",
+    "transformedIdeaDescription": "Viaja por el mundo sin moverte. Inclina tu dispositivo hacia adelante para escuchar los vientos del Polo Norte, o hacia la izquierda para oír las olas del Océano Pacífico. ¡Crea tu propio mapa sonoro!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 20 THEN Play('wind'); IF Inclination.X < -20 THEN Play('ocean')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Detector de 'Terremotos' para Juguetes",
+    "originalIdeaDescription": "Un sistema de alerta para estructuras de juguete. Si la superficie sobre la que está el dispositivo cambia su inclinación bruscamente, suena una sirena de evacuación.",
+    "transformedIdeaTitle": "Alerta Sísmica para Lego",
+    "transformedIdeaDescription": "Protege tu ciudad de bloques. Coloca el sensor en la base de tu torre más alta. Si alguien golpea la mesa o la torre empieza a inclinarse por un terremoto, ¡la sirena debe sonar para evacuar a los muñecos!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Change(Inclination) > Threshold THEN AudioPlayer.play('siren.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Traductor de Idiomas Flip",
+    "originalIdeaDescription": "Herramienta educativa. Con el dispositivo boca arriba reproduce una palabra en español. Al voltearlo boca abajo (180 grados), reproduce la traducción en inglés.",
+    "transformedIdeaTitle": "Tarjetas Flash Parlantes",
+    "transformedIdeaDescription": "Aprende inglés de forma mágica. Escucha una palabra. ¿Sabes qué significa? Voltea tu dispositivo boca abajo para revelar la respuesta en el otro idioma. ¡Es como tener un profesor nativo en tu mano!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Z > 0 THEN Play('Hola') ELSE Play('Hello')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "Dispositivo para ejercicio. El usuario sostiene el dispositivo contra el pecho. Al inclinarse/bajar el torso manteniendo la espalda en cierto ángulo, el audio cuenta una repetición.",
+    "transformedIdeaTitle": "El Gym Bot",
+    "transformedIdeaDescription": "¡Ponte en forma con tecnología! Programa tu entrenador personal. Sujétalo al pecho y haz una sentadilla. Solo si bajas con el ángulo correcto, el robot contará '¡Uno!'. Si haces trampa, no contará.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y goes from 90 to 45 and back THEN AudioPlayer.play('one.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Ciego",
+    "originalIdeaDescription": "Juego donde el usuario guía una bola virtual por un laberinto usando inclinación. Como no hay pantalla, el usuario debe guiarse por sonidos estéreo que indican cuándo la bola golpea paredes.",
+    "transformedIdeaTitle": "El Laberinto Invisible",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto totalmente oscuro. Inclina el dispositivo para moverte. Usa tus oídos: si escuchas un 'bonk' a la izquierda, hay pared. ¡Encuentra la salida guiándote solo por el sonido!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Position.X hits Wall THEN AudioPlayer.play('bonk.mp3')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz Sonoro",
+    "originalIdeaDescription": "Una interfaz simple que simula un interruptor de palanca gigante. Inclinar todo el dispositivo hacia arriba reproduce un sonido de 'Click-On', y hacia abajo 'Click-Off'.",
+    "transformedIdeaTitle": "Efectos de Casa Encantada",
+    "transformedIdeaDescription": "Eres el encargado de los efectos especiales en una obra de teatro de terror. Usa tu dispositivo como una palanca gigante. Al bajarla, haz que suene un trueno o un chirrido de puerta vieja cerrándose.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 20 THEN Play('Thunder') ELSE IF Inclination.Y < -20 THEN Stop()"
+  }
+]

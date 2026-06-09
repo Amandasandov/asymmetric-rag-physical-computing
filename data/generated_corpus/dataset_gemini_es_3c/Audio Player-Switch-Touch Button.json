@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música con Interruptor de Potencia",
+    "originalIdeaDescription": "Un sistema simple donde el interruptor actúa como el control principal de energía. Si el interruptor está encendido, el botón táctil permite al usuario reproducir una canción. Si está apagado, el botón no hace nada.",
+    "transformedIdeaTitle": "La Jukebox Mágica",
+    "transformedIdeaDescription": "Construye una máquina de música antigua. Los estudiantes deben programar el sistema para que solo funcione cuando se inserta una 'moneda' (simulada al encender el Interruptor). Una vez activada, pueden presionar el Botón Táctil para que suene su canción favorita.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF TouchButton.isPressed() THEN AudioPlayer.play('Song') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Timbre con Modo 'No Molestar'",
+    "originalIdeaDescription": "Un timbre de puerta que suena al presionar el botón táctil, pero solo si el interruptor está configurado en el modo 'Disponible'. Si el interruptor está en modo 'Silencio', el timbre no suena.",
+    "transformedIdeaTitle": "El Portero Inteligente",
+    "transformedIdeaDescription": "Diseña un timbre para la habitación de un estudiante ocupado. El Interruptor controla el modo 'Estudiando' (silencio) o 'Libre' (sonido). Si alguien toca el Botón Táctil mientras estás 'Libre', sonará el timbre; si estás 'Estudiando', no pasará nada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF TouchButton.isPressed() THEN AudioPlayer.play('Doorbell') } ELSE { DoNothing }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Tablero de Efectos de Sonido de Dos Canales",
+    "originalIdeaDescription": "Un dispositivo que reproduce un efecto de sonido diferente dependiendo del estado del interruptor. El botón táctil es el disparador. Interruptor ON = Sonido A, Interruptor OFF = Sonido B.",
+    "transformedIdeaTitle": "Consola de Efectos de Cine",
+    "transformedIdeaDescription": "¡Eres un ingeniero de sonido en una película! Crea una consola donde el Botón Táctil dispara el efecto especial. Usa el Interruptor para cambiar entre escenas: Escena de 'Comedia' (Risas) o Escena de 'Acción' (Explosiones).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Switch.isOn() THEN AudioPlayer.play('Laugh') ELSE AudioPlayer.play('Boom') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad Activada por Contacto",
+    "originalIdeaDescription": "Un sistema de alarma que debe ser 'armado' primero con el interruptor. Una vez armado, cualquier toque en el botón táctil disparará una sirena ruidosa continua.",
+    "transformedIdeaTitle": "La Trampa para Espías",
+    "transformedIdeaDescription": "Protege tus secretos. Configura el sistema armando la trampa con el Interruptor oculto. Si un intruso toca el objeto prohibido (Botón Táctil), ¡sonará la alarma de seguridad hasta que desactives el sistema!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN AudioPlayer.loop('Siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reproductor de Audiolibros Pausables",
+    "originalIdeaDescription": "Un dispositivo para escuchar historias. El interruptor selecciona entre dos historias diferentes. El botón táctil alterna entre reproducir y pausar la historia seleccionada.",
+    "transformedIdeaTitle": "El Cuentacuentos de Bolsillo",
+    "transformedIdeaDescription": "Crea un dispositivo para la hora de dormir. Usa el Interruptor para elegir entre 'Cuento de Hadas' o 'Aventura Espacial'. El Botón Táctil servirá para pausar la historia si te da sueño y reanudarla después.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR story = Switch.isOn() ? 'FairyTale' : 'Space'; IF TouchButton.wasPressed() THEN AudioPlayer.togglePlay(story)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Código Morse",
+    "originalIdeaDescription": "Una herramienta para practicar código Morse. El interruptor enciende el oscilador de audio. El botón táctil produce un tono mientras se mantiene presionado, permitiendo crear puntos y rayas.",
+    "transformedIdeaTitle": "El Telégrafo Secreto",
+    "transformedIdeaDescription": "Aprende a comunicarte como en los viejos tiempos. Habilita tu telégrafo con el Interruptor. Mientras mantengas el dedo en el Botón Táctil, sonará un 'bip'. Practica enviando mensajes de SOS (tres cortos, tres largos, tres cortos).",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF TouchButton.isPressed() THEN AudioPlayer.playTone() ELSE AudioPlayer.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Máquina de Bromas de Risa/Grito",
+    "originalIdeaDescription": "Un dispositivo de broma que se esconde. El interruptor selecciona si la broma será inocente (risas) o aterradora (grito). El botón táctil activa el sonido cuando la víctima lo toca.",
+    "transformedIdeaTitle": "La Caja de Sorpresas",
+    "transformedIdeaDescription": "Prepara una broma divertida. Decide con el Interruptor si quieres ser amable o travieso. Pide a un amigo que toque el botón 'Misterioso'. Dependiendo de tu elección, escucharán un aplauso o un grito fantasmagórico.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Switch.isOn() THEN AudioPlayer.play('Scream') ELSE AudioPlayer.play('Applause') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación",
+    "originalIdeaDescription": "Reproduce sonidos relajantes. El interruptor cambia entre sonido de lluvia y sonido de bosque. El botón táctil inicia un temporizador de 1 minuto con ese sonido.",
+    "transformedIdeaTitle": "Oasis de Relajación",
+    "transformedIdeaDescription": "Diseña un dispositivo para calmar la mente. El usuario elige su ambiente (Lluvia o Bosque) con el Interruptor. Al tocar el botón suavemente, comienza una sesión de relajación de audio.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR sound = Switch.isOn() ? 'Rain' : 'Forest'; IF TouchButton.isPressed() THEN AudioPlayer.playForDuration(sound, 60s)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juguete de Traducción de Mascotas",
+    "originalIdeaDescription": "Un juguete simulado que 'traduce' ladridos. El interruptor enciende el 'micrófono'. El botón táctil reproduce una frase aleatoria humana como si fuera lo que la mascota dijo.",
+    "transformedIdeaTitle": "El Collar Parlante",
+    "transformedIdeaDescription": "¿Qué dice tu perro? Construye un collar simulado. Enciende el 'Traductor' con el Interruptor. Cada vez que toques el botón (simulando un ladrido), el audio dirá frases graciosas como '¡Tengo hambre!' o '¡Ardilla!'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN AudioPlayer.playRandom(['Food', 'Walk', 'Squirrel'])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Básica (Drum Loop)",
+    "originalIdeaDescription": "El interruptor inicia o detiene un bucle de batería base. El botón táctil permite al usuario agregar un sonido de platillo (crash) sobre el ritmo base en tiempo real.",
+    "transformedIdeaTitle": "Estación de DJ",
+    "transformedIdeaDescription": "Conviértete en DJ. Usa el Interruptor para soltar la base rítmica (el 'beat'). Mientras suena, usa el Botón Táctil para añadir efectos de platillos o 'scratches' en el momento perfecto para animar la fiesta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN AudioPlayer.loop('Beat'); IF TouchButton.isPressed() THEN AudioPlayer.playOverlap('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Ayuda para Cruce Peatonal",
+    "originalIdeaDescription": "Simulación de semáforo para ciegos. El interruptor activa el sistema de semáforos. El botón táctil solicita el paso y reproduce un sonido de 'cruce seguro' después de un retraso.",
+    "transformedIdeaTitle": "Semáforo Accesible",
+    "transformedIdeaDescription": "Diseña una ciudad inclusiva. El sistema de semáforos se activa con el Interruptor. Cuando un peatón invidente toca el botón, el sistema debe esperar unos segundos y luego emitir un sonido intermitente indicando que es seguro cruzar.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.wasPressed() THEN { Wait(3s); AudioPlayer.loop('Beep-Beep') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas Verdadero/Falso",
+    "originalIdeaDescription": "El interruptor determina la respuesta correcta para la ronda actual (On=Verdadero, Off=Falso). El usuario presiona el botón táctil para adivinar 'Verdadero'. El audio confirma si acertó basándose en el estado del interruptor.",
+    "transformedIdeaTitle": "Detector de Mentiras",
+    "transformedIdeaDescription": "Juega con un amigo. Tú configuras la verdad con el Interruptor (oculto) mientras le haces una pregunta. Tu amigo debe tocar el botón si cree que es verdad. El audio dirá '¡Correcto!' o '¡Error!' comparando su toque con tu interruptor.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Switch.isOn() THEN AudioPlayer.play('Correct') ELSE AudioPlayer.play('Wrong') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía de Museo de Audio",
+    "originalIdeaDescription": "Dispositivo para museos. El interruptor cambia el idioma (Español/Inglés). El botón táctil reproduce la descripción de la obra de arte frente a la que se está.",
+    "transformedIdeaTitle": "El Guía Turístico Políglota",
+    "transformedIdeaDescription": "Crea una audioguía para un museo internacional. El turista usa el Interruptor para seleccionar su idioma. Al tocar el botón frente a una estatua, escuchará la explicación en el idioma seleccionado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "VAR lang = Switch.isOn() ? 'ES' : 'EN'; IF TouchButton.isPressed() THEN AudioPlayer.play('Description_' + lang)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Manual",
+    "originalIdeaDescription": "El interruptor enciende el dispositivo. Cada vez que se toca el botón táctil, suena un 'tic', permitiendo al músico marcar su propio ritmo manualmente.",
+    "transformedIdeaTitle": "Marcador de Ritmo",
+    "transformedIdeaDescription": "Ayuda a una banda de música. Enciende el metrónomo con el Interruptor. Toca el Botón Táctil rítmicamente para establecer la velocidad a la que deben tocar. ¡Debes ser muy preciso!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND TouchButton.isPressed() THEN AudioPlayer.play('Click')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Grabadora de Mensajes de Voz (Simulada)",
+    "originalIdeaDescription": "El interruptor alterna entre modo 'Grabar' y modo 'Reproducir'. El botón táctil ejecuta la acción del modo seleccionado (Grabar clip o reproducir clip).",
+    "transformedIdeaTitle": "La Grabadora de Espía",
+    "transformedIdeaDescription": "Un gadget esencial para agentes secretos. Pon el Interruptor en modo 'Grabar' y presiona el botón para guardar un mensaje secreto (simulado). Luego, cambia el interruptor y presiona el botón para que tu compañero escuche el mensaje.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Switch.isOn() THEN AudioPlayer.record() ELSE AudioPlayer.playLastRecording() }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Escape Room con Pista de Audio",
+    "originalIdeaDescription": "Un puzzle donde el interruptor debe estar en la posición correcta (ON) antes de que el botón táctil revele una pista de audio clave.",
+    "transformedIdeaTitle": "El Cofre del Tesoro",
+    "transformedIdeaDescription": "Estás en una búsqueda del tesoro. Encuentras un cofre electrónico. Solo si activas el mecanismo secreto (Interruptor) y luego presionas la gema (Botón Táctil), el espíritu del pirata te susurrará dónde está enterrado el oro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF TouchButton.isPressed() THEN AudioPlayer.play('Clue') } ELSE { AudioPlayer.play('LockedSound') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simón Dice (Versión Simplificada)",
+    "originalIdeaDescription": "El juego da una instrucción de audio. El interruptor sirve para iniciar el juego. El botón táctil se usa para confirmar que el jugador ha realizado la acción física solicitada.",
+    "transformedIdeaTitle": "Simón Dice: ¡Acción!",
+    "transformedIdeaDescription": "Un juego de fiesta. Enciende el juego con el Interruptor. El audio dirá '¡Salta!'. Debes saltar y correr a presionar el Botón Táctil para confirmar que lo hiciste antes de que se acabe el tiempo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.switchedOn() THEN AudioPlayer.play('Command'); IF TouchButton.isPressed() THEN CheckTiming()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Radio de Coche Simulada",
+    "originalIdeaDescription": "El interruptor enciende la radio. El botón táctil cambia a la siguiente canción o 'estación' cada vez que se presiona.",
+    "transformedIdeaTitle": "Viaje por Carretera",
+    "transformedIdeaDescription": "Simula el tablero de un coche. Gira la llave (Interruptor) para arrancar el motor y la radio. La canción no te gusta, así que usa el Botón Táctil para saltar de estación hasta encontrar tu música favorita.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF TouchButton.wasPressed() THEN AudioPlayer.nextTrack() } ELSE AudioPlayer.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Notificación de Batería Baja",
+    "originalIdeaDescription": "Simulación de dispositivo. El interruptor simula el estado de la batería (On=Cargada, Off=Baja). Si se intenta usar el dispositivo (botón táctil) con batería baja, reproduce un sonido de error.",
+    "transformedIdeaTitle": "Robot sin Energía",
+    "transformedIdeaDescription": "Programa un robot que necesita mantenimiento. El Interruptor simula su nivel de energía. Si tiene energía y tocas el botón, el robot saluda. Si el Interruptor está en 'Baja Energía' y tocas el botón, el robot emite un sonido triste de apagado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Switch.isOff() THEN AudioPlayer.play('LowBattery') ELSE AudioPlayer.play('Hello') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Switch",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro de Cocina con Aviso",
+    "originalIdeaDescription": "El interruptor inicia una cuenta regresiva predefinida. El botón táctil permite detener el sonido de la alarma una vez que el tiempo ha terminado.",
+    "transformedIdeaTitle": "El Chef Digital",
+    "transformedIdeaDescription": "Ayuda en la cocina. Activa el temporizador del horno con el Interruptor. Espera a que termine la cuenta atrás y suene la alarma. ¡Rápido! Usa el Botón Táctil para apagar el ruido antes de que se quemen las galletas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.switchedOn() THEN StartTimer(); IF Timer.finished() THEN AudioPlayer.loop('Alarm'); IF TouchButton.isPressed() THEN AudioPlayer.stop()"
+  }
+]

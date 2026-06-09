@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Sensible al Ruido",
+    "originalIdeaDescription": "Un dispositivo de seguridad que activa una alerta visual y sonora cuando el nivel de ruido ambiental supera un umbral preestablecido, indicando una intrusión o un evento ruidoso inesperado en una habitación silenciosa.",
+    "transformedIdeaTitle": "Trampa para Espías Ruidosos",
+    "transformedIdeaDescription": "¡Protege tu base secreta! Crea un sistema que detecte si un espía enemigo intenta entrar haciendo ruido. Si el sensor escucha pasos fuertes o voces, debe encender una luz roja parpadeante y sonar una sirena de emergencia.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 70 THEN Lamp.SetColor('Red') AND Audio.Play('Siren')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Bibliotecas",
+    "originalIdeaDescription": "Una herramienta para espacios de estudio que mantiene una luz verde y música suave mientras el ambiente está tranquilo, pero cambia a luz roja y emite un sonido de advertencia si el ruido aumenta demasiado.",
+    "transformedIdeaTitle": "El Guardián del Silencio Sagrado",
+    "transformedIdeaDescription": "Eres el guardián de una biblioteca antigua llena de hechizos. Si los estudiantes hablan muy fuerte, despiertan a los libros mágicos. Programa el sistema para que la luz sea verde relajante, pero si detecta gritos, la luz se ponga roja y diga '¡Shhh!'",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 50 THEN Lamp.Color('Red') AND Audio.Play('Shh_Sound') ELSE Lamp.Color('Green')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Vela Digital que se Apaga Soplando",
+    "originalIdeaDescription": "Una simulación de una vela donde la lámpara imita una llama. Al detectar un pico alto de ruido (soplido) cerca del micrófono, la luz se apaga y suena un efecto de aplausos o celebración.",
+    "transformedIdeaTitle": "Cumpleaños Feliz: Sopla las Velas",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Programa una vela digital que brille con luz naranja. Cuando el cumpleañero sople fuerte (haciendo mucho ruido cerca del sensor), la vela debe apagarse y el reproductor debe tocar la canción de 'Cumpleaños Feliz'.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.Color('Orange'); IF Noise_Level > 85 THEN Lamp.Off() AND Audio.Play('Birthday_Song')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Controlador de Luces de Fiesta por Sonido",
+    "originalIdeaDescription": "Un sistema de entretenimiento donde la intensidad de la luz y el ritmo de la música están sincronizados con los sonidos externos, como palmadas o gritos, para animar un evento social.",
+    "transformedIdeaTitle": "DJ Mágico: ¡Fiesta con Aplausos!",
+    "transformedIdeaDescription": "Conviértete en el DJ de la fiesta. Crea un programa donde, cada vez que tus amigos aplaudan fuerte, las luces cambien de color aleatoriamente y suene un efecto de 'scratch' de disco para animar el baile.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 80 THEN Lamp.SetColor(Random) AND Audio.Play('DJ_Scratch')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Asistente de Sueño para Bebés",
+    "originalIdeaDescription": "Un dispositivo que monitorea el ambiente. Si detecta silencio absoluto o ruido muy bajo, reproduce una canción de cuna suave y enciende una luz tenue para ayudar a dormir.",
+    "transformedIdeaTitle": "Canción de Cuna para el Dragón",
+    "transformedIdeaDescription": "Tienes un bebé dragón que necesita dormir. Si la cueva está en silencio, programa el sistema para que ponga una luz violeta muy suave y toque una melodía relajante. Si hay ruido, el dragón se despierta y la luz se apaga.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level < 15 THEN Lamp.SetBrightness(20) AND Lamp.Color('Purple') AND Audio.Play('Lullaby')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica Interactivo",
+    "originalIdeaDescription": "Un sistema ambiental que utiliza un sonido fuerte y repentino (como un aplauso) para disparar un efecto de relámpago visual y un sonido de trueno retardado.",
+    "transformedIdeaTitle": "¡Thor Invoca el Trueno!",
+    "transformedIdeaDescription": "Eres el dios del trueno. Cuando golpees tu martillo (des una palmada fuerte), el cielo debe iluminarse con un flash blanco brillante (relámpago) y luego reproducir un sonido estruendoso de trueno.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 90 THEN Lamp.Flash('White', 0.5s) AND Audio.Play('Thunder_Sound')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Traductor de Lenguaje Alienígena",
+    "originalIdeaDescription": "Un juguete que escucha la voz del usuario y, al detectar sonido, responde con secuencias de luces de colores y sonidos electrónicos extraños, simulando una comunicación extraterrestre.",
+    "transformedIdeaTitle": "Contacto Extraterrestre: ¡Hola Marciano!",
+    "transformedIdeaDescription": "Un alienígena ha aterrizado en tu jardín. Intenta hablarle. Si haces ruido hablando, el alienígena responderá con luces verdes parpadeantes y sonidos de 'Bleep-Bloop' para intentar comunicarse contigo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 40 THEN Lamp.Flash('Green') AND Audio.Play('Alien_Sounds')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Misión de Sigilo Ninja",
+    "originalIdeaDescription": "Un juego de entrenamiento donde el usuario debe moverse sin hacer ruido. Cualquier sonido por encima de un susurro activa una penalización visual y auditiva.",
+    "transformedIdeaTitle": "Misión Ninja: Pasos de Pluma",
+    "transformedIdeaDescription": "Debes cruzar el palacio del Emperador sin ser detectado. Si caminas haciendo demasiado ruido (nivel de sonido > 20), sonará una alarma y la luz se pondrá roja indicando '¡Capturado!'. Si eres silencioso, la luz permanece apagada.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Level > 20 THEN Lamp.Color('Red') AND Audio.Play('Gong_Sound') ELSE Lamp.Off()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mascota Robótica Reactiva",
+    "originalIdeaDescription": "Un compañero virtual que reacciona a los comandos de voz. Un tono de voz moderado hace que la 'mascota' emita un sonido alegre y luz cálida.",
+    "transformedIdeaTitle": "Alimenta a tu Mascota Robot",
+    "transformedIdeaDescription": "Tu perro robot tiene hambre de sonido. Llámalo por su nombre (haz ruido). Si te escucha, ladrará felizmente y encenderá su nariz (Lámpara) de color amarillo. Si no le hablas, se queda triste y apagado.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 40 THEN Lamp.Color('Yellow') AND Audio.Play('Barking')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Cueva de Ecos Misteriosa",
+    "originalIdeaDescription": "Una instalación que imita una cueva. Al recibir una entrada de audio, la reproduce con efecto de eco y atenúa la luz gradualmente para simular profundidad.",
+    "transformedIdeaTitle": "Exploradores de la Caverna Profunda",
+    "transformedIdeaDescription": "Estás explorando una cueva oscura. Grita '¡Hola!' para ver qué tan profunda es. Cuando el sensor escuche tu grito, debe reproducir un sonido de eco misterioso y la luz debe desvanecerse lentamente de brillante a oscuro.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Level > 60 THEN Audio.Play('Echo') AND Lamp.FadeOut(3s)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Varita Mágica Activada por Voz",
+    "originalIdeaDescription": "Un accesorio de disfraz que se activa al pronunciar un 'hechizo' fuerte. La activación enciende la punta de la varita y reproduce un sonido mágico.",
+    "transformedIdeaTitle": "Escuela de Magia: Conjuro Lumos",
+    "transformedIdeaDescription": "¡Eres un aprendiz de mago! Tu varita solo funciona si pronuncias el hechizo con convicción. Grita tu hechizo fuerte: si el sonido es alto, la varita se ilumina de blanco brillante y suena un timbre mágico.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 75 THEN Lamp.Color('White') AND Audio.Play('Magic_Chime')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector Paranormal de Fantasmas",
+    "originalIdeaDescription": "Un dispositivo de juego de roles que parpadea y emite estática cuando detecta fluctuaciones en el ruido ambiente, simulando la presencia de un espíritu.",
+    "transformedIdeaTitle": "Cazafantasmas: El Espectro Invisible",
+    "transformedIdeaDescription": "Busca fantasmas en tu habitación. Configura el sensor para que sea muy sensible. Si detecta un ruido pequeño (que no seas tú), la luz debe parpadear en azul y sonar un efecto de 'wuuu' fantasmal.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 15 AND Noise_Level < 40 THEN Lamp.Flicker('Blue') AND Audio.Play('Ghost_Wail')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Aplausómetro para Concursos",
+    "originalIdeaDescription": "Un medidor que visualiza la intensidad del aplauso del público mediante el brillo de la lámpara y reproduce una fanfarria si se alcanza el nivel máximo.",
+    "transformedIdeaTitle": "El Gran Show de Talentos",
+    "transformedIdeaDescription": "¡El público decide al ganador! Crea un 'Aplausómetro'. Cuanto más fuerte aplaudan tus amigos, más brillante se pondrá la luz. Si llegan al máximo nivel de ruido, suena una fanfarria de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.Brightness = Map(Noise_Level); IF Noise_Level > 95 THEN Audio.Play('Victory_Fanfare')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Despertador del Ogro Gruñón",
+    "originalIdeaDescription": "Un personaje interactivo que 'duerme'. Si se hace ruido cerca, el personaje se despierta enojado, encendiendo una luz roja y gruñendo.",
+    "transformedIdeaTitle": "No Despiertes al Ogro",
+    "transformedIdeaDescription": "Un ogro duerme en su cueva oscura. Tienes que pasar de puntillas. Si haces ruido, el ogro se despertará: la luz se pondrá roja intensa y escucharás un gruñido terrible. ¡Ten cuidado!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 30 THEN Lamp.Color('Red') AND Audio.Play('Ogre_Growl')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Bosque Encantado Reactivo",
+    "originalIdeaDescription": "Un ambiente que recompensa el silencio. Si el ruido es bajo, suenan pájaros y la luz es verde. Si hay ruido, todo se apaga y calla.",
+    "transformedIdeaTitle": "El Bosque Tímido",
+    "transformedIdeaDescription": "Los animales de este bosque son muy tímidos. Solo salen si estás en absoluto silencio. Programa el sistema para que, si el ruido es casi cero, suenen pajaritos y la luz sea verde bosque. Si hablas, se esconden (luz apagada, silencio).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level < 10 THEN Lamp.Color('Green') AND Audio.Play('Nature_Sounds') ELSE Lamp.Off() AND Audio.Stop()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Monitor de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Un dispositivo médico de juego que pulsa luz y sonido rítmicamente, pero acelera o cambia a tono de alerta si detecta mucho ruido (estrés).",
+    "transformedIdeaTitle": "Doctor Robot: ¡Corazón Acelerado!",
+    "transformedIdeaDescription": "Eres un doctor operando a un robot. Normalmente hace 'bip' tranquilo con luz azul. Pero si hay mucho ruido en el quirófano (estrés), el robot se pone nervioso: la luz parpadea rápido en rojo y el sonido se acelera.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Level > 60 THEN Lamp.Flash('Red', Fast) AND Audio.Play('Fast_Beep') ELSE Lamp.Pulse('Blue') AND Audio.Play('Slow_Beep')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Cerradura de Voz Secreta",
+    "originalIdeaDescription": "Un mecanismo de seguridad simulado que espera un patrón de sonido o un volumen específico para 'abrir' una puerta, indicándolo con luz verde y sonido de desbloqueo.",
+    "transformedIdeaTitle": "La Bóveda de Alí Babá",
+    "transformedIdeaDescription": "La cueva del tesoro solo se abre con la contraseña mágica '¡Ábrete Sésamo!'. Simúlalo gritando fuerte una vez. Si el sensor detecta ese pico de sonido exacto, la luz se pone dorada y suena una puerta abriéndose.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 80 THEN Lamp.Color('Gold') AND Audio.Play('Door_Unlock')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Modelo de Volcán en Erupción",
+    "originalIdeaDescription": "Un proyecto de ciencias interactivo. Un ruido sordo y constante (retumbar) hace que el volcán (lámpara) se ponga rojo y reproduzca sonidos de explosión.",
+    "transformedIdeaTitle": "Experimento: ¡Volcán Activo!",
+    "transformedIdeaDescription": "Construye un volcán. Golpea la mesa rítmicamente para simular un terremoto. Si el 'terremoto' (ruido) es muy fuerte, el volcán entra en erupción: luz roja brillante y sonido de explosión.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 70 THEN Lamp.Color('Red') AND Audio.Play('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Hada del Jardín que Susurra",
+    "originalIdeaDescription": "Un personaje fantástico que solo responde a susurros. Si el ruido es moderado (ni silencio ni grito), brilla en rosa y se ríe.",
+    "transformedIdeaTitle": "El Hada que Odia los Gritos",
+    "transformedIdeaDescription": "Un hada mágica vive en tu lámpara. Si le gritas, se asusta y se apaga. Pero si le susurras suavemente (ruido medio-bajo), ella brillará en color rosa y soltará una risita mágica.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 15 AND Noise_Level < 40 THEN Lamp.Color('Pink') AND Audio.Play('Giggle')"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Audio Player",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Semáforo Activado por Motores",
+    "originalIdeaDescription": "Un juego de carreras donde los coches (niños haciendo ruido de motor) solo pueden avanzar (Luz Verde) si hacen ruido. Si se callan, Luz Roja.",
+    "transformedIdeaTitle": "Carrera de Autos: ¡Ruge el Motor!",
+    "transformedIdeaDescription": "Para que tu auto de carreras avance, el motor debe rugir. Haz ruidos de '¡Vrummm!'. Mientras hagas ruido, la luz será Verde (Acelera). Si te quedas callado, la luz se pone Roja (Stop) y el auto se detiene.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 50 THEN Lamp.Color('Green') ELSE Lamp.Color('Red') AND Audio.Stop()"
+  }
+]

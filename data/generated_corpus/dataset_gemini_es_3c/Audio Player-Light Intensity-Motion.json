@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Coche Solar Virtual",
+    "originalIdeaDescription": "Un vehículo que funciona con energía solar. La velocidad depende de cuánta luz recibe el sensor. La dirección se controla inclinando el dispositivo (volante). El audio reproduce el motor.",
+    "transformedIdeaTitle": "Carrera Solar del Desierto",
+    "transformedIdeaDescription": "Construye el coche del futuro. Para que el motor arranque y acelere (Audio: rrrrr), debes apuntar el sensor hacia una fuente de luz fuerte (el Sol). Cuanta más luz, más agudo suena el motor (velocidad). Inclina el dispositivo a izquierda o derecha para esquivar cactus en la pantalla imaginaria.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Light.level; Audio.setPitch(Speed); Audio.setPan(Motion.tiltX)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Vampiro Durmiendo en Ataúd",
+    "originalIdeaDescription": "El dispositivo es un vampiro. Debe estar plano (sin movimiento) y en la oscuridad. Si le da la luz o se mueve, se despierta gritando.",
+    "transformedIdeaTitle": "El Despertar del Conde Drácula",
+    "transformedIdeaDescription": "Protege el sueño del vampiro. Mantén el dispositivo totalmente quieto y tapa el sensor de luz (oscuridad total). Escucharás ronquidos (Audio). Si destapas el sensor (entra luz) o mueves la caja (Motion), el vampiro gritará y perderás el juego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.loop('Snore'); IF Light.level > 10 OR Motion.shake > 5 THEN Audio.play('Scream')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Instrumento Theremin de Luz y Gesto",
+    "originalIdeaDescription": "Controlar un sintetizador. La inclinación (Motion) cambia la nota musical. La intensidad de la luz cambia el volumen.",
+    "transformedIdeaTitle": "Compositor de Ondas Espaciales",
+    "transformedIdeaDescription": "Crea música de ciencia ficción. Mueve tu mano sobre el sensor de luz para controlar el volumen (Sube y baja la mano). Al mismo tiempo, inclina el dispositivo adelante y atrás para cambiar el tono del sonido. Graba tu sinfonía alienígena.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Volume = Light.level; Pitch = Motion.tiltY; Audio.playTone(Pitch, Volume)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Agente Secreto: Infiltración Nocturna",
+    "originalIdeaDescription": "El usuario debe avanzar (agitar suavemente) pero solo cuando está oscuro. Si un foco (luz) lo ilumina, debe congelarse.",
+    "transformedIdeaTitle": "Escape de la Prisión de Máxima Seguridad",
+    "transformedIdeaDescription": "Escapa por el patio. Camina moviendo el dispositivo (simulando pasos). De repente, un reflector de la torre de vigilancia barre la zona (tu compañero te apunta con una linterna). ¡Congélate! Si te mueves (Motion) mientras hay luz (Light > 50), la sirena (Audio) sonará.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 50 AND Motion.detected() THEN Audio.play('Siren') ELSE Audio.play('Footsteps')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Batidora de Cocina Inteligente",
+    "originalIdeaDescription": "Simular cocinar. Se necesita agitar (mezclar). El audio hace ruido de batidora. Si se abre la tapa (entra luz), se para por seguridad.",
+    "transformedIdeaTitle": "Master Chef: El Batido Perfecto",
+    "transformedIdeaDescription": "Prepara un smoothie. Mete los ingredientes virtuales. Tapa el sensor con la mano (tapa de la licuadora) y agita fuerte (Motion) para triturar. El audio hará 'Bzzzzz'. Si quitas la mano (entra Luz) mientras agitas, el motor se detiene y salpicas todo (Audio: ¡Splash!).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.shake > 20 THEN Audio.play('Blender') ELSE IF Light.level > 10 THEN Audio.play('Splash')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "El audio hace ruido estática. Al caminar (Motion) el ruido cambia. Si se encuentra una 'zona fría' (sombra/luz baja), el fantasma aparece.",
+    "transformedIdeaTitle": "Cazadores de Sombras",
+    "transformedIdeaDescription": "Busca espectros en el aula. Camina con el dispositivo (Motion). El radar suena 'bip... bip...'. Busca un lugar oscuro (debajo de una mesa o en una esquina). Si la luz baja y te quedas quieto, el audio cambiará a una voz fantasmal: 'Te encontré...'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.walking() THEN Audio.play('Radar'); IF Light.level < 15 AND Motion.stopped() THEN Audio.play('GhostVoice')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Planta Virtual Tamagotchi",
+    "originalIdeaDescription": "Necesita luz para fotosíntesis y movimiento (viento) para polinizar. Audio de crecimiento feliz.",
+    "transformedIdeaTitle": "Jardín Botánico Mágico",
+    "transformedIdeaDescription": "Cuida tu flor. Ponla al sol (Sensor de Luz > 80) para que tenga energía. Luego, agítala suavemente (Motion) para simular la brisa polinizadora. Si haces ambas cosas bien, escucharás una melodía mágica de crecimiento y la flor subirá de nivel.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Energy = Light.level; IF Energy > 80 AND Motion.sway() THEN Audio.play('GrowthMelody')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Sistema de Seguridad de Museo",
+    "originalIdeaDescription": "El dispositivo protege una joya. Si detecta vibración (Motion) o el ladrón usa una linterna (Light), suena la alarma.",
+    "transformedIdeaTitle": "Rayo Láser Antirrobo",
+    "transformedIdeaDescription": "Eres el ingeniero de seguridad. Configura la trampa. El museo está oscuro y quieto. Si un ladrón pisa fuerte (Motion) o ilumina la vitrina con su linterna (Light > 60), activa la alarma sonora (Audio) inmediatamente.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.vibration > 5 OR Light.level > 60 THEN Audio.loop('AlarmSound')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Simulador de Pesca Nocturna",
+    "originalIdeaDescription": "Esperar quieto. Si pasa una sombra (pez) sobre el sensor (Light baja) y tira (Motion), hay que 'recoger' (Audio carrete).",
+    "transformedIdeaTitle": "Pesca en el Lago Misterioso",
+    "transformedIdeaDescription": "Lanza el anzuelo y espera. Quédate muy quieto. Pasa tu mano sobre el sensor para simular la sombra de un pez (Light baja). En ese momento, haz un gesto brusco hacia arriba (Motion) para engancharlo. Si aciertas, suena el carrete recogiendo la presa.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.stable() AND Light.dipDetected() THEN Fish=TRUE; IF Fish AND Motion.jerk('Up') THEN Audio.play('Reel')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Luciérnaga en un Frasco",
+    "originalIdeaDescription": "Si se agita el frasco, la luciérnaga brilla (simulado con audio mágico). Solo funciona si el entorno es oscuro.",
+    "transformedIdeaTitle": "Hada del Bosque Capturada",
+    "transformedIdeaDescription": "Tienes un hada en tu dispositivo. Ve a un lugar oscuro (Luz < 20). Agita suavemente el frasco (Motion). Escucharás el tintineo de sus alas y polvo mágico (Audio). Si hay mucha luz, el hada se asusta y se queda callada.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 AND Motion.shake() THEN Audio.play('FairyDust') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Desactivación de Bomba",
+    "originalIdeaDescription": "Audio cuenta atrás. El usuario debe llevar la bomba a un lugar seguro (caminar/Motion) y 'cortar el cable' tapando el sensor de luz en el momento justo.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "Tic-tac, tic-tac... La bomba va a explotar. Camina con cuidado (Motion suave) hacia la zona de detonación. Cuando el Audio diga '¡AHORA!', tapa el sensor de luz con tu dedo (simula cortar cable). Si lo haces a tiempo, se desactiva; si no... ¡BOOM!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.play('Countdown'); IF Motion.smooth() AND Audio.time == 'Now' AND Light.covered() THEN Win() ELSE Explode()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Entrenador de Béisbol",
+    "originalIdeaDescription": "Audio lanza la bola. El usuario hace swing (Motion). El sensor de luz determina si fue 'bola' o 'strike' (según si la sombra del bate pasó bien).",
+    "transformedIdeaTitle": "Bateador de Grandes Ligas",
+    "transformedIdeaDescription": "Ponte en posición. El lanzador tira la bola (sonido de silbido). Haz el swing cruzando el dispositivo frente a una luz (Motion + cambio de Luz por sombra). Si el timing de la sombra y el movimiento coinciden, escucharás un '¡Home Run!'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PitchTime = Random(); IF Motion.swing() AND Light.drop() AND Time == PitchTime THEN Audio.play('HomeRun')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Guía Espiritual de Meditación",
+    "originalIdeaDescription": "El usuario debe buscar paz: sin movimiento y con luz tenue. El audio reproduce sonidos de naturaleza que se intensifican al cumplir condiciones.",
+    "transformedIdeaTitle": "El Maestro Zen",
+    "transformedIdeaDescription": "Busca el equilibrio interior. Siéntate inmóvil (Motion = 0) y baja las luces de la habitación. Si logras quietud y penumbra, el sonido del viento y el agua (Audio) se volverá más claro y fuerte. Si te mueves, el sonido se corta.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Calm = (100 - Motion) + (100 - Light); Audio.setVolume('Nature', Calm)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Explorador de Cueva con Linterna de Dinamo",
+    "originalIdeaDescription": "Para ver (escuchar descripción del entorno), el usuario debe agitar el dispositivo (cargar batería) y apuntar a la oscuridad.",
+    "transformedIdeaTitle": "Linterna de Manivela",
+    "transformedIdeaDescription": "Estás en una cueva oscura. Tu linterna es vieja. Agita el dispositivo constantemente (Motion) para cargar la batería. Mientras agitas, si apuntas a una zona oscura, el narrador (Audio) te describirá lo que 'ves': estalactitas, murciélagos o tesoros.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Battery += Motion.shake; IF Battery > 0 AND Light.level < 20 THEN Audio.play('Description'); Battery--"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Juego de Baile Estroboscópico",
+    "originalIdeaDescription": "Bailar al ritmo (Motion). Pero congelarse cuando hay un flash de luz (Light). Audio lleva el ritmo.",
+    "transformedIdeaTitle": "Desafío Disco-Freeze",
+    "transformedIdeaDescription": "¡Baila hasta que el cuerpo aguante! Muévete al ritmo de la música (Motion). Un amigo controlará el interruptor de la luz. Cuando apague la luz (oscuridad), ¡baila! Cuando la encienda (Luz alta), ¡congélate! Si te mueves con la luz encendida, la música se para y pierdes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Disco'); IF Light.level > 60 AND Motion.detected() THEN Audio.play('Scratch') AND GameOver()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Caja de Música Mecánica",
+    "originalIdeaDescription": "Girar el dispositivo (Motion) hace sonar la música. La luz modifica la canción (Mayor con luz, Menor con oscuridad).",
+    "transformedIdeaTitle": "Cajita Musical Encantada",
+    "transformedIdeaDescription": "Gira sobre ti mismo o rota el dispositivo para dar cuerda a la cajita. La música sonará a la velocidad de tu giro. Si estás bajo una lámpara, la canción será alegre. Si vas a un rincón oscuro, la misma canción se volverá triste y melancólica.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Speed = Motion.rotationSpeed; Mode = (Light.level > 50) ? 'Major' : 'Minor'; Audio.play('Song', Speed, Mode)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Detector de Amanecer para Gallos",
+    "originalIdeaDescription": "El usuario actúa como gallo. Debe dormir (quieto) en la oscuridad. Cuando sube la luz, debe agitar las alas (Motion) y el audio hace 'Kikirikí'.",
+    "transformedIdeaTitle": "El Gallo Madrugador",
+    "transformedIdeaDescription": "Eres el gallo de la granja. Duerme (quieto y oscuro). Cuando tu profesor encienda la luz (Amanecer), despierta, agita los brazos (Motion) para aletear y el dispositivo cantará '¡Kikirikí!'. Gana quien reaccione más rápido a la luz.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.trend('Up') AND Motion.shake() THEN Audio.play('Rooster')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Espada de Energía Solar",
+    "originalIdeaDescription": "Cargar la espada apuntando al sol (Light). Blandirla (Motion) hace sonidos de sable de luz.",
+    "transformedIdeaTitle": "Caballero del Sol",
+    "transformedIdeaDescription": "Tu espada necesita energía solar. Apunta al cielo o una lámpara para cargar (sonido de carga ascendente). Cuando esté al 100%, haz movimientos de corte en el aire. El sensor de movimiento disparará los sonidos de batalla 'Wosh! Swish!'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge += Light.level; IF Charge == 100 AND Motion.swing() THEN Audio.play('SaberSound')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Simulador de Paracaidismo",
+    "originalIdeaDescription": "Caída libre (agitar por viento). Al llegar a cierta 'altura' (luz cambia o tiempo), tirar de la cuerda (gesto brusco).",
+    "transformedIdeaTitle": "Salto Base Extremo",
+    "transformedIdeaDescription": "Saltas del avión. El viento ruge (Audio). Agita el dispositivo para simular la turbulencia de la caída libre. Observa el sensor de luz: cuando pases de la luz a la sombra (simulando entrar en las nubes), haz un gesto fuerte hacia arriba para abrir el paracaídas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('Wind'); IF Light.change('Dark') AND Motion.jerk('Up') THEN Audio.play('ParachuteOpen') ELSE Audio.play('Splat')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Motion"],
+    "originalIdeaTitle": "Robot Explorador de Marte",
+    "originalIdeaDescription": "El robot avanza (Motion tilt). Si entra en una tormenta de polvo (Luz baja), debe detenerse y emitir señal de ayuda.",
+    "transformedIdeaTitle": "Rover Marciano",
+    "transformedIdeaDescription": "Conduce el Rover inclinando el dispositivo. El motor suena (Audio). De repente, una tormenta de arena oscurece el sensor (cubre la luz). ¡Detente inmediatamente! (Motion 0). Si sigues avanzando a ciegas, chocarás y perderás la misión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 (Storm) AND Motion.isMoving() THEN Audio.play('Crash'); ELSE Audio.play('Engine')"
+  }
+]

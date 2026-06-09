@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Batería de 360 Grados",
+    "originalIdeaDescription": "El usuario está en el centro de una batería virtual. Si apunta al Norte suena el bombo, al Este la caja, al Sur los toms y al Oeste el platillo. El audio reproduce una pista base de guitarra.",
+    "transformedIdeaTitle": "El Baterista Giratorio",
+    "transformedIdeaDescription": "Conviértete en una estrella de rock. El Audio Player toca una melodía de guitarra. Tu misión es girar tu cuerpo (Brújula) hacia los puntos cardinales correctos para golpear los tambores virtuales en el momento justo y acompañar la canción.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('GuitarBacking'); IF Compass.heading == 'North' THEN Drum.play('Kick'); ELSE IF Compass.heading == 'East' THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Radar de Tesoros Sonoro",
+    "originalIdeaDescription": "El usuario busca un tesoro invisible. El audio da pistas verbales ('Frío, Caliente'). Cuando la brújula apunta al tesoro, el tambor empieza a tocar un ritmo que se acelera.",
+    "transformedIdeaTitle": "Buscadores de Oro Ciego",
+    "transformedIdeaDescription": "Encuentra el oro enterrado. Escucha al narrador (Audio) darte pistas. Gira lentamente. Cuando tu brújula se alinee con el tesoro, el Tambor empezará a latir. ¡Cuanto más preciso sea tu rumbo, más rápido sonará el tambor hasta encontrar el cofre!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Diff = Abs(Compass.heading - TreasureAngle); Drum.bpm = 100 - Diff; IF Diff < 5 THEN Audio.play('Win')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Navegación de Barco Vikingo",
+    "originalIdeaDescription": "La brújula controla el timón del barco. El audio reproduce el sonido del mar. El tambor marca el ritmo de los remeros, que debe ser constante para avanzar.",
+    "transformedIdeaTitle": "Capitán del Drakkar",
+    "transformedIdeaDescription": "Guía a tu tripulación vikinga a través de la tormenta. Mantén el rumbo hacia el Oeste (Compass) para no naufragar. El Audio reproduce olas chocando. El Tambor marcará el ritmo de remo: si te desvías del rumbo, el ritmo se vuelve caótico y el barco se detiene.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('Waves'); IF Compass.heading == 'West' THEN Drum.loop('RowingBeat', steady=TRUE) ELSE Drum.play('Chaos')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Simón Dice: Puntos Cardinales",
+    "originalIdeaDescription": "El audio dice una dirección ('¡Norte!'). El usuario debe girar. Si acierta, el tambor toca un sonido de victoria. Si falla, suena un error.",
+    "transformedIdeaTitle": "El Comandante de la Brújula",
+    "transformedIdeaDescription": "Sigue las órdenes del Comandante. Si el Audio grita '¡SUR!', gira rápido. Si lo haces bien y rápido, el Tambor tocará una fanfarria militar. Si te equivocas de dirección, sonarás como un pato.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Target = RandomDir(); Audio.say(Target); WAIT(2s); IF Compass.heading == Target THEN Drum.play('Fanfare') ELSE Drum.play('Fail')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Caja Fuerte de Combinación",
+    "originalIdeaDescription": "El usuario debe girar a grados específicos (ej. 45°, 90°). Al llegar al grado exacto, el tambor hace un 'click' seco. Al completar la secuencia, el audio dice 'Abierto'.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Abre la bóveda secreta. Gira el dispositivo con precisión milimétrica. Escucha atentamente: el Tambor hará un sonido de 'clic' metálico solo cuando estés en el ángulo exacto. Encuentra los tres números secretos para que el Audio anuncie '¡Acceso Concedido!'",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == SecretNum1 THEN Drum.play('Click'); UnlockedSteps++; IF UnlockedSteps == 3 THEN Audio.play('OpenSound')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Safari de Animales Invisibles",
+    "originalIdeaDescription": "El audio reproduce el sonido de un animal (ej. León). El usuario debe girar la brújula hacia el hábitat correcto (Sur = África). Si acierta, el tambor simula una foto.",
+    "transformedIdeaTitle": "Fotógrafo de Naturaleza",
+    "transformedIdeaDescription": "Escucha... ¿es eso un oso polar? (Audio). Gira rápidamente hacia el Norte (Compass). Si apuntas al lugar correcto del mundo, el Tambor disparará el obturador de la cámara '¡Chak-Chak!' y ganarás puntos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Bear'); IF Compass.heading == 'North' THEN Drum.play('Shutter') AND Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Mezclador de DJ Mundial",
+    "originalIdeaDescription": "Dependiendo de la dirección, suena una base rítmica diferente en el tambor (Latino al Sur, Rock al Norte). El audio reproduce melodías que encajan.",
+    "transformedIdeaTitle": "DJ Vuelta al Mundo",
+    "transformedIdeaDescription": "Mezcla música en vivo. Gira al Sur para activar ritmos de Samba en el Tambor. Gira al Este para ritmos orientales. El Audio Player ajustará la melodía automáticamente para que coincida con tu ritmo. ¡Haz bailar a la clase!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Style = Map(Compass.heading); Drum.loop(Style.beat); Audio.play(Style.melody)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Defensa del Castillo Medieval",
+    "originalIdeaDescription": "El audio avisa por dónde vienen los enemigos ('¡Vienen del Este!'). El usuario apunta la brújula para bloquear y el tambor simula el choque de escudos.",
+    "transformedIdeaTitle": "El Caballero Guardián",
+    "transformedIdeaDescription": "Defiende la torre. El vigía grita '¡Orcos por el Oeste!' (Audio). Gira tu escudo (el dispositivo) hacia el Oeste inmediatamente. Si llegas a tiempo, el Tambor resonará con un golpe metálico '¡CLANG!' bloqueando el ataque.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.say('Enemy East'); WAIT(1s); IF Compass.heading == 'East' THEN Drum.play('ShieldHit') ELSE Audio.play('Damage')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Ceremonia de la Lluvia",
+    "originalIdeaDescription": "El usuario debe mirar a los 4 puntos cardinales en orden. En cada punto, el tambor toca un elemento (trueno) y el audio viento.",
+    "transformedIdeaTitle": "El Chamán del Clima",
+    "transformedIdeaDescription": "Invoca la tormenta. Gira al Norte y el Tambor hará sonar un trueno lejano. Gira al Sur y el Audio traerá el viento. Completa el círculo para desatar la lluvia torrencial.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Drum.play('Thunder'); IF SequenceComplete() THEN Audio.play('HeavyRain')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Aterrizaje de Avión Ciego",
+    "originalIdeaDescription": "El usuario es un piloto en la niebla. El audio es la torre de control. Debe alinear la brújula con la pista. El tambor marca la distancia al suelo.",
+    "transformedIdeaTitle": "Piloto de Emergencia",
+    "transformedIdeaDescription": "¡No se ve nada! Escucha a la torre: 'Corrija rumbo 180 grados' (Audio). Gira hasta alinear la brújula. El Tambor sonará lento al principio y muy rápido cuando estés a punto de tocar tierra. ¡Aterriza suavemente!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = 180; Error = Abs(Compass.heading - Target); IF Error == 0 THEN Drum.play('Touchdown') ELSE Audio.play('Warning')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Cazafantasmas con Radar",
+    "originalIdeaDescription": "El audio reproduce ruido estático (EMF). Al apuntar al fantasma, el ruido para y el tambor empieza a golpear como un corazón.",
+    "transformedIdeaTitle": "Investigador Paranormal",
+    "transformedIdeaDescription": "Rastrea la señal. El Audio emite estática de radio. Gira por la habitación. Cuando la brújula apunte al ente, la estática se detendrá y escucharás un latido de corazón fantasmal en el Tambor. ¡No te asustes!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('Static'); IF Compass.heading == GhostDir THEN Audio.stop() AND Drum.loop('Heartbeat')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Entrenador de Boxeo",
+    "originalIdeaDescription": "El audio indica el golpe ('¡Gancho izquierdo!'). El usuario gira el cuerpo (brújula) y el tambor suena el impacto.",
+    "transformedIdeaTitle": "Campeón de Peso Pesado",
+    "transformedIdeaDescription": "Sube al ring. El entrenador grita '¡Esquiva derecha!' (Audio). Gira tu cuerpo rápidamente hacia la derecha. Si eres rápido, el Tambor sonará '¡Bam!' confirmando que has contraatacado con éxito.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.say('Dodge Right'); Timer.start(); IF Compass.heading == 'East' AND Timer < 1s THEN Drum.play('Punch')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Reloj de Cuco Direccional",
+    "originalIdeaDescription": "El dispositivo funciona como la aguja de un reloj. Al apuntar a las 12 (Norte), el tambor da 12 golpes y el audio hace el sonido de cuco.",
+    "transformedIdeaTitle": "El Relojero Loco",
+    "transformedIdeaDescription": "Pon en hora el reloj gigante. Gira hacia las 3 en punto (Este). El Tambor debe dar exactamente 3 campanadas. Gira a las 6 (Sur) y dará 6. Aprende los ángulos mientras el Audio hace tictac.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Hour = Map(Compass.heading); Drum.hits(Hour); Audio.play('Cuckoo')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Audio anuncia aviones llegando. Usuario debe asignar pista (dirección). Tambor confirma despegue/aterrizaje.",
+    "transformedIdeaTitle": "Torre de Control",
+    "transformedIdeaDescription": "Avión aproximándose por el sector Norte. Gira la brújula para darle permiso de aterrizaje. Si tardas, el Audio suena alarma de colisión. Si aciertas, el Tambor hace el sonido de las ruedas tocando pista.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.alert('Plane North'); IF Compass.heading == 'North' THEN Drum.play('Land') AND Score++"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Juego de Baile Robot",
+    "originalIdeaDescription": "El audio toca música tecno. Instrucciones visuales o de audio dicen 'Giro 90 grados'. El tambor marca el beat.",
+    "transformedIdeaTitle": "Robot Dance Revolution",
+    "transformedIdeaDescription": "Baila como un robot. El Tambor marca un ritmo constante. El Audio dice '¡Giro Derecha!'. Debes girar exactamente 90 grados al ritmo del beat. Si pierdes el ritmo o el ángulo, la música se apaga.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Drum.loop('Techno'); Audio.say('Turn'); IF Compass.delta == 90 THEN KeepPlaying() ELSE Stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Narrador de Historias Interactivo",
+    "originalIdeaDescription": "Cuento de 'Elige tu propia aventura'. Gira al Norte para ir al bosque, al Sur para la cueva. El tambor hace efectos de pasos.",
+    "transformedIdeaTitle": "Cuentacuentos Mágico",
+    "transformedIdeaDescription": "Escucha la historia. 'Llegas a un cruce. Al Norte oyes lobos (Audio: aullido), al Sur oyes el mar'. Gira para elegir tu destino. El Tambor simulará tus pasos caminando hacia la nueva aventura.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Choice'); IF Compass.heading == 'North' THEN Drum.play('Steps'); Audio.play('WolfStory')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Afinador de Orquesta Espacial",
+    "originalIdeaDescription": "Cada dirección es un instrumento. El usuario debe encontrar dónde suena desafinado (Audio) y arreglarlo con un golpe de tambor.",
+    "transformedIdeaTitle": "Director de la Galaxia",
+    "transformedIdeaDescription": "La orquesta espacial ensaya. Gira alrededor. Si escuchas un instrumento desafinado en el Audio, detente ahí y golpea el botón (activando el Tambor) para 'golpear' el atril y corregir al músico.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == BadInstrumentAngle THEN Audio.play('BadNote'); IF Drum.triggered() THEN Audio.play('GoodNote')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Escultor de Paisajes Sonoros",
+    "originalIdeaDescription": "El usuario 'pinta' sonidos en el aire. Deja un ritmo de tambor en el Norte, y una melodía de audio en el Sur.",
+    "transformedIdeaTitle": "Arquitecto de Sonido Invisible",
+    "transformedIdeaDescription": "Crea una habitación musical. Gira al Norte y programa un ritmo de hip-hop en el Tambor. Gira al Sur y deja sonando un violín en el Audio. Ahora, al girar por la habitación, la música cambiará según hacia dónde mires.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Map.add('North', Drum.Beat1); Map.add('South', Audio.Violin); Play(Map.get(Compass.heading))"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Detector de Mentiras",
+    "originalIdeaDescription": "Juego social. Un jugador pregunta, el otro gira la brújula. Norte = Verdad (Audio 'Ding'), Sur = Mentira (Tambor grave).",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga a tu amigo. Haz una pregunta. Él girará el dispositivo oculto. Si apunta al Norte, el Audio dirá '¡VERDAD!'. Si apunta al Sur, el Tambor hará un sonido dramático de '¡DUN-DUN-DUN!' revelando la mentira.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading < 180 THEN Audio.play('Ding') ELSE Drum.play('Dramatic')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Compass", "Musical Drum"],
+    "originalIdeaTitle": "Simulador de Tenis para Ciegos",
+    "originalIdeaDescription": "Audio de pelota rebotando de izq a der. Usuario debe girar para interceptar. Tambor suena al golpear.",
+    "transformedIdeaTitle": "Tenis Sonoro",
+    "transformedIdeaDescription": "La pelota viene de la izquierda (Audio en estéreo). Gira tu 'raqueta' (Brújula) hacia la izquierda rápidamente. Si interceptas la pelota en el ángulo correcto, el Tambor sonará un golpe seco '¡POC!' devolviéndola al rival.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BallPos = TimeFunction(); IF Compass.heading == BallPos THEN Drum.play('Hit') ELSE Audio.play('Miss')"
+  }
+]

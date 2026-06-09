@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad Portátil Personalizable",
+    "originalIdeaDescription": "Este sistema funciona como una alarma antirrobo básica para objetos personales. El usuario utiliza el Interruptor para armar o desarmar el sistema de seguridad. Una vez que el sistema está armado (Interruptor encendido), el Sensor de Movimiento comienza a monitorear cualquier perturbación física. Si se detecta un movimiento significativo, el Reproductor de Audio emite inmediatamente un sonido de sirena fuerte y continuo para alertar al propietario y disuadir al ladrón potencial.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Protege tu botín de oro! En esta actividad, programarás un cofre del tesoro inteligente. Usarás el Interruptor como una llave secreta para activar la seguridad antes de irte a dormir. Si algún pirata rival intenta mover tu cofre (detectado por el sensor de movimiento), el sistema debe reproducir una advertencia aterradora o el sonido de cañones disparando para asustarlos.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaking() THEN AudioPlayer.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de Sonido Gestual",
+    "originalIdeaDescription": "Un dispositivo diseñado para actores de teatro o narradores que permite añadir efectos de sonido en tiempo real mediante gestos. El Interruptor sirve para cambiar entre diferentes bancos de sonido (por ejemplo, sonidos de naturaleza vs. sonidos urbanos). Cuando el usuario realiza un movimiento brusco con el dispositivo, el Sensor de Movimiento activa el Reproductor de Audio para tocar el efecto seleccionado, permitiendo una sincronización perfecta con la acción en vivo.",
+    "transformedIdeaTitle": "La Varita Mágica de Efectos Especiales",
+    "transformedIdeaDescription": "Conviértete en un mago del cine. Vas a crear una varita que hace ruidos mágicos cuando la agitas. El botón servirá para cambiar el tipo de hechizo: modo 'Fuego' o modo 'Hielo'. Cuando agites la varita en el aire, deberá sonar una explosión o un viento helado dependiendo del modo que hayas seleccionado con el interruptor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOff() AND Motion.detect() THEN Audio.play('fire') ELSE IF Switch.isOn() AND Motion.detect() THEN Audio.play('ice')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Vehículo Interactivo",
+    "originalIdeaDescription": "Este proyecto simula la experiencia acústica de conducir un vehículo. El Interruptor actúa como la llave de encendido del coche; si está apagado, no ocurre nada. Al encenderlo, se activa el sistema. El Sensor de Movimiento detecta la inclinación del dispositivo: al inclinarlo hacia adelante (acelerar), el Reproductor de Audio cambia el tono o reproduce un sonido de motor revolucionándose, simulando la aceleración física.",
+    "transformedIdeaTitle": "Simulador de Moto de Carreras",
+    "transformedIdeaDescription": "¡Arranca motores! Vamos a construir el manubrio de una moto de carreras. Primero, usa el interruptor para 'encender' la moto (escucharás el arranque). Luego, inclina tu dispositivo hacia adelante para acelerar a fondo y escuchar el rugido del motor. Si lo pones plano, el motor se queda en ralentí. ¡Cuidado con las curvas!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.tiltForward() THEN Audio.play('rev_engine') ELSE Audio.play('idle_engine'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador Personal de Saltos Automatizado",
+    "originalIdeaDescription": "Un dispositivo vestible para ejercicio físico que cuenta las repeticiones de saltos. El usuario activa el modo de entrenamiento mediante el Interruptor. Cada vez que el Sensor de Movimiento detecta un pico de aceleración vertical (un salto), el sistema registra el evento y el Reproductor de Audio emite un sonido de confirmación o un conteo verbal, motivando al usuario a continuar con su rutina de ejercicios.",
+    "transformedIdeaTitle": "El Desafío del Canguro Saltarín",
+    "transformedIdeaDescription": "¡A ver qué tan alto saltas! Crea un dispositivo que te ayude a entrenar como un canguro. Activa el 'Modo Entrenamiento' con el interruptor. Cada vez que saltes y aterrices, el sensor sentirá el impacto y hará un sonido de '¡Boing!' o contará tus saltos. ¡Intenta llegar a 10 saltos seguidos sin parar!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.accelerationZ > threshold THEN Audio.play('boing')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juguete de Mascota Virtual Sonora",
+    "originalIdeaDescription": "Una recreación de una mascota digital sin pantalla. El Interruptor determina el estado de la mascota: 'Dormida' o 'Despierta'. Si está despierta y el usuario agita el dispositivo suavemente (como si la acariciara o jugara con ella), el Sensor de Movimiento lo detecta y el Reproductor de Audio emite sonidos de felicidad (ladridos, maullidos). Si se agita demasiado fuerte, emite sonidos de queja.",
+    "transformedIdeaTitle": "Tu Propio Monstruo de Bolsillo",
+    "transformedIdeaDescription": "Adopta un monstruo invisible. Usa el interruptor para despertarlo de su siesta. Una vez despierto, le encanta que lo mezan suavemente; si lo haces, ronroneará. Pero ten cuidado, si lo agitas muy fuerte se mareará y hará sonidos graciosos de queja. ¡Aprende a cuidar a tu criatura digital!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.shakeLevel() == 'gentle' THEN Audio.play('purr') ELSE IF Motion.shakeLevel() == 'hard' THEN Audio.play('dizzy'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Musical Aleatoria",
+    "originalIdeaDescription": "Un instrumento musical experimental donde el movimiento genera ritmos. El Interruptor selecciona entre dos géneros musicales (ej. Rock o Hip-Hop). El Sensor de Movimiento detecta la velocidad de agitación del usuario. Al agitar el dispositivo, el Reproductor de Audio dispara loops de batería que se sincronizan con la intensidad del movimiento, permitiendo crear música de forma kinestésica.",
+    "transformedIdeaTitle": "La Maraca del Futuro",
+    "transformedIdeaDescription": "¡Forma tu propia banda! Vas a programar una maraca electrónica. Usa el interruptor para elegir si quieres tocar música Rock o Salsa. Luego, agita tu dispositivo al ritmo de la canción. Si dejas de moverte, la música para. ¡Mantén el ritmo para que la fiesta continúe!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() AND Motion.isMoving(): Audio.playLoop(genre_selected)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inverso",
+    "originalIdeaDescription": "Una variante electrónica del juego de las estatuas. El Interruptor inicia y detiene la ronda del juego. Mientras el juego está activo, los jugadores deben permanecer completamente inmóviles. El Sensor de Movimiento monitorea cualquier micro-movimiento. Si detecta movimiento, el Reproductor de Audio emite un sonido de 'eliminado' o una alarma, indicando que el jugador ha perdido la ronda.",
+    "transformedIdeaTitle": "Desafío Ninja: ¡No te Muevas!",
+    "transformedIdeaDescription": "Entrena tus habilidades ninja de sigilo. Activa el 'Modo Sigilo' con el interruptor y quédate totalmente congelado. El sensor de movimiento estará vigilando. Si te mueves aunque sea un milímetro, sonará una alarma y habrás sido descubierto por los guardias. ¿Cuánto tiempo puedes aguantar sin moverte?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.magnitude > 0 THEN Audio.play('alarm_buzzer')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Educativo",
+    "originalIdeaDescription": "Un modelo científico para explicar la sismología. El dispositivo se coloca sobre una mesa 'terrestre'. El Interruptor reinicia el sistema y establece el nivel base de estabilidad. Cuando se simula un terremoto moviendo la mesa, el Sensor de Movimiento detecta la vibración. Dependiendo de la intensidad, el Reproductor de Audio reproduce un sonido de estruendo suave o fuerte, indicando la magnitud del sismo.",
+    "transformedIdeaTitle": "Estación Sismológica Casera",
+    "transformedIdeaDescription": "Conviértete en geólogo por un día. Construiremos un detector de terremotos. Coloca tu sensor en la mesa y activa el sistema con el interruptor. Golpea la mesa suavemente para simular un temblor pequeño (sonido suave) o sacúdela fuerte para un gran terremoto (sonido de derrumbe). ¡Aprende cómo los científicos miden la fuerza de la tierra!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.shake > 5 THEN Audio.play('loud_rumble') ELSE IF Motion.shake > 1 THEN Audio.play('soft_rumble'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Guía de Meditación con Feedback Sonoro",
+    "originalIdeaDescription": "Dispositivo para ayudar a la concentración y la quietud. El usuario enciende el dispositivo con el Interruptor para iniciar la sesión. El sistema busca la quietud absoluta a través del Sensor de Movimiento. Si el usuario está quieto, se reproduce música relajante. Si el usuario se mueve o se inquieta, el audio se detiene o cambia a un tono disonante suave para recordarle volver a la quietud.",
+    "transformedIdeaTitle": "El Maestro Zen",
+    "transformedIdeaDescription": "¿Puedes controlar tu cuerpo y mente? Enciende el 'Modo Zen'. Si logras quedarte muy quieto, escucharás el sonido relajante de un río y pájaros. Pero si te mueves demasiado, el sonido se cortará. Intenta mantener la música sonando el mayor tiempo posible respirando suavemente.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.isStill() THEN Audio.play('nature_sounds') ELSE Audio.stop())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Espada Láser con Sonidos Dinámicos",
+    "originalIdeaDescription": "Juguete interactivo que simula una espada de energía de películas de ciencia ficción. El Interruptor enciende el 'haz de luz' con un sonido de activación característico. El Sensor de Movimiento rastrea el movimiento del dispositivo en el espacio. Al moverlo suavemente, produce un zumbido constante; al moverlo bruscamente (golpe), el Reproductor de Audio emite sonidos de choque o impacto.",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. Al presionar el interruptor, escucharás cómo se enciende tu arma. Ahora, muévela por el aire: si la mueves despacio, escucharás el clásico zumbido. Si haces un movimiento rápido de ataque, ¡sonará como si chocara contra otra espada! Que la fuerza te acompañe.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.accel > high THEN Audio.play('clash') ELSE Audio.play('hum'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Lavado de Manos",
+    "originalIdeaDescription": "Dispositivo para fomentar la higiene correcta. Se coloca en el dispensador de jabón o en la muñeca. El Interruptor activa el temporizador de lavado. El Sensor de Movimiento detecta el frotado vigoroso de las manos. Mientras se detecte movimiento constante, el Reproductor de Audio toca una canción de 20 segundos. Si el niño deja de frotarse antes de tiempo, la música se pausa, animándolo a completar el ciclo.",
+    "transformedIdeaTitle": "DJ Lavado de Manos",
+    "transformedIdeaDescription": "¡Lavarse las manos nunca fue tan divertido! Pega este sensor en tu muñeca. Cuando empieces a lavarte, activa el interruptor. Mientras frotes tus manos con energía, sonará tu canción favorita. Si te detienes, la música para. ¡Debes mantener la música sonando hasta que termine la canción para tener las manos súper limpias!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaking() THEN Audio.play('wash_song') ELSE Audio.pause()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Vuelo de Avión",
+    "originalIdeaDescription": "Una interfaz física para simular el vuelo. El Interruptor controla el estado de los motores (encendido/apagado). El Sensor de Movimiento actúa como el yugo o palanca de mando. Al inclinar hacia la izquierda o derecha, el Reproductor de Audio ajusta el balance del sonido estéreo o reproduce sonidos de viento específicos para indicar el giro, creando una experiencia inmersiva de pilotaje.",
+    "transformedIdeaTitle": "Capitán de Aerolínea",
+    "transformedIdeaDescription": "Toma los controles, capitán. Enciende los motores con el interruptor y prepárate para despegar. Inclina tu 'avión' (el sensor) hacia arriba para subir y escuchar el viento. Si inclinas mucho a los lados para girar, escucharás las alarmas de altitud. ¡Intenta mantener el vuelo suave para tus pasajeros!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.tiltLeft() THEN Audio.play('wind_left') ELSE IF Motion.tiltRight() THEN Audio.play('wind_right'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas y Respuestas (Magic 8-Ball)",
+    "originalIdeaDescription": "Una versión digital de la bola mágica de predicciones. El usuario hace una pregunta en voz alta y usa el Interruptor para 'preparar' la respuesta. Luego, debe agitar el dispositivo. El Sensor de Movimiento detecta la agitación y, al detenerse, el Reproductor de Audio selecciona aleatoriamente una respuesta pregrabada (Sí, No, Tal vez) y la reproduce.",
+    "transformedIdeaTitle": "El Oráculo del Futuro",
+    "transformedIdeaDescription": "Crea un adivino electrónico. Primero, haz una pregunta sobre tu futuro (por ejemplo: '¿Sacaré buena nota?'). Luego presiona el interruptor para activar el oráculo y agita la caja para mezclar las respuestas místicas. Cuando dejes de agitar, el oráculo te hablará y revelará tu destino. ¡Programa diferentes respuestas!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.wasPressed() AND Motion.shakeEnds() THEN Audio.playRandom(['yes', 'no', 'maybe'])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivelación Auditiva",
+    "originalIdeaDescription": "Una herramienta utilitaria para personas con discapacidad visual o para colgar cuadros. El Interruptor enciende la herramienta. El Sensor de Movimiento mide la inclinación respecto al eje horizontal. El Reproductor de Audio emite tonos: un tono agudo si está inclinado a la derecha, grave a la izquierda, y un tono continuo y agradable cuando está perfectamente nivelado.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "¿Puedes nivelar una estantería con los ojos cerrados? Vamos a crear una herramienta que usa sonido en lugar de burbujas. Enciéndela y colócala sobre una superficie. Si se inclina a un lado, escucharás un sonido 'bip-bip' rápido. Tu misión es moverla hasta escuchar un tono largo y continuo, ¡eso significa que está perfectamente recta!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.angle == 0 THEN Audio.play('success') ELSE IF Motion.angle > 0 THEN Audio.play('high_pitch') ELSE Audio.play('low_pitch')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Puerta Inteligente con Timbre",
+    "originalIdeaDescription": "Simulación de una entrada doméstica inteligente. El Sensor de Movimiento se coloca en la puerta para detectar cuando esta se abre (cambio de ángulo o vibración). El Interruptor funciona como un modo de 'No Molestar'. Si el interruptor está apagado y la puerta se mueve, el Reproductor de Audio hace sonar un timbre de bienvenida. Si el interruptor está encendido, el sistema permanece en silencio.",
+    "transformedIdeaTitle": "Timbre de Habitación Automático",
+    "transformedIdeaDescription": "¡Privacidad total! Pon este sensor en la puerta de tu cuarto. Si alguien abre la puerta, sonará un timbre de bienvenida o un sonido gracioso. Pero, si quieres dormir y no quieres que nadie entre, activa el interruptor de 'No Molestar' para que el timbre se apague y puedas descansar en paz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() AND Motion.detectMovement() THEN Audio.play('doorbell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Batidora de Cocina Simulada",
+    "originalIdeaDescription": "Juguete de rol para cocina. El Interruptor actúa como el botón de encendido principal. El niño debe agitar el dispositivo (como si fuera un vaso mezclador o shaker) para 'mezclar' los ingredientes. El Sensor de Movimiento mide la intensidad. El Reproductor de Audio reproduce sonidos de líquidos mezclándose o hielo chocando, que se vuelven más intensos cuanto más rápido se agita el dispositivo.",
+    "transformedIdeaTitle": "Chef de Batidos Locos",
+    "transformedIdeaDescription": "¡Es hora de cocinar! Vamos a hacer el batido más rápido del mundo. Enciende tu licuadora con el interruptor. Ahora, agita el sensor como si fuera tu vaso mezclador. Escucharás cómo se trituran las frutas y el hielo. ¡Agita más rápido para que el motor suene a máxima potencia y tu batido quede delicioso!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Audio.play('blender_sound', speed=Motion.shakeSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Parlante",
+    "originalIdeaDescription": "Un podómetro básico con retroalimentación auditiva. El Interruptor se usa para iniciar o reiniciar el conteo. El dispositivo se lleva en la cintura o zapato. El Sensor de Movimiento detecta el impacto de cada paso. En lugar de una pantalla, el Reproductor de Audio anuncia el número de pasos cada 10 pasos (ej. 'Diez', 'Veinte') para mantener al usuario informado sin mirar.",
+    "transformedIdeaTitle": "Explorador de la Selva",
+    "transformedIdeaDescription": "Estamos en una expedición. Necesitamos contar nuestros pasos para encontrar el tesoro. Engancha el sensor a tu zapato y enciende el interruptor. Empieza a caminar. Cada 10 pasos, tu guía virtual te dirá cuánto has avanzado. ¡Intenta llegar a los 100 pasos para encontrar la ciudad perdida!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.stepDetected() THEN (count++; IF count % 10 == 0 THEN Audio.say(count))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Tormentas Portátil",
+    "originalIdeaDescription": "Dispositivo para crear ambientación sonora. El Interruptor cambia el estado del clima de 'Calma' a 'Tormenta'. En modo Tormenta, el Sensor de Movimiento reacciona a sacudidas. Una sacudida suave provoca sonido de lluvia; una sacudida fuerte provoca el sonido de un trueno estruendoso a través del Reproductor de Audio.",
+    "transformedIdeaTitle": "El Dios del Trueno",
+    "transformedIdeaDescription": "Toma el control del clima. Usa el interruptor para traer las nubes de tormenta. Ahora, inclina suavemente el sensor para hacer que llueva despacito. Cuando estés listo, ¡sacúdelo con fuerza para lanzar un trueno enorme y asustar a todos! Eres el dueño de la tempestad.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.shake > hard THEN Audio.play('thunder') ELSE IF Motion.shake > soft THEN Audio.play('rain'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caña de Pescar Virtual",
+    "originalIdeaDescription": "Juego de simulación de pesca. El Interruptor se usa para 'lanzar' el anzuelo y esperar. El sistema espera un tiempo aleatorio. Cuando 'pica' un pez (simulado por el audio), el usuario debe tirar hacia atrás (Sensor de Movimiento) rápidamente. Si el movimiento es oportuno, el Reproductor de Audio reproduce sonidos de carrete recogiendo y éxito; si no, sonido de hilo rompiéndose.",
+    "transformedIdeaTitle": "Torneo de Pesca Mayor",
+    "transformedIdeaDescription": "¡Vamos a pescar! Presiona el interruptor para lanzar tu línea al agua y espera en silencio... Cuando escuches el sonido de un pez mordiendo el anzuelo, ¡tira de la caña (mueve el sensor hacia atrás) rápidamente! Si eres rápido, escucharás cómo sacas al pez; si eres lento, se escapará.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF GameState='Bite' AND Motion.pullBack() THEN Audio.play('catch_success') ELSE Audio.play('splash')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Robot Emocional Reactivo",
+    "originalIdeaDescription": "Un prototipo de interacción humano-robot. El Interruptor cambia la personalidad del robot (ej. Amigable vs. Gruñón). El Sensor de Movimiento detecta cómo se trata al robot (suave o bruscamente). El Reproductor de Audio emite 'voz' robótica. En modo Amigable, el movimiento genera risas; en modo Gruñón, el mismo movimiento genera gruñidos robóticos.",
+    "transformedIdeaTitle": "Robo-Amigo con Sentimientos",
+    "transformedIdeaDescription": "Diseña la personalidad de tu robot. Usa el interruptor para decidir si hoy está feliz o enojado. Luego, muévelo o juega con él. Si está feliz, cualquier movimiento le hará reír con voz robótica. Pero cuidado, si pusiste el interruptor en 'enojado', ¡se quejará cada vez que lo toques!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isHappy() AND Motion.detect() THEN Audio.play('robot_laugh') ELSE IF Switch.isGrumpy() AND Motion.detect() THEN Audio.play('robot_grumble')"
+  }
+]

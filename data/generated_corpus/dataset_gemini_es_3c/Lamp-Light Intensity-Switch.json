@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Iluminación Automática Residencial",
+    "originalIdeaDescription": "Un sistema básico de domótica donde el usuario activa el modo automático mediante un interruptor. Una vez activado, la lámpara se enciende automáticamente solo cuando el sensor de intensidad de luz detecta que la habitación está oscura.",
+    "transformedIdeaTitle": "La Guarida Inteligente de Batman",
+    "transformedIdeaDescription": "¡Ayuda a Batman a ahorrar energía en la Baticueva! Configura el sistema para que las luces de emergencia solo se activen cuando Alfred active el 'Sistema Maestro' (Interruptor) y los sensores detecten que ha caído la noche sobre Gotham (Baja intensidad de luz).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 20 THEN Lamp.turnOn()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Regulador de Brillo Inverso para Lectura",
+    "originalIdeaDescription": "Un dispositivo de ayuda visual que utiliza un interruptor para encenderse. Una vez encendido, ajusta el brillo de la lámpara de forma inversa a la luz ambiental: cuanto más oscuro está el entorno, más brilla la lámpara para compensar.",
+    "transformedIdeaTitle": "El Libro Mágico del Hechicero",
+    "transformedIdeaDescription": "Estás diseñando un libro de hechizos que brilla en la oscuridad. Cuando el joven mago abre el libro (activa el Interruptor), la página debe iluminarse (Lámpara) con más fuerza cuanto más oscura sea la mazmorra, para que siempre pueda leer sus conjuros.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setBrightness(100 - LightIntensity.value)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad de Caja Fuerte",
+    "originalIdeaDescription": "Un sistema de seguridad para un contenedor cerrado. El interruptor arma la alarma. Si el sistema está armado y el sensor detecta luz (indicando que la caja ha sido abierta o perforada), la lámpara parpadea en rojo como advertencia.",
+    "transformedIdeaTitle": "Trampa para Ladrones de Diamantes",
+    "transformedIdeaDescription": "Protege el diamante más grande del museo. Activa la seguridad con el Interruptor. Si un ladrón abre la caja fuerte y entra luz (detectada por el sensor), la Lámpara debe parpadear en rojo furioso para alertar a los guardias.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value > 10 THEN Lamp.blink('red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Luciérnaga Electrónica",
+    "originalIdeaDescription": "Un juguete electrónico que imita el comportamiento de una luciérnaga. El interruptor enciende el juguete. La 'luciérnaga' (Lámpara) solo brilla suavemente cuando el sensor detecta que es de noche o está en un lugar oscuro.",
+    "transformedIdeaTitle": "Mascota Robot: La Luciérnaga Tímida",
+    "transformedIdeaDescription": "Crea una mascota digital que vive en un frasco. Cuando despiertas a tu luciérnaga (Interruptor ON), ella es muy tímida y solo encenderá su luz amarilla (Lámpara) si cubres el sensor con tu mano para simular la oscuridad total.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 5 THEN Lamp.setColor('yellow')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Insuficiencia de Luz para Plantas",
+    "originalIdeaDescription": "Un dispositivo para invernaderos. El interruptor activa el monitoreo. Si la luz solar natural cae por debajo de un nivel crítico para la fotosíntesis, la lámpara se enciende en un color específico (violeta) para suplementar la luz.",
+    "transformedIdeaTitle": "El Jardinero de Marte",
+    "transformedIdeaDescription": "Estás cultivando papas en Marte. Activa el soporte vital (Interruptor). Si una tormenta de arena bloquea el sol (baja Intensidad de Luz), enciende las luces de crecimiento violetas (Lámpara) automáticamente para que tus plantas no mueran.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 40 THEN Lamp.setColor('purple')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo Óptico con Repetidor",
+    "originalIdeaDescription": "Un sistema de comunicación donde el interruptor habilita el modo de recepción. El usuario envía señales con una linterna al sensor de luz, y la lámpara repite esos destellos, permitiendo transmitir el mensaje a mayor distancia.",
+    "transformedIdeaTitle": "Estación de Espías: Código Morse",
+    "transformedIdeaDescription": "¡Transmite mensajes secretos a través del valle! Enciende la estación (Interruptor). Usa una linterna sobre el sensor de luz para enviar puntos y rayas; programa la Lámpara para que se encienda y apague en sincronía exacta con la luz que recibe el sensor.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setState(LightIntensity.value > 50)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Cortesía para Automóviles",
+    "originalIdeaDescription": "Simulación de luces automáticas de un coche. El interruptor actúa como el motor de arranque. Cuando el coche entra en un túnel oscuro (sensor detecta poca luz), los faros (Lámpara) se encienden automáticamente.",
+    "transformedIdeaTitle": "El Coche Autónomo del Futuro",
+    "transformedIdeaDescription": "Programa los faros de un coche inteligente. Primero, enciende el motor (Interruptor). Luego, asegura que si el coche entra en un túnel oscuro (Sensor de Luz bajo), los faros (Lámpara blanca) se enciendan solos para evitar accidentes.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 30 THEN Lamp.setColor('white')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Carga Solar",
+    "originalIdeaDescription": "Un panel de control donde el interruptor conecta la batería. El sensor mide la luz solar disponible. La lámpara cambia de color (Rojo a Verde) indicando si la luz actual es suficiente para cargar la batería eficientemente.",
+    "transformedIdeaTitle": "Recargando al Robot Explorador",
+    "transformedIdeaDescription": "Tu robot necesita energía solar. Activa el modo de carga (Interruptor). Si hay mucho sol (Alta Intensidad), pon la Lámpara en Verde (Cargando rápido). Si está nublado (Baja Intensidad), ponla en Rojo (Batería no cargando).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF LightIntensity > 80 THEN Lamp.green() ELSE Lamp.red())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Linterna de Exploración Submarina",
+    "originalIdeaDescription": "El interruptor enciende el equipo de buceo. A medida que el sensor detecta menos luz (mayor profundidad), la lámpara cambia de color hacia tonos azules o cian para simular el ambiente de las profundidades marinas.",
+    "transformedIdeaTitle": "Buceo en la Fosa de las Marianas",
+    "transformedIdeaDescription": "Prepara tu submarino (Interruptor ON). A medida que desciendes y la luz del sol desaparece (el sensor detecta oscuridad), enciende los reflectores de alta potencia (Lámpara Cian) para descubrir monstruos marinos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 10 THEN Lamp.setColor('cyan')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuarto Oscuro de Fotografía",
+    "originalIdeaDescription": "Simulación de un laboratorio de revelado. El interruptor inicia la sesión. La lámpara debe mantenerse en color rojo (seguro). Si el sensor detecta una luz blanca externa brillante que podría arruinar las fotos, la lámpara parpadea para alertar.",
+    "transformedIdeaTitle": "El Laboratorio de Fotos Secretas",
+    "transformedIdeaDescription": "Estás revelando fotos de un ovni. Enciende la luz de seguridad Roja (Lámpara) con el Interruptor. Si alguien abre la puerta y entra luz blanca (Sensor > 50), haz que la lámpara se apague de inmediato para salvar la película fotográfica.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF LightIntensity > 50 THEN Lamp.off() ELSE Lamp.setColor('red'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Sombras para Teatro",
+    "originalIdeaDescription": "Utilizado en escenarios de marionetas. El interruptor activa el escenario. Cuando una marioneta pasa sobre el sensor (creando sombra), la lámpara cambia de color para crear un efecto dramático de fondo.",
+    "transformedIdeaTitle": "Director de Cine de Terror",
+    "transformedIdeaDescription": "¡Luces, cámara, acción! Activa el set (Interruptor). Cuando el villano (tu mano) cree una sombra sobre el sensor, cambia la luz de fondo (Lámpara) de Azul tranquilo a Rojo intenso para asustar a la audiencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 40 THEN Lamp.setColor('red') ELSE Lamp.setColor('blue')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Faro Costero Automatizado",
+    "originalIdeaDescription": "Un modelo de faro. El interruptor es el control maestro. El sensor detecta la caída de la noche o niebla densa (baja luz). La lámpara comienza a rotar (o parpadear) solo bajo esas condiciones para guiar a los barcos.",
+    "transformedIdeaTitle": "El Faro del Fin del Mundo",
+    "transformedIdeaDescription": "Eres el guardián del faro. Activa el mecanismo (Interruptor). Cuando llegue la tormenta y el cielo se oscurezca (Sensor de Luz bajo), haz que la Lámpara parpadee lentamente para guiar a los barcos piratas a un lugar seguro.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 25 THEN Lamp.blink(interval=1000)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Probador de Opacidad de Materiales",
+    "originalIdeaDescription": "Instrumento científico. El interruptor enciende la fuente de luz de prueba (Lámpara). Se coloca un material sobre el sensor. Dependiendo de cuánta luz atraviese el material (leída por el sensor), la lámpara cambia de color para indicar la clasificación (transparente, translúcido, opaco).",
+    "transformedIdeaTitle": "Clasificador de Cristales Mágicos",
+    "transformedIdeaDescription": "Activa el escáner (Interruptor). Coloca distintos objetos sobre el sensor. Si pasa mucha luz, la Lámpara se pone Verde (Cristal Puro). Si pasa poca luz, se pone Roja (Roca común). ¡Encuentra los cristales mágicos!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF LightIntensity > 80 THEN Lamp.green() ELSE Lamp.red())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Despertador Solar Simulado",
+    "originalIdeaDescription": "Un despertador suave. El interruptor activa el modo 'mañana'. Cuando el sensor detecta los primeros rayos de luz natural en la habitación, la lámpara se enciende gradualmente en tonos cálidos para despertar al usuario.",
+    "transformedIdeaTitle": "Despertador para Vampiros",
+    "transformedIdeaDescription": "Los vampiros odian el sol. Activa la alarma (Interruptor). Si el sensor detecta que ha salido el sol (Luz alta), enciende la Lámpara en ROJO parpadeante para despertar al vampiro y que corra a su ataúd antes de quemarse.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value > 60 THEN Lamp.blink('red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Lámpara de Humor Interactiva",
+    "originalIdeaDescription": "Una lámpara decorativa donde el interruptor cambia los modos de color. La intensidad de la luz ambiental modifica la saturación o el brillo de la lámpara, creando un ambiente que reacciona al entorno.",
+    "transformedIdeaTitle": "La Lámpara Camaleón",
+    "transformedIdeaDescription": "Crea una lámpara que se esconde. Enciende el sistema (Interruptor). Si hay mucha luz en el cuarto, la Lámpara debe brillar muy fuerte para competir. Si el cuarto está oscuro, la lámpara debe atenuarse para no molestar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setBrightness(LightIntensity.value)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Analizador de Contaminación Lumínica",
+    "originalIdeaDescription": "Herramienta educativa. El interruptor inicia la medición. El sensor mide la luz ambiental nocturna. La lámpara muestra una escala de colores (Verde=Buen cielo, Rojo=Mucha contaminación) para indicar si se pueden ver estrellas.",
+    "transformedIdeaTitle": "Cazador de Estrellas",
+    "transformedIdeaDescription": "¿Podemos ver estrellas hoy? Activa el sensor (Interruptor). Si el sensor detecta oscuridad total, la Lámpara se pone Azul (¡Saca el telescopio!). Si detecta luz de la ciudad, se pone Naranja (Mejor ver una película).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF LightIntensity < 10 THEN Lamp.blue() ELSE Lamp.orange())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reflejos con Linterna",
+    "originalIdeaDescription": "Un juego donde el interruptor inicia una ronda. La lámpara se enciende en un color aleatorio y el jugador debe apuntar una linterna al sensor rápidamente. Si el sensor detecta el pico de luz a tiempo, la lámpara cambia a verde (victoria).",
+    "transformedIdeaTitle": "Duelo de Láseres",
+    "transformedIdeaDescription": "El juego comienza cuando activas el Interruptor. La Lámpara se pone Roja (Enemigo). ¡Dispárale rápido con tu linterna (Láser)! Si el sensor detecta el disparo de luz, la Lámpara cambia a Verde (Enemigo derrotado).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value > 90 THEN Lamp.green() ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Armario Inteligente",
+    "originalIdeaDescription": "Simulación de luz de armario. El interruptor simula el estado de la puerta (mecánicamente). Sin embargo, se añade lógica: si hay luz externa suficiente (sensor), la lámpara no se enciende aunque la puerta (interruptor) esté abierta, ahorrando energía.",
+    "transformedIdeaTitle": "El Armario Mágico de Narnia",
+    "transformedIdeaDescription": "Abre la puerta del armario (Interruptor ON). Pero espera, ¡es un armario mágico! Solo debe encender su luz interna (Lámpara) si afuera es de noche (Sensor de Luz bajo). Si es de día, usa la luz del sol.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value < 30 THEN Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Ciclo de Sueño",
+    "originalIdeaDescription": "Dispositivo de salud. El interruptor activa el modo 'Dormir'. Si el usuario enciende una luz en la habitación durante la noche (sensor detecta pico), la lámpara se enciende en un tono ámbar suave para no deslumbrar, en lugar de la luz de techo fuerte.",
+    "transformedIdeaTitle": "Luz Anti-Pesadillas",
+    "transformedIdeaDescription": "Activa el modo sueño (Interruptor). Si te despiertas y enciendes una luz pequeña o entra un rayo de luna (Sensor detecta luz leve), la Lámpara brillará en un rosa suave para que te sientas seguro y vuelvas a dormir.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.value > 5 THEN Lamp.setColor('pink')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Fiesta Estroboscópico",
+    "originalIdeaDescription": "Sistema de iluminación para eventos. El interruptor enciende el modo fiesta. El sensor de luz lee los cambios rápidos de iluminación externa (otras luces de discoteca) y sincroniza la lámpara local para parpadear en contra-fase o en armonía.",
+    "transformedIdeaTitle": "DJ de Luces de Discoteca",
+    "transformedIdeaDescription": "¡Que empiece la fiesta! Enciende el sistema (Interruptor). Usa una linterna para hacer ritmos sobre el sensor. Programa la Lámpara para que cambie de color cada vez que detecte un cambio brusco en la luz (tu mano moviéndose rápido).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND LightIntensity.hasChanged() THEN Lamp.nextColor()"
+  }]

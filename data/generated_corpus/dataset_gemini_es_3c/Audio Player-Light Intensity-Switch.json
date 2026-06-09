@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de alarma matutina activada por luz solar",
+    "originalIdeaDescription": "Este sistema utiliza el sensor de intensidad de luz para monitorear constantemente el brillo ambiental de una habitación. Cuando la luz solar supera un umbral específico, indicando que es de día, el reproductor de audio inicia una melodía suave para despertar al usuario. El interruptor se utiliza como un botón de parada manual para detener la música una vez que la persona se ha despertado y levantado de la cama.",
+    "transformedIdeaTitle": "El Despertador del Vampiro",
+    "transformedIdeaDescription": "¡Eres un vampiro que necesita dormir durante el día! Debes programar tu ataúd inteligente. Si el sensor detecta que entra un rayo de sol (luz alta), debe sonar inmediatamente una alarma de emergencia para advertirte que cierres la tapa. Usa el interruptor para apagar la ruidosa alarma una vez que estés a salvo en la oscuridad total.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > 60 THEN Audio.play('alarm'); IF Switch == ON THEN Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de seguridad con alerta sonora de apertura",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos de valor guardados dentro de una caja o cajón oscuro. El sistema permanece armado mediante el interruptor. Si un intruso abre la caja, el sensor detecta el cambio repentino de oscuridad a luz y activa una sirena ruidosa a través del reproductor de audio. El propietario puede usar el interruptor para desarmar el sistema antes de abrir la caja legítimamente.",
+    "transformedIdeaTitle": "La Bóveda del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu botín de oro de los ladrones. Construye un sistema para tu cofre del tesoro. Si el cofre se abre y entra luz, debe sonar una sirena de policía o un loro gritando '¡Ladrones!'. Agrega un botón secreto (interruptor) que solo tú conozcas para desactivar la trampa antes de abrirlo y sacar tus monedas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Light_Intensity > 20 THEN Audio.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Instrumento musical controlado por sombras y luz",
+    "originalIdeaDescription": "Este proyecto convierte la intensidad de la luz en una experiencia auditiva interactiva. El interruptor enciende el instrumento. Al mover la mano sobre el sensor de luz, variando la cantidad de luz que llega a él (haciendo sombra), el reproductor de audio cambia el volumen o la pista que se está reproduciendo, funcionando como un theremín óptico básico para crear efectos de sonido dinámicos.",
+    "transformedIdeaTitle": "El Theremín Fantasma",
+    "transformedIdeaDescription": "Crea un instrumento musical invisible que se toca moviendo las manos en el aire. Cuando tu mano hace sombra sobre el sensor, el sonido cambia misteriosamente. Programa el sistema para que, al encender el interruptor, la música suene más fuerte cuanto más cerca esté tu mano (menos luz) y más suave cuando la alejes.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN Audio.setVolume(100 - Light_Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Grillo electrónico reactivo a la oscuridad nocturna",
+    "originalIdeaDescription": "Simulación del comportamiento biológico de un grillo. El sistema utiliza el sensor de luz para detectar cuando el ambiente se oscurece. Al caer la noche (baja intensidad de luz), el reproductor de audio comienza a emitir sonidos de grillos. Si se enciende una luz, el sonido se detiene. El interruptor funciona como el control maestro de energía para apagar el 'insecto' durante el día.",
+    "transformedIdeaTitle": "El Grillo Tímido",
+    "transformedIdeaDescription": "Vamos a crear una mascota robótica muy tímida. Este grillo digital solo canta cuando cree que nadie lo está mirando (cuando está oscuro). Si enciendes la luz de la habitación, se asusta y se calla. Usa el interruptor para 'dormir' a tu mascota cuando no quieras jugar más.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON AND Light_Intensity < 30 THEN Audio.play('cricket_sound') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de linternas para juegos de escondite",
+    "originalIdeaDescription": "Un dispositivo portátil para juegos nocturnos o de exploración. El interruptor activa el modo de juego. Si el haz de luz de una linterna golpea directamente el sensor de intensidad de luz, el reproductor de audio emite un sonido de 'explosión' o 'eliminación', indicando que el jugador ha sido encontrado o alcanzado por el buscador.",
+    "transformedIdeaTitle": "Batalla Láser Tag Casera",
+    "transformedIdeaDescription": "¡Diseña tu propio chaleco para Laser Tag! Si el rayo de luz (linterna) de tu oponente golpea tu sensor, tu chaleco debe reproducir un sonido de explosión, indicando que perdiste una vida. Usa el interruptor para reiniciar el juego y recuperar tus vidas para la siguiente ronda.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == PRESSED THEN hit_count = 0; IF Light_Intensity > 80 THEN Audio.play('hit_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Reproductor de música ecológico para plantas",
+    "originalIdeaDescription": "Un monitor ambiental para colocar junto a una planta de interior. El sistema verifica si la planta está recibiendo suficiente luz solar. Si la intensidad de luz es óptima durante el día, reproduce música clásica suave para estimular el crecimiento. El interruptor permite al usuario cambiar el género de música o silenciar el dispositivo durante la noche.",
+    "transformedIdeaTitle": "DJ Fotosíntesis",
+    "transformedIdeaDescription": "Tus plantas están aburridas y quieren fiesta, pero solo cuando hay sol. Crea un sistema que ponga música alegre automáticamente cuando la planta recibe buena luz solar para hacer la fotosíntesis. Si se nubla, la música para. El interruptor sirve para cambiar de canción si a la planta no le gusta esa pista.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN Audio.play(track_id); IF Switch == PRESSED THEN track_id = next_track"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Guía de museo interactiva activada por proximidad",
+    "originalIdeaDescription": "Dispositivo para exhibiciones donde el usuario no toca nada. Cuando un visitante se acerca a la vitrina, su sombra disminuye la intensidad de luz detectada por el sensor. Esta caída en la luz activa el reproductor de audio que narra la historia del objeto exhibido. El interruptor permite al personal del museo cambiar el idioma de la narración.",
+    "transformedIdeaTitle": "La Estatua Parlante",
+    "transformedIdeaDescription": "Estás diseñando un museo mágico. Cuando un visitante se acerca mucho a una estatua para verla mejor (tapando la luz y haciendo sombra), la estatua debe empezar a contar su historia automáticamente. Usa el interruptor para que la estatua cambie de contar una historia de terror a un chiste.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < Ambient_Light - 20 THEN Audio.play(current_story); IF Switch == PRESSED THEN switch_story_mode()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de cueva con efectos de sonido",
+    "originalIdeaDescription": "Un entorno inmersivo que reacciona a la iluminación. Cuando la habitación está completamente oscura, el sistema reproduce sonidos de gotas de agua y eco. Si el usuario 'enciende una antorcha' (aumenta la luz), el sonido cambia a fuego crepitante o murciélagos volando. El interruptor alterna entre diferentes escenarios de cuevas.",
+    "transformedIdeaTitle": "Exploradores de la Caverna Profunda",
+    "transformedIdeaDescription": "Programa la atmósfera de una cueva misteriosa. Cuando todo está oscuro, se deben escuchar gotas de agua cayendo (glup, glup). Pero si el explorador enciende su linterna y el sensor detecta luz, ¡cuidado! Debe sonar el rugido de un monstruo que odia la luz. El interruptor reinicia la aventura.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity < 10 THEN Audio.play('water_drops') ELSE Audio.play('monster_roar')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Decodificador de mensajes secretos con luz",
+    "originalIdeaDescription": "Un dispositivo de espionaje que oculta información de audio. El reproductor de audio solo revela el mensaje secreto cuando el sensor de luz recibe destellos de un patrón específico o una intensidad muy alta (como un escáner). El interruptor se utiliza para borrar el mensaje de la memoria una vez escuchado para mantener el secreto.",
+    "transformedIdeaTitle": "Misión Imposible: El Archivo Luz",
+    "transformedIdeaDescription": "Eres un agente secreto. Tienes una grabación confidencial que no puede caer en manos enemigas. El audio solo se reproducirá si iluminas el sensor con una linterna potente (luz intensa). En cuanto apagues la linterna, el audio se corta. Si alguien viene, presiona el interruptor para 'autodestruir' (bloquear) el mensaje.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 90 AND NOT Blocked THEN Audio.play('secret'); IF Switch == PRESSED THEN Blocked = True"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo visual y auditivo ajustable",
+    "originalIdeaDescription": "Una herramienta para músicos donde la velocidad del metrónomo depende de la luz ambiental, permitiendo ajustes sin manos. Más luz acelera el ritmo del 'tick-tock' del reproductor de audio. El interruptor sirve para iniciar o pausar el metrónomo, permitiendo al músico prepararse antes de que comience el conteo.",
+    "transformedIdeaTitle": "El Baterista Acelerado",
+    "transformedIdeaDescription": "Crea un ritmo de batería que cambia de velocidad según la luz. Si estás en una habitación oscura, el ritmo es lento y relajado. Si acercas una lámpara al sensor, el ritmo se vuelve frenético y rápido. Usa el interruptor para congelar el ritmo cuando encuentres la velocidad perfecta para bailar.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN speed = Light_Intensity * factor; Audio.play('beat', speed)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de búsqueda del tesoro caliente o frío",
+    "originalIdeaDescription": "Un juego interactivo donde un objeto emite sonidos para guiar al jugador hacia una fuente de luz escondida. Cuanto mayor sea la intensidad de luz detectada (más cerca de la fuente), más rápido o agudo será el pitido reproducido. El interruptor inicia una nueva ronda del juego, aleatorizando los parámetros de detección.",
+    "transformedIdeaTitle": "Buscadores de Luz Ciega",
+    "transformedIdeaDescription": "Juega a 'Frío o Caliente' usando tecnología. Cierra los ojos y escucha. El dispositivo emitirá pitidos lentos si estás en una zona oscura. A medida que te acerques a una ventana o lámpara, los pitidos serán muy rápidos. ¡Usa tus oídos para encontrar la luz! El interruptor sirve para apagar el sonido cuando ganes.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN interval = 1000 - (Light_Intensity * 10); Audio.beep(interval)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de refrigerador con alerta de puerta abierta",
+    "originalIdeaDescription": "Dispositivo para ahorrar energía. Se coloca dentro del refrigerador. Cuando la puerta se abre, la luz interna se enciende y el sensor la detecta. Si la luz permanece detectada por más de 30 segundos, el reproductor de audio emite un aviso verbal. El interruptor permite desactivar la alarma para limpiezas prolongadas.",
+    "transformedIdeaTitle": "El Guardián de la Nevera",
+    "transformedIdeaDescription": "¡Alguien se está dejando la nevera abierta y gastando energía! Programa un dispositivo que detecte la luz de la bombilla de la nevera. Si detecta luz, espera 10 segundos. Si sigue habiendo luz (puerta abierta), reproduce un sonido gracioso de '¡Cierra la puerta!'. El interruptor sirve para que no suene mientras guardas la compra.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > 10 THEN wait(10); IF Light_Intensity > 10 AND Switch == OFF THEN Audio.play('alert')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de música inversa para dormir",
+    "originalIdeaDescription": "Ayuda para dormir para niños. Al apagar la luz de la habitación (sensor detecta oscuridad), el dispositivo reproduce una canción de cuna suave automáticamente. Si se enciende la luz, la música se detiene. El interruptor permite seleccionar entre ruido blanco, lluvia o melodía musical.",
+    "transformedIdeaTitle": "Nana Automática para Osos",
+    "transformedIdeaDescription": "Ayuda al bebé oso a dormir. Cuando apagues la luz de la habitación para ir a dormir, el sensor debe notarlo y activar automáticamente una canción de cuna relajante. Si mamá osa enciende la luz, la música debe parar. Usa el interruptor para elegir si el bebé oso prefiere sonido de lluvia o música de piano.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity < 5 THEN Audio.play(selected_sound) ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de narración dependiente del entorno",
+    "originalIdeaDescription": "Un dispositivo de narración interactiva donde la trama cambia según el entorno. Si el usuario está en un lugar brillante, la historia es alegre y aventurera. Si se mueve a un lugar oscuro, la historia se torna de suspenso y misterio. El interruptor permite pausar la narración para cambiar de ubicación.",
+    "transformedIdeaTitle": "El Cuentacuentos Mágico",
+    "transformedIdeaDescription": "Este libro de audio cambia según dónde lo leas. Si estás bajo el sol, te cuenta una historia de hadas felices. Si te metes debajo de las sábanas o en un armario oscuro, la voz cambia y te cuenta una historia de fantasmas. Usa el interruptor para pausar la historia mientras corres a buscar un lugar oscuro.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light_Intensity > 50 THEN Audio.play('happy_story') ELSE Audio.play('scary_story')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de efectos de sonido DJ manual",
+    "originalIdeaDescription": "Interfaz para mezclar música. El interruptor lanza un 'beat' de fondo constante. El sensor de luz actúa como un control deslizante de efectos: al cubrirlo parcialmente con la mano, se aplica un filtro o 'scratch' sobre el audio base, permitiendo al usuario manipular el sonido en tiempo real mediante gestos físicos.",
+    "transformedIdeaTitle": "La Mesa de Mezclas Invisible",
+    "transformedIdeaDescription": "¡Conviértete en un DJ del futuro! Presiona el interruptor para soltar la base rítmica. Luego, usa tu mano sobre el sensor de luz como si hicieras 'scratching' en un disco. Tapar y destapar la luz rápidamente debe hacer que suenen efectos de 'wiki-wiki' sobre la música. ¡Sin tocar nada, solo con la sombra!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN Audio.play('base'); IF Light_Change_Fast THEN Audio.play('scratch_effect')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Comunicador morse óptico-auditivo",
+    "originalIdeaDescription": "Herramienta educativa para aprender código Morse. El usuario utiliza una linterna para enviar pulsos de luz al sensor. El sistema traduce estos pulsos de luz (cortos y largos) en pitidos audibles correspondientes en tiempo real. El interruptor se utiliza para cambiar el tono del pitido o reiniciar el sistema de recepción.",
+    "transformedIdeaTitle": "Telégrafo de Linterna",
+    "transformedIdeaDescription": "Construye un sistema para enviar mensajes secretos a tu amigo desde la otra ventana. Tu amigo usará su linterna. Tu sistema debe detectar los destellos de luz: cada vez que vea luz, debe hacer un 'BEEP'. Así podrás escuchar el Código Morse que te envían con luz. El interruptor limpia el mensaje para empezar de nuevo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light_Intensity > Threshold THEN Audio.tone(ON) ELSE Audio.tone(OFF)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta reactivo",
+    "originalIdeaDescription": "Dispositivo ambiental que simula el clima. El interruptor activa el sonido constante de lluvia. El sensor de luz espera cambios bruscos (como el flash de una cámara o encender una luz rápidamente) para simular un relámpago, respondiendo inmediatamente con el sonido estruendoso de un trueno a través del reproductor de audio.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "Vamos a simular una tormenta eléctrica. El interruptor enciende la lluvia suave de fondo. Ahora, usa una linterna para imitar relámpagos. Programa el sistema para que, cada vez que detecte un destello de luz repentino (el relámpago), espere un segundo y luego reproduzca un fuerte sonido de TRUENO. ¡Boom!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('rain'); IF Light_Intensity_Spike THEN wait(1); Audio.play('thunder')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de meditación y respiración",
+    "originalIdeaDescription": "Dispositivo para guiar ejercicios de respiración. El audio reproduce instrucciones de inhalar y exhalar. El sensor de luz detecta el entorno: si hay demasiada luz, el audio sugiere atenuar las luces para mejor relajación. El interruptor inicia la sesión y selecciona la duración del ejercicio.",
+    "transformedIdeaTitle": "Entrenador Zen de Luz",
+    "transformedIdeaDescription": "Diseña un compañero de yoga. Al presionar el interruptor, comienza la clase. Si la habitación está demasiado iluminada, el entrenador debe decir 'Por favor, baja las luces para relajarte'. Solo cuando la luz sea tenue y relajante, comenzará a reproducir sonidos de cuencos tibetanos y respiración.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN IF Light_Intensity > 40 THEN Audio.say('lower_lights') ELSE Audio.play('meditation')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de amanecer para gallinero automatizado",
+    "originalIdeaDescription": "Sistema para granjas automatizadas. Simula el canto de un gallo al amanecer. El sensor monitorea el incremento gradual de luz. Cuando se alcanza el nivel de luz diurna, el audio reproduce el canto del gallo. El interruptor permite al granjero desactivar el sistema los fines de semana o días festivos.",
+    "transformedIdeaTitle": "El Gallo Robot",
+    "transformedIdeaDescription": "¡El gallo de la granja se ha quedado afónico! Necesitas construir un sustituto robótico. Prográmalo para que vigile la salida del sol. En el momento exacto en que la luz sea brillante (amanecer), debe sonar '¡Kikirikí!'. Agrega un interruptor de 'Vacaciones' para que el gallo robot no despierte a nadie los domingos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > Day_Threshold AND Switch == ON THEN Audio.play('rooster')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Light Intensity",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de seguridad de pasillo oscuro",
+    "originalIdeaDescription": "Dispositivo para asustar o alertar en pasillos oscuros. El sistema se activa con el interruptor. En la oscuridad, permanece en silencio. Si alguien enciende la luz del pasillo o pasa con una linterna, el cambio de intensidad dispara un efecto de sonido sorpresivo o un mensaje de bienvenida, dependiendo de la configuración.",
+    "transformedIdeaTitle": "La Entrada de la Mansión Embrujada",
+    "transformedIdeaDescription": "Prepara la entrada para Halloween. El pasillo está oscuro y en silencio. Si un visitante enciende la luz o usa su linterna para ver por dónde camina, el sensor debe detectarlo y soltar una risa malvada. Usa el interruptor para apagar la broma cuando llegue tu abuelita de visita.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light_Intensity > Dark_Level AND Switch == ARMED THEN Audio.play('evil_laugh')"
+  }
+]

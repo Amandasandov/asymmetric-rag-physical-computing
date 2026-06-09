@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Dado Digital Electrónico Activado por Movimiento",
+    "originalIdeaDescription": "Un dispositivo que simula el lanzamiento de un dado. El interruptor sirve para desbloquear el sistema o encenderlo, y al agitar el dispositivo, el sensor de movimiento detecta la acción y muestra un número aleatorio del 1 al 6 en la matriz LED.",
+    "transformedIdeaTitle": "El Dado del Destino Galáctico",
+    "transformedIdeaDescription": "¡Tu nave espacial necesita coordenadas para saltar al hiperespacio! Programa un dado digital que solo funcione cuando los motores (el interruptor) estén encendidos. Agita tu dispositivo para calcular la ruta y muestra el número en la pantalla para escapar de los alienígenas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaken() THEN LEDMatrix.showNumber(Random(1,6))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Antirrobo Portátil",
+    "originalIdeaDescription": "Una alarma de seguridad personal para proteger objetos. El usuario coloca el dispositivo sobre un objeto y activa el interruptor para 'armar' la alarma. Si el sensor de movimiento detecta que el objeto se mueve, la matriz LED muestra una señal de advertencia visual.",
+    "transformedIdeaTitle": "La Trampa para Duendes",
+    "transformedIdeaDescription": "Los duendes están intentando robar tus galletas. Crea una trampa inteligente: activa el modo 'Vigilancia' con el interruptor. Si alguien mueve tu caja de galletas, la pantalla debe mostrar una cara enfadada o una 'X' gigante para asustar al ladrón.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.magnitude > threshold THEN LEDMatrix.showImage('ANGRY')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva al Movimiento",
+    "originalIdeaDescription": "Una mascota digital simple que vive en la matriz LED. El interruptor controla si la mascota está despierta o dormida. Cuando está despierta, agitar el dispositivo suavemente hace que la mascota muestre una cara feliz; si no hay movimiento, se aburre.",
+    "transformedIdeaTitle": "Huevo de Dragón Mágico",
+    "transformedIdeaDescription": "Estás cuidando un huevo de dragón. Usa el interruptor para darle calor (despertarlo). Para que el dragón nazca feliz, debes mecerlo suavemente. Programa las emociones del dragón: feliz si lo mueves, dormido si apagas el calor.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.isActive() THEN LEDMatrix.showIcon('SMILE') ELSE LEDMatrix.showIcon('NEUTRAL')) ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Bola 8 Mágica de Adivinación",
+    "originalIdeaDescription": "Un juguete clásico de adivinación. El usuario hace una pregunta, activa el interruptor para iniciar la sesión y agita el dispositivo. La matriz LED muestra un símbolo que representa 'Sí', 'No' o 'Tal vez' de forma aleatoria.",
+    "transformedIdeaTitle": "El Oráculo del Templo Perdido",
+    "transformedIdeaDescription": "Eres un explorador buscando respuestas en un templo antiguo. Programa el Oráculo para que, al encender la antorcha (interruptor) y sacudir el polvo de la reliquia, los espíritus te respondan con símbolos sagrados en la pantalla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaken() THEN LEDMatrix.showImage(RandomList(['YES', 'NO', 'MAYBE']))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Pasos o Saltos",
+    "originalIdeaDescription": "Un podómetro básico. El interruptor se utiliza para iniciar o pausar el conteo. Cada vez que el sensor detecta un impacto o movimiento vertical fuerte, se incrementa un contador numérico que se visualiza en la matriz LED.",
+    "transformedIdeaTitle": "Entrenamiento de Astronautas",
+    "transformedIdeaDescription": "Para ir a Marte necesitas estar en forma. Crea un dispositivo que cuente tus saltos de gravedad. Activa el modo 'Entreno' con el interruptor y salta. La pantalla debe mostrar cuántos saltos has logrado sin cansarte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.peak > threshold THEN count = count + 1; LEDMatrix.showNumber(count)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Trasera de Bicicleta Inteligente",
+    "originalIdeaDescription": "Una luz de seguridad para ciclistas. El interruptor enciende la luz trasera (un patrón en la matriz). Si el sensor de movimiento detecta una desaceleración brusca (frenado), la matriz cambia a un símbolo de alerta o parpadeo rápido.",
+    "transformedIdeaTitle": "Escudos de la Moto Futurista",
+    "transformedIdeaDescription": "Diseña el sistema de seguridad de una moto del año 3000. Activa los propulsores con el interruptor. Si la moto detecta que frenas de golpe (cambio brusco de movimiento), debe desplegar una señal de 'ALTO' en la pantalla para avisar a los demás.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.deceleration > safety_limit THEN LEDMatrix.showAnimation('STOP') ELSE LEDMatrix.showPattern('STEADY'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Visuales",
+    "originalIdeaDescription": "Un juguete que simula una varita mágica. El interruptor selecciona el tipo de 'hechizo' (fuego o hielo). Al agitar la varita, la matriz LED muestra una animación de partículas correspondiente al elemento seleccionado.",
+    "transformedIdeaTitle": "Duelo de Hechiceros Elementales",
+    "transformedIdeaDescription": "Entra en la escuela de magia. Usa el interruptor para elegir entre hechizos de Fuego o Hielo. Cuando lances tu hechizo agitando la varita, la pantalla debe iluminarse con llamas o cristales de hielo. ¡Aprende a programar tu magia!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isShaken() THEN (IF Switch.isOff() THEN LEDMatrix.showAnimation('FIRE') ELSE LEDMatrix.showAnimation('ICE'))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Digital",
+    "originalIdeaDescription": "Una herramienta de construcción. El interruptor congela la medición (hold). El sensor de movimiento detecta la inclinación y mueve un punto (píxel) en la matriz LED para indicar si la superficie está nivelada horizontalmente.",
+    "transformedIdeaTitle": "Estabilizador de la Nave",
+    "transformedIdeaDescription": "La carga de la nave espacial se está deslizando. Crea una herramienta para equilibrarla. Un punto de luz se moverá según inclines el dispositivo. Usa el interruptor para bloquear la posición cuando creas que está perfectamente equilibrada.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NOT Switch.isOn() THEN LEDMatrix.plotPixel(map(Motion.x), map(Motion.y)) ELSE pass"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente",
+    "originalIdeaDescription": "Un juego grupal. El interruptor inicia una cuenta regresiva invisible. Los jugadores deben pasar el dispositivo. El sensor de movimiento detecta que se está pasando. Cuando el tiempo termina, la matriz muestra una explosión.",
+    "transformedIdeaTitle": "Bomba de Tiempo Espacial",
+    "transformedIdeaDescription": "¡Cuidado! Tienes un meteorito inestable en las manos. Activa el detonador con el interruptor y pásaselo a un amigo con cuidado. Si el tiempo se acaba mientras lo sostienes, ¡BOOM!, la pantalla explotará. ¿Quién sobrevivirá?",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.wasToggled() THEN startTimer(); IF timer > 0 THEN LEDMatrix.showAnimation('TICK') ELSE LEDMatrix.showIcon('EXPLOSION')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Energía Cinética Simulado",
+    "originalIdeaDescription": "Un simulador de carga de batería. El usuario debe agitar el dispositivo vigorosamente para 'cargar' una barra de energía en la matriz LED. El interruptor sirve para liberar esa energía mostrando un destello brillante.",
+    "transformedIdeaTitle": "Recarga el Rayo Láser",
+    "transformedIdeaDescription": "Tu arma láser se ha quedado sin energía. Agita el dispositivo rápidamente para llenar la barra de energía en la pantalla píxel a píxel. Una vez llena, pulsa el interruptor para disparar un potente rayo de luz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeIntensity > 5 THEN energyLevel++; IF Switch.isOn() AND energyLevel == MAX THEN LEDMatrix.flashAll()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Casero",
+    "originalIdeaDescription": "Un dispositivo científico para medir vibraciones. El interruptor calibra el sensor a cero. Cualquier movimiento posterior se visualiza como una barra de intensidad en la matriz LED, indicando la fuerza del sismo.",
+    "transformedIdeaTitle": "Sismógrafo de la Isla Volcánica",
+    "transformedIdeaDescription": "Vives cerca de un volcán activo. Construye un sismógrafo para alertar al pueblo. Calibra el suelo con el interruptor y, si la tierra tiembla, muestra la magnitud del terremoto en la pantalla LED. ¡Salva a los aldeanos!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN baseline = Motion.current; ELSE displayBarGraph(abs(Motion.current - baseline))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caras Divertidas Cambiantes",
+    "originalIdeaDescription": "Un juguete de expresiones faciales. La matriz muestra una cara. Al agitar el dispositivo, la cara cambia aleatoriamente (feliz, triste, sorprendido). El interruptor sirve para bloquear la cara actual y que no cambie con el movimiento.",
+    "transformedIdeaTitle": "El Mimo Robot",
+    "transformedIdeaDescription": "Programa un robot mimo que cambia de personalidad cuando lo sacudes. Puede estar feliz, triste o loco. Si encuentras una cara que te guste, usa el interruptor para congelarla y que el mimo mantenga esa pose.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() AND Motion.isShaken() THEN LEDMatrix.showIcon(RandomFace())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Brújula de Navegación Simple",
+    "originalIdeaDescription": "Aunque no usa el componente brújula, simula una dirección basada en la inclinación. Al inclinar el dispositivo hacia adelante, atrás, izquierda o derecha, una flecha en la matriz LED apunta en esa dirección. El interruptor apaga la pantalla para ahorrar energía.",
+    "transformedIdeaTitle": "Radar de Exploración Submarina",
+    "transformedIdeaDescription": "Guía tu submarino en las profundidades. Inclina el mando para indicar la dirección y verás una flecha en el radar (pantalla) que te guía. Si hay un apagón, usa el interruptor de emergencia para apagar el radar y ahorrar batería.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.tiltX > 0 THEN showArrow('RIGHT') ELSE showArrow('LEFT')...)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación de Movimiento",
+    "originalIdeaDescription": "Un juego de seguridad. El interruptor inicia el modo de desbloqueo. El usuario debe realizar una secuencia específica (ej. izquierda, derecha, agitar) para que la matriz muestre un candado abierto; si falla, muestra una X.",
+    "transformedIdeaTitle": "La Bóveda del Banco Espía",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte digital. Activa el sistema de hackeo con el interruptor. Tienes que girar el dispositivo en la dirección correcta (izquierda o derecha) según las pistas para que aparezca el símbolo de 'ABIERTO'.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN checkSecretSequence(Motion.history) -> LEDMatrix.showResult()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Cepillado de Dientes",
+    "originalIdeaDescription": "Un ayudante de higiene. Al levantar el cepillo (detectado por movimiento), comienza una animación de cuenta regresiva en la matriz. El interruptor permite seleccionar entre modo 'cepillado corto' y 'cepillado largo'.",
+    "transformedIdeaTitle": "Misión: Dientes Brillantes",
+    "transformedIdeaDescription": "¡Combate las caries galácticas! Elige la duración de la batalla con el interruptor. Al levantar tu 'arma' (cepillo), comenzará la cuenta atrás en la pantalla. No pares de moverte hasta que la pantalla celebre tu victoria.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "duration = Switch.isOn() ? 120 : 60; IF Motion.isActive() THEN startCountdown(duration, LEDMatrix)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Esquivar Obstáculos",
+    "originalIdeaDescription": "Un minijuego arcade. El jugador inclina el dispositivo (Motion) para mover un punto en la fila inferior de la matriz. Puntos enemigos caen desde arriba. El interruptor sirve para pausar el juego.",
+    "transformedIdeaTitle": "Piloto de Asteroides",
+    "transformedIdeaDescription": "Pilota tu nave a través de un campo de asteroides. Inclina el dispositivo para mover tu nave (un punto de luz) a izquierda o derecha. Evita los meteoritos que caen. Si necesitas un descanso, usa el interruptor para congelar el tiempo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOff() THEN (UpdatePlayerPos(Motion.tilt); UpdateObstacles(); CheckCollision())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual",
+    "originalIdeaDescription": "Herramienta para músicos. El interruptor enciende el metrónomo. El usuario marca el tempo agitando el dispositivo una vez al ritmo deseado, y la matriz comienza a parpadear a esa velocidad constante.",
+    "transformedIdeaTitle": "Director de Orquesta Robot",
+    "transformedIdeaDescription": "Dirige a la orquesta robot. Activa la batuta con el interruptor. Marca el ritmo agitando la mano una vez, y el robot seguirá ese ritmo mostrando luces pulsantes en la pantalla para que todos los músicos toquen a la vez.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.tapDetected() THEN calculateBPM() AND startLEDPulse()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Comunicador de Código Morse",
+    "originalIdeaDescription": "Sistema de mensajería manual. El interruptor cambia entre modo 'punto' y 'raya'. Un movimiento brusco (shake) envía el símbolo seleccionado a la matriz LED, que va desplazando el mensaje creado.",
+    "transformedIdeaTitle": "Telégrafo Secreto",
+    "transformedIdeaDescription": "Envía mensajes en clave a tus aliados. Usa el interruptor para elegir si vas a escribir un punto o una raya. Agita el dispositivo para 'imprimir' ese símbolo en la pantalla y componer tu mensaje secreto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "symbol = Switch.isOn() ? '-' : '.'; IF Motion.isShaken() THEN message.append(symbol); LEDMatrix.scroll(message)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ruleta de Casino",
+    "originalIdeaDescription": "Juego de azar. La matriz muestra luces girando alrededor del borde. Al agitar el dispositivo, la 'bola' empieza a girar. El interruptor añade 'fricción' para detener la ruleta más rápido.",
+    "transformedIdeaTitle": "La Rueda de la Fortuna",
+    "transformedIdeaDescription": "¡Prueba tu suerte! Haz girar la rueda de la fortuna agitando el dispositivo. Las luces darán vueltas en la pantalla. Si quieres frenar la rueda para ver qué premio te toca, activa el freno manual con el interruptor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isShaken() THEN speed = 10; IF Switch.isOn() THEN speed -= friction; LEDMatrix.animateSpin(speed)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luces de Discoteca Reactivas",
+    "originalIdeaDescription": "Efectos visuales para fiestas. El interruptor cambia entre diferentes patrones de visualización. El sensor de movimiento detecta el ritmo del baile del usuario y sincroniza los cambios de luces en la matriz con ese movimiento.",
+    "transformedIdeaTitle": "Fiesta de Baile LED",
+    "transformedIdeaDescription": "¡Es hora de la fiesta! Conviértete en el DJ de luces. Pégate el dispositivo al cuerpo. Mientras bailas, las luces de la pantalla seguirán tu ritmo. Usa el interruptor para cambiar el estilo de las luces de 'Techno' a 'Disco'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "pattern = Switch.isOn() ? PATTERN_A : PATTERN_B; IF Motion.magnitude > beat_threshold THEN LEDMatrix.nextFrame(pattern)"
+  }
+]

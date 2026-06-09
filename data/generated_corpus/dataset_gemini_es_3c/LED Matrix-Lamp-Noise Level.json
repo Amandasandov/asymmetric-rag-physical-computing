@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Medidor de Volumen Ambiental con Alerta Visual",
+    "originalIdeaDescription": "Este sistema monitorea el nivel de ruido en una habitación en tiempo real. Utiliza la matriz LED para mostrar una barra de gráfico que sube o baja según la intensidad del sonido y la lámpara cambia de color (verde a rojo) para indicar si el nivel de ruido es aceptable o dañino para el oído humano.",
+    "transformedIdeaTitle": "El Semáforo de la Biblioteca Silenciosa",
+    "transformedIdeaDescription": "¡Eres el guardián de la biblioteca mágica! Los libros necesitan silencio para dormir. Debes programar un sistema que muestre una cara feliz y luz verde cuando todos susurran, pero si alguien grita, la lámpara debe ponerse roja y la matriz mostrar una cara enojada para pedir silencio inmediatamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel < 30 THEN Lamp.color(Green), Matrix.show(Smile) ELSE Lamp.color(Red), Matrix.show(Angry)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad por Detección de Sonido",
+    "originalIdeaDescription": "Un dispositivo diseñado para proteger objetos de valor en una habitación oscura. Si el sensor detecta cualquier sonido repentino por encima de un umbral, activa una alarma visual parpadeante con la lámpara y muestra un símbolo de advertencia o 'SOS' en la matriz LED para alertar al propietario.",
+    "transformedIdeaTitle": "La Trampa del Dragón Dormido",
+    "transformedIdeaDescription": "Estás protegiendo el tesoro de un dragón que duerme. Crea una trampa para ladrones: si el dragón escucha un ruido fuerte (como pasos pesados), sus ojos (la lámpara) deben parpadear en rojo fuego y su boca (la matriz) debe mostrar colmillos para asustar al intruso.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 70 THEN Lamp.blink(Red, Fast), Matrix.show(Fangs)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz Activado por Aplausos",
+    "originalIdeaDescription": "Una implementación clásica de domótica donde el usuario puede controlar la iluminación de una habitación aplaudiendo. Un aplauso enciende la lámpara y muestra un icono de 'Encendido' en la matriz; dos aplausos la apagan y borran la matriz, facilitando el control sin tocar interruptores físicos.",
+    "transformedIdeaTitle": "El Mago de la Luz",
+    "transformedIdeaDescription": "¡Convierte tus manos en varitas mágicas! Programa tu casa encantada para que, al dar una palmada fuerte, se haga la luz y aparezca un sol brillante en la pantalla. Si vuelves a dar una palmada, debe caer la noche y todo debe apagarse. ¿Podrás hacer que la magia funcione?",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON NoiseLevel > 50: IF Lamp.isOff THEN Lamp.on(), Matrix.show(Sun) ELSE Lamp.off(), Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo para Fiestas",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que sincroniza la iluminación y los gráficos con la música ambiental. La lámpara cambia de colores aleatorios con cada golpe fuerte de la música, mientras que la matriz LED muestra patrones geométricos que cambian dinámicamente según el volumen detectado.",
+    "transformedIdeaTitle": "DJ Robot: Fiesta de Luces",
+    "transformedIdeaDescription": "Vas a organizar la mejor fiesta de robots del año. Tu misión es crear una pista de baile que reaccione a la música. Cuando el bajo suene fuerte, la luz debe cambiar de color locamente y la pantalla debe mostrar formas de baile. ¡Haz que las luces sigan el ritmo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LOOP: IF NoiseLevel > BeatThreshold THEN Lamp.color(Random), Matrix.nextImage(DancePattern)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño para Bebés",
+    "originalIdeaDescription": "Este sistema ayuda a los padres a monitorear el estado de un bebé. Si hay silencio, la lámpara emite una luz tenue y cálida y la matriz muestra una luna. Si el bebé llora (ruido alto), la luz se intensifica para alertar y la matriz cambia a un icono de alerta.",
+    "transformedIdeaTitle": "La Nana del Osito Espacial",
+    "transformedIdeaDescription": "El Osito Espacial tiene miedo a la oscuridad. Ayúdalo a dormir tranquilo. Si todo está en silencio, enciende una luz nocturna suave y muestra una luna para que duerma. Pero si el Osito llora o hace ruido, enciende la luz fuerte para que sepas que necesita un abrazo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel < 20 THEN Lamp.color(SoftYellow), Matrix.show(Moon) ELSE Lamp.color(BrightWhite), Matrix.show(Alert)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "Un proyecto ambiental que recrea los efectos de una tormenta. Al detectar un ruido fuerte (simulando un trueno), la lámpara parpadea rápidamente como un relámpago y la matriz LED muestra una animación de gotas de lluvia cayendo, creando una experiencia inmersiva.",
+    "transformedIdeaTitle": "El Creador de Tormentas",
+    "transformedIdeaDescription": "¡Tienes el poder de Thor! Usa tu voz para invocar una tormenta. Cuando grites '¡TRUENO!', haz que la lámpara destelle como un relámpago y que la pantalla muestre lluvia cayendo. Si estás callado, el clima debe permanecer soleado y tranquilo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN Lamp.strobe(White), Matrix.animate(Rain) ELSE Lamp.color(Yellow), Matrix.show(Sun)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mascota Digital Interactiva por Voz",
+    "originalIdeaDescription": "Una mascota virtual que vive en la matriz LED. Reacciona a la voz del usuario. Si le hablas suavemente, muestra un corazón y la lámpara se pone rosa. Si le gritas, se asusta, la lámpara se pone azul frío y la mascota desaparece de la pantalla.",
+    "transformedIdeaTitle": "Tu Monstruito de Bolsillo",
+    "transformedIdeaDescription": "Adopta a un monstruito digital que vive en tu dispositivo. Le encanta que le canten suavemente; si lo haces, se pondrá feliz (luz rosa y corazón). Pero cuidado, odia los gritos. Si hay mucho ruido, se esconderá (luz apagada y pantalla vacía). ¡Cuídalo bien!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel is MEDIUM THEN Lamp.color(Pink), Matrix.show(Heart) ELSE IF NoiseLevel is HIGH THEN Matrix.clear(), Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entrenador de Intensidad de Voz",
+    "originalIdeaDescription": "Herramienta para actores o cantantes que necesitan proyectar la voz. La matriz LED se llena de abajo hacia arriba como un vaso de agua según el volumen. La lámpara cambia de azul (bajo) a verde (ideal) a rojo (saturado) para dar retroalimentación instantánea.",
+    "transformedIdeaTitle": "El Grito del Superhéroe",
+    "transformedIdeaDescription": "Para activar tus superpoderes, necesitas cargar tu energía con un grito sostenido. Mira la pantalla: mientras más fuerte grites, más se llenará la barra de energía. ¡Intenta llevar la luz de azul a rojo para lanzar tu ataque especial!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "VAR level = map(NoiseLevel, 0, 100, 0, 7); Matrix.fillBar(level); Lamp.color(mapColor(level))"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras de Juguete",
+    "originalIdeaDescription": "Un dispositivo lúdico que analiza los cambios en el tono y volumen de la voz. Si el sujeto habla con titubeos o variaciones bruscas de volumen (nerviosismo simulado), la lámpara se enciende en rojo y la matriz muestra una 'X'. Si el volumen es estable, muestra un check verde.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Juega con tus amigos a descubrir sus secretos. Hazles preguntas difíciles. Si responden con voz temblorosa o muy fuerte (nerviosos), la máquina mostrará una 'X' roja y sonará una alarma. Si responden tranquilos y normal, ¡luz verde y pase libre!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF variance(NoiseLevel) > limit THEN Lamp.color(Red), Matrix.show(X) ELSE Lamp.color(Green), Matrix.show(Check)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Vela Digital que se Apaga al Soplar",
+    "originalIdeaDescription": "Simulación de una vela real. La lámpara parpadea en naranja y la matriz muestra una llama animada. El sensor de ruido detecta el sonido específico de un soplido fuerte cerca del micrófono; al detectarlo, apaga la lámpara y la animación, dejando 'humo' en la matriz.",
+    "transformedIdeaTitle": "Pide un Deseo de Cumpleaños",
+    "transformedIdeaDescription": "¡Es tu cumpleaños virtual! Tienes una vela encendida en tu pantalla con una luz cálida. Cierra los ojos, pide un deseo y sopla fuerte cerca del sensor. Si soplas lo suficientemente fuerte, la vela se apagará mágicamente. ¡A ver si tienes buenos pulmones!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.flicker(Orange), Matrix.animate(Fire); IF NoiseLevel > BlowThreshold THEN Lamp.off(), Matrix.animate(Smoke)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación Guiada",
+    "originalIdeaDescription": "Un dispositivo para ayudar a la concentración. Si el ambiente se mantiene en silencio total por un tiempo determinado, la matriz va dibujando lentamente un mandala y la lámpara cambia suavemente de colores relajantes. El ruido rompe el ciclo y reinicia el proceso.",
+    "transformedIdeaTitle": "El Jardín Zen que Crece",
+    "transformedIdeaDescription": "Practica la paciencia de un monje Shaolin. Si te mantienes en silencio absoluto, una flor comenzará a crecer en tu pantalla y la luz brillará con colores de paz. Si haces ruido, la flor se asustará y tendrás que empezar de nuevo. ¿Cuánto tiempo puedes mantener la flor viva?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel < 10 THEN Timer++, Matrix.drawFlower(Timer), Lamp.fade(Blue) ELSE Timer=0, Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Traductor de Código Morse Acústico",
+    "originalIdeaDescription": "El sistema escucha patrones de sonido cortos y largos. Traduce estos sonidos a puntos y rayas visuales en la matriz LED y acompaña cada señal con un parpadeo sincronizado de la lámpara, permitiendo enviar mensajes secretos mediante golpes en la mesa.",
+    "transformedIdeaTitle": "El Telégrafo del Espía",
+    "transformedIdeaDescription": "Eres un espía en una misión secreta. No puedes hablar, solo golpear la mesa. Un golpe corto es un punto, un golpe largo es una raya. Programa tu equipo para que traduzca tus golpes en luces y símbolos en la pantalla para enviar el código de desactivación.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < Short THEN Matrix.add(Dot), Lamp.flash() ELSE Matrix.add(Dash), Lamp.longFlash()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo: Luz Roja, Luz Verde",
+    "originalIdeaDescription": "Basado en juegos infantiles, este sistema pone la lámpara en verde permitiendo el movimiento (ruido). Aleatoriamente cambia a rojo; si detecta ruido cuando la lámpara está roja, la matriz muestra 'GAME OVER' y la lámpara parpadea, indicando eliminación.",
+    "transformedIdeaTitle": "Estatuas Musicales Tecnológicas",
+    "transformedIdeaDescription": "Juega a las estatuas con el computador. Cuando la luz sea verde, puedes bailar y cantar (hacer ruido). Pero cuidado, cuando la luz se ponga roja de repente, ¡debes congelarte y guardar silencio total! Si el sensor te escucha, perderás y saldrá una calavera en la pantalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Lamp.color == Red AND NoiseLevel > 10 THEN Matrix.show(Skull), Lamp.blink(Red)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Contador de Asistencia por Voz",
+    "originalIdeaDescription": "Utilizado en aulas pequeñas. Cada estudiante dice 'Presente' uno por uno. El sistema detecta el pico de sonido, incrementa un contador numérico mostrado en la matriz LED y confirma cada conteo con un destello breve de la lámpara verde.",
+    "transformedIdeaTitle": "El Pasador de Lista Automático",
+    "transformedIdeaDescription": "¡Ayuda al profesor a contar a los alumnos! Cada vez que un alumno grite su número, el sistema debe detectarlo, encender una luz verde de confirmación y sumar uno al número que aparece en la pantalla. ¡Asegúrate de que no cuente dos veces si alguien tose!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > Trigger AND TimeSinceLast > 1sec THEN Count++, Matrix.showNumber(Count), Lamp.flash(Green)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Animador de Cuentacuentos",
+    "originalIdeaDescription": "Un dispositivo que mejora la narración de historias. El usuario programa 'palabras clave' basadas en volumen. Al leer un pasaje emocionante en voz alta, la lámpara se pone roja y la matriz muestra exclamaciones. Al susurrar, la luz se vuelve azul y la matriz muestra estrellas.",
+    "transformedIdeaTitle": "El Libro Mágico de Efectos Especiales",
+    "transformedIdeaDescription": "Convierte tu lectura en una película. Programa el sistema para que, cuando leas la parte del monstruo con voz grave y fuerte, la habitación se ponga roja y aparezcan rayos. Cuando leas la parte del hada susurrando, pon luces azules y estrellas brillantes.",
+    "minAge": 9,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > High THEN Lamp.red(), Matrix.show(Bolt) ELSE IF NoiseLevel < Low THEN Lamp.blue(), Matrix.show(Stars)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Apertura por Contraseña Rítmica",
+    "originalIdeaDescription": "Mecanismo de seguridad que requiere un patrón rítmico específico de golpes (ej. 'To-coy-me-voy'). Si el ritmo de los picos de ruido coincide con el patrón guardado, la lámpara se pone verde (abierto) y la matriz muestra un candado abierto. Si falla, muestra un candado cerrado.",
+    "transformedIdeaTitle": "La Puerta Secreta del Club",
+    "transformedIdeaDescription": "Solo los miembros del club conocen el toque secreto. Crea un programa que escuche el ritmo de los golpes en la puerta. Si tocan el ritmo correcto (Ta-Ta-Taaa), enciende la luz verde y muestra 'PASA'. Si se equivocan, luz roja y 'FUERA'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RecordRhythm(); IF Match(InputRhythm, SecretRhythm) THEN Lamp.green(), Matrix.show(OpenLock) ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas de Juguete",
+    "originalIdeaDescription": "Dispositivo para jugar a buscar fantasmas. La lámpara está apagada hasta que detecta un sonido sutil (ruido de fondo bajo pero no silencio total). Entonces, la lámpara parpadea erráticamente y la matriz muestra un fantasma moviéndose, simulando actividad paranormal.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Construye tu propio radar de fantasmas. Los fantasmas hacen ruidos muy bajitos que los humanos no oyen bien. Calibra tu sensor: si detecta un ruido muy suave y extraño, ¡haz que la luz parpadee y aparezca un fantasma en la pantalla para avisar que están cerca!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 5 AND NoiseLevel < 20 THEN Lamp.flicker(Purple), Matrix.animate(Ghost)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Competición de Gritos",
+    "originalIdeaDescription": "Un juego para dos o más jugadores. El sistema mide el pico más alto de ruido durante 5 segundos. La matriz muestra el puntaje máximo alcanzado (0-9) y la lámpara brilla con una intensidad proporcional al récord establecido.",
+    "transformedIdeaTitle": "El Rey de la Selva",
+    "transformedIdeaDescription": "¿Quién tiene el rugido más fuerte? Desafía a tus amigos a rugir como leones. El sistema escuchará y le dará una nota del 1 al 9 a cada uno en la pantalla. ¡El rugido más fuerte hará que la luz brille al máximo como el sol!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "MaxNoise = measurePeak(5sec); Matrix.showNumber(map(MaxNoise)); Lamp.brightness(map(MaxNoise))"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Reloj Despertador Inverso",
+    "originalIdeaDescription": "Para enseñar a los niños a no levantarse demasiado temprano. Si hay ruido antes de la hora programada, la matriz muestra 'ZZZ' y la lámpara se pone roja (volver a la cama). Si hay ruido después de la hora, muestra un sol y luz verde.",
+    "transformedIdeaTitle": "¿Es Hora de Levantarse?",
+    "transformedIdeaDescription": "A veces nos despertamos y no sabemos si es de día. Programa tu reloj inteligente: si haces ruido y todavía es muy temprano, te mandará a dormir con una luz roja y un icono de sueño. Si ya es hora, ¡celebrará contigo con luz verde y un sol!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Time < 7:00 AND Noise > Threshold THEN Lamp.red(), Matrix.show(Zzz) ELSE Lamp.green(), Matrix.show(Sun)"
+  },
+  {
+    "componentUsed": [
+      "Noise Level",
+      "Lamp",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Afinador de Instrumentos Básico",
+    "originalIdeaDescription": "Ayuda visual para mantener una nota sostenida. Si el volumen de la nota es constante y adecuado, la lámpara está verde y la matriz muestra un guion medio. Si es muy bajo, flecha arriba (tocar más fuerte); si es muy alto, flecha abajo (tocar más suave).",
+    "transformedIdeaTitle": "El Director de Orquesta Robot",
+    "transformedIdeaDescription": "Estás aprendiendo a tocar la flauta, pero el Director Robot es muy exigente. Mantén la nota perfecta: si tocas muy despacio, te pedirá 'MÁS FUERTE' con una flecha hacia arriba. Si tocas muy fuerte, te pedirá calma. Si lo haces perfecto, ¡te dará luz verde!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < Target THEN Matrix.show(ArrowUp) ELSE IF Noise > Target THEN Matrix.show(ArrowDown) ELSE Lamp.green()"
+  }
+]

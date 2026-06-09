@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Navegador de Audio para Discapacidad Visual",
+    "originalIdeaDescription": "Un sistema de asistencia que utiliza la brújula para determinar la orientación del usuario. Cuando el usuario presiona el botón táctil, el reproductor de audio anuncia verbalmente la dirección cardinal (Norte, Sur, Este, Oeste) hacia la que está mirando para ayudar en la orientación espacial.",
+    "transformedIdeaTitle": "El Explorador Ciego: Ecos del Laberinto",
+    "transformedIdeaDescription": "Los estudiantes deben escapar de un laberinto invisible. El 'Juego' les dice una dirección segura (ej: 'El camino está al Este'). El estudiante debe girar físicamente con el dispositivo hasta encontrar el Este y confirmar su movimiento con el botón. Si aciertan, avanzan; si fallan, chocan contra una pared virtual sonora.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Audio.instruction == 'Este' AND Compass.direction == 'East' AND Button.pressed THEN Audio.play('StepSound') ELSE Audio.play('CrashSound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Música Direccional 360",
+    "originalIdeaDescription": "Una aplicación musical donde diferentes pistas de audio están asignadas a diferentes direcciones cardinales. Al apuntar el dispositivo hacia el Norte, Sur, etc., y mantener presionado el botón, se reproduce la pista específica de esa zona, permitiendo al usuario mezclar canciones girando.",
+    "transformedIdeaTitle": "DJ Giratorio: La Fiesta de los Puntos Cardinales",
+    "transformedIdeaDescription": "Conviértete en un DJ que controla la música con su cuerpo. El Norte es la batería, el Sur el bajo, el Este la voz y el Oeste el sintetizador. Los estudiantes programan el dispositivo para que, al girar y pulsar el botón, activen o desactiven capas de la canción, creando una mezcla única en vivo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading > 315 OR Compass.heading < 45 THEN Audio.track('Drums').toggle(Button.isPressed)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Búsqueda del Tesoro por Sonar",
+    "originalIdeaDescription": "Un juego donde el usuario busca un objetivo invisible. La brújula rastrea la dirección hacia el objetivo predefinido. Al presionar el botón, el audio reproduce un sonido de 'ping' cuya velocidad o tono indica qué tan alineado está el usuario con la dirección correcta.",
+    "transformedIdeaTitle": "Misión Submarina: Cazador de Tesoros",
+    "transformedIdeaDescription": "Los estudiantes simulan un radar de submarino. Deben encontrar un tesoro hundido que está escondido en una dirección secreta (ej: 120 grados). Al presionar el botón, escuchan un sonar; si miran en la dirección correcta, el sonido es agudo y rápido. Deben programar la lógica de 'Frio o Caliente' usando ángulos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "diff = abs(TargetAngle - Compass.azimuth); IF Button.pressed THEN Audio.playTone(1000 - diff * 5)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cuento Interactivo de Elección de Caminos",
+    "originalIdeaDescription": "Una historia de audio donde la trama se bifurca. El narrador ofrece opciones (ej: 'Ve al Oeste para el bosque, al Este para la cueva'). El usuario gira hacia la dirección elegida y presiona el botón para continuar la historia por ese camino.",
+    "transformedIdeaTitle": "La Brújula Mágica de Cuentos",
+    "transformedIdeaDescription": "Crea una aventura de 'Elige tu propia aventura' en la vida real. El estudiante programa la historia: al llegar a una bifurcación narrativa, el usuario debe decidir físicamente su destino girando su cuerpo. Si elige el camino peligroso (Norte), suena un dragón; si elige el seguro (Sur), encuentra una aldea.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Audio.play('Intro'); WAIT Button.pressed; IF Compass.direction == 'North' THEN Audio.play('DragonScene') ELSE Audio.play('VillageScene')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Direccional",
+    "originalIdeaDescription": "Un sistema de seguridad virtual donde la 'clave' es una secuencia de orientaciones (ej: Norte, luego Oeste, luego Norte). El usuario gira y confirma cada paso con el botón. Si la secuencia es correcta, se reproduce un sonido de apertura.",
+    "transformedIdeaTitle": "El Ladrón de Bancos: Cracker de Cajas Fuertes",
+    "transformedIdeaDescription": "Desafío de lógica y memoria. Los estudiantes deben programar una cerradura digital que solo se abre con una 'danza' específica (Norte -> Click -> Este -> Click). Deben implementar variables para contar en qué paso de la secuencia va el usuario y validar cada movimiento.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Step==1 AND Compass=='N' AND Button.click THEN Step=2; IF Step==2 AND Compass=='E' AND Button.click THEN Audio.play('Open')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simón Dice Geográfico",
+    "originalIdeaDescription": "Una variante del juego Simón Dice. El audio da una instrucción ('Simón dice: Mira al Sur'). El jugador debe orientar el dispositivo al Sur y presionar el botón rápidamente. El juego lleva la puntuación.",
+    "transformedIdeaTitle": "Capitán Pirata: ¡A las órdenes!",
+    "transformedIdeaDescription": "Un juego de reacción rápida. El 'Capitán' (Audio) grita órdenes confusas ('¡Proa al Norte!', '¡Popa al Sur!'). El estudiante debe girar y confirmar antes de que se acabe el tiempo. Programan listas aleatorias de comandos y temporizadores de respuesta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Random(['N','S','E','W']); Audio.say(Target); WAIT 3s; IF Button.pressed AND Compass.dir == Target THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de Efectos de Sonido",
+    "originalIdeaDescription": "El usuario gira sobre sí mismo como una ruleta. Al presionar el botón para 'detenerse', la aplicación lee la dirección actual y reproduce un efecto de sonido aleatorio o preasignado a ese cuadrante (ej: Animales, Vehículos).",
+    "transformedIdeaTitle": "La Rueda de la Fortuna Sonora",
+    "transformedIdeaDescription": "Perfecto para fiestas o sorteos. Los estudiantes dividen los 360 grados en secciones (premios o castigos sonoros). Un usuario gira con los ojos cerrados y presiona el botón al azar. Dependiendo del ángulo final, ganan un 'Aplauso' o reciben un 'Abucheo'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed THEN (IF Compass.degrees < 180 THEN Audio.play('Win') ELSE Audio.play('Lose'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Una aplicación de juego de rol donde un sonido de estática se vuelve más claro o cambia a una voz fantasmal cuando el dispositivo apunta a una dirección específica generada aleatoriamente al inicio.",
+    "transformedIdeaTitle": "Cazafantasmas: El Espectro Invisible",
+    "transformedIdeaDescription": "Los estudiantes crean un detector de presencias. Al iniciar, el programa elige una dirección aleatoria donde se esconde el 'fantasma'. El usuario explora la habitación presionando el botón para 'escanear'. Si apuntan al lugar correcto, el audio revela el grito del fantasma.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "GhostLoc = Random(0,360); IF Button.pressed AND abs(Compass.azimuth - GhostLoc) < 20 THEN Audio.play('Boo!')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Guía Turístico de Monumentos Virtuales",
+    "originalIdeaDescription": "Simula estar en el centro de una ciudad famosa. Dependiendo de hacia dónde apunte el usuario (N, S, E, O) y presione el botón, el audio describe el monumento que 'estaría' allí (ej: 'Frente a ti ves la Torre Eiffel').",
+    "transformedIdeaTitle": "Teletransportador: Viaje Alrededor del Mundo",
+    "transformedIdeaDescription": "Convierte el aula en un mapa mundial. Los estudiantes programan el dispositivo para que el Norte sea el Polo Norte (sonido de viento), el Sur la Antártida (pingüinos), el Este Asia (música tradicional) y el Oeste América. Aprenden geografía y mapeo de condiciones.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed: IF Compass.dir == 'N' THEN Audio.play('Wind'); IF Compass.dir == 'E' THEN Audio.play('Gong')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Afinador de Orquesta Espacial",
+    "originalIdeaDescription": "Divide el espacio en secciones de instrumentos. Apuntar al Norte y pulsar reproduce violines; al Sur, chelos; etc. Permite al usuario explorar las secciones de una orquesta girando.",
+    "transformedIdeaTitle": "El Director de Orquesta Loco",
+    "transformedIdeaDescription": "Los estudiantes deben 'componer' una pieza dirigiendo a músicos invisibles. Asignan instrumentos a grados específicos. El desafío es coordinar el movimiento corporal para presionar el botón en el ángulo exacto y crear una melodía fluida saltando entre 'Violines' (Norte) y 'Tambores' (Sur).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading < 90 THEN instrument = 'Violin' ELSE instrument = 'Drum'; IF Button.pressed THEN Audio.play(instrument)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Yoga Saludo al Sol",
+    "originalIdeaDescription": "Una guía de meditación que requiere alineación correcta. El audio instruye realizar posturas específicas mirando al Este (amanecer) o al Oeste (atardecer). El botón confirma que el usuario está en posición para avanzar.",
+    "transformedIdeaTitle": "Maestro Zen: Equilibrio y Orientación",
+    "transformedIdeaDescription": "Combina educación física con programación. El dispositivo guía una rutina de ejercicios. Para desbloquear la siguiente instrucción de audio ('Ahora, estira hacia el sol'), el estudiante debe estar mirando exactamente al Este y mantener el botón presionado por 3 segundos.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.say('Look East'); WAIT UNTIL (Compass.dir == 'East' AND Button.held(3000)); Audio.say('Next Pose')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "El audio reporta aviones aproximándose desde diferentes rumbos (grados). El usuario debe girar hacia ese rumbo exacto y presionar el botón para 'autorizar el aterrizaje'.",
+    "transformedIdeaTitle": "Torre de Control: Aterrizaje de Emergencia",
+    "transformedIdeaDescription": "Juego de simulación de alta tensión. El audio dice: 'Vuelo 747 acercándose por el rumbo 270'. El estudiante debe usar la brújula para encontrar rápidamente los 270 grados y pulsar el botón para evitar un accidente. Enseña sobre grados y azimut.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = 270; Audio.alert('Plane at 270'); WAIT Button.pressed; IF abs(Compass.azimuth - Target) < 10 THEN Audio.success() ELSE Audio.crash()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Quiz de Idiomas Cardinales",
+    "originalIdeaDescription": "Herramienta educativa para aprender los puntos cardinales en otros idiomas. El audio dice una palabra (ej: 'North' o 'Nord'), y el usuario debe apuntar y confirmar con el botón.",
+    "transformedIdeaTitle": "Políglota de la Brújula",
+    "transformedIdeaDescription": "Desafío educativo. El dispositivo grita direcciones en inglés, francés o alemán aleatoriamente. El estudiante debe identificar la palabra, girar a la dirección correcta y pulsar el botón para ganar puntos. Si fallan, el audio traduce la palabra correctamente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Word = 'West'; Audio.say(Word); IF Button.pressed AND Compass.dir == 'W' THEN Points++ ELSE Audio.say('West means Oeste')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Escáner de Señales Alienígenas",
+    "originalIdeaDescription": "El dispositivo reproduce ruido estático constante. Al presionar el botón, escanea la dirección actual. Si apunta a una 'fuente de señal' específica, el audio cambia a un mensaje claro descifrable.",
+    "transformedIdeaTitle": "Contacto Extraterrestre: Decodificador",
+    "transformedIdeaDescription": "Los estudiantes buscan vida inteligente. Programan una zona estrecha (ej: entre 40 y 50 grados) donde se recibe la señal. Fuera de ahí, el botón solo produce ruido blanco. Deben encontrar la ventana de transmisión para escuchar el mensaje secreto.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.pressed THEN (IF Compass.degrees > 40 AND Compass.degrees < 50 THEN Audio.play('Message') ELSE Audio.play('Static'))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Viento y Clima",
+    "originalIdeaDescription": "Dependiendo de la dirección hacia la que mire el usuario, al presionar el botón se reproducen sonidos de clima asociados (Norte=Ventisca, Sur=Olas de calor/Grillos, Este=Lluvia).",
+    "transformedIdeaTitle": "El Hombre del Tiempo Inmersivo",
+    "transformedIdeaDescription": "Crea una atmósfera para una obra de teatro escolar. Los estudiantes asignan efectos de sonido a cada punto cardinal. El operador del dispositivo gira y presiona el botón para cambiar el ambiente sonoro de la escena en tiempo real según lo que pida el guion.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.dir == 'North' AND Button.pressed THEN Audio.play('BlizzardLoop')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Preguntas Verdadero/Falso Direccional",
+    "originalIdeaDescription": "El audio hace una pregunta. El usuario debe girar al Norte si cree que es Verdadero, o al Sur si es Falso, y presionar el botón para confirmar su respuesta.",
+    "transformedIdeaTitle": "Quiz Activo: Norte Verdadero, Sur Falso",
+    "transformedIdeaDescription": "Una trivia que te hace moverte. El audio lanza afirmaciones (ej: 'Los peces vuelan'). El estudiante debe decidir rápidamente: Norte es VERDAD, Sur es FALSO. Girar y pulsar. Introduce la lógica booleana mapeada al mundo físico.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.ask('Question'); IF Button.pressed THEN (IF Compass.dir=='N' AND Answer==True THEN Audio.correct() ELSE Audio.wrong())"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Rastreo de Animales Virtuales",
+    "originalIdeaDescription": "El audio reproduce el sonido de un animal (ej: un lobo). El usuario debe deducir dónde vive (bosque al Norte) o dónde se esconde, apuntar allí y presionar el botón para 'fotografiarlo'.",
+    "transformedIdeaTitle": "Safari Fotográfico a Ciegas",
+    "transformedIdeaDescription": "Los estudiantes aprenden sobre hábitats. Programan el dispositivo para que cada dirección sea un bioma (Norte=Ártico, Sur=Sabana). El audio reproduce un rugido de león; el estudiante debe apuntar al Sur y pulsar el botón para 'capturar' la foto. Si apuntan al Norte (Ártico), el león escapa.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.play('LionRoar'); WAIT Button.pressed; IF Compass.dir == 'South' THEN Audio.play('CameraClick') ELSE Audio.play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Brújula de Emociones",
+    "originalIdeaDescription": "Herramienta de expresión emocional. Cada dirección cardinal está mapeada a una emoción (Alegría, Tristeza, Ira, Calma) con música acorde. El usuario gira para encontrar cómo se siente y presiona el botón para reproducir la pista.",
+    "transformedIdeaTitle": "El Mapa de los Sentimientos",
+    "transformedIdeaDescription": "Actividad de inteligencia emocional y programación. Los estudiantes asignan música triste al Norte (frío) y alegre al Sur (cálido). Usan el dispositivo para comunicar su estado de ánimo actual sin hablar, simplemente orientándose y presionando el botón.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.dir == 'N' THEN Track='Sadness'; IF Button.pressed THEN Audio.play(Track)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Reloj de Sol Auditivo Simulado",
+    "originalIdeaDescription": "Simula la posición del sol. El usuario apunta hacia donde cree que está el sol según la hora del día. Al presionar el botón, el audio le dice la hora virtual basada en ese ángulo.",
+    "transformedIdeaTitle": "Cronometrador Solar Ancestral",
+    "transformedIdeaDescription": "Recrea tecnología antigua. Los estudiantes mapean los 180 grados del horizonte Sur (Este a Oeste) a las horas del día (6am a 6pm). Al apuntar y hacer clic, el dispositivo calcula y dice la 'hora solar' correspondiente al ángulo apuntado.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Hours = Map(Compass.azimuth, 90, 270, 6, 18); IF Button.pressed THEN Audio.sayTime(Hours)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Escudo Defensivo Direccional",
+    "originalIdeaDescription": "Juego de acción defensiva. El audio indica '¡Ataque por el Flanco Derecho!'. El usuario debe girar 90 grados a la derecha desde su posición actual y presionar el botón para activar el escudo.",
+    "transformedIdeaTitle": "Defensor Galáctico: Escudos Arriba",
+    "transformedIdeaDescription": "Juego de matemáticas y reflejos. El ataque viene en ángulos relativos ('¡Enemigo a las 3 en punto!'). El estudiante debe calcular rápidamente hacia dónde girar (90 grados a la derecha) y activar el escudo con el botón antes del impacto sonoro.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "StartAngle = Compass.azimuth; Audio.warn('Right Flank'); WAIT Button.pressed; IF (Compass.azimuth == StartAngle + 90) THEN Audio.block() ELSE Audio.hit()"
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento Virtual Controlado por Inclinación",
+    "originalIdeaDescription": "Esta idea consiste en simular el funcionamiento de un instrumento de viento, como un trombón, utilizando el sensor de inclinación para variar la altura de la nota musical. Al inclinar el dispositivo hacia adelante o hacia atrás a lo largo del eje Y, se seleccionan diferentes notas de una escala predefinida. El botón táctil actúa como la boquilla o el mecanismo de soplido; el sonido solo se emite cuando el usuario mantiene presionado el botón, permitiendo controlar la duración y el ritmo de cada nota seleccionada por la inclinación.",
+    "transformedIdeaTitle": "El Trombón Espacial del Futuro",
+    "transformedIdeaDescription": "¡Conviértete en un músico galáctico! En esta actividad, construirás un trombón invisible que se toca moviendo el aire. Usarás el sensor de inclinación como la vara deslizante del trombón: cuanto más inclines tu dispositivo hacia arriba, más agudo será el sonido, y hacia abajo, más grave. Pero cuidado, el instrumento solo sonará cuando presiones el 'botón de aire'. Aprenderás a coordinar el movimiento físico con la lógica de activación, creando melodías espaciales únicas mientras exploras cómo las variables de movimiento controlan el sonido.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { Note = Map(Inclination.Y, -90, 90, C4, C5); MusicalKeyboard.play(Note) } ELSE { MusicalKeyboard.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad de Caja Fuerte Sonora",
+    "originalIdeaDescription": "Se trata de un mecanismo de desbloqueo basado en la precisión angular. El usuario debe inclinar el dispositivo lentamente buscando un ángulo específico 'secreto' en el eje X. A medida que se inclina, el teclado no suena, pero cuando se alcanza el rango correcto (por ejemplo, entre 15 y 20 grados), se habilita una nota específica de 'éxito'. El usuario debe mantener esa posición exacta y presionar el botón táctil para confirmar el desbloqueo, lo que reproducirá una melodía de victoria si la inclinación coincide con el valor objetivo almacenado.",
+    "transformedIdeaTitle": "La Bóveda Secreta de los Sonidos",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte de alta tecnología que no usa llaves, ¡sino equilibrio! Tu misión es encontrar el ángulo mágico inclinando tu dispositivo con mucho cuidado. No escucharás nada hasta que encuentres el 'punto dulce', momento en el cual una nota especial te avisará que estás en la posición correcta. Una vez allí, deberás mantener el pulso firme y presionar el botón secreto para abrir la bóveda. Esta actividad enseña precisión, condiciones lógicas anidadas y rangos de variables.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Inclination.X > 15 AND Inclination.X < 20) THEN { Play(Note_C); IF TouchButton.isPressed() THEN Play(VictoryMelody) } ELSE { StopSound() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Varita Mágica Generadora de Arpegios Musicales",
+    "originalIdeaDescription": "El dispositivo se configura para actuar como una varita mágica que lanza hechizos sonoros. El sensor de inclinación detecta movimientos bruscos o 'sacudidas' en el eje Z. Dependiendo de la dirección de la inclinación final después de la sacudida, el sistema selecciona un acorde mayor o menor. El botón táctil sirve para 'lanzar' el hechizo, ejecutando un arpegio rápido de las notas seleccionadas. Esto permite al usuario gestualizar el tipo de magia sonora que desea invocar antes de ejecutarla con el botón.",
+    "transformedIdeaTitle": "Escuela de Magia: Varitas Musicales",
+    "transformedIdeaDescription": "¡Bienvenidos a la clase de encantamientos sonoros! Convertirás tu dispositivo en una varita mágica. Aprenderás a programar gestos: si inclinas la varita hacia arriba, prepararás un hechizo de alegría (acorde mayor), y si la inclinas hacia abajo, un hechizo de misterio (acorde menor). Pero el hechizo no sale solo; debes presionar el botón mágico para lanzarlo en forma de una lluvia de notas (arpegio). Descubrirás cómo usar condicionales para elegir entre diferentes secuencias de comandos basándote en la posición física.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 0 THEN Chord = Major ELSE Chord = Minor; IF TouchButton.wasPressed() THEN PlayArpeggio(Chord)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja con Retroalimentación Auditiva",
+    "originalIdeaDescription": "Esta herramienta utiliza el sensor de inclinación para proporcionar una guía auditiva sobre la horizontalidad de una superficie. Si el dispositivo está perfectamente nivelado (inclinación cercana a 0 en X e Y), no emite sonido o emite un tono constante agradable. A medida que se desvía del centro, el teclado musical reproduce notas disonantes o de alerta, cuya altura varía según el grado de error. El botón táctil permite recalibrar el 'cero' o silenciar temporalmente la herramienta para tomar mediciones sin ruido.",
+    "transformedIdeaTitle": "El Constructor Ciego y la Tabla Equilibrada",
+    "transformedIdeaDescription": "Imagina que eres un constructor que tiene que nivelar una estantería en total oscuridad. En este desafío, programarás tu herramienta para que 'cante' cuando algo está torcido. Si la tabla está perfectamente plana, sonará una nota armónica y pura. Si se inclina a la izquierda o derecha, las notas se volverán graves o agudas indicando el error. Usarás el botón para reiniciar tu herramienta. Es una forma genial de entender cómo los sensores pueden traducir el mundo físico en datos útiles y sonidos.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Error = abs(Inclination.X); IF Error < 2 THEN Play(C_Major) ELSE Play(Map(Error, 0, 45, C3, B3)); IF TouchButton.isPressed() THEN Calibrate()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de DJ para Efectos de Pitch",
+    "originalIdeaDescription": "Este concepto emula una mesa de mezclas de DJ simplificada. El botón táctil se utiliza para iniciar o detener un bucle de ritmo base o una secuencia de notas repetitivas. Mientras la música suena, el usuario puede inclinar el dispositivo lateralmente (eje X) para alterar el tono (pitch) de la reproducción en tiempo real, creando un efecto de 'warping' o distorsión de vinilo. La inclinación hacia la derecha acelera/sube el tono, y hacia la izquierda lo ralentiza/baja, permitiendo una interacción dinámica con el audio.",
+    "transformedIdeaTitle": "Superestrella DJ: Mezclando con Movimiento",
+    "transformedIdeaDescription": "¡Toma el control de la cabina de DJ! En lugar de girar perillas, usarás el movimiento de tu cuerpo para transformar la música. Programarás el botón para soltar el ritmo (el 'beat'). Luego, usarás el sensor de inclinación para hacer 'scratching' digital: inclina a la derecha para acelerar el ritmo y hacerlo agudo como una ardilla, o a la izquierda para hacerlo lento y grave como un gigante. Aprenderás sobre bucles de repetición y cómo modificar variables en tiempo real.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.toggle() THEN { Speed = Map(Inclination.X, -30, 30, 0.5, 1.5); MusicalKeyboard.playLoop(Speed) } ELSE { MusicalKeyboard.stop() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio y Resistencia Musical",
+    "originalIdeaDescription": "Un juego de desafío físico donde el objetivo es mantener el silencio. El sistema monitorea constantemente los sensores de inclinación X e Y. Si el dispositivo se mantiene dentro de un margen muy estrecho de estabilidad, no ocurre nada. Si el usuario tiembla o inclina el dispositivo fuera del umbral seguro, el teclado musical dispara una alarma estrepitosa. El botón táctil se utiliza para iniciar el temporizador del desafío y para detener la alarma una vez que el jugador ha perdido, reiniciando el juego.",
+    "transformedIdeaTitle": "El Desafío del Funambulista Silencioso",
+    "transformedIdeaDescription": "¿Tienes pulso de cirujano? En este juego, tu dispositivo es una bomba de tiempo muy sensible. Tu objetivo es mantenerlo totalmente plano mientras caminas por la habitación. Si tu mano tiembla o lo inclinas lo más mínimo... ¡BOOM! Sonará una alarma musical estridente. Programarás los límites de tolerancia y usarás el botón para iniciar la cuenta atrás. Es una competencia perfecta para ver quién tiene los nervios de acero y entiende mejor los umbrales lógicos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF GameActive AND (abs(Inclination.X) > 5 OR abs(Inclination.Y) > 5) THEN MusicalKeyboard.play(AlarmNote); IF TouchButton.pressed() THEN GameActive = !GameActive"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Guitarra Aérea (Air Guitar)",
+    "originalIdeaDescription": "Simulación de una guitarra utilizando el hardware. La inclinación vertical del dispositivo (eje Y, simulando el mástil de la guitarra) determina la nota o acorde que se va a reproducir, mapeando el ángulo a una escala musical. El botón táctil actúa como las cuerdas o la púa; el sonido solo se activa en el momento exacto en que se toca el botón. Esto permite al usuario 'rasguear' rítmicamente con el botón mientras cambia la melodía moviendo el 'mástil' del dispositivo arriba y abajo.",
+    "transformedIdeaTitle": "Rockstar Tecnológico: Guitarra de Aire",
+    "transformedIdeaDescription": "¡Forma tu propia banda de rock digital! Construirás una guitarra que no tiene cuerdas. Usarás la inclinación para elegir las notas: apunta al techo para un solo agudo y al suelo para los bajos potentes. El botón será tu púa: presiónalo al ritmo de tu canción favorita para hacer sonar la nota elegida por la inclinación. Este desafío combina ritmo, coordinación y el mapeo de valores de sensores a frecuencias musicales.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "CurrentNote = Map(Inclination.Y, -90, 0, E2, E4); IF TouchButton.wasPressed() THEN MusicalKeyboard.play(CurrentNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Traductor de Emociones Alienígenas",
+    "originalIdeaDescription": "Un dispositivo lúdico que genera sonidos extraños basados en la orientación. Al inclinar el dispositivo en diferentes ejes combinados (X y Y), se generan intervalos musicales inusuales y disonantes que imitan un lenguaje alienígena. El botón táctil funciona como un 'transmisor': el usuario explora los sonidos moviendo el dispositivo y, cuando encuentra una combinación que le gusta, presiona el botón para grabar o transmitir esa secuencia corta de 'palabras' alienígenas a través del teclado musical.",
+    "transformedIdeaTitle": "Contacto Extraterrestre: El Traductor Universal",
+    "transformedIdeaDescription": "Hemos recibido un mensaje del espacio y necesitamos responder. Crearás un comunicador que hable 'alienígena'. Al mover tu dispositivo en ángulos extraños, generarás sonidos espaciales y raros que ningún instrumento humano podría hacer. Tu misión es encontrar la combinación perfecta de inclinación para crear una frase amistosa y usar el botón para enviarla al espacio profundo. Aprenderás sobre creatividad sonora y cómo mezclar múltiples ejes de datos para crear resultados inesperados.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Pitch = Inclination.X + Inclination.Y; IF TouchButton.isPressed() THEN MusicalKeyboard.playTone(Pitch, Duration_Short)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Volante de Conducción Melódica",
+    "originalIdeaDescription": "Se utiliza el dispositivo como un volante de automóvil. La inclinación en el eje X (girar el volante) recorre una escala musical ascendente o descendente. Si el usuario gira a la derecha, las notas suben; a la izquierda, bajan. El botón táctil se programa como el claxon del coche, reproduciendo una nota específica o un acorde distinto que interrumpe la escala melódica. El objetivo es 'conducir' a través de una canción siguiendo una partitura gráfica que indica hacia dónde girar.",
+    "transformedIdeaTitle": "Gran Premio Musical: La Carrera de Notas",
+    "transformedIdeaDescription": "¡En sus marcas, listos, fuera! Convierte tu kit en el volante de un coche de carreras sónico. En esta pista, las curvas son notas musicales. Si giras a la derecha, la música sube de tono; si giras a la izquierda, baja. Tendrás que 'conducir' siguiendo la melodía de una canción famosa sin salirte del camino. ¡Y no olvides usar el botón del claxon si se cruza otro coche! Una forma divertida de entender secuencias lineales controladas por una variable continua.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "NoteIndex = Map(Inclination.X, -90, 90, 0, 12); IF TouchButton.isPressed() THEN MusicalKeyboard.play(Horn) ELSE MusicalKeyboard.play(Scale[NoteIndex])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Lluvia y Truenos Atmosféricos",
+    "originalIdeaDescription": "Un simulador de ambiente sonoro. La inclinación del dispositivo controla la intensidad de una lluvia simulada mediante notas rápidas y aleatorias en el teclado (pizzicato). Una inclinación suave produce gotas lentas (notas espaciadas), mientras que una inclinación pronunciada crea un aguacero (notas rápidas). El botón táctil desencadena un evento de 'trueno', que es un acorde grave y fuerte en el teclado. Permite a los estudiantes crear una narrativa sonora ambiental controlada manualmente.",
+    "transformedIdeaTitle": "El Señor del Clima: Creador de Tormentas",
+    "transformedIdeaDescription": "Hoy tú controlas el tiempo. Vas a programar una máquina de lluvia. Si inclinas un poco tu dispositivo, caerán unas pocas gotas musicales (notas suaves y lentas). Si lo inclinas mucho, ¡se desatará una tormenta torrencial de notas rápidas! Y para el gran final, presiona el botón para lanzar un trueno estruendoso con el piano. Es una actividad excelente para aprender sobre frecuencia, aleatoriedad (random) y cómo simular fenómenos naturales con código.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RainSpeed = Map(Inclination.X, 0, 90, 1000ms, 50ms); Every(RainSpeed) { MusicalKeyboard.playRandomHighNote() }; IF TouchButton.pressed() THEN MusicalKeyboard.playLowChord()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Escala Musical de Escalada (Climbing Game)",
+    "originalIdeaDescription": "Una gamificación del aprendizaje de escalas musicales. El usuario debe simular que está escalando una montaña inclinando el dispositivo hacia arriba (eje Y). A medida que aumenta el ángulo, se reproduce la siguiente nota de la escala (Do, Re, Mi...). Para 'agarrarse' a la siguiente piedra y asegurar la nota, debe presionar el botón táctil. Si suelta la inclinación sin presionar el botón, la escala 'cae' o se reinicia. El objetivo es llegar a la nota más alta y confirmarla.",
+    "transformedIdeaTitle": "Escalando la Montaña Do-Re-Mi",
+    "transformedIdeaDescription": "¡La cima te espera! En este juego de escalada, cada paso es una nota musical. Para subir, tienes que inclinar tu dispositivo hacia arriba. Escucharás Do, luego Re, luego Mi... pero ten cuidado, si no presionas el botón de 'agarre' para asegurar tu posición, ¡te caerás al principio de la escala! Tu misión es llegar a la nota más alta (Do agudo) y mantenerla sonando. Aprenderás lógica secuencial y cómo usar botones para guardar estados en un programa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TargetNote = Map(Inclination.Y, 0, 90, 0, 7); IF TouchButton.pressed() AND TargetNote > CurrentStep THEN { CurrentStep = TargetNote; MusicalKeyboard.play(Scale[CurrentStep]) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Musical de Cuerda Manual",
+    "originalIdeaDescription": "Este proyecto simula una caja de música mecánica clásica. El botón táctil no reproduce sonido, sino que actúa como la llave de cuerda: el usuario debe presionarlo repetidamente para 'cargar' energía (incrementar una variable de contador). Una vez cargada, la inclinación del dispositivo actúa como el liberador del mecanismo. Al inclinar el dispositivo, la música comienza a sonar, y la velocidad de reproducción depende del ángulo de inclinación, consumiendo la energía cargada hasta que se detiene.",
+    "transformedIdeaTitle": "La Caja de Música Encantada",
+    "transformedIdeaDescription": "Vamos a revivir un juguete antiguo con tecnología nueva. Crearás una caja de música que necesita 'cuerda' para funcionar. Primero, tendrás que presionar el botón muchas veces para darle energía mágica. Luego, para que la música suene, tendrás que inclinar la caja delicadamente. Cuanto más la inclines, más rápido sonará la melodía, pero cuidado: ¡la energía se agota! Tendrás que recargarla con el botón. Aprenderás sobre variables acumulativas y gestión de recursos en programación.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() THEN Energy++; IF Energy > 0 AND Inclination.X > 10 THEN { MusicalKeyboard.playNextNote(); Energy-- } ELSE { Stop() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Péndulo de Metrónomo Interactivo",
+    "originalIdeaDescription": "Simulación física de un metrónomo. El usuario balancea el dispositivo de izquierda a derecha en el eje X. El sistema detecta los picos de la inclinación (cambio de dirección) y reproduce un sonido de 'tic' o 'tac' en el teclado musical en esos puntos exactos. El botón táctil se utiliza para cambiar el compás (por ejemplo, acentuar cada 3 o 4 oscilaciones con una nota diferente), permitiendo al usuario entender el ritmo visual y físicamente.",
+    "transformedIdeaTitle": "El Reloj del Abuelo Hipnótico",
+    "transformedIdeaDescription": "Convierte tu dispositivo en el péndulo de un reloj antiguo. Tendrás que balancearlo suavemente de un lado a otro. Tu código detectará cuando el péndulo cambia de dirección y hará sonar un 'Tic' o un 'Tac' con el piano. Usarás el botón para cambiar el sonido de la campana que marca las horas. Es una actividad relajante pero desafiante que te enseña a detectar picos en los datos de los sensores y a sincronizar el movimiento físico con el sonido digital.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (Delta(Inclination.X) changes sign) THEN MusicalKeyboard.play(Click); IF TouchButton.pressed() THEN ChangeAccent()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Catapulta de Notas Musicales",
+    "originalIdeaDescription": "Un sistema de 'lanzamiento' de sonidos. El usuario inclina el dispositivo hacia atrás (eje Y negativo) para simular la tensión de una catapulta o un arco. Cuanto mayor es la inclinación hacia atrás, más alta es la nota que se 'carga'. El botón táctil actúa como el gatillo. Al presionar el botón, se libera la nota seleccionada, y el usuario debe devolver rápidamente el dispositivo a la posición horizontal para preparar el siguiente lanzamiento.",
+    "transformedIdeaTitle": "Lanzamiento de Cohetes Musicales",
+    "transformedIdeaDescription": "¡Apunta y fuego! En esta misión, usarás tu dispositivo para lanzar cohetes que explotan en notas musicales. Inclina hacia atrás para apuntar: cuanto más atrás, más alto llegará el cohete (nota más aguda). Cuando tengas el objetivo fijado, presiona el botón de lanzamiento. ¡Fiuuuuum! El sonido saldrá disparado. Tendrás que practicar tu puntería para tocar una canción lanzando nota por nota. Aprenderás sobre carga de variables y eventos de disparo (trigger).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AimPitch = Map(Inclination.Y, 0, -90, C3, C5); IF TouchButton.wasPressed() THEN MusicalKeyboard.play(AimPitch)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Modo Mayor/Menor (Mood Box)",
+    "originalIdeaDescription": "Un instrumento que cambia el estado de ánimo musical según la postura. El botón táctil reproduce un acorde base. La inclinación del dispositivo modifica la 'cualidad' de ese acorde. Si el dispositivo se inclina hacia adelante (positivo), el acorde es Mayor (alegre). Si se inclina hacia atrás (negativo), el acorde se transforma en Menor (triste). Si se inclina lateralmente, añade séptimas o tensiones. Permite explorar teoría musical básica de forma intuitiva y física.",
+    "transformedIdeaTitle": "El Cubo de las Emociones",
+    "transformedIdeaDescription": "¿Sabías que la música tiene sentimientos? Vamos a construir un cubo que cambia de humor. Si lo inclinas hacia adelante y presionas el botón, sonará feliz y brillante. Si lo inclinas hacia atrás y presionas, sonará triste y melancólico. Tú serás el compositor emocional, cambiando la historia de tu canción solo con mover el cubo. Descubrirás cómo pequeños cambios en los datos (de mayor a menor) cambian totalmente la percepción del sonido.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > 10 THEN ChordType = Major ELSE ChordType = Minor; IF TouchButton.pressed() THEN MusicalKeyboard.playChord(Root, ChordType)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Arpa Láser Invisible con Pedal",
+    "originalIdeaDescription": "Simulación de un arpa donde las cuerdas son zonas de inclinación en el aire. Dividiendo el rango de inclinación del eje X en 7 segmentos, cada uno corresponde a una nota de la escala. El usuario mueve la mano (inclinando el dispositivo) para seleccionar la cuerda virtual, pero la cuerda no suena hasta que se 'pulsa' digitalmente usando el botón táctil, que actúa como el dedo pulsando la cuerda. Esto permite tocar melodías rápidas seleccionando con inclinación y ejecutando con el botón.",
+    "transformedIdeaTitle": "El Arpa Invisible",
+    "transformedIdeaDescription": "Imagina un instrumento que no se ve, pero se escucha. Vas a dividir el aire en 7 cuerdas invisibles. Al mover tu dispositivo de lado a lado, estarás tocando esas cuerdas fantasma, pero no sonarán todavía. Necesitas 'pulsarlas' con el botón mágico. Mueve tu mano para buscar la nota, y pulsa el botón para que suene. ¡Podrás tocar melodías enteras sin tocar nada físico más que tu kit! Aprenderás a dividir rangos de sensores en segmentos lógicos (zonas).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "StringIndex = Map(Inclination.X, -45, 45, 0, 7); IF TouchButton.wasPressed() THEN MusicalKeyboard.play(Scale[StringIndex])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Dirección Orquestal",
+    "originalIdeaDescription": "El usuario actúa como el director de una orquesta. El botón táctil inicia y detiene la obra musical. El sensor de inclinación (eje Y) controla la dinámica (volumen) o el tempo de la pieza. Levantar el dispositivo (inclinación arriba) acelera la música o la hace más fuerte (fortissimo), mientras que bajarlo la ralentiza o la hace más suave (pianissimo). El sistema reproduce una secuencia de notas preprogramada que obedece estas variables de control en tiempo real.",
+    "transformedIdeaTitle": "El Maestro Robot de la Orquesta",
+    "transformedIdeaDescription": "¡Ponte el frac, hoy diriges tú! Tienes una orquesta de robots esperando tus órdenes. Presiona el botón para que empiecen a tocar. Ahora, levanta tu batuta (el dispositivo) para que toquen rápido y con energía. Bájala suavemente para que la música se vuelva lenta y tranquila. Tú decides el ritmo y la emoción del concierto. Esta actividad te enseña cómo una variable continua (inclinación) puede modificar la velocidad de ejecución de un bucle de programación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Tempo = Map(Inclination.Y, -45, 45, Slow, Fast); IF TouchButton.isOn() THEN MusicalKeyboard.playSequence(Song, Tempo)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras Melódico",
+    "originalIdeaDescription": "Un dispositivo de 'broma' que supuestamente detecta el nerviosismo. El usuario debe sostener el dispositivo y responder preguntas. El botón táctil se mantiene presionado mientras se habla. El sensor de inclinación detecta micro-movimientos o temblores. Si la estabilidad es perfecta, suena un tono angelical constante. Si se detectan variaciones rápidas (nerviosismo), el teclado reproduce notas discordantes y rápidas, 'delatando' al usuario. Es una aplicación divertida de análisis de estabilidad de sensores.",
+    "transformedIdeaTitle": "El Detector de la Verdad",
+    "transformedIdeaDescription": "¿Puedes guardar un secreto sin ponerte nervioso? Tus amigos te harán preguntas mientras sostienes el 'Detector de la Verdad' y presionas el botón. Si estás tranquilo y tu mano no se mueve, el detector cantará una nota dulce. Pero si te pones nervioso y tiemblas aunque sea un poquito... ¡el detector empezará a gritar notas locas y te descubrirá! Construye este dispositivo para aprender sobre sensibilidad de sensores y cómo detectar ruido en los datos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stability = StandardDeviation(Inclination.XYZ); IF TouchButton.held() AND Stability > Threshold THEN MusicalKeyboard.play(Chaos) ELSE MusicalKeyboard.play(PureTone)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Moto GP Sinfónica (Simulador de Acelerador)",
+    "originalIdeaDescription": "El dispositivo se utiliza como el manillar de una motocicleta. El botón táctil es el encendido del motor (start). Una vez encendido, la inclinación en el eje Y (rotación hacia atrás como un acelerador de moto real) controla el tono de una nota continua, simulando el sonido del motor 'revving' (subiendo de revoluciones). Cuanto más se inclina, más aguda es la nota. El usuario debe seguir un patrón de aceleración y desaceleración auditiva.",
+    "transformedIdeaTitle": "Moto GP Musical: Carrera de Sonidos",
+    "transformedIdeaDescription": "¡Arranca motores! Convierte tu kit en el puño de una moto de carreras. Presiona el botón para encender el motor. Ahora, gira el dispositivo hacia atrás como si aceleraras de verdad. Escucha cómo el 'motor' (el piano) ruge y sube de tono. Tu reto es imitar el sonido de una carrera: acelerar en las rectas y soltar el gas en las curvas, controlando el sonido con el movimiento de tu muñeca. ¡Siente la velocidad del sonido!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN EngineOn = TRUE; IF EngineOn THEN { Pitch = Map(Inclination.Y, 0, 90, Low, High); MusicalKeyboard.playTone(Pitch) }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Piano de Gravedad Invertida",
+    "originalIdeaDescription": "Un experimento conceptual donde la gravedad determina la dirección de la escala. Si el dispositivo está en posición normal, el botón táctil toca notas graves. Si el usuario da la vuelta al dispositivo (inversión detectada por inclinación de 180 grados o eje Z negativo), la 'gravedad' musical se invierte y el mismo botón toca notas agudas. Permite explorar estados binarios basados en la orientación física completa del hardware.",
+    "transformedIdeaTitle": "El Piano Antigravedad",
+    "transformedIdeaDescription": "¿Qué pasaría si la música cayera hacia arriba? En este experimento, crearás un piano que cambia según cómo lo sujetes. Si lo tienes normal, el botón tocará notas graves y pesadas, como un elefante. Pero si le das la vuelta completa al dispositivo (boca abajo), ¡la gravedad se invierte! El mismo botón tocará notas agudas y ligeras, como un pajarito. Es una forma mágica de entender cómo la orientación física puede cambiar la lógica de tu programa.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z < 0 (UpsideDown) THEN Note = HighC ELSE Note = LowC; IF TouchButton.pressed() THEN MusicalKeyboard.play(Note)"
+  }]

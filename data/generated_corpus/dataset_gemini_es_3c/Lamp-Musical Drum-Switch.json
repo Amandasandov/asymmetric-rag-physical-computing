@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Visual y Auditiva Doméstica",
+    "originalIdeaDescription": "Esta idea consiste en crear un sistema de seguridad básico donde el interruptor actúa como un sensor de puerta o ventana. Cuando el interruptor se activa (simulando una apertura no autorizada), la lámpara parpadea en rojo intensamente y la batería reproduce un sonido de platillo repetitivo para alertar a los ocupantes de la intrusión.",
+    "transformedIdeaTitle": "¡Trampa para Espías Intrusos!",
+    "transformedIdeaDescription": "¡Eres un agente secreto protegiendo documentos clasificados! Tu misión es construir una trampa para atrapar a los espías enemigos que intenten entrar en tu base secreta. Configura el sistema para que, si un espía mueve el interruptor de la puerta, se activen las luces de emergencia rojas y suene una alarma ensordecedora.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Red'); Lamp.blink(); Drum.play('Cymbal'); } ELSE { Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica Controlado Manualmente",
+    "originalIdeaDescription": "Un dispositivo para efectos especiales en teatro que simula una tormenta. Al accionar el interruptor, se desencadena una secuencia donde la lámpara emite un destello blanco brillante (relámpago) e inmediatamente después la batería reproduce un sonido grave de bombo (trueno), creando una experiencia atmosférica inmersiva.",
+    "transformedIdeaTitle": "El Creador de Tormentas Mágicas",
+    "transformedIdeaDescription": "¡Conviértete en el dios del clima de tu propia obra de teatro! Necesitamos crear el efecto de una tormenta aterradora. Programa tu varita mágica (el interruptor) para que cada vez que la agites, ilumines el cielo con un rayo blanco y hagas retumbar el suelo con un trueno poderoso un segundo después.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.setColor('White'); Lamp.on(); Wait(0.2); Lamp.off(); Wait(0.5); Drum.play('BassDrum'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual y Sonoro para Músicos",
+    "originalIdeaDescription": "Herramienta para ayudar a músicos a mantener el tempo. El interruptor enciende o apaga el dispositivo. Mientras está encendido, el sistema marca el ritmo encendiendo la lámpara brevemente y tocando un golpe de caja de batería a intervalos regulares, ayudando a sincronizar la práctica musical.",
+    "transformedIdeaTitle": "El Entrenador de Ritmo de la Banda de Rock",
+    "transformedIdeaDescription": "Tu banda de rock tiene problemas para tocar al mismo tiempo y suenan desordenados. Como ingeniero de sonido, debes crear un dispositivo que marque el ritmo perfecto. Programa el sistema para que, al encender el interruptor maestro, marque el compás con una luz y un golpe seco para que todos sepan cuándo tocar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.blink('Green', 0.1); Drum.play('Snare'); Wait(1.0); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo de Juego Congelado Musical",
+    "originalIdeaDescription": "Un sistema para el juego de las estatuas o 'congelados'. Cuando el interruptor está encendido, la lámpara se pone verde y la batería toca un ritmo constante. Al apagar el interruptor, la luz se vuelve roja y la música se detiene instantáneamente, indicando que los jugadores deben congelarse.",
+    "transformedIdeaTitle": "El Árbitro del Baile Congelado",
+    "transformedIdeaDescription": "¡Vamos a organizar una competencia de baile! Pero necesitamos un árbitro imparcial. Crea un programa donde, mientras mantengas el interruptor encendido, la fiesta continúe con luces verdes y ritmo de batería. Pero cuidado, en cuanto lo apagues, ¡todo debe detenerse y la luz roja indicará quién se movió!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Green'); Drum.loop('BasicBeat'); } ELSE { Lamp.setColor('Red'); Drum.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse Audiovisual",
+    "originalIdeaDescription": "Dispositivo de comunicación simple. Cada vez que se presiona el interruptor, la lámpara se enciende y la batería emite un sonido corto. Esto permite enviar mensajes en código Morse utilizando tanto señales visuales como auditivas simultáneamente para receptores lejanos o en entornos ruidosos.",
+    "transformedIdeaTitle": "El Telégrafo del Barco Pirata",
+    "transformedIdeaDescription": "¡Tu barco pirata está en la niebla y necesitas enviar un mensaje secreto a la costa! Construye un telégrafo utilizando el interruptor. Cada vez que lo presiones, debe enviar una señal de luz para que te vean y un golpe de tambor para que te escuchen, permitiendo deletrear mensajes secretos en código Morse.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.on(); Drum.play('TomHigh'); } ELSE { Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Máquina Industrial",
+    "originalIdeaDescription": "Simulación de un panel de control de fábrica. El interruptor activa la maquinaria. Si está encendido (máquina operando), la lámpara es verde y hay un zumbido rítmico de batería. Si se apaga, la lámpara cambia a amarillo (espera) y el sonido cesa para indicar seguridad.",
+    "transformedIdeaTitle": "Panel de Control de la Fábrica de Robots",
+    "transformedIdeaDescription": "Eres el jefe de ingenieros en la fábrica de robots. Necesitas asegurarte de que los operarios sepan cuándo la cinta transportadora está activa. Programa el panel de control: si el interruptor de energía está activado, luz verde y sonido de maquinaria (batería). Si está apagado, luz amarilla de precaución y silencio total.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Green'); Drum.loop('IndustrialBeat'); } ELSE { Lamp.setColor('Yellow'); Drum.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta para Personas con Hipoacusia",
+    "originalIdeaDescription": "Un sistema de timbre inclusivo. Al presionar el interruptor (botón del timbre), se activa una secuencia donde la lámpara parpadea en varios colores llamativos y la batería produce un sonido de baja frecuencia con alta vibración, asegurando que la alerta sea percibida por diferentes sentidos.",
+    "transformedIdeaTitle": "El Super Timbre Sensorial",
+    "transformedIdeaDescription": "Estamos diseñando una casa inteligente que sea accesible para todos. Crea un timbre especial que ayude a las personas que no pueden escuchar bien. Al tocar el interruptor de la entrada, tu sistema debe hacer una fiesta de luces de colores y tocar un ritmo con mucha vibración para avisar que ha llegado una visita.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.blinkRandomColors(3); Drum.playSequence(['BassDrum', 'BassDrum', 'BassDrum']); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos con Selector de Instrumento",
+    "originalIdeaDescription": "Un instrumento musical básico donde el interruptor cambia el tipo de sonido. Si el interruptor está en una posición, tocar el botón activa un bombo y luz azul. Si está en la otra posición, activa una caja y luz roja, permitiendo crear patrones rítmicos complejos.",
+    "transformedIdeaTitle": "El DJ de Luces y Sonidos",
+    "transformedIdeaDescription": "¡Es hora de mezclar música! Tienes un set de DJ donde el interruptor cambia tu instrumento. Si el interruptor está apagado, tocas el bombo con luz azul para la base. Si lo enciendes, cambias a la caja con luz roja para el ritmo. ¡Crea tu propia canción alternando el interruptor!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Red'); Drum.play('Snare'); } ELSE { Lamp.setColor('Blue'); Drum.play('BassDrum'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Latidos Cardíacos de Juguete",
+    "originalIdeaDescription": "Simulación médica para juego simbólico. Al encender el interruptor, el sistema simula un latido del corazón: la lámpara pulsa en rojo sincronizada con un sonido doble de batería (tump-tump), imitando el ritmo cardíaco vital para jugar a ser doctores.",
+    "transformedIdeaTitle": "El Estetoscopio del Doctor Robot",
+    "transformedIdeaDescription": "El paciente robot necesita un chequeo. Usa tu kit médico para verificar sus signos vitales. Al encender el interruptor del escáner, debes programar el sistema para que simule un corazón latiendo: una luz roja que se desvanece y un sonido 'pum-pum' constante para saber que el paciente está sano.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.fade('Red', 0.5); Drum.play('HeartbeatPattern'); Wait(0.8); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Cuenta Regresiva de Despegue",
+    "originalIdeaDescription": "Secuencia de lanzamiento iniciada por un interruptor. Al activarlo, la lámpara cambia de color (Verde -> Amarillo -> Rojo) mientras la batería marca los segundos con golpes secos. Al final de la secuencia, se produce un sonido final de despegue y luz blanca sostenida.",
+    "transformedIdeaTitle": "Control de Misión: Despegue Espacial",
+    "transformedIdeaDescription": "¡3, 2, 1... Despegue! Eres el comandante de la NASA. Tu cohete está listo en la plataforma. Programa el botón de lanzamiento (interruptor) para iniciar la cuenta atrás. Haz que las luces cambien de color y el tambor marque los segundos finales antes de que los motores se enciendan con un gran estruendo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.switchedOn() THEN { Lamp.setColor('Green'); Drum.play('Rim'); Wait(1); Lamp.setColor('Yellow'); Drum.play('Rim'); Wait(1); Lamp.setColor('Red'); Drum.play('Crash'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna con Temporizador de Apagado",
+    "originalIdeaDescription": "Una lámpara de noche inteligente. El interruptor enciende la luz en un tono cálido y reproduce una melodía de batería muy suave (canción de cuna rítmica). Después de un tiempo predeterminado o al apagar el interruptor, la luz se desvanece y el sonido se detiene para ayudar a dormir.",
+    "transformedIdeaTitle": "La Lámpara Mágica de los Sueños",
+    "transformedIdeaDescription": "Ayuda a tu hermano pequeño a dormir sin miedo a la oscuridad. Crea una lámpara mágica que, al encender el interruptor, ilumine la habitación con un color suave y toque un ritmo relajante y lento. Si apagas el interruptor, todo debe apagarse suavemente para no despertarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('WarmWhite'); Drum.loop('LullabyBeat', Volume.Low); } ELSE { Lamp.fadeOut(); Drum.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Errores en Concurso (Quiz Buzzer)",
+    "originalIdeaDescription": "Sistema para concursos de preguntas. El interruptor lo tiene el moderador. Si un participante responde mal, el moderador acciona el interruptor, lo que provoca que la lámpara se ponga roja y la batería emita un sonido de error grave, indicando visual y auditivamente el fallo.",
+    "transformedIdeaTitle": "El Juez del Concurso de Televisión",
+    "transformedIdeaDescription": "¡Estás en un programa de trivia en vivo! Eres el juez encargado de señalar las respuestas incorrectas. Programa tu botón de juez (interruptor) para que, cuando un concursante se equivoque y tú lo presiones, todo el estudio se ilumine de rojo y suene un sonido grave de '¡Error!' para que pierdan sus puntos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Lamp.setColor('Red'); Drum.play('LowTom'); Wait(1); Lamp.off(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sirena de Vehículo de Emergencia",
+    "originalIdeaDescription": "Simulación de una patrulla de policía o ambulancia. Al activar el interruptor, se inicia un bucle donde la lámpara alterna rápidamente entre rojo y azul, y la batería reproduce un patrón rítmico rápido que imita la urgencia de una sirena.",
+    "transformedIdeaTitle": "Patrulla de Rescate en Acción",
+    "transformedIdeaDescription": "¡Hay una emergencia en la ciudad LEGO! Necesitas construir la sirena para tu camión de bomberos o coche de policía. Configura el interruptor para que, al encenderlo, las luces parpadeen rojo y azul a toda velocidad y el tambor suene rápido para que los demás coches se aparten del camino.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.setColor('Red'); Drum.play('HiHat'); Wait(0.2); Lamp.setColor('Blue'); Drum.play('Snare'); Wait(0.2); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Paso a Nivel Ferroviario",
+    "originalIdeaDescription": "Sistema de seguridad para trenes. Cuando el interruptor está activado (tren acercándose), la lámpara parpadea en rojo de forma intermitente y la batería toca un ritmo constante de advertencia (ding-ding simulado). Al apagarlo, la luz se pone verde indicando paso libre.",
+    "transformedIdeaTitle": "El Guardián del Cruce de Trenes",
+    "transformedIdeaDescription": "¡Cuidado, viene el tren! Debes proteger a los coches que cruzan las vías. Crea un sistema de seguridad donde, al activar el interruptor (cuando ves el tren), las luces rojas parpadeen y suene una campana de advertencia. Cuando apagues el interruptor, la luz verde debe indicar que es seguro cruzar.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.blink('Red'); Drum.loop('BellRhythm'); } ELSE { Lamp.setColor('Green'); Drum.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Sorpresa (Jack-in-the-box)",
+    "originalIdeaDescription": "Juguete clásico digitalizado. El usuario debe mantener el interruptor encendido para escuchar una melodía de batería que acelera progresivamente. En un momento aleatorio o al final del ciclo, la lámpara estalla en colores y suena un golpe fuerte, simulando el salto del muñeco.",
+    "transformedIdeaTitle": "La Caja Sorpresa del Payaso",
+    "transformedIdeaDescription": "Vamos a crear una broma digital. Programa una 'Caja Sorpresa'. Mientras tu amigo mantenga el interruptor presionado, sonará una música de suspenso que va cada vez más rápido. ¡De repente! Haz que la luz brille y suene un golpe fuerte para darle un susto divertido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Drum.play('Roll', speed++); Wait(time--); IF time < 0 THEN { Lamp.flash('Random'); Drum.play('Crash'); Break; } }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Lavado de Manos",
+    "originalIdeaDescription": "Dispositivo para fomentar la higiene. Al presionar el interruptor, se inicia un ciclo de 20 segundos. La lámpara cambia de color progresivamente (Azul a Verde) y la batería marca un ritmo divertido. Al finalizar, luz verde fija y sonido de celebración indican que las manos están limpias.",
+    "transformedIdeaTitle": "El Reto de las Manos Limpias",
+    "transformedIdeaDescription": "¡Combate a los gérmenes con ritmo! Los doctores dicen que debemos lavarnos las manos por 20 segundos. Crea un temporizador que se active con el interruptor. Mientras te lavas, la luz cambiará de color y sonará un ritmo divertido. ¡No pares hasta que la luz se ponga verde y suene el final!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.wasPressed() THEN { Lamp.setColor('Blue'); Drum.loop('FunBeat', 20s); Wait(20); Lamp.setColor('Green'); Drum.play('Cheer'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo del Robot",
+    "originalIdeaDescription": "Interfaz emocional para un robot. El interruptor alterna entre dos estados emocionales. Estado 1 (Feliz): Luz amarilla brillante y ritmo rápido de batería. Estado 2 (Enojado/Triste): Luz roja o azul oscuro y golpes lentos y pesados de batería.",
+    "transformedIdeaTitle": "El Robot con Sentimientos",
+    "transformedIdeaDescription": "Tu robot mascota no puede hablar, pero puede expresarse con luces y sonidos. Usa el interruptor para cambiar su humor. Si el interruptor está arriba, el robot está feliz (luz amarilla y ritmo rápido). Si está abajo, el robot está gruñón (luz roja y golpes lentos). ¡Enséñale a mostrar cómo se siente!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Lamp.setColor('Yellow'); Drum.loop('FastBeat'); } ELSE { Lamp.setColor('Red'); Drum.loop('SlowBeat'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Radar o Sonar",
+    "originalIdeaDescription": "Efecto de rastreo estilo submarino. El interruptor activa el sonar. La lámpara realiza un efecto de barrido o parpadeo lento en verde, acompañado de un sonido de 'ping' en la batería cada vez que la luz alcanza su intensidad máxima, simulando la detección de objetos.",
+    "transformedIdeaTitle": "El Submarino en Aguas Profundas",
+    "transformedIdeaDescription": "Estás explorando el fondo del océano en tu submarino. Necesitas encender el radar para no chocar con ballenas o rocas. Programa el interruptor para activar el sonar: una luz verde que gira o parpadea y un sonido de 'ping' solitario cada pocos segundos para buscar tesoros escondidos.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Lamp.fadeInOut('Green', 2s); Drum.play('PingSound'); Wait(2); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Avisador de Puerta de Tienda",
+    "originalIdeaDescription": "Sistema de notificación de entrada. El interruptor actúa como sensor en el marco de la puerta. Al cambiar de estado (abrir puerta), la lámpara se ilumina brevemente en blanco para iluminar la entrada y la batería toca un sonido de 'chime' o campanilla de bienvenida.",
+    "transformedIdeaTitle": "Bienvenido a mi Tienda Secreta",
+    "transformedIdeaDescription": "Tienes una tienda en tu cuarto y quieres saber cuándo entran clientes. Instala un sensor en la puerta (el interruptor). Cuando alguien abra la puerta y mueva el interruptor, tu sistema debe encender una luz de bienvenida y tocar un sonido agradable para saludarlos automáticamente.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.stateChanged() THEN { Lamp.on('White', 2s); Drum.play('Chime'); }"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Probador de Reflejos",
+    "originalIdeaDescription": "Juego de reacción. La lámpara se enciende en un color aleatorio después de un tiempo de espera. El usuario debe accionar el interruptor lo más rápido posible. Si lo hace rápido, la batería toca un sonido de victoria; si tarda mucho, un sonido de derrota.",
+    "transformedIdeaTitle": "El Desafío de Velocidad Ninja",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos ninja! El juego esperará en silencio y oscuridad... de repente, ¡la luz se encenderá! Tu misión es presionar el interruptor tan rápido como puedas. Si eres veloz, el tambor celebrará tu victoria. Si eres lento, sonará un tono triste. ¿Te atreves?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(RandomTime); Lamp.on(); StartTimer(); WAIT_FOR(Switch.on); StopTimer(); IF Time < 0.5s THEN Drum.play('Win') ELSE Drum.play('Lose');"
+  }
+]

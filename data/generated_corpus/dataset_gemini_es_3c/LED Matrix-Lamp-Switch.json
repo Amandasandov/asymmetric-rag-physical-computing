@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Lámpara de Noche",
+    "originalIdeaDescription": "Un sistema simple de iluminación nocturna donde el interruptor activa una luz suave en la lámpara y muestra una luna creciente o estrellas en la matriz LED para acompañar el sueño.",
+    "transformedIdeaTitle": "El Guardián de los Sueños",
+    "transformedIdeaDescription": "Diseña un dispositivo para ahuyentar las pesadillas. Cuando actives el interruptor mágico, la lámpara debe brillar con un color violeta relajante y la matriz debe mostrar una luna protectora para vigilar la habitación.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Purple) AND Matrix.showIcon('Moon') ELSE Lamp.off() AND Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo Manual Interactivo",
+    "originalIdeaDescription": "Un modelo de control de tráfico donde el interruptor cambia el estado del sistema. La lámpara cambia de color (Rojo/Verde) y la matriz muestra iconos de 'Pare' o 'Siga' simultáneamente.",
+    "transformedIdeaTitle": "Controlador de Tráfico de la Ciudad",
+    "transformedIdeaDescription": "Eres el jefe de tránsito de una metrópolis muy ocupada. Programa el interruptor para detener los autos: la lámpara se pondrá roja y la matriz mostrará una gran 'X' para evitar accidentes en el cruce.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.setColor(Red) AND Matrix.showIcon('X') ELSE Lamp.setColor(Green) AND Matrix.showIcon('Arrow')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Modo Fiesta Disco",
+    "originalIdeaDescription": "Al activar el interruptor, el sistema entra en modo fiesta. La lámpara parpadea con colores aleatorios y la matriz LED muestra animaciones de baile o figuras geométricas en movimiento.",
+    "transformedIdeaTitle": "DJ Robot: ¡Fiesta en la Pista!",
+    "transformedIdeaDescription": "¡Es hora de bailar! Crea un programa donde, al encender el interruptor principal de la cabina del DJ, las luces estroboscópicas parpadeen y la pantalla muestre ritmos visuales locos para animar a la multitud.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO Lamp.flashRandomColor() AND Matrix.playAnimation('Dance')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Telégrafo Visual Morse",
+    "originalIdeaDescription": "Utiliza el interruptor como un manipulador de código Morse. Cada pulsación enciende la lámpara brevemente y muestra un punto o guion en la matriz dependiendo de la duración.",
+    "transformedIdeaTitle": "Comunicador Secreto de Espías",
+    "transformedIdeaDescription": "Tu misión es enviar mensajes silenciosos a tu aliado. Configura el interruptor para que cada vez que lo presiones, la luz envíe una señal flash y la pantalla confirme el envío mostrando un punto brillante.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.on() AND Matrix.plot(3,3) ELSE Lamp.off() AND Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Emergencia Silenciosa",
+    "originalIdeaDescription": "Un sistema de alerta donde el interruptor activa una luz roja intermitente en la lámpara y muestra la palabra 'SOS' o un icono de alerta en la matriz LED.",
+    "transformedIdeaTitle": "Alerta Roja en la Nave Espacial",
+    "transformedIdeaDescription": "¡Impacto inminente! Programa el protocolo de emergencia de la nave. Si el capitán activa el interruptor de pánico, la sala debe iluminarse de rojo pulsante y la pantalla debe gritar visualmente 'SOS'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.pulse(Red) AND Matrix.scrollText('SOS') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "El interruptor alterna entre dos estados emocionales. Estado 1: Luz amarilla y cara feliz en la matriz. Estado 2: Luz azul y cara triste en la matriz.",
+    "transformedIdeaTitle": "La Máscara Digital de Emociones",
+    "transformedIdeaDescription": "Ayuda a un robot a expresar cómo se siente. Programa el interruptor para cambiar su humor: encendido muestra alegría con luz amarilla y una sonrisa; apagado muestra tristeza con luz azul y una mueca.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Yellow) AND Matrix.showIcon('Happy') ELSE Lamp.setColor(Blue) AND Matrix.showIcon('Sad')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre para Hipoacúsicos",
+    "originalIdeaDescription": "Un sistema de timbre accesible. Cuando se presiona el interruptor (timbre), la lámpara parpadea intensamente y la matriz muestra un icono de campana vibrando.",
+    "transformedIdeaTitle": "Timbre Visual Inteligente",
+    "transformedIdeaDescription": "Diseña un timbre para una casa donde vive alguien que no puede oír bien. Cuando la visita presione el botón (interruptor), las luces de la sala deben parpadear y aparecer una campana en la pantalla.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.wasPressed() THEN Lamp.flash(White, 5) AND Matrix.showAnimation('Bell')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Respuesta de Quiz",
+    "originalIdeaDescription": "Para juegos de preguntas, el interruptor sirve como pulsador. Al presionarlo, la lámpara se enciende en verde y la matriz muestra un 'Check' o el número del jugador.",
+    "transformedIdeaTitle": "El Botón de la Victoria",
+    "transformedIdeaDescription": "¡Estás en un concurso de televisión! Crea el sistema para saber quién presionó primero. Al tocar el interruptor, tu luz debe ponerse verde brillante y mostrar un signo de aprobación en la pantalla.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.setColor(Green) AND Matrix.showIcon('Check')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Lectura con Temporizador",
+    "originalIdeaDescription": "El interruptor activa un modo de lectura. La lámpara se enciende en blanco cálido y la matriz muestra una cuenta regresiva visual o un reloj de arena.",
+    "transformedIdeaTitle": "Bibliotecario Automático",
+    "transformedIdeaDescription": "Es hora de leer antes de dormir. Configura el interruptor para encender tu lámpara de lectura. La pantalla mostrará un reloj de arena para indicarte cuánto tiempo de lectura te queda antes de dormir.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.turnedOn() THEN Lamp.on() AND Matrix.startTimerAnimation() WAIT 60 THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Secuencia de Despegue",
+    "originalIdeaDescription": "El interruptor inicia una secuencia de lanzamiento. La matriz cuenta 3, 2, 1. La lámpara cambia de rojo a amarillo, y finalmente a verde brillante al llegar a cero.",
+    "transformedIdeaTitle": "Misión Apolo: Despegue",
+    "transformedIdeaDescription": "Eres el comandante de la misión. Al activar el interruptor de lanzamiento, inicia la cuenta regresiva en la pantalla (3, 2, 1) mientras las luces de los motores cambian de rojo a verde para el despegue.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.turnedOn() THEN Matrix.show(3) Lamp.setColor(Red) WAIT Matrix.show(2) Lamp.setColor(Yellow) WAIT Matrix.show(1) Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Colores",
+    "originalIdeaDescription": "El interruptor actúa como el gatillo de un hechizo. Cada vez que se activa, la lámpara cambia a un color aleatorio y la matriz muestra destellos o estrellas.",
+    "transformedIdeaTitle": "Escuela de Magia: Hechizo Lumos",
+    "transformedIdeaDescription": "Aprende el hechizo de luz. Cada vez que agites tu varita (presiones el interruptor), deben salir chispas mágicas en la pantalla y la punta de la varita (lámpara) debe cambiar de color mágicamente.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON Switch.press() DO Lamp.setRandomColor() AND Matrix.showIcon('Sparkles')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Clima",
+    "originalIdeaDescription": "El interruptor alterna entre 'Día' y 'Noche'. Día: Lámpara amarilla intensa, Sol en matriz. Noche: Lámpara azul tenue, Luna/Estrellas en matriz.",
+    "transformedIdeaTitle": "El Dios del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar el cielo. Usa el interruptor para traer el día (luz brillante y sol) o invocar la noche (luz tenue y estrellas) sobre tu ciudad digital.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setBrightness(100) Matrix.show('Sun') ELSE Lamp.setBrightness(20) Matrix.show('Stars')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Carga de Batería",
+    "originalIdeaDescription": "Simula la carga de un dispositivo. Al encender el interruptor, la matriz llena un icono de batería progresivamente y la lámpara cambia de rojo a verde cuando está 'llena'.",
+    "transformedIdeaTitle": "Estación de Recarga de Robots",
+    "transformedIdeaDescription": "Tu robot se quedó sin energía. Conecta el cable (interruptor) y programa la visualización de la carga: la barra de energía debe subir en la pantalla y la luz indicadora debe pasar de rojo a verde al finalizar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Loop(BatteryFill) AND Lamp.gradualChange(Red, Green)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Identificador de Agente Secreto",
+    "originalIdeaDescription": "Un sistema de credencial. Interruptor apagado: Modo incógnito (todo apagado). Interruptor encendido: Lámpara azul cian y matriz mostrando un icono de gafas de sol o escudo.",
+    "transformedIdeaTitle": "Gadget de Identidad Oculta",
+    "transformedIdeaDescription": "Construye un gadget para espías. Mantén todo apagado para pasar desapercibido, pero cuando presiones el interruptor, revela tu identidad secreta iluminando tu insignia y mostrando tu logo de agente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor(Cyan) AND Matrix.showIcon('Agent') ELSE Lamp.off() AND Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor Cardíaco Simulado",
+    "originalIdeaDescription": "Al activar el sistema con el interruptor, se simula un latido. La lámpara pulsa en rojo al ritmo de una animación de corazón o línea EKG en la matriz.",
+    "transformedIdeaTitle": "Doctor Bot: Escáner Médico",
+    "transformedIdeaDescription": "Diseña un escáner para el hospital de juguetes. Al encender el interruptor, el sistema debe mostrar un corazón latiendo en la pantalla y una luz roja que palpite al mismo ritmo. ¡Bum-bum, bum-bum!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO Lamp.pulse(Red, 1sec) AND Matrix.animate('Heartbeat')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Oráculo de Sí/No",
+    "originalIdeaDescription": "Un generador de respuestas aleatorias. Al presionar el interruptor, el sistema 'piensa' y luego ilumina la lámpara (Verde/Rojo) y muestra (Check/X) en la matriz aleatoriamente.",
+    "transformedIdeaTitle": "La Bola de Cristal Digital",
+    "transformedIdeaDescription": "Crea un juego de adivinanzas. Haz una pregunta, presiona el interruptor mágico y deja que el código decida tu destino: ¿Te dará una luz verde de 'Sí' o una luz roja de 'No'?",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() THEN Result = Random(0,1); IF Result==1 THEN Lamp.Green/Matrix.Yes ELSE Lamp.Red/Matrix.No"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Faro Costero Giratorio",
+    "originalIdeaDescription": "Simulación de un faro. El interruptor enciende el motor. La matriz muestra una barra girando y la lámpara aumenta y disminuye su brillo para simular la rotación de la luz.",
+    "transformedIdeaTitle": "El Faro en la Tormenta",
+    "transformedIdeaDescription": "Los barcos necesitan tu ayuda para ver la costa. Programa el faro para que, al encenderse, la luz parezca girar (brillando y atenuándose) y la pantalla muestre el haz de luz barriendo el horizonte.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.oscillateBrightness() AND Matrix.rotateLine()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Señalizador de Dirección (Direccional)",
+    "originalIdeaDescription": "Funciona como la direccional de un auto. Interruptor activado: Lámpara naranja parpadeante y flecha animada hacia la derecha (o izquierda) en la matriz.",
+    "transformedIdeaTitle": "Taller de Autos del Futuro",
+    "transformedIdeaDescription": "Estás construyendo el coche del futuro. Programa la palanca de direccionales (interruptor) para avisar que vas a girar: una luz naranja intermitente y una flecha animada indicando el camino.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO Lamp.flash(Orange) AND Matrix.animate('ArrowRight')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Proyector de Cine Casero",
+    "originalIdeaDescription": "Simula el ambiente de un cine. Al activar el interruptor, la lámpara se atenúa lentamente (las luces se apagan) y la matriz comienza una animación (la película).",
+    "transformedIdeaTitle": "Noche de Estreno de Cine",
+    "transformedIdeaDescription": "¡Luces, cámara, acción! Eres el proyeccionista. Cuando presiones el interruptor para iniciar la película, las luces de la sala deben atenuarse suavemente y la pantalla debe comenzar la función.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.turnedOn() THEN Lamp.fadeTo(0) AND Matrix.playMovie() ELSE Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Lamp",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Juguete)",
+    "originalIdeaDescription": "Un juguete para jugar a cazar fantasmas. Al presionar el interruptor, la lámpara parpadea erráticamente y la matriz muestra ruido estático o figuras aleatorias.",
+    "transformedIdeaTitle": "Cazadores de Misterios Paranormales",
+    "transformedIdeaDescription": "Construye tu propio equipo de investigación. Al activar el sensor (interruptor) en una zona embrujada, las luces deben parpadear como si hubiera interferencia y la pantalla debe mostrar estática fantasmal.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.strobeRandom() AND Matrix.showNoise()"
+  }
+]

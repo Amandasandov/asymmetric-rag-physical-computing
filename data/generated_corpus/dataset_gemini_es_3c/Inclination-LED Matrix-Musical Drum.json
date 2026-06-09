@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea Controlada por Gestos",
+    "originalIdeaDescription": "Un sistema donde el usuario simula tocar una batería en el aire. Al inclinar el dispositivo hacia la izquierda suena la caja, a la derecha el platillo, y hacia adelante el bombo, mostrando el instrumento golpeado en la matriz.",
+    "transformedIdeaTitle": "¡Rockstar Invisible!",
+    "transformedIdeaDescription": "Conviértete en una leyenda del rock sin instrumentos. Programarás tu dispositivo para que reconozca tus movimientos: inclínalo para golpear diferentes tambores y platillos invisibles mientras la pantalla muestra qué estás tocando. ¡Crea tu propio solo de batería!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN Drum.play(Snare), Matrix.show(Square) ELSE IF Inclination.X > 20 THEN Drum.play(Cymbal), Matrix.show(Circle)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de Huevo Digital",
+    "originalIdeaDescription": "Un juego donde un píxel representa un huevo en una cuchara. El usuario debe mantener el dispositivo plano. Si la inclinación excede un umbral, el huevo se 'rompe' visualmente en la matriz y suena un golpe seco de batería.",
+    "transformedIdeaTitle": "Misión: Salvar el Huevo",
+    "transformedIdeaDescription": "¡Cuidado, es frágil! Tu misión es transportar un huevo digital muy valioso. Debes programar el sensor para que detecte si tu mano tiembla demasiado. Si pierdes el equilibrio, escucharás el 'CRACK' y verás el desastre en pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Magnitude > 15 THEN Drum.play(LowTom), Matrix.show(BrokenEgg) ELSE Matrix.show(Egg)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja con Feedback Sonoro",
+    "originalIdeaDescription": "Una herramienta de construcción accesible. La matriz muestra una burbuja moviéndose según la inclinación. Cuando el dispositivo está perfectamente nivelado (0 grados), suena un ritmo de batería constante para indicarlo sin necesidad de mirar.",
+    "transformedIdeaTitle": "El Constructor Ciego",
+    "transformedIdeaDescription": "Ayuda a construir una casa perfecta sin usar los ojos. Crearás una herramienta inteligente que guía al constructor usando sonidos. Si la pared está recta, sonará un ritmo alegre; si está torcida, la pantalla te indicará hacia dónde corregir.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X == 0 THEN Drum.loop(Beat), Matrix.show(CenterDot) ELSE Drum.stop(), Matrix.show(DirectionArrow)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Conducción de Autos de Carreras",
+    "originalIdeaDescription": "El dispositivo actúa como volante. Girar (inclinar) mueve un coche en la matriz LED. Si se gira demasiado rápido o bruscamente, el coche choca visualmente y suena un estruendo de percusión.",
+    "transformedIdeaTitle": "Gran Premio de Código",
+    "transformedIdeaDescription": "Diseña tu propio videojuego de carreras. Usarás el dispositivo como volante para controlar un bólido en la pantalla de LEDs. Programa los límites de la pista: si giras demasiado brusco, ¡crash! Oirás el choque y perderás la partida.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "CarPosition = Map(Inclination.Y, -90, 90, 0, 6); Matrix.pixel(CarPosition, 3); IF Inclination.Y > 45 THEN Drum.play(Crash)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gravitacional Aleatoria",
+    "originalIdeaDescription": "Un secuenciador donde la inclinación en el eje Y controla la velocidad del ritmo (BPM) y el eje X selecciona entre diferentes patrones de batería, visualizando el tempo en la matriz.",
+    "transformedIdeaTitle": "DJ Gravedad",
+    "transformedIdeaDescription": "Controla la fiesta con el movimiento. En este reto, crearás una máquina de mezclas donde inclinar el dispositivo hacia adelante acelera la música, y hacia los lados cambia el estilo del ritmo. ¡La física controla el beat!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = Inclination.Y * 2; Pattern = Inclination.X > 0 ? BeatA : BeatB; Drum.playLoop(Pattern, BPM); Matrix.showBarGraph(BPM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Laberinto de Canicas Sonoro",
+    "originalIdeaDescription": "Un juego clásico de laberinto donde un punto (canica) se mueve por la matriz según la inclinación. Cada vez que la canica golpea una pared virtual, suena un 'tic' de la batería.",
+    "transformedIdeaTitle": "El Laberinto Ruidoso",
+    "transformedIdeaDescription": "Programa un laberinto digital donde la gravedad mueve la pelota. El desafío es lógico: debes detectar cuándo la pelota intenta atravesar una pared sólida, detenerla y hacer sonar un 'toc' de madera para avisar al jugador.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "NextPos = CurrentPos + Inclination.Direction; IF Map[NextPos] == Wall THEN Drum.play(Rimshot) ELSE CurrentPos = NextPos; Matrix.update(CurrentPos)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos y Vibraciones",
+    "originalIdeaDescription": "El dispositivo monitorea la estabilidad. Si detecta cambios bruscos en la inclinación (vibración), activa una alarma de batería rápida y muestra un gráfico de sismógrafo en la matriz.",
+    "transformedIdeaTitle": "Sismógrafo de Bolsillo",
+    "transformedIdeaDescription": "Construye un detector de seguridad para tu base secreta. Si alguien mueve la mesa o hay un temblor, tu dispositivo debe detectar la vibración, dibujar la intensidad en pantalla y hacer sonar una alarma de percusión para alertar a todos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Shake = Abs(Inclination.Last - Inclination.Current); IF Shake > Threshold THEN Drum.play(Roll), Matrix.showGraph(Shake)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Sensible al Movimiento",
+    "originalIdeaDescription": "Una cara en la matriz que reacciona al trato físico. Si se mece suavemente (inclinación lenta), ronronea (ritmo suave). Si se agita fuerte, se marea (ojos en espiral) y hace ruidos de queja.",
+    "transformedIdeaTitle": "Cuida a tu Robo-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital necesita cariño. Prográmala para que sonría y haga sonidos suaves cuando la meces despacio para dormir. Pero cuidado, si la agitas demasiado fuerte, ¡se enfadará y hará ruido!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.ChangeRate < 5 THEN Matrix.show(HappyFace), Drum.play(SoftBeat) ELSE Matrix.show(DizzyFace), Drum.play(LoudBang)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Aterrizaje Lunar",
+    "originalIdeaDescription": "Juego donde el usuario debe aterrizar una nave (píxel descendente). Debe mantener la inclinación Z plana. Si aterriza inclinado, suena una explosión; si es plano, suena una fanfarria.",
+    "transformedIdeaTitle": "Aterrizaje en Marte",
+    "transformedIdeaDescription": "Eres el piloto del módulo de aterrizaje. Debes descender a la superficie de Marte manteniendo la nave perfectamente nivelada. Si tocas el suelo inclinado, la nave explotará. ¡Usa tus sensores para un aterrizaje suave!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Height == 0 AND Inclination.Angle > 5 THEN Drum.play(Explosion), Matrix.show(X) ELSE Drum.play(Success), Matrix.show(Check)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "El usuario realiza gestos específicos (ej. golpe fuerte hacia abajo). El sensor detecta el pico de inclinación/aceleración, dispara un efecto de luz en la matriz y un sonido de trueno en la batería.",
+    "transformedIdeaTitle": "Escuela de Hechicería",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una varita mágica. Aprende a programar 'gestos': un movimiento rápido hacia abajo lanzará un hechizo de 'Trueno' (luz parpadeante y sonido de tambor fuerte). ¿Puedes programar diferentes hechizos?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.PitchChange > RapidThreshold THEN Matrix.flash(White), Drum.play(ThunderSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Contador de Sentadillas para Fitness",
+    "originalIdeaDescription": "El dispositivo se fija a la pierna. Al bajar (cambio de inclinación de vertical a horizontal), la matriz suma uno y la batería toca un sonido de 'bip' para marcar el ritmo del ejercicio.",
+    "transformedIdeaTitle": "Entrenador Personal Digital",
+    "transformedIdeaDescription": "¡A ponerse en forma! Crea un dispositivo que cuente tus ejercicios automáticamente. Pégalo a tu pierna y programa la lógica: cuando te agaches, debe detectar el ángulo, sumar un punto en la pantalla y marcar el ritmo con un sonido.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Z < 45 AND State == Standing THEN Count++, Drum.play(Beat), Matrix.showNumber(Count), State = Squatting"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Simón Dice con Gestos",
+    "originalIdeaDescription": "La matriz muestra una flecha (Izquierda/Derecha/Arriba/Abajo). El usuario debe inclinar el dispositivo en esa dirección rápidamente. Si acierta, suena un Hi-Hat; si falla, un Tom grave.",
+    "transformedIdeaTitle": "Sigue la Flecha",
+    "transformedIdeaDescription": "Un juego de reflejos rápidos. La pantalla te mostrará una dirección y tendrás solo un segundo para inclinar el dispositivo hacia allá. Si lo logras, ganas puntos y ritmo; si fallas, ¡el sonido de error te delatará!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Random(Direction); Matrix.show(Target); Wait(1s); IF Inclination.Direction == Target THEN Drum.play(HiHat) ELSE Drum.play(LowTom)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Generador de Lluvia Atmosférica",
+    "originalIdeaDescription": "Simulación ambiental. Inclinar el dispositivo hacia adelante aumenta la 'intensidad' de la tormenta. La matriz muestra gotas cayendo más rápido y la batería toca ritmos aleatorios rápidos simulando lluvia fuerte.",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar la tormenta. Inclina el dispositivo para pasar de una llovizna suave (luces lentas y sonidos espaciados) a un huracán total (luces rápidas y redobles de tambor intensos).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RainSpeed = Map(Inclination.X, 0, 90, Slow, Fast); Matrix.animateRain(RainSpeed); Drum.playRandomHits(RainSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Corrector de Postura de Espalda",
+    "originalIdeaDescription": "Dispositivo para llevar en la ropa. Calibrado a la posición vertical. Si el usuario se encorva (inclinación > 30 grados) por más de 5 segundos, la matriz muestra una 'X' y suena un aviso de batería.",
+    "transformedIdeaTitle": "Espalda Recta, Mente Despierta",
+    "transformedIdeaDescription": "Diseña un 'wearable' inteligente para la salud. Tu dispositivo monitoreará si te estás sentando mal frente a la computadora. Si detecta que te encorvas demasiado tiempo, te avisará discretamente con un sonido y una luz roja.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Forward > 30 FOR 5_Seconds THEN Matrix.show(X), Drum.play(RimClick)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Giratoria",
+    "originalIdeaDescription": "Un juego de puzzle. El usuario debe rotar el dispositivo como el dial de una caja fuerte. Al llegar al número secreto (ángulo), suena un clic. Debe encontrar 3 ángulos para mostrar un 'Candado Abierto'.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Conviértete en un espía. Debes desbloquear la caja fuerte digital encontrando la combinación correcta de inclinaciones. Gira el dispositivo lentamente hasta escuchar el 'clic' secreto del tambor y ver la luz verde. ¿Podrás abrirla antes de que se acabe el tiempo?",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Abs(Inclination.Roll - SecretAngle) < 2 THEN Drum.play(Click), SolvedCount++, Matrix.showProgress(SolvedCount)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Raqueta de Tenis Virtual",
+    "originalIdeaDescription": "El usuario usa el dispositivo como raqueta. Un gesto rápido de swing detectado por inclinación/aceleración activa el sonido de golpe y muestra una animación de pelota saliendo en la matriz.",
+    "transformedIdeaTitle": "Wimbledon de Bolsillo",
+    "transformedIdeaDescription": "¡Punto de partido! Programa tu dispositivo para reconocer un 'swing' de tenis. Cuando muevas el brazo para golpear la pelota imaginaria, debe sonar el impacto exacto en el momento justo y mostrar la velocidad de la bola.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.SwingSpeed > High THEN Drum.play(SmashSound), Matrix.animateBall(Fast) ELSE Drum.play(DropSound)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Dados Digitales con Agitación",
+    "originalIdeaDescription": "El usuario agita el dispositivo. Mientras se mueve, la matriz muestra ruido estático y suena un redoble. Al detenerse (inclinación estable), muestra un número del 1 al 6 aleatorio.",
+    "transformedIdeaTitle": "Dados Mágicos",
+    "transformedIdeaDescription": "Nunca más pierdas los dados de tu juego de mesa. Crea unos dados digitales que se activan al agitar el dispositivo. Mientras agitas, escucharás los dados chocar; al parar, aparecerá tu número de la suerte.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE Inclination.IsShaking DO Matrix.showRandom(), Drum.play(Rattle); Matrix.showNumber(Random(1,6))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Robot Bailarín que Sigue el Ritmo",
+    "originalIdeaDescription": "El usuario debe inclinar el dispositivo rítmicamente (izquierda-derecha) siguiendo un patrón. Si mantiene el ritmo constante, la matriz muestra una cara feliz y la batería acompaña; si pierde el ritmo, la música para.",
+    "transformedIdeaTitle": "Desafío de Baile Robótico",
+    "transformedIdeaDescription": "Enséñale a bailar a tu robot. Debes mover el dispositivo al ritmo de una canción imaginaria. Si mantienes el ritmo constante oscilando de izquierda a derecha, el robot se unirá con percusión. ¡No pierdas el compás!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "TimeDiff = Time.Now - LastTiltTime; IF TimeDiff is Constant THEN Drum.play(Beat), Matrix.show(Smile) ELSE Matrix.show(Sad)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Brújula Sonora para Navegación",
+    "originalIdeaDescription": "Utiliza la inclinación para simular una brújula 3D. Si el usuario apunta (inclina) hacia el Norte 'virtual', la frecuencia de los golpes de batería aumenta y la matriz brilla más fuerte, estilo juego 'frio o caliente'.",
+    "transformedIdeaTitle": "Búsqueda del Tesoro a Ciegas",
+    "transformedIdeaDescription": "Esconde un tesoro virtual en una dirección específica. Tus amigos deben encontrarlo girando e inclinando el dispositivo. Cuanto más cerca apunten al objetivo, más rápidos serán los latidos del tambor. ¡Guíalos solo con sonido!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Distance = Abs(Inclination.Angle - TargetAngle); BeatSpeed = Map(Distance, 0, 180, Fast, Slow); Drum.playLoop(Beat, BeatSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Medidor de Emociones del Dispositivo",
+    "originalIdeaDescription": "El dispositivo reacciona a cómo se sostiene. Inclinación nivelada = Calma (Luz azul, silencio). Inclinación extrema constante = Estrés (Luz roja, ritmo cardíaco acelerado en batería).",
+    "transformedIdeaTitle": "El Robot Sentimental",
+    "transformedIdeaDescription": "Da vida a una inteligencia artificial con sentimientos. Si sostienes el dispositivo con calma, estará feliz. Si lo pones en posiciones incómodas o extremas, su 'corazón' (tambor) empezará a latir rápido de miedo. ¿Puedes calmarlo?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.IsLevel THEN Matrix.color(Blue), Drum.stop() ELSE Matrix.color(Red), Drum.playLoop(Heartbeat, Fast)"
+  }
+]

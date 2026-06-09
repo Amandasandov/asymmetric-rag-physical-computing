@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Reproductor de Música Básico",
+    "originalIdeaDescription": "Un sistema simple donde el interruptor controla el estado de reproducción de una canción. Si el interruptor está encendido, la música suena y la matriz muestra un icono de reproducción. Si se apaga, la música se detiene.",
+    "transformedIdeaTitle": "La Radio Retro del Abuelo",
+    "transformedIdeaDescription": "¡Construye tu propia radio antigua! Programa el interruptor para que funcione como el botón de encendido. Cuando lo actives, debe sonar música de jazz y aparecer una nota musical en la pantalla. Al apagarlo, todo debe quedar en silencio.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.play(); Matrix.show('Note'); } ELSE { Audio.stop(); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre con Identificador Visual",
+    "originalIdeaDescription": "Un dispositivo que simula un timbre de puerta. Al presionar el interruptor, suena un timbre y la matriz LED muestra una campana parpadeando para alertar a personas con problemas auditivos.",
+    "transformedIdeaTitle": "El Timbre de la Casa Inteligente",
+    "transformedIdeaDescription": "Diseña un timbre para una casa del futuro. Cuando el visitante presione el interruptor, debe sonar un 'Ding-Dong' y la matriz LED debe mostrar una animación de una campana moviéndose para avisar que alguien ha llegado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Audio.play('DingDong'); Matrix.animate('Bell'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos Manual",
+    "originalIdeaDescription": "El interruptor actúa como un activador de pánico. Al encenderlo, se reproduce un sonido de sirena fuerte y la matriz LED muestra una señal de advertencia o una 'X' roja parpadeante.",
+    "transformedIdeaTitle": "Sistema de Seguridad Anti-Espías",
+    "transformedIdeaDescription": "¡Protege tu base secreta! Crea un sistema de alarma que, al activar el interruptor de seguridad, haga sonar una sirena de policía y muestre una señal de 'PELIGRO' en la pantalla para asustar a los intrusos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.loop('Siren'); Matrix.blink('X_Icon'); } ELSE { Audio.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Ruido Blanco",
+    "originalIdeaDescription": "Un dispositivo para ayudar a dormir. El interruptor activa un sonido de lluvia relajante y la matriz LED muestra una luna o estrellas estáticas con brillo bajo.",
+    "transformedIdeaTitle": "La Máquina de Sueños",
+    "transformedIdeaDescription": "Ayuda a tu hermanito a dormir creando una máquina de sueños. Configura el interruptor para que, al encenderse, reproduzca el sonido de la lluvia suave y muestre una luna brillante en la pantalla LED.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.play('Rain'); Matrix.show('Moon'); } ELSE { Audio.stop(); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical",
+    "originalIdeaDescription": "Un controlador para el juego de las sillas o estatua. Mientras el interruptor está encendido, la música suena y la matriz muestra 'BAILA'. Al apagarlo, la música corta y muestra 'STOP'.",
+    "transformedIdeaTitle": "El Juez de Baile Robot",
+    "transformedIdeaDescription": "Eres el DJ de la fiesta. Programa un juego donde la música suene mientras mantienes el interruptor encendido y la pantalla diga 'GO'. ¡En el momento que lo apagues, la música debe cortar y aparecer una señal de STOP para que todos se congelen!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() { Audio.play(); Matrix.show('Go'); } Audio.stop(); Matrix.show('Stop');"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva de Lanzamiento",
+    "originalIdeaDescription": "Al activar el interruptor, comienza una cuenta regresiva de audio (10, 9, 8...) y la matriz muestra los números correspondientes, terminando con un sonido de despegue.",
+    "transformedIdeaTitle": "Control de Misión Espacial",
+    "transformedIdeaDescription": "¡Prepárate para el despegue! Usa el interruptor para iniciar la secuencia de lanzamiento del cohete. Debes sincronizar el audio de la cuenta regresiva con los números en la pantalla LED, terminando con una animación de un cohete volando.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.switchedOn() THEN { FOR i=3 to 1 { Audio.speak(i); Matrix.show(i); WAIT(1s); } Audio.play('BlastOff'); Matrix.animate('Rocket'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Estado de Ánimo",
+    "originalIdeaDescription": "El interruptor alterna entre dos estados: 'Feliz' (música alegre, cara sonriente) y 'Triste' (música melancólica, cara triste).",
+    "transformedIdeaTitle": "La Máscara Digital Emocional",
+    "transformedIdeaDescription": "Crea una cara digital que cambie de humor. Si el interruptor está en una posición, muestra una cara feliz con música pop. Si lo cambias, debe mostrar una cara triste con música de violín.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.play('Happy'); Matrix.show('Smile'); } ELSE { Audio.play('Sad'); Matrix.show('Frown'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Preguntas y Respuestas",
+    "originalIdeaDescription": "El usuario hace una pregunta y presiona el interruptor. El sistema reproduce un sonido de 'pensando' y luego muestra aleatoriamente un check (sí) o una X (no) con su sonido correspondiente.",
+    "transformedIdeaTitle": "El Oráculo Mágico",
+    "transformedIdeaDescription": "Construye una bola de cristal electrónica. Haz una pregunta de 'sí o no', presiona el interruptor mágico y espera a que el sistema decida tu destino mostrando un tic verde o una cruz roja con un sonido misterioso.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Audio.play('MagicSound'); Result = Random(0,1); IF Result==1 THEN Matrix.show('Yes') ELSE Matrix.show('No'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Telégrafo Morse",
+    "originalIdeaDescription": "Utiliza el interruptor como un manipulador de telégrafo. Cada vez que se pulsa, suena un tono corto y la matriz se ilumina, permitiendo enviar mensajes en código Morse.",
+    "transformedIdeaTitle": "Transmisor de Espías de la Guerra",
+    "transformedIdeaDescription": "Aprende a comunicarte como los espías antiguos. Configura el interruptor para que emita un pitido y encienda una luz central cada vez que lo presiones. ¡Intenta enviar un mensaje SOS a tus amigos!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Audio.playTone(440); Matrix.fillAll('Red'); } ELSE { Audio.stopTone(); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alimentador de Mascota Virtual",
+    "originalIdeaDescription": "Simula la alimentación de una mascota. Al accionar el interruptor, se reproduce un sonido de masticar y la matriz muestra un corazón o una animación de comer.",
+    "transformedIdeaTitle": "Hora de Comer para tu Robot-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital tiene hambre. Crea un programa donde el interruptor sirva comida. Al activarlo, debe escucharse a la mascota comiendo y aparecer un corazón grande en la pantalla para mostrar que está feliz.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.switchedOn() THEN { Audio.play('Eating'); Matrix.animate('Heart'); WAIT(2s); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Control de Semáforo Peatonal",
+    "originalIdeaDescription": "El interruptor solicita el paso. La matriz cambia de una mano roja a un caminante verde, acompañado de una señal auditiva para cruzar.",
+    "transformedIdeaTitle": "El Semáforo Seguro de la Ciudad",
+    "transformedIdeaDescription": "Diseña un cruce peatonal seguro. Cuando un peatón presione el botón (interruptor), el sistema debe esperar un momento, cambiar la luz roja a un muñeco verde caminando y emitir un pitido rápido para indicar que es seguro cruzar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Matrix.show('RedHand'); WAIT(2s); Matrix.show('GreenMan'); Audio.play('BeepWalk'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Narrador de Cuentos Cortos",
+    "originalIdeaDescription": "El interruptor alterna entre pausar y reproducir un audiolibro. La matriz muestra un icono representativo del capítulo actual (ej. un castillo o un bosque).",
+    "transformedIdeaTitle": "El Libro de Cuentos Parlante",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un narrador. Al encender el interruptor, debe comenzar a contar la historia de 'El Caballero y el Dragón' mientras muestra un escudo en la pantalla. Si lo apagas, la historia debe pausarse.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.resume('Story'); Matrix.show('Shield'); } ELSE { Audio.pause(); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Respiración",
+    "originalIdeaDescription": "Una herramienta de meditación. Al activar el interruptor, una guía de voz dice 'Inhala' y 'Exhala', mientras la matriz muestra un círculo expandiéndose y contrayéndose.",
+    "transformedIdeaTitle": "El Maestro Zen de la Relajación",
+    "transformedIdeaDescription": "Crea una herramienta para calmarte. Al activar el interruptor, el sistema te guiará con voz y luces: un círculo grande para inhalar y un punto pequeño para exhalar. Sigue el ritmo para relajarte.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() { Audio.say('Inhale'); Matrix.animate('Expand'); WAIT(3s); Audio.say('Exhale'); Matrix.animate('Shrink'); WAIT(3s); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Bromas",
+    "originalIdeaDescription": "El interruptor parece inofensivo, pero al activarlo, reproduce un sonido gracioso (pedo o risa) y la matriz muestra una cara riéndose.",
+    "transformedIdeaTitle": "La Trampa de Risas",
+    "transformedIdeaDescription": "¡Gasta una broma a tus amigos! Programa el interruptor para que parezca importante, pero cuando alguien curioso lo encienda, suene un ruido gracioso y la pantalla se burle con una cara sonriente parpadeante.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.switchedOn() THEN { Audio.play('FartSound'); Matrix.blink('LaughingFace'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "El interruptor activa el modo tormenta. Se reproducen truenos aleatorios y la matriz parpadea simulando relámpagos.",
+    "transformedIdeaTitle": "Creador de Tormentas Eléctricas",
+    "transformedIdeaDescription": "Conviértete en el dios del clima. Al accionar el interruptor, desata una tormenta: reproduce sonidos de truenos fuertes y haz que la matriz LED parpadee en blanco como si fueran relámpagos reales.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.play('Thunder'); Matrix.flash('White', RandomSpeed); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Aplausómetro / Señal de Aplausos",
+    "originalIdeaDescription": "Como en los estudios de TV. Al encender el interruptor, la matriz muestra 'APLAUSOS' y se reproduce un sonido de multitud ovacionando.",
+    "transformedIdeaTitle": "El Director de Estudio de TV",
+    "transformedIdeaDescription": "Dirige tu propio programa de televisión. Cuando el comediante termine su chiste, enciende el interruptor para activar la señal de 'APLAUSOS' y hacer que suene una ovación del público grabada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { Matrix.scrollText('CLAP CLAP'); Audio.play('Cheering'); } ELSE { Audio.stop(); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Arrancador de Motor",
+    "originalIdeaDescription": "Simula el encendido de un coche de carreras. Al mantener el interruptor, el audio reproduce el arranque del motor y la matriz muestra las revoluciones subiendo.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Siente la potencia de un coche de carreras. Configura el interruptor como la llave de encendido. Al mantenerlo presionado, el motor debe 'rugir' y la pantalla debe mostrar barras subiendo como un tacómetro.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.play('EngineRev'); Matrix.animate('RPM_Gauge'); } ELSE { Audio.play('EngineOff'); Matrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Identificador de Acceso",
+    "originalIdeaDescription": "Un sistema de 'Check-in'. Al pulsar el interruptor, suena un sonido de escáner y la matriz muestra una animación de barrido verde.",
+    "transformedIdeaTitle": "El Escáner Biométrico Alienígena",
+    "transformedIdeaDescription": "Crea una puerta de seguridad para tu nave espacial. Cuando un alienígena ponga su 'dedo' (el interruptor), reproduce un sonido de escaneo futurista y haz una animación de luz verde para concederle acceso.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { Audio.play('SciFiScan'); Matrix.animate('ScanLine'); WAIT(1s); Matrix.show('AccessGranted'); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Loop",
+    "originalIdeaDescription": "El interruptor activa un bucle de batería. La matriz visualiza el ritmo pulsando al compás.",
+    "transformedIdeaTitle": "Estación de Beatbox",
+    "transformedIdeaDescription": "¡Crea la base para tu rap! Usa el interruptor para iniciar un bucle de batería (beat). Mientras suene, la matriz LED debe pulsar con un cuadrado que se hace grande y pequeño al ritmo de la música.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { Audio.loop('DrumBeat'); Matrix.animate('PulseToBeat'); } ELSE { Audio.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas de Juguete",
+    "originalIdeaDescription": "El interruptor activa el 'sensor'. Tras un retraso aleatorio, suena un grito y aparece un fantasma en la matriz.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Busca fantasmas en tu cuarto oscuro. Enciende el radar (interruptor) y camina despacio. Programa un retraso aleatorio para que, de repente, ¡BOO!, aparezca un fantasma en la pantalla y suene un susto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { WAIT(Random(3, 8) seconds); Audio.play('GhostScream'); Matrix.show('GhostIcon'); }"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Sintetizador Theremin Solar",
+    "originalIdeaDescription": "Un instrumento musical experimental. La inclinación del dispositivo controla el tono (pitch) de la nota y la cantidad de luz que recibe el sensor controla el volumen o la intensidad. El teclado se usa para cambiar la escala musical.",
+    "transformedIdeaTitle": "El Violín de Luz",
+    "transformedIdeaDescription": "Crea un instrumento futurista. Inclina el dispositivo hacia arriba o abajo para buscar la nota (Inclinación). Pasa tu mano sobre el sensor de luz para controlar el volumen (como un arco de violín). Usa las teclas para cambiar entre sonido de 'Violín' o 'Flauta'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pitch = Map(Inclination.Y); Volume = Light.level; Instrument = Keyboard.getKey(); Play(Instrument, Pitch, Volume)"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Despertador Sensible al Amanecer",
+    "originalIdeaDescription": "El dispositivo detecta cuando sale el sol (aumento de luz). Empieza a tocar una melodía en el teclado. Para apagarlo (snooze), hay que invertir el dispositivo (boca abajo).",
+    "transformedIdeaTitle": "El Gallo Madrugador",
+    "transformedIdeaDescription": "Programa tu despertar. Cuando el sensor detecte la luz de la mañana (Luz > 60), el teclado empezará a tocar 'Buenos Días'. Para apagar la alarma, tienes que girar el dispositivo completamente boca abajo (Inclinación invertida) para demostrar que te has levantado.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 AND Inclination.isUpright() THEN Keyboard.loop('Alarm') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Coche en Túnel",
+    "originalIdeaDescription": "Juego de conducción. Inclinar para girar el volante. Si el sensor de luz detecta oscuridad (túnel), el usuario debe tocar una tecla específica para encender luces/bocina o pierde puntos.",
+    "transformedIdeaTitle": "Piloto de Carreras Nocturno",
+    "transformedIdeaDescription": "Conduce por la autopista. Usa la inclinación como volante. ¡Atención! Si entras en un túnel oscuro (el sensor de luz baja), toca rápidamente la tecla 'Do' para encender los faros. Si sales al sol, toca 'Re' para apagarlos. ¡No choques!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Steer = Inclination.Roll; IF Light.level < 20 AND NOT LightsOn THEN Score--; IF Keyboard.key('C') THEN LightsOn = TRUE"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Sombra y Equilibrio",
+    "originalIdeaDescription": "Para abrir la caja, el usuario debe mantener el dispositivo perfectamente plano y tapar el sensor de luz (oscuridad). Luego, introducir el código en el teclado.",
+    "transformedIdeaTitle": "Misión Imposible: El Robo",
+    "transformedIdeaDescription": "Estás robando un diamante protegido por láseres. Mantén el dispositivo totalmente plano (Inclinación 0) para no tocar los láseres. Tapa el sensor de luz para hackear el sistema de seguridad. Una vez seguro, teclea el código final.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.flat() AND Light.level < 5 THEN Secure=TRUE; IF Secure AND Keyboard.code('123') THEN Open()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Mascota: Girasol Musical",
+    "originalIdeaDescription": "Una planta virtual. Se debe inclinar hacia donde venga la luz más fuerte. Si recibe suficiente luz, el teclado toca una canción de felicidad.",
+    "transformedIdeaTitle": "El Girasol Bailarín",
+    "transformedIdeaDescription": "Ayuda a tu flor a crecer. Busca la fuente de luz más fuerte en la habitación. Inclina el dispositivo hacia ella. Si la intensidad de luz es máxima y la orientación correcta, la flor 'cantará' una melodía alegre a través del teclado.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 90 AND Inclination.facingLight() THEN Keyboard.play('HappySong')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Explorador de Cuevas (Sonar)",
+    "originalIdeaDescription": "Funciona solo en oscuridad. El usuario inclina para avanzar. Toca una tecla para emitir un 'ping' de sonar. Si hay mucha luz, el explorador se deslumbra y para.",
+    "transformedIdeaTitle": "Rescate en la Profundidad",
+    "transformedIdeaDescription": "Baja a la cueva oscura. Si hay luz, te quedas ciego. Tapa el sensor. Inclina el dispositivo hacia adelante para caminar. Toca las teclas para usar tu sonar: notas agudas significan camino libre, graves significan peligro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 THEN Stop(); ELSE Move(Inclination.pitch); IF Keyboard.pressed() THEN PlaySonar()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Bandeja de Camarero Robot",
+    "originalIdeaDescription": "Juego de equilibrio. Mantener plano. La dificultad sube si se apaga la luz (el robot 'no ve'). Si se inclina mucho, suena un platillazo en el teclado.",
+    "transformedIdeaTitle": "El Camarero a Ciegas",
+    "transformedIdeaDescription": "Lleva la bandeja de bebidas. Mantén la inclinación en 0. De repente, ¡se va la luz! (Tapa el sensor). Ahora es más difícil mantener el equilibrio. Si inclinas el dispositivo, el teclado hará un sonido de cristales rotos y perderás la propina.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "StabilityThreshold = (Light.low) ? 5 : 15; IF Abs(Inclination) > StabilityThreshold THEN Keyboard.play('Crash')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Vehículo Solar de Carreras",
+    "originalIdeaDescription": "La velocidad depende de la luz incidente. La dirección de la inclinación. El teclado activa el turbo o el freno.",
+    "transformedIdeaTitle": "Rally del Desierto Solar",
+    "transformedIdeaDescription": "Tu coche funciona con sol. Apunta a la lámpara (Luz) para acelerar. Inclina para girar en las dunas. Si pasas por una sombra, el coche se detiene. ¡Usa la tecla 'Espacio' para activar la batería de emergencia!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Light.level; Turn = Inclination.roll; IF Light.low AND Keyboard.key('Space') THEN Speed = 50"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Vampiro en el Ataúd",
+    "originalIdeaDescription": "El dispositivo debe estar plano y oscuro. Si se levanta (inclina) o le da la luz, el teclado emite un grito.",
+    "transformedIdeaTitle": "El Descanso del Conde",
+    "transformedIdeaDescription": "Drácula necesita dormir. Mantén el dispositivo plano y a oscuras. Si alguien levanta el ataúd (cambia la inclinación) o abre la tapa (entra luz), el vampiro gritará (acorde disonante en el teclado). ¡Mantén el silencio sepulcral!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 10 OR Abs(Inclination.pitch) > 20 THEN Keyboard.play('Scream')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Asistente de Meditación Zen",
+    "originalIdeaDescription": "El usuario debe estar quieto (inclinación estable) y en penumbra. El teclado toca un fondo relajante (pad) que se corta si se mueve o hay mucha luz.",
+    "transformedIdeaTitle": "El Templo de la Calma",
+    "transformedIdeaDescription": "Busca la paz interior. Siéntate con el dispositivo en la mano, muy quieto y baja las luces. Si logras la estabilidad y la penumbra, el teclado empezará a tocar acordes celestiales automáticamente. Si te mueves, la música para.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.stable() AND Light.level < 30 THEN Keyboard.playLoop('ZenPad') ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Varita de Hechizos Elementales",
+    "originalIdeaDescription": "Cargar energía (luz). Apuntar varita (inclinación). Disparar (teclado). Diferentes inclinaciones = diferentes hechizos.",
+    "transformedIdeaTitle": "Escuela de Magia",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. 1. Carga maná bajo una luz. 2. Apunta la varita: Arriba para Rayo, Abajo para Terremoto. 3. Presiona la tecla mágica para lanzar el hechizo. El teclado reproducirá el sonido del elemento elegido.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana = Light.level; Spell = (Inclination.pitch > 0) ? 'Thunder' : 'Quake'; IF Key.pressed() THEN Keyboard.play(Spell)"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Cocinero de Wok",
+    "originalIdeaDescription": "Inclinar para saltear. La luz es el fuego (necesita estar cerca). El teclado suena como el aceite friendo.",
+    "transformedIdeaTitle": "Master Chef: Salteado",
+    "transformedIdeaDescription": "Cocina el plato perfecto. Mantén la sartén sobre el fuego (Luz alta). Haz movimientos de muñeca (Inclinación rápida) para saltear las verduras. Mantén presionada una tecla para que suene el aceite 'chhh'. Si te alejas de la luz, se enfría.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Heat = Light.level; IF Inclination.jerk() THEN Toss(); IF Keyboard.held() AND Heat > 50 THEN Play('Sizzle')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Incubadora de Huevo de Dragón",
+    "originalIdeaDescription": "Necesita calor (luz) y movimiento suave (inclinación) para nacer. El teclado hace ruidos de cascarón rompiéndose.",
+    "transformedIdeaTitle": "Nacimiento del Dragón",
+    "transformedIdeaDescription": "Cuida el huevo. Mantenlo caliente (cerca de la luz) y mécelo suavemente de lado a lado (Inclinación). Si lo haces bien, presiona las teclas para ayudar al dragón a romper el cascarón. ¡Si lo agitas mucho se marea!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.warm() AND Inclination.rocking() THEN Progress++; IF Key.hit() THEN Play('Crack')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Bici con Timbre y Dinamo",
+    "originalIdeaDescription": "Inclinar para girar. Si entra en oscuridad, hay que pedalear más (simulado) y tocar el timbre (tecla) para avisar.",
+    "transformedIdeaTitle": "Paseo Nocturno en Bici",
+    "transformedIdeaDescription": "Monta en bici. Usa la inclinación para girar en el parque. Se hace de noche (tapa el sensor). ¡Peligro! Toca repetidamente las teclas del teclado como timbre para avisar a los peatones invisibles mientras navegas a oscuras.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Turn = Inclination.roll; IF Light.low THEN AlertMode=TRUE; IF AlertMode AND Key.pressed() THEN Play('DingDing')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Pesca en Hielo",
+    "originalIdeaDescription": "El dispositivo es la caña (inclinación). La luz detecta si el agujero está despejado. El teclado recoge el hilo.",
+    "transformedIdeaTitle": "Pesca en el Ártico",
+    "transformedIdeaDescription": "Lanza el anzuelo en el agujero del hielo (Luz brillante). Espera con la caña quieta (Inclinación estable). Cuando sientas un 'pique' (aviso visual/sonoro), tira hacia arriba (Inclinación brusca) y toca las teclas rápido para recoger el pez.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.stable() AND Light.high THEN FishBite=TRUE; IF FishBite AND Inclination.up() AND Key.mash() THEN Catch()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Aterrizaje de Nave Espacial",
+    "originalIdeaDescription": "Espacio oscuro. Inclinar para equilibrar la nave. Usar teclas para propulsores. Aterrizar cuando se ve la luz de la base.",
+    "transformedIdeaTitle": "Aterrizaje Lunar",
+    "transformedIdeaDescription": "Desciende a la Luna. Todo está oscuro. Mantén la nave nivelada (Inclinación 0). Usa las teclas para frenar la caída. Cuando el sensor detecte la luz de la baliza de aterrizaje, posa la nave suavemente.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Balance = Inclination.XY; IF Light.detected() AND Balance.flat() AND Keyboard.thrust() THEN Land() ELSE Crash()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Camaleón Musical",
+    "originalIdeaDescription": "El instrumento cambia de sonido según la luz (Clarinete/Piano) y de tono según la inclinación.",
+    "transformedIdeaTitle": "La Orquesta Mutante",
+    "transformedIdeaDescription": "Toca un instrumento que se transforma. Si estás en la sombra, suena como un Bajo grave. Si vas a la luz, se convierte en una Trompeta brillante. Inclina el dispositivo mientras tocas las teclas para hacer efectos de 'bend' (estirar la nota).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Instrument = (Light.level < 50) ? Bass : Trumpet; PitchBend = Inclination.roll; Keyboard.play(Instrument, Bend)"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Cámara de Fotos Antigua",
+    "originalIdeaDescription": "Inclinar para enfocar. Necesita buena luz. Tecla para disparar el obturador (sonido).",
+    "transformedIdeaTitle": "Fotógrafo de la Naturaleza",
+    "transformedIdeaDescription": "Toma la foto perfecta. Encuadra la imagen inclinando el dispositivo. Asegúrate de que el medidor de luz esté alto (Luz suficiente). Presiona la tecla más grande para escuchar el '¡Click!' del obturador. Si hay poca luz, suena un error.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Focus = Inclination.stable; IF Focus AND Light.good AND Key.pressed() THEN Play('Click') ELSE Play('Error')"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Agente Secreto: Microfilm",
+    "originalIdeaDescription": "Leer un mensaje secreto. Se necesita luz a través del dispositivo y el ángulo correcto de inclinación para 'decodificar'. Teclado confirma código.",
+    "transformedIdeaTitle": "Decodificador Espía",
+    "transformedIdeaDescription": "Lee los planos secretos. Pon el dispositivo a contraluz (Luz alta) para ver a través. Inclínalo hasta encontrar el ángulo exacto donde se ve el código (vibración/sonido). Introduce el código descubierto en el teclado para ganar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.backlit AND Inclination.angle == 45 THEN ShowCode(); IF Keyboard.input == Code THEN Win()"
+  },
+  {
+    "componentUsed": ["Inclination", "Light Intensity", "Musical Keyboard"],
+    "originalIdeaTitle": "Bolos de Mesa",
+    "originalIdeaDescription": "Inclinar para apuntar la bola. El sensor de luz es la línea de falta. Tecla para lanzar.",
+    "transformedIdeaTitle": "Strike en la Bolera",
+    "transformedIdeaDescription": "Juega a los bolos. Inclina izquierda/derecha para apuntar. Tapa el sensor de luz con la mano para simular agarrar la bola. Destápalo y presiona una tecla simultáneamente para lanzarla. Si la coordinación es buena, ¡STRIKE!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Aim = Inclination.roll; IF Light.change(Dark->Light) AND Key.press() THEN ThrowBall(Aim)"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Bibliotecas con Reinicio Manual",
+    "originalIdeaDescription": "Un sistema que muestra una señal de advertencia en la matriz LED cuando el nivel de ruido supera un umbral establecido. El interruptor se utiliza para restablecer el estado de alerta a normal después de una infracción.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca Secreta",
+    "transformedIdeaDescription": "¡Shh! Eres el guardián de libros antiguos. Si los exploradores hacen demasiado ruido, despiertan a los espíritus (cara enojada en la matriz). Usa el interruptor para calmar a los espíritus y volver a vigilar en silencio.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise > 50 THEN Show('Angry') ELSE IF Switch == ON THEN Show('Quiet')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Vela Digital Interactiva Activada por Soplido",
+    "originalIdeaDescription": "La matriz LED muestra una animación de una vela encendida. Al detectar un nivel alto de ruido (simulando un soplido), la vela se apaga. El interruptor sirve para volver a encender la mecha.",
+    "transformedIdeaTitle": "Apaga la Llama del Dragón",
+    "transformedIdeaDescription": "Una llama mágica arde en la pantalla. Debes soplar fuerte (hacer ruido) para apagarla antes de que se queme todo. Si fallas o necesitas intentarlo de nuevo, usa el interruptor mágico para reavivar el fuego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch == ON THEN Show('Fire'); IF Noise > 80 THEN Show('Smoke')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo Musical Básico",
+    "originalIdeaDescription": "Un dispositivo que muestra diferentes patrones en la matriz LED sincronizados con el volumen de la música ambiente. El interruptor permite cambiar entre dos modos visuales diferentes.",
+    "transformedIdeaTitle": "DJ Pixel: Fiesta de Luces",
+    "transformedIdeaDescription": "¡Convierte tu clase en una discoteca! Programa la matriz para que las luces bailen con la música. Si la música es suave, muestra puntos pequeños; si es fuerte, ¡llena la pantalla! Usa el interruptor para cambiar el estilo de baile.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < 30 THEN Show('SmallDot') ELSE Show('BigSquare'); IF SwitchChanged THEN ChangeMode()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Anti-Intrusos por Sonido",
+    "originalIdeaDescription": "La matriz permanece apagada para ahorrar energía. Si el sensor detecta un ruido repentino, la matriz parpadea como una sirena. El interruptor se usa para armar o desarmar el sistema de seguridad.",
+    "transformedIdeaTitle": "La Trampa del Espía Sigiloso",
+    "transformedIdeaDescription": "Protege tu base secreta. Activa la seguridad con el interruptor. Si alguien entra haciendo ruido (pisadas fuertes o habla), la alarma visual se dispara. ¡Atrapa al intruso antes de que escape!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON AND Noise > Threshold THEN Blink('Alert') ELSE ClearScreen()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mascota Digital Sensible al Ruido",
+    "originalIdeaDescription": "Una cara en la matriz LED que cambia de expresión. Si hay mucho ruido, se asusta; si hay silencio, duerme. El interruptor funciona como un botón para 'alimentar' o despertar a la mascota.",
+    "transformedIdeaTitle": "Cuida a tu Pixel-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital es muy sensible. Si gritas, pondrá cara de miedo. Si estás en silencio, dormirá plácidamente. Usa el interruptor para darle una galleta virtual cuando se porte bien.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Show('Eat') ELSE IF Noise > 70 THEN Show('Scared') ELSE Show('Sleep')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Salto Activado por Voz",
+    "originalIdeaDescription": "Un personaje simple en la parte inferior de la matriz. Cuando el usuario hace un ruido fuerte, el personaje sube (salta). El interruptor inicia y detiene la sesión de juego.",
+    "transformedIdeaTitle": "¡Grita para Saltar!",
+    "transformedIdeaDescription": "Ayuda a tu personaje a esquivar obstáculos. No uses los dedos, ¡usa tu voz! Un grito corto hace que el personaje salte. Activa el interruptor para empezar el nivel. ¿Qué tan alto puedes llegar?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON THEN { IF Noise > Trigger THEN CharacterY = CharacterY + 1 }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "La matriz se llena de abajo hacia arriba dependiendo de la intensidad de los aplausos detectados. El interruptor congela el resultado máximo para poder ver quién ganó.",
+    "transformedIdeaTitle": "El Aplausómetro de Talentos",
+    "transformedIdeaDescription": "Eres el juez de un concurso de talentos. Mide qué tanto le gustó al público la actuación. Cuanto más fuerte aplaudan, más barras se llenan en la pantalla. ¡Usa el interruptor para fijar la puntuación final!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Level = Map(Noise, 0, 100, 0, 7); IF Switch == OFF THEN DrawBar(Level)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz por Aplausos con Estado",
+    "originalIdeaDescription": "Un sistema clásico de 'Clap-on, Clap-off'. Un ruido fuerte enciende la matriz (toda blanca), otro la apaga. El interruptor físico sirve como un corte general de energía para el sistema.",
+    "transformedIdeaTitle": "Casa Inteligente Mágica",
+    "transformedIdeaDescription": "¡Siéntete como un mago en tu propia casa! Programa el sistema para que al aplaudir se enciendan las luces de la matriz. Pero cuidado, usa el interruptor maestro para apagar todo cuando salgas de vacaciones.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch == ON AND NoisePeakDetected THEN ToggleLightState()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Ronquidos con Luz Nocturna",
+    "originalIdeaDescription": "El sistema monitorea el ruido durante la noche. Si detecta un sonido rítmico/fuerte (ronquido), muestra un icono visual. El interruptor enciende una luz tenue de fondo en la matriz.",
+    "transformedIdeaTitle": "Detector de Monstruos del Sueño",
+    "transformedIdeaDescription": "¿Alguien ronca como un oso? Crea un dispositivo que detecte ruidos nocturnos. Si hay silencio, muestra una luna. Si hay ruido, ¡alerta de oso! Usa el interruptor para encender una luz quitamiedos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch == ON THEN Fill(LowLight); IF Noise > SnoreLevel THEN Show('Bear')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Decodificador Visual de Código Morse",
+    "originalIdeaDescription": "Interpreta sonidos cortos y largos como puntos y rayas en la matriz LED. El interruptor borra la pantalla para comenzar un nuevo mensaje.",
+    "transformedIdeaTitle": "Telégrafo de Espías Sonoro",
+    "transformedIdeaDescription": "Envía mensajes secretos a tus amigos usando sonidos. Un golpe corto es un punto, un golpe largo es una raya. La matriz los dibujará. ¡Usa el interruptor para borrar la evidencia rápidamente!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseDuration < Short THEN Print('.') ELSE Print('-'); IF Switch == ON THEN Clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Semáforo de Voz para Aulas",
+    "originalIdeaDescription": "Muestra un semáforo verde, amarillo o rojo en la matriz según el nivel de ruido de la clase. El interruptor cambia la sensibilidad del sensor (modo examen vs. modo recreo).",
+    "transformedIdeaTitle": "El Semáforo de la Clase",
+    "transformedIdeaDescription": "Ayuda a tu profesor a mantener el orden. Si todos hablan bajito, luz verde (cara feliz). Si hay mucho ruido, luz roja (cara triste). Usa el interruptor para poner el modo 'Examen' donde el más mínimo ruido activa la alerta.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Limit = (Switch ? 20 : 60); IF Noise > Limit THEN Color('Red') ELSE Color('Green')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo: Estatua Musical Inversa",
+    "originalIdeaDescription": "La matriz muestra un ojo vigilante. El usuario debe moverse, pero si hace ruido, el ojo se pone rojo. El interruptor reinicia el nivel.",
+    "transformedIdeaTitle": "Misión: Ninja Silencioso",
+    "transformedIdeaDescription": "El Ojo que Todo lo Ve está vigilando. Debes cumplir tu misión sin hacer ni un solo ruido. Si el sensor detecta sonido, el ojo te atrapa. Usa el interruptor para intentar la misión de nuevo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Show('Eye'); IF Noise > 10 THEN Show('Caught'); IF Switch == ON THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Animación de Boca Sincronizada (Lip Sync)",
+    "originalIdeaDescription": "Una boca dibujada en la matriz que se abre o cierra dependiendo del volumen de la voz detectada. El interruptor cambia entre boca de robot y boca de monstruo.",
+    "transformedIdeaTitle": "Máscara Digital Parlante",
+    "transformedIdeaDescription": "¡Haz que el robot hable por ti! Colócate el sensor cerca y habla. La boca en la matriz se moverá al ritmo de tu voz. Usa el interruptor para cambiar tu identidad de un robot amigable a un monstruo gruñón.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Openness = Noise / 10; DrawMouth(Type=Switch, Openness)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Gritos para Feria",
+    "originalIdeaDescription": "Muestra un número que incrementa cada vez que se supera un umbral de ruido muy alto. El interruptor pone el contador a cero.",
+    "transformedIdeaTitle": "El Reto del Grito Récord",
+    "transformedIdeaDescription": "¿Cuántas veces puedes gritar súper fuerte en un minuto? La matriz cuenta cada grito que rompe la barrera del sonido. ¡Desafía a tus amigos y usa el interruptor para reiniciar el contador para el siguiente turno!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 90 AND LastStateLow THEN Count++; Show(Count); IF Switch THEN Count=0"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Visualización de Eco o Radar",
+    "originalIdeaDescription": "Al detectar un sonido, se genera una onda expansiva (círculo que crece) en la matriz LED. El interruptor cambia la velocidad de expansión de la onda.",
+    "transformedIdeaTitle": "Radar de Murciélago",
+    "transformedIdeaDescription": "Los murciélagos ven con sonido. Crea un radar que lance una onda visual en la pantalla cada vez que hagas un chasquido. Usa el interruptor para simular un espacio grande (onda lenta) o pequeño (onda rápida).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise > Trigger THEN SpawnWave(Speed=Switch ? Fast : Slow)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Cuenta Regresiva Iniciado por Voz",
+    "originalIdeaDescription": "Un temporizador visual (barra que disminuye). Se inicia con una palabra fuerte o palmada. El interruptor pausa o cancela la cuenta.",
+    "transformedIdeaTitle": "Carrera contra el Tiempo",
+    "transformedIdeaDescription": "¡En sus marcas, listos, YA! Da un grito para iniciar el cronómetro visual. La barra de tiempo bajará rápidamente. ¿Puedes terminar la tarea antes de que se acabe? Usa el interruptor si necesitas pausar el tiempo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > StartSignal THEN StartTimer(); IF Switch == ON THEN PauseTimer()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Simulado",
+    "originalIdeaDescription": "Muestra nubes en la matriz. Si el sensor detecta un ruido fuerte (trueno simulado), muestra un rayo. El interruptor cambia entre modo día y noche.",
+    "transformedIdeaTitle": "El Creador de Clima",
+    "transformedIdeaDescription": "Simula una tormenta eléctrica. Golpea la mesa para simular un trueno y verás un rayo iluminar la matriz. Usa el interruptor para decidir si la tormenta ocurre de día (fondo claro) o de noche (fondo oscuro).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Show(Switch ? 'Sun' : 'Moon'); IF Noise > Thunder THEN Show('Lightning')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Rítmica",
+    "originalIdeaDescription": "La matriz muestra un candado cerrado. El usuario debe hacer ruido dos veces en un intervalo específico. El interruptor resetea el candado.",
+    "transformedIdeaTitle": "La Bóveda del Banco Secreto",
+    "transformedIdeaDescription": "La puerta está cerrada. Para abrirla, no necesitas llave, ¡necesitas ritmo! Da dos golpes con el tiempo perfecto para ver el candado abrirse. Si te equivocas, usa el interruptor para cerrar y probar de nuevo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "DetectRhythm(); IF RhythmCorrect THEN Show('Unlock') ELSE Show('Lock'); IF Switch THEN Reset()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Ecualizador Gráfico de Barras Estéreo",
+    "originalIdeaDescription": "Divide la matriz en dos barras verticales. La izquierda reacciona al ruido instantáneo, la derecha al promedio. El interruptor congela la visualización.",
+    "transformedIdeaTitle": "Analizador de Sonido Científico",
+    "transformedIdeaDescription": "Conviértete en un ingeniero de sonido. Visualiza dos tipos de datos: qué tan fuerte es el sonido ahora mismo y qué tan fuerte ha sido en promedio. ¡Usa el interruptor para congelar los datos y analizarlos!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "DrawLeft(Noise); DrawRight(AverageNoise); IF Switch == ON THEN FreezeDisplay()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de 'Simón Dice' Sonoro",
+    "originalIdeaDescription": "La matriz muestra una instrucción (icono de oreja). El usuario debe hacer ruido. Si la matriz muestra una 'X', debe estar callado. El interruptor cambia la dificultad (velocidad).",
+    "transformedIdeaTitle": "El Maestro del Silencio y el Ruido",
+    "transformedIdeaDescription": "Sigue las instrucciones de la pantalla. Si ves un megáfono, ¡haz ruido! Si ves un dedo en los labios, ¡silencio absoluto! Gana puntos por reaccionar rápido. Usa el interruptor para hacerlo más rápido y difícil.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Show(Target); IF Target=='Noise' AND Noise>Low THEN Score++ ELSE IF Target=='Quiet' AND Noise>Low THEN GameOver"
+  }
+]

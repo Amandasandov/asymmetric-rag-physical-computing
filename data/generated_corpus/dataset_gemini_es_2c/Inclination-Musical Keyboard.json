@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Aire Controlado por Inclinación",
+    "originalIdeaDescription": "Crear un instrumento musical virtual donde el tono de la nota cambie dinámicamente según el ángulo de inclinación del dispositivo. Al inclinar hacia la derecha se tocan notas agudas y hacia la izquierda notas graves.",
+    "transformedIdeaTitle": "El Violín Invisible del Futuro",
+    "transformedIdeaDescription": "¡Conviértete en un virtuoso sin tocar una sola cuerda! Programa tu dispositivo para que actúe como un violín futurista. Deberás mapear el ángulo de inclinación lateral de tu mano para seleccionar la nota musical exacta. ¿Podrás tocar 'Estrellita, dónde estás' solo moviendo tu muñeca?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = map(Inclination.X, -90, 90, 60, 72); MusicalKeyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Melódico",
+    "originalIdeaDescription": "Un dispositivo para medir la planitud de una superficie. Si la superficie está perfectamente plana, suena una nota armónica continua. Si está inclinada, suena una nota disonante o de alerta.",
+    "transformedIdeaTitle": "Misión: Estabilizar el Reactor",
+    "transformedIdeaDescription": "El núcleo del reactor es inestable y debes mantenerlo perfectamente nivelado para evitar una fusión. Crea un programa que emita un sonido suave y agradable cuando el dispositivo esté plano, pero que toque notas de alarma agudas si detecta cualquier inclinación peligrosa.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.X) < 5 AND abs(Inclination.Y) < 5 THEN MusicalKeyboard.play('C4') ELSE MusicalKeyboard.play('C#5')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Escala de Trombón",
+    "originalIdeaDescription": "Usar la inclinación longitudinal (eje Y) para simular la vara de un trombón. Al inclinar el dispositivo hacia adelante, la nota baja, y al traerlo hacia el pecho, la nota sube.",
+    "transformedIdeaTitle": "La Orquesta de Trombones Digitales",
+    "transformedIdeaDescription": "Únete a la banda digital creando tu propio trombón. Usarás el sensor de inclinación para imitar el movimiento de la vara. Cuanto más estires el brazo (inclines el dispositivo hacia adelante), más grave será el sonido. ¡Intenta sincronizarte con tus compañeros!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y > previous_Y THEN MusicalKeyboard.play(LowerNote) ELSE MusicalKeyboard.play(HigherNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Musical",
+    "originalIdeaDescription": "Un juego donde el usuario debe encontrar un ángulo específico de inclinación para desbloquear un sonido de 'éxito'. El usuario busca el ángulo correcto escuchando pistas auditivas.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Estás frente a una caja fuerte antigua. Para abrirla, no necesitas un estetoscopio, ¡necesitas código! Gira (inclina) el dial de la caja fuerte lentamente. Programa el sistema para que toque una nota aguda solo cuando encuentres el ángulo secreto (por ejemplo, exactamente 45 grados).",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X == 45 THEN MusicalKeyboard.play('C6') ELSE MusicalKeyboard.play('C2')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Auditivo",
+    "originalIdeaDescription": "Un sistema de alerta temprana que reproduce acordes graves y fuertes cuando detecta vibraciones o cambios bruscos en la inclinación del suelo simulado.",
+    "transformedIdeaTitle": "Sismógrafo Musical",
+    "transformedIdeaDescription": "Construye un dispositivo que vigile la tierra. Si todo está en calma, el silencio reina. Pero si detecta un movimiento brusco (un cambio rápido en la inclinación), debe tocar un acorde dramático y grave de piano para alertar a la ciudad sobre el terremoto.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X - prev_Inclination.X) > 10 THEN MusicalKeyboard.playChord('C2_Major')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Videojuego de Carreras Sonoro",
+    "originalIdeaDescription": "Utilizar el dispositivo como un volante. Girar a la izquierda toca notas que indican dirección izquierda, y viceversa, para ayudar a personas con discapacidad visual a navegar un mapa mental.",
+    "transformedIdeaTitle": "Gran Premio a Ciegas",
+    "transformedIdeaDescription": "Diseña un volante para un coche de carreras invisible. El reto es guiar al conductor usando solo sonido. Si inclinas el volante a la izquierda, debe sonar una nota grave; a la derecha, una nota aguda. El conductor debe mantener el coche recto (silencio) para ganar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -20 THEN MusicalKeyboard.play('C3') ELSE IF Inclination.X > 20 THEN MusicalKeyboard.play('G3')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Efectos Sonoros",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Un movimiento rápido hacia arriba (inclinación Z) dispara un sonido de 'hechizo' ascendente en el teclado.",
+    "transformedIdeaTitle": "Academia de Hechicería: Clase de Encantamientos",
+    "transformedIdeaDescription": "¡Leviosa! Convierte tu dispositivo en una varita mágica. Tu tarea es programar un 'arpegio mágico' (una sucesión rápida de notas) que se active solo cuando realices el gesto correcto de levantar la varita hacia el cielo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 60 THEN MusicalKeyboard.playArpeggio('C_Major')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "El Palo de Lluvia Digital",
+    "originalIdeaDescription": "Simulación de un instrumento de palo de lluvia. Al inclinar el dispositivo, se reproducen notas aleatorias rápidas que imitan el sonido de piedras cayendo.",
+    "transformedIdeaTitle": "Invocador de Lluvia Digital",
+    "transformedIdeaDescription": "Recrea el sonido relajante de la lluvia. Programa el dispositivo para que, cuando lo inclines verticalmente, toque una cascada de notas de piano aleatorias y rápidas, simulando gotas de agua cayendo a través de un tubo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Inclination.Y > 45 DO MusicalKeyboard.play(RandomNote, ShortDuration)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura Corporal",
+    "originalIdeaDescription": "Un dispositivo wearable que se coloca en la espalda. Si el usuario se encorva (inclinación hacia adelante), suena una melodía recordatoria para corregir la postura.",
+    "transformedIdeaTitle": "El Guardián de la Espalda Recta",
+    "transformedIdeaDescription": "Ayuda a tus amigos a mantener una buena postura. Crea un código que monitoree la inclinación. Si detecta que el usuario se está encorvando más de 30 grados, debe tocar una secuencia de notas repetitivas y molestas hasta que se ponga recto de nuevo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < -30 THEN MusicalKeyboard.playSequence(['E4', 'E4', 'E4'])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Escaleras Musicales Infinitas",
+    "originalIdeaDescription": "Un efecto auditivo Shepard Tone o escala infinita que sube de tono continuamente mientras el usuario mantenga el dispositivo inclinado hacia arriba.",
+    "transformedIdeaTitle": "Escalando la Montaña Eterna",
+    "transformedIdeaDescription": "Imagina que estás escalando una montaña que nunca termina. Mientras mantengas tu dispositivo inclinado hacia arriba, el teclado debe tocar una escala musical que nunca se detiene, subiendo nota tras nota. Si lo nivelas, la escalada se detiene.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y > 20 THEN currentNote++; MusicalKeyboard.play(currentNote)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Columpio Sonoro",
+    "originalIdeaDescription": "Mapear el movimiento pendular de un columpio (eje X o Y) a un sonido de vaivén, con notas graves en el centro y agudas en los extremos.",
+    "transformedIdeaTitle": "El Parque de Juegos Musical",
+    "transformedIdeaDescription": "Vamos a sonorizar un columpio. Programa el sistema para que detecte el ángulo de balanceo. En el punto más bajo (0 grados), debe sonar una nota base. A medida que el columpio sube (inclinación aumenta), las notas deben hacerse más agudas, creando una melodía oscilante.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = base_note + abs(Inclination.Y / 10); MusicalKeyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Selector de Emociones Musicales",
+    "originalIdeaDescription": "Inclinar el dispositivo en cuatro direcciones cardinales dispara cuatro acordes diferentes que representan emociones (Feliz, Triste, Tenso, Misterioso).",
+    "transformedIdeaTitle": "La Brújula de los Sentimientos",
+    "transformedIdeaDescription": "Crea una brújula emocional. Si inclinas al Norte (adelante), toca un acorde Mayor alegre. Al Sur (atrás), un acorde Menor triste. Izquierda y Derecha pueden ser acordes de suspenso. ¡Úsalo para musicalizar una historia en tiempo real!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 30 THEN Play('C_Major') ELSE IF Inclination.Y < -30 THEN Play('A_Minor')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Theremin de Inclinación",
+    "originalIdeaDescription": "Un instrumento inspirado en el Theremin donde un eje controla el tono (pitch) y el otro eje controla la octava o la intensidad del sonido.",
+    "transformedIdeaTitle": "Invasión Alienígena: El Comunicador",
+    "transformedIdeaDescription": "Los alienígenas no hablan, ¡se comunican con tonos deslizantes! Construye un instrumento extraño donde inclinar a los lados cambie la nota musical suavemente, permitiéndote enviar mensajes interestelares codificados.",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "frequency = base_freq + (Inclination.X * 10); MusicalKeyboard.playFrequency(frequency)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de la Estatua Musical Inversa",
+    "originalIdeaDescription": "La música suena mientras el dispositivo se mueve (cambia de inclinación). Si el dispositivo se queda quieto (inclinación constante), la música se detiene.",
+    "transformedIdeaTitle": "Baila para que Suene",
+    "transformedIdeaDescription": "¡Al revés que el juego de las sillas! Aquí la música solo suena si tú te mueves. Programa el sensor para detectar cambios constantes en la inclinación. Si dejas de bailar (el sensor se estabiliza), el piano se calla y pierdes puntos de 'energía'.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.X - last_X) > 2 THEN MusicalKeyboard.playNextNote() ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Inclinación para Carga",
+    "originalIdeaDescription": "Simular un camión de carga. Si la carga se inclina demasiado hacia un lado, suena una nota de advertencia intermitente.",
+    "transformedIdeaTitle": "Transportista de Mercancía Frágil",
+    "transformedIdeaDescription": "Eres el conductor de un camión que lleva cristales valiosos. Programa una alarma de seguridad: si tu 'camión' (el dispositivo) se inclina más de 20 grados en una curva, debe sonar una nota repetitiva de piano ('Ding! Ding!') para avisarte que corrijas el rumbo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.X) > 20 THEN MusicalKeyboard.playLoop('C5', 500ms)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Gestual",
+    "originalIdeaDescription": "Usar la inclinación para hacer 'crossfading' entre dos notas o acordes. Izquierda es el acorde A, derecha es el acorde B.",
+    "transformedIdeaTitle": "Batalla de DJs: El Mezclador Humano",
+    "transformedIdeaDescription": "¡Tú eres la mesa de mezclas! Inclina tu cuerpo a la izquierda para que suene un ritmo de bajos en el teclado, e inclínate a la derecha para cambiar a una melodía aguda. Encuentra el punto medio para mezclar ambos estilos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -10 THEN Play('Bass_Line') ELSE IF Inclination.X > 10 THEN Play('Melody_Line')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Arpa Láser Virtual",
+    "originalIdeaDescription": "Dividir el espacio aéreo en 'zonas' de grados. Mover el dispositivo a través de estas zonas dispara notas como si se rasgaran las cuerdas de un arpa.",
+    "transformedIdeaTitle": "El Arpa de Cristal Encantada",
+    "transformedIdeaDescription": "Imagina cuerdas invisibles flotando en el aire frente a ti. Programa tu dispositivo para que, al barrer el aire de izquierda a derecha (cambiando la inclinación X), toque una secuencia fluida de notas, como si tus dedos estuvieran acariciando un arpa mágica.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "sector = round(map(Inclination.X, -90, 90, 0, 7)); MusicalKeyboard.play(Scale[sector])"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras (Broma)",
+    "originalIdeaDescription": "El operador inclina imperceptiblemente el dispositivo cuando hace una pregunta. Si lo inclina, suena una nota 'Falsa', si lo mantiene recto, una nota 'Verdadera'.",
+    "transformedIdeaTitle": "El Detector de Verdades Ocultas",
+    "transformedIdeaDescription": "Crea una máquina de broma para detectar mentiras. Haz una pregunta a un amigo. Tú controlas secretamente el resultado: si inclinas sutilmente el dispositivo a la derecha, la máquina tocará un tono grave de 'MENTIRA'. Si lo mantienes plano, tocará un tono agudo de 'VERDAD'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X > 5 THEN MusicalKeyboard.play('Low_Note') ELSE MusicalKeyboard.play('High_Note')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Catapulta Sonora",
+    "originalIdeaDescription": "Se carga la catapulta inclinando hacia atrás (tonos graves ascendentes de tensión) y se dispara inclinando rápido hacia adelante (nota final de impacto).",
+    "transformedIdeaTitle": "Lanzamiento de Cohetes Musicales",
+    "transformedIdeaDescription": "Prepara el lanzamiento. Inclina el dispositivo hacia atrás lentamente para simular la carga de combustible (notas que suben de tensión). Cuando estés listo, haz un movimiento rápido hacia adelante para 'despegar' con un acorde final triunfante.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Y < -45 THEN tension++ ELSE IF speed(Inclination.Y) > fast THEN Play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música a Cuerda Manual",
+    "originalIdeaDescription": "Para escuchar la canción, el usuario debe rotar el dispositivo continuamente en círculos (cambiando inclinación X e Y secuencialmente), como dando cuerda.",
+    "transformedIdeaTitle": "La Vieja Caja de Música",
+    "transformedIdeaDescription": "Has encontrado una caja de música oxidada. Para que suene la melodía, necesitas 'darle cuerda' girando el dispositivo en círculos. Programa la lógica para que la siguiente nota de la canción solo suene si la inclinación cambia en un patrón circular continuo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF circular_motion_detected(Inclination.X, Inclination.Y) THEN MusicalKeyboard.playNextInMelody()"
+  }
+]

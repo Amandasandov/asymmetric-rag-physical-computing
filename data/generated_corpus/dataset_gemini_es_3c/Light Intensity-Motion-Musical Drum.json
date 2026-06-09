@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Batería Aérea Fotosensible",
+    "originalIdeaDescription": "Un instrumento invisible donde el tipo de tambor cambia según la cantidad de luz que recibe el sensor (sombra = bombo, luz = caja) y se toca agitando el dispositivo (Motion).",
+    "transformedIdeaTitle": "El Baterista de Luz y Sombra",
+    "transformedIdeaDescription": "Crea tu kit de batería mágico. Si tocas en la sombra (tapa el sensor), el dispositivo se convierte en un Bombo profundo. Si tocas bajo una lámpara, se convierte en una Caja aguda. Para golpear el tambor, haz un movimiento seco en el aire (Motion) como si tuvieras una baqueta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Instrument = (Light.level < 50) ? 'Kick' : 'Snare'; IF Motion.hitDetected() THEN Drum.play(Instrument)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Sistema de Alarma de Cajón",
+    "originalIdeaDescription": "Dispositivo para proteger objetos de valor. Si se detecta oscuridad (cajón cerrado) está armado. Si entra luz (se abre) y hay movimiento, el tambor suena como sirena.",
+    "transformedIdeaTitle": "La Trampa del Pirata",
+    "transformedIdeaDescription": "Protege tu cofre del tesoro. Coloca el dispositivo dentro. Mientras esté oscuro y quieto, no pasa nada. Pero si un ladrón abre el cofre (entra Luz) y lo mueve (Motion), el Tambor debe empezar a repiquetear furiosamente para alertar a toda la tripulación.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 10 AND Motion.magnitude > 5 THEN Drum.loop('AlarmBeat')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "El usuario debe coordinar efectos. Cuando ve un flash de luz (simulado o linterna), debe agitar el dispositivo para crear el sonido del trueno con el tambor.",
+    "transformedIdeaTitle": "Thor: Dios del Trueno",
+    "transformedIdeaDescription": "Controla la tormenta. Espera a ver el relámpago (alguien enciende y apaga la luz rápidamente). Cuenta mentalmente la distancia y luego agita el dispositivo con fuerza (Motion). El Tambor generará un estruendo de trueno. Cuanto más fuerte agites, más fuerte será el trueno.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.flashDetected(): Wait(); IF Motion.shake() THEN Drum.play('Thunder', volume=Motion.force)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Juego de Sigilo: Estatua Nocturna",
+    "originalIdeaDescription": "Juego de 'Luz Roja, Luz Verde'. Si hay luz, se puede mover. Si se apaga la luz (oscuridad), cualquier movimiento dispara un tambor de eliminación.",
+    "transformedIdeaTitle": "Escape de la Prisión Oscura",
+    "transformedIdeaDescription": "Debes escapar. Cuando el foco de vigilancia esté encendido (Luz > 50), corre (agita el dispositivo). Pero cuando el foco se apague (Oscuridad), ¡congélate! Si el sensor detecta movimiento en la oscuridad, el Tambor sonará un disparo y te atraparán.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.isMoving() THEN Drum.play('Gunshot') AND GameOver()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Excavadora Minera",
+    "originalIdeaDescription": "El usuario simula cavar (Motion). A medida que 'baja' (tapa más la luz o se oscurece el ambiente), el sonido del tambor cambia de tierra blanda a roca dura.",
+    "transformedIdeaTitle": "Buscadores de Diamantes",
+    "transformedIdeaDescription": "Vamos a cavar al centro de la tierra. Haz movimientos de pala (Motion). Al principio (Luz alta/superficie), el Tambor suena suave. A medida que tapas el sensor para simular profundidad (Oscuridad), el Tambor suena metálico y duro '¡Clanc!', indicando que has encontrado rocas preciosas.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Depth = 100 - Light.level; Material = Map(Depth); IF Motion.dig() THEN Drum.play(Material)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Incubadora de Huevo de Dragón",
+    "originalIdeaDescription": "El huevo necesita calor (luz) y movimiento suave. El tambor simula el latido del corazón del dragón, que se acelera al estar listo.",
+    "transformedIdeaTitle": "Nacimiento del Dragón",
+    "transformedIdeaDescription": "Cuida el huevo. Mantenlo caliente acercándolo a una lámpara (Luz) y mécelo suavemente (Motion). Si lo haces bien, escucharás el latido del corazón (Tambor: Pum-pum). Si lo agitas mucho o se enfría, el latido se detiene.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Condition = Light.warm() AND Motion.gentle(); IF Condition THEN Drum.loop('Heartbeat') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Entrenador de Béisbol/Tenis",
+    "originalIdeaDescription": "El usuario hace un swing (Motion). El sensor de luz detecta la 'sombra' de la bola pasando. Si coinciden, el tambor suena el impacto.",
+    "transformedIdeaTitle": "Bateador de Grandes Ligas",
+    "transformedIdeaDescription": "Conecta el Home Run. Colócate bajo una luz. Haz el swing con el dispositivo (Motion). Justo cuando pases por la sombra de tu cuerpo o tapes el sensor (simulando contacto), el sistema debe detectar la coincidencia. Si sincronizas Movimiento y cambio de Luz, el Tambor suena ¡CRACK!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.swingPeak() AND Light.dropDetected() THEN Drum.play('Hit') ELSE Drum.play('Miss')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Cocinero de Palomitas",
+    "originalIdeaDescription": "Calor (luz) + Agitar la olla (Motion) hace que el maíz explote (Tambor).",
+    "transformedIdeaTitle": "Chef de Popcorn",
+    "transformedIdeaDescription": "Haz palomitas. Pon la 'olla' en el fuego (cerca de la luz). Agita el dispositivo constantemente (Motion) para que no se quemen. A medida que se calientan, el Tambor empezará a hacer 'Pop... Pop-Pop...' cada vez más rápido hasta que estén listas.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Heat = Light.level; IF Heat > 50 AND Motion.shake() THEN Drum.playRandom('Pop')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Detector de Monstruos",
+    "originalIdeaDescription": "Se coloca bajo la cama (oscuro). Si detecta vibración (Motion), el tambor ruge.",
+    "transformedIdeaTitle": "El Monstruo Bajo la Cama",
+    "transformedIdeaDescription": "Programa una broma. Esconde el dispositivo en un lugar oscuro (Luz < 10). Cuando alguien se acerque y sus pasos hagan vibrar el suelo o muevan el escondite (Motion), el Tambor soltará un rugido grave y terrorífico para asustarlo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 AND Motion.vibration > Threshold THEN Drum.play('Growl')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Cohete Espacial",
+    "originalIdeaDescription": "Agitar para llenar combustible. Al detectar luz intensa (ignición), el tambor simula el despegue.",
+    "transformedIdeaTitle": "Misión Apolo",
+    "transformedIdeaDescription": "Prepara el lanzamiento. Agita el cohete para cargar los tanques (Motion). Cuando estés listo, el controlador encenderá los motores (apunta una linterna al sensor). Al detectar el 'fuego' (Luz alta), el Tambor iniciará un redoble continuo simulando el despegue.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Fuel += Motion.shake; IF Fuel==Max AND Light.level > 90 THEN Drum.roll('Thrusters')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Simulador de Pesca Nocturna",
+    "originalIdeaDescription": "Oscuridad (agua profunda). Movimiento brusco (tirón del pez). Tambor (chapoteo).",
+    "transformedIdeaTitle": "Pesca en el Lago Negro",
+    "transformedIdeaDescription": "Es de noche, tapa el sensor. Mantén la caña quieta. El juego simulará un tirón (vibración o aviso visual). ¡Haz un movimiento brusco hacia arriba (Motion) para clavar el anzuelo! Si lo logras, el Tambor sonará como un pez chapoteando en el agua.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Light < 5); IF FishBite AND Motion.jerk('Up') THEN Drum.play('Splash') ELSE Drum.play('Silence')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Máquina de Ritmos Solar",
+    "originalIdeaDescription": "Secuenciador donde la velocidad (BPM) depende de la luz y el tipo de ritmo del movimiento.",
+    "transformedIdeaTitle": "DJ de Energía Solar",
+    "transformedIdeaDescription": "Crea música tecno. La velocidad del beat (Tambor) depende del sol: acércate a la luz para acelerar el ritmo, aléjate para hacerlo lento. Agita el dispositivo para añadir redobles y variaciones al patrón rítmico.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = Map(Light.level); Drum.setTempo(BPM); IF Motion.shake() THEN Drum.addFill()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Gong de Meditación",
+    "originalIdeaDescription": "El usuario debe estar absolutamente quieto y en penumbra. Si lo logra por un tiempo, suena un gong relajante.",
+    "transformedIdeaTitle": "Maestro Zen",
+    "transformedIdeaDescription": "Busca la paz interior. Siéntate sin moverte (Motion = 0) y baja las luces (Luz < 30). Si mantienes este estado de calma durante 10 segundos, el Tambor tocará un suave sonido de Gong o Platillo para indicar que has alcanzado la iluminación.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isStill() AND Light.isDim() THEN Timer++; IF Timer > 10s THEN Drum.play('Gong')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Martillo de Feria",
+    "originalIdeaDescription": "Medir fuerza. Golpe de movimiento (Motion). La luz indica la precisión. El tambor suena la campana si es fuerte.",
+    "transformedIdeaTitle": "Prueba de Fuerza",
+    "transformedIdeaDescription": "¡Demuestra tu fuerza! Haz un movimiento de martillazo hacia abajo (Motion). Si lo haces bajo una luz brillante (que representa el objetivo central), el golpe cuenta doble. Si la fuerza total supera el récord, el Tambor sonará una campana de victoria.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Force = Motion.accel; Accuracy = Light.level; Score = Force * Accuracy; IF Score > HighScore THEN Drum.play('Bell')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Agente Secreto: Código Morse",
+    "originalIdeaDescription": "Transmitir mensajes con golpes (Drum). Para enviar, hay que estar en 'modo seguro' (oscuridad) y agitar para confirmar.",
+    "transformedIdeaTitle": "Telégrafo Clandestino",
+    "transformedIdeaDescription": "Envía el mensaje secreto. Escóndete bajo la mesa (Luz baja). Golpea el dispositivo suavemente (Motion tap) para generar puntos y rayas en el Tambor. Si alguien enciende la luz, el sistema se bloquea para que no te descubran.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.level < 20: IF Motion.tap() THEN Drum.play('Dot'); IF Motion.shake() THEN Drum.play('Dash')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Bici en el Túnel",
+    "originalIdeaDescription": "Al andar en bici (Motion), si se entra en un túnel (Luz baja), el tambor simula el eco o sonido de rodadura diferente.",
+    "transformedIdeaTitle": "Ciclista Urbano",
+    "transformedIdeaDescription": "Pedalea moviendo el dispositivo. El Tambor marca el ritmo de tus pedales. Si entras en un túnel oscuro (tapa el sensor), el sonido del Tambor cambia a uno con eco y reverberación. Si dejas de moverte, la bici se para.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active(): Sound = (Light.low) ? 'EchoDrum' : 'DryDrum'; Drum.loop(Sound)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Efectos de Sonido para Teatro",
+    "originalIdeaDescription": "Usar el dispositivo para generar sonidos de pasos. Luz controla el tipo de suelo (Claro=Grava, Oscuro=Madera). Motion dispara el sonido.",
+    "transformedIdeaTitle": "Foley Artist: Pasos",
+    "transformedIdeaDescription": "Eres el artista de efectos de sonido de una película. El actor camina. Agita el dispositivo (Motion) para cada paso. Si la escena es de día (Luz alta), el Tambor suena como asfalto duro. Si es de noche (Luz baja), suena como madera crujiente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Surface = (Light.level > 50) ? 'Hard' : 'Wood'; IF Motion.step() THEN Drum.play(Surface)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Serpiente Cascabel",
+    "originalIdeaDescription": "Si la serpiente está al sol (luz), está activa. Si se mueve (Motion), suena el cascabel (Tambor maraca).",
+    "transformedIdeaTitle": "La Víbora del Desierto",
+    "transformedIdeaDescription": "Eres una serpiente. Si estás al sol (Luz alta), estás llena de energía. Cualquier movimiento que hagas (Motion) hará sonar tu cola de cascabel (Tambor rápido). Si estás en la sombra, estás dormida y no suenas.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.high AND Motion.detected() THEN Drum.loop('Rattle')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Caja de Sorpresas Payaso",
+    "originalIdeaDescription": "Girar manivela (Motion). Al llegar al final, se abre la tapa (Luz entra) y suena el tambor.",
+    "transformedIdeaTitle": "Jack-in-the-Box",
+    "transformedIdeaDescription": "Dale cuerda a la caja sorpresa (movimiento circular Motion). Mantén el sensor tapado. Cuando sientas que está lista, destapa el sensor (Luz) rápidamente. El Tambor hará un sonido de '¡BOING!' y platillazo sorpresa.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WindUp += Motion.rotation; IF WindUp > Max AND Light.exposed() THEN Drum.play('Boing')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Motion", "Musical Drum"],
+    "originalIdeaTitle": "Robot de Limpieza",
+    "originalIdeaDescription": "El robot avanza (Motion simulado). Si choca (sacudida fuerte), suena tambor. Se dirige hacia la luz.",
+    "transformedIdeaTitle": "Aspiradora Autónoma",
+    "transformedIdeaDescription": "Eres un robot aspiradora. Muévete hacia donde haya más luz (ensuciada). Si te chocas con un mueble (sacudida fuerte/Motion), el Tambor debe hacer un sonido de '¡Pum!' y debes girar para buscar otra fuente de luz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.impact() THEN Drum.play('Crash'); MoveTowards(Max(Light))"
+  }
+]

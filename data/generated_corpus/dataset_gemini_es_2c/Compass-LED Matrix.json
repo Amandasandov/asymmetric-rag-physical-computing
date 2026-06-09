@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Visualización Básica de Puntos Cardinales",
+    "originalIdeaDescription": "Un sistema de navegación simple que lee los datos del sensor de brújula y muestra la letra inicial del punto cardinal correspondiente (N, S, E, O) en la matriz de LEDs.",
+    "transformedIdeaTitle": "El Explorador de la Selva",
+    "transformedIdeaDescription": "¡Estás perdido en la selva amazónica! Programa tu dispositivo para que te guíe al campamento base. Deberás crear un código que muestre la letra 'N' cuando mires al Norte para encontrar el camino a casa.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading > 315 OR compass.heading < 45 THEN LED.show('N')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Flecha Direccional Dinámica",
+    "originalIdeaDescription": "Uso del magnetómetro para calcular el rumbo y dibujar una flecha en la matriz LED que siempre apunte hacia el Norte magnético, independientemente de cómo se gire el dispositivo.",
+    "transformedIdeaTitle": "La Brújula Mágica de Jack",
+    "transformedIdeaDescription": "Como un pirata famoso, necesitas una brújula que señale tu destino. Dibuja una flecha en la pantalla que gire dinámicamente para apuntar siempre al Norte mientras tú giras en círculos buscando el tesoro.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "heading = compass.getHeading(); IF heading is North THEN LED.showArrow('Up')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Búsqueda del Tesoro por Grados",
+    "originalIdeaDescription": "Una actividad donde el usuario debe rotar el dispositivo hasta encontrar un grado específico (azimut). La matriz muestra una X hasta que se alcanza el rango correcto, momento en el que muestra un tesoro.",
+    "transformedIdeaTitle": "El Radar Cazatesoros",
+    "transformedIdeaDescription": "El tesoro está enterrado exactamente en el rumbo 90 grados (Este). Programa tu radar para mostrar una 'X' de error, pero que cambie a una joya brillante cuando apuntes exactamente hacia el Este.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading > 80 AND compass.heading < 100 THEN LED.showIcon('Diamond') ELSE LED.show('X')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Radar de Sonar",
+    "originalIdeaDescription": "Simulación visual de una línea de radar que barre la pantalla circularmente. La posición de la línea en la matriz LED se actualiza en tiempo real según la rotación física del dispositivo.",
+    "transformedIdeaTitle": "Submarino en Alerta",
+    "transformedIdeaDescription": "Eres el capitán de un submarino. Programa el sonar para que detecte enemigos. Al girar tu periscopio (el dispositivo), la línea del radar en la pantalla debe moverse para escanear el océano en esa dirección.",
+    "minAge": 12,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "angle = compass.getHeading(); linePosition = map(angle, 0, 360, 0, 7); LED.drawLine(linePosition)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mecanismo de Caja Fuerte Giratoria",
+    "originalIdeaDescription": "Un sistema de seguridad simulado donde el usuario debe girar el dispositivo a tres orientaciones específicas en secuencia para 'desbloquear' la matriz, mostrando un candado abierto.",
+    "transformedIdeaTitle": "El Ladrón de Bancos",
+    "transformedIdeaDescription": "Para abrir la gran bóveda, debes girar el dial (tu dispositivo) a la derecha (Este), luego a la izquierda (Oeste) y finalmente al Norte. Si completas la secuencia, ¡el candado se abrirá!",
+    "minAge": 11,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF heading==90 THEN step1=True; IF step1 AND heading==270 THEN step2=True; IF step2 AND heading==0 THEN LED.show('Unlock')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Identificador de Viento Virtual",
+    "originalIdeaDescription": "Una veleta digital. Dependiendo de la orientación de la brújula, la matriz muestra una animación de partículas (píxeles) moviéndose en la dirección opuesta, simulando viento.",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Crea una estación meteorológica. Cuando apuntas al Norte, haz que el 'viento' (píxeles) sople hacia abajo en la pantalla. Si giras al Sur, el viento debe soplar hacia arriba. ¡Visualiza la fuerza de la naturaleza!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is North THEN LED.animate('RainDown'); IF heading is South THEN LED.animate('RainUp')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de la Botella Digital",
+    "originalIdeaDescription": "Juego social donde el dispositivo se coloca en el centro y se gira. La matriz muestra una flecha girando que se detiene aleatoriamente o apunta a quien esté al Norte magnético cuando se detiene.",
+    "transformedIdeaTitle": "La Ruleta de la Verdad",
+    "transformedIdeaDescription": "Programa un juego para fiestas. Coloca el dispositivo en el suelo y gíralo. Cuando se detenga, la flecha en la pantalla apuntará a quien deba responder una pregunta difícil. ¡Usa el Norte como referencia!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "currentHead = compass.heading; LED.rotateArrowTo(currentHead)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Navegación por Laberinto Invisible",
+    "originalIdeaDescription": "Un juego donde el jugador navega un mapa virtual invisible. Girar el dispositivo cambia la dirección de movimiento, y la matriz muestra si hay una pared o un camino libre en esa dirección.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura. Usa tu brújula para tantear las paredes. Si miras al Norte y hay camino, verás una flecha; si hay pared, verás un bloque. ¡Encuentra la salida girando y probando!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "direction = compass.getDirection(); IF mazeMap[currentPos][direction] == WALL THEN LED.show('Block') ELSE LED.show('Arrow')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Decodificador de Mensajes Espía",
+    "originalIdeaDescription": "La matriz muestra píxeles revueltos (ruido estático). Solo cuando el dispositivo se alinea perfectamente con el Norte magnético, los píxeles se ordenan para mostrar un mensaje secreto o ícono.",
+    "transformedIdeaTitle": "Agente Secreto 007",
+    "transformedIdeaDescription": "Tienes un mensaje encriptado. Tu dispositivo muestra ruido visual, pero si lo alineas exactamente con el Norte magnético, el filtro se activará y revelará la clave secreta en la pantalla.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.heading > 355 OR compass.heading < 5 THEN LED.scrollText('SECRET') ELSE LED.showStaticNoise()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Planetario de Bolsillo",
+    "originalIdeaDescription": "Una aplicación educativa que muestra diferentes íconos de cuerpos celestes (Sol, Luna, Marte) en la matriz cuando el usuario apunta el dispositivo hacia sus coordenadas azimutales aproximadas.",
+    "transformedIdeaTitle": "Viaje por el Sistema Solar",
+    "transformedIdeaDescription": "Convierte tu habitación en el espacio exterior. Programa el dispositivo para que al apuntar al Este muestre el Sol saliendo, y al Oeste muestre la Luna. ¡Aprende dónde están los astros!",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is East THEN LED.showIcon('Sun'); IF heading is West THEN LED.showIcon('Moon')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entrenador de Postura de Yoga",
+    "originalIdeaDescription": "Herramienta para asistir en ejercicios. El usuario debe mantener una orientación específica. Si se desvía del rumbo objetivo, la matriz muestra una flecha indicando hacia dónde corregir la postura.",
+    "transformedIdeaTitle": "Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Mantén la concentración absoluta. Debes mirar fijamente hacia el Sur mientras meditas. Si tu cuerpo gira y pierdes el centro, la pantalla te regañará con una flecha para que corrijas tu posición.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = 180; diff = compass.heading - target; IF diff > 10 THEN LED.show('TurnLeft') ELSE IF diff < -10 THEN LED.show('TurnRight')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Controlador de Tanque/Torreta",
+    "originalIdeaDescription": "Simulación de control de vehículo. La orientación de la brújula controla la rotación de una torreta o cañón mostrado en la matriz, permitiendo al usuario apuntar a objetivos virtuales.",
+    "transformedIdeaTitle": "Defensor de la Torre",
+    "transformedIdeaDescription": "Eres el artillero de una torre defensiva. Gira tu dispositivo físicamente para mover el cañón en la pantalla. ¡Apunta a las coordenadas donde aparecen los invasores alienígenas!",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "turretAngle = map(compass.heading, 0, 360, 0, 8); LED.showSprite('Turret', turretAngle)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Campos Magnéticos Anómalos",
+    "originalIdeaDescription": "Utiliza la brújula para detectar desviaciones rápidas causadas por imanes cercanos. La matriz visualiza la intensidad de la interferencia como una barra de progreso o un gráfico.",
+    "transformedIdeaTitle": "Cazafantasmas",
+    "transformedIdeaDescription": "Hay 'fantasmas' magnéticos en la habitación (imanes escondidos). Programa tu dispositivo para que la pantalla parpadee y muestre una señal de peligro cuando la brújula se vuelva loca por un campo magnético cercano.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "current = compass.strength; IF abs(current - baseline) > threshold THEN LED.flash('GHOST!')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Rueda de Colores Direccional",
+    "originalIdeaDescription": "Asocia cada rango de 45 grados de la brújula con un patrón o ícono diferente en la matriz, enseñando al usuario a dividir el círculo de 360 grados en 8 segmentos.",
+    "transformedIdeaTitle": "La Rosa de los Vientos Artística",
+    "transformedIdeaDescription": "Crea una obra de arte interactiva. Asigna un dibujo diferente para el Norte, Noreste, Este, etc. Al girar lentamente, verás cómo tu galería de arte cambia según hacia dónde mires.",
+    "minAge": 11,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "sector = round(compass.heading / 45); LED.showImage(imagesArray[sector])"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Rastreador de Qibla/Meca",
+    "originalIdeaDescription": "Una utilidad específica que calcula la dirección hacia un punto geográfico fijo (como la Meca) y muestra una flecha de guía en la matriz LED hasta que el usuario está alineado.",
+    "transformedIdeaTitle": "Buscador de Ciudades Famosas",
+    "transformedIdeaDescription": "Programa tu dispositivo para que siempre sepa dónde está París. No importa cómo te muevas, la flecha en la pantalla debe indicarte en qué dirección volarías para llegar a la Torre Eiffel.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "targetHeading = calculateBearing(myLat, myLon, parisLat, parisLon); IF compass.heading == targetHeading THEN LED.show('Heart')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simón Dice Direccional",
+    "originalIdeaDescription": "Juego de memoria y movimiento. La matriz muestra una letra (N, S, E, O) y el usuario tiene un tiempo límite para girar el dispositivo y orientarlo hacia esa dirección.",
+    "transformedIdeaTitle": "Capitán Dice: ¡A Babor!",
+    "transformedIdeaDescription": "El capitán grita órdenes visuales. Si la pantalla muestra 'N', ¡gira rápido al Norte! Si muestra 'E', ¡al Este! Si tardas demasiado o te equivocas de dirección, el barco se hunde.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "target = randomDirection(); LED.show(target); wait(2s); IF compass.direction != target THEN gameOver()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Nivel de Horizonte Artificial",
+    "originalIdeaDescription": "Similar a los instrumentos de vuelo, usa la brújula (y acelerómetro implícito en módulos avanzados) para mostrar una línea de horizonte que se mantiene plana mientras el usuario inclina el dispositivo.",
+    "transformedIdeaTitle": "Piloto de Avión Acrobático",
+    "transformedIdeaDescription": "Estás volando entre las nubes. Programa el horizonte artificial en tu cabina. La línea en la pantalla debe mantenerse recta y nivelada aunque tú inclines el avión (dispositivo) al virar.",
+    "minAge": 12,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "roll = compass.getRoll(); LED.drawLineWithAngle(roll)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Contador de Vueltas",
+    "originalIdeaDescription": "Un algoritmo que detecta cuando el dispositivo ha completado una rotación completa de 360 grados y aumenta un contador numérico mostrado en la matriz LED.",
+    "transformedIdeaTitle": "Tornando en el Hielo",
+    "transformedIdeaDescription": "Eres un patinador artístico practicando giros. Crea un programa que cuente cuántas piruetas completas (360 grados) puedes hacer sin marearte. ¡El número debe aparecer en tu traje (la pantalla)!",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading crosses 0 from 359 THEN spins = spins + 1; LED.showNumber(spins)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Faro Giratorio",
+    "originalIdeaDescription": "La matriz LED muestra una columna de luz que barre la pantalla de izquierda a derecha, pero la velocidad y dirección del barrido dependen de la rotación física del dispositivo.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Es una noche tormentosa. Controla la luz del faro girando tu cuerpo. Haz que el haz de luz en la pantalla barra la oscuridad para advertir a los barcos, sincronizado con tu movimiento.",
+    "minAge": 9,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "column = map(compass.heading, 0, 360, 0, 5); LED.clear(); LED.plotColumn(column)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Explorador de Habitats Animales",
+    "originalIdeaDescription": "Divide los 360 grados en 4 zonas. Cada zona muestra un animal diferente en la matriz (Pingüino al Sur, Oso al Norte, etc.), enseñando geografía básica y asociación.",
+    "transformedIdeaTitle": "Safari Fotográfico",
+    "transformedIdeaDescription": "Vamos de safari. Si apuntas al Norte, verás un Oso Polar. Si apuntas al Este, un León. Gira la cámara para encontrar y 'fotografiar' (ver en pantalla) a todos los animales en sus hábitats.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading < 45 THEN LED.showIcon('Bear') ELSE IF heading > 135 THEN LED.showIcon('Lion')"
+  }
+]

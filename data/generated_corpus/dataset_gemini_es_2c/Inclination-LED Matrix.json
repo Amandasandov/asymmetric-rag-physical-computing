@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Visualización de Nivel de Burbuja Digital",
+    "originalIdeaDescription": "El dispositivo utiliza el sensor de inclinación para detectar la desviación respecto al plano horizontal. La matriz LED muestra un punto iluminado que se mueve en tiempo real, imitando una burbuja de aire en un nivel de carpintero. Si el dispositivo está perfectamente plano, el punto se centra; si se inclina, el punto se desliza hacia el borde más alto.",
+    "transformedIdeaTitle": "Herramienta de Construcción: El Nivelador Maestro",
+    "transformedIdeaDescription": "¡Conviértete en un constructor experto! Tu misión es programar una herramienta para verificar si una mesa está recta. Crearás un nivel digital donde un punto de luz 'burbuja' se mueve por la pantalla. Si logras que el punto se quede quieto en el centro exacto, ¡la pantalla parpadeará indicando que la superficie es perfecta!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "X = map(Inclination.X, -90, 90, 0, 6); Y = map(Inclination.Y, -90, 90, 0, 6); LEDMatrix.pixel(X, Y, ON)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Controlador de Laberinto de Canicas",
+    "originalIdeaDescription": "Se crea un juego donde un píxel (la canica) debe navegar por un laberinto estático o vacío. El usuario inclina el dispositivo físicamente para aplicar 'gravedad' virtual, moviendo el píxel a través de la cuadrícula LED de 7x7 hacia una coordenada objetivo específica sin tocar las paredes invisibles.",
+    "transformedIdeaTitle": "El Laberinto de la Canica Digital",
+    "transformedIdeaDescription": "Imagina que tienes una canica atrapada dentro de tu pantalla. Debes programar la física del juego para que, al inclinar tu placa hacia la izquierda o derecha, la canica (un punto de luz) ruede en esa dirección. ¡Guíala hasta la meta sin que se caiga por los bordes de la matriz!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X > 15 THEN Marble.X++; IF Inclination.X < -15 THEN Marble.X--; LEDMatrix.draw(Marble)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Indicador de Direccionales para Vehículos",
+    "originalIdeaDescription": "El sistema simula un volante inteligente. Al detectar una inclinación significativa en el eje X (girar a la izquierda o derecha), la matriz LED muestra una flecha animada apuntando en la dirección del giro, similar a las luces intermitentes de un automóvil moderno.",
+    "transformedIdeaTitle": "Simulador de Volante: Luces Automáticas",
+    "transformedIdeaDescription": "¡Vamos a conducir! Convertirás tu dispositivo en el volante de un coche del futuro. Tu desafío es programarlo para que sea inteligente: si giras el 'volante' a la izquierda, debe aparecer automáticamente una flecha izquierda en la pantalla. Si lo enderezas, las luces deben apagarse. ¡Seguridad ante todo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.X < -20 THEN LEDMatrix.showArrow(LEFT) ELSE IF Inclination.X > 20 THEN LEDMatrix.showArrow(RIGHT) ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mascota Digital con Estados de Sueño",
+    "originalIdeaDescription": "Una cara simple renderizada en la matriz LED cambia su estado según la orientación del dispositivo. Si el dispositivo se mantiene vertical y activo, la mascota tiene los ojos abiertos. Si el dispositivo se coloca horizontalmente (tumbado) durante un tiempo, la mascota cierra los ojos y muestra una animación de 'Zzz'.",
+    "transformedIdeaTitle": "Tamagotchi Sensible: ¡Hora de Dormir!",
+    "transformedIdeaDescription": "Crea una mascota virtual que vive en tu matriz de luces. Le encanta jugar cuando la tienes en la mano, mostrándote una gran sonrisa. Pero cuidado, si pones la placa acostada sobre la mesa, entenderá que es hora de dormir y cerrará sus ojos digitales. ¡Programa sus reacciones!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Z > 170 OR Inclination.Z < 10 THEN LEDMatrix.showIcon(SLEEP) ELSE LEDMatrix.showIcon(HAPPY)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Generador de Números Aleatorios por Agitación",
+    "originalIdeaDescription": "El dispositivo funciona como un dado electrónico. El sistema monitorea cambios bruscos en la inclinación (agitación). Al detectar este movimiento, la matriz muestra una animación de mezcla y finalmente se detiene en un número aleatorio del 1 al 6 representado por puntos.",
+    "transformedIdeaTitle": "Dado Mágico Agitable para Juegos de Mesa",
+    "transformedIdeaDescription": "¿Perdiste los dados de tu juego favorito? ¡No hay problema! Fabrica uno digital. Programa el sensor para detectar cuando agitas la mano con fuerza. Al hacerlo, la pantalla debe volverse loca con luces y detenerse en un número sorpresa. ¡El azar está en tus manos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(Inclination.change) > threshold THEN number = Random(1,6); LEDMatrix.showDice(number)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Efecto de Gravedad de Partículas de Arena",
+    "originalIdeaDescription": "Simulación de física granular donde múltiples píxeles encendidos actúan como granos de arena. Al inclinar el dispositivo, los píxeles calculan su nueva posición para moverse hacia la parte más baja de la matriz, apilándose unos sobre otros si el camino está bloqueado.",
+    "transformedIdeaTitle": "Reloj de Arena: La Gravedad en Píxeles",
+    "transformedIdeaDescription": "Vas a desafiar la gravedad. Imagina que los puntos de luz son granos de arena sueltos. Tu reto es programarlos para que siempre 'caigan' hacia abajo, sin importar cómo gires la pantalla. Si pones la placa de cabeza, ¡la arena debe caer hacia el techo!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "FOR each pixel: move towards direction of max inclination IF destination is empty"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Horizonte Artificial de Avión",
+    "originalIdeaDescription": "Replica el instrumento de vuelo que muestra el cabeceo (pitch) del avión. A medida que el usuario inclina el dispositivo hacia adelante o hacia atrás, una línea horizontal en la matriz LED sube o baja, indicando si la nariz del 'avión' apunta al cielo o al suelo.",
+    "transformedIdeaTitle": "Piloto de Pruebas: Horizonte Artificial",
+    "transformedIdeaDescription": "¡Despegue inminente, capitán! Para volar seguro entre las nubes, necesitas saber si tu avión sube o baja. Crea un instrumento de vuelo donde una línea en la pantalla te diga la posición de tu nariz: si inclinas hacia atrás, la línea baja (subes); si inclinas adelante, la línea sube (bajas).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LineHeight = map(Inclination.Y, -45, 45, 0, 7); LEDMatrix.drawLine(0, LineHeight, 6, LineHeight)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Controlador de Paleta para Pong Unidimensional",
+    "originalIdeaDescription": "Un juego estilo Pong donde el jugador controla la posición vertical de una paleta (una línea de 2 píxeles) inclinando el dispositivo hacia la izquierda o derecha (eje X), intentando interceptar un píxel que rebota por la pantalla.",
+    "transformedIdeaTitle": "Tenis Galáctico: Raqueta por Movimiento",
+    "transformedIdeaDescription": "¡Vuelve a los 80s con este clásico! Programa una raqueta de luz que se mueva sola. No usarás botones; tu muñeca es el control. Si inclinas a la derecha, la raqueta va a la derecha. Debes ser rápido y preciso para golpear la pelota de luz que rebota. ¿Cuál será tu puntuación máxima?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PaddlePos = map(Inclination.X, -30, 30, 0, 5); LEDMatrix.drawLine(PaddlePos, 6, PaddlePos+2, 6)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Candado de Combinación Gestual",
+    "originalIdeaDescription": "Un sistema de seguridad que requiere una secuencia específica de inclinaciones para desbloquearse (ej. Izquierda, Izquierda, Derecha, Arriba). La matriz muestra un candado cerrado hasta que se completa la secuencia correcta, momento en el que muestra un candado abierto o un check verde.",
+    "transformedIdeaTitle": "Ladrón de Cajas Fuertes: El Código Secreto",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte digital. No tiene teclado, ¡funciona con movimientos! Programa el dispositivo para reconocer una clave secreta de gestos (ej: inclinar izquierda, luego derecha). Si alguien hace los movimientos correctos, la pantalla muestra un candado abierto. ¡Si fallan, una X roja!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Sequence == [LEFT, RIGHT, UP] THEN LEDMatrix.show(UNLOCK) ELSE LEDMatrix.show(LOCK)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Zen",
+    "originalIdeaDescription": "Un temporizador cuenta cuánto tiempo puede el usuario mantener el dispositivo perfectamente nivelado (dentro de un margen de error mínimo). Si la inclinación excede el umbral, el temporizador se reinicia y la matriz muestra una animación de 'caída' o fallo.",
+    "transformedIdeaTitle": "Desafío Zen: Mantén el Equilibrio Perfecto",
+    "transformedIdeaDescription": "¿Tienes pulso de cirujano? En este reto, tu objetivo es la quietud absoluta. Programa un contador que sume puntos mientras mantengas la placa totalmente plana. Al más mínimo temblor o inclinación, ¡la cuenta vuelve a cero! Compite con tus amigos para ver quién aguanta más tiempo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE abs(Inclination.X) < 5 AND abs(Inclination.Y) < 5 DO Score++; LEDMatrix.show(Score); ELSE Score=0"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Selector de Emociones Interactivo",
+    "originalIdeaDescription": "Una aplicación de comunicación no verbal. Al inclinar el dispositivo hacia adelante (asentir), la matriz muestra una cara feliz o un pulgar arriba. Al inclinarlo hacia atrás o a los lados (negar), muestra una cara triste o una cruz, permitiendo al usuario expresar respuestas simples.",
+    "transformedIdeaTitle": "Máscara Digital: Expresiones Faciales",
+    "transformedIdeaDescription": "A veces las máquinas necesitan tener sentimientos. Vas a crear una 'cara' digital que reacciona a cómo la tratas. Si inclinas la cabeza hacia abajo (como asintiendo), se pondrá feliz. Si la sacudes hacia los lados diciendo 'no', se pondrá triste. ¡Enséñale a tu robot a expresarse!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 20 THEN LEDMatrix.showIcon(HAPPY) ELSE IF Inclination.X > 20 THEN LEDMatrix.showIcon(SAD)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Control de Desplazamiento de Texto (Scroll)",
+    "originalIdeaDescription": "Un lector de mensajes donde la velocidad y dirección del texto que se desplaza en la matriz LED son controladas por la inclinación. Inclinar a la derecha avanza el texto; inclinar más aumenta la velocidad. Inclinar a la izquierda retrocede el texto.",
+    "transformedIdeaTitle": "Lector de Noticias: Control de Teleprompter",
+    "transformedIdeaDescription": "Imagina que eres un presentador de noticias. El texto en la pantalla se mueve muy rápido. Programa tu propio control de 'Teleprompter': inclina suavemente a la derecha para leer despacio, o mucho para avanzar rápido. Si te perdiste algo, inclina a la izquierda para rebobinar. ¡Tú controlas el tiempo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ScrollSpeed = Inclination.X * Constant; LEDMatrix.scrollText(Message, ScrollSpeed)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Pizarra de Dibujo Etch-a-Sketch",
+    "originalIdeaDescription": "Un cursor de dibujo deja una estela de píxeles encendidos permanentemente. El usuario mueve el cursor inclinando el dispositivo. Para borrar la pantalla, el usuario debe agitar el dispositivo vigorosamente (detectado por cambios rápidos en la inclinación).",
+    "transformedIdeaTitle": "Pizarra Mágica: Dibuja sin Tocar",
+    "transformedIdeaDescription": "Crea una obra de arte sin pinceles. Usando la inclinación, moverás un punto de luz que deja un rastro brillante, dibujando líneas por donde pasa. ¿Te equivocaste? ¡No hay problema! Programa la función de 'terremoto': agita fuerte la placa para borrar todo y empezar de nuevo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Cursor.Move(Inclination); LEDMatrix.setPixel(Cursor.X, Cursor.Y, ON); IF Shake THEN LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Alarma de Robo por Movimiento",
+    "originalIdeaDescription": "El dispositivo se 'arma' en una posición estacionaria. Si el sensor de inclinación detecta que el ángulo cambia más allá de un umbral (alguien lo levanta o mueve), la matriz LED parpadea patrones de alerta simulando una sirena policial.",
+    "transformedIdeaTitle": "Trampa para Espías: Detector de Intrusos",
+    "transformedIdeaDescription": "¿Quieres proteger tu diario o tus caramelos? Construye una alarma sensible al movimiento. Coloca el dispositivo sobre tu objeto valioso. Prográmalo para que, si alguien intenta levantarlo o moverlo (cambiando su inclinación), la pantalla empiece a destellar luces de emergencia para delatar al ladrón.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Initial = Inclination.Values; IF abs(Inclination.Current - Initial) > Threshold THEN LEDMatrix.flash(ALARM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Brújula Visual Simulada",
+    "originalIdeaDescription": "Aunque usa el sensor de inclinación (no magnético), simula una brújula visualizando hacia dónde se inclina el dispositivo. Dibuja una flecha en la matriz que siempre apunta hacia el punto más alto de la inclinación ('Norte' relativo), ayudando a entender vectores.",
+    "transformedIdeaTitle": "Explorador de Montañas: Brújula de Gravedad",
+    "transformedIdeaDescription": "En la montaña, el agua siempre corre hacia abajo. Usaremos esa lógica para crear una brújula especial. En lugar de apuntar al Norte, tu flecha siempre apuntará hacia 'Arriba' de la pendiente. Si inclinas la placa, la flecha debe girar para mostrarte cuál es el camino hacia la cima.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Angle = atan2(Inclination.Y, Inclination.X); LEDMatrix.drawArrow(Angle)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Simulador de Lluvia y Viento",
+    "originalIdeaDescription": "Una animación continua de píxeles cayendo desde la parte superior de la matriz (lluvia). La inclinación del eje X actúa como 'viento', haciendo que las gotas caigan en diagonal hacia la izquierda o derecha dependiendo de cuánto se incline el dispositivo.",
+    "transformedIdeaTitle": "Tormenta Digital: Controla el Viento",
+    "transformedIdeaDescription": "Eres el dios del clima en este universo de 7x7. Haz que llueva en tu pantalla. Pero el reto es el viento: si inclinas la placa a la derecha, programa las gotas para que caigan en diagonal impulsadas por el viento. ¡Crea una tormenta perfecta controlada por tus manos!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Drop.Y++; Drop.X = Drop.X + map(Inclination.X, -45, 45, -1, 1); LEDMatrix.draw(Drops)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Aterrizaje Lunar",
+    "originalIdeaDescription": "Un juego donde el usuario debe 'aterrizar' una nave (píxel inferior) manteniendo el dispositivo perfectamente plano. Si la inclinación es mayor a 5 grados al momento de tocar el 'suelo', se muestra una animación de explosión; si es plano, una bandera de éxito.",
+    "transformedIdeaTitle": "Aterrizaje Lunar: Misión Apolo",
+    "transformedIdeaDescription": "Houston, tenemos un problema. Debes aterrizar el módulo lunar, pero el terreno es peligroso. Tu misión es descender suavemente. Si tocas el suelo y tu nave (la placa) está inclinada, ¡te estrellarás y explotará! Mantén el nivel perfecto para plantar la bandera y ganar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Height == 0 AND abs(Inclination) < 5 THEN LEDMatrix.show(FLAG) ELSE IF Height == 0 THEN LEDMatrix.show(BOOM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mira de Francotirador / Puntería",
+    "originalIdeaDescription": "Aparece un objetivo parpadeante en una posición aleatoria. El usuario controla una mira (cruz de píxeles) inclinando el dispositivo. El objetivo es superponer la mira sobre el objetivo y mantenerla estable por un segundo para 'disparar' y ganar un punto.",
+    "transformedIdeaTitle": "Francotirador Galáctico: Apunta al Asteroide",
+    "transformedIdeaDescription": "Un asteroide parpadeante amenaza la Tierra. Tienes un láser controlado por movimiento. Inclina tu dispositivo para mover la mira sobre el asteroide. El reto: debes mantener la mira estable sobre el objetivo durante un segundo completo para que el láser se cargue y destruya la roca.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Crosshair.Pos = map(Inclination); IF Crosshair == Target THEN Timer++ ELSE Timer=0; IF Timer > 1s THEN Score++"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas / Ejercicio",
+    "originalIdeaDescription": "El dispositivo se sujeta a la pierna o pecho. El sensor de inclinación detecta el cambio de ángulo al hacer una sentadilla. La matriz LED actúa como contador, incrementando el número mostrado cada vez que se detecta un ciclo completo de inclinación (bajar y subir).",
+    "transformedIdeaTitle": "Entrenador Personal: Contador de Sentadillas",
+    "transformedIdeaDescription": "¡A ponerse en forma! No necesitas un reloj inteligente caro. Programarás tu propio contador de ejercicios. Sujeta la placa a tu pierna. Configura el código para que detecte cuando te agachas y te levantas. ¡La pantalla debe contar tus repeticiones automáticamente! ¿Podrás llegar a 10?",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X goes HIGH then LOW THEN Reps++; LEDMatrix.showNumber(Reps)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Visualizador de Intensidad Sísmica",
+    "originalIdeaDescription": "Actúa como un sismógrafo digital. La matriz muestra una barra gráfica cuya altura varía en tiempo real basándose en la magnitud de los cambios en el sensor de inclinación (vibración). Cuanto más se agita la mesa/suelo, más alta es la barra.",
+    "transformedIdeaTitle": "Detector de Terremotos: Alerta Sísmica",
+    "transformedIdeaDescription": "Los científicos necesitan tu ayuda para medir temblores. Convertirás tu placa en un sismógrafo. Si la mesa está quieta, la pantalla está vacía. Si golpeas la mesa, debe aparecer una barra de luz que sube según la fuerza del golpe. ¡Calibra tu sensor para detectar las vibraciones más sutiles!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "BarHeight = map(abs(Inclination.Change), 0, MaxShake, 0, 7); LEDMatrix.drawBar(BarHeight)"
+  }
+]

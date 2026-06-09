@@ -1,0 +1,8 @@
+google-genai
+pandas
+numpy
+scipy
+scikit-posthocs
+pingouin
+matplotlib
+seaborn

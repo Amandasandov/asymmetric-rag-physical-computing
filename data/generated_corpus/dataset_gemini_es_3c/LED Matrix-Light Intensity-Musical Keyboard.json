@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin de Luz",
+    "originalIdeaDescription": "Un instrumento musical experimental donde la intensidad de la luz ambiental controla qué nota se reproduce. Cuanta más luz incide sobre el sensor, más aguda es la nota. Simultáneamente, la matriz LED muestra una barra gráfica que sube y baja representando la altura de la nota.",
+    "transformedIdeaTitle": "El Piano de Fotones",
+    "transformedIdeaDescription": "¡Crea un instrumento invisible! Los estudiantes programarán un piano que se toca moviendo la mano sobre un sensor de luz. Deberán mapear el valor de la luz a notas específicas y visualizar el volumen en la pantalla, aprendiendo sobre variables y rangos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = map(LightIntensity.value, 0, 100, C4, C6); LEDMatrix.showBar(LightIntensity.value); MusicalKeyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Despertador de Amanecer Simulado",
+    "originalIdeaDescription": "Un sistema de alarma suave que detecta cuando sale el sol o se enciende la luz de la habitación. Al detectar un umbral de luz alto, reproduce una melodía suave y muestra un sol sonriente en la matriz LED para despertar al usuario.",
+    "transformedIdeaTitle": "El Gallo Digital",
+    "transformedIdeaDescription": "Diseña el despertador perfecto. El reto consiste en detectar cuándo es 'de día' (mucha luz) para activar automáticamente el canto del gallo (notas musicales) y mostrar un icono de sol. Si se apaga la luz, el sistema debe 'dormir' mostrando una luna.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value > 80 THEN { LEDMatrix.show('Sun'); MusicalKeyboard.playMelody('WakeUp'); } ELSE { LEDMatrix.show('Moon'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Monstruos de Oscuridad",
+    "originalIdeaDescription": "Un dispositivo de juguete que detecta lugares oscuros (debajo de la cama o armarios). Si la luz es muy baja, la matriz muestra ojos asustados y el teclado toca notas graves y misteriosas. Si hay luz, muestra una cara feliz.",
+    "transformedIdeaTitle": "Cazafantasmas de Armario",
+    "transformedIdeaDescription": "¿Hay fantasmas en la oscuridad? Los estudiantes crearán un dispositivo que reacciona al miedo (oscuridad). Si el sensor detecta falta de luz, debe sonar una alarma de 'peligro' y mostrar ojos vigilantes. Es un ejercicio excelente para lógica condicional inversa.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value < 20 THEN { MusicalKeyboard.play('LowC'); LEDMatrix.show('ScaryEyes'); } ELSE { LEDMatrix.clear(); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Caja de Seguridad Musical",
+    "originalIdeaDescription": "Un sistema de alarma para una caja de objetos de valor. El dispositivo se coloca dentro de una caja cerrada (oscuridad). Si la caja se abre y entra luz, se activa una sirena musical y una 'X' parpadeante en la matriz.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu tesoro. Programa el sistema para que permanezca en silencio mientras esté a oscuras (cofre cerrado). En el momento exacto en que un 'ladrón' abra el cofre (detecte luz), debe sonar la alarma y bloquear el sistema visualmente.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE LightIntensity.value > 10 { MusicalKeyboard.play('Alarm'); LEDMatrix.animate('FlashX'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Fotosintética",
+    "originalIdeaDescription": "Una simulación de una planta o criatura que necesita luz para vivir. Dependiendo del nivel de luz recibido, la matriz muestra diferentes emociones (triste, neutral, feliz) y emite sonidos correspondientes (quejido, silencio, canto alegre).",
+    "transformedIdeaTitle": "Cuida a tu Plantabot",
+    "transformedIdeaDescription": "¡Tu robot necesita luz para sobrevivir! Crea una lógica de tres estados: Poca luz = Cara triste + sonido grave; Luz media = Cara seria; Mucha luz = Cara feliz + melodía de victoria. Enseña condicionales anidados (If-Else If).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light < 30 THEN { Show('Sad'); Play('Low'); } ELSE IF Light < 70 { Show('Neutral'); } ELSE { Show('Happy'); Play('High'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Túnel de Lavado Automático",
+    "originalIdeaDescription": "Un modelo de estación de lavado. Cuando un objeto (coche de juguete) pasa sobre el sensor bloqueando la luz, la matriz muestra una animación de agua y burbujas, y el teclado reproduce sonidos rítmicos simulando maquinaria.",
+    "transformedIdeaTitle": "El Túnel Mágico",
+    "transformedIdeaDescription": "Simula un proceso industrial. Cuando el sensor de luz es tapado por un objeto (el coche entra al túnel), se activa la secuencia de lavado: animación de gotas en la pantalla y sonido de motor. Al destapar, el sistema se reinicia esperando el próximo coche.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity.value < Threshold THEN { LEDMatrix.animate('Bubbles'); MusicalKeyboard.playLoop('Machine'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Lumínico",
+    "originalIdeaDescription": "El sistema lee pulsos de luz (linterna encendida/apagada). Cada vez que la intensidad sube bruscamente, toca un 'Bip' y muestra un punto en la matriz, permitiendo al usuario enviar mensajes telegráficos usando una linterna.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Comunícate en secreto usando una linterna. Los estudiantes deben programar el sensor para detectar cambios rápidos de luz. Cada destello debe generar un sonido corto y dibujar un punto en la pantalla, simulando una máquina de telégrafo antigua.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF change(LightIntensity) > Delta THEN { MusicalKeyboard.playNote('Bip', 0.1s); LEDMatrix.addPixel(); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Guía de Exploración Submarina",
+    "originalIdeaDescription": "Juego de simulación donde menos luz significa mayor profundidad en el océano. A medida que baja la luz, el tono musical desciende (más grave) y la matriz muestra criaturas del fondo marino (calamares, peces abisales).",
+    "transformedIdeaTitle": "Misión: Fosa de las Marianas",
+    "transformedIdeaDescription": "Sumérgete en el océano. Usa el sensor de luz como medidor de profundidad. A plena luz (superficie), suena agudo y se ven barcos. Cubriendo el sensor (fondo), el sonido se vuelve grave y aparecen monstruos marinos. Ideal para mapeo de variables.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "depth = 100 - LightIntensity; MusicalKeyboard.setPitch(LightIntensity); LEDMatrix.showImage(getImageForDepth(depth))"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Sombra",
+    "originalIdeaDescription": "El usuario mueve su mano sobre el sensor rítmicamente. Cada vez que la sombra pasa, suena un golpe de tambor o nota de sintetizador y la matriz muestra una explosión gráfica, permitiendo 'tocar' música en el aire.",
+    "transformedIdeaTitle": "Batería Aérea Invisible",
+    "transformedIdeaDescription": "Conviértete en un percusionista del futuro. Programa el sistema para detectar caídas rápidas de luz (tu mano pasando). Cada vez que ocurra, debe sonar un 'Kick' o 'Snare' y visualizarse el golpe. El reto es la respuesta rápida del sensor.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF LightIntensity.dropDetected() THEN { MusicalKeyboard.playPercussion(); LEDMatrix.flash('Hit'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Radar de Murciélago (Ecolocalización)",
+    "originalIdeaDescription": "Un dispositivo de asistencia para navegar en la oscuridad. En ausencia de luz, emite 'bips' constantes como un sonar. Si detecta un destello (obstáculo o salida), cambia la melodía a éxito y muestra una flecha.",
+    "transformedIdeaTitle": "El Murciélago Ciego",
+    "transformedIdeaDescription": "Navega sin ver. El sistema debe emitir un sonido de 'ping' constante mientras esté oscuro. Si el estudiante apunta con una linterna (la 'salida'), el sistema debe celebrar con una fanfarria y una flecha indicadora.",
+    "minAge": 10,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE LightIntensity < 20 { MusicalKeyboard.play('Ping'); delay(500); } MusicalKeyboard.play('Fanfare'); LEDMatrix.show('Arrow');"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Candado de Combinación Lumínica",
+    "originalIdeaDescription": "Un juego de puzzle donde el usuario debe iluminar el sensor con una intensidad específica (ej. 50%) para desbloquearlo. La matriz muestra si estás 'frío' o 'caliente', y el teclado acelera el tempo a medida que te acercas al valor correcto.",
+    "transformedIdeaTitle": "Hacker de Luz",
+    "transformedIdeaDescription": "Desbloquea la bóveda encontrando la intensidad de luz exacta. La matriz te dirá 'Más' o 'Menos' (flechas). La música se acelerará cuando estés cerca del valor objetivo. Enseña comparaciones lógicas y retroalimentación en tiempo real.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "diff = abs(TargetLight - CurrentLight); MusicalKeyboard.setTempo(1/diff); LEDMatrix.showDirection(TargetLight, CurrentLight);"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Medidor de Contaminación Lumínica",
+    "originalIdeaDescription": "Herramienta científica ciudadana. Mide la luz ambiental nocturna. Si es demasiado alta (contaminación), muestra una cara triste y tonos disonantes. Si es baja (cielo oscuro), muestra estrellas y toca una canción de cuna.",
+    "transformedIdeaTitle": "Protector de Estrellas",
+    "transformedIdeaDescription": "¿Podemos ver las estrellas hoy? Crea un medidor que nos diga si hay demasiada luz artificial. Si el sensor lee oscuridad total, dibuja estrellas y toca música relajante. Si hay luz, alerta sobre la contaminación lumínica.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > DarkThreshold THEN { LEDMatrix.show('SadEarth'); MusicalKeyboard.play('Buzz'); } ELSE { LEDMatrix.show('Stars'); MusicalKeyboard.play('Lullaby'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Cronómetro de Reacción Flash",
+    "originalIdeaDescription": "Juego de reflejos. La matriz muestra una cuenta regresiva 3-2-1. Luego, en un momento aleatorio, la matriz se ilumina totalmente. El usuario debe tapar el sensor de luz lo más rápido posible. El tiempo de reacción determina la puntuación musical final.",
+    "transformedIdeaTitle": "Reflejos Relámpago",
+    "transformedIdeaDescription": "Pon a prueba tu velocidad. Espera a que la matriz diga 'YA'. En ese instante, cubre el sensor con tu mano. El programa calculará cuánto tardaste y tocará una canción de victoria (rápido) o de derrota (lento).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Wait(Random); StartTime = Now; WHILE Light > 10 { Wait }; Score = Now - StartTime; ShowScore(Score); PlayResult(Score);"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Mágica",
+    "originalIdeaDescription": "Usando una linterna como batuta. Mover la luz cerca o lejos del sensor cambia el tempo de una canción pregrabada. La matriz muestra un metrónomo visual que oscila al ritmo de la luz detectada.",
+    "transformedIdeaTitle": "El Maestro de la Luz",
+    "transformedIdeaDescription": "Dirige la orquesta con tu linterna. Si acercas la luz (más intensidad), la canción debe sonar muy rápido. Si la alejas, debe ir lento. La matriz debe mostrar el compás moviéndose de izquierda a derecha.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = map(LightIntensity, 0, 100, Slow, Fast); MusicalKeyboard.setTempo(Speed); LEDMatrix.animateMetronome(Speed);"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Detector de Mentiras (Lúdico)",
+    "originalIdeaDescription": "Un juguete de broma. El usuario pone el dedo sobre el sensor. El sistema lee pequeñas fluctuaciones de luz (simuladas o reales por pulso). Si la luz es estable, muestra 'Verdad' y tono angelical. Si fluctúa, muestra 'Mentira' y sonido de error.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Descubre si tus amigos dicen la verdad. Programa el sensor para analizar la estabilidad de la luz durante 5 segundos. Usa un algoritmo aleatorio o basado en temblores para decidir si suena la alarma de 'Mentiroso' y sale una cruz en pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Analyze(LightIntensity, 5s); IF Variance > Limit THEN { Show('X'); Play('Fail'); } ELSE { Show('Check'); Play('Ding'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Sistema de Ahorro de Energía Inteligente",
+    "originalIdeaDescription": "Simulación domótica. Si detecta luz ambiental alta (luz solar), avisa para apagar las luces artificiales con un icono de bombilla tachada y un sonido de notificación. Si oscurece, invita a encenderlas.",
+    "transformedIdeaTitle": "Eco-Guardián del Hogar",
+    "transformedIdeaDescription": "Ayuda a salvar el planeta. Crea un dispositivo que nos recuerde apagar las luces si ya hay suficiente sol. Si el sensor detecta mucha luz natural, la matriz debe parpadear un aviso y sonar un recordatorio amable.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF LightIntensity > 90 THEN { LEDMatrix.scroll('Apaga la luz'); MusicalKeyboard.play('Reminder'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Camaleón Musical",
+    "originalIdeaDescription": "El dispositivo intenta 'camuflarse' con el entorno. Si hay mucha luz, la matriz se pone brillante y toca notas agudas y rápidas. Si hay poca luz, atenúa los LEDs de la matriz y toca notas graves y lentas para pasar desapercibido.",
+    "transformedIdeaTitle": "El Camaleón Cibernético",
+    "transformedIdeaDescription": "Programa un robot que imita su entorno. El brillo de la matriz LED y el tono de la música deben ajustarse automáticamente al nivel de luz de la sala. Mucha luz = Matriz brillante + Notas altas. Poca luz = Matriz tenue + Notas graves.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LEDMatrix.setBrightness(LightIntensity); Note = map(LightIntensity, 0, 100, Low, High); MusicalKeyboard.play(Note);"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Afinador de Ambiente",
+    "originalIdeaDescription": "Captura la 'vibración' de la habitación. Luz estroboscópica o cambiante genera ritmos caóticos y formas abstractas. Luz constante genera acordes armónicos y formas geométricas estables.",
+    "transformedIdeaTitle": "Escáner de Atmósfera",
+    "transformedIdeaDescription": "¿Está la habitación tranquila o caótica? Muestrea la luz varias veces por segundo. Si los valores cambian mucho, genera música rock y ruido visual. Si los valores son estables, genera música clásica y un cuadrado perfecto.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "stability = calculateStability(LightInput); IF stability < low THEN play('Rock') ELSE play('Classical');"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Juego de Escondite Ninja",
+    "originalIdeaDescription": "El jugador debe moverse de un punto A a B sosteniendo el dispositivo. Si el sensor detecta cualquier luz (ser descubierto), suena una alarma y pierdes una vida en la matriz. El objetivo es mantenerse en las sombras absolutas.",
+    "transformedIdeaTitle": "Entrenamiento Ninja",
+    "transformedIdeaDescription": "Múevete por las sombras sin ser visto. Tienes 3 vidas (corazones en la matriz). Si pasas por una zona iluminada, el sensor lo detecta, suena un 'Gong' y pierdes un corazón. ¡Llega a la meta con al menos una vida!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF LightIntensity > SafeLimit THEN { Lives = Lives - 1; LEDMatrix.showLives(Lives); MusicalKeyboard.play('Gong'); }"
+  },
+  {
+    "componentUsed": [
+      "Light Intensity",
+      "Musical Keyboard",
+      "LED Matrix"
+    ],
+    "originalIdeaTitle": "Traductor de Amanecer a Música",
+    "originalIdeaDescription": "Un dispositivo timelapse en tiempo real. Se coloca en la ventana. A medida que la luz aumenta muy lentamente, el dispositivo va añadiendo notas a un arpegio, construyendo una canción compleja que solo se completa al mediodía.",
+    "transformedIdeaTitle": "Compositor Solar",
+    "transformedIdeaDescription": "Deja que el sol componga música. Divide el nivel de luz en 8 etapas. A medida que el día se hace más brillante, tu programa debe desbloquear y añadir nuevas notas a una melodía en bucle, completando la canción cuando la luz sea máxima.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Stage = map(Light, 0, 100, 1, 8); PlayLoop(ActiveNotes[1..Stage]); LEDMatrix.showProgress(Stage);"
+  }
+]

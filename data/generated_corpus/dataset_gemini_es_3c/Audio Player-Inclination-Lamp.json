@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de despegue de cohete espacial",
+    "originalIdeaDescription": "Un dispositivo que simula el lanzamiento de un cohete. Al inclinar el dispositivo hacia arriba verticalmente, el sonido del motor aumenta y la luz cambia de amarillo a rojo intenso.",
+    "transformedIdeaTitle": "Comandante de la Nave Estelar",
+    "transformedIdeaDescription": "¡Prepárate para el despegue! Programa tu tablet para que sea el panel de control de una nave. Si la inclinas hacia arriba (eje Y positivo), activa los propulsores (sonido de ruido blanco) y enciende los postquemadores (luz roja). Si está horizontal, mantén los motores en espera (luz verde).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y > 45 THEN Lamp.setColor('red') AND Audio.play('thruster') ELSE Lamp.setColor('green') AND Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Nivel de burbuja con retroalimentación sonora",
+    "originalIdeaDescription": "Herramienta digital para medir la horizontalidad. Si el dispositivo está perfectamente plano, se enciende una luz verde y suena un timbre agradable. Si está inclinado, luz roja y sonido de error.",
+    "transformedIdeaTitle": "El Desafío del Equilibrio Perfecto",
+    "transformedIdeaDescription": "Ayuda al constructor a encontrar el equilibrio perfecto. Crea una herramienta que detecte si una superficie está plana. Si la inclinación es casi cero, celebra con luz verde y un sonido de 'ding'. ¡Cuidado con inclinarlo demasiado o sonará la alarma!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X > -5 AND Inclination.X < 5 THEN Lamp.setColor('green') AND Audio.play('success') ELSE Lamp.setColor('red') AND Audio.play('buzz')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Varita mágica de efectos especiales",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. Al hacer un movimiento brusco de inclinación (agitar), se reproduce un sonido mágico y la lámpara destella con colores aleatorios.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Digital",
+    "transformedIdeaDescription": "Conviértete en un aprendiz de mago. Programa tu 'varita' para lanzar un hechizo. Cuando detectes un cambio rápido en la inclinación (agitar), debes reproducir un sonido brillante y hacer parpadear una luz mística.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF abs(Inclination.change) > threshold THEN Lamp.flash('purple') AND Audio.play('magic_spell')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Volante de coche de carreras interactivo",
+    "originalIdeaDescription": "Simula un volante. Al inclinar a la izquierda, luz intermitente izquierda y sonido de derrape. Al inclinar a la derecha, luz intermitente derecha y sonido de aceleración.",
+    "transformedIdeaTitle": "Gran Premio de Programación",
+    "transformedIdeaDescription": "¡Estás en la carrera final! Crea un volante interactivo. Si giras a la izquierda, enciende la luz de ese lado y reproduce un chirrido de neumáticos. Si vas recto, mantén la luz blanca estable y el motor rugiendo suavemente.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -30 THEN Lamp.setColor('orange') AND Audio.play('skid') ELSE IF Inclination.X > 30 THEN Lamp.setColor('blue') AND Audio.play('skid') ELSE Lamp.setColor('white')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Caja de música para dormir bebés",
+    "originalIdeaDescription": "Un monitor de sueño que detecta si el dispositivo se deja quieto y plano. Tras 10 segundos de inactividad plana, reproduce una canción de cuna y atenúa la luz.",
+    "transformedIdeaTitle": "Guardián de los Sueños",
+    "transformedIdeaDescription": "Diseña un asistente para la hora de dormir. El dispositivo debe detectar cuando todo está tranquilo (inclinación plana y constante). Entonces, suavemente encenderá una luz tenue y tocará una melodía relajante para ayudar a dormir.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.isStable(10s) AND Inclination.isFlat() THEN Lamp.setBrightness(20) AND Audio.play('lullaby')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de alarma antirrobo portátil",
+    "originalIdeaDescription": "Dispositivo de seguridad que se coloca sobre un objeto. Si se detecta cualquier cambio en la inclinación (alguien lo levanta), suena una sirena fuerte y la luz parpadea en rojo.",
+    "transformedIdeaTitle": "Protector del Tesoro Secreto",
+    "transformedIdeaDescription": "¡Protege tus galletas! Coloca el sensor sobre tu caja fuerte. Si alguien intenta levantarla o inclinarla, tu programa debe activar inmediatamente la 'Alerta de Intruso' con luces rojas parpadeantes y una sirena ruidosa.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.magnitude > initial_inclination + 10 THEN Lamp.strobe('red') AND Audio.play('siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Instrumento musical tipo Theremin",
+    "originalIdeaDescription": "Instrumento experimental donde el tono del sonido cambia según el ángulo de inclinación del eje X, y el color de la luz cambia según el eje Y.",
+    "transformedIdeaTitle": "Compositor de Música en el Aire",
+    "transformedIdeaDescription": "Crea un instrumento musical futurista que se toca moviéndolo en el aire. Mapea la inclinación hacia adelante para cambiar las notas musicales y la inclinación lateral para cambiar el color de la luz ambiental.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Audio.setPitch(map(Inclination.X, -90, 90, 200, 800)); Lamp.setHue(map(Inclination.Y, -90, 90, 0, 255))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Narrador de historias interactivo",
+    "originalIdeaDescription": "Un libro digital que cambia la ambientación. Inclinar a la izquierda reproduce sonidos de bosque y luz verde; inclinar a la derecha reproduce sonidos de océano y luz azul.",
+    "transformedIdeaTitle": "El Libro de Aventuras Mágicas",
+    "transformedIdeaDescription": "Eres el narrador. Crea una historia donde el lector elige el camino inclinando el dispositivo. ¿Izquierda para el Bosque Encantado (luz verde + pájaros)? ¿O derecha para la Cueva del Dragón (luz roja + fuego)?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X < -45 THEN Lamp.setColor('green') AND Audio.play('forest') ELSE IF Inclination.X > 45 THEN Lamp.setColor('red') AND Audio.play('fire')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Entrenador de sentadillas fitness",
+    "originalIdeaDescription": "Dispositivo para ejercicio. Se sujeta al pecho; al bajar (cambio de inclinación del torso), cambia la luz. Al subir y completar la repetición, reproduce un sonido de conteo.",
+    "transformedIdeaTitle": "Entrenador Personal Robótico",
+    "transformedIdeaDescription": "¡Hora de ponerse en forma! Programa un sensor para contar sentadillas. Cuando el usuario se inclina hacia adelante y vuelve a la posición vertical, marca una repetición válida con un destello de luz y una voz que diga '¡Uno más!'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Y changes from <30 to >80 THEN count++ AND Lamp.flash('white') AND Audio.play('count_sound')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de espada láser",
+    "originalIdeaDescription": "Juguete que simula una espada de energía. Luz encendida constante, pero al detectar movimientos rápidos (cambios de inclinación), reproduce el sonido 'woosh' y la luz vibra.",
+    "transformedIdeaTitle": "Defensor de la Galaxia",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. La hoja (luz) debe estar siempre encendida. Pero cuando blandas la espada (cambio rápido de inclinación), debe sonar el característico zumbido de batalla y la luz debe parpadear.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Lamp.on('blue'); IF speed(Inclination) > fast THEN Audio.play('saber_swing') AND Lamp.flicker()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de desactivación de bomba",
+    "originalIdeaDescription": "Un juego de pulso. El jugador debe mantener el dispositivo perfectamente horizontal mientras una cuenta atrás sonora avanza. Si se inclina, explota (sonido y luz roja).",
+    "transformedIdeaTitle": "Operación: Pulso de Acero",
+    "transformedIdeaDescription": "Eres un experto en desactivación. Tienes 30 segundos. Debes sostener el dispositivo sin que se mueva ni un milímetro. Si la inclinación varía más de 5 grados... ¡BOOM! sonido de explosión y luz roja.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE timer > 0: IF abs(Inclination.X) > 5 THEN Audio.play('explosion') AND Lamp.setColor('red') AND Break"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de lluvia y sol simulado",
+    "originalIdeaDescription": "Juguete educativo sobre el clima. Inclinar hacia abajo simula lluvia (luz azul + sonido lluvia). Inclinar hacia arriba simula sol (luz amarilla + pájaros).",
+    "transformedIdeaTitle": "El Creador de Clima",
+    "transformedIdeaDescription": "Controla el tiempo atmosférico con tus manos. Inclina el dispositivo hacia abajo para invocar una tormenta (luz azul y truenos) o levántalo hacia el cielo para traer un día soleado (luz amarilla y canto de pájaros).",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -30 THEN Lamp.setColor('blue') AND Audio.play('rain') ELSE IF Inclination.Y > 30 THEN Lamp.setColor('yellow') AND Audio.play('birds')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de sonido tipo DJ",
+    "originalIdeaDescription": "Controlador para mezclar pistas. Inclinar a la izquierda baja el volumen y atenúa la luz. Inclinar a la derecha sube el volumen y aumenta el brillo.",
+    "transformedIdeaTitle": "DJ de la Fiesta Luminosa",
+    "transformedIdeaDescription": "¡Anima la fiesta! Crea un control de volumen gestual. Al inclinar tu mesa de mezclas a la derecha, la música debe sonar fuerte y las luces brillar al máximo. A la izquierda, todo se vuelve suave y tenue.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.setVolume(map(Inclination.X, -90, 90, 0, 100)); Lamp.setBrightness(map(Inclination.X, -90, 90, 0, 100))"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mascota virtual que reacciona al movimiento",
+    "originalIdeaDescription": "Simulación de mascota. Si se mece suavemente (inclinación lenta), ronronea y luz cálida. Si se agita fuerte, se queja y luz roja.",
+    "transformedIdeaTitle": "Cuida a tu Robo-Mascota",
+    "transformedIdeaDescription": "Tu mascota digital necesita cariño. Si la meces suavemente de lado a lado, ronroneará de felicidad con una luz naranja. Pero ten cuidado, si la agitas demasiado fuerte, se mareará (luz verde) y se quejará.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF wobble is gentle THEN Audio.play('purr') AND Lamp.setColor('orange') ELSE IF wobble is hard THEN Audio.play('complaint') AND Lamp.setColor('green')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de laberinto a ciegas",
+    "originalIdeaDescription": "Juego auditivo. El usuario inclina el dispositivo para guiar una bola virtual. Si golpea una pared (cierto ángulo), suena un golpe y la luz parpadea.",
+    "transformedIdeaTitle": "Laberinto en la Oscuridad",
+    "transformedIdeaDescription": "Navega un laberinto invisible usando solo tu oído. Inclina el dispositivo para moverte. Si te inclinas demasiado en una dirección prohibida, el sistema te avisará con un sonido de choque y un flash rojo para que corrijas el rumbo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.X > wall_boundary THEN Audio.play('hit_wall') AND Lamp.flash('red')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Ruleta de la suerte con luz y sonido",
+    "originalIdeaDescription": "Juego de azar. Se gira el dispositivo sobre una mesa. Mientras gira (cambio de orientación) suena un 'trrr'. Al detenerse, un color aleatorio y sonido de premio.",
+    "transformedIdeaTitle": "La Ruleta de la Fortuna",
+    "transformedIdeaDescription": "¡Prueba tu suerte! Haz girar el dispositivo sobre la mesa. Mientras los valores de la brújula/inclinación cambien rápido, haz sonar una carraca. Cuando se detenga, elige un color y sonido al azar para ver qué premio ganaste.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Inclination.isChanging() DO Audio.play('clicking'); ON STOP DO Lamp.setRandomColor() AND Audio.play('tada')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Medidor de emociones",
+    "originalIdeaDescription": "Dispositivo expresivo. Inclinación hacia abajo (cabeza baja) = Tristeza (azul, llanto). Inclinación hacia arriba (cabeza alta) = Alegría (amarillo, risa).",
+    "transformedIdeaTitle": "El Robot Emocional",
+    "transformedIdeaDescription": "Enseña a tu robot a expresar sentimientos. Si inclinas su 'cabeza' hacia abajo, se pondrá triste (azul y sollozos). Si mira hacia arriba, estará feliz y radiante (amarillo y risas).",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Y < -45 THEN Lamp.setColor('blue') AND Audio.play('cry') ELSE IF Inclination.Y > 45 THEN Lamp.setColor('yellow') AND Audio.play('laugh')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de fantasmas",
+    "originalIdeaDescription": "Juguete de exploración. Al caminar e inclinar el dispositivo en ciertas direcciones 'raras', la luz parpadea y suena estática, simulando encontrar un fantasma.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Explora tu habitación en busca de actividad paranormal. Programa el sensor para que, al detectar una inclinación específica combinada con silencio, comience a parpadear y a emitir ruido blanco, ¡señal de que hay un fantasma cerca!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X == target_angle AND Inclination.Y == target_angle THEN Lamp.flicker('white') AND Audio.play('static')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Gong de meditación",
+    "originalIdeaDescription": "Ayuda para mindfulness. Solo cuando el dispositivo se mueve muy, muy lentamente (inclinación casi nula) se ilumina suavemente y suena un gong profundo.",
+    "transformedIdeaTitle": "Maestro Zen",
+    "transformedIdeaDescription": "El desafío de la paciencia. Debes mover el dispositivo de una posición vertical a horizontal tan lentamente que el sensor apenas lo note. Si lo logras, serás recompensado con una luz relajante y un sonido de gong.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF rate_of_change(Inclination) < very_slow_threshold THEN Lamp.fadeOn('cyan') AND Audio.play('gong')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Inclination",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Coctelera musical",
+    "originalIdeaDescription": "Simulador de instrumento de percusión. Al agitar el dispositivo (cambios rápidos de inclinación en cualquier eje), suena una maraca y la luz cambia al ritmo.",
+    "transformedIdeaTitle": "Maracas Digitales",
+    "transformedIdeaDescription": "¡Únete a la banda! Convierte tu dispositivo en unas maracas. Cada vez que agites el dispositivo vigorosamente, debe sonar el 'chiki-chiki' y la luz debe cambiar de color con cada golpe del ritmo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF accelerometer_shake_detected THEN Audio.play('shaker') AND Lamp.nextColor()"
+  }
+]

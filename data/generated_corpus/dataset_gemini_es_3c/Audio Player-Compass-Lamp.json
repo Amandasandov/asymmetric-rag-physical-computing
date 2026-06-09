@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Brújula Musical de Géneros",
+    "originalIdeaDescription": "Un dispositivo que cambia el género musical y el color de la luz ambiental según el punto cardinal al que apunte el usuario, creando diferentes atmósferas sonoras y visuales al girar.",
+    "transformedIdeaTitle": "DJ de los Cuatro Vientos",
+    "transformedIdeaDescription": "Conviértete en un DJ que mezcla música usando la orientación de la Tierra. Programa el sistema para que al apuntar al Norte suene música clásica con luz azul, al Sur rock con luz roja, al Este pop con luz amarilla y al Oeste jazz con luz violeta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading < 45 OR heading > 315 THEN (Audio.play('Classic'), Lamp.color('Blue')) ELSE IF heading >= 45 AND heading < 135 THEN (Audio.play('Pop'), Lamp.color('Yellow')) ..."
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Detector de Tesoros Ocultos",
+    "originalIdeaDescription": "El usuario debe girar hasta encontrar una dirección 'secreta'. A medida que se acerca, la luz se vuelve más brillante y un sonido de 'bip' se acelera hasta encontrar el objetivo.",
+    "transformedIdeaTitle": "Cazadores del Tesoro Pirata",
+    "transformedIdeaDescription": "¡Hay un tesoro enterrado en una dirección específica! Programa tu brújula para que detecte el cofre. Si apuntas a la dirección correcta (ej. 120 grados), la lámpara debe brillar en dorado y sonar una fanfarria de victoria.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading == 120 THEN (Lamp.color('Gold'), Audio.play('Victory')) ELSE (Lamp.off(), Audio.stop())"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Faro de Navegación",
+    "originalIdeaDescription": "Simula un faro que solo se enciende y emite un sonido de bocina de niebla cuando apunta hacia el 'mar' (una dirección específica), permaneciendo oscuro y silencioso hacia la 'tierra'.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Ayuda a los barcos a no chocar. Debes programar el faro para que, cuando apunte hacia el Este (el mar), emita una luz blanca brillante y un sonido de advertencia. Si apunta al Oeste (la ciudad), debe apagarse para no molestar a los vecinos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 80 AND heading < 100 THEN (Lamp.on(), Audio.play('Foghorn')) ELSE (Lamp.off())"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Simulador de Estaciones del Año",
+    "originalIdeaDescription": "Dependiendo de la orientación, el dispositivo simula una estación. Norte es invierno (frío/viento), Sur es verano (calor/cigarra), etc., cambiando luz y audio.",
+    "transformedIdeaTitle": "La Máquina del Tiempo Climática",
+    "transformedIdeaDescription": "Crea un dispositivo que cambie el clima al girar. Al apuntar al Norte, la luz es blanca y suena viento de invierno; al Sur, luz naranja y sonido de playa. ¡Programa las cuatro estaciones según los puntos cardinales!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is North THEN (Lamp.color('White'), Audio.play('Wind')) ELSE IF heading is South THEN (Lamp.color('Orange'), Audio.play('Beach'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Radar de Fantasmas",
+    "originalIdeaDescription": "Un juego donde un 'fantasma' se asigna a una dirección aleatoria. El usuario debe escanear la habitación. Al encontrarlo, la luz parpadea en rojo y suena un grito.",
+    "transformedIdeaTitle": "Cazafantasmas: Misión Espectral",
+    "transformedIdeaDescription": "Un fantasma invisible se esconde en la habitación. Crea un algoritmo que compare tu dirección con la ubicación del fantasma. Si lo encuentras, activa la alarma roja y el sonido de captura.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = random(0, 360); IF abs(heading - target) < 10 THEN (Lamp.flash('Red'), Audio.play('GhostSound'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Guía de Meditación Zen",
+    "originalIdeaDescription": "Dispositivo para yoga que ayuda a saludar al sol. Al mirar al Este, reproduce sonidos suaves y luz amanecer. Al mirar al Oeste, sonidos de anochecer.",
+    "transformedIdeaTitle": "Maestro Zen del Amanecer",
+    "transformedIdeaDescription": "Diseña un asistente de relajación. Tu misión es programar el dispositivo para que reconozca cuando saludas al Sol naciente (Este). Debe recompensarte con una luz rosa suave y música de meditación.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading > 80 AND heading < 100 THEN (Lamp.color('Pink'), Audio.play('Meditation')) ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Caja Fuerte Direccional",
+    "originalIdeaDescription": "Para desbloquear el sistema, el usuario debe girar el dispositivo a una secuencia de grados específicos, recibiendo feedback auditivo y visual en cada paso correcto.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda digital. La combinación es: Norte, luego Este. Programa la lógica para que la luz se ponga verde y haga 'clic' solo si sigues la secuencia correcta de direcciones.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF heading == 0 THEN step1 = true; IF step1 AND heading == 90 THEN (Lamp.color('Green'), Audio.play('Unlock'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Safari de Animales Virtual",
+    "originalIdeaDescription": "Asigna diferentes animales a zonas de la brújula. Al apuntar a esa zona, se escucha el animal y la luz toma el color de su hábitat.",
+    "transformedIdeaTitle": "Explorador de la Selva",
+    "transformedIdeaDescription": "Convierte tu habitación en una selva. Programa el sistema para que al apuntar al Norte rujan los leones (luz amarilla), y al apuntar al Oeste canten los pájaros (luz verde).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 315 OR heading < 45 THEN (Audio.play('Lion'), Lamp.color('Yellow')) ELSE IF heading > 225 AND heading < 315 THEN (Audio.play('Birds'), Lamp.color('Green'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo",
+    "originalIdeaDescription": "Simula una torre de control. El usuario debe mantener una dirección específica (la pista). Si se desvía, suena una alarma y la luz roja parpadea.",
+    "transformedIdeaTitle": "Piloto en la Tormenta",
+    "transformedIdeaDescription": "Tu avión debe aterrizar en la pista 0 (Norte) en medio de la niebla. Programa los instrumentos para que muestren luz verde si vas recto (0 grados), pero luz roja parpadeante y alarma si te desvías del rumbo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading > 350 OR heading < 10 THEN Lamp.color('Green') ELSE (Lamp.flash('Red'), Audio.play('Alarm'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Ruleta Rusa de Baile",
+    "originalIdeaDescription": "El usuario gira rápidamente. Cuando se detiene, la brújula lee la dirección y asigna un paso de baile con una canción y color aleatorio asociado a ese cuadrante.",
+    "transformedIdeaTitle": "La Ruleta del Baile",
+    "transformedIdeaDescription": "¡Gira y baila! Crea un juego donde el jugador gira sobre sí mismo. Al detenerse, si mira al Norte debe sonar Salsa, y si mira al Sur, Hip-Hop. La luz debe indicar el estilo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading is North THEN (Audio.play('Salsa'), Lamp.color('Red')) ELSE IF heading is South THEN (Audio.play('HipHop'), Lamp.color('Blue'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Detector de Mentiras Direccional",
+    "originalIdeaDescription": "Un juego de rol donde una dirección es 'Verdad' y otra 'Mentira'. La luz y el sonido indican el veredicto basándose en hacia dónde apunta el interrogador.",
+    "transformedIdeaTitle": "El Juez de la Verdad",
+    "transformedIdeaDescription": "Construye una máquina de la verdad. Si apuntas la máquina hacia la derecha (Este), debe indicar 'Verdad' (luz verde, sonido suave). Si apuntas a la izquierda (Oeste), indica 'Mentira' (luz roja, sonido error).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 80 AND heading < 100 THEN (Lamp.color('Green'), Audio.play('Ding')) ELSE IF heading > 260 AND heading < 280 THEN (Lamp.color('Red'), Audio.play('Buzz'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Sonar de Submarino",
+    "originalIdeaDescription": "Emula un sonar que hace 'ping' a diferentes intervalos y cambia la intensidad de la luz azul dependiendo de si el usuario está alineado con el 'objetivo'.",
+    "transformedIdeaTitle": "Capitán de Submarino",
+    "transformedIdeaDescription": "Navegas en aguas profundas. Programa tu sonar para que haga un sonido de 'Ping' lento y luz azul tenue normalmente, pero que haga 'Ping' rápido y luz brillante cuando detectes el Norte magnético.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "distance = abs(heading - 0); IF distance < 20 THEN (Audio.setRate('Fast'), Lamp.brightness(100)) ELSE (Audio.setRate('Slow'), Lamp.brightness(50))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Narrador de Historias Espacial",
+    "originalIdeaDescription": "Cuenta una historia interactiva donde el usuario debe girar hacia diferentes planetas (direcciones) para escuchar el siguiente capítulo y ver el color del planeta.",
+    "transformedIdeaTitle": "Viaje por el Sistema Solar",
+    "transformedIdeaDescription": "Crea un audiolibro interactivo. Para escuchar la historia de Marte, el usuario debe apuntar al Este (luz Roja). Para escuchar sobre Neptuno, debe apuntar al Oeste (luz Azul). ¡Programa las condiciones!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == 90 THEN (Lamp.color('Red'), Audio.play('MarsStory')) ELSE IF heading == 270 THEN (Lamp.color('Blue'), Audio.play('NeptuneStory'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Varita Mágica Elemental",
+    "originalIdeaDescription": "Dependiendo de la dirección cardinal, la 'varita' selecciona un elemento (Fuego, Agua, Tierra, Aire), cambiando el color de la luz y el efecto de sonido al 'lanzar' el hechizo.",
+    "transformedIdeaTitle": "Escuela de Magia: Varita Elemental",
+    "transformedIdeaDescription": "Programa tu varita mágica. Si apuntas al Norte (Tierra), la luz debe ser verde y sonar rocas. Al Sur (Fuego), luz roja y sonido de llamas. ¡Define los 4 elementos!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading < 45 THEN Element='Earth'; Lamp.color('Green'); Audio.play('Rumble')"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Afinador de Colores y Notas",
+    "originalIdeaDescription": "Asocia los 360 grados a una rueda de colores y a una escala musical cromática. Al girar, el usuario 'toca' el instrumento de luz y sonido.",
+    "transformedIdeaTitle": "El Violín de Arco Iris",
+    "transformedIdeaDescription": "Crea un instrumento que se toca girando. Divide la brújula en 7 secciones. Programa cada sección para que toque una nota (Do, Re, Mi...) y muestre un color del arcoíris diferente.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Note = map(heading, 0, 360, C, B); Color = map(heading, 0, 360, 0, 255); Audio.play(Note); Lamp.setColor(Color)"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Guía para Invidentes (Simulación)",
+    "originalIdeaDescription": "Herramienta de accesibilidad que usa audio y luz para guiar a una persona hacia un rumbo fijo, intensificando las señales si se desvía del camino.",
+    "transformedIdeaTitle": "Tecnología Asistiva: El Lazarillo Digital",
+    "transformedIdeaDescription": "Diseña un prototipo para ayudar a personas con discapacidad visual. El dispositivo debe emitir un sonido constante y seguro cuando la persona camina hacia el Norte, pero un sonido de alerta si se desvía.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading > 340 OR heading < 20 THEN Audio.play('Walk') ELSE Audio.play('Stop')"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Radio Extraterrestre",
+    "originalIdeaDescription": "El usuario busca una señal clara entre ruido estático. Solo en una coordenada muy específica el audio se aclara y la luz verde se enciende.",
+    "transformedIdeaTitle": "Contacto Alienígena",
+    "transformedIdeaDescription": "Estás sintonizando mensajes del espacio. Programa el sistema para que reproduzca 'ruido estático' en casi todas las direcciones, pero si apuntas exactamente a 45 grados, reproduzca el 'mensaje secreto' y encienda una luz verde.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF heading == 45 THEN (Audio.play('Message'), Lamp.color('Green')) ELSE (Audio.play('Static'), Lamp.color('Red'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Entrenador de Equilibrio",
+    "originalIdeaDescription": "El usuario debe sostener el dispositivo y girar el cuerpo suavemente. Si gira muy rápido (cambio brusco de brújula), suena un error y luz roja. Si es suave, música relajante.",
+    "transformedIdeaTitle": "Maestro del Tai Chi",
+    "transformedIdeaDescription": "El Tai Chi requiere movimientos lentos. Usa la brújula para detectar cambios de dirección. Si el cambio es suave, pon música relajante y luz azul. Si el cambio es brusco, corta la música.",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF deltaHeading < 5 THEN (Audio.play('Relax'), Lamp.color('Blue')) ELSE (Audio.stop(), Lamp.color('Red'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Reloj de Sol Auditivo",
+    "originalIdeaDescription": "Dependiendo de dónde estaría el sol (simulado por la brújula), el dispositivo anuncia la 'hora' aproximada y cambia la temperatura de color de la luz.",
+    "transformedIdeaTitle": "El Reloj Astronómico",
+    "transformedIdeaDescription": "Antes no había relojes digitales. Simula el paso del día. Si apuntas al Este, di 'Mañana' con luz clara. Si apuntas arriba (Norte en este mapa), di 'Mediodía'. Si apuntas al Oeste, di 'Tarde' con luz naranja.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF heading == 90 THEN Audio.say('Morning'); IF heading == 270 THEN (Audio.say('Evening'), Lamp.color('Orange'))"
+  },
+  {
+    "componentUsed": ["Compass", "Audio Player", "Lamp"],
+    "originalIdeaTitle": "Escáner de Seguridad",
+    "originalIdeaDescription": "Simula un arco detector de metales manual. Al pasar por una zona 'prohibida' (dirección específica), se activa la alarma y luz policial.",
+    "transformedIdeaTitle": "Agente Secreto de Seguridad",
+    "transformedIdeaDescription": "Protege la entrada de la base. Configura el escáner para que al apuntar hacia la puerta (Sur), active una luz roja parpadeante y una sirena si detecta una intrusión (simulada).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF heading > 160 AND heading < 200 THEN (Lamp.flash('Red'), Audio.play('Siren'))"
+  }
+]

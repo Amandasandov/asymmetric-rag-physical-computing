@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Brújula Sonora de Navegación",
+    "originalIdeaDescription": "Un dispositivo de orientación que ayuda al usuario a encontrar el Norte magnético. Cuando el usuario apunta el dispositivo hacia el Norte, la lámpara se enciende en verde y suena un golpe de tambor constante. Si se desvía, la luz se vuelve roja y el tambor se detiene.",
+    "transformedIdeaTitle": "El Explorador de la Selva Perdida",
+    "transformedIdeaDescription": "¡Estás perdido en una selva densa y necesitas encontrar el camino al templo antiguo! Programa tu dispositivo para que actúe como una brújula mágica. Cuando apuntes hacia el Norte (la salida), tu linterna brillará en verde esperanza y escucharás el tambor de la tribu lejana guiándote a casa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Lamp.setColor(Green) AND Drum.play(Snare) ELSE Lamp.setColor(Red)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Generador de Ritmos 360 Grados",
+    "originalIdeaDescription": "Una herramienta musical donde cada punto cardinal (Norte, Sur, Este, Oeste) activa un sonido de percusión diferente y un color distinto en la lámpara. El usuario gira sobre su propio eje para crear una secuencia rítmica basada en su orientación física.",
+    "transformedIdeaTitle": "DJ Giratorio 360",
+    "transformedIdeaDescription": "Conviértete en el DJ más dinámico del mundo. En lugar de presionar botones, ¡tienes que girar tu cuerpo! Si miras al Norte, suena el bombo y luz azul; al Sur, la caja y luz roja. ¡Gira rápido para mezclar los ritmos y crear una fiesta de luces y sonido!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Lamp.setColor(Blue) AND Drum.play(Kick); IF Compass.heading == 'South' THEN Lamp.setColor(Red) AND Drum.play(Snare)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Metales Simulado",
+    "originalIdeaDescription": "Un juego de búsqueda donde un 'objeto' está escondido en una coordenada angular específica. A medida que el usuario gira y se acerca al ángulo correcto, la luz se vuelve más brillante y el tambor toca un ritmo más rápido, simulando un detector de metales.",
+    "transformedIdeaTitle": "Cazador de Tesoros Piratas",
+    "transformedIdeaDescription": "El mapa del tesoro indica que el oro está enterrado en una dirección específica. Gira lentamente con tu detector. Cuanto más te acerques a la dirección correcta, más brillante será la luz dorada y más rápido sonarán los tambores de guerra pirata. ¡Encuentra el punto exacto!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "distance = ABS(TargetAngle - Compass.heading); Lamp.setBrightness(100 - distance); Drum.setTempo(High if distance < 10)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Direccional",
+    "originalIdeaDescription": "Un sistema de seguridad simulado donde el usuario debe girar el dispositivo a una secuencia de ángulos específicos para desbloquearlo. Cada vez que se alcanza el ángulo correcto, la lámpara parpadea y suena un 'clic' de percusión.",
+    "transformedIdeaTitle": "El Ladrón de Bancos Maestro",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda de alta seguridad. La combinación no son números, ¡son direcciones! Gira la perilla (tu dispositivo) hasta encontrar el punto donde la luz parpadea y escuches el 'clic' del tambor. ¡Haz la secuencia correcta para abrirla!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == secretAngle THEN Lamp.blink(Yellow) AND Drum.play(HiHat); IF sequenceComplete THEN Lamp.setColor(Green)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Radar de Tormenta",
+    "originalIdeaDescription": "Una aplicación ambiental que simula el clima. Dependiendo de hacia dónde apunte el usuario, el clima cambia. Hacia el Oeste hay 'tormenta' (luz estroboscópica y tambores fuertes), hacia el Este hay 'calma' (luz cálida y silencio).",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar los elementos. Apunta hacia el Oeste para invocar una tormenta eléctrica: la lámpara parpadeará como rayos y los tambores sonarán como truenos. Apunta al Este para traer el amanecer con luz suave. ¡Crea una historia climática!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.headingRange(250, 290) THEN Lamp.strobe(White) AND Drum.play(TomTom) ELSE Lamp.setColor(Orange)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Entrenador de Equilibrio y Giro",
+    "originalIdeaDescription": "Una herramienta para ejercicios físicos. El usuario debe sostener una pose de yoga o ejercicio mientras mira a una dirección específica. Si mantiene la dirección, la luz es constante y suena un ritmo suave. Si tiembla o gira, la luz cambia y el ritmo se rompe.",
+    "transformedIdeaTitle": "Maestro Kung Fu Zen",
+    "transformedIdeaDescription": "Para dominar el arte del equilibrio, debes quedarte quieto como una estatua mirando al Norte. Mientras lo logres, tu aura (luz) será blanca y el tambor marcará tu respiración. Si pierdes el equilibrio y giras, ¡la luz se pondrá roja y el gong sonará!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Compass.heading == 'North' +/- 5 deg DO Lamp.on(White) AND Drum.loop(SoftBeat) ELSE Lamp.on(Red) AND Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "La Ruleta Rusa de Colores",
+    "originalIdeaDescription": "Un juego de azar para grupos. Los jugadores se sientan en círculo. El dispositivo se gira en el centro. Cuando se detiene, la brújula detecta la dirección, ilumina al jugador señalado con un color y toca un sonido de tambor indicando un reto.",
+    "transformedIdeaTitle": "La Botella Giratoria Musical",
+    "transformedIdeaDescription": "¡Juego de fiesta! Siéntense en círculo y giren el dispositivo. Cuando pare, apuntará a alguien, lo iluminará con un color aleatorio y tocará un redoble de tambor. Si toca luz roja y platillo, ¡tienes que cumplir un desafío! Si es verde, te salvas.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON rotationStop: target = Compass.heading; Lamp.setColor(Random); Drum.play(Roll); WAIT 2s THEN Drum.play(Cymbal)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Juguete de realidad aumentada auditiva. El usuario escanea la habitación girando. En una dirección aleatoria generada por el código, el dispositivo detecta una 'presencia', cambiando la luz a púrpura y reproduciendo sonidos de tambor misteriosos.",
+    "transformedIdeaTitle": "Cazafantasmas: El Espectro Invisible",
+    "transformedIdeaDescription": "Hay un fantasma escondido en tu habitación, pero es invisible. Usa tu escáner espectral. Gira lentamente... si la luz se vuelve violeta y escuchas golpes misteriosos en el tambor, ¡has encontrado al fantasma! ¡No dejes que se mueva de esa dirección!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ghostDir = Random(0, 360); IF Compass.heading == ghostDir THEN Lamp.setColor(Purple) AND Drum.play(LowTom)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Guía para Caminar a Ciegas",
+    "originalIdeaDescription": "Sistema de asistencia sensorial. Una persona con los ojos vendados es guiada por el dispositivo. Si camina en la dirección correcta, suena un ritmo agradable y luz tenue. Si se desvía, suena un tambor fuerte y luz intermitente de advertencia.",
+    "transformedIdeaTitle": "El Sendero de la Confianza",
+    "transformedIdeaDescription": "Trabajo en equipo: Un amigo se venda los ojos y tú programas el dispositivo. El dispositivo debe guiarlo en línea recta. Si se desvía del camino, el tambor sonará como una alarma y la luz parpadeará para avisar a los demás que ayuden. ¿Podrán cruzar la habitación?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "targetDir = setOnStart(); IF ABS(Compass.heading - targetDir) > 20 THEN Drum.play(AlarmBeat) AND Lamp.blink(Red)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores y Ritmos",
+    "originalIdeaDescription": "Herramienta creativa donde la dirección de la brújula selecciona un color del espectro RGB (0-360 grados mapeados a tono de color) y la percusión cambia de instrumento según el cuadrante (NO, NE, SO, SE).",
+    "transformedIdeaTitle": "Pintor de Sonidos",
+    "transformedIdeaDescription": "Imagina que estás dentro de un arcoíris circular. Gira hacia la izquierda para pintar tu habitación de azul con ritmos de jazz, o hacia la derecha para pintar de rojo con ritmos de rock. ¡Explora los 360 grados para encontrar tu combinación perfecta de luz y ritmo!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.setHue(Compass.heading); IF Compass.heading < 90 THEN Drum.setKit(Rock) ELSE Drum.setKit(Jazz)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Simulador de Faro Marítimo",
+    "originalIdeaDescription": "El dispositivo actúa como un faro. La luz debe girar (encenderse solo en un rango estrecho que se mueve) y sonar un tambor grave (como una bocina de niebla) cada vez que la luz 'pasa' por el Norte.",
+    "transformedIdeaTitle": "El Guardián del Faro",
+    "transformedIdeaDescription": "Es una noche de niebla y los barcos necesitan tu ayuda. Programa tu dispositivo para que actúe como un faro giratorio. Debes girar constantemente; cuando tu luz apunte al mar (Norte), hazla brillar intensamente y toca el gran tambor para avisar a los barcos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN Lamp.setBrightness(100) AND Drum.play(BassDrum) ELSE Lamp.setBrightness(10)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Reloj Solar Auditivo",
+    "originalIdeaDescription": "Representación del paso del tiempo basado en la posición. El Este representa la mañana (luz suave, ritmo lento), el Sur el mediodía (luz fuerte, ritmo rápido) y el Oeste la tarde (luz naranja, ritmo relajado).",
+    "transformedIdeaTitle": "Viajero del Tiempo Solar",
+    "transformedIdeaDescription": "Viaja a través de un día entero en segundos. Gira hacia el Este para ver el amanecer con un ritmo suave. Gira al Sur para el brillante mediodía con tambores rápidos. Gira al Oeste para el atardecer naranja. ¡Controla el paso del tiempo con tu movimiento!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == East THEN Lamp.color(Yellow) AND Drum.tempo(60); IF Compass.heading == South THEN Lamp.color(White) AND Drum.tempo(120)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Direccional",
+    "originalIdeaDescription": "Juego tipo 'Simón Dice'. El sistema ilumina un color y toca un sonido asociado a una dirección (ej. Rojo=Norte). El usuario debe girar el dispositivo hacia esa dirección para confirmar la secuencia.",
+    "transformedIdeaTitle": "Simón Brújula",
+    "transformedIdeaDescription": "El dispositivo te dará una orden: '¡Luz Roja y Tambor Grave!'. Tú sabes que el Rojo está al Norte. ¡Gira rápido hacia allá! Si aciertas, la secuencia se hace más larga. ¿Cuántas direcciones puedes recordar antes de equivocarte?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Display Sequence; Wait for Input; IF Compass.heading == Sequence[i] THEN Score++ ELSE GameOver"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Posición",
+    "originalIdeaDescription": "Un dispositivo de seguridad para objetos. Se coloca sobre un objeto fijo. Si la brújula detecta un cambio en la orientación (alguien lo mueve o gira), activa luces rojas parpadeantes y un redoble de tambor continuo.",
+    "transformedIdeaTitle": "Trampa para Intrusos",
+    "transformedIdeaDescription": "Protege tu diario secreto o tu consola. Coloca el dispositivo encima y actívalo. Si alguien intenta moverlo o girarlo aunque sea un poco, ¡la alarma de luces rojas y tambores ensordecedores se disparará, atrapando al intruso en el acto!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "startAngle = Compass.heading; LOOP: IF ABS(Compass.heading - startAngle) > 5 THEN Lamp.strobe(Red) AND Drum.loop(SnareRoll)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Batería Aérea Virtual",
+    "originalIdeaDescription": "Simulación de instrumento. El usuario sostiene el dispositivo como una baqueta. Al hacer un gesto de golpe hacia el Norte suena un platillo, hacia el Sur un bombo, etc. La lámpara se ilumina con cada 'golpe'.",
+    "transformedIdeaTitle": "Baterista del Aire",
+    "transformedIdeaDescription": "¡No necesitas una batería gigante! Usa tu dispositivo como una baqueta mágica. Golpea el aire hacia el frente para el bombo, y hacia la derecha para el platillo. La luz brillará con cada golpe. ¡Forma una banda con tus amigos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake AND Compass.heading == North THEN Drum.play(Cymbal) AND Lamp.flash(Yellow)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Buscador de Estaciones de Radio",
+    "originalIdeaDescription": "Simula un sintonizador de radio antigua. Al girar el dispositivo (brújula), se escucha estática (tambor rápido y bajo) hasta llegar a un ángulo específico donde la 'señal' es clara (ritmo limpio y luz verde).",
+    "transformedIdeaTitle": "Sintonizador de Señales Espaciales",
+    "transformedIdeaDescription": "Estamos recibiendo mensajes de alienígenas, pero hay mucha interferencia. Gira tu antena lentamente. Escucharás ruido estático (tambores desordenados), pero cuando encuentres la dirección exacta del planeta alienígena, ¡escucharás un ritmo claro y la luz se pondrá verde!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == target THEN Drum.play(CleanBeat) AND Lamp.on(Green) ELSE Drum.play(RandomNoise)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Semáforo de Baile",
+    "originalIdeaDescription": "Juego interactivo. El dispositivo indica una dirección (Norte/Sur). Si el usuario mira hacia allí, la luz se pone verde y suena música para bailar. Si cambia de dirección, la música para (luz roja).",
+    "transformedIdeaTitle": "Estatua Musical Direccional",
+    "transformedIdeaDescription": "¡Baila solo cuando mires al Norte! Mientras apuntes al Norte, la luz verde brilla y el ritmo suena para que te muevas. Si te cansas y giras, la música se detiene y la luz roja se enciende. ¡Mantén el ritmo sin perder el Norte!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == North THEN Lamp.color(Green) AND Drum.loop(Disco) ELSE Lamp.color(Red) AND Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Compás de Meditación",
+    "originalIdeaDescription": "Herramienta de relajación. Requiere que el usuario realice giros extremadamente lentos y controlados. Si la velocidad de cambio de ángulo es baja, luz azul y tambor suave. Si es rápida, luz roja.",
+    "transformedIdeaTitle": "Maestro del Tai Chi",
+    "transformedIdeaDescription": "El Tai Chi requiere movimientos lentos y perfectos. Gira tu cuerpo en cámara lenta. Si lo haces bien, una luz azul relajante y un tambor suave te acompañarán. Si te mueves muy rápido, la luz roja te avisará que debes calmarte.",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "delta = Compass.heading - lastHeading; IF delta < 2 THEN Lamp.color(Blue) AND Drum.play(Soft) ELSE Lamp.color(Red)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Rastreador de Animales Salvajes",
+    "originalIdeaDescription": "Juego educativo. Se asignan animales a direcciones. Al apuntar al Norte (León), la luz es naranja y suena un tambor fuerte. Al Sur (Pájaro), luz azul y tambor agudo.",
+    "transformedIdeaTitle": "Safari Fotográfico",
+    "transformedIdeaDescription": "¡Estás en un safari! Apunta tu cámara (dispositivo) en diferentes direcciones para encontrar animales. Al Norte hay leones (luz naranja, tambores graves), al Sur hay monos (luz amarilla, tambores rápidos). ¡Descubre todos los animales a tu alrededor!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.headingRange(North) THEN Lamp.color(Orange) AND Drum.play(LowTom); IF Compass.headingRange(South) THEN Lamp.color(Yellow) AND Drum.play(Bongo)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Lamp",
+      "Musical Drum"
+    ],
+    "originalIdeaTitle": "Navegante de Laberinto Invisible",
+    "originalIdeaDescription": "El usuario debe navegar un laberinto virtual que no puede ver. El dispositivo indica 'paredes' vibrando (tambor rápido) y luz roja si se intenta ir en una dirección bloqueada, y luz verde si el camino está libre.",
+    "transformedIdeaTitle": "Escape del Laberinto Ciego",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto invisible. Gira para encontrar una salida. Si apuntas a una pared, la luz será roja y el tambor sonará rápido ('¡bloqueado!'). Gira hasta encontrar la luz verde y el camino silencioso, ¡luego camina hacia adelante!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "currentCell = map[x][y]; IF Compass.heading points to Wall THEN Lamp.color(Red) AND Drum.play(FastTap) ELSE Lamp.color(Green)"
+  }]

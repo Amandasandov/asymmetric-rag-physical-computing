@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Kit de Batería Direccional con Activación Táctil",
+    "originalIdeaDescription": "Esta idea consiste en crear un instrumento musical virtual donde el tipo de tambor que suena depende de la dirección cardinal hacia la que apunta el dispositivo. El usuario debe sostener el dispositivo y girar su cuerpo hacia el Norte, Sur, Este u Oeste para seleccionar diferentes instrumentos de percusión, como cajas, bombos o platillos. El sonido no se reproduce automáticamente al girar, sino que requiere que el usuario presione el Botón Táctil para ejecutar el golpe, permitiendo crear ritmos complejos moviéndose.",
+    "transformedIdeaTitle": "El Baterista de los Cuatro Vientos",
+    "transformedIdeaDescription": "Conviértete en un músico que toca con el poder del viento. En esta actividad, programarás tu dispositivo para que sea una batería mágica. Si apuntas al Norte y tocas el botón, sonarás como un trueno (Bombo); si apuntas al Este, sonarás como la lluvia (Platillos). ¡Tendrás que girar rápidamente y tocar el botón en el momento justo para mantener el ritmo de la canción!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF TouchButton.isPressed() THEN { IF Compass.heading == 'N' THEN Drum.play('Kick') ELSE IF Compass.heading == 'E' THEN Drum.play('Snare') }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación por Sonar para Invidentes",
+    "originalIdeaDescription": "Desarrollar una herramienta de asistencia que ayude a una persona a encontrar una dirección específica sin mirar la pantalla. El usuario configura una dirección objetivo (por ejemplo, el Norte). Cuando el usuario presiona y mantiene el Botón Táctil, el sistema emite pulsos de tambor. La velocidad o el tipo de sonido del tambor cambia según qué tan cerca esté el usuario de apuntar a la dirección correcta, funcionando como un juego de 'frío o caliente' auditivo para la orientación espacial.",
+    "transformedIdeaTitle": "Radar de Submarino Ciego",
+    "transformedIdeaDescription": "Imagina que eres el capitán de un submarino en aguas oscuras y necesitas encontrar el camino a casa (el Norte). Programarás el sonar de tu nave: al mantener presionado el botón, escucharás un tambor. Si el tambor suena lento, estás perdido; si el tambor suena muy rápido, ¡vas en la dirección correcta! Usa tu oído para navegar sin ver.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE TouchButton.isPressed() { dist = Abs(Target - Compass.heading); speed = Map(dist, 0, 180, 100, 1000); Drum.play('Tom', speed); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación de Brújula y Ritmo",
+    "originalIdeaDescription": "Un mecanismo de seguridad lúdico donde la 'llave' es una secuencia específica de orientaciones y pulsaciones. El usuario debe apuntar el dispositivo hacia una secuencia predefinida de direcciones cardinales (por ejemplo: Norte, luego Oeste, luego Norte otra vez) y confirmar cada posición presionando el Botón Táctil. Si la secuencia es correcta y el ritmo de pulsación es adecuado, la Batería Musical reproduce una fanfarria de victoria; si es incorrecta, suena un tono de error grave.",
+    "transformedIdeaTitle": "El Ladrón de la Bóveda Secreta",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte antigua que no usa llaves, sino direcciones. Debes programar el candado digital: Gira al Norte y toca el botón, luego al Oeste y toca otra vez. Si aciertas la combinación secreta de direcciones, los tambores celebrarán tu éxito; si fallas, ¡sonará la alarma de seguridad!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF TouchButton.pressed() AND Compass.heading() == SecretSequence[step] THEN step++ ELSE IF TouchButton.pressed() THEN Play('Alarm')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Simón Dice con Orientación Cardinal",
+    "originalIdeaDescription": "Una variación física del clásico juego de memoria 'Simón Dice'. El sistema dicta una dirección y un sonido (ej. 'Norte - Bombo'). El usuario debe girar físicamente hacia esa dirección y tocar el Botón Táctil para confirmar. A medida que avanza el juego, las secuencias se vuelven más largas y rápidas. La Batería Musical se utiliza tanto para dar las instrucciones auditivas como para confirmar que el usuario ha realizado la acción correcta en el momento justo.",
+    "transformedIdeaTitle": "Simón el Explorador Rítmico",
+    "transformedIdeaDescription": "¡Simón te desafía a moverte! El juego te dirá una dirección mediante un sonido. Debes girar tu cuerpo hacia el Norte, Sur, Este u Oeste y presionar el botón rápidamente. Programaremos el juego para que verifique si tu brújula apunta al lugar correcto cuando tocas el botón. ¿Cuántas direcciones puedes acertar seguidas antes de equivocarte?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Random(N,S,E,W); IF TouchButton.pressed() AND Compass.isFacing(Target) THEN Score++ AND Play('WinSound') ELSE Play('Fail')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Secuenciador de Ritmos Espacial de 360 Grados",
+    "originalIdeaDescription": "Esta aplicación convierte el espacio físico alrededor del usuario en un secuenciador de bucles musicales circular. El usuario puede 'colocar' un golpe de tambor en una ubicación específica del aire girando hacia allí y presionando el Botón Táctil. Luego, al girar el dispositivo 360 grados continuamente, el sistema reproduce los sonidos colocados cuando la brújula pasa por esas coordenadas específicas, permitiendo al usuario 'escanear' y reproducir su creación musical invisible.",
+    "transformedIdeaTitle": "DJ Espacial de 360 Grados",
+    "transformedIdeaDescription": "Convierte tu habitación en un disco de vinilo gigante. Gira hacia un punto, toca el botón y 'deja' un sonido de tambor flotando en el aire. Haz esto en varios puntos. Luego, gira sobre ti mismo como un tornado: cada vez que pases por donde dejaste un sonido, ¡tu dispositivo lo tocará! Crea ritmos invisibles usando solo el espacio y tu movimiento.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Button.pressed() THEN BeatsArray[Compass.degree] = True; FOREVER: IF BeatsArray[Compass.degree] THEN Drum.play('Hit')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Metrónomo Interactivo Controlado por Rotación",
+    "originalIdeaDescription": "Un metrónomo inteligente diseñado para músicos que necesitan ajustar el tempo sin mirar una pantalla. El usuario activa el metrónomo con el Botón Táctil. Mientras el sonido de la Batería Musical marca el tiempo (clic, clic, clic), el usuario puede girar el dispositivo como si fuera una perilla de volumen gigante. Apuntar al Norte establece un tempo lento (Largo), mientras que girar hacia el Este o Sur acelera el ritmo (Allegro o Presto).",
+    "transformedIdeaTitle": "El Maestro del Tiempo",
+    "transformedIdeaDescription": "¿Puedes controlar qué tan rápido pasa el tiempo? En esta actividad, crearás un metrónomo que cambia de velocidad con tu movimiento. Toca el botón para iniciar el 'tic-tac'. Si giras a la derecha, el ritmo se acelerará como un corazón corriendo; si giras a la izquierda, se volverá lento como una tortuga. ¡Úsalo para dirigir a tus amigos en una canción!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.Toggle() THEN { BPM = Map(Compass.heading, 0, 360, 60, 200); Drum.playBeat(BPM); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Detector de Estabilidad para Estatuas Musicales",
+    "originalIdeaDescription": "Una versión tecnológica del juego de las estatuas. El sistema reproduce un ritmo de batería constante mientras el usuario mantiene presionado el Botón Táctil y se mueve libremente. Cuando el usuario suelta el botón, la música se detiene y el usuario debe congelarse. La Brújula monitorea si hay algún cambio en la dirección (giro involuntario) mientras el botón está suelto. Si detecta movimiento rotacional, la batería toca un sonido de 'perdedor'.",
+    "transformedIdeaTitle": "Estatua de Piedra Digital",
+    "transformedIdeaDescription": "¡Juguemos a las estatuas! Mientras mantienes el botón presionado, suena un ritmo funky y puedes bailar. En el momento que sueltes el botón, debes congelarte completamente. Tu dispositivo usará la brújula para detectar si giras aunque sea un poquito. ¡Si te mueves cuando deberías ser de piedra, el tambor te delatará!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF !Button.pressed() AND Change(Compass.heading) > Tolerance THEN Drum.play('FailSound') ELSE IF Button.pressed() THEN Drum.playLoop()"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Efectos de DJ por Orientación",
+    "originalIdeaDescription": "Un dispositivo de actuación para DJs donde el Botón Táctil activa un redoble de batería (drum roll), y la orientación de la Brújula altera el tono o el filtro de ese sonido en tiempo real. Por ejemplo, apuntar al Norte mantiene el sonido original, pero girar hacia el Oeste aplica un efecto de distorsión o cambia el kit de batería, permitiendo transiciones dinámicas y expresivas durante una presentación en vivo.",
+    "transformedIdeaTitle": "El DJ Tornado",
+    "transformedIdeaDescription": "Vas a crear un efecto de sonido increíble para tu próxima fiesta. Cuando toques el botón, sonará un redoble de tambores infinito. Pero aquí viene la magia: al girar tu cuerpo hacia diferentes lados, cambiarás el estilo del tambor. ¡Norte para rock, Sur para electrónica! Mezcla los estilos girando mientras mantienes el ritmo.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Button.pressed() { SoundType = Map(Compass.heading, 0, 360, 1, 5); Drum.playRoll(SoundType); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Búsqueda del Tesoro con Pistas de Audio Direccionales",
+    "originalIdeaDescription": "Un juego de búsqueda del tesoro donde el 'mapa' es auditivo. Se programa una ubicación objetivo (un ángulo de la brújula). El usuario presiona el Botón Táctil para 'escanear'. Si el usuario está mirando lejos del objetivo, la Batería suena débil y lenta. A medida que el usuario gira y se alinea con la dirección correcta del tesoro, el ritmo de la batería se vuelve más fuerte, rápido y complejo, indicando el camino a seguir.",
+    "transformedIdeaTitle": "Cazadores de Tesoros Invisibles",
+    "transformedIdeaDescription": "Hay un tesoro escondido en una dirección secreta, pero no puedes verlo. Solo puedes oírlo. Toca el botón para escuchar el 'latido' del tesoro. Gira despacio: si el latido del tambor se vuelve fuerte y rápido, ¡estás mirando directo al oro! Si se apaga, estás mirando al lugar equivocado. ¡Encuentra la dirección correcta!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = 180 - Abs(TargetHeading - Compass.heading); Drum.playBeat(Volume: Intensity, Speed: Intensity)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Generador de Polirritmos por Cuadrantes",
+    "originalIdeaDescription": "Esta herramienta divide el espacio alrededor del usuario en cuatro cuadrantes (NE, SE, SO, NO). Cada cuadrante tiene asignado un patrón rítmico diferente (ej. 4/4, 3/4, 6/8). El usuario presiona el Botón Táctil para activar la reproducción. Al girar y cambiar de cuadrante, el ritmo cambia fluidamente, permitiendo al usuario experimentar y aprender sobre estructuras rítmicas complejas simplemente cambiando su orientación física.",
+    "transformedIdeaTitle": "El Laboratorio de Ritmos Matemáticos",
+    "transformedIdeaDescription": "Divide tu habitación en cuatro zonas de música. Al apuntar a una esquina y tocar el botón, sonará un ritmo de marcha militar. Apunta a otra esquina, y cambiará a un vals de tres tiempos. ¡Experimenta girando para mezclar ritmos y descubre cómo las matemáticas crean diferentes tipos de música!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Quadrant = Compass.heading / 90; IF Button.pressed() THEN Switch(Quadrant) { Case 0: Play(Rock); Case 1: Play(Waltz)... }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Desviación de Rumbo para Senderistas",
+    "originalIdeaDescription": "Un dispositivo de seguridad pasiva para caminatas. El usuario apunta hacia su destino y presiona el Botón Táctil para 'fijar' el rumbo. A partir de ese momento, el dispositivo permanece en silencio siempre que el usuario camine en esa dirección. Si el usuario se desvía más de 15 grados del rumbo fijado, la Batería Musical comienza a tocar un ritmo de advertencia que se acelera cuanto más se desvía.",
+    "transformedIdeaTitle": "El Guardián del Sendero",
+    "transformedIdeaDescription": "Imagina que eres un explorador cruzando un desierto sin referencias. Apunta a tu destino y presiona el botón para fijar tu rumbo. Ahora camina (o gira). Si te mantienes en el camino, el dispositivo estará en silencio. Pero si te desvías del camino recto, ¡los tambores empezarán a sonar como alarma para avisarte que corrijas tu dirección!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ON Button: Target = Compass.heading; LOOP: IF Abs(Compass.heading - Target) > 15 THEN Drum.play('AlarmBeat')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Telégrafo de Tambores Direccional",
+    "originalIdeaDescription": "Un sistema de comunicación simulado basado en códigos de percusión. El usuario puede enviar mensajes a diferentes 'estaciones' imaginarias. Al apuntar al Norte y usar el Botón Táctil, el tambor suena agudo (para la estación Norte). Al apuntar al Sur, suena grave. El usuario puede crear patrones complejos tipo Morse, donde la tonalidad del tambor (controlada por la brújula) añade una capa extra de información al mensaje rítmico.",
+    "transformedIdeaTitle": "Código Morse de la Selva",
+    "transformedIdeaDescription": "Antes de los teléfonos, la gente usaba tambores para enviar mensajes. Vas a crear tu propio telégrafo. Si apuntas a la aldea del Norte, tu botón enviará sonidos agudos. Si apuntas a la aldea del Sur, enviará sonidos graves. ¡Inventa un código secreto con tus amigos para enviar mensajes dependiendo de a dónde mires!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Tone = Map(Compass.heading, 0, 360, LowPitch, HighPitch); IF Button.tap() THEN Drum.play(Tone)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Simulador de Giroscopio con Retroalimentación Sonora",
+    "originalIdeaDescription": "Una actividad física para medir la velocidad de rotación del usuario. El usuario sostiene el dispositivo y comienza a girar sobre sí mismo. El usuario debe mantener presionado el Botón Táctil para activar la medición. La Brújula calcula el cambio de ángulo por segundo. La Batería Musical reproduce un redoble que aumenta en intensidad y frecuencia cuanto más rápido gira el usuario, simulando el sonido de un motor acelerando o un objeto girando a alta velocidad.",
+    "transformedIdeaTitle": "El Torbellino Humano",
+    "transformedIdeaDescription": "¿Qué tan rápido puedes girar sin marearte? Mantén presionado el botón y empieza a dar vueltas. Usaremos la brújula para medir tu velocidad de giro. Programaremos el tambor para que suene como un motor: lento cuando empiezas, y un redoble frenético cuando giras a máxima velocidad. ¡Ten cuidado de no caerte!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Speed = (Compass.current - Compass.previous) / Time; IF Button.pressed() THEN Drum.playRoll(Speed)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Disparo al Blanco Auditivo (Skeet Shooting)",
+    "originalIdeaDescription": "Un juego de reflejos donde 'platillos' virtuales son lanzados en direcciones aleatorias. El sistema grita una dirección (o reproduce un sonido que se mueve en estéreo si fuera posible, aquí usaremos indicaciones). El usuario debe girar rápidamente hacia esa dirección (verificada por la Brújula) y presionar el Botón Táctil para 'disparar'. Si la dirección y el tiempo son correctos, la Batería suena un platillo 'Crash' de éxito; si no, suena un 'thud' de fallo.",
+    "transformedIdeaTitle": "Tiro al Plato Virtual",
+    "transformedIdeaDescription": "¡Pon a prueba tus reflejos! El juego gritará una dirección: '¡NORTE!'. Tienes que girar tu cuerpo rápidamente hacia allá y disparar pulsando el botón. Si eres rápido y apuntas bien, escucharás un platillo explosivo '¡CRASH!'. Si eres lento o apuntas mal, escucharás un sonido de fallo. ¿Quién tiene la mejor puntería?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = RandomDir(); Wait(2s); IF Button.pressed() AND Compass.face(Target) THEN Drum.play('Crash') ELSE Drum.play('Thud')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Colaborativa Multijugador",
+    "originalIdeaDescription": "Diseñada para un grupo de estudiantes, cada uno con un dispositivo. Cada estudiante se le asigna una dirección (Norte, Sur, Este, Oeste) y un instrumento (Bombo, Caja, Hi-hat, Tom). Todos presionan sus Botones Táctiles al mismo tiempo para seguir un metrónomo central. Sin embargo, su instrumento solo suena si su dispositivo está apuntando a su dirección asignada, obligando al grupo a coordinarse espacialmente para formar el ritmo completo de la banda.",
+    "transformedIdeaTitle": "La Banda de los Puntos Cardinales",
+    "transformedIdeaDescription": "Forma una banda con tus amigos. Tú serás el 'Norte' (Bombo) y tu amigo el 'Sur' (Caja). Toquen el botón al mismo tiempo siguiendo un ritmo. Pero cuidado: tu instrumento solo sonará si estás apuntando exactamente a tu dirección asignada. ¡Si te giras, la música se rompe! Trabajen en equipo para mantener el ritmo sonando.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AssignedDir = 'N'; IF Button.tap() AND Compass.face(AssignedDir) THEN Drum.play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Explorador de Ecos de Caverna",
+    "originalIdeaDescription": "Una simulación de ecolocalización. El usuario 'emite' un sonido presionando el Botón Táctil. Dependiendo de la dirección de la Brújula, el sistema simula diferentes entornos de una cueva virtual. Hacia el Norte puede haber una pared cercana (eco rápido y seco de tambor), hacia el Este un abismo (eco largo y profundo). El usuario explora el mapa virtual invisible 'golpeando' las paredes con sonido.",
+    "transformedIdeaTitle": "El Murciélago en la Cueva Oscura",
+    "transformedIdeaDescription": "Los murciélagos ven con el sonido. Tú harás lo mismo. Toca el botón para lanzar un chillido (golpe de tambor). Dependiendo de a dónde mires, el eco cambiará. Si miras al Norte, el eco rebotará rápido; si miras al Sur, resonará como en un túnel largo. ¡Dibuja un mapa de la cueva invisible en tu mente usando solo los ecos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Delay = Map(VirtualCaveMap[Compass.heading], 0, 100, 10ms, 1000ms); Play(Sound); Wait(Delay); Play(Echo)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo Musical",
+    "originalIdeaDescription": "Un juego de rol donde el usuario es un controlador en una torre. 'Aviones' (representados por diferentes patrones de batería) se aproximan desde direcciones aleatorias. El usuario debe identificar la dirección del sonido (o una indicación visual si hubiera, pero asumimos lógica ciega o guiada), apuntar hacia ella con la Brújula y presionar el Botón Táctil para 'dar permiso de aterrizaje', lo que cambia el ritmo a uno de aterrizaje exitoso.",
+    "transformedIdeaTitle": "Torre de Control Rítmica",
+    "transformedIdeaDescription": "¡Emergencia! Varios aviones (ritmos de batería) se acercan a tu aeropuerto desde distintas direcciones. Debes escuchar o adivinar de dónde vienen, apuntar tu dispositivo hacia ellos y presionar el botón para guiarlos a la pista. Si lo haces bien, el ritmo aterrizará suavemente; si fallas, ¡el ritmo se volverá caótico!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IncomingDir = Random(); IF Compass.face(IncomingDir) AND Button.pressed() THEN Drum.play('LandSuccess') ELSE Drum.play('Chaos')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mezclador de Intensidad por Inclinación y Rumbo",
+    "originalIdeaDescription": "Aunque el sensor principal es la Brújula, podemos usar la estabilidad de la dirección. El usuario inicia un redoble con el Botón Táctil. Si el usuario mantiene la brújula fija en un punto, el volumen es bajo. Si el usuario 'agita' el rumbo (moviendo el dispositivo de izquierda a derecha rápidamente alrededor de un punto), la intensidad del tambor aumenta. Es una forma de controlar la dinámica (volumen) de la percusión mediante la agitación lateral direccional.",
+    "transformedIdeaTitle": "Maracas Digitales de Alta Tecnología",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un instrumento de percusión sensible. Mantén el botón presionado para activar el sonido. Si te quedas quieto apuntando a un sitio, sonará muy suave. Pero si empiezas a agitar el dispositivo de izquierda a derecha (cambiando la brújula rápidamente), ¡el volumen subirá al máximo! Controla la intensidad de la música con tu energía.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Shake = Abs(Compass.current - Compass.last); Volume = Map(Shake, 0, 20, 10, 100); IF Button.hold() THEN Drum.play('Shaker', Volume)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Brújula de Feng Shui Sonoro",
+    "originalIdeaDescription": "Una aplicación relajante o de exploración ambiental. Asigna sonidos de percusión elementales a los puntos cardinales basados en una temática (ej. Norte=Agua/Gota, Sur=Fuego/Crepitar, Este=Madera/Clave). El usuario explora una habitación presionando el Botón Táctil para 'leer' la energía de esa dirección, escuchando los diferentes timbres y texturas de la percusión para encontrar el lugar más 'armonioso' o equilibrado.",
+    "transformedIdeaTitle": "El Maestro de los Elementos",
+    "transformedIdeaDescription": "Cada dirección tiene un elemento mágico. El Norte es Agua, el Sur es Fuego. Camina por tu habitación y usa el botón para descubrir qué elemento domina en cada rincón. Si apuntas al Norte escucharás gotas (claves), si apuntas al Sur escucharás el fuego (redobles). ¡Encuentra el lugar donde los elementos suenan mejor!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Button.pressed() THEN { IF Compass.dir == 'N' Play('WaterDrop'); IF Compass.dir == 'S' Play('FireCrackle'); }"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Musical Drum",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Pasos de Marcha",
+    "originalIdeaDescription": "Una herramienta para practicar desfiles o marchas. El usuario fija una dirección objetivo. El Botón Táctil actúa como detector de paso (el usuario lo pulsa en cada paso o lo lleva en la mano al balancear). Si el usuario mantiene el rumbo correcto, la Batería toca una marcha triunfal constante. Si la Brújula detecta que el usuario se está desviando del camino recto mientras marcha, el ritmo se interrumpe o se desafina, forzando al usuario a corregir su trayectoria.",
+    "transformedIdeaTitle": "El Capitán del Desfile",
+    "transformedIdeaDescription": "¡Un, dos, un, dos! Eres el líder del desfile. Toca el botón con cada paso que des. Mientras camines recto hacia tu meta, la banda tocará una marcha perfecta. Pero ten cuidado: si te tuerces del camino, ¡la banda se confundirá y dejará de tocar bien! Mantén el rumbo fijo para que el desfile sea un éxito.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.tap() THEN { IF IsOnCourse(Compass.heading) THEN Drum.play('March') ELSE Drum.play('OffBeat') }"
+  }
+]

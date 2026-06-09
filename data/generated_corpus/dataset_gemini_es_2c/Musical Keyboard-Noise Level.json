@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Piano Controlado por Volumen de Voz",
+    "originalIdeaDescription": "Un sistema donde la intensidad del sonido ambiental determina qué nota musical se reproduce. Si el ruido es bajo, suenan notas graves; si el ruido es alto, suenan notas agudas, creando una escala dinámica basada en el volumen.",
+    "transformedIdeaTitle": "El Ascensor Vocal Mágico",
+    "transformedIdeaDescription": "Los estudiantes crearán un 'ascensor' controlado por su voz. Deberán programar el sistema para que, al susurrar, el teclado toque notas bajas (el sótano), y al gritar o cantar fuerte, toque notas altas (la azotea). Aprenderán a mapear rangos de valores de entrada (sensor de ruido) a salidas específicas (notas musicales).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note_index = map(noise_level, 0, 100, 0, 12); MusicalKeyboard.play(note_index)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma de Biblioteca Silenciosa",
+    "originalIdeaDescription": "Un dispositivo diseñado para mantener el silencio. Monitorea constantemente el nivel de ruido y, si detecta un sonido que supera un umbral establecido, reproduce una secuencia de notas disonantes como advertencia.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca",
+    "transformedIdeaDescription": "¡Shhh! Los estudiantes programarán al 'Guardián'. El reto es calibrar el sensor para detectar el nivel de ruido aceptable. Si alguien habla demasiado fuerte (input > umbral), el teclado debe tocar una melodía de alarma molesta. Esto introduce el concepto de condicionales y umbrales en la programación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN MusicalKeyboard.play('C4', 'F#4') ELSE MusicalKeyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Cambiador de Canción por Aplausos",
+    "originalIdeaDescription": "El sistema reproduce una melodía nota por nota, pero solo avanza a la siguiente nota cuando detecta un pico repentino en el nivel de sonido, como un aplauso fuerte.",
+    "transformedIdeaTitle": "El Director de Orquesta Mágico",
+    "transformedIdeaDescription": "Conviértete en el director. La orquesta (el teclado) está congelada y solo toca la siguiente nota de la sinfonía cuando das un aplauso firme. Los estudiantes deben detectar un 'pico' de sonido para iterar a través de una lista (array) de notas musicales.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN play(song[current_note]); current_note++"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Canción de Cuna Automática para Bebés",
+    "originalIdeaDescription": "Un monitor que detecta el llanto (ruido alto sostenido) y responde automáticamente tocando una melodía suave y lenta para calmar el ambiente.",
+    "transformedIdeaTitle": "La Niñera Robot",
+    "transformedIdeaDescription": "Diseña un robot que ayude a dormir a un bebé. Si el sensor de ruido detecta llanto (ruido alto), el teclado debe tocar suavemente 'Estrellita, ¿dónde estás?'. Si hay silencio, el robot descansa. Los alumnos trabajarán con bucles y condicionales simples.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN MusicalKeyboard.playSequence(lullaby)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Musical",
+    "originalIdeaDescription": "Un juego donde la música suena continuamente mientras el nivel de ruido sea casi nulo. Si el jugador hace algún ruido al moverse, la música se detiene abruptamente, indicando que ha perdido.",
+    "transformedIdeaTitle": "Misión Ninja Silenciosa",
+    "transformedIdeaDescription": "Los estudiantes deben cruzar la habitación sin ser detectados. Programarán el sistema para que toque una música de fondo agradable mientras el ruido sea cero. Si alguien pisa fuerte o habla (ruido > 10), la música se corta y suena un tono de 'Game Over'.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel < 10 THEN MusicalKeyboard.play(bg_music) ELSE MusicalKeyboard.play(fail_note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Instrumento de Viento",
+    "originalIdeaDescription": "Utiliza el sensor de ruido como una boquilla virtual. Al soplar (hacer ruido constante cerca del sensor), el teclado emite una nota continua. Si dejas de soplar, la nota se detiene.",
+    "transformedIdeaTitle": "La Flauta Digital",
+    "transformedIdeaDescription": "Construye tu propio instrumento de viento digital. Los alumnos deben programar la lógica para que el teclado sostenga una nota solo MIENTRAS el sensor detecte el sonido de soplido (ruido constante). Esto enseña la diferencia entre eventos de disparo único y bucles continuos (WHILE).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE NoiseLevel > 30 DO MusicalKeyboard.playTone(Note)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador Auditivo de Intensidad",
+    "originalIdeaDescription": "Mapea la intensidad del sonido a la complejidad de un acorde. Sonidos suaves tocan una sola nota, sonidos medios una tríada, y sonidos fuertes un acorde completo de séptima.",
+    "transformedIdeaTitle": "El Medidor de Fuerza Musical",
+    "transformedIdeaDescription": "Como en los juegos de feria donde golpeas con un martillo, aquí usarás tu voz. Grita suave para obtener una nota, más fuerte para un acorde, y con toda tu fuerza para una fanfarria completa. Los estudiantes usarán sentencias 'IF-ELSE IF' anidadas para clasificar la intensidad.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise < 30 play(1) ELSE IF Noise < 70 play(3) ELSE play(4)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Activada por Voz",
+    "originalIdeaDescription": "El sistema detecta sonidos cortos y percusivos (como decir 'Pum' o 'Ka') y los traduce en notas graves o agudas del teclado para crear un ritmo.",
+    "transformedIdeaTitle": "Beatboxer Biónico",
+    "transformedIdeaDescription": "Crea una máquina que acompañe tu beatbox. Los estudiantes deben configurar el sensor para detectar picos cortos de sonido. Cada vez que hagan un sonido percusivo con la boca, el teclado tocará una nota baja de bajo, permitiéndoles crear una base rítmica.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF rate_of_change(NoiseLevel) > high THEN MusicalKeyboard.play(BassNote)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Melodía Secreta por Susurro",
+    "originalIdeaDescription": "Un sistema de seguridad tipo 'caja fuerte' que solo se abre (toca una melodía de victoria) si el nivel de ruido se mantiene en un rango muy específico y bajo (susurro) durante unos segundos.",
+    "transformedIdeaTitle": "La Contraseña del Espía",
+    "transformedIdeaDescription": "El cuartel secreto solo se abre si susurras la contraseña. Si hablas normal o te quedas callado, no pasa nada. Los alumnos deben programar un rango lógico (AND): el ruido debe ser mayor que 5 PERO menor que 20 para activar la melodía de éxito.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 5 AND Noise < 20 THEN MusicalKeyboard.play(SecretTune)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Tempo Ambiental",
+    "originalIdeaDescription": "El teclado reproduce una secuencia musical en bucle. La velocidad (tempo) de la música aumenta proporcionalmente al nivel de ruido en la habitación.",
+    "transformedIdeaTitle": "La Fiesta Acelerada",
+    "transformedIdeaDescription": "¡Cuanto más grita la gente, más rápido va la música! Los estudiantes crearán un reproductor de música donde la variable 'tiempo de espera entre notas' es inversamente proporcional al nivel de ruido. Mucho ruido = espera corta (rápido).",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "delay_time = 1000 / NoiseLevel; play(note); wait(delay_time)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Eco Musical",
+    "originalIdeaDescription": "El sistema escucha el volumen de un sonido externo y, después de un breve retraso, reproduce una nota con el mismo volumen, simulando un eco musical.",
+    "transformedIdeaTitle": "La Cueva del Eco Encantado",
+    "transformedIdeaDescription": "Grita en la cueva digital y escucha cómo te responde. Los estudiantes deben capturar el valor del sensor de ruido en una variable, esperar un segundo y luego usar esa variable para establecer el volumen o la intensidad de la nota que toca el teclado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "saved_vol = NoiseLevel; wait(1s); MusicalKeyboard.play(Note, volume=saved_vol)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas",
+    "originalIdeaDescription": "Utiliza picos aleatorios de ruido (simulando truenos) para disparar acordes graves y dramáticos en el teclado, creando una banda sonora ambiental.",
+    "transformedIdeaTitle": "Teatro de Sonidos: La Tormenta",
+    "transformedIdeaDescription": "Vamos a sonorizar una obra de teatro. Los estudiantes programarán el sistema para que cuando un actor haga un sonido de '¡Bang!' (pico de ruido), el teclado toque inmediatamente un acorde dramático y grave para simular un trueno resonante.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 90 THEN MusicalKeyboard.play(DeepChord)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de las Estatuas Inverso",
+    "originalIdeaDescription": "La música suena solo cuando hay ruido. Si el ruido cesa, la música se detiene. Incentiva a los niños a hacer ruido constante para mantener la fiesta.",
+    "transformedIdeaTitle": "La Discoteca a Pedales",
+    "transformedIdeaDescription": "Imagina que la música funciona con energía sonora. Los estudiantes deben programar el sistema para que la canción suene solo si el nivel de ruido promedio se mantiene alto (aplausos, gritos). Si se cansan y callan, la fiesta se apaga.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN MusicalKeyboard.resume() ELSE MusicalKeyboard.pause()"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Selector de Escala por Ambiente",
+    "originalIdeaDescription": "El sistema analiza el ruido ambiental promedio. Si es un ambiente ruidoso, selecciona una escala Mayor (alegre). Si es silencioso, selecciona una escala Menor (triste/misteriosa).",
+    "transformedIdeaTitle": "El Piano Empático",
+    "transformedIdeaDescription": "Un piano que siente el ambiente. Si la clase está ruidosa y caótica, el piano toca música alegre. Si todos están callados y tranquilos, toca música melancólica. Los estudiantes aprenderán a usar condicionales para cambiar el conjunto de datos (notas) que usa el programa.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF AvgNoise > 50 THEN Scale = Major ELSE Scale = Minor"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Capacidad Pulmonar",
+    "originalIdeaDescription": "El usuario debe hacer un sonido constante ('Ahhh'). El teclado toca notas ascendentes mientras el sonido se mantenga, midiendo cuánto tiempo puede durar el usuario.",
+    "transformedIdeaTitle": "El Desafío del Cantante de Ópera",
+    "transformedIdeaDescription": "¿Cuánto tiempo puedes sostener la nota? Los estudiantes crearán un cronómetro musical. Mientras el sensor detecte voz, el teclado subirá una nota en la escala cada segundo. El objetivo es ver qué tan alto pueden llegar en la escala antes de quedarse sin aire.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise > Threshold DO { play(next_note); wait(1s) }"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz Sonora (Musical)",
+    "originalIdeaDescription": "Dos palmadas rápidas (doble pico de ruido) encienden una melodía, y dos palmadas apagan la melodía.",
+    "transformedIdeaTitle": "Control Remoto de Aplausos",
+    "transformedIdeaDescription": "Los estudiantes deben programar un detector de patrones. No basta con un ruido, necesitan detectar dos picos de sonido en un intervalo corto de tiempo para alternar el estado (encendido/apagado) de la música. Introducción a lógica de estados y temporizadores.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF (NoiseClick + wait + NoiseClick) THEN toggle(MusicState)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Theremin Aleatorio",
+    "originalIdeaDescription": "El nivel de ruido se utiliza como una semilla para generar notas aleatorias, creando una composición caótica basada en la perturbación del ambiente.",
+    "transformedIdeaTitle": "El Compositor Caótico",
+    "transformedIdeaDescription": "El ruido crea arte. Los alumnos usarán el valor del sensor de ruido como una variable aleatoria para seleccionar notas al azar del teclado. Un grito genera una nueva secuencia de notas impredecible.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RandomSeed(NoiseLevel); play(RandomNote)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Afinador de Vocales (Simplificado)",
+    "originalIdeaDescription": "Detecta umbrales de volumen específicos que corresponden a las vocales (A es fuerte, I es débil, etc - simplificación) y toca una nota asociada.",
+    "transformedIdeaTitle": "Teclado de Vocales",
+    "transformedIdeaDescription": "Asigna una nota a cada intensidad. Intenta decir 'Ahhh' (fuerte) para tocar un Do, y 'Uuuu' (suave) para tocar un Mi. Los estudiantes deben calibrar rangos muy específicos para lograr tocar una canción simple solo variando la fuerza de su voz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 80 Play(C) ELSE IF Noise > 60 Play(E) ELSE Play(G)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Intrusos Musical",
+    "originalIdeaDescription": "El sistema está en reposo. Si detecta un cambio brusco de silencio a ruido, toca una sirena oscilante con notas del teclado.",
+    "transformedIdeaTitle": "La Trampa Musical",
+    "transformedIdeaDescription": "Protege tu mochila. Si el sensor detecta un cambio repentino (delta) en el ruido ambiente (alguien acercándose o abriendo una cremallera), el teclado debe alternar rápidamente entre dos notas agudas como una sirena de policía.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF (CurrentNoise - LastNoise) > 20 THEN Play(Siren)"
+  },
+  {
+    "componentUsed": [
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Contador de Asistentes",
+    "originalIdeaDescription": "Cada vez que el nivel de ruido supera un umbral (alguien entrando y saludando), toca una nota ascendente, contando auditivamente las interacciones.",
+    "transformedIdeaTitle": "El Portero Musical",
+    "transformedIdeaDescription": "Cuenta cuántas personas entran a clase saludando. Los estudiantes crearán un contador que incrementa una variable con cada saludo fuerte detectado, y el teclado tocará una nota correspondiente al número (1=Do, 2=Re, 3=Mi...).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > Threshold THEN { count++; play(scale[count]) }"
+  }
+]

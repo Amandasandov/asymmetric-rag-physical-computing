@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Batería Sensible a la Luz",
+    "originalIdeaDescription": "Un sistema de percusión donde el tipo de tambor cambia según la luz ambiental, y la intensidad del golpe depende del volumen del ruido que hace el usuario.",
+    "transformedIdeaTitle": "El Baterista Camaleónico",
+    "transformedIdeaDescription": "Crea un instrumento que cambia con el entorno. Si tocas en la oscuridad, tu voz (Ruido) activará un Bombo grave. Si tocas bajo una lámpara (Luz alta), tu voz activará una Caja aguda. ¡Grita fuerte para golpear fuerte!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Instrument = (Light.level < 50) ? 'Kick' : 'Snare'; Velocity = Map(Noise.level); Drum.play(Instrument, Velocity)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Sistema de Alarma de Galletas",
+    "originalIdeaDescription": "Dispositivo para proteger un tarro de galletas. Si detecta luz (se abre la tapa) y ruido (se mete la mano), el tambor suena como sirena.",
+    "transformedIdeaTitle": "Guardián de las Galletas",
+    "transformedIdeaDescription": "Protege tus dulces. Coloca el dispositivo dentro del tarro oscuro. Si un ladrón de galletas abre la tapa (entra Luz) y hace crujir el envoltorio (Ruido), el Tambor debe empezar a tocar una alarma militar para alertarte.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 20 AND Noise.level > 30 THEN Drum.loop('AlarmMarch')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "Coordinación de eventos. El usuario ve un flash de luz (linterna) y debe dar una palmada (trueno) para que el tambor retumbe.",
+    "transformedIdeaTitle": "Thor: El Dios del Trueno",
+    "transformedIdeaDescription": "Controla el clima. Espera a ver el relámpago (alguien enciende y apaga la luz rápidamente). Cuenta hasta 3 y da una palmada fuerte (Ruido). Si lo coordinas bien, el Tambor emitirá un sonido de trueno profundo y resonante.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.flashDetected(): Wait(3s); IF Noise.clap() THEN Drum.play('ThunderRoll')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Juego del Ninja en las Sombras",
+    "originalIdeaDescription": "El usuario debe moverse en silencio y oscuridad. Si hay luz o hace ruido, el tambor suena un golpe de 'Game Over'.",
+    "transformedIdeaTitle": "Infiltración Ninja",
+    "transformedIdeaDescription": "Escapa del dojo. Debes mantenerte en la sombra (tapa el sensor de luz) y no hacer ningún sonido. Si el sensor detecta luz (te vieron) o ruido (te escucharon), el Tambor sonará un 'Gong' fuerte indicando que has sido capturado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 OR Noise.level > 15 THEN Drum.play('Gong') AND GameOver()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Despertador Solar Interactivo",
+    "originalIdeaDescription": "Cuando sale el sol (luz), el tambor empieza a tocar suave. Para apagarlo, hay que gritar.",
+    "transformedIdeaTitle": "El Gallo Madrugador",
+    "transformedIdeaDescription": "Programa tu despertar. Cuando amanezca (Luz > 60), el Tambor empezará a marcar un ritmo suave. A medida que haya más luz, sonará más rápido. Para apagarlo y demostrar que estás despierto, tienes que gritar '¡BUENOS DÍAS!' (Ruido alto).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 THEN Drum.play('Beat'); IF Noise.level > 80 THEN Drum.stop()"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Mascota Virtual: Corazón",
+    "originalIdeaDescription": "Simula un corazón. Si está tranquilo (oscuro/silencio), late lento (tambor). Si hay estrés (luz/ruido), late rápido.",
+    "transformedIdeaTitle": "Doctor de Robots",
+    "transformedIdeaDescription": "Monitoriza al paciente. Si la habitación está oscura y silenciosa, el corazón del robot (Tambor) late a 60 BPM. Si enciendes la luz (estrés visual) o haces ruido (estrés auditivo), el robot se asusta y su corazón se acelera a 120 BPM.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Stress = Light.level + Noise.level; BPM = Map(Stress, 60, 160); Drum.loop('Heartbeat', BPM)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Cueva de los Ecos",
+    "originalIdeaDescription": "Funciona en oscuridad. El usuario emite un sonido y el tambor responde con un eco rítmico.",
+    "transformedIdeaTitle": "Exploración de Cavernas",
+    "transformedIdeaDescription": "Entra en la cueva oscura (Luz < 10). Grita '¡HOLA!' (Ruido). El sistema escuchará y el Tambor te responderá con un patrón de eco que se desvanece (Pum... pum... pu...), simulando la profundidad de la caverna.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Noise.peak(): Drum.playSequence([100, 60, 30, 0])"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Fiesta de Baile Automática",
+    "originalIdeaDescription": "Detecta luces estroboscópicas y música. El tambor se sincroniza con los picos de luz y ruido.",
+    "transformedIdeaTitle": "El DJ Robot",
+    "transformedIdeaDescription": "Monta una fiesta. El robot 'escucha' la música (Ruido) y 've' las luces de la discoteca (Luz). Cada vez que detecte un pico fuerte de ambos al mismo tiempo, añadirá un efecto de platillo (Crash) para acentuar el ritmo de la canción.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.spike() AND Noise.spike() THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Incubadora de Huevo",
+    "originalIdeaDescription": "El huevo necesita calor (luz) y silencio. Si las condiciones son correctas, el tambor hace sonido de cascarón rompiéndose.",
+    "transformedIdeaTitle": "Nacimiento del Pollito",
+    "transformedIdeaDescription": "Ayuda a nacer al pollito. Necesita calor: acerca el sensor a una lámpara (Luz alta). Necesita calma: mantén silencio absoluto (Ruido bajo). Si mantienes esto por 10 segundos, el Tambor hará 'Crac-Crac' indicando que ha nacido.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.warm() AND Noise.quiet() THEN Timer++; IF Timer > 10s THEN Drum.play('Crack')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras",
+    "originalIdeaDescription": "Se interroga al sospechoso bajo una luz fuerte. Si habla (ruido) y titubea, el tambor marca 'Falso'.",
+    "transformedIdeaTitle": "Interrogatorio Policial",
+    "transformedIdeaDescription": "Siéntate bajo la luz del interrogatorio (Luz > 80). Responde: '¿Fuiste tú?'. Si respondes rápido y fuerte (Ruido constante), el Tambor calla. Si dudas o haces pausas (Ruido irregular), el Tambor toca un ritmo de suspenso dramático.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.high: Analyze(Noise.pattern); IF Pattern == Hesitant THEN Drum.play('Suspense')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Entrenador de Boxeo",
+    "originalIdeaDescription": "La luz se enciende indicando 'golpea'. El usuario golpea el saco (ruido). El tambor confirma el impacto.",
+    "transformedIdeaTitle": "Rocky Balboa",
+    "transformedIdeaDescription": "Entrena tus reflejos. Espera en la oscuridad... ¡FLASH! (Alguien enciende una luz). Inmediatamente da un golpe a tu almohada o palmada fuerte (Ruido). Si reaccionas rápido a la luz, el Tambor suena la campana del ring. Si tardas, suena un abucheo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Wait(Light.on); Timer.start(); Wait(Noise.hit); IF Timer < 0.5s THEN Drum.play('Bell')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Ritual Tribal de Fuego",
+    "originalIdeaDescription": "Si hay fuego (luz parpadeante/alta) y cánticos (ruido constante), el tambor toca un ritmo tribal automático.",
+    "transformedIdeaTitle": "Danza del Fuego",
+    "transformedIdeaDescription": "Reúne a la tribu alrededor de la hoguera (Luz alta). Empiecen a cantar 'Ommm' (Ruido constante). Si el fuego brilla y el canto es fuerte, el Tambor Espíritu se unirá automáticamente tocando un ritmo de percusión para la danza.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 60 AND Noise.average > 40 THEN Drum.loop('TribalBeat')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Metrónomo Visual y Sonoro",
+    "originalIdeaDescription": "El usuario marca el ritmo con una linterna (flashes). El tambor aprende el ritmo y empieza a tocarlo.",
+    "transformedIdeaTitle": "Director de Orquesta de Luz",
+    "transformedIdeaDescription": "Dirige la banda con luz. Pasa tu mano sobre el sensor rítmicamente (Tapando y destapando la luz). El sistema calculará tu velocidad (BPM) y el Tambor empezará a tocar un ritmo base sincronizado con tus movimientos de mano.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "BPM = Calculate(Light.intervals); Drum.setTempo(BPM); Drum.play('BasicRock')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Caja de Sorpresas (Jack-in-the-box)",
+    "originalIdeaDescription": "Hay que girar la manivela (hacer ruidos de clic). Cuando la luz detecta que la caja 'se abre', el tambor da el susto.",
+    "transformedIdeaTitle": "El Payaso Sorpresa",
+    "transformedIdeaDescription": "Juega con la caja sorpresa. Haz ruidos de 'clic-clic-clic' con la lengua para simular la manivela. Mantén el sensor tapado. De repente, destápalo (Luz): el Tambor soltará un '¡BOING!' y un platillazo para asustar a tus amigos.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait(Noise.clicks > 5); Wait(Light.exposed); Drum.play('BoingCrash')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Monstruo de las Sombras",
+    "originalIdeaDescription": "El monstruo vive en la oscuridad. Si haces ruido, gruñe (tambor grave). Si le iluminas, chilla (caja aguda) y huye.",
+    "transformedIdeaTitle": "Cazador de Monstruos",
+    "transformedIdeaDescription": "Entra al sótano oscuro. Si haces ruido (pasos/hablar), el monstruo te gruñirá (Tambor grave) desde las sombras. Para vencerlo, apúntale con tu linterna (Luz alta). Al recibir la luz, el monstruo chillará (Redoble agudo de caja) y desaparecerá.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.low AND Noise.high THEN Drum.play('LowTom'); IF Light.high THEN Drum.play('SnareRoll')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Fuegos Artificiales",
+    "originalIdeaDescription": "Cargar el cohete con luz. Detonarlo con un aplauso. El tambor hace el sonido de la explosión.",
+    "transformedIdeaTitle": "Show Pirotécnico",
+    "transformedIdeaDescription": "Prepara el cohete. Mantén el sensor en la luz hasta que esté 'cargado'. Luego, apaga la luz (lanzamiento) y espera... ¡Da una palmada (Ruido)! El Tambor simulará la explosión del fuego artificial en el cielo oscuro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.charged AND Light.goesDark(): Wait(Noise.clap); Drum.play('Explosion')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Semáforo para Ciegos",
+    "originalIdeaDescription": "Emite un ritmo de tambor lento en rojo (luz baja) y rápido en verde (luz alta) para indicar cuándo cruzar, ajustando volumen según ruido ambiente.",
+    "transformedIdeaTitle": "Cruce Peatonal Accesible",
+    "transformedIdeaDescription": "Diseña un semáforo inclusivo. Si el semáforo visual está en Verde (simulado con Luz Alta en sensor), el Tambor toca rápido para indicar 'Cruce'. Si hay mucho tráfico (Ruido alto), el Tambor sube su volumen automáticamente para ser escuchado.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = Map(Light.level); Volume = Map(Noise.level); Drum.loop('Tick', Tempo, Volume)"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Cocina: Palomitas de Maíz",
+    "originalIdeaDescription": "Simula el calor con luz. Cuando está caliente, el ruido (soplar) hace que el tambor empiece a hacer 'pop'.",
+    "transformedIdeaTitle": "Haciendo Palomitas",
+    "transformedIdeaDescription": "Pon el maíz en el microondas. Cierra la puerta (Oscuridad) y enciéndelo (Luz interna alta). Escucha cómo se calienta. Sopla al micrófono para simular el aire caliente. El Tambor empezará a hacer 'Pop... Pop-Pop' cada vez más rápido.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.high AND Noise.blow() THEN Drum.playRandom('PopSound')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Agente Secreto Morse",
+    "originalIdeaDescription": "Transmite mensajes golpeando la mesa. Solo funciona si estás 'escondido' (oscuridad).",
+    "transformedIdeaTitle": "Telégrafo Clandestino",
+    "transformedIdeaDescription": "Envía el código. Debes estar bajo una manta (Luz < 5). Golpea la mesa (Ruido) para enviar puntos y rayas. El Tambor repetirá tu mensaje para confirmarlo. Si entra luz, el sistema se autodestruye (sonido de error) para proteger el secreto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.high THEN Drum.play('Error'); IF Light.low AND Noise.tap() THEN Drum.play('Tone')"
+  },
+  {
+    "componentUsed": ["Light Intensity", "Musical Drum", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Miedo",
+    "originalIdeaDescription": "Entrar en un cuarto oscuro. Si el usuario grita, el tambor mide el nivel de miedo con la intensidad del redoble.",
+    "transformedIdeaTitle": "La Casa del Terror",
+    "transformedIdeaDescription": "¿Qué tan valiente eres? Entra en la oscuridad (Luz baja). Si te asustas y gritas (Ruido), el 'Medidor de Miedo' activará el Tambor. Un grito suave = un golpe suave. Un grito aterrorizado = ¡Redoble frenético de batería!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.low: Intensity = Noise.level; Drum.roll(Speed=Intensity)"
+  }
+]

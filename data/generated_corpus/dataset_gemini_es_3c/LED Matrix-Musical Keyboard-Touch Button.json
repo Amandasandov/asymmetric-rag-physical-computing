@@ -1,0 +1,301 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Visualización de Notas Musicales en Tiempo Real",
+    "originalIdeaDescription": "Un sistema donde cada tecla del teclado musical activa una nota auditiva y simultáneamente muestra una letra o símbolo correspondiente en la matriz LED. El botón táctil se utiliza para cambiar entre diferentes octavas o conjuntos de instrumentos, actualizando la pantalla para indicar el modo actual.",
+    "transformedIdeaTitle": "El Traductor de Melodías Alienígenas",
+    "transformedIdeaDescription": "Imagina que eres un lingüista espacial. Debes construir un dispositivo que traduzca sonidos en símbolos visuales para comunicarte con una especie que no puede oír. Los estudiantes programarán el teclado para emitir sonidos y la matriz LED para mostrar 'glifos' (letras/símbolos) únicos por cada nota, usando el botón para cambiar el 'dialecto' (octava).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF MusicalKeyboard.onNote(note) THEN LEDMatrix.showCharacter(note.name); IF TouchButton.pressed() THEN changeOctave()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Musical y Visual",
+    "originalIdeaDescription": "Un juego estilo 'Simón Dice' donde la matriz LED muestra una secuencia de patrones y el sistema reproduce notas. El usuario debe repetir la secuencia tocando las teclas correctas. El botón táctil se usa para confirmar la secuencia ingresada o iniciar una nueva ronda.",
+    "transformedIdeaTitle": "Desafío de la Bóveda Secreta",
+    "transformedIdeaDescription": "Los estudiantes son agentes secretos intentando abrir una bóveda digital. La bóveda emite un código de luces y sonidos. Deben programar el sistema para que genere una secuencia aleatoria en la matriz y el teclado, y luego verifique si el jugador repite la combinación correcta para 'abrir' el cerrojo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SEQUENCE = random(); PLAY(SEQUENCE); IF UserInput == SEQUENCE AND TouchButton.pressed() THEN LEDMatrix.show('Unlock') ELSE LEDMatrix.show('X')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Selector de Emociones con Acompañamiento Musical",
+    "originalIdeaDescription": "El usuario presiona el botón táctil para alternar entre diferentes 'emociones' mostradas como caritas en la matriz LED (feliz, triste, enojado). Dependiendo de la emoción seleccionada en la pantalla, el teclado musical cambia su configuración para tocar acordes mayores (alegres) o menores (tristes).",
+    "transformedIdeaTitle": "El Robot Empático Musical",
+    "transformedIdeaDescription": "Crea un robot compañero que expresa cómo se siente. Los estudiantes programarán el botón para cambiar la cara del robot en la matriz LED. Al mismo tiempo, deben condicionar el teclado para que, si el robot está 'triste', las teclas suenen graves y lentas, y si está 'feliz', suenen agudas y rápidas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN cycleMode(); IF Mode == 'Happy' THEN LEDMatrix.show('Smile') AND setScale('Major') ELSE setScale('Minor')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Editor de Arte Pixelado Sonoro",
+    "originalIdeaDescription": "Utilizar las teclas del teclado musical no para tocar música, sino como un controlador direccional (arriba, abajo, izquierda, derecha) para mover un cursor en la matriz LED. El botón táctil funciona como el 'pincel' para encender o apagar el LED en la posición actual del cursor, creando dibujos.",
+    "transformedIdeaTitle": "Pincel Mágico Digital",
+    "transformedIdeaDescription": "Convierte el teclado en un control remoto de dibujo. Los estudiantes deben mapear notas específicas (Do, Re, Mi, Fa) a direcciones de movimiento en la matriz LED. El desafío es crear lógica de coordenadas (X, Y) para mover un punto de luz y usar el botón para 'pintar' permanentemente ese píxel.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Key('C') THEN x=x-1; IF Key('D') THEN x=x+1; IF TouchButton.pressed() THEN LEDMatrix.setPixel(x, y, ON)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Cronómetro Musical para Carreras",
+    "originalIdeaDescription": "La matriz LED muestra una cuenta regresiva o un cronómetro progresivo. El botón táctil inicia y detiene el tiempo. Al finalizar el tiempo o al detenerlo, el teclado musical reproduce automáticamente una fanfarria de victoria o un sonido de alarma.",
+    "transformedIdeaTitle": "Temporizador de la Bomba de Tiempo",
+    "transformedIdeaDescription": "¡Desactiva el dispositivo antes de que explote! Los estudiantes crean un juego donde la matriz muestra una cuenta atrás rápida. El jugador debe presionar el botón en el momento exacto (ej. detenerse en 0). Si fallan, el teclado toca una explosión; si ganan, una melodía heroica.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Timer > 0 DO LEDMatrix.show(Timer); IF TouchButton.pressed() THEN STOP; IF Timer == 0 THEN MusicalKeyboard.play('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Caja de Música Digital Interactiva",
+    "originalIdeaDescription": "Al mantener presionado el botón táctil, la matriz LED muestra una animación de una bailarina o figura girando, y el teclado reproduce una melodía pregrabada nota por nota. Si se suelta el botón, la música y la animación se detienen, simulando una caja de música de cuerda.",
+    "transformedIdeaTitle": "La Caja Musical Encantada",
+    "transformedIdeaDescription": "Los estudiantes recrearán una antigüedad digital. El reto es sincronizar bucles: mientras el botón esté presionado (condición booleana), debe avanzar la melodía y el siguiente cuadro de animación en la matriz. Si se suelta, todo se congela.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WHILE TouchButton.isHeld() DO MusicalKeyboard.playNextNote() AND LEDMatrix.showNextFrame() ELSE stopAll()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sistema de Notificación de Puerta Inteligente",
+    "originalIdeaDescription": "El botón táctil actúa como un timbre de puerta. Al presionarlo, el teclado reproduce una melodía de 'ding-dong' y la matriz LED muestra un texto de desplazamiento que dice 'VISITA' o un icono de una persona saludando.",
+    "transformedIdeaTitle": "El Timbre del Futuro",
+    "transformedIdeaDescription": "Diseña el sistema de entrada para una casa inteligente. Los estudiantes deben programar una secuencia de eventos iniciada por el botón: primero el sonido (audio), luego la alerta visual (matriz). Pueden personalizar la melodía y el icono para diferentes miembros de la familia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF TouchButton.pressed() THEN MusicalKeyboard.play('DingDong') AND LEDMatrix.scrollText('HOLA')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Entrenador de Ritmo y Coordinación",
+    "originalIdeaDescription": "La matriz LED muestra flechas o puntos rítmicos. El usuario debe tocar cualquier tecla del teclado en sincronía con la señal visual. El botón táctil se usa para seleccionar la velocidad (BPM) del ejercicio.",
+    "transformedIdeaTitle": "Academia de DJ Superestrella",
+    "transformedIdeaDescription": "Los estudiantes crean un juego de ritmo estilo 'Guitar Hero'. La matriz muestra cuándo tocar. El programa debe detectar si la tecla fue presionada al mismo tiempo que la luz estaba encendida. El botón aumenta la dificultad haciendo que las luces vayan más rápido.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LEDMatrix.pulse(BPM); IF KeyPressed AND LEDMatrix.isOnBeat() THEN Score++ ELSE Score--; IF TouchButton.pressed() THEN BPM = BPM + 10"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Teclado con Efectos Visuales de Lluvia",
+    "originalIdeaDescription": "Un instrumento ambiental donde tocar notas agudas muestra 'gotas' cayendo en la parte superior de la matriz, y notas graves en la parte inferior. El botón táctil cambia el modo de 'Lluvia' a 'Tormenta' (luces parpadeantes más rápidas y sonidos más fuertes).",
+    "transformedIdeaTitle": "Generador de Tormentas Musicales",
+    "transformedIdeaDescription": "Vincula el sonido con la naturaleza. Los estudiantes programan una simulación climática. Tocar teclas genera 'gotas' (píxeles cayendo) en la matriz. El reto es usar el botón como un interruptor de estado que altera las variables de velocidad de caída y volumen del sonido.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF KeyPressed(HighPitch) THEN LEDMatrix.animate('RainTop'); IF TouchButton.toggled() THEN Mode = 'Storm'; SetVolume(Max)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Decodificador de Código Morse Auditivo",
+    "originalIdeaDescription": "El usuario utiliza una tecla específica del teclado para ingresar puntos y rayas (según la duración). La matriz LED muestra la letra decodificada una vez completada. El botón táctil borra la pantalla para el siguiente mensaje.",
+    "transformedIdeaTitle": "El Telégrafo de los Espías",
+    "transformedIdeaDescription": "Los estudiantes aprenden sobre comunicación binaria. Deben medir cuánto tiempo se presiona una tecla (corto = punto, largo = raya) y traducir esa combinación a una letra que aparezca en la matriz. El botón funciona como la tecla de espacio/borrar.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF KeyHeldTime < 0.5 THEN code += '.'; ELSE code += '-'; IF code == '...' THEN LEDMatrix.show('S'); IF TouchButton.pressed() THEN clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Adivinanza de Tonos",
+    "originalIdeaDescription": "El sistema toca una nota aleatoria (sin mostrarla). El usuario debe buscar la nota correcta en el teclado. Si acierta, la matriz LED muestra un check verde (o carita feliz); si falla, una X. El botón táctil repite el sonido de referencia.",
+    "transformedIdeaTitle": "Entrenamiento de Oído Absoluto",
+    "transformedIdeaDescription": "Crea una herramienta para músicos. El programa elige una nota secreta. El estudiante debe programar la lógica de comparación: ¿Es la tecla presionada igual a la nota secreta? La matriz da retroalimentación visual inmediata. El botón es la ayuda para 'escuchar de nuevo'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "TargetNote = Random(); IF UserKey == TargetNote THEN LEDMatrix.show('Check') ELSE LEDMatrix.show('X'); IF TouchButton.pressed() THEN Play(TargetNote)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Mascota Virtual (Tamagotchi) Musical",
+    "originalIdeaDescription": "La matriz muestra una mascota pixelada. Su estado de ánimo decae con el tiempo. El usuario debe tocar una melodía específica en el teclado para 'alimentarla' o 'animarla'. El botón táctil se usa para limpiar o dormir a la mascota.",
+    "transformedIdeaTitle": "Cuidando al Monstruo Pixel",
+    "transformedIdeaDescription": "¡Tu mascota se alimenta de música! Los estudiantes crean una máquina de estados (hambriento, feliz, dormido). Deben programar el teclado para que, al detectar una secuencia de notas correcta, la variable de 'hambre' disminuya y la matriz muestre una animación de comer.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Hunger > 5 THEN LEDMatrix.show('Sad'); IF MusicalKeyboard.played('C-D-E') THEN Hunger = 0 AND LEDMatrix.show('Happy')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Calculadora Musical Básica",
+    "originalIdeaDescription": "La matriz LED muestra números. Las teclas del teclado musical representan los dígitos del 0 al 9. El botón táctil actúa como el signo 'igual' para mostrar el resultado de una suma simple en la pantalla.",
+    "transformedIdeaTitle": "La Calculadora Cantarina",
+    "transformedIdeaDescription": "Hacer matemáticas divertidas. Cada número tiene un sonido. Los estudiantes asignan valores numéricos a las teclas (Do=1, Re=2). Deben programar la lógica para sumar los valores de las teclas presionadas y, al tocar el botón, mostrar el total en la matriz.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Val = MapKeyToNumber(Key); Sum += Val; IF TouchButton.pressed() THEN LEDMatrix.showNumber(Sum)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Controlador de Serpiente (Snake Game)",
+    "originalIdeaDescription": "El clásico juego de la serpiente en la matriz LED. Se usan notas agudas/graves del teclado para girar a la derecha o izquierda. El botón táctil se usa para iniciar el juego o acelerar la serpiente.",
+    "transformedIdeaTitle": "Snake Controlado por Sonido",
+    "transformedIdeaDescription": "Reinventando un clásico. En lugar de un joystick, usas notas musicales. Los estudiantes deben programar la lógica de dirección basada en el tono: una nota aguda gira la serpiente a la derecha (horario), una grave a la izquierda (antihorario). El botón reinicia el juego tras un 'Game Over'.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Key > 'C4' THEN TurnRight() ELSE TurnLeft(); MoveSnake(); IF Collision() THEN LEDMatrix.show('GameOver')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Medidor de Intensidad de Aplausos (Simulado)",
+    "originalIdeaDescription": "Usando el teclado como disparador, se toca repetidamente para llenar una barra de carga en la matriz LED. El objetivo es llenar la barra antes de que se agote el tiempo. El botón táctil reinicia el desafío.",
+    "transformedIdeaTitle": "El Aplausómetro de Conciertos",
+    "transformedIdeaDescription": "Un juego de machacar botones (o teclas). Los estudiantes programan una barra de progreso visual. Cada vez que se presiona una tecla, la barra sube. Pero la barra baja automáticamente con el tiempo. El reto es mantener el ritmo para llenar la matriz al máximo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF KeyPressed THEN BarLevel++; ALWAYS BarLevel--; LEDMatrix.drawBar(BarLevel); IF TouchButton.pressed() THEN BarLevel = 0"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Tablero de Cuentos Interactivos",
+    "originalIdeaDescription": "La matriz muestra iconos que representan partes de una historia (ej. un bosque, un lobo). El botón táctil avanza la escena. El usuario debe tocar la 'banda sonora' adecuada en el teclado para cada escena antes de poder avanzar.",
+    "transformedIdeaTitle": "Director de Cine Mudo",
+    "transformedIdeaDescription": "Los estudiantes cuentan una historia. Programan el sistema para mostrar una escena (icono). El programa espera a que se toque un acorde específico (ej. suspenso) para desbloquear el botón y permitir pasar a la siguiente escena, enseñando flujo de control condicional.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LEDMatrix.show('Forest'); IF MusicalKeyboard.played('SpookyChord') THEN ButtonEnabled = TRUE; IF Button.pressed() THEN NextScene()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Ruleta de la Fortuna Musical",
+    "originalIdeaDescription": "Al presionar el botón táctil, una luz gira alrededor del borde de la matriz LED y se detiene en una posición aleatoria. Dependiendo de dónde se detenga, el sistema pide al usuario que toque una escala o nota específica en el teclado.",
+    "transformedIdeaTitle": "La Ruleta de Retos Sonoros",
+    "transformedIdeaDescription": "Gamificación de la práctica musical. Los estudiantes crean una ruleta visual. Al detenerse, la posición corresponde a un reto (ej. 'Toca Do Mayor'). Si el usuario toca las teclas correctas, la matriz celebra. Requiere lógica aleatoria y mapeo de posiciones.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Result = SpinWheel(); LEDMatrix.showPosition(Result); Target = GetChallenge(Result); IF Played(Target) THEN LEDMatrix.anim('Win')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Sintetizador de Ondas Visuales",
+    "originalIdeaDescription": "El teclado toca notas continuas. La matriz LED visualiza la 'forma de onda' (senoidal, cuadrada) de manera simulada. El botón táctil cambia el tipo de visualización o el 'filtro' gráfico aplicado a la matriz.",
+    "transformedIdeaTitle": "Ingeniero de Sonido Visual",
+    "transformedIdeaDescription": "Explorando la relación sonido-imagen. Los estudiantes programan visualizaciones. Mientras se mantiene una tecla, la matriz dibuja líneas que suben y bajan simulando una onda. El botón cambia el dibujo de líneas suaves a líneas en bloque, enseñando sobre modos de visualización.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE KeyPressed DO LEDMatrix.drawWave(Type, Frequency); IF TouchButton.pressed() THEN Type = nextType()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad con Código",
+    "originalIdeaDescription": "El sistema está 'armado' (Matriz parpadea rojo). Si se toca el botón sin desactivar primero, suena una alarma en el teclado. Para desactivar, se debe tocar una melodía secreta en el teclado.",
+    "transformedIdeaTitle": "Sistema de Seguridad del Banco",
+    "transformedIdeaDescription": "Crea una trampa para ladrones. Los estudiantes programan un estado de 'Alerta'. Si el botón (sensor de puerta) se toca, suena la alarma. La única forma de apagarla es ingresando la contraseña correcta (una secuencia específica de notas) en el teclado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Button.pressed() AND !Authorized THEN Alarm = TRUE; IF Keyboard.sequence() == 'Secret' THEN Authorized = TRUE AND Alarm = FALSE"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Touch Button"
+    ],
+    "originalIdeaTitle": "Juego de Pong para Un Jugador",
+    "originalIdeaDescription": "Una pelota rebota en la matriz LED. El usuario mueve la paleta usando dos teclas del teclado (izquierda/derecha). El botón táctil sirve para lanzar la pelota al inicio.",
+    "transformedIdeaTitle": "Tenis Arcade Musical",
+    "transformedIdeaDescription": "Programación de videojuegos retro. La matriz es la cancha. Las teclas mueven la raqueta. Cada vez que la pelota golpea la raqueta, el teclado emite un 'bip'. Los estudiantes deben calcular la posición de la pelota y la colisión con la raqueta controlada por el usuario.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "UpdateBallPos(); IF Key('Left') THEN PaddleX--; IF BallHitPaddle() THEN Bounce() AND Play('Beep'); IF TouchButton.pressed() THEN StartGame()"
+  }]

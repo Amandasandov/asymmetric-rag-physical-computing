@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "La Banda de un Solo Hombre",
+    "originalIdeaDescription": "Un sistema donde la voz del usuario (ruido) activa el bombo y la caja automáticamente para llevar el ritmo, mientras las manos tocan la melodía en el teclado.",
+    "transformedIdeaTitle": "Hombre Orquesta Beatbox",
+    "transformedIdeaDescription": "Crea tu propia base rítmica. Programa el sistema para que cada vez que hagas un sonido grave y fuerte con la boca (Noise), suene el Bombo. Si haces un sonido seco y corto, suena la Caja. Mientras mantienes el ritmo con tu voz, usa el teclado para improvisar una melodía de jazz encima.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.tone == 'Low' THEN Drum.play('Kick'); IF Noise.tone == 'High' THEN Drum.play('Snare'); Keyboard.allowPlay()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Cambio de Instrumento por Aplauso",
+    "originalIdeaDescription": "El teclado suena como piano. Al detectar un aplauso fuerte (pico de ruido), cambia a sonido de órgano. El tambor marca el cambio.",
+    "transformedIdeaTitle": "El Mago de los Instrumentos",
+    "transformedIdeaDescription": "Toca una canción en el teclado. ¿Te aburres del sonido? ¡Da una palmada fuerte al aire! El sensor de ruido detectará el pico, el Tambor tocará un redoble mágico y tu teclado cambiará instantáneamente de Piano a Sintetizador.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.peakDetected() THEN Drum.play('MagicRoll'); Keyboard.nextInstrument()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Eco de la Caverna Mágica",
+    "originalIdeaDescription": "El usuario grita en una cueva virtual. El sistema responde con un eco formado por notas de teclado aleatorias y retumbos de tambor lejanos.",
+    "transformedIdeaTitle": "Explorador de Cuevas Sonoras",
+    "transformedIdeaDescription": "Estás en una gruta de cristal. Grita '¡HOLA!' (Ruido). El sistema debe esperar un segundo y responderte con un eco musical: una secuencia de notas brillantes en el Teclado y un golpe profundo de Tambor que simula el retumbar de las paredes.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 60 THEN WAIT(1s); Keyboard.playRandomArpeggio(); Drum.play('DeepTom')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Nana para el Monstruo",
+    "originalIdeaDescription": "Hay que tocar una canción suave en el teclado. Si se hace ruido externo (hablar/toser), el monstruo despierta con un golpe de tambor.",
+    "transformedIdeaTitle": "No Despiertes al Ogro",
+    "transformedIdeaDescription": "El Ogro duerme. Tienes que tocar la 'Canción de Cuna' en el teclado muy suavemente. Si alguien en la clase hace ruido (tos, risa, golpe) y el sensor lo detecta, el Ogro se despierta furioso golpeando el Tambor y pierdes el juego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > Threshold THEN Drum.play('Crash') AND GameOver(); IF Keyboard.song('Lullaby') THEN Win()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta",
+    "originalIdeaDescription": "El usuario recrea el clima. Teclado para la lluvia (notas rápidas). Aplauso para el trueno (tambor).",
+    "transformedIdeaTitle": "Dios del Trueno",
+    "transformedIdeaDescription": "Controla el clima. Usa las teclas agudas para simular gotas de lluvia cayendo. Cuando quieras un relámpago, da una palmada fuerte cerca del sensor (Noise). El sistema responderá inmediatamente con un estruendo de Tambor y un acorde grave y oscuro en el teclado.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.clap() THEN Drum.play('Thunder') AND Keyboard.playChord('Diminished')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Aplausos de Concurso",
+    "originalIdeaDescription": "Al final de una actuación, mide el ruido. Si es alto, suena fanfarria (teclado) y redoble (tambor).",
+    "transformedIdeaTitle": "El Aplausómetro Ganador",
+    "transformedIdeaDescription": "Juzga la actuación. Pide a la clase que aplauda. El sensor mide la intensidad. Nivel bajo = Tambor triste. Nivel medio = Ritmo básico. Nivel máximo = ¡Fiesta! (Redoble de Tambor + Fanfarria de victoria en el Teclado).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Level = Noise.average(); IF Level > 80 THEN Drum.roll() AND Keyboard.play('Fanfare')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Caja de Ritmos Vocal",
+    "originalIdeaDescription": "El usuario hace sonidos rítmicos ('Pum', 'Cha'). El sistema traduce 'Pum' a Bombo y 'Cha' a Tecla, creando un loop.",
+    "transformedIdeaTitle": "Compositor de Loops en Vivo",
+    "transformedIdeaDescription": "Graba tu canción. Haz un ritmo con la boca. Si el sonido es grave y fuerte, el sistema grabará un golpe de Bombo. Si es agudo (silbido/grito), grabará una nota de Teclado. Repite el patrón para crear una canción compleja solo con tu voz.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Sound = Analyze(Noise); IF Sound.isLow THEN Drum.record('Kick') ELSE Keyboard.record('Note'); PlayLoop()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Hechizo Mágico Sonoro",
+    "originalIdeaDescription": "Seleccionar hechizo con teclas. Gritar palabra mágica para lanzar. Tambor es el impacto.",
+    "transformedIdeaTitle": "Academia de Magia",
+    "transformedIdeaDescription": "Prepara tu varita. Presiona la tecla 'Fuego' o 'Hielo' para cargar el hechizo. Para lanzarlo, tienes que gritar el conjuro '¡ABRACADABRA!' al micrófono. Si el volumen es suficiente, el Tambor simulará la explosión mágica del impacto.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Spell = Keyboard.selection; IF Noise.shout('Abracadabra') THEN Drum.play('ExplosionEffect')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Candado Rítmico de Seguridad",
+    "originalIdeaDescription": "Para abrir, hay que dar 3 golpes en la mesa (Noise), tocar 2 notas (Teclado) y esperar un 'click' (Tambor).",
+    "transformedIdeaTitle": "La Bóveda Secreta",
+    "transformedIdeaDescription": "El código no son números, es ritmo. Golpea la mesa: 'Poc-Poc-Poc' (Sensor de Ruido cuenta 3 picos). Luego toca 'Do-Re' en el teclado. Si lo haces en el orden correcto y a tiempo, el Tambor hará 'Clic' y la puerta se abrirá.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.taps == 3 AND Keyboard.sequence('C-D') THEN Drum.play('Unlock') ELSE Drum.play('Alarm')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Traductor de Animales",
+    "originalIdeaDescription": "El usuario ladra o maúlla. El sistema analiza el ruido y toca una melodía (traducción) y un ritmo (estado de ánimo).",
+    "transformedIdeaTitle": "¿Qué dice el Zorro?",
+    "transformedIdeaDescription": "Habla con los animales. Haz un sonido de animal al micrófono. Si es un sonido corto y fuerte (ladrido), el Tambor toca rápido (contento) y el Teclado dice 'Hola'. Si es un sonido largo (aullido), el Teclado toca una melodía triste.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.duration < Short THEN Drum.play('HappyBeat'); Keyboard.play('Hello') ELSE Keyboard.play('SadSong')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Semáforo Sonoro para Peatones",
+    "originalIdeaDescription": "Controlar el tráfico con un silbato. Silbato (ruido) detiene coches (tambor frena). Teclado indica paso seguro.",
+    "transformedIdeaTitle": "Agente de Tránsito",
+    "transformedIdeaDescription": "Dirige el cruce. Los coches pasan rápido (Tambor constante). Toca tu silbato fuertemente (Ruido agudo) para detener el tráfico. El tambor parará y el teclado tocará una melodía segura para que los peatones crucen.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Drum.loop('Traffic'); IF Noise.whistle() THEN Drum.stop(); Keyboard.play('WalkSignal')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Narrador de Cuentos de Terror",
+    "originalIdeaDescription": "El usuario cuenta una historia. El teclado pone música de fondo. Si el usuario grita '¡BOO!', el tambor da un susto.",
+    "transformedIdeaTitle": "Cuentacuentos de Miedo",
+    "transformedIdeaDescription": "Ambienta tu historia. Usa el teclado para poner música tenebrosa de fondo. El sistema escuchará tu narración. Si detecta un grito repentino (pico de Ruido), disparará automáticamente un efecto de sonido de golpe (Tambor) para asustar a la audiencia.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Keyboard.loop('Spooky'); IF Noise.spike() > Threshold THEN Drum.play('Jumpscare')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "El Pianista Tímido",
+    "originalIdeaDescription": "El usuario puede tocar el teclado, pero si el público hace mucho ruido, se asusta y deja de tocar (tambor error).",
+    "transformedIdeaTitle": "Concierto Silencioso",
+    "transformedIdeaDescription": "Eres un pianista genial pero muy tímido. Puedes tocar melodías increíbles en el teclado, pero solo si hay silencio absoluto en la clase. Si el sensor de ruido detecta que alguien habla, el piano se desafina y el Tambor suena como si tropezaras.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level < 20 THEN Keyboard.enable() ELSE Keyboard.disable(); Drum.play('Fail')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Batalla de Rap Asistida",
+    "originalIdeaDescription": "Tambor pone la base. El usuario rapea (ruido rítmico). Si deja de rapear, el teclado hace un relleno melódico.",
+    "transformedIdeaTitle": "MC Robot",
+    "transformedIdeaDescription": "Improvisa rimas. El Tambor pone un beat de Hip-Hop. Tú rapeas al micrófono (Noise). El sistema detecta cuando terminas una frase (silencio breve) y automáticamente toca un 'fill' o adorno en el teclado para rellenar el hueco.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Drum.loop('Beat'); IF Noise.active() THEN Wait() ELSE Keyboard.play('Fill')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "El Herrero Rítmico",
+    "originalIdeaDescription": "El usuario golpea la mesa (ruido) para forjar. El sistema responde con sonido metálico (Tambor) y chispas mágicas (Teclado agudo).",
+    "transformedIdeaTitle": "Forjando la Espada Legendaria",
+    "transformedIdeaDescription": "Trabaja el metal. Golpea tu mesa con un lápiz al ritmo. El sensor de ruido capta el impacto y el Tambor reproduce el sonido de un martillo pesado contra un yunque. Cada 4 golpes, el Teclado suena brillante indicando que la espada está lista.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.hit() THEN Drum.play('Anvil'); Count++; IF Count % 4 == 0 THEN Keyboard.play('Sparkle')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Motor de Coche de Carreras",
+    "originalIdeaDescription": "El usuario hace 'Vrooom' (ruido). El tambor simula pistones y el teclado la velocidad (tono).",
+    "transformedIdeaTitle": "Simulador de Fórmula 1",
+    "transformedIdeaDescription": "Acelera tu coche. Haz el sonido del motor con la boca. Si es suave, el Tambor va lento y el Teclado grave. Si ruges fuerte (Noise alto), el Tambor acelera al máximo y el Teclado sube de tono simulando el cambio de marchas a toda velocidad.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Map(Noise.level); Drum.bpm = Speed; Keyboard.pitch = Speed"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Telégrafo Musical",
+    "originalIdeaDescription": "Enviar mensajes Morse golpeando la mesa. Punto = Tambor, Raya = Teclado.",
+    "transformedIdeaTitle": "Código Secreto Sonoro",
+    "transformedIdeaDescription": "Envía mensajes ocultos. Golpea la mesa (Noise). Si es un golpe corto, suena un Tambor (Punto). Si arrastras el dedo o haces un sonido largo, suena una nota de Teclado (Raya). Aprende a escribir tu nombre en música Morse.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Length = Noise.duration; IF Length < Short THEN Drum.play('Dot') ELSE Keyboard.play('Dash')"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Director de Orquesta por Volumen",
+    "originalIdeaDescription": "La clase canta una nota. Si cantan bajo, suena solo el teclado. Si cantan fuerte, entra la batería completa.",
+    "transformedIdeaTitle": "Crescendo de la Orquesta",
+    "transformedIdeaDescription": "Controla la intensidad. Pide al grupo que haga un sonido continuo 'Ahhh', subiendo y bajando el volumen. El sistema leerá el Nivel de Ruido: suave activa una melodía de piano; fuerte activa una batería rockera potente acompañando al piano.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "AudioLvl = Noise.level; Keyboard.volume(AudioLvl); IF AudioLvl > 80 THEN Drum.unmute()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Inverso",
+    "originalIdeaDescription": "La música suena (Teclado+Tambor) solo si el usuario hace ruido (canta/palmea). Si se calla, la música para.",
+    "transformedIdeaTitle": "Fiesta Activada por Voz",
+    "transformedIdeaDescription": "¡Que no pare la fiesta! La banda (Teclado y Tambor) solo toca si tú haces ruido, cantas o gritas. En el momento en que te quedes callado (Silencio), la música se detiene abruptamente. ¡Mantén la energía arriba!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 20 THEN Drum.play() AND Keyboard.play() ELSE StopAll()"
+  },
+  {
+    "componentUsed": ["Musical Drum", "Musical Keyboard", "Noise Level"],
+    "originalIdeaTitle": "Afinador de Gritos",
+    "originalIdeaDescription": "El teclado toca una nota. El usuario debe cantar esa nota (ruido tonal). Si coincide, el tambor hace un redoble.",
+    "transformedIdeaTitle": "Entrenador de Oído Absoluto",
+    "transformedIdeaDescription": "El sistema toca un 'Do' en el teclado. Tienes que cantar esa misma nota al micrófono. El sensor analizará tu tono (frecuencia del ruido). Si afinas correctamente, el Tambor tocará una fanfarria de celebración.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Keyboard.playRandom(); Input = Noise.freq; IF Abs(Target - Input) < Tolerance THEN Drum.play('Win')"
+  }
+]

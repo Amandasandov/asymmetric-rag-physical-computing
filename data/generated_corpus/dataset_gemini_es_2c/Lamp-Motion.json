@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Linterna de Energía Cinética Virtual",
+    "originalIdeaDescription": "Un sistema que simula una linterna que se carga agitando el dispositivo. Cuanto más rápido se agita el sensor de movimiento, más brillante se vuelve la lámpara. Si se deja de agitar, la luz se atenúa gradualmente hasta apagarse para simular la pérdida de energía.",
+    "transformedIdeaTitle": "Explorador de Cuevas Profundas",
+    "transformedIdeaDescription": "Eres un explorador atrapado en una cueva oscura y tu linterna se está quedando sin batería. Debes agitar tu equipo constantemente para mantener la luz encendida y encontrar la salida antes de que la oscuridad te envuelva por completo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF shake_speed > 0 THEN brightness = brightness + 10 ELSE brightness = brightness - 5; Lamp.setBrightness(brightness)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector Sísmico de Alerta Temprana",
+    "originalIdeaDescription": "Un dispositivo diseñado para detectar vibraciones repentinas en la superficie. El sistema monitorea constantemente el acelerómetro y, si detecta un pico brusco en el movimiento, enciende la lámpara en color rojo parpadeante como señal de advertencia.",
+    "transformedIdeaTitle": "El Guardián del Volcán Activo",
+    "transformedIdeaDescription": "Tu misión es vigilar el Gran Volcán. Debes programar un sensor que detecte los temblores de la tierra. Si la tierra tiembla demasiado fuerte, ¡haz parpadear la luz roja para evacuar a los aldeanos antes de la erupción!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.magnitude > threshold THEN Lamp.setColor('Red'); Lamp.blink(500ms) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Cromáticos",
+    "originalIdeaDescription": "Un controlador gestual que cambia el color de la luz según la dirección del movimiento. Mover el dispositivo hacia la izquierda pone la luz azul, hacia la derecha roja, y hacia arriba amarilla, permitiendo al usuario 'pintar' con luz mediante gestos.",
+    "transformedIdeaTitle": "Aprendiz de Hechicero en Hogwarts",
+    "transformedIdeaDescription": "¡Es tu primer día en la escuela de magia! Aprende a lanzar hechizos moviendo tu varita. Si la mueves hacia arriba, lanzarás el hechizo 'Lumos' (luz blanca), pero ten cuidado, un movimiento brusco hacia abajo lanzará un hechizo oscuro (luz violeta).",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.y > 5 THEN Lamp.setColor('White') ELSE IF motion.y < -5 THEN Lamp.setColor('Purple')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Luz de Freno Automática para Bicicletas",
+    "originalIdeaDescription": "Un sistema de seguridad para vehículos pequeños. La lámpara permanece en un color tenue mientras hay movimiento constante, pero al detectar una desaceleración brusca (frenado), la luz se intensifica y cambia a un rojo brillante para alertar a quien viene detrás.",
+    "transformedIdeaTitle": "Piloto de Carreras Futurista",
+    "transformedIdeaDescription": "Estás diseñando el coche de carreras del futuro. Para evitar choques en la pista, programa la luz trasera para que se ponga roja y súper brillante automáticamente cada vez que el coche frene bruscamente en una curva peligrosa.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF acceleration < -2 THEN Lamp.setColor('Red'); Lamp.setBrightness(100) ELSE Lamp.setColor('Red'); Lamp.setBrightness(20)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Bola de Discoteca Sensible al Ritmo",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que cambia los colores de la lámpara aleatoriamente basándose en la intensidad del movimiento. Si el movimiento es suave, los cambios son lentos; si el movimiento es frenético, las luces cambian rápidamente como en una fiesta.",
+    "transformedIdeaTitle": "Fiesta de Baile Galáctica",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta espacial! Los alienígenas solo bailan si las luces coinciden con sus movimientos. Crea un programa que cambie las luces de colores locos muy rápido cuando todos salten y bailen con energía.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.intensity > high THEN Lamp.setColor(Random); delay(100) ELSE Lamp.setColor(Random); delay(1000)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Antirrobo Portátil",
+    "originalIdeaDescription": "Un dispositivo de seguridad para proteger objetos personales. Se coloca sobre un objeto y se activa. Si el sensor detecta cualquier movimiento (alguien intentando llevarse el objeto), la lámpara parpadea en colores azul y rojo simulando una patrulla de policía.",
+    "transformedIdeaTitle": "La Trampa para el Ladrón de Galletas",
+    "transformedIdeaDescription": "Alguien se está comiendo tus galletas. Construye una trampa secreta colocando el sensor en el tarro. Si alguien intenta moverlo, ¡haz que las luces de policía parpadeen para atrapar al culpable con las manos en la masa!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.isDetected() THEN Lamp.blink('Blue', 'Red', 200ms)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores RGB por Inclinación",
+    "originalIdeaDescription": "Una herramienta educativa para entender la teoría del color aditivo. La inclinación en el eje X controla la intensidad del rojo, el eje Y controla el verde, y el eje Z controla el azul, permitiendo crear cualquier color combinando las inclinaciones.",
+    "transformedIdeaTitle": "El Pintor de Arcoíris Mágico",
+    "transformedIdeaDescription": "No necesitas pinceles para pintar. Inclina tu paleta mágica hacia adelante para añadir rojo o hacia los lados para añadir verde. ¡Aprende a mezclar los colores primarios para descubrir el amarillo, el cian y el magenta!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Red = map(accel.x); Green = map(accel.y); Lamp.setRGB(Red, Green, 0)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente Visual",
+    "originalIdeaDescription": "Un juego cronometrado donde la luz cambia de verde a amarillo y luego a rojo. Los jugadores deben pasar el dispositivo suavemente. Si el dispositivo detecta un movimiento demasiado brusco (lanzamiento), acelera la cuenta regresiva hacia la 'explosión' roja.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Inestable",
+    "transformedIdeaDescription": "¡Cuidado! Tienes una bomba de plasma inestable en las manos. Pásala a tu compañero con mucho cuidado. Si la mueves muy rápido, el temporizador se acelerará y la luz roja explotará en tus manos. ¡Que no te explote a ti!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "timer -= 1; IF motion > threshold THEN timer -= 10; IF timer <= 0 THEN Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de Propulsor de Cohete",
+    "originalIdeaDescription": "Un juguete interactivo que simula el motor de una nave espacial. Cuando el dispositivo detecta una aceleración vertical positiva (despegue), la luz se torna naranja brillante y parpadea, simulando el fuego de los propulsores.",
+    "transformedIdeaTitle": "Despegue a Marte",
+    "transformedIdeaDescription": "Prepara tu cohete para el lanzamiento. El motor solo se encenderá si detecta que el cohete está subiendo hacia el cielo. ¡Levanta tu nave rápidamente para encender los propulsores de fuego naranja y salir de la atmósfera!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF accel.z > 1.5g THEN Lamp.setColor('Orange'); Lamp.flicker() ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Monitor de Sueño y Luz Nocturna",
+    "originalIdeaDescription": "Una luz inteligente que detecta la inactividad. Si el sensor no detecta movimiento durante un periodo prolongado, asume que el usuario se ha dormido y apaga suavemente la luz. Cualquier movimiento brusco la vuelve a encender.",
+    "transformedIdeaTitle": "El Hada que Duerme",
+    "transformedIdeaDescription": "Ayuda al hada a descansar. Si te quedas muy quieto como una estatua, la luz del hada se apagará lentamente para dormir. Pero si te mueves, ¡se despertará asustada y encenderá su luz de nuevo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF no_motion_for(10s) THEN Lamp.fadeOut() ELSE Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Efectos Visuales de Espada Láser",
+    "originalIdeaDescription": "Simulación de una espada de luz. La lámpara mantiene un color fijo (ej. verde), pero al detectar un impacto o una desaceleración repentina (choque de espadas), emite un destello blanco brillante antes de volver a su color original.",
+    "transformedIdeaTitle": "Caballero Jedi en Entrenamiento",
+    "transformedIdeaDescription": "Construye tu propio sable de luz. Elige tu color: azul o verde. Ahora, programa el sensor para que cuando tu sable golpee contra el de un enemigo (una parada brusca), ¡suelte un chispazo de luz blanca brillante!",
+    "minAge": 8,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.setColor('Green'); IF impact_detected THEN Lamp.flash('White', 100ms)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Frasco de Luciérnagas Virtuales",
+    "originalIdeaDescription": "Un objeto decorativo interactivo. La lámpara está apagada o muy tenue. Al agitar suavemente el dispositivo, las 'luciérnagas' se despiertan y la luz comienza a pulsar en tonos amarillos verdosos, desvaneciéndose si se deja quieto.",
+    "transformedIdeaTitle": "Recolector de Insectos Luminosos",
+    "transformedIdeaDescription": "Has capturado luciérnagas mágicas en un frasco, pero están dormidas. Agita el frasco suavemente para despertarlas y ver cómo brillan con una luz amarilla suave. Si dejas de moverlo, se volverán a dormir y se apagará la luz.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF shake_detected THEN Lamp.pulse('YellowGreen') ELSE Lamp.fadeOut()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Medidor de Progreso de Actividad Física",
+    "originalIdeaDescription": "Un dispositivo tipo podómetro que cuenta los movimientos o pasos. A medida que aumenta el contador de movimientos acumulados, la lámpara cambia de color (de rojo a verde) para indicar que se ha alcanzado el objetivo de actividad.",
+    "transformedIdeaTitle": "Superhéroe Cargando Poder",
+    "transformedIdeaDescription": "Eres un superhéroe recargando energía. Cada vez que saltas o corres, tu barra de energía se llena. Comienzas con una luz roja débil, ¡muévete hasta que tu armadura brille con una luz verde de máxima potencia!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF step_detected THEN energy++; IF energy < 50 THEN Lamp.setColor('Red') ELSE Lamp.setColor('Green')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Indicador de Equilibrio y Nivel",
+    "originalIdeaDescription": "Una herramienta digital de nivelación. Si el dispositivo está perfectamente plano (eje Z alineado con la gravedad), la luz es verde. Si se inclina en cualquier dirección, la luz se vuelve roja proporcionalmente al ángulo de inclinación.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Trabajas en un restaurante elegante y llevas una bandeja muy cara. Debes mantenerla perfectamente plana. Si la bandeja se inclina y la luz se pone roja, ¡se caerán los vasos! Mantén la luz verde para ganar la propina.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF tilt_angle < 5 THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juez Automatizado de 'Congelados'",
+    "originalIdeaDescription": "Un árbitro para el juego de 'Estatua' o 'Luz Roja, Luz Verde'. El sistema alterna aleatoriamente estados. Cuando está en modo 'congelado', si detecta cualquier movimiento en el sensor, enciende la lámpara para eliminar al jugador.",
+    "transformedIdeaTitle": "Escape del Ojo del Dragón",
+    "transformedIdeaDescription": "Estás robando el tesoro de un dragón dormido. Cuando el dragón abre el ojo (luz roja), no puedes moverte ni un milímetro. Si el sensor detecta movimiento mientras la luz debería ser roja, ¡el dragón te lanzará fuego (parpadeo rápido)!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF game_state == 'STOP' AND motion > 0 THEN Lamp.blink('Red', fast) ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Vela Electrónica Sensible al Viento",
+    "originalIdeaDescription": "Simulación de una llama de vela. La luz parpadea aleatoriamente en naranja. Si el sensor de movimiento detecta un soplido (vibración fuerte de aire) o una sacudida, la luz parpadea violentamente o se apaga temporalmente.",
+    "transformedIdeaTitle": "Explorador de Tumbas Antiguas",
+    "transformedIdeaDescription": "Estás en una tumba antigua con solo una vela. El viento sopla fuerte. Si te mueves rápido o soplas sobre el sensor, la llama de tu vela parpadeará como si se fuera a apagar. ¡Camina despacio para no quedarte a oscuras!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "flicker = random(); IF shake > medium THEN flicker = 0; Lamp.setBrightness(flicker)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Señalizador de Giro para Ciclistas",
+    "originalIdeaDescription": "Un dispositivo montado en la espalda o casco. Al inclinar el cuerpo hacia la izquierda, la lámpara parpadea en amarillo en el lado izquierdo (o un color distintivo). Al inclinarse a la derecha, cambia de color o patrón para indicar el giro.",
+    "transformedIdeaTitle": "Navegante de Moto Acuática",
+    "transformedIdeaDescription": "Conduce tu moto acuática por el circuito. Para indicar a los demás hacia dónde vas, programa tu chaleco salvavidas: inclínate a la izquierda para encender la luz amarilla y a la derecha para encender la luz violeta. ¡Conduce con seguridad!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF tilt_left THEN Lamp.setColor('Yellow') ELSE IF tilt_right THEN Lamp.setColor('Purple')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Barra de Vida con Drenaje por Movimiento",
+    "originalIdeaDescription": "Una mecánica de juego donde la luz representa la 'estamina'. La luz comienza blanca y brillante. Cada vez que se detecta movimiento, la 'energía' disminuye, atenuando la luz y cambiándola a rojo hasta que se agota (apagado).",
+    "transformedIdeaTitle": "El Robot con Fugas de Aceite",
+    "transformedIdeaDescription": "Tu robot está dañado y pierde energía cada vez que se mueve. Tienes que llegar a la base de reparaciones antes de que tu luz se vuelva roja y se apague por completo. ¡Optimiza tus movimientos para sobrevivir!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF moving THEN stamina--; color = map(stamina, 100, 0, White, Red); Lamp.setColor(color)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Visualizador de Ritmo Cardíaco Simulado",
+    "originalIdeaDescription": "Un dispositivo que simula un corazón latiendo. Al estar en reposo, la luz pulsa lentamente en rojo. Al agitar el dispositivo (simulando ejercicio), el ritmo de los pulsos de luz se acelera drásticamente para imitar la taquicardia.",
+    "transformedIdeaTitle": "Doctor de Corazones Robóticos",
+    "transformedIdeaDescription": "Eres un médico de robots. Tu paciente robot acaba de correr una maratón. Programa su corazón (la luz) para que lata muy rápido cuando el robot se mueve mucho, y para que lata lento y tranquilo cuando el robot descansa.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "bpm = map(motion_intensity, 0, 10, 60, 140); Lamp.pulse(bpm)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Baliza de Rescate Automática",
+    "originalIdeaDescription": "Un dispositivo de seguridad para aventureros. Si el acelerómetro detecta una caída libre (gravedad cercana a cero) seguida de un impacto fuerte y luego inmovilidad total, activa una luz estroboscópica SOS automática.",
+    "transformedIdeaTitle": "Misión de Rescate en la Montaña",
+    "transformedIdeaDescription": "Un escalador ha caído y está inconsciente. Diseña un sistema inteligente que detecte la caída (golpe fuerte) y, si el escalador no se mueve después del golpe, encienda automáticamente una luz de emergencia parpadeante para llamar al helicóptero.",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF impact > critical AND wait(5s) AND motion == 0 THEN Lamp.strobe('White', 'SOS')"
+  }
+]

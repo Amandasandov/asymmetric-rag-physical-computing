@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Antirrobo",
+    "originalIdeaDescription": "Un sistema de seguridad simple donde el interruptor activa el modo de vigilancia. Una vez activado, cualquier movimiento detectado por el sensor hará que la lámpara parpadee en rojo para alertar sobre el intruso.",
+    "transformedIdeaTitle": "La Trampa del Frasco de Galletas",
+    "transformedIdeaDescription": "¡Protege tus dulces! Crea un sistema de seguridad para tu frasco de galletas. Activa la trampa con un interruptor secreto. Si tu hermano intenta mover el frasco, la luz roja parpadeará furiosamente para atraparlo con las manos en la masa.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.shake() THEN Lamp.blink('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Linterna de Dínamo Virtual",
+    "originalIdeaDescription": "Simulación de una linterna que necesita ser agitada para cargar su batería. El interruptor enciende la luz, pero esta se apaga gradualmente a menos que el usuario agite el dispositivo para 'recargar' la energía lumínica.",
+    "transformedIdeaTitle": "Explorador de Cuevas Profundas",
+    "transformedIdeaDescription": "Estás atrapado en una cueva oscura y tu linterna se está quedando sin pilas. Usa el interruptor para encenderla, pero debes mantenerte en movimiento y agitar tu equipo para generar energía cinética y mantener la luz brillante.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.magnitude > 5 THEN Lamp.brightness(100) ELSE Lamp.fade())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos",
+    "originalIdeaDescription": "El dispositivo actúa como una varita. El interruptor selecciona el tipo de hechizo (color de la luz). Al realizar un movimiento brusco hacia adelante, la lámpara emite un destello brillante simulando el lanzamiento del hechizo.",
+    "transformedIdeaTitle": "Escuela de Magos: Duelo de Varitas",
+    "transformedIdeaDescription": "Conviértete en un aprendiz de mago. Usa el interruptor para cambiar entre hechizos de Fuego (Rojo) y Hielo (Azul). Cuando estés listo, agita tu varita fuertemente para lanzar el hechizo y ver cómo brilla la magia.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Lamp.color('Blue') ELSE Lamp.color('Red'); IF Motion.shake() THEN Lamp.flash()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Freno para Bicicleta",
+    "originalIdeaDescription": "Un accesorio de seguridad para ciclistas. El interruptor enciende la luz trasera en modo fijo. Cuando el sensor de movimiento detecta una desaceleración brusca, la lámpara aumenta su intensidad o cambia a rojo brillante.",
+    "transformedIdeaTitle": "Bici-Segura: El Freno Inteligente",
+    "transformedIdeaDescription": "Diseña una luz inteligente para tu bicicleta. Actívala antes de empezar a pedalear. Programa el sensor para que, si detecta que frenas de golpe, la luz se ponga roja intensa para avisar a quien vaya detrás de ti.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.deceleration() THEN Lamp.color('Bright Red') ELSE Lamp.color('Dim Red'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores por Agitación",
+    "originalIdeaDescription": "Una herramienta creativa donde el interruptor cambia el color base. Al agitar el dispositivo, la intensidad y el tono del color cambian aleatoriamente, permitiendo crear nuevos colores mediante el movimiento.",
+    "transformedIdeaTitle": "El Laboratorio del Alquimista Loco",
+    "transformedIdeaDescription": "Eres un alquimista creando pociones mágicas. Presiona el interruptor para añadir ingredientes base. Luego, ¡agita tu matraz (el dispositivo) para mezclar! Observa cómo la poción cambia de color misteriosamente cuanto más la agitas.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.toggled() THEN Lamp.resetColor(); IF Motion.shake() THEN Lamp.color(Random)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Un sismógrafo visual. El interruptor reinicia y calibra el sistema. Si el sensor detecta vibraciones en la superficie, la lámpara cambia de verde (seguro) a rojo (peligro) según la intensidad.",
+    "transformedIdeaTitle": "Monitor del Volcán Activo",
+    "transformedIdeaDescription": "Vives al pie de un volcán. Construye un dispositivo para detectar temblores. Si la tierra está tranquila (verde), estás a salvo. Pero si el suelo tiembla, ¡la luz debe ponerse roja para alertar a la aldea que evacúe!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.vibration > Threshold THEN Lamp.color('Red') ELSE Lamp.color('Green'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Visual",
+    "originalIdeaDescription": "Un juego donde el interruptor inicia la ronda. La luz está verde mientras los jugadores pueden moverse. Si el sensor detecta movimiento cuando la luz cambia a roja (controlado por tiempo), el jugador pierde.",
+    "transformedIdeaTitle": "El Ojo de Medusa",
+    "transformedIdeaDescription": "Entra en la guarida de Medusa. Presiona el interruptor para desafiarla. Mientras su ojo brilla verde, puedes bailar. Pero cuidado, si se pone rojo y te mueves aunque sea un poco, ¡quedarás petrificado!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Lamp.color == 'Red' AND Motion.movement() THEN GameOver()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Espada Láser Interactiva",
+    "originalIdeaDescription": "Juguete que simula una espada de energía. El interruptor 'enciende' la hoja de luz. Al mover la espada, la luz parpadea simulando el choque con otros objetos o el zumbido de la energía.",
+    "transformedIdeaTitle": "Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada láser. Activa el núcleo de energía con el interruptor para iluminar la hoja. Al batirte en duelo y mover la espada por el aire, haz que la luz parpadee para simular choques épicos.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.on(); IF Motion.swing() THEN Lamp.flicker()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Saltos con Luz",
+    "originalIdeaDescription": "Dispositivo para ejercicio. El interruptor inicia la sesión. Cada vez que el sensor detecta un salto (movimiento vertical brusco), la lámpara cambia de color, motivando al usuario a seguir moviéndose.",
+    "transformedIdeaTitle": "Entrenamiento de Astronautas",
+    "transformedIdeaDescription": "Prepárate para la baja gravedad. Activa tu traje con el interruptor. Cada vez que hagas un salto estelar (jumping jack), tu traje brillará de un color diferente. ¡Intenta conseguir 10 colores seguidos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.jump() THEN Lamp.nextColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz de Lectura Inteligente",
+    "originalIdeaDescription": "Lámpara que ayuda a ahorrar energía. El interruptor la enciende. Si no se detecta movimiento (cambio de postura o página) durante un tiempo, la luz se atenúa para avisar que se apagará pronto.",
+    "transformedIdeaTitle": "El Guardián de la Biblioteca",
+    "transformedIdeaDescription": "Diseña una lámpara mágica para leer bajo las sábanas. Si te quedas dormido y dejas de moverte, la lámpara se atenuará suavemente para no gastar magia. Si te mueves, ¡volverá a brillar!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Timer > X AND Motion.isStill() THEN Lamp.dim() ELSE Lamp.bright())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Comunicador de Código Morse",
+    "originalIdeaDescription": "Sistema de comunicación visual. El interruptor habilita el modo de transmisión. Inclinar el dispositivo hacia adelante genera un punto (luz corta) y hacia atrás una raya (luz larga).",
+    "transformedIdeaTitle": "Agente Secreto: Mensaje en la Oscuridad",
+    "transformedIdeaDescription": "Envía mensajes secretos a tu compañero espía. Activa el transmisor y usa el movimiento para enviar señales luminosas. Inclinación rápida es un punto, inclinación lenta es una raya. ¡Que no te descubran!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.tiltForward() THEN Lamp.flashShort() ELSE IF Motion.tiltBack() THEN Lamp.flashLong())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Actividad Paranormal",
+    "originalIdeaDescription": "Juguete de simulación. El interruptor enciende el escáner. La lámpara parpadea erráticamente y cambia de color basándose en lecturas sutiles del sensor de movimiento, simulando la detección de fantasmas.",
+    "transformedIdeaTitle": "Cazadores de Espectros",
+    "transformedIdeaDescription": "Hay algo extraño en el vecindario. Enciende tu detector de espectros. Camina sigilosamente; si la luz comienza a parpadear y cambia a morado sin que tú lo provoques, ¡has encontrado un fantasma!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.randomFluctuation() THEN Lamp.flickerColor('Purple'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Huevo de Mascota Virtual",
+    "originalIdeaDescription": "Simulación de incubación. El interruptor activa el calentador (luz naranja suave). El usuario debe mantener el dispositivo quieto y cálido. Si se agita demasiado, la luz se pone azul (frío/malestar).",
+    "transformedIdeaTitle": "Incubando el Huevo de Dragón",
+    "transformedIdeaDescription": "Te han confiado un huevo de dragón. Enciende la incubadora con el interruptor para darle calor (luz naranja). Debes caminar con mucho cuidado; si agitas mucho el huevo, se enfriará (luz azul) y el dragón no nacerá.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.isStable() THEN Lamp.color('Orange') ELSE Lamp.color('Blue'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Digital",
+    "originalIdeaDescription": "Herramienta de construcción simplificada. El interruptor congela la medición. La lámpara cambia de color según la inclinación detectada por el sensor de movimiento: Verde si está plano, Rojo si está inclinado.",
+    "transformedIdeaTitle": "El Maestro Constructor",
+    "transformedIdeaDescription": "Ayuda a construir una torre recta. Coloca el dispositivo sobre una superficie. Si la luz es verde, ¡es perfecto! Si es roja, la torre se caerá. Usa el interruptor para guardar la posición correcta.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.isFlat() THEN Lamp.color('Green') ELSE Lamp.color('Red'); IF Switch.click() THEN LockColor()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Desactivación de Bomba",
+    "originalIdeaDescription": "Juego de tensión. La lámpara parpadea en rojo rápidamente. El usuario debe mantener el dispositivo perfectamente quieto mientras presiona el interruptor para desactivarla. Si se mueve, explota (luz blanca fija).",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "¡Corta el cable rojo! Tienes una misión delicada. La luz parpadea indicando peligro. Debes mantener el pulso firme y presionar el interruptor sin mover el dispositivo ni un milímetro, o... ¡BOOM!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.pressed() AND Motion.magnitude > 0 THEN Lamp.color('White') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Bola de Cristal del Futuro",
+    "originalIdeaDescription": "Juguete de adivinación. El usuario hace una pregunta, presiona el interruptor y agita el dispositivo. La lámpara se ilumina de un color específico (Verde=Sí, Rojo=No, Amarillo=Quizás) cuando se detiene el movimiento.",
+    "transformedIdeaTitle": "El Oráculo Místico",
+    "transformedIdeaDescription": "Pregúntale al Oráculo sobre tu destino. Mantén presionado el interruptor místico, agita la esfera y formula tu pregunta. Al detenerte, el Oráculo revelará la respuesta a través del color de la luz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.held() AND Motion.shakeEnds() THEN Lamp.color(RandomChoice(['Green','Red','Yellow']))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de DJ Gestual",
+    "originalIdeaDescription": "Interfaz para performance. El interruptor activa el modo 'Efectos'. Mover el dispositivo en el eje X cambia el color de la luz (frecuencia visual) y en el eje Y cambia el brillo, simulando control de audio.",
+    "transformedIdeaTitle": "DJ de Luces en el Escenario",
+    "transformedIdeaDescription": "¡Tú controlas el espectáculo de luces! Activa la mesa de mezclas. Mueve tu mano de izquierda a derecha para cambiar los colores y de arriba a abajo para la intensidad. ¡Haz que el público enloquezca!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (Lamp.hue(Motion.X), Lamp.brightness(Motion.Y))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "Prueba de reflejos. La lámpara se enciende en un color aleatorio. El usuario debe agitar el dispositivo rápidamente solo si el color es verde. El interruptor sirve para reiniciar el juego.",
+    "transformedIdeaTitle": "Reflejos de Ninja",
+    "transformedIdeaDescription": "Entrena tus reflejos. Espera a que la luz se encienda. Si es VERDE, ¡ataca (agita) rápido! Si es ROJA y te mueves, fallas. Usa el interruptor para comenzar una nueva ronda de entrenamiento.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.randomColor(); IF Color == 'Green' AND Motion.shake() THEN Score++ ELSE Fail"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Buscador de Tesoros Caliente/Frío",
+    "originalIdeaDescription": "Juego de búsqueda. Un usuario esconde el tesoro. Otro usa el dispositivo; el interruptor inicia la búsqueda. Simulamos proximidad: cuanto más se agita/camina (pasos), más cambia la luz de azul a rojo.",
+    "transformedIdeaTitle": "La Búsqueda del Tesoro Pirata",
+    "transformedIdeaDescription": "Esconde un tesoro imaginario. Tu amigo debe encontrarlo. A medida que camina y se mueve buscando (detectado por el sensor), haz que la luz cambie de 'Frío' (Azul) a 'Caliente' (Rojo) para guiarlo.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.color(Map(Motion.cumulativeMovement, Blue, Red))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Motion",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Lavado de Manos",
+    "originalIdeaDescription": "Herramienta de higiene. El interruptor comienza el lavado. El sensor de movimiento asegura que el usuario esté frotándose las manos. La lámpara progresa de rojo a verde durante 20 segundos de movimiento continuo.",
+    "transformedIdeaTitle": "Manos Limpias, Manos Mágicas",
+    "transformedIdeaDescription": "¡Elimina los gérmenes! Presiona el botón y empieza a lavarte las manos. El sensor vigilará que te muevas. La luz comenzará roja y se volverá verde solo si te frotas las manos sin parar durante 20 segundos.",
+    "minAge": 5,
+    "maxAge": 9,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.start() AND Motion.active() THEN Timer.count() -> Lamp.gradient('Red', 'Green')"
+  }
+]

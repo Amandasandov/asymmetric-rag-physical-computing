@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "Un sistema de seguridad simple donde el interruptor activa o desactiva la alarma. Cuando el sistema está activado (armado), cualquier ruido fuerte detectado por el sensor de ruido hará que la lámpara parpadee en rojo.",
+    "transformedIdeaTitle": "El Guardián del Tesoro Real",
+    "transformedIdeaDescription": "¡Protege el tesoro del rey! Eres el ingeniero jefe del castillo. Debes programar una trampa mágica. Usa el interruptor para 'armar' la seguridad antes de irte a dormir. Si un ladrón hace ruido al entrar, la joya (Lámpara) debe parpadear en rojo para alertar a los guardias.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > 50 THEN Lamp.flash('Red') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Luz por Aplauso",
+    "originalIdeaDescription": "Un dispositivo de automatización del hogar. El interruptor principal habilita el sistema de escucha. Una vez habilitado, un pico repentino de ruido (como un aplauso) alterna el estado de la lámpara entre encendido y apagado.",
+    "transformedIdeaTitle": "El Mago Perezoso",
+    "transformedIdeaDescription": "Un mago muy perezoso no quiere levantarse de la cama para apagar la luz. Ayúdale a crear un hechizo. Primero, activa la varita (Interruptor). Luego, programa el sistema para que, al detectar un aplauso fuerte, la luz mágica se encienda o se apague automáticamente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > Threshold THEN Lamp.toggleState()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Biblioteca",
+    "originalIdeaDescription": "Una herramienta para mantener el silencio. El interruptor enciende el dispositivo. Si el nivel de ruido ambiental supera un límite aceptable, la lámpara se ilumina en amarillo como advertencia para guardar silencio.",
+    "transformedIdeaTitle": "El Bibliotecario Robot",
+    "transformedIdeaDescription": "La biblioteca de la escuela del futuro necesita ayuda. Los estudiantes hablan demasiado fuerte. Crea un robot bibliotecario que, al encenderse (Interruptor), vigile el ruido. Si detecta que alguien habla (Ruido > 30), debe encender su luz amarilla de advertencia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > 30 THEN Lamp.setColor('Yellow') ELSE Lamp.off())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Vela Digital",
+    "originalIdeaDescription": "La lámpara simula la llama de una vela (color naranja). El interruptor 'enciende' la mecha. Si el sensor de ruido detecta un soplido fuerte (ruido alto constante), la lámpara se apaga, simulando que se ha extinguido.",
+    "transformedIdeaTitle": "Soplando el Pastel de Cumpleaños",
+    "transformedIdeaDescription": "¡Es una fiesta de cumpleaños virtual! Primero, usa el interruptor para encender la vela del pastel. Luego, desafía a tus amigos a soplar fuerte hacia el sensor. Si el 'viento' (ruido) es lo suficientemente fuerte, la vela debe apagarse para que puedas pedir un deseo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColor('Orange'); IF NoiseLevel > 80 THEN Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luces de Discoteca Rítmicas",
+    "originalIdeaDescription": "Un sistema de iluminación para fiestas. El interruptor cambia entre modo 'relajado' (luz fija) y modo 'fiesta'. En modo fiesta, la lámpara cambia de color aleatoriamente cada vez que detecta un golpe de sonido (beat).",
+    "transformedIdeaTitle": "La Discoteca Silenciosa",
+    "transformedIdeaDescription": "Vamos a programar la pista de baile. Tienes un interruptor de modo: si está apagado, la luz es blanca y tranquila. Si lo enciendes, ¡empieza la fiesta! La luz debe cambiar de color cada vez que detecte el ritmo de la música o tus aplausos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > BeatThreshold THEN Lamp.setRandomColor()) ELSE Lamp.setColor('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Gritos de Feria",
+    "originalIdeaDescription": "Un juego de fuerza vocal. El interruptor reinicia el juego. El usuario grita lo más fuerte posible y la lámpara cambia de color (Verde -> Amarillo -> Rojo) según la intensidad máxima alcanzada.",
+    "transformedIdeaTitle": "El Concurso de Rugidos de Dragón",
+    "transformedIdeaDescription": "¿Quién tiene el rugido más poderoso? Usa el interruptor para preparar el medidor. Luego, ¡ruge como un dragón! Si ruges suave, la luz es verde. Si ruges medio, amarilla. Pero si ruges fortísimo, ¡la luz se pondrá roja indicando que eres el rey de los dragones!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Noise < 30 Green, IF Noise < 70 Yellow, IF Noise >= 70 Red)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna Automática Suave",
+    "originalIdeaDescription": "Una luz nocturna para niños. El interruptor activa el sistema. Si hay silencio total, la luz está apagada. Si el niño se despierta y llora o habla (ruido bajo/medio), la lámpara se enciende en un tono azul suave para calmarlo.",
+    "transformedIdeaTitle": "La Cueva de las Luciérnagas",
+    "transformedIdeaDescription": "Crea una cueva inteligente que cuida a sus habitantes. Activa el sistema con el interruptor. La cueva está oscura, pero si las luciérnagas (el sensor) escuchan un ruido asustado, deben encender una luz azul suave y tenue para decir 'todo está bien'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > 10 THEN Lamp.setColor('SoftBlue') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenamiento de Ninja Sigiloso",
+    "originalIdeaDescription": "Un juego para practicar el sigilo. El interruptor inicia la ronda. La lámpara permanece verde mientras haya silencio. Si el usuario hace cualquier ruido al moverse, la lámpara se pone roja, indicando que ha sido descubierto.",
+    "transformedIdeaTitle": "Escape de la Mansión Embrujada",
+    "transformedIdeaDescription": "Eres un fantasma intentando no ser detectado. Activa el modo sigilo con el interruptor. Debes caminar por la habitación sin hacer ruido. La luz verde significa que estás seguro. ¡Pero cuidado! Al más mínimo crujido (ruido), la luz roja se encenderá y te habrán atrapado.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > 5 THEN Lamp.setColor('Red') ELSE Lamp.setColor('Green'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Comunicador de Código Morse",
+    "originalIdeaDescription": "Sistema para enviar mensajes visuales usando sonido. El interruptor habilita la transmisión. Sonidos cortos generan parpadeos cortos de la lámpara; sonidos largos generan parpadeos largos, permitiendo enviar Morse.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Eres un espía en una misión secreta. No puedes usar cables, solo luz. Usa el interruptor para encender tu transmisor. Golpea la mesa o haz sonidos con tu boca: un sonido corto es un punto (luz breve), un sonido largo es una raya (luz larga). ¡Envía el mensaje SOS!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (Lamp.on() while Noise > Threshold)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Tormentas Simulado",
+    "originalIdeaDescription": "Un prop para obras de teatro o juegos. El interruptor activa el ambiente. Cuando se reproduce un sonido de trueno (o ruido fuerte), la lámpara parpadea en blanco erráticamente como si fuera un relámpago.",
+    "transformedIdeaTitle": "El Cazador de Tormentas",
+    "transformedIdeaDescription": "Vamos a crear efectos especiales para una película. Activa el set de rodaje con el interruptor. Cuando el director grite '¡BOOM!' o golpee un tambor simulando un trueno, tu programación debe hacer que la lámpara parpadee como un relámpago realista.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > 80 THEN Lamp.flash('White', speed=fast)"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Candado Activado por Voz",
+    "originalIdeaDescription": "Simulación de una cerradura biométrica de voz. El interruptor 'cierra' la puerta (Lámpara Roja). Si se detecta un sonido específico (simplificado a nivel de volumen preciso), la lámpara cambia a Verde (abierto).",
+    "transformedIdeaTitle": "La Puerta Mágica de los Elfos",
+    "transformedIdeaDescription": "La puerta de los Elfos está cerrada (Luz Roja) y activada por el interruptor. Solo se abre si dices la palabra mágica con el volumen exacto. Ni muy bajo, ni muy alto. Si logras el nivel de voz medio perfecto, la luz se pondrá Verde y podrás entrar.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() AND (NoiseLevel > 40 AND NoiseLevel < 60) THEN Lamp.setColor('Green') ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Meditación Zen",
+    "originalIdeaDescription": "Ayuda a meditar. El interruptor inicia la sesión. La lámpara brilla en un color relajante. Si hay ruido externo, la lámpara cambia de color momentáneamente para indicar la interrupción, luego vuelve a la calma.",
+    "transformedIdeaTitle": "El Desafío del Monje Zen",
+    "transformedIdeaDescription": "Intenta mantener la calma absoluta. Activa tu 'Aura Zen' con el interruptor (Luz Violeta). Debes quedarte quieto y en silencio. Si haces ruido o te ríes, tu aura se romperá (Luz Roja) y tendrás que volver a concentrarte para recuperar el color violeta.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > 10 THEN Lamp.setColor('Red') ELSE Lamp.setColor('Violet'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Visualizador de Eco (Sonar)",
+    "originalIdeaDescription": "Simula cómo funciona el sonar. El interruptor activa el sistema en oscuridad (Lámpara apagada). Al hacer un ruido corto, la lámpara se enciende brevemente, permitiendo 'ver' en la oscuridad por un instante.",
+    "transformedIdeaTitle": "El Murciélago en la Cueva Oscura",
+    "transformedIdeaDescription": "Eres un murciélago que necesita volar en la oscuridad. Activa tus sentidos con el interruptor. Como no puedes ver, la luz debe estar apagada. Solo cuando emitas un chillido (ruido), la luz se encenderá por un segundo para mostrarte el camino. ¡Navega por eco-localización!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (Lamp.off(); IF NoiseLevel > 20 THEN Lamp.on(duration=1s))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Control de Semáforo por Ruido",
+    "originalIdeaDescription": "Un semáforo experimental. El interruptor cambia el estado del semáforo a 'Escucha'. El ruido del tráfico (simulado por los estudiantes) controla la luz: mucho ruido = Rojo (parar), poco ruido = Verde (avanzar).",
+    "transformedIdeaTitle": "Control de Tráfico Alienígena",
+    "transformedIdeaDescription": "En el planeta X, los coches funcionan con gritos. Usa el interruptor para encender el semáforo. Si hay mucho ruido (muchos coches), pon la luz Roja para evitar choques. Si hay silencio, pon la luz Verde para que avancen. ¡Tú controlas el flujo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > 70 THEN Lamp.setColor('Red') ELSE Lamp.setColor('Green'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Batería Baja Simulado",
+    "originalIdeaDescription": "Simula un robot perdiendo energía. El interruptor enciende al robot (Lámpara brillante). Si no hay 'entrada de energía' (ruido constante) durante un tiempo, la luz se atenúa hasta apagarse.",
+    "transformedIdeaTitle": "El Robot que se Alimenta de Sonido",
+    "transformedIdeaDescription": "Tu robot mascota se alimenta de tus palabras. Enciéndelo con el interruptor. Mientras le hables o cantes (ruido), su corazón (Lámpara) brillará fuerte. Si dejas de hablarle, se pondrá triste y su luz se irá apagando poco a poco hasta 'dormirse'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Noise > 10 THEN Lamp.brightness(100) ELSE Lamp.dim())"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Visuales",
+    "originalIdeaDescription": "Automatización del juego de las estatuas. El interruptor inicia el juego. Mientras hay música (ruido detectado), la lámpara cambia de colores. Cuando la música para (silencio), la lámpara se congela en un color.",
+    "transformedIdeaTitle": "Las Estatuas de Hielo",
+    "transformedIdeaDescription": "¡Juguemos a las estatuas! Activa el juez automático con el interruptor. Pon música en el aula. Mientras el sensor escuche música, la luz bailará con colores. En el momento que la música pare (silencio), la luz debe congelarse en Rojo. ¡Si te mueves, pierdes!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > 20 THEN Lamp.cycleColors() ELSE Lamp.setColor('Red')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Un juguete detector de fantasmas. El interruptor enciende el escáner. La luz parpadea suavemente. Si detecta un pico de ruido repentino (un 'EVP'), la luz parpadea frenéticamente en púrpura.",
+    "transformedIdeaTitle": "Cazafantasmas Paranormales",
+    "transformedIdeaDescription": "Construye tu propio equipo de cazafantasmas. Enciende el escáner con el interruptor. Camina despacio. La luz debe 'respirar' suavemente. Si el sensor capta un sonido extraño (un fantasma invisible), ¡la luz debe volverse loca y parpadear en morado para avisarte!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF NoiseLevel > Spike THEN Lamp.strobe('Purple') ELSE Lamp.breathe('White'))"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Interruptor de Pánico/Emergencia",
+    "originalIdeaDescription": "Sistema de seguridad personal. El interruptor actúa como seguro. Al activarlo, el sistema espera. Si se detecta un grito fuerte, la lámpara entra en modo estroboscópico SOS.",
+    "transformedIdeaTitle": "La Señal de Ayuda del Superhéroe",
+    "transformedIdeaDescription": "Los ciudadanos necesitan tu ayuda. Diseña una baliza de emergencia. El ciudadano activa la caja con el interruptor. Si grita '¡AYUDA!' (ruido muy alto), tu baliza debe lanzar destellos de luz blanca intermitente para llamar al superhéroe más cercano.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND NoiseLevel > 90 THEN Lamp.strobe('White')"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Calibrador de Ruido Ambiental",
+    "originalIdeaDescription": "Herramienta científica. El interruptor toma una 'foto' del nivel de ruido actual y establece un umbral. La lámpara se enciende solo si el ruido supera ese nivel base grabado + 10db.",
+    "transformedIdeaTitle": "El Camaleón Auditivo",
+    "transformedIdeaDescription": "Este camaleón robot se adapta a su entorno. Cuando presionas el interruptor, él 'aprende' cuánto ruido hay en la sala y se queda tranquilo (apagado). Solo si alguien hace un ruido MÁS fuerte que el fondo, el camaleón se sorprenderá y se encenderá.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Base = Noise (when Switch pressed); LOOP: IF Noise > Base + 10 THEN Lamp.on()"
+  },
+  {
+    "componentUsed": [
+      "Lamp",
+      "Noise Level",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Analizador de Intensidad de Aplausos",
+    "originalIdeaDescription": "Para votaciones o concursos. El interruptor abre la votación. La lámpara cambia de azul frío a rojo caliente proporcionalmente al nivel de ruido continuo (aplausos) de la audiencia.",
+    "transformedIdeaTitle": "El Termómetro de la Fama",
+    "transformedIdeaDescription": "¿Cuánto le gusta al público tu actuación? Activa el termómetro con el interruptor al final del show. Si aplauden poco, la luz es azul (frío). Si aplauden muchísimo, la luz se vuelve roja (¡fuego!). ¡Programemos las escalas de color!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Lamp.setColorFromScale(NoiseLevel, BlueToRed)"
+  }
+]

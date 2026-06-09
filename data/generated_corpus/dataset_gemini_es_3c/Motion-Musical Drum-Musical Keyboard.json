@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Ritmos por Sacudida",
+    "originalIdeaDescription": "Un dispositivo que permite al usuario crear una base rítmica sacudiendo el dispositivo. Un eje controla el bombo de la batería y otro eje dispara acordes aleatorios en el teclado, permitiendo improvisar música mediante movimiento físico vigoroso.",
+    "transformedIdeaTitle": "La Banda de un Solo Hombre",
+    "transformedIdeaDescription": "¡Conviértete en una orquesta ambulante! Programa tu dispositivo para que cada vez que lo sacudas hacia la izquierda suene un tambor, y hacia la derecha, un acorde de piano. Tu desafío es coordinar tus movimientos para crear una canción armoniosa sin perder el ritmo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.X > 5 THEN Drum.play('Kick'); IF Motion.X < -5 THEN Keyboard.play('C_Chord')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Alarma de Intrusos Musical",
+    "originalIdeaDescription": "Un sistema de seguridad que detecta cuando alguien mueve un objeto valioso. Al detectar cualquier aceleración, dispara una cacofonía de platillos de batería y notas agudas de piano para asustar al ladrón.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Ruidoso",
+    "transformedIdeaDescription": "Protege tu diario o tus dulces. Crea un algoritmo que detecte el más mínimo movimiento. Si alguien intenta tomar tu dispositivo, debe sonar una alarma estridente usando platillos y teclas agudas. ¡Si está quieto, debe guardar silencio absoluto!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > 0.5 THEN { Drum.play('Crash'); Keyboard.play('High_C'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Efectos de Sonido Climático",
+    "originalIdeaDescription": "Uso de sensores de movimiento para simular una tormenta. Movimientos suaves generan sonidos de lluvia (teclas agudas piano), mientras que sacudidas fuertes generan truenos (batería grave).",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Eres un diseñador de sonido para una película. Debes crear una tormenta interactiva. Inclina suavemente el dispositivo para simular la lluvia con el piano, pero si lo agitas con fuerza, ¡haz que retumbe el trueno con la batería!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake > threshold THEN Drum.play('Tom_Low') ELSE IF Motion.tilt THEN Keyboard.play('Random_High_Note')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Tempo para Ejercicio",
+    "originalIdeaDescription": "Un compañero de entrenamiento que ajusta la música según la intensidad del ejercicio. Si el usuario se mueve rápido, el ritmo de batería y la melodía del piano se aceleran; si se detiene, la música para.",
+    "transformedIdeaTitle": "Entrenador Musical Inteligente",
+    "transformedIdeaDescription": "¡Motívate para moverte! Crea un programa donde el ritmo de la batería coincida con tu velocidad al correr o saltar. Si vas lento, el piano toca una balada suave; si aceleras, ¡se convierte en rock and roll rápido!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SET bpm = Motion.magnitude * 10; Drum.setTempo(bpm); Keyboard.playScale(bpm)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Sonidos",
+    "originalIdeaDescription": "El dispositivo actúa como una varita mágica. Al realizar un movimiento de barrido en el aire, se reproduce un efecto de sonido 'brillante' usando una escala rápida de piano y un platillo suave.",
+    "transformedIdeaTitle": "Escuela de Hechicería Digital",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos digitales. Programa tu 'varita' para que al hacer un movimiento suave hacia arriba, suene un efecto mágico de piano y platillos. ¡El tiempo y la suavidad del movimiento son clave para que el hechizo funcione!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.Y_Accel > 2 THEN { Keyboard.playGlissando(); Drum.play('Splash'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Pasos Gigantes",
+    "originalIdeaDescription": "Detecta saltos o pasos fuertes mediante el eje Z. Cada impacto fuerte reproduce un sonido de bombo grave y una nota de piano muy baja, simulando las pisadas de un gigante o dinosaurio.",
+    "transformedIdeaTitle": "El Caminar del T-Rex",
+    "transformedIdeaDescription": "¡Conviértete en un dinosaurio gigante! Coloca el dispositivo en tu bolsillo y programa un algoritmo que detecte cuando das un pisotón fuerte. Cada paso debe sonar como un golpe de tambor profundo y una nota grave de piano.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.Z > 2.5 THEN { Drum.play('Bass_Drum'); Keyboard.play('Low_A'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Compositor Aleatorio de Jazz",
+    "originalIdeaDescription": "Un sistema que genera jazz experimental. Al girar el dispositivo sobre una mesa, se seleccionan notas de piano al azar dentro de una escala de blues, acompañadas de un ritmo de platillo 'ride' constante.",
+    "transformedIdeaTitle": "Improvisación de Jazz Giratoria",
+    "transformedIdeaDescription": "El Jazz se trata de improvisación. Crea un instrumento que toque un ritmo constante de platillos, pero que cambie las notas del piano basándose en hacia dónde giras o inclinas el dispositivo. ¡Crea tu propio solo de Jazz sin tocar una tecla!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP { Drum.play('Ride'); IF Motion.rotation > 0 THEN Keyboard.playNextJazzNote(); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual",
+    "originalIdeaDescription": "Divide el espacio 3D en zonas. Moverse hacia adelante activa el redoblante, hacia atrás el bombo, a la izquierda el piano y a la derecha los hi-hats, permitiendo 'tocar' en el aire.",
+    "transformedIdeaTitle": "Batería Invisible del Futuro",
+    "transformedIdeaDescription": "Ya no necesitas baquetas. Configura tu dispositivo para que detecte golpes en el aire. Un golpe al frente es un tambor, un golpe atrás es un platillo. ¡Diseña tu propio kit de batería invisible y toca una canción!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Z > 3 THEN Drum.play('Snare') ELSE IF Motion.Z < -3 THEN Drum.play('Kick')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Espada Láser Sonora",
+    "originalIdeaDescription": "Simula el sonido de una espada de energía. El movimiento constante genera un zumbido (piano repetitivo), y los cambios bruscos de dirección (golpes) activan un sonido de choque (batería/platillo).",
+    "transformedIdeaTitle": "Entrenamiento de Caballero Galáctico",
+    "transformedIdeaDescription": "Construye tu propia espada de luz. El dispositivo debe emitir un zumbido constante con el piano mientras lo mueves, pero si detecta un golpe brusco (choque de espadas), debe sonar un fuerte platillo de batería.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.jerk > threshold THEN Drum.play('Crash') ELSE Keyboard.playTone('Low_Hum')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Caída Libre",
+    "originalIdeaDescription": "Identifica cuando el dispositivo está cayendo (gravedad cero relativa). Durante la caída toca una escala descendente de piano y al impacto (pico de aceleración) suena un golpe de batería.",
+    "transformedIdeaTitle": "El Salto al Vacío (Con Precaución)",
+    "transformedIdeaDescription": "¡Ciencia en acción! Programa el dispositivo para detectar cuando está en caída libre (lánzalo suavemente sobre un sofá). Mientras cae, el piano debe bajar de tono, y al aterrizar, ¡la batería debe marcar el final!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.totalForce < 0.2 THEN Keyboard.playScaleDown(); IF Motion.impact THEN Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio Musical",
+    "originalIdeaDescription": "El usuario debe mantener el dispositivo perfectamente plano. Si se inclina, comienza a sonar una batería suave que aumenta de volumen y notas de piano disonantes indicando el error.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que llevas una bandeja llena de vasos. Debes mantener el dispositivo plano. Si te inclinas, el piano empezará a sonar desafinado y la batería redoblará como advertencia. ¿Cuánto tiempo puedes mantener el silencio?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.tilt > 10 THEN { Drum.play('Roll'); Keyboard.play('Dissonant'); } ELSE StopSound()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Vehículo de Carreras Sonoro",
+    "originalIdeaDescription": "Simula el motor de un coche. La inclinación hacia adelante acelera el ritmo de la batería (RPM) y sube el tono del piano (cambio de marcha).",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Transforma tu dispositivo en el volante de un coche de carreras. Al inclinarlo hacia adelante, el 'motor' (piano y batería) debe acelerar y sonar más agudo. ¡Inclínalo hacia atrás para frenar antes de la curva!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET speed = Motion.tiltX; Drum.setTempo(speed); Keyboard.setPitch(speed)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Bailarín de Tap Digital",
+    "originalIdeaDescription": "Dispositivo para sujetar al tobillo. Detecta movimientos verticales cortos y secos para reproducir sonidos de 'clic' (batería aguda) y notas cortas de piano, imitando el baile de claqué.",
+    "transformedIdeaTitle": "Zapatos de Baile Mágicos",
+    "transformedIdeaDescription": "¿Puedes hacer música con tus pies? Sujeta el sensor a tu pierna. Cada vez que zapatees, debe sonar un 'clic' de madera (batería) y una nota musical. ¡Crea una coreografía donde tus pies toquen la melodía!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Y_Jerk > threshold THEN { Drum.play('Woodblock'); Keyboard.play('Staccato_Note'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Caja de Música a Cuerda Virtual",
+    "originalIdeaDescription": "Emula una caja de música antigua. Solo reproduce una melodía de piano y un ritmo suave mientras el usuario hace un movimiento circular constante (dar cuerda) con el dispositivo.",
+    "transformedIdeaTitle": "La Cajita de Música Infinita",
+    "transformedIdeaDescription": "Esta caja de música solo funciona si le das cuerda. Debes hacer círculos constantes con el dispositivo para que suene la canción de piano y el ritmo suave. Si dejas de moverte, ¡la música se detiene tristemente!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isRotating() THEN { Keyboard.playNextNote('Lullaby'); Drum.play('Soft_Beat'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos",
+    "originalIdeaDescription": "Monitorea la estabilidad de una superficie. Vibraciones leves tocan notas graves de piano (advertencia); vibraciones fuertes activan redobles de batería caóticos (emergencia).",
+    "transformedIdeaTitle": "Sismógrafo Musical",
+    "transformedIdeaDescription": "Construye una estación científica. Coloca el dispositivo en una mesa y golpéala suavemente. El programa debe diferenciar entre un temblor pequeño (notas graves) y un gran terremoto (batería ruidosa).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake < 2 THEN Keyboard.play('Low_C') ELSE IF Motion.shake > 5 THEN Drum.play('Chaos')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Tenis de Mesa Sónico",
+    "originalIdeaDescription": "Simula un juego de ping-pong invisible. Un movimiento rápido lateral activa un sonido de 'golpe' (batería) y una nota que rebota, esperando que otro jugador haga el movimiento contrario.",
+    "transformedIdeaTitle": "Ping-Pong Aéreo",
+    "transformedIdeaDescription": "Juega al ping-pong sin mesa ni pelota. Haz un gesto de raqueta para 'golpear' la bola sónica (sonido de batería y piano). ¡Desafía a un amigo a devolver el golpe justo a tiempo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.swingDetected THEN { Drum.play('Hit'); Keyboard.play('Ping'); Wait_For_Return(); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Robot",
+    "originalIdeaDescription": "Simula sonidos robóticos basados en el movimiento. Movimientos en eje X hacen sonidos mecánicos de batería, movimientos en Y hacen sonidos computacionales de piano.",
+    "transformedIdeaTitle": "Soy un Robot",
+    "transformedIdeaDescription": "Camina y muévete como un robot. Programa el dispositivo para que tus movimientos rígidos produzcan sonidos mecánicos de batería y 'bips' de computadora con el piano. ¡Haz tu mejor imitación de robot!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.X_Change THEN Drum.play('Clank'); IF Motion.Y_Change THEN Keyboard.play('Beep')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mezclador DJ de Ejes",
+    "originalIdeaDescription": "Usa los ejes X, Y, Z para controlar volúmenes de diferentes pistas. X controla el volumen del bombo, Y el de la caja, y Z el volumen de la melodía del piano.",
+    "transformedIdeaTitle": "DJ Espacial 3D",
+    "transformedIdeaDescription": "Controla la fiesta moviendo el dispositivo en el aire. Si lo mueves a los lados, controlas el bombo; arriba y abajo, la melodía. ¡Encuentra la posición perfecta en el aire para que suene toda la canción a la vez!",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Drum.KickVol = Motion.X; Drum.SnareVol = Motion.Y; Keyboard.Vol = Motion.Z"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento de Viento Virtual",
+    "originalIdeaDescription": "El usuario debe 'soplar' (detectado por micro-vibraciones constantes o un gesto específico) mientras inclina el dispositivo para cambiar las notas del piano, con acompañamiento rítmico de fondo.",
+    "transformedIdeaTitle": "La Flauta Mágica",
+    "transformedIdeaDescription": "Crea un instrumento nuevo. Mantén el dispositivo frente a ti e inclínalo para cambiar las notas del piano como si fuera una flauta. Agrega un ritmo de batería suave que solo suene cuando el instrumento está en posición de tocar.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.position == 'Mouth' THEN { Keyboard.playNote(Motion.tilt); Drum.play('Beat'); }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de la Estatua",
+    "originalIdeaDescription": "La música (batería y piano) suena mientras el sensor detecta movimiento continuo. Si el sensor detecta que el movimiento se detiene, la música se corta abruptamente.",
+    "transformedIdeaTitle": "Estatuas Musicales Inversas",
+    "transformedIdeaDescription": "Un giro clásico: La música solo suena MIENTRAS te mueves. Baila para activar la batería y el piano. En el momento en que te quedes quieto como una estatua, la música debe morir. ¡No pares de moverte!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude > 0 THEN { Drum.playLoop(); Keyboard.playLoop(); } ELSE StopAll()"
+  }
+]

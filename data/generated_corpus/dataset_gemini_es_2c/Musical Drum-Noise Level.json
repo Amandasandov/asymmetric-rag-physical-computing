@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Activación de Caja por Aplauso",
+    "originalIdeaDescription": "Un sistema simple donde al detectar un sonido fuerte y seco, como un aplauso, el componente de batería reproduce el sonido de una caja (snare) instantáneamente. Esto crea una respuesta auditiva inmediata basada en el ruido ambiental.",
+    "transformedIdeaTitle": "El Baterista Invisible",
+    "transformedIdeaDescription": "¡Convierte tu habitación en un escenario! Programa una aplicación que escuche tus aplausos. Cada vez que aplaudas fuerte, la aplicación tocará la caja de la batería. Intenta aplaudir con diferentes ritmos para ver si tu 'baterista invisible' puede seguirte el paso.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 80 THEN Musical_Drum.play('Snare')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio para Bibliotecas",
+    "originalIdeaDescription": "Una herramienta para mantener el silencio en una sala de estudio. Si el nivel de ruido ambiental supera un umbral establecido durante más de unos segundos, suena un platillo suave o un gong para recordar a los usuarios que bajen la voz.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Eres el encargado de la biblioteca mágica y debes mantener el silencio. Crea un programa que vigile el ruido. Si tus amigos empiezan a hablar demasiado fuerte, ¡haz que suene un Gong místico automáticamente para recordarles que deben susurrar!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 50 THEN Musical_Drum.play('Crash_Cymbal')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Pasos de Gigante",
+    "originalIdeaDescription": "Al detectar un golpe fuerte en el suelo (vibración/ruido grave), la aplicación reproduce un sonido de bombo (bass drum) profundo y resonante, simulando que quien camina es mucho más pesado de lo que es en realidad.",
+    "transformedIdeaTitle": "Zapatos de T-Rex",
+    "transformedIdeaDescription": "¡Transfórmate en un enorme dinosaurio! Programa la tablet para que detecte cuando pisas fuerte contra el suelo. Cada vez que des un pisotón, la aplicación hará sonar un enorme bombo, haciendo creer a todos que un T-Rex se acerca.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 90 THEN Musical_Drum.play('Bass_Drum')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Respuesta de Eco Rítmico",
+    "originalIdeaDescription": "El sistema escucha un patrón de sonido corto. Al terminar el sonido, reproduce una secuencia aleatoria de percusión, funcionando como un eco distorsionado o una respuesta musical a la voz del usuario.",
+    "transformedIdeaTitle": "El Loro Robot Musical",
+    "transformedIdeaDescription": "Has encontrado un loro robot en la selva digital. Háblale o grítale algo corto, y programa al robot para que te responda no con palabras, sino con un redoble de tambores aleatorio. ¡Intenta mantener una conversación rítmica con él!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 60 THEN WAIT(1s); Musical_Drum.play('Tom_Tom_Run')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma para Intrusos",
+    "originalIdeaDescription": "Un dispositivo de seguridad casero que monitorea una habitación silenciosa. Si detecta cualquier ruido por encima del ruido de fondo normal, dispara una secuencia rápida y fuerte de batería para asustar al intruso.",
+    "transformedIdeaTitle": "Trampa para Espías",
+    "transformedIdeaDescription": "Protege tu base secreta. Configura el sensor para que detecte el más mínimo ruido de pasos sigilosos. Si alguien intenta entrar en tu habitación, ¡activa una alarma de batería frenética para atrapar al espía in fraganti!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 30 THEN REPEAT 10 TIMES Musical_Drum.play('Hi_Hat_Open')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Acompañamiento Automático de Beatbox",
+    "originalIdeaDescription": "El usuario hace sonidos rítmicos con la boca (beatbox). El sistema detecta los picos de volumen y añade automáticamente un 'Hi-Hat' en los sonidos más suaves y un 'Kick' en los más fuertes para enriquecer el ritmo.",
+    "transformedIdeaTitle": "Tu Banda de Respaldo",
+    "transformedIdeaDescription": "¿Te gusta hacer beatbox? Crea un programa inteligente que te acompañe. Si haces un sonido suave, la app tocará un platillo; si haces un sonido fuerte, tocará el bombo. ¡Conviértete en una banda de un solo hombre!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Level > 80 THEN Musical_Drum.play('Kick') ELSE IF Noise_Level > 40 THEN Musical_Drum.play('Hi_Hat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Sigilo Ninja",
+    "originalIdeaDescription": "Un juego donde el usuario debe moverse de un punto A a un punto B sin hacer ruido. Si el nivel de ruido supera un umbral bajo, suena un 'Crash Cymbal' indicando que ha perdido o ha sido descubierto.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Pies de Algodón",
+    "transformedIdeaDescription": "El Sensei te está poniendo a prueba. Debes cruzar la habitación sin hacer ningún ruido. Programa la app para que detecte cualquier sonido. Si eres demasiado ruidoso, sonará el platillo y tendrás que volver a empezar. ¿Puedes ser totalmente silencioso?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 20 THEN Musical_Drum.play('Crash') AND Game_Over()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos para Concursos",
+    "originalIdeaDescription": "Utilizado para determinar el ganador de un concurso basado en la ovación del público. Cuanto más alto sea el nivel de ruido constante, más rápido y fuerte sonará un redoble de tambores.",
+    "transformedIdeaTitle": "El Aplausómetro de Talentos",
+    "transformedIdeaDescription": "Organiza un concurso de talentos con tus amigos. Crea un 'Aplausómetro' que escuche los gritos y aplausos del público. Si el ruido es muy fuerte, ¡haz que la batería toque un ritmo de celebración súper rápido para anunciar al ganador!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "VAR speed = (100 - Noise_Level); REPEAT Musical_Drum.play('Snare', speed)"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Efectos de Sonido para Historias de Terror",
+    "originalIdeaDescription": "Al contar una historia de miedo, el narrador puede elevar la voz repentinamente (jump scare). El sistema detecta este cambio brusco de volumen y reproduce un golpe dramático de percusión para aumentar el susto.",
+    "transformedIdeaTitle": "Cuentacuentos de Terror",
+    "transformedIdeaDescription": "Escribe una historia de miedo para contar en la oscuridad. Programa efectos de sonido automáticos: cuando grites '¡BUUU!' en la parte más aterradora, la tablet debe detectar el grito y tocar un golpe dramático de tambor para asustar a tu audiencia.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Change_Rate > HIGH THEN Musical_Drum.play('Tom_Floor')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulación de Tormenta Eléctrica",
+    "originalIdeaDescription": "El usuario sopla o hace ruido de viento constante. Si hace un ruido fuerte y seco (como un trueno simulado), el sistema responde con una secuencia de bombos y toms que imitan el retumbar de una tormenta.",
+    "transformedIdeaTitle": "El Dios del Trueno",
+    "transformedIdeaDescription": "Controla el clima con tu voz. Si haces un sonido de 'swish' suave, no pasa nada, pero si das una palmada fuerte como un rayo, programa la app para que desate una tormenta de tambores graves que sacuda la habitación.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 85 THEN Musical_Drum.play_sequence('Thunder_Roll')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Despertador Sensible al Ronquido",
+    "originalIdeaDescription": "Una aplicación que monitorea el sueño. Si detecta niveles de ruido rítmicos y constantes (ronquidos), reproduce suavemente un 'Hi-Hat' para intentar que la persona cambie de posición sin despertarla completamente.",
+    "transformedIdeaTitle": "Detector de Ronquidos",
+    "transformedIdeaDescription": "¿Tu perro o tu papá roncan mucho? Crea una broma tecnológica. Programa la app para escuchar ronquidos. Cuando detecte el ruido, tocará suavemente el platillo 'tss-tss-tss' para que dejen de roncar sin despertarlos del todo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Level > 40 AND Is_Rhythmic THEN Musical_Drum.play('Closed_Hi_Hat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Inicio de Carrera por Grito",
+    "originalIdeaDescription": "En lugar de una pistola de fogueo, el sistema espera un grito fuerte ('¡YA!'). Al detectarlo, reproduce un sonido de caja seca para indicar el inicio oficial de una carrera o competencia.",
+    "transformedIdeaTitle": "Preparados, Listos... ¡GRITA!",
+    "transformedIdeaDescription": "Eres el juez de las olimpiadas escolares. En lugar de usar un silbato, usarás tu voz. Programa el sistema para que espere en silencio y, en el momento exacto en que grites '¡YA!', toque un golpe de caja seco para que los corredores salgan disparados.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 90 THEN Musical_Drum.play('Snare_Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Risas de Sitcom Automatizadas",
+    "originalIdeaDescription": "El sistema detecta patrones de risa (sonido oscilante y agudo). Al detectarlos, añade un 'Rimshot' (Ba-Dum-Tss) de batería para enfatizar que se ha contado un chiste.",
+    "transformedIdeaTitle": "El Comediante Robot",
+    "transformedIdeaDescription": "Practica tus mejores chistes. Programa tu asistente para que escuche a tu público. Si detecta que tus amigos se están riendo fuerte, debe tocar automáticamente el clásico sonido de batería 'Ba-Dum-Tss' para cerrar el chiste con estilo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 70 THEN Musical_Drum.play('Rimshot')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Lluvia en Ventana",
+    "originalIdeaDescription": "Se coloca el dispositivo cerca de una ventana. El ruido constante de la lluvia golpeando el cristal activa un ritmo suave y relajante de 'Brush Snare' para acompañar el sonido natural.",
+    "transformedIdeaTitle": "Música para Días Lluviosos",
+    "transformedIdeaDescription": "Crea una atmósfera relajante. Cuando empiece a llover y las gotas golpeen la ventana (haciendo ruido constante), programa tu dispositivo para que acompañe el sonido del agua con un ritmo de jazz muy suave y lento usando las escobillas de la batería.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Noise_Level > 30 AND Noise_Level < 60 DO Musical_Drum.play('Jazz_Brush')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Puerta Secreta con Contraseña Rítmica",
+    "originalIdeaDescription": "El usuario debe tocar la puerta con un ritmo específico (ej. dos golpes rápidos). El sensor de ruido analiza el patrón temporal. Si coincide, suena un sonido de 'Open Hi-Hat' como señal de éxito.",
+    "transformedIdeaTitle": "La Llave Secreta",
+    "transformedIdeaDescription": "Inventa un golpe secreto para entrar a tu club. Programa la app para escuchar dos golpes rápidos: 'Toc-Toc'. Si el micrófono escucha exactamente ese patrón de ruido, sonará un platillo brillante indicando que la puerta mágica se ha abierto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise_Peak_1 AND WAIT(0.5s) AND Noise_Peak_2 THEN Musical_Drum.play('Open_Hi_Hat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Inverso",
+    "originalIdeaDescription": "La batería toca un ritmo constante mientras hay ruido en la habitación (gente bailando/moviéndose). Si el ruido cesa (todos se congelan), la batería se detiene abruptamente.",
+    "transformedIdeaTitle": "Baile Activado por Ruido",
+    "transformedIdeaDescription": "¡Que no pare la fiesta! Programa un DJ automático. Mientras tú y tus amigos hagáis ruido cantando o pisando fuerte, la batería tocará un ritmo marchoso. En el momento en que os quedéis callados, la música parará. ¡Tenéis que hacer ruido para mantener el baile!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise_Level > 40 THEN Musical_Drum.loop('Dance_Beat') ELSE Musical_Drum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Aliviador de Estrés por Grito",
+    "originalIdeaDescription": "Una herramienta terapéutica donde el usuario grita para liberar tensión. Cuanto más fuerte y largo es el grito, más intenso es el redoble de batería, terminando en un gran golpe de platillo al quedarse sin aire.",
+    "transformedIdeaTitle": "El Grito de Poder",
+    "transformedIdeaDescription": "¿Has tenido un mal día? ¡Súltalo todo! Crea una herramienta que mida tu grito. Mientras grites, la batería hará un redoble que sube de intensidad. Cuando te quedes sin aire y pares, sonará un gran PLATILLAZO final para que te sientas como una estrella de rock.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Noise_Level > 80 DO Musical_Drum.play('Roll'); ON_END Musical_Drum.play('Crash')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alimentar a la Mascota Virtual",
+    "originalIdeaDescription": "Una mascota virtual que tiene hambre. El usuario debe hacer ruidos de 'masticar' o 'ñam ñam' cerca del micrófono. Cada pico de sonido es un bocado que activa un sonido de bombo suave (tragando).",
+    "transformedIdeaTitle": "Alimenta al Monstruo Glotón",
+    "transformedIdeaDescription": "Tienes un monstruo mascota que se alimenta de ruidos. Haz sonidos de masticar 'ñam ñam' cerca del micrófono. Programa la app para que cada vez que escuche un sonido, toque un bombo suave, simulando que el monstruo está tragando su comida.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise_Level > 50 THEN Musical_Drum.play('Soft_Kick')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo de Ruido Escolar",
+    "originalIdeaDescription": "Para el aula de clases. Ruido bajo = silencio. Ruido medio = Hi-Hat suave cada 5 segundos. Ruido alto = Bombo constante molesto para indicar que deben bajar la voz.",
+    "transformedIdeaTitle": "El Semáforo Sonoro de la Clase",
+    "transformedIdeaDescription": "Ayuda a tu profesor a controlar la clase. Crea un programa que reaccione al nivel de ruido. Si la clase habla bajito, suena un platillo suave y agradable. Pero si todos gritan, ¡la batería empieza a tocar un ritmo molesto hasta que todos se callen!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise < 30 THEN Silence ELSE IF Noise < 70 THEN Drum('Hi_Hat') ELSE Drum('Annoying_Beat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Batería por Soplido",
+    "originalIdeaDescription": "El usuario sopla en el micrófono. La intensidad del soplido controla la velocidad de un ritmo de batería. Soplido suave = ritmo lento; Soplido fuerte = ritmo rápido.",
+    "transformedIdeaTitle": "Carrera de Soplidos",
+    "transformedIdeaDescription": "Imagina que controlas un motor con tus pulmones. Sopla al micrófono para acelerar. Programa la batería para que toque un ritmo lento si soplas suave, y un ritmo súper rápido de carrera si soplas con todas tus fuerzas. ¿Cuánto aguantas?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET Drum_Speed = Map(Noise_Level, 0, 100); Musical_Drum.play_loop(Drum_Speed)"
+  }
+]

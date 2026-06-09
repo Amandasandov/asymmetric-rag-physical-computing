@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre Visual y Auditivo",
+    "originalIdeaDescription": "Un sistema de timbre para puerta que, al activarse mediante un interruptor, muestra una animación de campana en la matriz LED y reproduce una melodía de bienvenida.",
+    "transformedIdeaTitle": "El Timbre de la Casa Inteligente",
+    "transformedIdeaDescription": "Diseña un sistema de entrada para una casa domótica. Cuando un visitante presione el interruptor, el sistema debe alertar a los dueños sordos y oyentes simultáneamente, mostrando un icono parpadeante y tocando una melodía agradable.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { LEDMatrix.show('Bell'); MusicalKeyboard.playMelody('DingDong'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música Digital",
+    "originalIdeaDescription": "Una caja de música moderna donde el interruptor activa o desactiva la reproducción de una canción de cuna mientras la matriz LED muestra estrellas parpadeantes.",
+    "transformedIdeaTitle": "La Caja de Sueños del Robot",
+    "transformedIdeaDescription": "Ayuda al robot a dormir. Crea un programa donde, al activar el 'Modo Sueño' (interruptor), se inicie un bucle que muestre estrellas en la pantalla y toque notas suaves hasta que se apague el interruptor.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { LEDMatrix.animate('Stars'); MusicalKeyboard.playNote('C4', duration=1); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Transmisor de Código Morse",
+    "originalIdeaDescription": "Un dispositivo de comunicación donde el interruptor funciona como un telégrafo. Al presionar, se enciende la matriz y suena un tono; al soltar, todo se apaga.",
+    "transformedIdeaTitle": "El Telégrafo del Espía",
+    "transformedIdeaDescription": "Eres un agente secreto enviando mensajes codificados. Programa el sistema para que cada vez que presiones el botón, se emita un pitido y se ilumine un punto central, permitiendo enviar puntos y rayas manualmente.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isPressed() THEN { LEDMatrix.on(); MusicalKeyboard.playTone(440); } ELSE { LEDMatrix.off(); MusicalKeyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Indicador de Estado de Ánimo",
+    "originalIdeaDescription": "Un dispositivo que alterna entre dos estados emocionales. El interruptor cambia entre 'Feliz' (Cara sonriente + Acorde Mayor) y 'Triste' (Cara triste + Acorde Menor).",
+    "transformedIdeaTitle": "La Máscara Emocional",
+    "transformedIdeaDescription": "Crea una máscara digital para un actor. El interruptor debe permitir al actor cambiar instantáneamente la escena de comedia a tragedia, alterando tanto la expresión visual en la matriz como la música de fondo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { LEDMatrix.show('Happy'); MusicalKeyboard.playChord('C_Major'); } ELSE { LEDMatrix.show('Sad'); MusicalKeyboard.playChord('A_Minor'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad",
+    "originalIdeaDescription": "Un sistema de seguridad simple. Cuando el interruptor está activado (sistema armado), la matriz parpadea en rojo y el teclado emite sonidos de sirena repetitivos.",
+    "transformedIdeaTitle": "Protector del Museo",
+    "transformedIdeaDescription": "Protege el diamante del museo. Configura la alarma para que, cuando el interruptor de seguridad esté activo, se genere una alerta visual de 'PELIGRO' y una sirena ruidosa para ahuyentar a los ladrones.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { LEDMatrix.flash('X_Shape'); MusicalKeyboard.playTone('Siren'); wait(0.5); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual",
+    "originalIdeaDescription": "Herramienta para músicos que marca el tiempo. El interruptor inicia el metrónomo, haciendo que la matriz marque el compás visualmente y el teclado suene un 'clic'.",
+    "transformedIdeaTitle": "El Director de Orquesta Digital",
+    "transformedIdeaDescription": "Ayuda a la banda a mantener el ritmo. Programa un metrónomo que, al encenderse, marque un pulso constante: un destello en la pantalla sincronizado perfectamente con un sonido de percusión o nota corta.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { LOOP { LEDMatrix.blink(); MusicalKeyboard.playNote('Click'); wait(BPM); } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva de Lanzamiento",
+    "originalIdeaDescription": "Al activar el interruptor, se inicia una cuenta regresiva visual del 5 al 0 en la matriz, acompañada de notas descendentes, terminando con un sonido de despegue.",
+    "transformedIdeaTitle": "Misión a Marte: Despegue",
+    "transformedIdeaDescription": "Eres el controlador de misión. Programa la secuencia de lanzamiento: al activar el interruptor maestro, el sistema debe contar hacia atrás (5, 4, 3...) visual y auditivamente, finalizando con un sonido de explosión al llegar a cero.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.switchedToOn() THEN { FOR i=5 TO 0 { LEDMatrix.showNumber(i); MusicalKeyboard.playNote(Scale[i]); wait(1); } MusicalKeyboard.play('Boom'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Semáforo Musical",
+    "originalIdeaDescription": "El interruptor alterna entre luz verde (matriz llena, música rápida) y luz roja (matriz con X, silencio o sonido grave) para un juego de '1, 2, 3, Momia'.",
+    "transformedIdeaTitle": "Semáforo Bailarín",
+    "transformedIdeaDescription": "Crea un juego para el recreo. Si el interruptor está en 'Verde', muestra un círculo y toca música de baile. Si cambia a 'Rojo', muestra una cruz y detiene la música inmediatamente. ¡Los jugadores deben congelarse!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { LEDMatrix.show('Circle'); MusicalKeyboard.playLoop('Dance'); } ELSE { LEDMatrix.show('X'); MusicalKeyboard.stop(); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor Cardíaco Simulado",
+    "originalIdeaDescription": "Simulación médica donde el interruptor enciende el monitor. La matriz muestra un latido animado y el teclado hace 'bip' en sincronía.",
+    "transformedIdeaTitle": "El Doctor Androide",
+    "transformedIdeaDescription": "Estás construyendo un robot médico. Necesita un indicador de funcionamiento. Al encenderlo, debe mostrar un corazón latiendo (grande/pequeño) sincronizado con un sonido de 'bip' constante.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { LEDMatrix.show('BigHeart'); MusicalKeyboard.playTone('Beep'); wait(0.5); LEDMatrix.show('SmallHeart'); wait(0.5); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Clima",
+    "originalIdeaDescription": "Un diorama interactivo. El interruptor cambia entre un día soleado (Sol en LED, música alegre) y tormenta (Rayo en LED, notas graves y erráticas).",
+    "transformedIdeaTitle": "La Ventana Mágica",
+    "transformedIdeaDescription": "Crea una ventana que cambia el clima interior. Usa el interruptor para alternar entre un día soleado con música brillante y una tormenta eléctrica con rayos visuales y sonidos graves.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN { LEDMatrix.show('Sun'); MusicalKeyboard.play('HappyTune'); } ELSE { LEDMatrix.show('Lightning'); MusicalKeyboard.play('ThunderChords'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Señal de Giro para Bici",
+    "originalIdeaDescription": "Dispositivo de seguridad. El interruptor activa una flecha animada en la matriz y un sonido intermitente para indicar un giro.",
+    "transformedIdeaTitle": "Casco Inteligente para Ciclistas",
+    "transformedIdeaDescription": "Mejora la seguridad vial. Diseña un sistema para un casco donde, al activar el interruptor antes de doblar, aparezca una flecha parpadeante y suene una alerta para avisar a los peatones.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { LOOP { LEDMatrix.show('Arrow'); MusicalKeyboard.playTone('High'); wait(0.5); LEDMatrix.clear(); wait(0.5); } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Sorpresas Aleatoria",
+    "originalIdeaDescription": "Al activar el interruptor, la matriz muestra patrones aleatorios y el teclado toca notas al azar, creando un efecto de 'caos' o 'fiesta'.",
+    "transformedIdeaTitle": "El Generador de Arte Caótico",
+    "transformedIdeaDescription": "Crea una obra de arte generativo. Cuando el espectador active el interruptor, la máquina debe generar una composición única de luces y sonidos aleatorios, que nunca se repita dos veces.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { LEDMatrix.setPixel(randomX, randomY); MusicalKeyboard.playNote(randomNote); wait(0.1); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Escalas Musicales",
+    "originalIdeaDescription": "Herramienta educativa. El interruptor avanza paso a paso por una escala musical (Do, Re, Mi...), mostrando la nota (letra o posición) en la matriz y tocando el sonido.",
+    "transformedIdeaTitle": "Profesor Piano-Bot",
+    "transformedIdeaDescription": "Diseña un asistente para aprender música. Cada vez que el alumno presione el interruptor, el sistema debe avanzar a la siguiente nota de la escala, mostrando su nombre en la pantalla y reproduciendo su sonido perfecto.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ON Switch.press() { currentNote++; LEDMatrix.show(NoteName[currentNote]); MusicalKeyboard.play(NoteFreq[currentNote]); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Temporizador de Cocina 'Patata Caliente'",
+    "originalIdeaDescription": "Un temporizador de juego. Al encender el interruptor, comienza una música rápida y luces giratorias que se detienen repentinamente después de un tiempo aleatorio.",
+    "transformedIdeaTitle": "La Bomba de Tiempo Musical",
+    "transformedIdeaDescription": "Programa un juego de 'Patata Caliente'. Al iniciar con el interruptor, la música y las luces deben acelerarse. El sistema debe decidir un tiempo aleatorio para detenerse y hacer un sonido de '¡Explosión!' para eliminar al jugador que tenga el dispositivo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { duration = random(10, 30); playUntil(duration, MusicFast, LEDSpin); MusicalKeyboard.play('Explosion'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Identificador de Mascotas Robot",
+    "originalIdeaDescription": "El interruptor cicla entre diferentes modos de 'mascota'. Modo Perro (Cara perro + ladrido), Modo Gato (Cara gato + maullido/nota aguda).",
+    "transformedIdeaTitle": "El Zoológico Cibernético",
+    "transformedIdeaDescription": "Crea un juguete que cambia de animal. Usa el interruptor para alternar entre un Perro y un Gato. El dispositivo debe cambiar la cara del animal en la pantalla y hacer un sonido grave (ladrido) o agudo (maullido) según corresponda.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOff() THEN { LEDMatrix.show('Dog'); MusicalKeyboard.play('LowNote'); } ELSE { LEDMatrix.show('Cat'); MusicalKeyboard.play('HighNote'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Luz Nocturna Interactiva",
+    "originalIdeaDescription": "Una lámpara de noche que, al encenderse con el interruptor, muestra una luna menguante y toca una melodía muy lenta y suave, desvaneciéndose.",
+    "transformedIdeaTitle": "Espantamonstruos Automático",
+    "transformedIdeaDescription": "Diseña una luz nocturna inteligente. Cuando el niño active el interruptor antes de dormir, el sistema debe mostrar una luna tranquila y tocar una melodía relajante que ayude a conciliar el sueño.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { LEDMatrix.show('Moon'); MusicalKeyboard.playMelody('Lullaby', tempo=Slow); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Buzzer de Concurso de Preguntas",
+    "originalIdeaDescription": "Sistema para juegos de trivia. El interruptor actúa como pulsador de respuesta. Al presionar, la matriz muestra un 'check' y suena una fanfarria de victoria.",
+    "transformedIdeaTitle": "El Botón de la Victoria",
+    "transformedIdeaDescription": "Estás en un programa de TV. Programa tu pulsador para que sea el primero en responder. Al presionar el interruptor, debe bloquear a los demás (simulado), mostrar un gran símbolo de 'CORRECTO' y tocar un sonido triunfal.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN { LEDMatrix.show('CheckMark'); MusicalKeyboard.playMelody('Fanfare'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Falso)",
+    "originalIdeaDescription": "Juguete de exploración. El interruptor activa el 'sensor'. La matriz muestra estática aleatoria y el teclado reproduce ruidos chirriantes o misteriosos.",
+    "transformedIdeaTitle": "El Cazafantasmas",
+    "transformedIdeaDescription": "Construye un detector de actividad paranormal. Cuando enciendas el interruptor de rastreo, la pantalla debe mostrar 'interferencia' (ruido visual) y el parlante debe emitir sonidos misteriosos y espeluznantes.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() DO { LEDMatrix.showNoise(); MusicalKeyboard.playRandomTone(range='Spooky'); }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Básica",
+    "originalIdeaDescription": "Secuenciador simple. El interruptor inicia/detiene un bucle de ritmo. La matriz visualiza el golpe del bombo (parte inferior) y la caja (parte superior).",
+    "transformedIdeaTitle": "DJ Pixel",
+    "transformedIdeaDescription": "Conviértete en DJ. Programa una base rítmica que se active con el interruptor. Visualiza el ritmo en la pantalla haciendo que los píxeles salten de abajo hacia arriba cada vez que suene un golpe fuerte.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN { LOOP { MusicalKeyboard.play('Kick'); LEDMatrix.row(7, ON); wait; MusicalKeyboard.play('Snare'); LEDMatrix.row(1, ON); wait; } }"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Radar",
+    "originalIdeaDescription": "Efecto de radar submarino. Una línea gira en la matriz LED. Cuando el interruptor se activa (simulando detección), suena un 'ping' de sonar.",
+    "transformedIdeaTitle": "Navegante de Submarino",
+    "transformedIdeaDescription": "Navega las profundidades. Crea una animación de radar que barra la pantalla circularmente. Configura el interruptor para simular el hallazgo de un objeto: al activarlo, debe sonar un 'Ping' de sonar cada vez que el radar complete una vuelta.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LOOP { LEDMatrix.animate('RadarSweep'); IF Switch.isOn() THEN MusicalKeyboard.playTone('SonarPing'); }"
+  }
+]

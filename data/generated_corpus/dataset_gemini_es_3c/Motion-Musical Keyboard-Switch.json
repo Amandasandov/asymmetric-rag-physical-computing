@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Instrumento de Aire Controlado por Movimiento",
+    "originalIdeaDescription": "Un dispositivo que utiliza el sensor de movimiento para mapear la inclinación en el eje X a diferentes notas musicales, permitiendo al usuario tocar escalas simplemente inclinando el dispositivo, pero solo cuando el interruptor de activación está encendido.",
+    "transformedIdeaTitle": "El Arpa Invisible de los Elfos",
+    "transformedIdeaDescription": "¡Convierte tu dispositivo en un arpa mágica que nadie puede ver! Mantén presionado el 'Interruptor de Magia' y mueve tu mano suavemente de izquierda a derecha. Dependiendo de cuánto inclines tu mano, sonarán notas diferentes, creando melodías encantadas en el aire.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (Map Motion.X to Scale; Keyboard.play(Note)) ELSE Keyboard.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Seguridad de Objetos Personales",
+    "originalIdeaDescription": "Un sistema de seguridad portátil donde el interruptor actúa como mecanismo de armado. Si el sistema está armado y el sensor de movimiento detecta vibración o desplazamiento, el teclado musical reproduce una secuencia de notas alta y repetitiva como sirena.",
+    "transformedIdeaTitle": "La Trampa del Tesoro Pirata",
+    "transformedIdeaDescription": "Protege tu cofre del tesoro (o tu diario) de los intrusos. Activa el sistema de seguridad con el interruptor y coloca el dispositivo sobre tu tesoro. Si alguien intenta moverlo, el sensor detectará el robo y sonará una alarma ruidosa para alertar al capitán.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isShaken() THEN Keyboard.playLoop(AlarmMelody)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Varita de Efectos de Sonido Gestual",
+    "originalIdeaDescription": "El dispositivo detecta movimientos bruscos o 'sacudidas' para reproducir un acorde específico. El interruptor cambia el modo de sonido, alternando entre un acorde mayor (sonido feliz) y un acorde menor o disonante (sonido de ataque).",
+    "transformedIdeaTitle": "Varita de Hechizos Mágicos",
+    "transformedIdeaDescription": "Eres un aprendiz de mago. Usa el interruptor para elegir entre 'Magia de Luz' o 'Rayo de Hielo'. Al agitar tu varita (el dispositivo) con fuerza, lanzarás el hechizo seleccionado con un sonido musical poderoso. ¡Practica tus movimientos para ser el mejor hechicero!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > Threshold THEN (IF Switch.isOn() THEN Keyboard.play(C_Major) ELSE Keyboard.play(D_Minor))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador de Repeticiones de Ejercicio Sonoro",
+    "originalIdeaDescription": "Un dispositivo para asistir en ejercicios físicos. El interruptor inicia la sesión. Cada vez que el sensor de movimiento detecta un ciclo completo en el eje Z (como una sentadilla o salto), reproduce una nota ascendente en la escala para contar el progreso.",
+    "transformedIdeaTitle": "Entrenador de Saltos Musicales",
+    "transformedIdeaDescription": "¿Qué tan alto puedes llegar en la escala musical? Activa tu entrenador personal con el interruptor. Por cada salto que des, el dispositivo tocará una nota más alta. ¡Intenta completar toda la escala musical haciendo 8 saltos seguidos sin detenerte!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.Z_axis_peak_detected THEN { NoteIndex++; Keyboard.play(Scale[NoteIndex]) }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Aleatoria por Agitación",
+    "originalIdeaDescription": "Al agitar el dispositivo, se selecciona y reproduce una nota aleatoria corta. El interruptor funciona como un botón de 'mute' o pausa momentánea, permitiendo al usuario crear ritmos sincopados deteniendo el sonido manualmente.",
+    "transformedIdeaTitle": "La Maraca Loca",
+    "transformedIdeaDescription": "Crea ritmos divertidos agitando tu dispositivo como una maraca. Cada sacudida produce un sonido sorpresa. Usa el interruptor para congelar el sonido en momentos clave y crear pausas dramáticas en tu canción. ¡Forma una banda con tus amigos!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.isShaken() AND Switch.isOff() THEN Keyboard.play(RandomNote)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivelador de Equilibrio con Feedback Auditivo",
+    "originalIdeaDescription": "Herramienta para practicar equilibrio. Si el dispositivo no está perfectamente plano (Ejes X e Y en 0), reproduce notas intermitentes. El interruptor cambia la sensibilidad o la 'zona muerta' permitida antes de que suene la alerta.",
+    "transformedIdeaTitle": "El Camarero Equilibrista",
+    "transformedIdeaDescription": "Imagina que llevas una bandeja llena de vasos de cristal. Activa el modo 'Principiante' o 'Experto' con el interruptor. Debes caminar sosteniendo el dispositivo totalmente plano. Si te inclinas demasiado, ¡la música sonará indicando que se cayeron los vasos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Tolerance = 5 ELSE Tolerance = 15; IF abs(Motion.X) > Tolerance THEN Keyboard.play(WarningNote)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Theremin Digital",
+    "originalIdeaDescription": "Simulación de un instrumento Theremin. El interruptor activa la generación continua de tono. La inclinación en el eje Y modula el tono (frecuencia) de la nota que se está reproduciendo, creando un efecto de deslizamiento sonoro.",
+    "transformedIdeaTitle": "Sonidos de Fantasmas Espaciales",
+    "transformedIdeaDescription": "Crea efectos de sonido de ciencia ficción. Enciende el generador de ondas con el interruptor. Mueve el dispositivo hacia arriba y hacia abajo para cambiar el tono del sonido, haciendo que suene como un fantasma que aúlla o una nave espacial despegando.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.isOn() DO { Pitch = Map(Motion.Y, -90, 90, LowC, HighC); Keyboard.playTone(Pitch) }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Reacción 'Simon Says' Gestual",
+    "originalIdeaDescription": "El sistema reproduce una nota guía. El usuario debe inclinar el dispositivo hacia la izquierda (nota baja) o derecha (nota alta) para coincidir. El interruptor se usa para confirmar la respuesta elegida por el usuario.",
+    "transformedIdeaTitle": "Adivina la Nota Musical",
+    "transformedIdeaDescription": "El juego tocará una nota. Tú debes encontrar esa nota inclinando tu dispositivo a izquierda o derecha. Cuando creas que tienes la posición correcta, presiona el interruptor para confirmar. ¡Si aciertas, pasarás al siguiente nivel!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Target = Random(); IF Switch.isPressed() THEN (IF Motion.X approx Target THEN Play(Success) ELSE Play(Fail))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos Simulado",
+    "originalIdeaDescription": "Dispositivo para medir intensidad de vibraciones. El interruptor calibra el sensor a cero. A medida que aumenta la magnitud del movimiento detectado, el teclado reproduce notas más graves y fuertes para simular el estruendo de la tierra.",
+    "transformedIdeaTitle": "Sismógrafo Musical",
+    "transformedIdeaDescription": "Construye una estación científica. Coloca el dispositivo en una mesa y 'calíbralo' con el interruptor. Luego, golpea suavemente la mesa. El dispositivo transformará las vibraciones en sonidos graves. Cuanto más fuerte sea el 'terremoto', más fuerte y grave será el sonido.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Intensity = Motion.magnitude; IF Intensity > Threshold THEN Keyboard.play(Map(Intensity, Min, Max, LowNote, HighNote))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Espada Láser con Sonido Activo",
+    "originalIdeaDescription": "Simulación de juguete. El interruptor 'enciende' la hoja de energía (sonido de zumbido constante). El sensor de movimiento detecta aceleración rápida para interrumpir el zumbido con un sonido de choque o golpe de espada.",
+    "transformedIdeaTitle": "Caballero Galáctico",
+    "transformedIdeaDescription": "¡Defiende la galaxia! Enciende tu sable de luz con el interruptor; escucharás el zumbido de energía. Cuando muevas el brazo rápido para luchar contra un villano imaginario, el sensor detectará el ataque y hará un sonido de choque '¡Clang!'.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN (IF Motion.accel > 2g THEN Keyboard.play(ClashSound) ELSE Keyboard.play(HumSound))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Melodías al Caminar",
+    "originalIdeaDescription": "Dispositivo podómetro musical. El interruptor selecciona entre dos melodías diferentes. Cada paso detectado por el sensor de movimiento avanza una nota en la melodía seleccionada, permitiendo al usuario controlar el tempo con su velocidad de caminata.",
+    "transformedIdeaTitle": "Caminata Mágica",
+    "transformedIdeaDescription": "Haz que tu paseo sea una canción. Elige entre la canción 'Aventura' o 'Misterio' usando el interruptor. Ponte el dispositivo en el bolsillo y camina. Cada paso que des tocará la siguiente nota de la canción. ¡Si corres, la canción irá rapidísimo!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.stepDetected() THEN { Play(Song[Index]); Index++ } IF Switch.toggled() THEN ChangeSong()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja de Música de Cuerda Digital",
+    "originalIdeaDescription": "Emula una caja de música antigua. El usuario debe girar el dispositivo (detectado por cambio continuo en ejes X/Y) para 'dar cuerda'. Al soltar el interruptor, la música se reproduce por un tiempo proporcional a cuánto se giró.",
+    "transformedIdeaTitle": "La Caja de Música Encantada",
+    "transformedIdeaDescription": "Para escuchar la canción de cuna, primero debes darle cuerda. Mantén presionado el interruptor y gira el dispositivo en círculos varias veces. Cuando sueltes el interruptor, la música sonará. Cuantas más vueltas des, ¡más tiempo durará la canción!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Switch.pressed() DO Charge += Motion.rotation; WHILE Charge > 0 DO { Play(Melody); Charge-- }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Asistente de Meditación Zen",
+    "originalIdeaDescription": "Ayuda a la respiración. El interruptor inicia el ejercicio. Al inclinar lentamente hacia atrás (inhalar) sube el tono, y al inclinar hacia adelante (exhalar) baja el tono, guiando el ritmo respiratorio.",
+    "transformedIdeaTitle": "Respiración de Olas del Mar",
+    "transformedIdeaDescription": "Relájate como las olas del mar. Activa el modo zen. Inclina el dispositivo hacia atrás lentamente mientras tomas aire (el sonido subirá como una ola). Inclínalo hacia adelante mientras sueltas el aire (el sonido bajará). Sigue el ritmo para calmarte.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN Pitch = Map(Motion.Tilt, Back, Front, HighNote, LowNote); Keyboard.play(Pitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Detector de Caídas para Muñecos",
+    "originalIdeaDescription": "Un dispositivo para juguetes. El interruptor activa el monitoreo. Si el sensor detecta caída libre (cero gravedad en ejes) seguida de un impacto, reproduce un sonido cómico o triste.",
+    "transformedIdeaTitle": "El Doble de Acción",
+    "transformedIdeaDescription": "Pega este sensor a tu muñeco de acción favorito. Activa el interruptor antes de lanzarlo a una misión peligrosa (hacia un cojín suave). Si el muñeco cae desde muy alto, el sensor detectará la caída y gritará una nota divertida al aterrizar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() AND Motion.isFreeFall() THEN Wait(Impact); Keyboard.play(OuchSound)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mezclador DJ de Efectos",
+    "originalIdeaDescription": "El interruptor selecciona el banco de sonidos (Batería o Sintetizador). Los movimientos rápidos en cruz (Ejes X e Y) disparan diferentes muestras de sonido tipo 'scratch' o golpes.",
+    "transformedIdeaTitle": "DJ Súper Estrella",
+    "transformedIdeaDescription": "¡Tú controlas la fiesta! Usa el interruptor para elegir entre sonidos de batería o sonidos electrónicos. Mueve tu mano en el aire como si estuvieras rayando un disco de vinilo. Movimientos rápidos a la derecha hacen 'Wiki-Wiki', hacia abajo hacen 'Boom'.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SoundBank = Switch.state ? BankA : BankB; IF Motion.VelX > High THEN Keyboard.play(SoundBank.Scratch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de la Papa Caliente Musical",
+    "originalIdeaDescription": "Temporizador aleatorio iniciado por el interruptor. Mientras el dispositivo detecta movimiento (pasándose de mano en mano), la música se acelera. Cuando el temporizador para, suena una nota final de derrota.",
+    "transformedIdeaTitle": "La Bomba Musical",
+    "transformedIdeaDescription": "Reúne a tus amigos en círculo. Enciende el interruptor para iniciar la cuenta atrás. Pásense el dispositivo con cuidado pero rápido. La música irá cada vez más rápido. Si la música se detiene y suena una explosión mientras lo tienes tú, ¡pierdes!",
+    "minAge": 7,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Timer = Random(); WHILE Timer > 0 DO { Keyboard.play(TickTock); Timer-- }; Keyboard.play(Explosion)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche",
+    "originalIdeaDescription": "El interruptor enciende el 'motor' (sonido de ralentí). La inclinación hacia adelante actúa como pedal de acelerador, aumentando el tono y la frecuencia de las notas repetitivas para simular las revoluciones por minuto (RPM).",
+    "transformedIdeaTitle": "Piloto de Carreras",
+    "transformedIdeaDescription": "Convierte tu mano en un coche de carreras. Gira la llave (el interruptor) para encender el motor. Inclina el dispositivo hacia adelante para pisar el acelerador y escuchar cómo ruge el motor. ¡Inclínalo hacia atrás para frenar antes de la curva!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { RPM = Map(Motion.TiltX, 0, 90, Low, High); Keyboard.playEngineSound(RPM) }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Acústico para Ciegos",
+    "originalIdeaDescription": "Herramienta de accesibilidad. El interruptor enciende el modo de medición. El dispositivo emite un tono continuo cuyo tono varía según la inclinación. El tono se vuelve silencioso o constante solo cuando está perfectamente nivelado.",
+    "transformedIdeaTitle": "Constructor a Ciegas",
+    "transformedIdeaDescription": "Intenta nivelar una mesa con los ojos cerrados. Activa la herramienta y escucha el sonido. Si es muy agudo, está inclinado a un lado; si es grave, al otro. Mueve el dispositivo hasta encontrar el silencio o el tono perfecto que indica que está recto.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Deviation = abs(Motion.Tilt); IF Deviation < 2 THEN Keyboard.silence() ELSE Keyboard.playTone(Map(Deviation))"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Llamador de Puerta Secreto",
+    "originalIdeaDescription": "El usuario graba un patrón rítmico de golpes usando el sensor de movimiento (detectando picos de vibración). Luego, el interruptor cambia a modo 'escucha'. Si alguien reproduce el patrón de golpes, suena una melodía de bienvenida.",
+    "transformedIdeaTitle": "La Llave Secreta del Club",
+    "transformedIdeaDescription": "Crea una contraseña secreta de golpes. Primero, usa el interruptor para entrar en modo 'aprender' y golpea un ritmo en la mesa (TOC-toc-TOC). Luego cambia el interruptor. Ahora, solo si tu amigo golpea ese mismo ritmo, el dispositivo tocará la fanfarria de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.mode == Record THEN SaveRhythm(Motion); ELSE IF DetectRhythm(Motion) == SavedRhythm THEN Keyboard.play(Welcome)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Baton de Dirección Orquestal",
+    "originalIdeaDescription": "El interruptor inicia la pieza musical. La velocidad de los movimientos de la mano (magnitud del vector de movimiento) controla el tempo de la reproducción de la secuencia de notas en el teclado.",
+    "transformedIdeaTitle": "El Maestro de la Orquesta",
+    "transformedIdeaDescription": "¡Toma la batuta y dirige la orquesta! Enciende el concierto con el interruptor. Si mueves tu mano lentamente, la música sonará despacio y suave. Si mueves la mano con energía y rapidez, ¡la orquesta tocará a toda velocidad! Tú controlas el ritmo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Tempo = Motion.magnitude; IF Switch.isOn() THEN Keyboard.playSequence(Song, speed=Tempo)"
+  }
+]

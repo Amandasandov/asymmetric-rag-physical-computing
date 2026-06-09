@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Monitor de Biblioteca Inteligente",
+    "originalIdeaDescription": "Un sistema para mantener el silencio en la zona de lectura. Si hay luz (biblioteca abierta) y el ruido supera un límite, el audio pide silencio.",
+    "transformedIdeaTitle": "El Guardián de los Libros",
+    "transformedIdeaDescription": "Programa al robot bibliotecario. Durante el día (Luz > 50), el robot vigila. Si los estudiantes hablan demasiado fuerte (Ruido > 40), el Audio Player debe reproducir un sonido de '¡Shhh!' o 'Silencio por favor'. Si está oscuro (noche), el robot duerme y no dice nada.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 AND Noise.level > 40 THEN Audio.play('Shhh')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Simulador de Tormenta Eléctrica",
+    "originalIdeaDescription": "El usuario ve un flash de luz (linterna) y debe hacer el sonido del trueno (palmada) para que empiece a llover (audio).",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Crea una tormenta realista. Cuando el sensor detecte un flash repentino de luz (relámpago), espera unos segundos y da una palmada fuerte (trueno). Si la secuencia es correcta (Luz -> Espera -> Ruido), el Audio Player desatará una lluvia torrencial.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.flashDetected() THEN wait(2s); IF Noise.peak() THEN Audio.play('RainStorm')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Despertador Solar Sensible",
+    "originalIdeaDescription": "La alarma suena cuando sale el sol. Para apagarla, el usuario debe gritar o aplaudir fuertemente.",
+    "transformedIdeaTitle": "¡Buenos Días, Dormilón!",
+    "transformedIdeaDescription": "Diseña la alarma más molesta. Cuando amanezca (Luz > 60), el Audio empezará a sonar en bucle. El botón de apagado no existe: para detenerla, tienes que gritar '¡YA ME LEVANTÉ!' (Ruido > 80) directamente al micrófono.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 60 AND !Awake THEN Audio.loop('Alarm'); IF Noise.level > 80 THEN Audio.stop() AND Awake=TRUE"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Cueva de los Murciélagos",
+    "originalIdeaDescription": "Solo funciona en la oscuridad. Si el usuario hace un chirrido, el audio devuelve un eco (sonar).",
+    "transformedIdeaTitle": "Ecolocalización Nocturna",
+    "transformedIdeaDescription": "Eres un murciélago. Apaga las luces (Luz < 10). Para 'ver' con tus oídos, emite un sonido corto con la boca (Ruido). El sistema calculará la distancia y el Audio reproducirá un eco. Si enciendes la luz, el murciélago se esconde y no funciona.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 10 AND Noise.peak() THEN Audio.playEffect('Echo')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Juego de Sigilo: Museo Nocturno",
+    "originalIdeaDescription": "El usuario debe robar un objeto. Si la linterna del guardia lo ilumina (Luz) o hace ruido al pisar (Ruido), suena la sirena.",
+    "transformedIdeaTitle": "Misión: El Diamante Negro",
+    "transformedIdeaDescription": "Infiltrese en el museo. Debe haber oscuridad total y silencio absoluto. Si el sensor detecta un rayo de luz (linterna del guardia) O un sonido fuerte (pasos torpes), se activará la alarma policial (Audio) y perderás la misión.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 OR Noise.level > 20 THEN Audio.play('PoliceSiren')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Nana Automática para Bebé",
+    "originalIdeaDescription": "Detecta si es de noche y el bebé llora. Si es así, reproduce música suave.",
+    "transformedIdeaTitle": "La Niñera Robot",
+    "transformedIdeaDescription": "Construye un asistente para padres. Si la habitación está oscura (Luz < 20) y se detecta un llanto fuerte (Ruido > 70), el Audio Player debe tocar automáticamente una canción de cuna para calmar al bebé hasta que el ruido baje.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 AND Noise.level > 70 THEN Audio.play('Lullaby')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Hechizo Mágico de Carga",
+    "originalIdeaDescription": "El mago debe cargar su varita con luz de luna (sensor a la luz) y recitar el conjuro (ruido) para lanzar el hechizo (audio).",
+    "transformedIdeaTitle": "Academia de Hechicería",
+    "transformedIdeaDescription": "Lanza un hechizo de luz. Primero, absorbe energía apuntando el sensor a una lámpara (Luz alta) hasta que escuches un sonido de carga. Luego, grita '¡LUMOS MAXIMA!' (Ruido). Si la energía estaba llena, el Audio reproducirá una explosión mágica.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Mana = Light.accumulate(); IF Mana == 100 AND Noise.shout() THEN Audio.play('MagicBlast')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Espacio de Meditación Zen",
+    "originalIdeaDescription": "Si hay luz tenue y silencio, reproduce sonidos de naturaleza. Si hay ruido o mucha luz, se detiene.",
+    "transformedIdeaTitle": "El Jardín de la Paz",
+    "transformedIdeaDescription": "Crea un ambiente relajante. El dispositivo solo tocará sonidos de agua y pájaros (Audio) si la clase está en penumbra (Luz baja) y en silencio absoluto (Ruido bajo). Es un reto para que todo el grupo se calme y colabore.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 40 AND Noise.level < 15 THEN Audio.loop('Nature') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Fiesta Sorpresa Interactiva",
+    "originalIdeaDescription": "El dispositivo espera en la oscuridad. Cuando se enciende la luz y hay ruido (gritos), toca 'Cumpleaños Feliz'.",
+    "transformedIdeaTitle": "El Organizador de Fiestas",
+    "transformedIdeaDescription": "Esconde el dispositivo. Debe detectar oscuridad y silencio. Cuando el cumpleañero entre, enciendan la luz y griten '¡SORPRESA!'. Al detectar el cambio brusco de Luz y el pico de Ruido simultáneamente, el Audio disparará música festiva.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WAIT(Dark AND Quiet); IF Light.jump() AND Noise.jump() THEN Audio.play('HappyBirthday')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Cocinero de Palomitas",
+    "originalIdeaDescription": "Simula un microondas. Luz encendida = cocinando. Ruido = pops. Cuando los pops disminuyen, el audio avisa.",
+    "transformedIdeaTitle": "Maestro Popcorn",
+    "transformedIdeaDescription": "Cocina palomitas virtuales. Enciende la luz (apunta linterna) para calentar. Haz sonidos de 'Pop' con la boca. El sistema cuenta la frecuencia. Cuando dejes de hacer ruidos (silencio), el Audio hará '¡Ding!' indicando que están listas. Si tardas mucho, se queman.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "WHILE Light.on: Track(Noise.pops); IF PopRate < Threshold THEN Audio.play('Ding')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "En la oscuridad, el ruido estático (audio) cambia si el usuario hace preguntas (ruido).",
+    "transformedIdeaTitle": "Ouija Electrónica",
+    "transformedIdeaDescription": "Apaga las luces. El dispositivo emite estática de radio (Audio). Haz una pregunta en voz alta (Ruido). El dispositivo analizará el volumen de tu voz y responderá seleccionando una palabra al azar de su banco de memoria fantasmal.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.loop('Static'); IF Light.level < 10 AND Noise.speechDetected() THEN Audio.playRandomWord()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Semáforo por Voz",
+    "originalIdeaDescription": "Luz roja/verde (simulada en pantalla o imaginada). El usuario grita 'Verde' para activar sonido de tráfico.",
+    "transformedIdeaTitle": "Controlador de Tráfico",
+    "transformedIdeaDescription": "Hay un atasco. Si es de día (Luz alta), puedes dirigir el tráfico. Toca el silbato (haz un ruido agudo/fuerte). Al detectar el silbatazo, el Audio reproducirá sonidos de coches acelerando y avanzando. Si es de noche, los coches duermen.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 AND Noise.whistle() THEN Audio.play('TrafficMove')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Mascota Virtual: El Búho",
+    "originalIdeaDescription": "Duerme de día. De noche se despierta. Si hay ruido fuerte, se asusta y ulula.",
+    "transformedIdeaTitle": "Cuidador de Búhos",
+    "transformedIdeaDescription": "Tu búho es nocturno. Si hay mucha luz, ronca (Audio). Si tapas el sensor (Noche), se despierta y escucha. Si haces un ruido suave, ulula feliz. Si gritas, se asusta y hace sonido de aleteo para escapar.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.high: Audio('Snore'); ELSE IF Noise.low: Audio('Hoot'); ELSE IF Noise.high: Audio('FlyAway')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Agente Secreto: Código Morse",
+    "originalIdeaDescription": "Transmitir mensaje. Flash de luz + golpe de ruido = letra enviada. Audio confirma.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Envía el código secreto. Debes sincronizarte: Haz un flash con una linterna al sensor (Luz) Y da un golpe en la mesa (Ruido) al mismo tiempo. El Audio hará un 'Beep' de confirmación. Si fallas la sincronización, hará un sonido de error.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.flash() AND Noise.tap() WITHIN 0.1s THEN Audio.play('Beep') ELSE Audio.play('Error')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Estrella de Rock en Concierto",
+    "originalIdeaDescription": "Foco (luz) sobre el usuario. Público gritando (ruido). La música suena.",
+    "transformedIdeaTitle": "Escenario Principal",
+    "transformedIdeaDescription": "¡Eres la estrella! Para que la guitarra empiece a sonar (Audio), necesitas dos cosas: Que el foco te ilumine (Luz > 80) y que el público grite tu nombre (Ruido > 80). Si falta luz o gritos, el concierto se detiene.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 AND Noise.level > 80 THEN Audio.play('RockAnthem') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Naturaleza Interactiva: Bosque",
+    "originalIdeaDescription": "Día + Silencio = Pájaros. Noche + Silencio = Grillos. Ruido = Silencio total (animales asustados).",
+    "transformedIdeaTitle": "Ecosistema Vivo",
+    "transformedIdeaDescription": "Simula un bosque. Si hay luz y silencio, suenan pájaros. Si tapas el sensor (noche) y hay silencio, suenan grillos. ¡Pero cuidado! Si haces cualquier ruido fuerte (Ruido > 30), asustarás a los animales y el bosque se quedará en silencio total.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > 30: Stop(); ELSE IF Light > 50: Play('Birds'); ELSE: Play('Crickets')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Desactivación de Bomba de Cine",
+    "originalIdeaDescription": "Audio cuenta atrás. El usuario debe cortar el cable (tapar luz) en silencio absoluto.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "El reloj corre (Audio: Tic-Tac). Debes 'cortar el cable' tapando el sensor de luz con el dedo para dejarlo en oscuridad total. Pero el detonador es sensible al sonido: debes hacerlo sin hablar ni respirar fuerte (Ruido < 5). Si hay ruido, ¡BOOM!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.covered() AND Noise.level < 5 THEN Audio.play('Defused') ELSE IF Noise.level > 5 THEN Audio.play('Explosion')"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Auto Solar con Motor V8",
+    "originalIdeaDescription": "La luz acelera el coche (audio motor). El ruido (soplar) activa el turbo.",
+    "transformedIdeaTitle": "Carrera Solar Turbo",
+    "transformedIdeaDescription": "Pilota el coche. Ponlo bajo el sol para que arranque el motor (Audio). Cuanta más luz, más rápido suena. Si quieres adelantar, sopla fuerte al micrófono (Ruido) para activar el Turbo Boost y escuchar el rugido del motor al máximo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Light.level; IF Noise.blow() THEN Speed = Speed * 2; Audio.setPitch(Speed)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Traductor Alienígena Lumínico",
+    "originalIdeaDescription": "El usuario hace ruidos y flashes. El audio interpreta.",
+    "transformedIdeaTitle": "Contacto Extraterrestre",
+    "transformedIdeaDescription": "Comunícate. Haz una secuencia: Luz-Ruido-Luz. El sistema procesará tu 'frase' y el Audio responderá con una voz alienígena. Experimenta con diferentes combinaciones para escuchar diferentes respuestas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Sequence = Record(Light, Noise); Audio.playTranslation(Sequence)"
+  },
+  {
+    "componentUsed": ["Audio Player", "Light Intensity", "Noise Level"],
+    "originalIdeaTitle": "Juego de Escondite del Terror",
+    "originalIdeaDescription": "El usuario se esconde (Oscuridad). El 'monstruo' escucha (Ruido). Si hay ruido en la oscuridad, te encuentra.",
+    "transformedIdeaTitle": "No Respires",
+    "transformedIdeaDescription": "El monstruo te busca. Escóndete en un lugar oscuro (Luz < 5). El Audio reproduce pasos acercándose. Debes mantener el Nivel de Ruido en 0. Si suspiras o te mueves y haces ruido mientras estás escondido, el Audio gritará '¡TE ENCONTRÉ!'.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.low AND Noise.detected() THEN Audio.play('Jumpscare') ELSE Audio.play('Heartbeat')"
+  }
+]

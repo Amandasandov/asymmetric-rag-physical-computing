@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Panorámico de 360 Grados",
+    "originalIdeaDescription": "Un dispositivo que asigna una nota musical diferente a cada segmento de dirección de la brújula. La inclinación del dispositivo cambia la octava de la nota que se está reproduciendo, permitiendo al usuario tocar escalas simplemente girando sobre su propio eje e inclinando el aparato hacia arriba o abajo.",
+    "transformedIdeaTitle": "El Pianista Giratorio del Futuro",
+    "transformedIdeaDescription": "¡Conviértete en un piano humano! Los estudiantes deben programar el dispositivo para que, al girar hacia el Norte, Sur, Este u Oeste, suenen notas distintas. Para alcanzar notas agudas, deben apuntar al cielo, y para graves, al suelo. Deberán 'bailar' una melodía sencilla girando y agachándose.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass > 0 AND compass < 90 THEN play(C); IF inclination > 45 THEN octave = high"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Detector de Metales Sonoro Direccional",
+    "originalIdeaDescription": "Simulación de un detector de metales donde la brújula apunta hacia un objetivo virtual predefinido y la inclinación ajusta la sensibilidad o 'profundidad' de búsqueda. El teclado emite pitidos que aumentan de frecuencia cuando la dirección y la inclinación coinciden con las coordenadas del 'tesoro'.",
+    "transformedIdeaTitle": "Buscadores del Tesoro Pirata Ciego",
+    "transformedIdeaDescription": "Un juego donde un tesoro invisible está escondido en una dirección y ángulo específicos. Los estudiantes programan el dispositivo para que emita notas musicales rápidas ('ping-ping-ping') solo cuando apuntan exactamente al lugar correcto, guiándose únicamente por el sonido.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF abs(compass - targetDir) < 10 AND abs(inclination - targetTilt) < 10 THEN play(HighNote) ELSE play(LowNote)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sintetizador de Gestos Espaciales",
+    "originalIdeaDescription": "Un instrumento estilo Theremin donde el eje horizontal (brújula) selecciona el tono de la nota y el eje vertical (inclinación) modula el volumen o la duración de la nota, creando paisajes sonoros continuos y experimentales mediante movimientos suaves.",
+    "transformedIdeaTitle": "La Varita Mágica Musical",
+    "transformedIdeaDescription": "Transforma tu dispositivo en una varita mágica. Los estudiantes crean 'hechizos sonoros' donde mover la varita en círculo (cambiando la brújula) crea un barrido de notas mágicas, y levantarla (inclinación) aumenta la intensidad del sonido para el gran final del hechizo.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = map(compass, 0, 360, C4, C5); volume = map(inclination, 0, 90, 0, 100); play(note, volume)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Cerradura de Combinación Acústica Espacial",
+    "originalIdeaDescription": "Un sistema de seguridad lúdico que requiere que el usuario oriente el dispositivo en una secuencia específica de direcciones cardinales e inclinaciones precisas para desbloquear una melodía de éxito. Cada paso correcto reproduce una nota de confirmación.",
+    "transformedIdeaTitle": "La Caja Fuerte de los Sonidos Secretos",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una caja fuerte sónica. Debes encontrar la 'combinación' secreta: Gira al Norte e inclina 45 grados para oír el primer 'clic' (nota Do), luego al Este plano para el segundo 'clic' (nota Mi). ¡Programa la secuencia para proteger tus secretos!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF state == 0 AND compass == North AND inclination == 45 THEN play(C); state = 1"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Carrillón de Viento Interactivo",
+    "originalIdeaDescription": "El dispositivo actúa como un carrillón de viento virtual. La brújula determina la dirección del 'viento' simulado y la inclinación detecta cuánto se 'mece' el dispositivo, disparando notas aleatorias de una escala pentatónica cuando la inclinación supera un umbral.",
+    "transformedIdeaTitle": "El Maestro del Viento Zen",
+    "transformedIdeaDescription": "Crea un ambiente relajante simulando campanas de viento. Los estudiantes programan el dispositivo para que, al soplar el viento (simulado moviendo el dispositivo), suenen notas suaves. Si el movimiento es hacia el Norte, suenan notas agudas; hacia el Sur, notas graves.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination_change > threshold THEN play(random_pentatonic_note(compass_quadrant))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Controlador de Secciones de Orquesta Virtual",
+    "originalIdeaDescription": "El usuario actúa como director de orquesta. Apuntar con la brújula a diferentes zonas (Norte, Este, Oeste) selecciona diferentes grupos de instrumentos (simulados por rangos de notas en el teclado) y la inclinación controla la intensidad con la que tocan.",
+    "transformedIdeaTitle": "Director de la Orquesta Fantasma",
+    "transformedIdeaDescription": "¡Toma la batuta! Apunta a la izquierda para que toquen los 'violines' (notas altas) y a la derecha para los 'tambores' (notas bajas en el teclado). Inclínate hacia adelante para que toquen fuerte y hacia atrás para un suave susurro musical.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass_zone == 'Left' THEN play(HighNotes, velocity=inclination) ELSE play(LowNotes, velocity=inclination)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Navegación Aérea con Feedback Auditivo",
+    "originalIdeaDescription": "Un simulador de vuelo donde el pitch (inclinación) controla la altura del avión (frecuencia de la nota) y el heading (brújula) cambia el panorama estéreo o el tipo de sonido, ayudando a volar sin mirar una pantalla.",
+    "transformedIdeaTitle": "Piloto de Dragones en la Niebla",
+    "transformedIdeaDescription": "Vuelas un dragón a través de una niebla espesa y no puedes ver nada. Usa el sonido para volar: si la nota se vuelve muy grave, ¡estás cayendo (inclina hacia arriba)! Si la nota cambia de instrumento, te estás desviando del rumbo (mira la brújula).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note_pitch = map(inclination, -45, 45, Low, High); instrument = map(compass, 0, 360, 1, 4); play(note_pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Herramienta de Biofeedback para Equilibrio Postural",
+    "originalIdeaDescription": "Dispositivo para ayudar a mantener posturas de yoga o rehabilitación. Se establece una orientación e inclinación objetivo. Si el usuario se desvía de esos parámetros, el teclado emite notas disonantes; si mantiene el equilibrio, suena un acorde armónico.",
+    "transformedIdeaTitle": "El Monje Shaolin en Equilibrio",
+    "transformedIdeaDescription": "Entrena tu equilibrio como un experto en artes marciales. Debes sostener el dispositivo perfectamente plano y mirando al Norte mientras te paras en un pie. Si te tambaleas (cambia la inclinación) o giras, el dispositivo emitirá un sonido de 'error' molesto. ¡Intenta mantener el silencio o un sonido agradable!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(inclination) < 5 AND abs(compass - target) < 10 THEN play(Chord) ELSE play(Dissonance)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mapeador Topográfico Sonoro de Superficies",
+    "originalIdeaDescription": "Herramienta para 'escanear' superficies invisibles. Al mover el dispositivo sobre un mapa imaginario, la brújula representa la ubicación X/Y en coordenadas polares y la inclinación simula la altura del terreno, reproduciendo notas más agudas para 'montañas' y graves para 'valles'.",
+    "transformedIdeaTitle": "Explorador de Cuevas Subterráneas",
+    "transformedIdeaDescription": "Imagina que estás explorando una cueva oscura. Mueve tu dispositivo para escanear el terreno. Si inclinas el dispositivo hacia arriba, estás subiendo una estalagmita (sonido agudo). Si apuntas al Norte, el eco cambia. Dibuja un mapa de la cueva basándote en los sonidos que escuchas.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch = base_note + inclination; tone_color = compass; play(pitch, tone_color)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Juego de Memoria Espacial y Auditiva",
+    "originalIdeaDescription": "Una variante de 'Simón Dice' donde el sistema reproduce una secuencia de notas asociadas a direcciones cardinales (ej. Do=Norte, Re=Este). El usuario debe replicar la secuencia orientando el dispositivo e inclinándolo para confirmar la selección.",
+    "transformedIdeaTitle": "El Desafío de los Cuatro Puntos Cardinales",
+    "transformedIdeaDescription": "El dispositivo tocará una melodía. Cada nota corresponde a una dirección (Norte, Sur, Este, Oeste). ¡Debes memorizarla y luego girar tu cuerpo e inclinar el dispositivo en el orden correcto para recrear la melodía y ganar puntos!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "sequence = [North, East, South]; FOR dir in sequence: wait_for(compass == dir AND inclination > 20)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Ambientes Climáticos Dinámicos",
+    "originalIdeaDescription": "Sistema generativo de sonido ambiental. La dirección de la brújula cambia el tipo de clima (Lluvia, Viento, Truenos representados por notas graves/agudas) y la inclinación controla la intensidad de la tormenta, aumentando la densidad de las notas.",
+    "transformedIdeaTitle": "El Invocador de Tormentas",
+    "transformedIdeaDescription": "Eres un dios del clima. Apunta al Norte para invocar lluvia (notas rápidas y ligeras). Inclina el dispositivo bruscamente para lanzar truenos (acordes graves y fuertes). Crea una historia sonora de una tormenta que se acerca y luego se aleja.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "weather_type = map(compass); intensity = inclination; play_pattern(weather_type, speed=intensity)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Rastreador de Señales de Radiofrecuencia Simulada",
+    "originalIdeaDescription": "Juego de búsqueda donde una señal de 'radio' (notas repetitivas) se vuelve más clara y armónica a medida que el usuario orienta la brújula hacia la fuente y ajusta la inclinación para sintonizar la 'antena' correctamente.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar Espectral",
+    "transformedIdeaDescription": "Hay un fantasma en el aula. Tu dispositivo es un radar espectral. Escucha el ruido estático (notas al azar). Gira lentamente hasta que escuches una melodía clara: ¡ahí está el fantasma! Inclina el dispositivo para 'atraparlo' en la frecuencia correcta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "clarity = 100 - abs(compass - ghostDir) - abs(inclination - ghostFreq); play(melody, distortion=clarity)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Telescopio Acústico para Cuerpos Celestes",
+    "originalIdeaDescription": "Aplicación educativa donde al apuntar (brújula) y elevar (inclinación) el dispositivo hacia la ubicación real de planetas o constelaciones, se reproduce un 'tema musical' único asignado a cada cuerpo celeste.",
+    "transformedIdeaTitle": "Viaje Interestelar a Ciegas",
+    "transformedIdeaDescription": "Convierte el techo de tu clase en un planetario musical. Los estudiantes programan coordenadas para 'Marte' o 'Júpiter'. Al apuntar y elevar el dispositivo hacia esas coordenadas exactas, suena la música de ese planeta. ¡Explora el sistema solar con tus oídos!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass == MarsAzimuth AND inclination == MarsAltitude THEN play(MarsTheme)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Generador de Pasos Musicales Basado en Rumbo",
+    "originalIdeaDescription": "Dispositivo para caminar que detecta el paso mediante un pico en la inclinación y reproduce una nota. La nota cambia según la dirección de la brújula, permitiendo al usuario componer melodías simplemente caminando en diferentes patrones geométricos.",
+    "transformedIdeaTitle": "Las Botas del Gigante Musical",
+    "transformedIdeaDescription": "Átate el sensor a la pierna. Cada vez que das un paso (detectado por la sacudida de la inclinación), suena una nota. Si caminas hacia el Norte, suenas como un gigante enojado (grave); hacia el Sur, como un duende saltarín (agudo). ¡Dibuja figuras en el suelo para hacer canciones!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "ON inclination_spike: play_note(map(compass, 0, 360, LowC, HighC))"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Mesa de Mezclas Tridimensional en el Aire",
+    "originalIdeaDescription": "Interfaz de DJ donde la brújula selecciona entre diferentes pistas o bases rítmicas, y la inclinación actúa como un fader de efectos (filtro o distorsión) aplicado a las notas del teclado que se tocan sobre la base.",
+    "transformedIdeaTitle": "DJ Espacial: Mezclando con Movimiento",
+    "transformedIdeaDescription": "¡Eres el DJ del futuro! No usas botones, usas el aire. Gira tu cuerpo para cambiar entre la base de batería y la de bajo. Inclina el dispositivo hacia atrás para aplicar un efecto de 'eco' a la música. ¡Haz que la clase baile con tus movimientos!",
+    "minAge": 13,
+    "maxAge": 17,
+    "difficultyLevel": 3,
+    "algorithmUsed": "track_id = map(compass, 0, 360, 1, 4); effect_level = inclination; play_track(track_id, effect=effect_level)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Interfaz de Conducción para Vehículos Sonoros",
+    "originalIdeaDescription": "Simulador de coche donde la brújula actúa como volante (cambiando el balance estéreo o tono de derrape) y la inclinación es el acelerador (aumentando el pitch del motor simulado por notas continuas).",
+    "transformedIdeaTitle": "Carrera de Autos Sónicos",
+    "transformedIdeaDescription": "Usa el dispositivo como un volante. Inclínalo hacia adelante para acelerar (el sonido del motor se vuelve más agudo). Gira (brújula) para tomar las curvas. Si giras demasiado rápido sin desacelerar, sonará un chirrido de neumáticos (notas disonantes).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "engine_pitch = inclination * 10; turn_sharpness = delta(compass); IF turn_sharpness > limit THEN play(screech) ELSE play(engine_pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Emulador de Movimientos y Sonidos Animales",
+    "originalIdeaDescription": "Juguete interactivo que asigna animales a direcciones (Norte=Pájaro, Sur=Elefante). La inclinación modula el sonido: inclinar hacia arriba hace que el pájaro cante más agudo (vuelo), inclinar hacia abajo hace que el elefante pise fuerte (notas graves).",
+    "transformedIdeaTitle": "El Zoológico de Bolsillo",
+    "transformedIdeaDescription": "Transforma tu dispositivo en un animal. Mira al Norte: eres un pajarito. Aletea (inclina arriba y abajo) para piar. Mira al Sur: eres un león. Inclina hacia abajo para rugir. Los estudiantes crean un zoológico interactivo donde la dirección define el animal y el movimiento su voz.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass_dir == North THEN animal = Bird; pitch = base_bird + inclination; play(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Pincel Sonoro de Lienzo Esférico",
+    "originalIdeaDescription": "Herramienta de arte sonoro que permite 'pintar' melodías en el aire. El usuario mantiene pulsado un botón virtual (inclinación > 0) y mueve el dispositivo (brújula) para dejar un rastro de notas que se reproducen en bucle según la posición espacial.",
+    "transformedIdeaTitle": "Pintando el Arcoíris Musical",
+    "transformedIdeaDescription": "Imagina que estás dentro de una burbuja gigante. Usa tu dispositivo como una brocha. Al inclinarlo, 'tocas' el lienzo y empieza a sonar música. Al girar, cambias el color (la nota musical). ¡Pinta un arcoíris de sonidos a tu alrededor!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination > paint_threshold THEN current_note = map(compass); loop_buffer.add(current_note)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Perimetral Portátil",
+    "originalIdeaDescription": "Dispositivo de seguridad que guarda la orientación e inclinación inicial. Si el dispositivo es movido (cambio en brújula o inclinación) más allá de un margen de tolerancia, dispara una secuencia de alarma con el teclado musical.",
+    "transformedIdeaTitle": "El Guardián del Diamante Sagrado",
+    "transformedIdeaDescription": "Protege el 'Diamante' (tu dispositivo). Colócalo en una posición exacta. Si un ladrón intenta robarlo (cambiando su inclinación al levantarlo o girándolo), ¡la alarma debe sonar! Los estudiantes aprenden sobre condiciones lógicas y sensores para crear la trampa perfecta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "saved_state = (compass, inclination); LOOP: IF dist(current, saved_state) > tolerance THEN play(Alarm)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "Inclination",
+      "Musical Keyboard"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca con Tensión Sonora",
+    "originalIdeaDescription": "Juego de pesca donde la brújula localiza el pez. Una vez enganchado, el usuario debe inclinar el dispositivo hacia atrás para 'tirar'. El teclado genera sonidos de tensión de la línea (pitch ascendente) que se rompe (silencio) si se tira demasiado fuerte o rápido.",
+    "transformedIdeaTitle": "Pesca Mayor en Alta Mar",
+    "transformedIdeaDescription": "¡Vamos a pescar! Usa la brújula para encontrar dónde están los peces (sonido de burbujas). Cuando muerdan, inclina el dispositivo hacia atrás para recoger el sedal. Escucha la tensión de la caña (notas subiendo): si sube demasiado rápido, ¡el sedal se rompe y pierdes el pez!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF fish_hooked AND inclination_speed > max_tension THEN play(SnapSound) ELSE play(ReelSound)"
+  }
+]

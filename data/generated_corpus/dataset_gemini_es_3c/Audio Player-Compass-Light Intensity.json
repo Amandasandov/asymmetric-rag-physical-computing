@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Dirección Oscura",
+    "originalIdeaDescription": "Un dispositivo que reproduce un sonido de alerta específico únicamente cuando el usuario apunta el dispositivo hacia el Norte y simultáneamente el sensor de luz detecta oscuridad total, simulando la búsqueda de algo oculto.",
+    "transformedIdeaTitle": "Cazadores de Fantasmas Espectrales",
+    "transformedIdeaDescription": "¡Conviértete en un investigador paranormal! Los fantasmas son invisibles y solo salen en la oscuridad total. Debes cubrir el sensor de luz y girar lentamente con tu brújula. Cuando apuntes exactamente al Norte en la oscuridad, escucharás el lamento del espectro indicando que lo has capturado.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'North' AND Light.intensity < 10 THEN Audio.play('ghost_sound') ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Radio de Energía Solar",
+    "originalIdeaDescription": "Un sistema que simula una radio que necesita luz para funcionar. La dirección de la brújula cambia la estación de radio (pista de audio), pero el volumen depende de cuánta luz incide sobre el sensor.",
+    "transformedIdeaTitle": "Supervivencia: La Radio Solar",
+    "transformedIdeaDescription": "Estás perdido en una isla desierta y encontraste una radio vieja. Para sintonizar ayuda, debes girar el dispositivo buscando la señal de rescate (diferentes direcciones son diferentes canales). Sin embargo, las baterías están muertas y solo funciona con luz solar directa; si tapas el sensor, la señal se pierde.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Audio.track = map(Compass.degrees, 0, 360, 1, 5); Audio.volume = Light.intensity; Audio.play()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Direccional",
+    "originalIdeaDescription": "Un mecanismo de seguridad que solo reproduce un sonido de 'desbloqueo' si el dispositivo se coloca dentro de una caja (oscuridad) y se orienta hacia una dirección cardinal específica (ej. Oeste).",
+    "transformedIdeaTitle": "El Código Da Vinci Digital",
+    "transformedIdeaDescription": "Eres un ladrón de guante blanco intentando abrir una bóveda antigua. El mecanismo es sensible a la luz y a la orientación magnética. Debes esconder el dispositivo en un cajón oscuro y girarlo lentamente hacia el Oeste para escuchar el 'clic' que indica que la bóveda se ha abierto.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity < 5 AND Compass.direction == 'West' THEN Audio.play('unlock_click') ELSE Audio.play('locked_buzz')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Instrumento Musical Theremin",
+    "originalIdeaDescription": "Creación de un instrumento musical experimental donde el tono de la nota musical cambia según los grados de la brújula y la intensidad del sonido se controla sombreando el sensor de luz con la mano.",
+    "transformedIdeaTitle": "Compositor del Viento",
+    "transformedIdeaDescription": "Crea melodías etéreas moviendo tu cuerpo y tus manos. Gira sobre tu propio eje para cambiar las notas musicales como si tocaras un arpa invisible de 360 grados, y usa tu mano sobre el sensor de luz para controlar el volumen, creando efectos de desvanecimiento dramáticos.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "note = map(Compass.degrees, 0, 360, 'C', 'B'); volume = map(Light.intensity, 0, 100, 0, 10); Audio.playNote(note, volume)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Simulador de Vampiro",
+    "originalIdeaDescription": "Un juego de rol donde el dispositivo representa a un vampiro. Si detecta luz, grita (audio). La brújula se usa para encontrar la dirección del 'ataúd' (Norte) para detener el sonido.",
+    "transformedIdeaTitle": "¡Escape del Vampiro!",
+    "transformedIdeaDescription": "¡Eres un vampiro y el sol está saliendo! Si el sensor detecta luz, el audio reproducirá un grito de dolor y quemadura. Debes correr (girar) buscando la seguridad de tu cripta (el Norte) y cubrirte de la luz inmediatamente para sobrevivir.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.intensity > 50 THEN { IF Compass.direction != 'North' THEN Audio.play('scream') ELSE Audio.play('safe_sigh') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Explorador de Cuevas",
+    "originalIdeaDescription": "Sistema de navegación auditiva. Al bajar la luz (entrar en cueva), se activa el audio de gotas de agua. La brújula cambia el sonido de los pasos según si el terreno es rocoso (Norte) o húmedo (Sur).",
+    "transformedIdeaTitle": "Expedición a la Caverna Profunda",
+    "transformedIdeaDescription": "Adéntrate en una cueva inexplorada. El juego comienza cuando apagas las luces de la habitación. Escucha el entorno: si caminas hacia el Norte, oirás murciélagos; hacia el Sur, un río subterráneo. Usa tu oído y tu brújula para navegar sin ver.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity < 20 THEN { IF Compass.heading == 'North' THEN Audio.play('bats') ELSE Audio.play('river') } ELSE Audio.stop()"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Alarma de Guardia Nocturno",
+    "originalIdeaDescription": "Dispositivo de vigilancia que suena una alarma si detecta un cambio repentino de luz (linterna de un ladrón) mientras vigila una dirección específica (puerta de entrada).",
+    "transformedIdeaTitle": "Misión: El Museo de Joyas",
+    "transformedIdeaDescription": "Diseña el sistema de seguridad para el diamante más grande del mundo. Configura el dispositivo para vigilar la puerta Este. Si un ladrón ilumina el sensor con su linterna mientras viene de esa dirección, ¡activa la sirena de policía!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.direction == 'East' AND Light.intensity > ambient_light + 20 THEN Audio.play('alarm_siren')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Sonar de Submarino",
+    "originalIdeaDescription": "Simulación de un submarino. La luz baja indica profundidad (inmersión). La brújula controla la dirección del sonar, emitiendo 'pings' de diferentes frecuencias.",
+    "transformedIdeaTitle": "Comandante de Submarino",
+    "transformedIdeaDescription": "Sumerge tu nave cubriendo el sensor de luz para iniciar la inmersión. Una vez bajo el agua (oscuridad), gira tu periscopio (brújula) para rastrear barcos enemigos. Un 'ping' agudo indica que has fijado el objetivo al Norte.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity < 10 THEN { ping_rate = map(Compass.degrees, 0, 360, 0.5, 2.0); Audio.play('ping', rate=ping_rate) }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Mezclador DJ Espacial",
+    "originalIdeaDescription": "Controlador de música donde la dirección de la brújula selecciona el 'loop' de batería y la luz actúa como un filtro de paso bajo o control de distorsión.",
+    "transformedIdeaTitle": "DJ Galáctico",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta alienígena! Gira tu consola (brújula) para cambiar entre ritmos de techno, hip-hop y rock. Usa la sombra de tu mano sobre el sensor de luz para hacer 'scratching' o bajar la intensidad antes de que estalle el bajo.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "track_id = Compass.sector(4); Audio.effect_level = Light.intensity; Audio.playLoop(track_id)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "El Búho Cazador",
+    "originalIdeaDescription": "Simulación de comportamiento animal. Reproduce sonidos de búho solo cuando hay poca luz. Si la brújula gira rápido, reproduce sonido de aleteo (caza).",
+    "transformedIdeaTitle": "La Vida Secreta del Búho",
+    "transformedIdeaDescription": "Vive una noche como un búho. El juego solo funciona con las luces apagadas. Gira tu cabeza (el dispositivo) lentamente para ulular y marcar territorio. Si giras rápido hacia una presa, escucharás el sonido de tus alas en picada.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity < 30 THEN { IF delta(Compass.degrees) > threshold THEN Audio.play('wings') ELSE Audio.play('hoot') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Desactivador de Bombas",
+    "originalIdeaDescription": "Un juego de tensión donde el usuario debe girar a una combinación de direcciones seguras indicadas por audio, pero debe hacerlo cubriendo el sensor para simular cortar cables a oscuras.",
+    "transformedIdeaTitle": "Escuadrón Antibombas",
+    "transformedIdeaDescription": "¡Tic, tac! La bomba está activa. El comando te dirá al oído (Audio) hacia dónde girar la herramienta. Pero cuidado: el mecanismo es fotosensible. Debes realizar toda la operación cubriendo el sensor de luz con tu pulgar, o explotará.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.intensity > 5 THEN Audio.play('boom') ELSE { IF Compass.direction == target_direction THEN Audio.play('defused') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Brújula Narradora de Historias",
+    "originalIdeaDescription": "Un dispositivo que cuenta fragmentos de una historia diferentes dependiendo de hacia qué punto cardinal se apunte, activándose solo cuando hay suficiente luz para 'leer' el mapa.",
+    "transformedIdeaTitle": "La Brújula de los Cuentos Mágicos",
+    "transformedIdeaDescription": "Este libro mágico te habla. Si apuntas al Norte, te cuenta sobre el Reino de Hielo; al Sur, sobre el Desierto de Fuego. Pero recuerda, no puedes leer en la oscuridad: asegúrate de estar bajo una lámpara para escuchar la historia.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.intensity > 60 THEN Audio.play(Story[Compass.cardinalDirection])"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Ovnis",
+    "originalIdeaDescription": "Genera ruido estático que se aclara y se convierte en un mensaje alienígena cuando se apunta a una coordenada específica del cielo y se ilumina el sensor (haz tractor).",
+    "transformedIdeaTitle": "Contacto Extraterrestre",
+    "transformedIdeaDescription": "Busca señales de vida en el espacio. Escucharás estática hasta que apuntes tu radar (brújula) a la constelación correcta. Para establecer contacto final y recibir el mensaje, debes iluminar el sensor con una linterna para responder a sus señales de luz.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.degrees == target_degree AND Light.intensity > 80 THEN Audio.play('alien_message') ELSE Audio.play('static')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Jardín Zen Sonoro",
+    "originalIdeaDescription": "Sistema de relajación. Reproduce sonidos de naturaleza. La brújula cambia el tipo de entorno (bosque, playa) y la luz controla la intensidad de los pájaros o grillos (día/noche).",
+    "transformedIdeaTitle": "Maestro del Zen",
+    "transformedIdeaDescription": "Crea tu propio santuario de paz. Gira hacia el Este para escuchar el océano o al Oeste para el bosque. Experimenta cubriendo el sensor: con luz escucharás pájaros cantando, y en la oscuridad escucharás grillos y búhos nocturnos.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "env_sound = selectEnv(Compass.direction); time_sound = (Light.intensity > 50) ? 'birds' : 'crickets'; Audio.playMix(env_sound, time_sound)"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "El Topo Ciego",
+    "originalIdeaDescription": "Juego donde el usuario es un topo. Debe encontrar la salida (audio de victoria) navegando con la brújula, pero pierde si el sensor detecta mucha luz (sale a la superficie prematuramente).",
+    "transformedIdeaTitle": "El Escape del Topo",
+    "transformedIdeaDescription": "Eres un topo cavando túneles bajo el jardín. Debes encontrar la zanahoria dorada guiándote por el olfato (sonidos de 'sniff' que se aceleran en la dirección correcta). ¡Pero cuidado! Si detectas luz fuerte, significa que cavaste hacia arriba y el granjero te verá. ¡Mantente en la oscuridad!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity > 70 THEN Audio.play('caught') ELSE { IF Compass.direction == target THEN Audio.play('win') }"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Navegador de Tormentas",
+    "originalIdeaDescription": "Simulador de barco. El audio reproduce viento fuerte. La dirección de la brújula debe mantenerse constante contra el viento. La luz simula relámpagos; cuando hay un pico de luz, hay que girar para evitar el rayo.",
+    "transformedIdeaTitle": "Capitán de la Tormenta",
+    "transformedIdeaDescription": "Navega tu barco a través de un huracán. Mantén el rumbo al Norte escuchando el viento. Si el sensor de luz detecta un 'flash' (puedes usar una linterna parpadeando), es un rayo inminente: ¡gira el timón (brújula) rápidamente para esquivarlo o el barco se hundirá!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Light.change > threshold THEN { wait_for_turn(); IF !turned THEN Audio.play('crash') } ELSE Audio.play('wind')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Sonidos",
+    "originalIdeaDescription": "Dispositivo gestual. Apuntar a diferentes direcciones y cambiar la intensidad de luz (tapando/destapando) lanza diferentes 'hechizos' de audio.",
+    "transformedIdeaTitle": "Escuela de Hechicería",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Apunta tu varita al Este y cubre la luz para lanzar 'Bola de Fuego' (sonido de explosión). Apunta al Oeste y deja entrar luz para lanzar 'Viento Curativo' (sonido de campanas). ¡Memoriza las combinaciones!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.dir == 'East' AND Light.low THEN Audio.play('fire') ELSE IF Compass.dir == 'West' AND Light.high THEN Audio.play('heal')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Semáforo Sonoro para Ciegos",
+    "originalIdeaDescription": "Herramienta de asistencia simulada. Emite un sonido de 'cruce seguro' solo cuando se apunta en la dirección del cruce y la luz indica que el semáforo peatonal (simulado) está en verde/brillante.",
+    "transformedIdeaTitle": "Ciudad Accesible",
+    "transformedIdeaDescription": "Diseña una herramienta para ayudar a personas con discapacidad visual. El dispositivo debe guiar al usuario. Si apunta al Norte (el cruce) y el sensor detecta la luz del semáforo, debe emitir un sonido rápido de 'pi-pi-pi' para indicar que es seguro cruzar.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.direction == 'North' AND Light.intensity > 50 THEN Audio.play('walk_signal') ELSE Audio.play('wait_signal')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Entrenador de Yoga Solar",
+    "originalIdeaDescription": "Asistente de ejercicios. Pide al usuario realizar el 'Saludo al Sol'. Verifica que el usuario mire al Este (Compass) y que haya luz (Light) para reproducir música de éxito.",
+    "transformedIdeaTitle": "Desafío Saludo al Sol",
+    "transformedIdeaDescription": "Empieza tu mañana con energía. El entrenador digital te pedirá que realices la pose 'Saludo al Sol'. Para ganar, debes orientarte perfectamente hacia el Este (donde sale el sol) y asegurarte de estar en un lugar bien iluminado. Solo entonces sonará el gong de la victoria.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.direction == 'East' AND Light.intensity > 60 THEN Audio.play('gong') ELSE Audio.play('instruction_retry')"
+  },
+  {
+    "componentUsed": [
+      "Audio Player",
+      "Compass",
+      "Light Intensity"
+    ],
+    "originalIdeaTitle": "Detector de Sombras",
+    "originalIdeaDescription": "Juego inverso de escondite. El audio aumenta de frecuencia cuanto más cerca se está de una dirección objetivo, pero se silencia si el usuario se esconde en una sombra.",
+    "transformedIdeaTitle": "El Ninja de las Sombras",
+    "transformedIdeaDescription": "Debes infiltrarte en la base enemiga (una ubicación al Norte). Tu radar (audio) suena más rápido cuanto más te acercas a la dirección correcta, pero los guardias te oirán. Para moverte en silencio, debes mantener el sensor en la sombra. Si te da la luz, ¡el radar te delata!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.intensity < 20 THEN Audio.volume = 0 ELSE Audio.volume = 100; Audio.rate = map(Compass.deviation, 0, 180, 2.0, 0.5)"
+  }
+]

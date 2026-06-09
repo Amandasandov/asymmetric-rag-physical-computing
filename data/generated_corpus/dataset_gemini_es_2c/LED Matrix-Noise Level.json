@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de barras de ecualizador gráfico simple",
+    "originalIdeaDescription": "Un sistema que utiliza el micrófono para captar el volumen del sonido ambiental y lo traduce en columnas de LEDs que suben y bajan en la matriz, simulando un ecualizador de música antiguo.",
+    "transformedIdeaTitle": "La Discoteca de Píxeles",
+    "transformedIdeaDescription": "¡Conviértete en el DJ de la fiesta! Programa tu matriz para que las luces bailen al ritmo de tu canción favorita. Cuanto más fuerte cantes o aplaudas, más altas serán las torres de luz. ¿Podrás llenar toda la pantalla con tu grito más fuerte?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "level = map(NoiseLevel, 0, 100, 0, 7); LEDMatrix.showBarGraph(level)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Animación de boca robótica sincronizada",
+    "originalIdeaDescription": "Una cara digital mostrada en la matriz LED que cambia su expresión de 'boca cerrada' a 'boca abierta' dependiendo de si el sensor de ruido detecta sonido, simulando que el robot está hablando.",
+    "transformedIdeaTitle": "El Robot Ventrílocuo",
+    "transformedIdeaDescription": "Crea tu propio amigo robot que mueve los labios cuando tú hablas. Dibuja una cara con la boca cerrada y otra con la boca abierta. Luego, programa el código para que el robot te imite cada vez que detecte tu voz.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 15 THEN LEDMatrix.showImage('OpenMouth') ELSE LEDMatrix.showImage('ClosedMouth')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de silencio para bibliotecas",
+    "originalIdeaDescription": "Un dispositivo que muestra una cara feliz mientras el ruido ambiental sea bajo, pero cambia automáticamente a una cara enojada o un símbolo de advertencia si el nivel de ruido supera un umbral establecido.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Ayuda a la bibliotecaria a mantener la paz. Diseña un sistema de alerta que muestre una carita sonriente cuando todos estudian en silencio, pero que ponga una cara muy enfadada si alguien empieza a hablar fuerte.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel < 30 THEN LEDMatrix.showImage('Happy') ELSE LEDMatrix.showImage('Angry')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulación de vela digital sensible al soplido",
+    "originalIdeaDescription": "La matriz muestra una animación de una llama parpadeante. Al detectar un pico alto y repentino de ruido (simulando un soplido fuerte), la animación de la llama desaparece como si se hubiera apagado.",
+    "transformedIdeaTitle": "Sopla las Velas del Pastel",
+    "transformedIdeaDescription": "¡Es un cumpleaños digital! Dibuja una vela encendida en la matriz. El desafío es programarla para que, cuando soples fuerte cerca del sensor (haciendo ruido de viento), la vela se apague mágicamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LEDMatrix.playAnimation('Fire'); IF NoiseLevel > 85 THEN LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Criatura que duerme y despierta con ruido",
+    "originalIdeaDescription": "Muestra unos ojos cerrados (Zzz...) en la matriz. Si el sensor de ruido detecta un sonido fuerte, la matriz cambia a unos ojos grandes y abiertos, simulando que la criatura se ha despertado asustada.",
+    "transformedIdeaTitle": "No Despiertes al Monstruo",
+    "transformedIdeaDescription": "Shhh... el monstruo de los píxeles está durmiendo. Tu misión es moverte por la habitación sin hacer ruido. Si haces un sonido fuerte, el monstruo abrirá sus ojos gigantes en la pantalla y perderás el juego.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN LEDMatrix.showImage('WideEyes') ELSE LEDMatrix.showImage('Sleeping')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de espías estilo ninja",
+    "originalIdeaDescription": "Un juego de sigilo donde la matriz muestra un icono de 'seguro'. Si el nivel de ruido sube ligeramente (pasos, respiración fuerte), muestra un icono de 'alerta' o un ojo observando.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: Pasos de Pluma",
+    "transformedIdeaDescription": "¿Tienes lo necesario para ser un ninja? Configura la sensibilidad al máximo. Debes caminar cerca del dispositivo sin que la matriz cambie su icono. Si eres demasiado ruidoso, ¡el ojo que todo lo ve te descubrirá!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 10 THEN LEDMatrix.showImage('Eye') ELSE LEDMatrix.showImage('Empty')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Planta digital que crece con canciones",
+    "originalIdeaDescription": "Una simulación de una planta pequeña (pocos píxeles). A medida que el sensor detecta ruido continuo (canto o música) durante un tiempo, la planta añade más píxeles hasta llenar la pantalla (florecer).",
+    "transformedIdeaTitle": "Canta para tu Jardín",
+    "transformedIdeaDescription": "Dicen que a las plantas les gusta la música. Crea una semilla digital (un punto) que crezca poco a poco cada vez que le cantes una canción. Si mantienes el ritmo, ¡verás cómo florece una hermosa flor pixelada!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 20 THEN growthCounter++; IF growthCounter == 10 THEN LEDMatrix.showImage('FlowerStage2')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Interruptor de luz activado por aplausos",
+    "originalIdeaDescription": "Un sistema lógico que cambia el estado de la matriz (encendido/apagado o bombilla llena/vacía) cada vez que se detecta un pico de sonido corto y fuerte similar a un aplauso.",
+    "transformedIdeaTitle": "El Interruptor Mágico",
+    "transformedIdeaDescription": "¡Siéntete como un mago en una casa inteligente! Programa tu matriz para que se encienda una bombilla dibujada cuando aplaudas una vez, y se apague cuando vuelvas a aplaudir. Aprenderás sobre 'estados' y 'conmutadores'.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 70 AND !clapped THEN { lightState = !lightState; clapped = true } IF NoiseLevel < 20 THEN clapped = false"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de voz a glifos alienígenas",
+    "originalIdeaDescription": "Cada vez que el sensor detecta sonido, la matriz genera patrones aleatorios y abstractos, simulando que está traduciendo el lenguaje humano a un idioma visual extraterrestre.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Has contactado con alienígenas, pero no hablan tu idioma. Habla al micrófono y observa cómo tu voz se transforma en extraños símbolos en la pantalla. ¿Qué patrón aparecerá si dices 'Hola'?",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 20 THEN LEDMatrix.showImage(RandomPattern())"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de llenar el vaso con gritos",
+    "originalIdeaDescription": "Un juego visual donde la intensidad y duración del ruido van 'llenando' la matriz de abajo hacia arriba fila por fila. El objetivo es llenar la matriz completamente gritando fuerte.",
+    "transformedIdeaTitle": "El Recolector de Gritos",
+    "transformedIdeaDescription": "Imagina que trabajas en la fábrica de energía de monstruos. Tienes que gritar tan fuerte y largo como puedas para cargar la batería (llenar la pantalla de luces) antes de que se agote el tiempo.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "fillLevel = min(7, NoiseLevel / 15); LEDMatrix.fillRows(fillLevel)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Efecto de fuegos artificiales por sonido",
+    "originalIdeaDescription": "La matriz está oscura. Al detectar un sonido fuerte (como un golpe en la mesa o un aplauso), se dispara una animación de explosión de píxeles desde el centro hacia afuera.",
+    "transformedIdeaTitle": "Pirotecnia Sonora",
+    "transformedIdeaDescription": "¡Crea tu propio espectáculo de Año Nuevo! Programa la pantalla para que esté oscura y tranquila, pero que lance hermosos fuegos artificiales de píxeles cada vez que aplaudas al ritmo de la música.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN LEDMatrix.playAnimation('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Efecto de cristal roto por alta frecuencia",
+    "originalIdeaDescription": "Muestra una imagen bonita (ej. un corazón). Si el nivel de ruido supera un umbral extremo, la imagen cambia instantáneamente a una versión fragmentada o distorsionada, simulando una rotura.",
+    "transformedIdeaTitle": "La Voz de la Ópera",
+    "transformedIdeaDescription": "¿Puede tu voz romper cristales? Muestra una copa elegante en la pantalla. Intenta alcanzar una nota alta y fuerte con tu voz. Si superas el límite, programa la pantalla para que la copa parezca hacerse pedazos.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 90 THEN LEDMatrix.showImage('BrokenGlass') ELSE LEDMatrix.showImage('Glass')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Control de altitud de helicóptero por voz",
+    "originalIdeaDescription": "Un punto (el helicóptero) se muestra en la matriz. Cuanto más fuerte es el ruido detectado, más arriba se dibuja el punto (eje Y). Si hay silencio, el punto cae al suelo.",
+    "transformedIdeaTitle": "El Helicóptero a Voz",
+    "transformedIdeaDescription": "Eres el piloto de un helicóptero que funciona con sonido. Haz el sonido del motor 'Brrrr' para elevarte. Cuanto más fuerte lo hagas, más alto volarás en la pantalla. ¡Intenta mantenerte en el aire sin chocar con el techo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "yPos = map(NoiseLevel, 0, 100, 7, 0); LEDMatrix.setPixel(3, yPos, ON)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota digital con emociones auditivas",
+    "originalIdeaDescription": "Una cara que reacciona emocionalmente: Triste si hay silencio total por mucho tiempo, Feliz con ruido moderado, y Mareada/Confundida si hay demasiado ruido constante.",
+    "transformedIdeaTitle": "Tamagotchi Sensible",
+    "transformedIdeaDescription": "Cuida a tu mascota virtual. Se siente sola si hay demasiado silencio (pon una cara triste), se pone feliz cuando le hablas normal, pero se marea si le gritas. ¡Programa sus emociones para que sea una mascota feliz!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise < 10 THEN Show('Sad') ELSE IF Noise > 80 THEN Show('Dizzy') ELSE Show('Happy')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de tormenta eléctrica",
+    "originalIdeaDescription": "La matriz muestra gotas de lluvia cayendo suavemente (ruido bajo). Si el sensor detecta un ruido fuerte (trueno simulado), la matriz parpadea completamente en blanco como un relámpago.",
+    "transformedIdeaTitle": "El Invocador de Tormentas",
+    "transformedIdeaDescription": "Crea un ambiente lluvioso en tu pantalla con gotas cayendo. Luego, conviértete en Thor: golpea la mesa (¡Boom!) para invocar un relámpago que ilumine toda la pantalla al instante.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "LEDMatrix.animate('Rain'); IF NoiseLevel > 75 THEN LEDMatrix.flash(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Visualizador de latidos cardíacos por ritmo",
+    "originalIdeaDescription": "Un corazón grande que se contrae y expande. La velocidad de la animación o el tamaño del corazón se vincula a pulsos de sonido rítmicos captados por el micrófono.",
+    "transformedIdeaTitle": "El Corazón del Cyborg",
+    "transformedIdeaDescription": "Dale vida a un robot. Haz ruidos rítmicos (bip... bip... bip) y programa la matriz para que muestre un corazón latiendo al mismo tiempo que tus sonidos. Si aceleras el ritmo, el corazón debe latir más rápido.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoisePeakDetected THEN LEDMatrix.showImage('BigHeart') ELSE LEDMatrix.showImage('SmallHeart')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Pacman activado por voz",
+    "originalIdeaDescription": "Un icono de Pacman que abre la boca proporcionalmente al nivel de ruido. El objetivo es comer 'puntos' que aparecen aleatoriamente haciendo el sonido 'Waka Waka'.",
+    "transformedIdeaTitle": "Hambriento por Ruido",
+    "transformedIdeaDescription": "Tu personaje tiene mucha hambre. Dibuja un Pacman que abra la boca de verdad. Cuanto más fuerte hagas 'Waka Waka', más grande abrirá la boca para comerse los puntos de luz de la pantalla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "mouthSize = map(NoiseLevel, 0, 100, 0, 3); LEDMatrix.drawPacman(mouthSize)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Efecto de onda expansiva o sonar",
+    "originalIdeaDescription": "Un punto central emite anillos concéntricos hacia afuera cada vez que se detecta un sonido, simulando cómo viaja el sonido o un sonar submarino detectando un obstáculo.",
+    "transformedIdeaTitle": "Radar Submarino",
+    "transformedIdeaDescription": "Estás en un submarino oscuro. Envía un 'ping' de sonar haciendo un sonido corto. Programa la pantalla para que muestre ondas circulares expandiéndose desde el centro cada vez que detecte tu señal.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 40 THEN LEDMatrix.playAnimation('RippleEffect')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Semáforo de contaminación acústica",
+    "originalIdeaDescription": "La matriz muestra una luz Verde (poco ruido), Amarilla (ruido medio) o Roja (mucho ruido). Sirve para concientizar sobre el ruido en el aula o en la ciudad.",
+    "transformedIdeaTitle": "El Semáforo de la Clase",
+    "transformedIdeaDescription": "Construye un semáforo inteligente para tu clase. Si todos hablan bajito, muestra un cuadrado verde. Si hay murmullo, amarillo. Pero si hay demasiado jaleo, ¡enciende la luz roja de alerta!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise < 30 THEN Color=Green ELSE IF Noise < 60 THEN Color=Yellow ELSE Color=Red"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de mentiras de juguete",
+    "originalIdeaDescription": "Un dispositivo lúdico que analiza las variaciones en el nivel de voz. Si la voz es temblorosa o muy baja/alta (según una lógica aleatoria o de umbral), muestra una X, si no, un Check.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Juega a los detectives con tus amigos. Hazles una pregunta y pídeles que respondan al micrófono. Programa la máquina para que analice su voz: si hablan demasiado flojo o titubean (cambios raros de volumen), ¡muestra una X gigante!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 40 AND NoiseLevel < 70 THEN LEDMatrix.show('Check') ELSE LEDMatrix.show('X')"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Girasol Robótico Musical",
+    "originalIdeaDescription": "Un sistema que busca la luz más fuerte. El usuario gira el dispositivo (brújula). Cuando encuentra la luz máxima, el tambor toca un ritmo de celebración.",
+    "transformedIdeaTitle": "La Flor que Baila",
+    "transformedIdeaDescription": "Eres un girasol buscando el sol. Gira tu cuerpo (Compass) escaneando la habitación. Cuando el sensor de luz detecte el punto más brillante (una lámpara o ventana), el Tambor empezará a tocar un ritmo de samba. Si te alejas de la luz, el ritmo se detiene.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 80 THEN Drum.loop('Samba') ELSE Drum.stop()"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Navegación de Barco Fantasma",
+    "originalIdeaDescription": "Navegar en la niebla. La brújula marca el rumbo. Si hay mucha luz (niebla densa reflejando), el tambor suena como sirena de niebla.",
+    "transformedIdeaTitle": "Capitán en la Niebla",
+    "transformedIdeaDescription": "Navega hacia el Norte. El mar está peligroso. Si apuntas una linterna al sensor (simulando un faro o barco enemigo acercándose), el Tambor debe sonar un golpe grave y lento de advertencia para evitar la colisión. Mantén el rumbo sin chocar.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North': IF Light.level > 60 THEN Drum.play('FogHorn')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Caja Fuerte de Luz y Dirección",
+    "originalIdeaDescription": "Para abrir, el usuario debe apuntar al Oeste y tapar el sensor de luz (oscuridad) simultáneamente. El tambor hace 'clic'.",
+    "transformedIdeaTitle": "El Tesoro del Pirata",
+    "transformedIdeaDescription": "El mapa dice: 'Donde el sol se pone (Oeste) y reina la oscuridad'. Gira al Oeste (Compass) y cubre el sensor de luz con tu mano. Si cumples ambas condiciones, el Tambor hará el sonido de un cerrojo abriéndose.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Light.level < 10 THEN Drum.play('UnlockClick')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Ritual del Amanecer",
+    "originalIdeaDescription": "Mirar al Este. A medida que aumenta la luz, el tambor acelera el ritmo simulando un despertar tribal.",
+    "transformedIdeaTitle": "El Despertar de la Tribu",
+    "transformedIdeaDescription": "Eres el chamán. Apunta al Este. Pide a un amigo que suba la intensidad de la luz (o acerque una lámpara) lentamente. A medida que la luz sube, tu Tambor debe tocar cada vez más rápido para despertar a la aldea.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'East': BeatSpeed = Map(Light.level); Drum.loop('Tribal', BeatSpeed)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Cazador de Vampiros",
+    "originalIdeaDescription": "Buscar al vampiro con la brújula. Al encontrarlo, 'quemarlo' con luz (linterna). El tambor simula los golpes del combate.",
+    "transformedIdeaTitle": "Misión: Van Helsing",
+    "transformedIdeaDescription": "El vampiro está al Norte. Gira hacia allí. Es inmune en la oscuridad. Debes apuntar hacia el Norte Y al mismo tiempo iluminar el sensor con una linterna potente. Si lo logras, el Tambor sonará un redoble de victoria.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Light.level > 90 THEN Drum.play('VictoryRoll') ELSE Drum.play('Silence')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Detector de Cuevas",
+    "originalIdeaDescription": "Caminar hacia una dirección. Si la luz baja (entrada a cueva), el tambor hace eco.",
+    "transformedIdeaTitle": "Explorador Subterráneo",
+    "transformedIdeaDescription": "Busca la entrada a la mina perdida hacia el Sur. Camina (simulado). Cuando tapes el sensor de luz (simulando entrar en la oscuridad de la cueva) mientras miras al Sur, el Tambor debe empezar a producir sonidos con eco.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Light.level < 20 THEN Drum.playEffect('EchoCave')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Batería Direccional Fotosensible",
+    "originalIdeaDescription": "Norte = Bombo, Sur = Caja. El volumen depende de la luz ambiental (más luz = más fuerte).",
+    "transformedIdeaTitle": "Baterista Solar",
+    "transformedIdeaDescription": "Toca la batería con el sol. Gira al Norte para tocar el Bombo, al Sur para la Caja. El volumen depende de la luz: si tocas bajo una lámpara, sonarás fuerte (Fortissimo). Si tocas en la sombra, sonarás suave (Pianissimo).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Instrument = Map(Compass.heading); Volume = Light.level; Drum.play(Instrument, Volume)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Juego de Sigilo: El Guardia",
+    "originalIdeaDescription": "El usuario debe cruzar una línea (dirección). Si un foco (luz) lo ilumina, el tambor suena alarma.",
+    "transformedIdeaTitle": "Escape de la Prisión",
+    "transformedIdeaDescription": "Debes escapar corriendo hacia el Oeste. Pero hay reflectores barriendo el patio. Si tu brújula marca Oeste pero el sensor detecta un pico de Luz (te han iluminado), el Tambor disparará la alarma y perderás.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'West' AND Light.level > 50 THEN Drum.play('Siren') ELSE Drum.play('QuietSteps')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Radar de Tormenta",
+    "originalIdeaDescription": "Detecta flashes de luz (rayos). La brújula indica de dónde viene la tormenta. El tambor hace el trueno.",
+    "transformedIdeaTitle": "Cazadores de Tormentas",
+    "transformedIdeaDescription": "Rastrea el clima. Gira buscando la tormenta. Si apuntas al Este y el sensor detecta un flash de luz (Rayo), el Tambor debe esperar 2 segundos y luego soltar un gran estruendo (Trueno).",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == StormDir AND Light.flash() THEN Wait(2s); Drum.play('Thunder')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Agente Secreto: Código Morse",
+    "originalIdeaDescription": "Enviar mensajes con luz. La brújula selecciona el canal de transmisión. El tambor confirma el envío.",
+    "transformedIdeaTitle": "Telégrafo Espía",
+    "transformedIdeaDescription": "Envía el mensaje a la base aliada al Norte. Oriéntate correctamente. Usa una linterna para enviar pulsos de luz al sensor (Código Morse). Cada vez que el sensor detecte un pulso de luz válido en la dirección correcta, el Tambor hará un 'bip' de confirmación.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Light.pulse() THEN Drum.play('Beep')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "La Luciérnaga Musical",
+    "originalIdeaDescription": "Buscar luciérnagas girando. Solo se ven en la oscuridad. El tambor tintinea cuando encuentras una.",
+    "transformedIdeaTitle": "Bosque Encantado",
+    "transformedIdeaDescription": "Busca hadas mágicas. Apaga las luces (Luz baja). Gira lentamente. Hay un hada escondida al Sureste. Cuando apuntes allí en la oscuridad, el Tambor tocará un sonido de campanillas o platillos suaves.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 10 AND Compass.heading == 'SE' THEN Drum.play('Chimes')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Panel Solar de Seguimiento",
+    "originalIdeaDescription": "Simular un panel que busca eficiencia. El usuario gira buscando la luz máxima. El tambor acelera el ritmo indicando máxima energía.",
+    "transformedIdeaTitle": "Ingeniero de Energía",
+    "transformedIdeaDescription": "Optimiza la energía. Gira el dispositivo (Compass) buscando la fuente de luz más fuerte. El Tambor funciona como un contador Geiger: cuanto más intensa sea la luz que recibes, más rápido será el ritmo del tambor. ¡Encuentra el punto óptimo!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "RhythmSpeed = Map(Light.level); Drum.loop('Tick', Speed=RhythmSpeed)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Reloj de Sol Sonoro",
+    "originalIdeaDescription": "Dependiendo de la dirección de la luz (sombra sobre el dispositivo) y la orientación, el tambor marca las horas.",
+    "transformedIdeaTitle": "El Reloj del Tiempo",
+    "transformedIdeaDescription": "Construye un reloj antiguo. Oriéntate al Sur. Pasa tu mano sobre el sensor para simular la sombra del sol a diferentes horas. Si la sombra es parcial, el Tambor da una campanada. Si es total, da doce.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South': Hours = Map(Light.level); Drum.hits(Hours)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Juego de Estatuas Orientadas",
+    "originalIdeaDescription": "Moverse mientras hay luz. Si se apaga, congelarse mirando a una dirección específica. Si fallas, el tambor te elimina.",
+    "transformedIdeaTitle": "Estatuas Cardinales",
+    "transformedIdeaDescription": "Baila mientras haya luz. Cuando el profesor apague la luz, debes congelarte mirando al NORTE inmediatamente. Si el sensor detecta oscuridad pero tu brújula no marca Norte, el Tambor suena un platillazo de eliminación.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.change(Off) AND Compass.heading != 'North' THEN Drum.play('Crash')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Buscaminas Lumínico",
+    "originalIdeaDescription": "Campo minado virtual. La brújula es el detector. Si hay una mina cerca, la luz parpadea (simulado con sensor). Tambor explota si te acercas mucho.",
+    "transformedIdeaTitle": "Campo Minado",
+    "transformedIdeaDescription": "Cruza el campo de batalla. Gira para escanear. Si apuntas a una mina (dirección predefinida) y hay mucha luz (día, más peligroso), el Tambor empieza a hacer tic-tac. Si no cambias de dirección, ¡BOOM!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == MineDir: Drum.play('Tick'); WAIT(3s); IF Compass.heading == MineDir THEN Drum.play('Explosion')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Meditación Guiada",
+    "originalIdeaDescription": "Orientarse al amanecer (Este). Cerrar los ojos (tapar sensor). El tambor toca un ritmo lento de corazón.",
+    "transformedIdeaTitle": "Ritual de Calma",
+    "transformedIdeaDescription": "Encuentra tu centro. Gira hacia el Este. Cubre el sensor con tu mano para simular cerrar los ojos. Si mantienes la dirección y la oscuridad, el Tambor tocará un latido suave y relajante a 60 BPM.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'East' AND Light.covered() THEN Drum.loop('Heartbeat', 60)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Traductor Alienígena",
+    "originalIdeaDescription": "Los aliens se comunican con patrones de luz. Apuntar a la nave (Compass), recibir flash (Light), el tambor traduce a ritmo.",
+    "transformedIdeaTitle": "Encuentros Cercanos",
+    "transformedIdeaDescription": "La nave nodriza está al Oeste. Apunta hacia allá. Cuando recibas un mensaje de luz (flashes de linterna), el dispositivo traducirá esos flashes en un ritmo de batería que debes repetir para comunicarte.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'West': Pattern = Read(Light); Drum.playRhythm(Pattern)"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Sistema de Riego Automático",
+    "originalIdeaDescription": "Simulación. Si hay mucho sol (Luz alta) y es la orientación correcta del cultivo, el tambor suena como aspersores.",
+    "transformedIdeaTitle": "Granjero Inteligente",
+    "transformedIdeaDescription": "Cuida tus cultivos del Sur. Si el sol está muy fuerte (Luz > 90), las plantas se secan. Si apuntas al Sur y detectas luz intensa, activa el sistema de riego: el Tambor hará un sonido repetitivo 'Ch-ch-ch' simulando agua.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'South' AND Light.level > 90 THEN Drum.loop('Sprinkler')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Oso Polar en el Hielo",
+    "originalIdeaDescription": "El oso (usuario) viaja al Norte. Si el hielo refleja mucha luz (ceguera), el tambor avisa de peligro de grietas.",
+    "transformedIdeaTitle": "Expedición Ártica",
+    "transformedIdeaDescription": "Camina hacia el Polo Norte. El sol refleja en el hielo (Luz alta). Si la luz es cegadora (>95), significa hielo fino y peligroso. El Tambor tocará un redoble de advertencia para que cambies de rumbo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == 'North' AND Light.level > 95 THEN Drum.roll('Warning')"
+  },
+  {
+    "componentUsed": ["Compass", "Light Intensity", "Musical Drum"],
+    "originalIdeaTitle": "Fuego de Campamento",
+    "originalIdeaDescription": "Sentarse en círculo (diferentes rumbos). Al bajar la luz, el tambor inicia una canción de campamento.",
+    "transformedIdeaTitle": "Historias de la Hoguera",
+    "transformedIdeaDescription": "Es hora de contar historias. Siéntense en círculo. Cuando el líder baje las luces (anochecer), el Tambor empezará a marcar un ritmo suave de acompañamiento. Si alguien apunta su linterna al centro (Luz alta = Fuego avivado), el ritmo se intensifica.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 20 THEN Drum.play('SoftBeat'); IF Light.level > 80 THEN Drum.play('HardBeat')"
+  }
+]

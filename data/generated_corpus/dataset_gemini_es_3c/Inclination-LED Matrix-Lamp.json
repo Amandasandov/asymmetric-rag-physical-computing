@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Digital para Construcción Precisa",
+    "originalIdeaDescription": "Esta herramienta utiliza el sensor de inclinación para actuar como un nivel de burbuja de carpintero. Cuando el dispositivo está perfectamente plano (ejes X e Y en cero), la Matriz LED muestra un signo de verificación y la Lámpara se ilumina en verde. Si está inclinado, la matriz muestra una flecha indicando hacia dónde mover el dispositivo y la lámpara se torna roja para alertar sobre el desnivel.",
+    "transformedIdeaTitle": "El Constructor de Pirámides",
+    "transformedIdeaDescription": "¡Eres el arquitecto principal de una antigua pirámide! Para que la estructura no se derrumbe, los bloques deben estar perfectamente nivelados. Programa tu herramienta para que te avise con una luz verde y un símbolo de 'OK' cuando la piedra esté plana, o una luz roja de advertencia con una flecha direccional si se está inclinando peligrosamente.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.x == 0 AND inclination.y == 0 THEN Lamp.color(GREEN), Matrix.show(CHECK) ELSE Lamp.color(RED), Matrix.show(ARROW)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Controlador de Juego de Laberinto Basado en Inclinación",
+    "originalIdeaDescription": "Un sistema de control para un juego donde el usuario debe guiar un punto a través de un laberinto imaginario. Al inclinar el dispositivo hacia adelante, atrás, izquierda o derecha, el punto en la Matriz LED se mueve correspondientemente. La Lámpara cambia de color según la zona del laberinto (segura, peligro o meta) basándose en la intensidad de la inclinación.",
+    "transformedIdeaTitle": "Explorador del Calabozo Oscuro",
+    "transformedIdeaDescription": "Estás guiando a un pequeño explorador (un punto de luz) a través de una cueva oscura. Usa la inclinación de tu dispositivo para mover al explorador por la pantalla LED. Si inclinas demasiado el dispositivo, el explorador corre peligro de caer por un precipicio, así que haz que la lámpara se ponga roja si la inclinación supera los 20 grados.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "SET pixel.x = map(inclination.x), pixel.y = map(inclination.y); IF abs(inclination.x) > 20 THEN Lamp.color(RED) ELSE Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Visualizador de Emociones Interactivo con Retroalimentación de Color",
+    "originalIdeaDescription": "Un dispositivo que muestra diferentes expresiones faciales en la Matriz LED dependiendo de cómo se sostenga. Si se inclina hacia arriba, muestra una cara feliz y la lámpara brilla en amarillo cálido. Si se inclina hacia abajo, muestra una cara triste con luz azul. Inclinaciones laterales muestran sorpresa o confusión con colores morados.",
+    "transformedIdeaTitle": "El Robot Empático",
+    "transformedIdeaDescription": "Tu robot mascota no puede hablar, pero puede expresar cómo se siente según su postura. Crea un programa donde, al levantar la 'cabeza' (inclinar hacia atrás), el robot sonría con luz amarilla de alegría, y al bajar la cabeza (inclinar hacia adelante), se ponga triste con luz azul. ¡Enséñale a expresar emociones!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.y > 10 THEN Matrix.show(SMILE), Lamp.color(YELLOW); ELSE IF inclination.y < -10 THEN Matrix.show(SAD), Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de Vuelo con Horizonte Artificial y Alertas",
+    "originalIdeaDescription": "Simula la cabina de un avión. La Matriz LED muestra una línea de horizonte que se mueve opuestamente a la inclinación del dispositivo para simular el viraje. La Lámpara actúa como luz de cabina; es blanca en vuelo estable, pero parpadea en rojo si la inclinación (pitch o roll) es demasiado extrema, simulando una entrada en pérdida.",
+    "transformedIdeaTitle": "Academia de Vuelo Espacial",
+    "transformedIdeaDescription": "¡Cadete, toma los controles! Debes mantener tu nave estable. Programa el horizonte artificial en la pantalla LED para que reaccione a tus movimientos. Si inclinas la nave demasiado bruscamente (más de 45 grados), activa la alarma de emergencia con luces rojas parpadeantes para evitar que la nave entre en barrena.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Matrix.drawLine(horizon_angle); IF abs(inclination.roll) > 45 OR abs(inclination.pitch) > 45 THEN Lamp.blink(RED, FAST) ELSE Lamp.color(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Caja Fuerte Digital con Combinación de Inclinación",
+    "originalIdeaDescription": "Un juego de rompecabezas donde el usuario debe encontrar un ángulo secreto de inclinación para 'abrir' el dispositivo. La Matriz LED muestra un candado cerrado. A medida que el usuario se acerca al ángulo correcto, la Lámpara cambia de frío (azul) a caliente (rojo). Al acertar, la matriz muestra un candado abierto y la luz se pone verde.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Eres un espía intentando abrir una bóveda de alta seguridad. La combinación no son números, ¡es una posición exacta! Mueve el dispositivo lentamente. Programa la luz para que se vuelva más roja a medida que te acercas al ángulo secreto. Cuando lo encuentres, muestra el candado abierto en la pantalla.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "distance = abs(target_angle - current_angle); Lamp.intensity(100 - distance); IF distance < 2 THEN Matrix.show(OPEN_LOCK), Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Monitor de Postura para Yoga y Ejercicio",
+    "originalIdeaDescription": "Ayuda a los usuarios a mantener posturas de equilibrio. El dispositivo se coloca en el cuerpo. Si la inclinación se mantiene estable dentro de un rango pequeño durante 5 segundos, la Matriz LED muestra una flor de loto y la lámpara emite una luz suave y relajante. Si el usuario se tambalea, la luz parpadea para indicar corrección.",
+    "transformedIdeaTitle": "Maestro Zen del Equilibrio",
+    "transformedIdeaDescription": "Para convertirte en un maestro Zen, debes permanecer inmóvil como una roca. Crea una aplicación que detecte si te estás moviendo. Si logras mantener el sensor perfectamente quieto y nivelado durante 5 segundos, la pantalla mostrará una flor y la luz se pondrá violeta. ¡Si te tambaleas, tendrás que empezar de nuevo!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(inclination.change) < threshold THEN timer++ ELSE timer = 0; IF timer > 5s THEN Matrix.show(LOTUS), Lamp.color(VIOLET)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Gestuales",
+    "originalIdeaDescription": "Convierte el dispositivo en una varita mágica. Realizar movimientos específicos de inclinación (como un golpe rápido hacia abajo) activa 'hechizos'. La Matriz LED muestra el icono del hechizo (ej. fuego, hielo) y la Lámpara cambia al color correspondiente (rojo para fuego, cian para hielo) al detectar el gesto correcto.",
+    "transformedIdeaTitle": "Escuela de Magia: Clase de Hechizos",
+    "transformedIdeaDescription": "¡Es hora de lanzar hechizos! Programa tu varita para reconocer movimientos. Si inclinas la varita bruscamente hacia adelante, lanza una 'Bola de Fuego' (pantalla de fuego, luz roja). Si la inclinas hacia atrás, lanza un 'Escudo de Hielo' (icono de escudo, luz azul). ¿Podrás programar el hechizo definitivo?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.pitch_velocity > high THEN Matrix.show(FIRE), Lamp.color(RED); IF inclination.pitch_velocity < -high THEN Matrix.show(ICE), Lamp.color(CYAN)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de Colores Digital Interactivo",
+    "originalIdeaDescription": "Utiliza la inclinación para mezclar luz. Inclinar en el eje X añade rojo a la Lámpara, inclinar en el eje Y añade azul. La Matriz LED muestra un gráfico de barras o un círculo que representa la proporción de cada color. Permite a los usuarios explorar la teoría del color aditivo físicamente.",
+    "transformedIdeaTitle": "Laboratorio de Alquimia de Colores",
+    "transformedIdeaDescription": "Eres un alquimista mezclando pociones de luz. Tienes dos ingredientes: Rojo y Azul. Inclina el caldero (tu dispositivo) a la izquierda o derecha para agregar más Rojo, y hacia adelante o atrás para agregar Azul. La pantalla te mostrará los niveles. ¿Puedes crear el color Púrpura perfecto?",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RedVal = map(inclination.x); BlueVal = map(inclination.y); Lamp.setColor(RedVal, 0, BlueVal); Matrix.showBarGraph(RedVal, BlueVal)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Semáforo Inteligente para Guardias de Cruce",
+    "originalIdeaDescription": "Un dispositivo manual para dirigir el tráfico. Cuando el dispositivo se sostiene verticalmente (stop), la Matriz muestra una mano y la Lámpara es roja. Cuando se apunta horizontalmente hacia el tráfico (go), la matriz muestra una persona caminando o flechas y la lámpara se pone verde.",
+    "transformedIdeaTitle": "El Guardián del Tráfico Seguro",
+    "transformedIdeaDescription": "La seguridad de los peatones está en tus manos. Diseña una señal de tráfico inteligente. Cuando levantes la señal (vertical), debe gritar ¡ALTO! con una luz roja y una mano en la pantalla. Cuando la bajes (horizontal) para dejar pasar a los coches, debe mostrar luz verde y una flecha. ¡Mantén el cruce seguro!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch > 70 THEN Lamp.color(RED), Matrix.show(HAND) ELSE Lamp.color(GREEN), Matrix.show(ARROW)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sismógrafo Visualizador de Terremotos",
+    "originalIdeaDescription": "Detecta vibraciones y cambios bruscos en la inclinación. La Matriz LED actúa como una aguja de sismógrafo, dibujando líneas que varían en altura según la intensidad del movimiento. La Lámpara cambia de verde (calma) a amarillo y rojo (terremoto) dependiendo de la magnitud de la sacudida detectada.",
+    "transformedIdeaTitle": "Detector de Terremotos",
+    "transformedIdeaDescription": "Construye una estación sísmica para detectar movimientos de tierra. Si la mesa está quieta, la luz es verde y la pantalla muestra una línea plana. Si golpeas la mesa o mueves el sensor, la luz debe cambiar a rojo y la pantalla debe mostrar ondas locas. ¡Mide la intensidad del temblor!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "shake_level = abs(inclination.change); Matrix.plotHeight(shake_level); IF shake_level > max THEN Lamp.color(RED) ELSE Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de Aterrizaje Lunar",
+    "originalIdeaDescription": "Un juego donde el objetivo es aterrizar una nave suavemente. La inclinación controla los propulsores. Si la inclinación es mayor a 5 grados, la nave se desplaza lateralmente. La Matriz muestra la nave descendiendo. La Lámpara indica la integridad del casco: verde (bien), rojo (peligro de choque si no se nivela).",
+    "transformedIdeaTitle": "Misión: Aterrizaje en Marte",
+    "transformedIdeaDescription": "Tu nave está descendiendo a la superficie de Marte. Debes mantenerla perfectamente nivelada para no estrellarte. Si te inclinas, los propulsores fallarán. Usa la luz verde para indicar un descenso seguro, pero si te inclinas demasiado, enciende la luz roja y muestra una explosión en la pantalla. ¡Aterriza con cuidado!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF abs(inclination.x) < 5 AND abs(inclination.y) < 5 THEN Lamp.color(GREEN), Matrix.animate(LANDING) ELSE Lamp.color(RED), Matrix.show(BOOM)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Luz Trasera de Bicicleta con Freno Inteligente",
+    "originalIdeaDescription": "Un accesorio de seguridad para ciclistas. La Lámpara funciona como luz trasera roja constante. El sensor de inclinación detecta la desaceleración (cambio en el ángulo al frenar). Al detectar frenado, la Lámpara aumenta su brillo al máximo y la Matriz LED muestra un signo de exclamación parpadeante.",
+    "transformedIdeaTitle": "Luz de Freno para Bici del Futuro",
+    "transformedIdeaDescription": "Mejora la seguridad de tu bicicleta creando una luz de freno automática. Cuando vas normal, la luz es roja suave. Pero si el sensor detecta que te inclinas hacia adelante bruscamente (frenazo), ¡haz que la luz brille intensamente y la pantalla parpadee para avisar a los que van detrás!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Lamp.color(RED); IF inclination.pitch_change < -threshold THEN Lamp.brightness(100), Matrix.blink(EXCLAMATION) ELSE Lamp.brightness(50)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Reloj de Arena Digital Reversible",
+    "originalIdeaDescription": "Simula un reloj de arena. Cuando el dispositivo está vertical, los 'granos de arena' (píxeles) caen de la parte superior a la inferior de la Matriz LED. La Lámpara se atenúa lentamente a medida que se acaba el tiempo. Al invertir el dispositivo (girarlo 180 grados), el temporizador y la animación se reinician.",
+    "transformedIdeaTitle": "El Cronómetro de Arena Mágica",
+    "transformedIdeaDescription": "Crea un temporizador antiguo pero digital. Dibuja arena cayendo en la pantalla píxel por píxel. A medida que pasa el tiempo, la luz se va apagando como si se acabara la energía. Cuando quieras reiniciar el tiempo, ¡simplemente dale la vuelta al dispositivo como a un reloj de arena real!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF inclination.upside_down THEN resetTimer(); ELSE animateSandDrop(), dimLampOverTime()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Caña de Pescar Virtual",
+    "originalIdeaDescription": "Juego de pesca interactivo. El usuario mantiene el dispositivo quieto (esperando). La Lámpara parpadea suavemente en azul (agua). Cuando ocurre un evento aleatorio (pez muerde), la Lámpara parpadea rápido. El usuario debe tirar hacia atrás (inclinar bruscamente hacia arriba) para 'atraparlo', mostrando un pez en la Matriz.",
+    "transformedIdeaTitle": "Torneo de Pesca Digital",
+    "transformedIdeaDescription": "¡Vamos de pesca! Sostén tu 'caña' sobre el agua tranquila (luz azul suave). Espera... cuando la luz parpadee rápido, ¡ha picado un pez! Tira de la caña hacia atrás rápidamente (inclina el sensor) para capturarlo. Si eres lo suficientemente rápido, verás tu trofeo en la pantalla.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.effect(WATER); IF randomEvent() THEN Lamp.blink(WHITE); IF inclination.pitch_jerk > threshold THEN Matrix.show(FISH), Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de Comunicación para Robots (Sí/No)",
+    "originalIdeaDescription": "Interfaz de comunicación no verbal. Inclinar el dispositivo hacia adelante y atrás (asentir) hace que la Matriz muestre un 'Check' verde y la Lámpara se ilumine en verde. Inclinar de lado a lado (negar) muestra una 'X' y luz roja. Útil para crear personajes interactivos o marionetas digitales.",
+    "transformedIdeaTitle": "Enseñando a Hablar a tu Robot",
+    "transformedIdeaDescription": "Tu robot necesita comunicarse. Prográmalo para que entienda gestos humanos. Si inclinas su cabeza hacia arriba y abajo como diciendo 'Sí', debe ponerse verde y mostrar un signo positivo. Si lo mueves de lado a lado como diciendo 'No', debe ponerse rojo y mostrar una cruz. ¡Haz que te responda!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF inclination.pitch_oscillate THEN Lamp.color(GREEN), Matrix.show(YES); IF inclination.roll_oscillate THEN Lamp.color(RED), Matrix.show(NO)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Estabilizador de Barco en Tormenta",
+    "originalIdeaDescription": "Simulación de física para mantener un barco a flote. La Matriz muestra un barco. El usuario debe inclinar el dispositivo en la dirección opuesta a una 'ola' generada por el sistema (indicada por la Lámpara parpadeando en un lado). El objetivo es mantener la inclinación neta en cero para que el barco no se hunda.",
+    "transformedIdeaTitle": "Capitán en Alta Mar",
+    "transformedIdeaDescription": "¡Una tormenta golpea tu barco! Las olas intentan volcarte. Si la luz parpadea a la izquierda, significa que una ola viene de allí, ¡inclínate a la derecha para contrapesar! Mantén tu barco nivelado en la pantalla. Si fallas y te inclinas con la ola, el barco se hundirá.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "wave = random(-1, 1); user_counter = inclination.roll; IF (wave + user_counter) approx 0 THEN Matrix.show(BOAT) ELSE Matrix.show(SINKING)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Jarra de Vertido de Líquidos Virtual",
+    "originalIdeaDescription": "Simula el vertido de un líquido peligroso o mágico. Al inclinar el dispositivo más allá de cierto ángulo, la Matriz muestra una animación de flujo hacia el borde inferior. La Lámpara cambia de color para representar el vaciado del contenedor (de lleno/brillante a vacío/oscuro) o el tipo de líquido que se vierte.",
+    "transformedIdeaTitle": "El Químico Loco",
+    "transformedIdeaDescription": "Cuidado con esa poción explosiva. Tienes que verterla con precisión. Inclina el frasco lentamente. Cuando pases los 45 grados, la pantalla debe mostrar el líquido cayendo y la luz debe cambiar de color mientras se vacía el frasco. ¡No la derrames antes de tiempo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination.roll > 45 THEN Matrix.animate(POUR), Lamp.fadeTo(BLACK) ELSE Matrix.show(FULL_JAR), Lamp.color(NEON_GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Rueda de la Fortuna de Decisiones",
+    "originalIdeaDescription": "Un selector aleatorio basado en física. El usuario gira (inclina circularmente) el dispositivo para 'hacer girar' una luz en la Matriz LED que se mueve en el perímetro. La Lámpara cambia de colores rápidamente. Al detener el movimiento, la luz de la matriz se detiene en una posición y la lámpara elige un color final de decisión.",
+    "transformedIdeaTitle": "La Ruleta de la Suerte",
+    "transformedIdeaDescription": "¿No sabes qué jugar hoy? ¡Haz una ruleta! Mueve tu dispositivo en círculos para hacer girar la luz en la pantalla. Cuanto más rápido lo muevas, más rápido girarán las luces y cambiarán los colores. Cuando pares, la ruleta se detendrá y te dará un color ganador.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "speed = inclination.angular_velocity; Matrix.spinLEDs(speed); Lamp.cycleColors(speed); IF speed == 0 THEN stopAndSelect()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de Pendiente para Rampas de Acceso",
+    "originalIdeaDescription": "Herramienta educativa para accesibilidad. Mide si una rampa es demasiado empinada para una silla de ruedas. Si el ángulo de inclinación es menor a 5 grados, la Matriz muestra una cara feliz y Lámpara verde. Entre 5 y 10 grados, cara seria y amarillo. Más de 10, cara triste y rojo (inaccesible).",
+    "transformedIdeaTitle": "Inspector de Accesibilidad",
+    "transformedIdeaDescription": "Ayuda a hacer tu escuela accesible para todos. Construye un inspector de rampas. Si la rampa es suave (poca inclinación), muestra luz verde y una carita feliz: ¡Es segura! Si es muy empinada, muestra luz roja y una señal de 'Stop'. Usa las matemáticas para definir los ángulos correctos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "angle = inclination.pitch; IF angle < 5 THEN Green/Happy; ELSE IF angle < 10 THEN Yellow/Neutral; ELSE Red/Stop"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Brújula Solar (Helióstato Simulado)",
+    "originalIdeaDescription": "Simula un dispositivo que busca la luz más intensa (simulada por el ángulo óptimo). El usuario debe inclinar el dispositivo hasta encontrar el 'sol' (un ángulo objetivo predefinido). La Matriz muestra flechas de guía. Cuando se alinea con el ángulo objetivo, la Lámpara brilla en amarillo intenso (sol encontrado).",
+    "transformedIdeaTitle": "Cazadores del Sol Perdido",
+    "transformedIdeaDescription": "Eres un girasol robótico buscando la luz del sol. El sol está escondido en un ángulo específico del cielo. Mueve tu dispositivo buscando la posición perfecta. Las flechas en la pantalla te guiarán. Cuando encuentres el ángulo exacto, ¡brilla con luz amarilla intensa para celebrar que encontraste el sol!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF inclination == target_angle THEN Lamp.color(YELLOW), Matrix.show(SUN) ELSE Matrix.show(DIRECTION_ARROW)"
+  }
+]

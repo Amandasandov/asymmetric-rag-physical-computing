@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de navegación cardinal con indicadores visuales codificados",
+    "originalIdeaDescription": "Esta idea consiste en crear una brújula digital mejorada que no solo muestre la dirección cardinal (Norte, Sur, Este, Oeste) en la matriz LED mediante letras o flechas, sino que también asigne un color específico de la lámpara a cada dirección. Por ejemplo, el Norte ilumina la lámpara en rojo y muestra una 'N', mientras que el Sur ilumina en azul y muestra una 'S', ayudando a la orientación rápida.",
+    "transformedIdeaTitle": "El Capitán del Barco Fantasma",
+    "transformedIdeaDescription": "¡Eres el capitán de un barco fantasma navegando en la niebla! Debes programar tu dispositivo para encontrar el Norte magnético y escapar del Triángulo de las Bermudas. Cuando tu barco apunte al Norte, la luz se pondrá roja (peligro) y la pantalla mostrará una 'N'. Si apuntas al Este hacia la seguridad, la luz será verde y verás una flecha. ¡No te pierdas en el mar!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading < 45 OR compass.heading > 315 THEN LED.show('N'), Lamp.color(RED) ELSE IF compass.heading > 45 AND compass.heading < 135 THEN LED.show('E'), Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mecanismo de seguridad de caja fuerte basado en rotación",
+    "originalIdeaDescription": "El dispositivo funciona como un dial de una caja fuerte antigua. El usuario debe girar el dispositivo físicamente a grados específicos (por ejemplo, 90 grados, luego 180 grados) en secuencia. La matriz LED muestra el progreso del desbloqueo o íconos de candado, y la lámpara cambia de rojo a verde solo cuando la combinación exacta de orientaciones se ha completado con éxito, desbloqueando el sistema virtual.",
+    "transformedIdeaTitle": "El Ladrón de la Bóveda Maestra",
+    "transformedIdeaDescription": "Te has infiltrado en el banco más seguro del mundo. Para abrir la bóveda, debes girar tu dispositivo como si fuera el dial de una caja fuerte. El código es: Este, Sur, Norte. Si aciertas la posición, la luz parpadea en amarillo. Si completas la secuencia, ¡la luz se pone verde y la pantalla muestra un tesoro! Si fallas, sonará una alarma visual roja.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.heading == 90 THEN step1=True, Lamp.flash(YELLOW); IF step1 AND compass.heading == 180 THEN step2=True; IF step2 AND compass.heading == 0 THEN Lamp.color(GREEN), LED.show('$$$')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Detector de radar simulado para búsqueda de objetos",
+    "originalIdeaDescription": "Utilizando la brújula, se establece una dirección 'objetivo' invisible en el espacio. A medida que el usuario gira el dispositivo, la matriz LED muestra un radar de barrido o barras de proximidad. Cuando el dispositivo apunta directamente hacia el objetivo invisible preprogramado, la lámpara aumenta su intensidad lumínica y parpadea rápidamente, simulando que se ha encontrado la señal o el objeto oculto.",
+    "transformedIdeaTitle": "El Detector de Extraterrestres",
+    "transformedIdeaDescription": "Hay alienígenas invisibles escondidos en tu habitación. Tu misión es encontrarlos usando tu radar especial. Configura el dispositivo para que detecte una señal al Oeste. Gira lentamente: la pantalla mostrará un radar buscando. Cuando apuntes exactamente al Oeste, la lámpara parpadeará en morado intensamente y aparecerá un alienígena en la pantalla. ¡Atrápalos a todos!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = 270; dist = abs(compass.heading - target); Lamp.brightness(100 - dist); IF dist < 10 THEN LED.show(ALIEN_ICON), Lamp.blink(PURPLE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Faro costero automatizado con haz de luz giratorio",
+    "originalIdeaDescription": "Esta idea simula el funcionamiento de un faro. Al girar el dispositivo, la lámpara actúa como el haz de luz del faro, cambiando de color según el sector (tierra o mar). La matriz LED muestra la animación de un barco acercándose o alejándose dependiendo de hacia dónde esté apuntando la brújula, enseñando sobre zonas de navegación y seguridad marítima mediante retroalimentación visual.",
+    "transformedIdeaTitle": "El Guardián del Faro Costero",
+    "transformedIdeaDescription": "Eres el encargado del faro en una noche de tormenta. Debes girar tu 'faro' (el dispositivo) para barrer el océano. Cuando apuntes al mar (Sur), la luz debe ser blanca brillante para guiar a los barcos y la pantalla mostrará olas. Si apuntas a tierra (Norte), la luz debe apagarse o ponerse roja para no confundir a los coches. ¡Mantén los barcos a salvo!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading > 135 AND compass.heading < 225 THEN Lamp.color(WHITE), LED.show(WAVES) ELSE Lamp.color(RED), LED.show(ROCKS)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Mezclador de colores basado en orientación angular 360",
+    "originalIdeaDescription": "El dispositivo convierte los 360 grados de la brújula en una rueda de colores RGB completa. Al girar el dispositivo, la lámpara cambia suavemente de color recorriendo el espectro del arcoíris correspondiente al ángulo actual. Simultáneamente, la matriz LED muestra el nombre del color o un código simple, permitiendo a los estudiantes explorar la teoría del color de una manera física e interactiva.",
+    "transformedIdeaTitle": "La Varita de Pintura de Luz",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una brocha mágica que pinta con luz. Gira en círculo para mezclar colores. Al apuntar al Norte pintarás de Rojo, al Este de Verde y al Sur de Azul. La pantalla te dirá qué color estás mezclando. ¡Usa tu cuerpo para encontrar el color Turquesa perfecto y congela el movimiento para iluminar tu habitación!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Hue = compass.heading; Lamp.setHue(Hue); IF Hue < 30 THEN LED.show('ROJO') ELSE IF Hue < 150 THEN LED.show('VERDE')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Buscador de constelaciones y mapa estelar de bolsillo",
+    "originalIdeaDescription": "La actividad convierte el dispositivo en un planetario simple. Dependiendo de la dirección cardinal hacia la que apunte el usuario, la matriz LED muestra un patrón de estrellas correspondiente a una constelación real visible en esa dirección (ej. Orión al Sur). La lámpara se enciende con un brillo tenue blanco o azulado para simular la luz de las estrellas sin arruinar la visión nocturna.",
+    "transformedIdeaTitle": "El Telescopio Espacial de Bolsillo",
+    "transformedIdeaDescription": "¡Explora el universo desde tu clase! Convierte tu dispositivo en un telescopio inteligente. Gira hasta encontrar el Norte para ver la 'Osa Mayor' en la pantalla LED. Gira hacia el Este para descubrir 'Orión'. La lámpara brillará suavemente como una estrella lejana cuando encuentres una constelación. ¿Puedes completar el mapa estelar girando 360 grados?",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.heading > 350 OR compass.heading < 10 THEN LED.show(URSA_MAJOR), Lamp.on(WHITE, 50%) ELSE IF compass.heading > 80 AND compass.heading < 100 THEN LED.show(ORION)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Simulador de semáforo para controlador de tráfico manual",
+    "originalIdeaDescription": "El usuario actúa como un oficial de tránsito en una intersección. Al apuntar el dispositivo hacia una dirección específica (la calle activa), la lámpara se pone verde y la matriz muestra una flecha de 'avanzar'. Si gira el dispositivo 90 grados hacia la calle transversal, la lámpara cambia a rojo y la matriz muestra una señal de 'stop' o una mano, controlando el flujo.",
+    "transformedIdeaTitle": "El Policía de Tráfico Cibernético",
+    "transformedIdeaDescription": "¡El semáforo se ha roto y tú controlas el cruce más peligroso de la ciudad! Apunta tu dispositivo hacia los coches del Norte para darles luz Verde y una flecha de paso. ¡Rápido! Gira hacia el Este para detenerlos con una luz Roja y una señal de PARE antes de que choquen. Mantén el ritmo para que el tráfico fluya sin accidentes.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading < 45 OR compass.heading > 315 THEN Lamp.color(GREEN), LED.show(ARROW_UP) ELSE Lamp.color(RED), LED.show(STOP_ICON)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Entrenador de posturas de yoga saludo al sol",
+    "originalIdeaDescription": "Un asistente para ejercicio que verifica si el usuario está alineado correctamente con la posición del sol (Este) o una dirección cardinal específica para realizar posturas. Si el usuario mira hacia el Este, la lámpara brilla en amarillo cálido y la matriz muestra una cara feliz o un sol. Si se desvía, la luz se atenúa y la matriz indica corrección de dirección.",
+    "transformedIdeaTitle": "El Entrenador de Yoga Zen",
+    "transformedIdeaDescription": "Vamos a practicar el 'Saludo al Sol'. Para empezar, debes mirar exactamente hacia donde sale el sol (el Este). Sostén tu dispositivo contra tu pecho. Si te alineas bien, el dispositivo brillará con una luz dorada y mostrará un sol sonriente. Si te tuerces, la luz se apagará. ¡Mantén el equilibrio y la dirección para cargar tu energía!",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.heading > 80 AND compass.heading < 100 THEN Lamp.color(GOLD), LED.show(SUN) ELSE Lamp.off(), LED.show(ARROW_CORRECT)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de laberinto invisible con retroalimentación háptica visual",
+    "originalIdeaDescription": "Se crea un laberinto virtual donde ciertas direcciones están 'bloqueadas'. El usuario camina o gira. Si intenta ir en una dirección bloqueada (definida por rangos de la brújula), la lámpara se pone roja y la matriz muestra un muro. Si la dirección está libre, la luz es verde y la matriz muestra el camino, obligando al usuario a encontrar la salida rotando.",
+    "transformedIdeaTitle": "Escape del Laberinto Invisible",
+    "transformedIdeaDescription": "Estás atrapado en un laberinto que no puedes ver. Para escapar, gira sobre ti mismo. Si miras hacia una pared, la luz será roja y verás ladrillos en la pantalla. ¡No puedes pasar! Busca el hueco girando hasta que la luz se ponga verde y veas el camino libre. Memoriza la ruta: Norte, luego Este, luego Norte otra vez para salir.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF compass.heading > 315 OR compass.heading < 45 THEN Lamp.color(RED), LED.show(WALL) ELSE Lamp.color(GREEN), LED.show(PATH)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Instrumento de horizonte artificial para simulación de vuelo",
+    "originalIdeaDescription": "Simula un instrumento de cabina de avión. La brújula determina el rumbo del avión. La matriz LED muestra una línea de horizonte que se inclina (usando lógica simple o combinada con acelerómetro si se pudiera, aquí solo rumbo) o muestra el rumbo numérico. La lámpara actúa como luz de alerta: verde si el rumbo es estable hacia el destino, roja si hay desviación excesiva.",
+    "transformedIdeaTitle": "El Piloto de Pruebas Acrobático",
+    "transformedIdeaDescription": "¡Mayday! Estás volando en medio de una nube espesa. Tu misión es mantener el avión volando recto hacia el Norte. Mira tu panel de instrumentos. Si te desvías a la izquierda o derecha, la luz de cabina parpadeará en rojo y aparecerá una flecha de corrección. Mantén el rumbo 0 grados para ver la luz verde de 'Todo Despejado'.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "error = abs(compass.heading - 0); IF error < 10 THEN Lamp.color(GREEN), LED.show(PLANE) ELSE Lamp.blink(RED), LED.show(ARROW_FIX)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Cazador de fenómenos paranormales aleatorios",
+    "originalIdeaDescription": "Un juego de realidad aumentada auditiva/visual. El programa selecciona una dirección aleatoria como la ubicación de un 'fantasma'. El usuario debe escanear la habitación girando 360 grados. Cuanto más se acerca a la dirección secreta, la lámpara cambia de color (frío a caliente) y la matriz muestra estática hasta revelar la figura del fantasma al encontrarlo.",
+    "transformedIdeaTitle": "Cazafantasmas: Misión Castillo Encantado",
+    "transformedIdeaDescription": "Hay un fantasma escondido en el aula, pero cambia de lugar en cada juego. Gira lentamente con tu detector de espectros. La luz azul significa 'frío', la luz naranja 'tibio'. Cuando la luz se ponga roja intensa y la pantalla muestre una calavera, ¡habrás encontrado al fantasma! Pulsa un botón (si lo tienes) o grita para atraparlo.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ghostDir = random(0, 360); IF abs(compass.heading - ghostDir) < 15 THEN Lamp.color(RED), LED.show(SKULL) ELSE Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Alineador de antenas parabólicas satelitales",
+    "originalIdeaDescription": "Actividad de rol técnico. El estudiante debe alinear una antena parabólica (el dispositivo) con un satélite geoestacionario ficticio ubicado en un azimut específico (ej. 135 grados SE). La matriz LED muestra barras de intensidad de señal que aumentan al acercarse al ángulo correcto, y la lámpara cambia de rojo (sin señal) a verde brillante (señal óptima bloqueada).",
+    "transformedIdeaTitle": "Técnico de la Estación Espacial",
+    "transformedIdeaDescription": "La Estación Espacial Internacional necesita recibir un mensaje urgente, pero la antena se ha movido. Tu trabajo es reorientarla. Gira buscando la señal del satélite al Sureste. Mira las barras de señal en la pantalla: una barra es mala señal, cinco barras es perfecta. Cuando la luz se ponga verde fija, ¡habrás restablecido la comunicación!",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "diff = abs(compass.heading - 135); signal = 5 - (diff / 10); LED.showBarGraph(signal); IF signal == 5 THEN Lamp.color(GREEN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Ruleta de la fortuna digital basada en giro físico",
+    "originalIdeaDescription": "El usuario hace girar el dispositivo sobre una mesa (o su cuerpo). Cuando el dispositivo se detiene, la brújula lee la dirección final. El programa divide los 360 grados en segmentos (premios, retos, colores). La lámpara se ilumina del color del segmento ganador y la matriz muestra un ícono representativo del premio o reto seleccionado al azar por la física del giro.",
+    "transformedIdeaTitle": "La Ruleta de la Fortuna Giratoria",
+    "transformedIdeaDescription": "¡Vamos a jugar a la ruleta! Siéntate en círculo con tus amigos. Pon el dispositivo en el suelo y hazlo girar fuerte. Cuando pare, la brújula decidirá tu destino. Si apunta al Norte, luz Azul: ¡Verdad! Si apunta al Sur, luz Roja: ¡Reto! La pantalla mostrará un '?' hasta que pare de girar.",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading < 180 THEN Lamp.color(BLUE), LED.show('?') ELSE Lamp.color(RED), LED.show('!')"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Decodificador de mensajes secretos direccional",
+    "originalIdeaDescription": "Una herramienta de espionaje donde el mensaje secreto solo es visible si se mira en una dirección específica. Si el usuario apunta al Oeste, la matriz hace scroll del texto secreto y la lámpara usa una luz tenue 'sigilosa'. Si apunta a cualquier otro lado, la matriz muestra ruido aleatorio o 'ACCESO DENEGADO' y la luz parpadea en rojo.",
+    "transformedIdeaTitle": "El Agente Secreto 007",
+    "transformedIdeaDescription": "Eres un espía con un mensaje clasificado. El enemigo está vigilando, así que el mensaje solo aparece si miras hacia la base secreta en el Oeste. Gira discretamente. Si miras al lugar equivocado, la pantalla solo mostrará basura para despistar. Al apuntar al Oeste, la luz se atenúa y el mensaje 'LA CLAVE ES 42' pasa por la pantalla.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF compass.heading > 260 AND compass.heading < 280 THEN Lamp.color(DIM_WHITE), LED.scroll('CLAVE 42') ELSE LED.show(RANDOM_NOISE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Veleta digital y simulador de estación meteorológica",
+    "originalIdeaDescription": "El dispositivo actúa como una veleta. Se puede usar al aire libre para detectar hacia dónde apunta el dispositivo cuando el viento lo empuja (si está montado en un eje) o simplemente para reportar la dirección del viento simulada. La matriz muestra la letra de la dirección y una animación de nubes/sol, y la lámpara cambia de color según la 'temperatura' asociada a ese viento (Viento Norte = Azul/Frío).",
+    "transformedIdeaTitle": "El Meteorólogo de la TV",
+    "transformedIdeaDescription": "¡Es hora del reporte del clima! Usa tu dispositivo para decirnos de dónde viene el viento. Si apuntas al Norte, simula un viento polar: la luz se pone azul hielo y la pantalla muestra copos de nieve. Si apuntas al Sur, viene viento del desierto: luz naranja y un sol radiante. ¡Informa a la clase sobre el clima!",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading < 45 OR compass.heading > 315 THEN Lamp.color(BLUE), LED.show(SNOW) ELSE IF compass.heading > 135 AND compass.heading < 225 THEN Lamp.color(ORANGE), LED.show(SUN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Juego de puntería estilo tiro al arco",
+    "originalIdeaDescription": "El usuario debe 'apuntar' a un objetivo virtual que se mueve alrededor de él (el programa cambia el ángulo objetivo cada pocos segundos). La matriz muestra una mira que se centra a medida que la brújula se alinea con el objetivo. La lámpara indica precisión: rojo (lejos), amarillo (cerca), verde (blanco perfecto) momento en el que se suma un punto.",
+    "transformedIdeaTitle": "El Arquero de Robin Hood",
+    "transformedIdeaDescription": "Pon a prueba tu puntería. Un objetivo invisible se mueve a tu alrededor. La pantalla te muestra una mira. Gira el cuerpo para buscar el blanco. La luz roja significa que estás frío. Cuando la luz se ponga amarilla, ¡estás cerca! Ajusta tu puntería milimétricamente hasta que la luz sea verde brillante y la pantalla muestre 'DIANA'.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "target = time.seconds * 10 % 360; diff = abs(compass.heading - target); IF diff < 5 THEN Lamp.color(GREEN), LED.show(BULLSEYE) ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Instructor de pasos de baile direccionales",
+    "originalIdeaDescription": "Un juego de ritmo y movimiento. La matriz LED muestra una flecha indicando hacia dónde girar (Izquierda/Oeste, Derecha/Este, Atrás/Sur). El usuario debe girar su cuerpo y el dispositivo rápidamente hacia esa dirección. Si la brújula detecta la orientación correcta dentro del tiempo límite, la lámpara parpadea en modo disco multicolor; si no, se pone roja.",
+    "transformedIdeaTitle": "El Rey de la Pista de Baile",
+    "transformedIdeaDescription": "¡Sigue el ritmo! El dispositivo es tu entrenador de baile. Si aparece una flecha a la derecha, ¡gira todo tu cuerpo al Este! Si es abajo, ¡gira al Sur! Tienes que ser rápido. Si aciertas el movimiento a tiempo, la lámpara hará una fiesta de luces disco. Si eres lento, la música parará (luz roja). ¿Cuántos pasos puedes encadenar?",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "command = random(N, S, E, W); LED.show(command); wait(2s); IF compass.heading == command.angle THEN Lamp.discoMode() ELSE Lamp.color(RED)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Asistente de sendero y guía de supervivencia",
+    "originalIdeaDescription": "Programado para una caminata específica. El usuario establece un rumbo deseado. Mientras camina manteniendo ese rumbo (dentro de un margen de error), la lámpara permanece verde (seguro) y la matriz muestra pasos. Si el usuario se desvía del camino más de 20 grados, la lámpara alerta en rojo y la matriz muestra una flecha curva indicando hacia dónde corregir el rumbo.",
+    "transformedIdeaTitle": "Guía de Supervivencia en la Montaña",
+    "transformedIdeaDescription": "Estás liderando una expedición en la selva. Debes mantener al grupo caminando recto hacia el campamento base (Norte). Configura tu brújula. Mientras camines recto, la luz verde te dirá 'Todo bien'. Si te empiezas a desviar hacia los barrancos, la luz roja de alarma saltará y una flecha en la pantalla te dirá: ¡Gira a la izquierda para volver al camino!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "target = 0; IF abs(compass.heading - target) < 20 THEN Lamp.color(GREEN), LED.show(BOOTS) ELSE Lamp.color(RED), LED.show(ARROW_TURN)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Cabeza de robot interactiva con emociones direccionales",
+    "originalIdeaDescription": "Convierte el dispositivo en la cabeza de un robot. La brújula detecta hacia dónde mira el robot. La matriz dibuja los ojos del robot, que miran en la dirección del movimiento (si gira a la izquierda, los ojos miran a la izquierda). La lámpara expresa el 'estado de ánimo' del robot: emocionado (colores rápidos) cuando se mueve, y dormido (luz tenue) cuando está quieto en una dirección fija.",
+    "transformedIdeaTitle": "El Robot que Mira y Siente",
+    "transformedIdeaDescription": "Crea la cara de tu propio amigo robot. Cuando giras el dispositivo hacia la izquierda, los ojos en la pantalla deben mirar a la izquierda también. Si giras a la derecha, los ojos van a la derecha. Además, si lo giras muy rápido, el robot se marea (luz verde), y si mira al Sur, se pone triste (luz azul). ¡Dale personalidad!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "prev_head = heading; heading = compass.heading; IF heading < prev_head THEN LED.show(EYES_LEFT); IF heading > prev_head THEN LED.show(EYES_RIGHT); IF heading == 180 THEN Lamp.color(BLUE)"
+  },
+  {
+    "componentUsed": [
+      "Compass",
+      "LED Matrix",
+      "Lamp"
+    ],
+    "originalIdeaTitle": "Sistema de votación física para aulas",
+    "originalIdeaDescription": "Permite a los estudiantes votar 'Sí', 'No' o 'Abstención' girando el dispositivo. Norte (Sí) ilumina la lámpara en verde y muestra un tick. Sur (No) ilumina en rojo y muestra una X. Este/Oeste (Duda) ilumina en amarillo con un signo de interrogación. Permite una respuesta kinestésica a preguntas de clase.",
+    "transformedIdeaTitle": "El Juez de la Verdad",
+    "transformedIdeaDescription": "El profesor hará una pregunta. En lugar de levantar la mano, usa tu dispositivo para votar. Gira tu dispositivo hacia el Norte para decir 'SÍ' (Luz Verde y Check). Gira hacia el Sur para decir 'NO' (Luz Roja y X). Si no estás seguro, apunta al Este (Amarillo). ¡Todos votan a la vez girando sus dispositivos!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF compass.heading < 45 THEN LED.show(CHECK), Lamp.color(GREEN) ELSE IF compass.heading > 135 AND compass.heading < 225 THEN LED.show(X), Lamp.color(RED)"
+  }
+]

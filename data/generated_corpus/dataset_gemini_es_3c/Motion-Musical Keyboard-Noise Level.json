@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Flauta Virtual por Aire",
+    "originalIdeaDescription": "Un instrumento de viento virtual donde la inclinación del dispositivo selecciona la nota musical y el soplido en el micrófono (nivel de ruido) activa el sonido.",
+    "transformedIdeaTitle": "La Flauta del Encantador de Serpientes",
+    "transformedIdeaDescription": "¡Conviértete en un encantador de serpientes! Inclina tu flauta mágica hacia arriba o abajo para elegir la nota correcta y sopla fuerte en el sensor para tocar la melodía que hará bailar a la cobra digital.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "note = map(Motion.Y, -90, 90, C4, C5); IF NoiseLevel > 20 THEN Keyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma de Seguridad Sensible",
+    "originalIdeaDescription": "Un dispositivo de seguridad que detecta si un objeto es movido o si hay ruido en la habitación, disparando una secuencia de notas agudas como alarma.",
+    "transformedIdeaTitle": "Entrenamiento de Ninja Sigiloso",
+    "transformedIdeaDescription": "Eres un ninja intentando robar un pergamino sagrado. Debes mover el dispositivo muy lentamente y en absoluto silencio. Si te mueves rápido o haces ruido, ¡la alarma sonará y te atraparán!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake > 10 OR NoiseLevel > 30 THEN Keyboard.play(ALARM_NOTES)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja de Ritmos Gestual Interactiva",
+    "originalIdeaDescription": "Un sistema para crear ritmos donde agitar el dispositivo produce un sonido de percusión y golpear la mesa (ruido) produce otro tono diferente.",
+    "transformedIdeaTitle": "DJ de la Fiesta Galáctica",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta alienígena! Agita tu mano para lanzar el ritmo base y da palmadas fuertes para añadir efectos especiales sonoros a la mezcla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake detected THEN Keyboard.play(C2); IF NoiseLevel > 50 THEN Keyboard.play(F2)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva al Entorno",
+    "originalIdeaDescription": "Una mascota digital que ronronea (notas graves) cuando se mece suavemente, pero chilla (notas agudas) si detecta gritos o ruidos fuertes.",
+    "transformedIdeaTitle": "Cuidando al Dragón Bebé",
+    "transformedIdeaDescription": "Tu huevo de dragón está a punto de eclosionar. Mecerlo suavemente lo hace feliz (melodía suave), pero si hay mucho ruido alrededor, se asustará y llorará (notas disonantes).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.magnitude < 5 AND Motion.magnitude > 0 THEN Keyboard.play(LOW_C); IF NoiseLevel > 60 THEN Keyboard.play(HIGH_C)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica Activada por Voz",
+    "originalIdeaDescription": "El usuario debe realizar un gesto específico con el dispositivo mientras dice una 'palabra mágica' (nivel de ruido) para reproducir un efecto de sonido exitoso.",
+    "transformedIdeaTitle": "Academia de Hechicería: El Hechizo Leviosa",
+    "transformedIdeaDescription": "Para aprobar tu examen de magia, debes agitar tu varita con el movimiento correcto y gritar '¡Leviosa!' al mismo tiempo. Solo así escucharás el sonido del éxito mágico.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture == 'CIRCLE' AND NoiseLevel > 40 THEN Keyboard.play(ARPEGGIO)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Ambiental",
+    "originalIdeaDescription": "Agitar el dispositivo simula el sonido del viento con notas rápidas, y un aplauso fuerte simula un trueno con un acorde grave.",
+    "transformedIdeaTitle": "El Dios del Clima",
+    "transformedIdeaDescription": "¡Controla el clima con tus manos! Agita el dispositivo para convocar vientos huracanados y da una palmada fuerte para lanzar truenos devastadores sobre la tierra.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = Motion.shake; Keyboard.play_scale(speed); IF NoiseLevel > 80 THEN Keyboard.play_chord(C_LOW)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos con Alerta Sonora",
+    "originalIdeaDescription": "Monitorea la vibración de la superficie. Si es alta, toca notas graves. Si el ruido ambiental también aumenta (pánico), el tono de la alarma sube.",
+    "transformedIdeaTitle": "Estación Sismológica de Emergencia",
+    "transformedIdeaDescription": "Construye un sismógrafo para detectar temblores. Si la tierra tiembla, suena la advertencia. Si además la gente empieza a gritar, la alarma se vuelve crítica.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch = map(NoiseLevel, 0, 100, C3, C6); IF Motion.shake > 5 THEN Keyboard.play(pitch)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Estatuas Musicales Automático",
+    "originalIdeaDescription": "La música suena mientras hay movimiento detectado. Si el movimiento para, la música para. Si hay ruido cuando la música para, se pierde el juego.",
+    "transformedIdeaTitle": "El Baile Congelado del Robot",
+    "transformedIdeaDescription": "Baila mientras te muevas. En cuanto te quedes quieto, la música parará. ¡Pero cuidado! Si haces algún ruido o risa cuando estés congelado, perderás puntos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active THEN Keyboard.play(SONG); ELSE IF NoiseLevel > 10 THEN Keyboard.play(FAIL_NOTE)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de Voz Alienígena",
+    "originalIdeaDescription": "El usuario habla al micrófono y el dispositivo reproduce notas aleatorias basadas en la inclinación del dispositivo para 'traducir' el idioma.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Habla con los marcianos. Tu voz activa el transmisor, pero debes inclinar el dispositivo para modular la frecuencia y que te entiendan en su idioma musical.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 15 THEN Keyboard.play(random_note + Motion.X)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Canto y Postura",
+    "originalIdeaDescription": "Ayuda a cantantes a mantener la postura. Si el usuario se encorva (inclinación) mientras canta (ruido), suena una nota de error.",
+    "transformedIdeaTitle": "La Audición de la Superestrella",
+    "transformedIdeaDescription": "¡Estás en un concurso de talentos! Debes cantar fuerte, pero mantén la espalda recta. Si te encorvas mientras cantas, el juez tocará el timbre de eliminación.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > 30 AND Motion.Inclination.Y < 45 THEN Keyboard.play(BUZZER)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Espada Láser con Efectos de Choque",
+    "originalIdeaDescription": "El movimiento genera un zumbido constante. Un pico repentino en el sensor de ruido (golpe de espada) dispara un sonido de choque metálico.",
+    "transformedIdeaTitle": "Duelo de Caballeros Espaciales",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una espada de luz. Al moverla suena su energía, pero si chocas con otra espada (detectado por el sonido del golpe), escucharás el impacto de la batalla.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active THEN Keyboard.play(HUM); IF NoiseLevel > PeakThreshold THEN Keyboard.play(CLASH)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Despertador Difícil de Apagar",
+    "originalIdeaDescription": "Una alarma que solo se apaga si el usuario agita el dispositivo vigorosamente y grita 'DESPIERTA' al mismo tiempo.",
+    "transformedIdeaTitle": "El Despertador para Dormilones Extremos",
+    "transformedIdeaDescription": "¡Esta alarma no parará fácilmente! Para detener el molesto sonido, tendrás que sacudir el reloj con todas tus fuerzas y gritar para demostrar que estás despierto.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE (Motion.shake < 80 OR NoiseLevel < 70) DO Keyboard.play(ALARM)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Director de Orquesta Dinámico",
+    "originalIdeaDescription": "La velocidad del movimiento controla el tempo de una escala musical, y el volumen de la voz del usuario controla la octava de las notas.",
+    "transformedIdeaTitle": "Maestro de la Sinfónica",
+    "transformedIdeaDescription": "Dirige la orquesta. Mueve tu batuta rápido para acelerar la música. Si quieres que toquen más agudo, ¡canta fuerte hacia ellos!",
+    "minAge": 11,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "tempo = Motion.speed; octave = map(NoiseLevel, 0, 100, 3, 6); Keyboard.play_sequence(tempo, octave)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Motor de Coche",
+    "originalIdeaDescription": "La inclinación del dispositivo actúa como acelerador (sube el tono), pero si hay mucho ruido ambiental, el motor 'se cala' y se detiene.",
+    "transformedIdeaTitle": "Piloto de Carreras Fórmula 1",
+    "transformedIdeaDescription": "Acelera inclinando el volante hacia adelante para subir las revoluciones del motor. Pero mantén la cabina en silencio; si los pasajeros gritan, el motor fallará.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF NoiseLevel > 80 THEN Stop(); ELSE note = map(Motion.Y, 0, 90, C2, C4); Keyboard.play(note)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Meditación Zen",
+    "originalIdeaDescription": "El dispositivo reproduce música relajante solo si el movimiento es casi nulo y el nivel de ruido es muy bajo.",
+    "transformedIdeaTitle": "El Monje del Templo Silencioso",
+    "transformedIdeaDescription": "Intenta alcanzar el estado Zen. Si logras quedarte totalmente inmóvil y en completo silencio, escucharás la melodía de la iluminación.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.total < 2 AND NoiseLevel < 5 THEN Keyboard.play(ZEN_MUSIC)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Rompecristales Resonante",
+    "originalIdeaDescription": "Juego donde el usuario debe mantener una nota alta con la voz y agitar el dispositivo para encontrar la frecuencia de resonancia que rompe una copa (sonido de teclado).",
+    "transformedIdeaTitle": "El Desafío de la Soprano",
+    "transformedIdeaDescription": "¡Rompe la copa de cristal con tu voz! Canta una nota constante y agita el dispositivo para encontrar la vibración exacta. Cuando ambas coincidan, ¡CRASH!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > Threshold AND Motion.shake == ResonanceTarget THEN Keyboard.play(CRASH)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "El dispositivo hace un sonido de 'bip' lento. Si detecta frío (simulado por movimiento lento y silencioso) aumenta la frecuencia. Si hay un ruido repentino, grita.",
+    "transformedIdeaTitle": "Cazafantasmas en la Mansión Encantada",
+    "transformedIdeaDescription": "Camina despacio buscando actividad paranormal. El radar pitará más rápido si te mueves sigilosamente. Si el fantasma grita (ruido fuerte), tu dispositivo entrará en pánico.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.speed < 2 THEN Keyboard.play_beep(fast); IF NoiseLevel > 70 THEN Keyboard.play(SCREAM)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "Hacer un movimiento de lanzamiento. Esperar en silencio. Si el usuario hace un ruido repentino (simulando picada), debe tirar hacia atrás para 'pescar' una melodía.",
+    "transformedIdeaTitle": "Pesca Deportiva en el Lago Silencioso",
+    "transformedIdeaDescription": "Lanza tu caña (gesto). Espera en silencio absoluto para no asustar a los peces. Cuando grites '¡Pez!', tira de la caña hacia atrás para ganar el trofeo musical.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF State==WAITING AND NoiseLevel > 20 THEN State=HOOKED; IF State==HOOKED AND Motion.Y < -45 THEN Keyboard.play(WIN)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Herramienta de Efecto Doppler",
+    "originalIdeaDescription": "Simula el sonido de un objeto pasando. El tono cambia basado en la velocidad del movimiento lateral, activado solo si hay ruido de fondo (como una calle).",
+    "transformedIdeaTitle": "El Tren Expreso",
+    "transformedIdeaDescription": "Eres un tren pasando por una estación ruidosa. Cuanto más rápido muevas el dispositivo de izquierda a derecha, más cambiará el tono del silbato del tren.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "pitch_bend = Motion.Velocity.X; IF NoiseLevel > 10 THEN Keyboard.play(NOTE + pitch_bend)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Keyboard",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de Salto de Cuerda",
+    "originalIdeaDescription": "Detecta el salto rítmico (movimiento vertical). El usuario debe cantar el conteo. Si pierde el ritmo o el conteo, suena un error.",
+    "transformedIdeaTitle": "Campeonato de Salto a la Cuerda",
+    "transformedIdeaDescription": "Salta al ritmo. El dispositivo detectará tus saltos. Debes gritar el número de cada salto para que cuente. Si fallas la coordinación, ¡pierdes el turno!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.Z_peak detected AND NoiseLevel > Threshold THEN Score++ ELSE Keyboard.play(FAIL)"
+  }
+]

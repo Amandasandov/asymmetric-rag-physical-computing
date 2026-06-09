@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Nivel de Burbuja Digital de Precisión",
+    "originalIdeaDescription": "Una herramienta de construcción digital donde la inclinación del dispositivo mueve un píxel 'burbuja' en la Matriz LED para indicar si una superficie está plana. El interruptor se utiliza para calibrar el centro o congelar la lectura actual en la pantalla.",
+    "transformedIdeaTitle": "El Constructor de Torres Equilibrista",
+    "transformedIdeaDescription": "¡Ayuda al ingeniero a construir el rascacielos más alto! Los estudiantes programarán un nivel digital donde deben mantener un píxel centrado en la matriz moviendo la tablet. Si se inclina demasiado, la torre (píxel) se cae hacia un lado. Usarán el interruptor para 'colocar' el bloque una vez que esté perfectamente nivelado.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN FreezePosition() ELSE Display.pixel(Inclination.X, Inclination.Y)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto Controlado por Gravedad",
+    "originalIdeaDescription": "Un juego clásico donde el usuario inclina el dispositivo para mover un punto a través de un laberinto invisible o restringido por bordes en la Matriz LED. El interruptor sirve para reiniciar el juego o cambiar la dificultad del laberinto.",
+    "transformedIdeaTitle": "Escape de la Nave Espacial Averiada",
+    "transformedIdeaDescription": "Tu nave ha perdido los motores principales y solo funciona con la gravedad artificial. Debes guiar a tu tripulación (un punto LED) hacia la salida de emergencia inclinando el dispositivo sin tocar las paredes electrificadas. Usa el interruptor para abrir las compuertas de seguridad al llegar al final.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Character.move(Inclination.X, Inclination.Y); IF Character.touchWall() THEN GameOver(); IF Switch.isPressed() AND Character.atExit() THEN Win()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Señalizador de Giro para Ciclistas",
+    "originalIdeaDescription": "Un dispositivo de seguridad vestible para ciclistas. Al inclinar el cuerpo hacia la izquierda o derecha, la Matriz LED muestra una flecha parpadeante en esa dirección. El interruptor enciende o apaga el sistema para ahorrar batería cuando no se usa.",
+    "transformedIdeaTitle": "Chaleco Inteligente de Seguridad Vial",
+    "transformedIdeaDescription": "Diseña un sistema de seguridad para bicicletas del futuro. Los estudiantes crearán un chaleco que detecta cuando el ciclista se inclina para doblar una esquina, mostrando automáticamente una flecha direccional en la espalda (Matriz LED). El interruptor activa el 'Modo Nocturno' o las luces de emergencia.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN { IF Inclination.X < -10 THEN ShowArrow('Left') ELSE IF Inclination.X > 10 THEN ShowArrow('Right') ELSE ClearScreen() }"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Mascota Virtual con Gestos de Cabeza",
+    "originalIdeaDescription": "Una mascota digital que vive en la Matriz LED. Responde a gestos físicos: inclinar hacia adelante es como acariciarla (se pone feliz), inclinar hacia atrás la asusta. El interruptor se usa para alimentarla o ponerla a dormir.",
+    "transformedIdeaTitle": "Tamagotchi Sensible: El Alienígena Tímido",
+    "transformedIdeaDescription": "Has adoptado un pequeño alienígena que se comunica con gestos. Si inclinas la tablet suavemente, el alienígena sonreirá en la matriz. Si la agitas o inclinas bruscamente, pondrá cara triste. Usa el interruptor para darle de comer galletas espaciales cuando tenga hambre.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN Show('Eating') ELSE IF Inclination.magnitude > High THEN Show('Sad') ELSE Show('Happy')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Pizarra Mágica de Dibujo Gravitacional",
+    "originalIdeaDescription": "Un sistema de dibujo tipo 'Etch A Sketch' donde la inclinación mueve el cursor de dibujo dejando un rastro de luz. El interruptor alterna entre modo 'lápiz abajo' (dibujar) y 'lápiz arriba' (solo mover) o borra la pantalla.",
+    "transformedIdeaTitle": "El Pincel Mágico de Gravedad",
+    "transformedIdeaDescription": "Convierte tu dispositivo en un lienzo mágico. Los estudiantes programarán un punto de luz que deja un rastro de pintura brillante al inclinar la tablet. El desafío es dibujar una figura geométrica perfecta. El interruptor cambia el color de la 'tinta' o levanta el pincel para moverse sin pintar.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Cursor.move(Inclination.X, Inclination.Y); IF Switch.state == 'Draw' THEN Matrix.setPixel(Cursor.pos, ON)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Giratoria",
+    "originalIdeaDescription": "Un simulador de cerradura de caja fuerte. El usuario debe inclinar el dispositivo para rotar a través de números mostrados en la Matriz LED. Al llegar al número correcto, se usa el interruptor para confirmar la selección y desbloquear.",
+    "transformedIdeaTitle": "Misión Espía: Descifra el Código",
+    "transformedIdeaDescription": "Eres un agente secreto intentando abrir una bóveda digital. Debes inclinar el dispositivo con precisión para buscar el número correcto en la pantalla LED. Cuando creas tener el número de la combinación, presiona el interruptor para intentar abrirla. ¡Cuidado, si te equivocas suena la alarma!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Number = Map(Inclination.X, 0, 9); Matrix.show(Number); IF Switch.pressed() AND Number == SecretCode THEN Unlock()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Horizonte Artificial para Aviación",
+    "originalIdeaDescription": "Instrumento de vuelo simplificado que muestra una línea de horizonte en la Matriz LED. La línea se inclina opuestamente al dispositivo para simular la orientación de un avión respecto al suelo. El interruptor activa el piloto automático (centra la línea).",
+    "transformedIdeaTitle": "Academia de Pilotos: Vuelo Nocturno",
+    "transformedIdeaDescription": "¡Estás volando un avión en plena oscuridad! Usa tu panel de instrumentos (Matriz LED) para mantener las alas niveladas observando la línea del horizonte artificial que reacciona a la inclinación de tu tablet. Si pierdes el control, usa el interruptor para activar el estabilizador de emergencia.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Angle = CalculateAngle(Inclination.X, Inclination.Y); Matrix.drawLine(Angle); IF Switch.isOn() THEN Matrix.show('AutoPilot')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Caracteres Alfabéticos",
+    "originalIdeaDescription": "Un sistema de comunicación asistiva. Inclinar el dispositivo a la derecha avanza por el abecedario, a la izquierda retrocede. El interruptor selecciona la letra mostrada actualmente en la Matriz LED para formar palabras.",
+    "transformedIdeaTitle": "El Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Has contactado con una civilización que no habla tu idioma. Construye un dispositivo para enviar mensajes letra por letra. Inclina tu comunicador para recorrer el alfabeto alienígena en la pantalla y usa el interruptor para enviar cada letra seleccionada a la base.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Index += Inclination.X_Sign; Matrix.showChar(Alphabet[Index]); IF Switch.pressed() THEN SendChar()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Dado Digital Aleatorio",
+    "originalIdeaDescription": "Un dado electrónico. Al agitar o inclinar bruscamente el dispositivo, la Matriz LED muestra una animación de mezcla. Al detenerse o presionar el interruptor, se muestra una cara del dado (1-6) generada aleatoriamente.",
+    "transformedIdeaTitle": "El Dado Mágico de la Suerte",
+    "transformedIdeaDescription": "¡No pierdas más los dados de tus juegos de mesa! Crea un dado digital que se 'agita' de verdad. Los estudiantes programarán la lógica para que, al detectar una inclinación brusca, los LEDs giren locamente. El interruptor servirá para 'congelar' el resultado y mostrar el número ganador.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.Magnitude > ShakeThreshold THEN Matrix.animate() ELSE IF Switch.pressed() THEN Matrix.show(Random(1,6))"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Lluvia y Viento",
+    "originalIdeaDescription": "Una simulación ambiental en la Matriz LED donde píxeles 'caen' como lluvia. La inclinación del dispositivo determina la dirección y fuerza del viento, haciendo que la lluvia caiga en diagonal. El interruptor detiene la lluvia (pausa).",
+    "transformedIdeaTitle": "El Señor del Clima",
+    "transformedIdeaDescription": "Tienes el poder de controlar la tormenta. Programa una lluvia de píxeles en tu pantalla. Al inclinar la tablet, harás que el viento sople, empujando las gotas de lluvia hacia los lados. Usa el interruptor para detener el tiempo y dejar las gotas suspendidas en el aire.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "RainDirection = Inclination.X; FOR drop in Rain: drop.move(RainDirection); IF Switch.isOn() THEN PauseAnimation()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Pong para Un Jugador",
+    "originalIdeaDescription": "Versión simplificada de Pong o Breakout. El usuario controla la paleta en la parte inferior de la Matriz LED inclinando el dispositivo izquierda/derecha. El interruptor lanza la pelota al inicio o después de perder una vida.",
+    "transformedIdeaTitle": "Defensor del Muro de Píxeles",
+    "transformedIdeaDescription": "Eres el guardián de la base. Una bola de energía rebota por la pantalla y no debes dejar que toque el suelo. Inclina tu dispositivo para mover tu escudo (paleta) de izquierda a derecha. Presiona el interruptor para lanzar una nueva bola de energía y comenzar el desafío.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Paddle.X = Map(Inclination.X); IF Ball.hits(Paddle) THEN Bounce(); IF Switch.pressed() AND GameState == 'Wait' THEN StartBall()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Aterrizaje Lunar de Precisión",
+    "originalIdeaDescription": "Juego donde un píxel (nave) desciende. La inclinación controla los propulsores laterales para evitar obstáculos y el interruptor activa el propulsor principal para frenar la caída en la Matriz LED.",
+    "transformedIdeaTitle": "Misión Marte: Aterrizaje Crítico",
+    "transformedIdeaDescription": "La cápsula de exploración está descendiendo en Marte. Debes controlar su caída observando la matriz LED. Inclina para esquivar montañas y usa el interruptor para activar los retrocohetes y aterrizar suavemente. Si bajas muy rápido, ¡la misión fracasará!",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Ship.Y += Gravity; Ship.X += Inclination.X; IF Switch.isPressed() THEN Ship.Y -= Thrust; Matrix.draw(Ship)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo Visual Interactivo",
+    "originalIdeaDescription": "Una herramienta para músicos. Una barra oscila en la Matriz LED de lado a lado. La inclinación del dispositivo ajusta la velocidad (tempo) de la oscilación. El interruptor inicia o detiene el metrónomo.",
+    "transformedIdeaTitle": "Director de Orquesta Robótica",
+    "transformedIdeaDescription": "Dirige el ritmo de la música con tus movimientos. Crea un metrónomo visual donde una barra de luz se mueve de izquierda a derecha. Al inclinar el dispositivo hacia arriba, el ritmo se acelera (Allegro); hacia abajo, se ralentiza (Adagio). El interruptor da la señal de inicio a la orquesta.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Tempo = Map(Inclination.Y, -10, 10, 60, 180); IF Switch.isOn() THEN Matrix.animateMetronome(Tempo)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sismógrafo Visualizador de Terremotos",
+    "originalIdeaDescription": "Dispositivo que visualiza vibraciones. La inclinación y movimiento mueven un 'punto de aguja' en la Matriz LED dejando un historial de la amplitud. El interruptor borra la pantalla para una nueva medición.",
+    "transformedIdeaTitle": "Detector de Terremotos Casero",
+    "transformedIdeaDescription": "Convierte tu tablet en una estación sismológica. Los estudiantes programarán la matriz para dibujar una línea que reacciona a cualquier vibración o inclinación de la mesa. Deberán crear una función de 'reset' con el interruptor para monitorear nuevas réplicas sísmicas.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Amplitude = Abs(Inclination.Change); Matrix.shiftLeft(); Matrix.plot(Amplitude); IF Switch.pressed() THEN Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Lector de Noticias con Scroll",
+    "originalIdeaDescription": "Un sistema para mostrar texto en desplazamiento (scrolling text) en la Matriz LED. La inclinación controla la velocidad y dirección del desplazamiento del texto. El interruptor cambia el mensaje a mostrar.",
+    "transformedIdeaTitle": "El Noticiero de Bolsillo",
+    "transformedIdeaDescription": "¡Última hora! Crea tu propio teletipo de noticias. Programa la matriz LED para pasar un mensaje de texto largo. Inclina el dispositivo a la derecha para avanzar el texto rápido, o a la izquierda para rebobinar si te perdiste algo. Usa el interruptor para cambiar entre 'Deportes' y 'Clima'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ScrollSpeed = Inclination.X; TextPosition += ScrollSpeed; Matrix.showText(Messages[Switch.Mode], TextPosition)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Animación de Flipbook Digital",
+    "originalIdeaDescription": "Muestra una secuencia de fotogramas de animación en la Matriz LED. La inclinación del dispositivo controla qué fotograma se muestra (como hojear un libro con el pulgar). El interruptor reproduce la animación en bucle automático.",
+    "transformedIdeaTitle": "Cineasta de Animación Pixelada",
+    "transformedIdeaDescription": "Crea una película cuadro por cuadro. Dibuja varias caras o figuras en la memoria. Al inclinar el dispositivo lentamente, podrás ver la animación avanzar fotograma a fotograma, controlando el tiempo. Si quieres ver la película completa, presiona el interruptor para 'Play'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "FrameIndex = Map(Inclination.X, 0, 100, 0, TotalFrames); Matrix.show(Frames[FrameIndex]); IF Switch.isOn() THEN AutoPlay()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de Puntería y Francotirador",
+    "originalIdeaDescription": "Un juego de precisión. Una mira aparece en la Matriz LED y se mueve según la inclinación. El objetivo parpadea aleatoriamente. El usuario debe alinear la mira y usar el interruptor para 'disparar' o capturar el objetivo.",
+    "transformedIdeaTitle": "Fotógrafo de la Naturaleza Salvaje",
+    "transformedIdeaDescription": "Eres un fotógrafo intentando capturar una imagen de un pájaro raro (un píxel parpadeante). Mueve tu 'cámara' (la mira en la matriz) inclinando el dispositivo hasta que esté sobre el pájaro. Presiona el interruptor (obturador) rápidamente para tomar la foto antes de que el pájaro vuele.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Cursor.move(Inclination); IF Switch.pressed() AND Cursor == TargetPos THEN Score++ ELSE Miss()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Entrenador de Reflejos (Duelo)",
+    "originalIdeaDescription": "Juego de reacción. La pantalla está apagada hasta que aparece una señal. El usuario debe inclinar el dispositivo a una posición específica (ej. 'desenfudar') y presionar el interruptor lo más rápido posible.",
+    "transformedIdeaTitle": "Duelo de Vaqueros del Oeste",
+    "transformedIdeaDescription": "¡Es el mediodía! Mantén tu dispositivo en la funda (plano sobre la mesa). Cuando la matriz LED muestre la señal de '¡YA!', levanta e inclina el dispositivo rápidamente apuntando al frente y presiona el gatillo (interruptor). El sistema medirá tus milisegundos de reacción.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "WaitRandomTime(); Matrix.flash(); StartTimer(); WAIT UNTIL (Inclination.Y > 45 AND Switch.pressed()); ShowTime()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Patrones Caleidoscópicos",
+    "originalIdeaDescription": "Herramienta de arte visual. La inclinación altera los parámetros de simetría y rotación de un patrón generado en la Matriz LED. El interruptor cambia entre diferentes formas base (cuadrado, cruz, punto).",
+    "transformedIdeaTitle": "El Caleidoscopio Digital",
+    "transformedIdeaDescription": "Crea arte abstracto con matemáticas. Al inclinar la tablet, los patrones en la pantalla girarán y se deformarán como en un caleidoscopio real. Los estudiantes usarán el interruptor para cambiar la 'piedra preciosa' base, creando infinitas combinaciones de diseños simétricos.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pattern.rotate(Inclination.X); Pattern.scale(Inclination.Y); IF Switch.pressed() THEN ChangeBaseShape(); Matrix.draw(Pattern)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Contador Binario Educativo",
+    "originalIdeaDescription": "Herramienta para aprender binario. Inclinar a la derecha incrementa un contador, a la izquierda lo decrementa. La Matriz LED muestra el número en formato binario (píxeles encendidos/apagados). El interruptor cambia la vista a decimal.",
+    "transformedIdeaTitle": "Traductor del Lenguaje de las Máquinas",
+    "transformedIdeaDescription": "Aprende a contar como un ordenador. Inclina tu dispositivo para sumar o restar números. La matriz te mostrará cómo se ve ese número en código binario (ceros y unos representados por luces). Si te confundes, mantén presionado el interruptor para ver la traducción en números normales.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Counter += Inclination.Direction; IF Switch.isHeld() THEN Matrix.showNumber(Counter) ELSE Matrix.showBinary(Counter)"
+  }
+]

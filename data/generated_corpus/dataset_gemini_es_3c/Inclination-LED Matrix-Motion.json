@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Juego del Laberinto de Canicas",
+    "originalIdeaDescription": "Un punto brillante (la canica) se mueve por la matriz LED según la inclinación del dispositivo. Si el usuario agita el dispositivo (Motion), el mapa del laberinto cambia o se reinicia la posición.",
+    "transformedIdeaTitle": "El Laberinto de Cristal",
+    "transformedIdeaDescription": "Programa un juego de habilidad. El píxel es tu explorador. Usa la inclinación (X, Y) para moverlo por la matriz evitando las 'paredes' invisibles. Si te quedas atascado, agita el dispositivo para teletransportarte al inicio. Debes usar variables para las coordenadas X e Y.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PixelX += Map(Inclination.X); PixelY += Map(Inclination.Y); LED.plot(PixelX, PixelY); IF Motion.shake() THEN Reset()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Nivel de Burbuja Digital",
+    "originalIdeaDescription": "Herramienta de construcción. Un punto en el centro indica que está nivelado. Si se inclina, el punto se desliza. Agitar el dispositivo calibra el cero.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "Crea una herramienta para verificar si la mesa está recta. Si inclinas a la derecha, el punto LED se va a la derecha. El objetivo es mantener el punto exactamente en el centro (2,2). Agita el dispositivo para guardar la posición actual como 'plana'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "X = Map(Inclination.Roll, -90, 90, 0, 4); Y = Map(Inclination.Pitch, -90, 90, 0, 4); LED.plot(X, Y); IF Motion.shake() THEN Calibrate()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Simulador de Vuelo Espacial",
+    "originalIdeaDescription": "La matriz muestra las estrellas moviéndose. Inclinar controla la nave (punto fijo). Agitar activa el hiperespacio (animación rápida).",
+    "transformedIdeaTitle": "Piloto de Caza Estelar",
+    "transformedIdeaDescription": "Pilota tu nave a través de un campo de asteroides. Inclina el dispositivo para esquivar los obstáculos que caen en la pantalla LED. Si te ves rodeado, ¡agita fuerte para activar el escudo de energía y destruir todo lo que haya en pantalla!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ShipPos = Map(Inclination.X); LED.plot(ShipPos, 4); Asteroids.fall(); IF Motion.shake() THEN ClearScreen()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Pizarra Mágica (Etch-a-Sketch)",
+    "originalIdeaDescription": "Inclinar el dispositivo mueve un cursor que deja un rastro encendido (dibuja). Agitar el dispositivo borra la pantalla completa.",
+    "transformedIdeaTitle": "Lienzo de Luz Infinito",
+    "transformedIdeaDescription": "Dibuja con gravedad. Inclina suavemente para mover el 'pincel' de luz y dejar un rastro de píxeles encendidos. Haz un dibujo. ¿No te gusta? Agita el dispositivo vigorosamente (Shake) para borrar la memoria de la matriz y empezar de nuevo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Cursor.move(Inclination.direction); LED.plot(Cursor.x, Cursor.y); IF Motion.shake() THEN LED.clear()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Dado Electrónico con Truco",
+    "originalIdeaDescription": "Agitar para lanzar un dado (muestra número aleatorio). Inclinar disimuladamente hacia un lado fuerza que salga un 6.",
+    "transformedIdeaTitle": "El Mago de los Dados",
+    "transformedIdeaDescription": "Crea un dado para juegos de mesa, pero con un secreto. Normalmente, al agitar, muestra un número al azar (1-6). Pero programa una 'trampa': si inclinas el dispositivo a la izquierda mientras agitas, ¡siempre saldrá un 6! Sorprende a tus amigos.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake(): IF Inclination.roll < -30 THEN Result=6 ELSE Result=Random(1,6); LED.showNumber(Result)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Mascota Virtual: Huevo en Equilibrio",
+    "originalIdeaDescription": "Un huevo se muestra en la pantalla. Hay que mantenerlo equilibrado (inclinación). Si se agita mucho, se rompe.",
+    "transformedIdeaTitle": "Cuidando el Huevo de Dragón",
+    "transformedIdeaDescription": "Llevas un huevo frágil en una cuchara. Mantén el dispositivo plano. Si lo inclinas demasiado, el píxel del huevo se caerá por el borde. Si caminas muy rápido o saltas (Motion alto), el huevo se romperá en la pantalla (animación de grieta).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Abs(Inclination.X) > 20 OR Motion.strength > 50 THEN LED.showIcon('BrokenHeart') ELSE LED.showIcon('Egg')"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Reloj de Arena Digital",
+    "originalIdeaDescription": "Los píxeles se acumulan en la parte baja. Al girar el dispositivo 180 grados (Inclinación), los píxeles 'caen' de nuevo hacia abajo. Agitar desordena la arena.",
+    "transformedIdeaTitle": "Física de Partículas: Arena",
+    "transformedIdeaDescription": "Simula la gravedad. Los puntos LED deben caer siempre hacia el suelo real, detectando la inclinación del dispositivo. Si lo pones boca abajo, la arena cae al otro lado. Agítalo para crear una tormenta de arena donde los píxeles vuelan al azar.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "GravityVector = GetInclination(); For Each Pixel: MoveTowards(GravityVector); IF Motion.shake() THEN RandomizePositions()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Entrenador de Sentadillas",
+    "originalIdeaDescription": "El usuario sujeta el dispositivo. Motion cuenta la repetición (bajar y subir). Inclinación verifica que la espalda esté recta. Muestra contador en LED.",
+    "transformedIdeaTitle": "Entrenador Personal Inteligente",
+    "transformedIdeaDescription": "Haz ejercicio correctamente. Sujeta el dispositivo contra tu pecho. Haz una sentadilla. El sensor de movimiento contará +1 repetición en la pantalla. PERO, si te inclinas demasiado hacia adelante (mala postura), aparecerá una 'X' y no contará.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.verticalMovement() AND Abs(Inclination.pitch) < 15 THEN Reps++; LED.show(Reps) ELSE LED.show('X')"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Juego de Carreras Retro",
+    "originalIdeaDescription": "Un coche (punto) en la parte inferior. Inclinar para girar izquierda/derecha. Agitar para turbo. Los enemigos bajan por la matriz.",
+    "transformedIdeaTitle": "Gran Premio de 8-Bits",
+    "transformedIdeaDescription": "Conduce en la autopista LED. Inclina el volante para cambiar de carril y evitar los otros coches que bajan. ¿Necesitas velocidad? Da un golpe seco hacia adelante (Motion) para activar el Turbo y hacer que los enemigos bajen más rápido.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "CarX = Map(Inclination.Roll); ScrollSpeed = BaseSpeed + Motion.forwardJerk; UpdateGame(CarX, ScrollSpeed)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Bola de Nieve Navideña",
+    "originalIdeaDescription": "Imagen estática. Al agitar (Motion), los LEDs (copos) se mueven caóticamente. Al parar, la inclinación decide dónde se posan.",
+    "transformedIdeaTitle": "Invierno en el Bolsillo",
+    "transformedIdeaDescription": "Crea una bola de nieve digital. Si el dispositivo está quieto, la nieve se acumula abajo. ¡Agítalo! Los píxeles deben volar por toda la pantalla. Cuando pares, inclina el dispositivo para ver cómo la nieve se desliza y se acumula en una esquina.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake() THEN Snow.flyRandom(); ELSE Snow.fall(Inclination.direction)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Caja Fuerte Gravitacional",
+    "originalIdeaDescription": "Para desbloquear, el usuario debe realizar una secuencia de inclinaciones (Izquierda, Derecha, Arriba). Si agita, se resetea. LED muestra candado.",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Abre el cerrojo digital. El LED muestra un candado cerrado. Tienes que descubrir la combinación de movimientos: inclinar 45° a la izquierda, luego 45° a la derecha. Si fallas o te tiembla la mano (Motion inesperado), el candado se reinicia.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Seq = [Left, Right]; IF CheckTilt(Seq[Step]) THEN Step++; IF Motion.vibrate() THEN Step=0; IF Step==2 THEN LED.show('Open')"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Linterna de Dinamo",
+    "originalIdeaDescription": "Los LEDs empiezan apagados. Agitar carga la 'batería' (llena la matriz). Inclinar focaliza la luz en una dirección.",
+    "transformedIdeaTitle": "Supervivencia: Energía Cinética",
+    "transformedIdeaDescription": "Te has quedado sin luz. Agita el dispositivo con fuerza para cargar la batería virtual (verás la barra de carga subir en la matriz). Una vez cargada, inclina el dispositivo para mover el punto de luz e iluminar diferentes partes de la pantalla.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Battery += Motion.shakeAmount; LED.brightness = Battery; BeamPos = Map(Inclination); LED.plot(BeamPos)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Selector de Emojis",
+    "originalIdeaDescription": "Inclinar arriba/abajo hace scroll por diferentes caras en la matriz. Agitar selecciona la cara y la anima.",
+    "transformedIdeaTitle": "Máscara Digital",
+    "transformedIdeaDescription": "¿Cómo te sientes? Inclina el dispositivo hacia adelante o atrás para pasar por un carrusel de caras (Feliz, Triste, Enojado). Cuando encuentres la tuya, agita el dispositivo para 'fijarla' y hacer que parpadee.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Index = Map(Inclination.Pitch, 0, 3); ShowFace(Faces[Index]); IF Motion.shake() THEN Animate(Faces[Index])"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Pong de un Solo Jugador",
+    "originalIdeaDescription": "La pala se mueve con la inclinación. La bola rebota. Agitar sirve para 'sacar' la bola cuando se pierde.",
+    "transformedIdeaTitle": "Wall Ball Retro",
+    "transformedIdeaDescription": "Juega al frontón. Eres la barra en la parte baja de la pantalla. Inclina izquierda/derecha para interceptar la bola que rebota. Si se te cae, agita el dispositivo para lanzar una bola nueva y reiniciar el puntaje.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "PaddleX = Map(Inclination.Roll); Ball.update(); IF Ball.lost AND Motion.shake() THEN Ball.reset()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Brújula Loca (Juego)",
+    "originalIdeaDescription": "Una flecha apunta al Norte. El juego consiste en mantener la flecha centrada mientras se camina (Motion intenta desviar la flecha).",
+    "transformedIdeaTitle": "Navegante en la Tormenta",
+    "transformedIdeaDescription": "Tu brújula está estropeada. Una flecha en la matriz intenta apuntar arriba, pero cada paso que das (Motion) la hace girar locamente. Debes contrarrestar el movimiento inclinando el dispositivo en la dirección opuesta para mantener el rumbo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ArrowAngle = 0 + (Motion.noise * Random) - Inclination.Roll; LED.drawArrow(ArrowAngle)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Juego de la Serpiente (Snake)",
+    "originalIdeaDescription": "Clásico Snake. Inclinar para girar la cabeza de la serpiente. Agitar para empezar partida.",
+    "transformedIdeaTitle": "Víbora Controlada por Gravedad",
+    "transformedIdeaDescription": "El clásico juego de la serpiente, pero sin botones. Inclina el dispositivo para cambiar la dirección de la serpiente (Arriba, Abajo, Izquierda, Derecha). Come las manzanas para crecer. Si chocas, agita para revivir.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Dir = GetDominantTilt(); Snake.move(Dir); IF Snake.crash AND Motion.shake() THEN Restart()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Visualizador de Terremotos",
+    "originalIdeaDescription": "Matriz muestra una línea plana. Motion hace que la línea vibre (amplitud). Inclinar cambia el color o grosor de la línea.",
+    "transformedIdeaTitle": "Sismógrafo de Bolsillo",
+    "transformedIdeaDescription": "Mide las vibraciones de la tierra. Si el dispositivo está quieto, muestra una línea en el medio. Golpea la mesa (Motion): la línea se convierte en ondas sísmicas en la matriz LED. Inclina el dispositivo para hacer zoom en la gráfica.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Amplitude = Motion.strength; Zoom = Inclination.pitch; LED.plotWave(Amplitude, Zoom)"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Burbuja de Aire Submarina",
+    "originalIdeaDescription": "El usuario es un buzo. Debe guiar una burbuja de aire (pixel) a la superficie (arriba) evitando peces. Agitar espanta a los peces.",
+    "transformedIdeaTitle": "Escape de las Profundidades",
+    "transformedIdeaDescription": "Guía la burbuja de oxígeno hacia la superficie. La burbuja flota hacia arriba, pero debes inclinarte para esquivar obstáculos laterales. Si un pez se acerca demasiado, agita el dispositivo para soltar burbujas extra y asustarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "BubbleX += Inclination.Roll; BubbleY--; IF Obstacle.hit() THEN Pop(); IF Motion.shake() THEN Obstacles.clear()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Lector de Mensajes Secretos",
+    "originalIdeaDescription": "El texto en la matriz está 'revuelto'. Solo se ordena y se lee si se inclina el dispositivo en un ángulo muy específico. Agitar vuelve a cifrarlo.",
+    "transformedIdeaTitle": "Decodificador Espía",
+    "transformedIdeaDescription": "Envía mensajes cifrados. La pantalla muestra basura estática. Para leer el mensaje secreto, debes inclinar el dispositivo exactamente 30 grados a la derecha. Si te pasas o agitas el dispositivo, el mensaje se autodestruye (vuelve a ser estática).",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.Roll > 25 AND Inclination.Roll < 35 THEN LED.scroll('HOLA') ELSE LED.showRandomNoise()"
+  },
+  {
+    "componentUsed": ["Inclination", "LED Matrix", "Motion"],
+    "originalIdeaTitle": "Simulador de Surf",
+    "originalIdeaDescription": "El usuario debe mantener el equilibrio sobre una 'ola' virtual. Inclinación controla el equilibrio. Motion detecta si se cae (movimiento brusco).",
+    "transformedIdeaTitle": "Surfista de Olas Gigantes",
+    "transformedIdeaDescription": "Mantente en la tabla. Una línea en la matriz representa la ola. Debes inclinarte para mantener tu punto (surfista) sobre la ola mientras esta se mueve. Si pierdes el equilibrio y haces un movimiento brusco (caída), aparecerá 'SPLASH'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WavePos = Sin(Time); Balance = Inclination.Roll; IF Abs(WavePos - Balance) > Threshold THEN LED.show('Splash')"
+  }
+]

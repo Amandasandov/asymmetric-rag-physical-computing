@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Antirrobo",
+    "originalIdeaDescription": "Un dispositivo de seguridad que detecta cuando un objeto ha sido movido de su posición estacionaria y alerta visualmente al usuario mediante la matriz de LEDs.",
+    "transformedIdeaTitle": "El Guardián de las Galletas",
+    "transformedIdeaDescription": "¡Protege tus dulces! Coloca el dispositivo dentro del tarro de galletas. Si un 'ladrón' mueve el tarro, el sensor de movimiento lo detectará y la Matriz LED mostrará una cara enojada parpadeante para ahuyentarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.magnitude > 0.5 THEN LEDMatrix.show('AngryFace')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Digital",
+    "originalIdeaDescription": "Un podómetro básico que incrementa un contador numérico en la pantalla cada vez que el sensor detecta un movimiento oscilatorio vertical correspondiente a un paso.",
+    "transformedIdeaTitle": "Explorador de la Selva",
+    "transformedIdeaDescription": "Estás en una expedición. Debes caminar para avanzar en el mapa. Por cada 10 pasos que detecte el sensor (movimiento al caminar), la Matriz LED mostrará un nuevo símbolo de animal (pájaro, serpiente, mono) que has 'descubierto'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.stepDetected() THEN stepCount++; IF stepCount % 10 == 0 THEN LEDMatrix.showNextImage()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Dado Electrónico Aleatorio",
+    "originalIdeaDescription": "Un generador de números aleatorios que se activa al agitar el dispositivo, mostrando el resultado numérico (1-6) en la matriz de LEDs.",
+    "transformedIdeaTitle": "Dados de la Fortuna",
+    "transformedIdeaDescription": "Crea tu propio juego de mesa. Para avanzar, agita el dispositivo con fuerza como si fuera un cubilete. Al detenerse el movimiento, la pantalla mostrará los puntos del dado para que muevas tu ficha.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake() THEN LEDMatrix.show(random(1, 6))"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Bola Mágica de Predicción",
+    "originalIdeaDescription": "Un dispositivo de entretenimiento que ofrece respuestas binarias (Sí/No) o iconos simbólicos en la pantalla después de ser agitado por el usuario.",
+    "transformedIdeaTitle": "El Oráculo del Futuro",
+    "transformedIdeaDescription": "Haz una pregunta sobre tu futuro (ej. '¿Sacaré buena nota?'). Agita el dispositivo mágicamente. Si el sensor detecta la agitación, el oráculo responderá mostrando un 'Check' (Sí) o una 'X' (No) en los LEDs.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake() THEN result = random(['Yes', 'No']); LEDMatrix.show(result)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Medidor de Intensidad de Sacudida",
+    "originalIdeaDescription": "Una herramienta que visualiza la fuerza g aplicada al dispositivo, llenando la matriz de LEDs proporcionalmente a la intensidad del movimiento detectado.",
+    "transformedIdeaTitle": "Cargador de Energía Espacial",
+    "transformedIdeaDescription": "¡Tu nave espacial se quedó sin energía! Debes agitar el 'generador' (el dispositivo) lo más rápido posible para llenar la barra de energía en la pantalla LED y poder despegar antes de que lleguen los alienígenas.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "energyLevel = map(motion.acceleration, 0, 10, 0, 7); LEDMatrix.showBarGraph(energyLevel)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Reacción Rápida",
+    "originalIdeaDescription": "Un juego donde el usuario debe mover el dispositivo rápidamente en una dirección específica tan pronto como aparece una señal visual en la matriz.",
+    "transformedIdeaTitle": "Reflejos de Ninja",
+    "transformedIdeaDescription": "Entrena como un ninja. Espera a que la Matriz LED muestre un punto central. En ese instante exacto, lanza un 'golpe' (mueve el dispositivo rápido) para ver tu tiempo de reacción. Si te mueves antes, pierdes.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "LEDMatrix.show('Wait'); wait(random); LEDMatrix.show('GO'); timer.start(); IF motion.jerk() THEN time = timer.stop(); show(time)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Interactiva",
+    "originalIdeaDescription": "Una criatura digital simple que cambia su estado (dormido/despierto) basándose en la actividad física detectada por el sensor de movimiento.",
+    "transformedIdeaTitle": "El Monstruo Dormilón",
+    "transformedIdeaDescription": "Tu mascota digital está hibernando (La pantalla muestra 'Zzz'). Para despertarla y jugar, debes agitarla suavemente. Si dejas de moverla por mucho tiempo, se volverá a dormir.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.isActive() THEN LEDMatrix.show('HappyEyes') ELSE LEDMatrix.show('Zzz')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Visualizador de Terremotos",
+    "originalIdeaDescription": "Un sismógrafo educativo que muestra una onda o alerta visual cuando la superficie sobre la que reposa el dispositivo experimenta vibraciones.",
+    "transformedIdeaTitle": "Laboratorio de Temblores",
+    "transformedIdeaDescription": "Construye una torre de bloques sobre la mesa donde está el dispositivo. Golpea la mesa para simular un terremoto. Si la estructura es inestable y vibra demasiado, la Matriz LED mostrará una señal de 'PELIGRO'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.vibration > threshold THEN LEDMatrix.showAnimation('Warning') ELSE LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de la Patata Caliente",
+    "originalIdeaDescription": "Un temporizador social donde los usuarios pasan el dispositivo. Si se detecta movimiento brusco o el tiempo expira, se muestra una animación de finalización.",
+    "transformedIdeaTitle": "La Bomba de Tiempo",
+    "transformedIdeaDescription": "Pásense el dispositivo en círculo con mucho cuidado. Si lo agitas demasiado fuerte al pasarlo O se acaba el tiempo secreto, la pantalla mostrará una explosión. ¡No dejes que explote en tus manos!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.acceleration > sensitive_limit OR timer == 0 THEN LEDMatrix.show('Explosion')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Gestos",
+    "originalIdeaDescription": "El dispositivo reconoce patrones de movimiento simples (como un golpe hacia adelante) para activar efectos visuales predefinidos en la matriz.",
+    "transformedIdeaTitle": "Aprendiz de Hechicero",
+    "transformedIdeaDescription": "Convierte tu dispositivo en una varita. Aprende el hechizo 'Lumos': haz un movimiento seco hacia adelante con la mano y la Matriz LED se iluminará completamente como una linterna mágica.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF motion.gesture == 'CastSpell' THEN LEDMatrix.fill(WHITE)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Luz de Seguridad para Bicicleta",
+    "originalIdeaDescription": "Una luz trasera inteligente que cambia su patrón de parpadeo a una luz sólida y brillante cuando detecta una desaceleración (frenado).",
+    "transformedIdeaTitle": "Luz de Freno Inteligente",
+    "transformedIdeaDescription": "Diseña una luz para tu mochila o bici. Mientras te mueves constante, la luz parpadea. Pero si el sensor detecta que frenas de golpe (desaceleración), la Matriz se pone roja fija para avisar a los demás.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF motion.deceleration > brake_threshold THEN LEDMatrix.show('SolidBlock') ELSE LEDMatrix.show('BlinkPattern')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Controlador de Animación por Inclinación",
+    "originalIdeaDescription": "El usuario controla la reproducción de una animación (frame a frame) inclinando o moviendo el dispositivo hacia los lados.",
+    "transformedIdeaTitle": "Cine de Bolsillo",
+    "transformedIdeaDescription": "Eres el proyeccionista. Tienes una animación de un hombre corriendo. Inclina el dispositivo a la derecha (movimiento en X) para avanzar la película cuadro por cuadro. Si paras, la película se congela.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.x > tilt_right THEN currentFrame++; LEDMatrix.show(frames[currentFrame])"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Baile",
+    "originalIdeaDescription": "Un dispositivo wearable que muestra patrones psicodélicos que cambian de velocidad según la intensidad del baile del usuario.",
+    "transformedIdeaTitle": "Insignia Disco",
+    "transformedIdeaDescription": "Colócate el dispositivo en la ropa. Mientras más bailes y saltes, más rápido cambiarán los patrones de luces en la pantalla. Si te quedas quieto, las luces se apagan. ¡Que no pare la fiesta!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "speed = map(motion.magnitude, 0, 10, 1000, 50); delay(speed); LEDMatrix.nextPattern()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Borrador de Pizarra Mágica",
+    "originalIdeaDescription": "Un sistema de dibujo donde la pantalla se limpia completamente al agitar el dispositivo vigorosamente, imitando juguetes clásicos.",
+    "transformedIdeaTitle": "Pizarra Etch-A-Sketch",
+    "transformedIdeaDescription": "Dibuja puntos en la pantalla (usando botones u otra lógica). Cuando quieras empezar de nuevo, agita el dispositivo con fuerza como una pizarra mágica antigua para borrar todo el dibujo instantáneamente.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.shake() THEN LEDMatrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Analizador de Swing Deportivo",
+    "originalIdeaDescription": "Herramienta para medir la velocidad de un movimiento de brazo (tenis, golf, béisbol) y mostrar una puntuación del 1 al 9.",
+    "transformedIdeaTitle": "Entrenador de Tenis",
+    "transformedIdeaDescription": "Sujeta el dispositivo (con seguridad) y simula un golpe de raqueta. El sensor medirá la velocidad de tu brazo y la pantalla te dará una puntuación del 1 al 9. ¿Podrás llegar al nivel 9?",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "maxAccel = motion.getMaxDuringInterval(2sec); score = map(maxAccel, 0, 50, 1, 9); LEDMatrix.show(score)"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego de Equilibrio de Huevo",
+    "originalIdeaDescription": "Juego donde el usuario debe caminar suavemente. Si el movimiento vertical excede un límite, se simula la rotura de un objeto.",
+    "transformedIdeaTitle": "La Carrera del Huevo",
+    "transformedIdeaDescription": "Imagina que llevas un huevo en una cuchara. Camina con el dispositivo plano. Si das un paso demasiado fuerte o saltas, la pantalla mostrará un huevo roto y perderás. ¡Llega a la meta sin romperlo!",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.z > break_threshold THEN LEDMatrix.show('BrokenEgg') ELSE LEDMatrix.show('Egg')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Caída Libre",
+    "originalIdeaDescription": "Un sistema que detecta cuando el dispositivo está cayendo (gravedad cero relativa) y activa una animación de paracaídas o impacto.",
+    "transformedIdeaTitle": "Salto en Paracaídas",
+    "transformedIdeaDescription": "Lanza el dispositivo (hacia algo suave como una cama). Mientras está en el aire cayendo, la pantalla mostrará una flecha hacia abajo. Cuando detecte el impacto (aterrizaje), mostrará una carita feliz.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.magnitude < 0.2 THEN LEDMatrix.show('ArrowDown'); IF motion.impact() THEN LEDMatrix.show('Smile')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Brújula de Movimiento",
+    "originalIdeaDescription": "Aunque no usa magnetómetro, usa la inercia para detectar gestos de deslizamiento (swipe) en el aire para cambiar la dirección de una flecha en pantalla.",
+    "transformedIdeaTitle": "Controlador de Tráfico Aéreo",
+    "transformedIdeaDescription": "Eres un controlador aéreo. Mueve el dispositivo bruscamente hacia la izquierda para que la flecha señale a la izquierda, o a la derecha para señalar a la derecha, guiando a los aviones imaginarios.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF motion.x > 0.5 THEN show('RightArrow') ELSE IF motion.x < -0.5 THEN show('LeftArrow')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas (Aleatorio)",
+    "originalIdeaDescription": "Un juguete que simula detectar presencias paranormales interpretando pequeñas fluctuaciones de movimiento como señales.",
+    "transformedIdeaTitle": "Cazafantasmas",
+    "transformedIdeaDescription": "Camina sigilosamente por la habitación oscura. Si el sensor detecta micro-movimientos (o vibraciones aleatorias), la matriz parpadeará con un icono de fantasma. ¡Encuentra dónde se esconden!",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF motion.fluctuation > sensitivity THEN LEDMatrix.show('Ghost') ELSE LEDMatrix.show('RadarLine')"
+  },
+  {
+    "componentUsed": [
+      "LED Matrix",
+      "Motion"
+    ],
+    "originalIdeaTitle": "Juego 1, 2, 3, Momia",
+    "originalIdeaDescription": "Variante del juego 'Luz Roja, Luz Verde'. El dispositivo muestra un semáforo y penaliza cualquier movimiento detectado durante la luz roja.",
+    "transformedIdeaTitle": "Estatuas Musicales",
+    "transformedIdeaDescription": "Cuando la Matriz muestra una nota musical, baila (mueve el dispositivo). Cuando muestre un signo de PARE, ¡congélate! Si el sensor detecta movimiento durante el PARE, quedas eliminado.",
+    "minAge": 6,
+    "maxAge": 10,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF state == 'STOP' AND motion.magnitude > 0 THEN LEDMatrix.show('GameOver')"
+  }
+]

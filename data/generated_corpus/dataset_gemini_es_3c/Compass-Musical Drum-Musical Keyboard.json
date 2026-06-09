@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Banda de Marcha Direccional",
+    "originalIdeaDescription": "Un simulador donde la dirección de la marcha (brújula) determina qué sección toca. El usuario marca el paso con el tambor y toca la fanfarria con el teclado.",
+    "transformedIdeaTitle": "El Desfile del Día Nacional",
+    "transformedIdeaDescription": "Eres el líder de la banda. Debes guiar el desfile por la ciudad. Cuando gires al Norte (Compass), debes tocar el Tambor para marcar el ritmo de marcha. Cuando gires al Sur, debes detener los tambores y tocar el himno en el Teclado. ¡Mantén a la banda sincronizada!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Compass.heading == 'North' THEN EnableDrum(); IF Compass.heading == 'South' THEN EnableKeyboard(); IF BeatMissed() THEN Score--"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Sistema de Combate RPG",
+    "originalIdeaDescription": "Juego de rol donde la brújula es el escudo (bloqueo direccional), el tambor es el ataque físico y el teclado es el ataque mágico.",
+    "transformedIdeaTitle": "Caballero vs Hechicero",
+    "transformedIdeaDescription": "Un enemigo te ataca desde el Este. Gira rápido (Compass) para bloquear con tu escudo. Luego, contraataca: golpea el Tambor para dar un espadazo o toca una secuencia en el Teclado para lanzar un rayo. La estrategia cambia según el enemigo.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.heading == EnemyDir THEN Block=TRUE; IF Block AND Drum.hit() THEN SwordAttack(); IF Block AND Keyboard.sequence() THEN MagicAttack()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Mezclador de Ritmos del Mundo",
+    "originalIdeaDescription": "Girar a diferentes puntos cardinales carga 'kits' de sonido de diferentes culturas. Norte=Batería Rock, Sur=Percusión Latina. El teclado acompaña con melodías locales.",
+    "transformedIdeaTitle": "DJ Vuelta al Mundo",
+    "transformedIdeaDescription": "Viaja con tu música. Gira al Sur para activar ritmos de Samba. Usa el Tambor para añadir congas extra y el teclado para tocar una melodía de piano brasileño. Gira al Este para cambiar a música electrónica japonesa. ¡Crea una fusión global!",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Region = Map(Compass.heading); Drum.setKit(Region.Percussion); Keyboard.setSound(Region.Instrument); Mix()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Navegación de Barco Vikingo",
+    "originalIdeaDescription": "La brújula controla el timón. El tambor marca el ritmo de los remeros. El teclado se usa para tocar el cuerno de niebla o de batalla.",
+    "transformedIdeaTitle": "Drakkar en Alta Mar",
+    "transformedIdeaDescription": "Capitanea tu barco vikingo. Mantén el rumbo al Oeste (Compass) hacia nuevas tierras. Golpea el Tambor rítmicamente (pum, pum, pum) para que tus remeros no se cansen. Si ves otro barco, toca la nota grave en el Teclado para intimidarlos.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "ShipSpeed = Drum.bpm * Factor; Direction = Compass.heading; IF Speed < 10 THEN Drift(); IF Keyboard.pressed() THEN PlayHorn()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Ceremonia de la Lluvia",
+    "originalIdeaDescription": "Un ritual secuencial. Mirar al Norte, tocar tambor (trueno), mirar al Sur, tocar teclado (lluvia).",
+    "transformedIdeaTitle": "El Chamán del Clima",
+    "transformedIdeaDescription": "La sequía amenaza la aldea. Realiza el ritual antiguo: 1. Mira al Norte e invoca el trueno golpeando el Tambor fuerte. 2. Gira lentamente al Sur tocando una escala descendente en el Teclado para simular la caída de la lluvia. Si lo haces en orden, el cultivo crecerá.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Step1 = (Compass.North AND Drum.Fortissimo); Step2 = (Compass.South AND Keyboard.ScaleDown); IF Step1 AND Step2 THEN Rain()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Caja Fuerte de Sonido y Dirección",
+    "originalIdeaDescription": "Una combinación compleja: 3 golpes de tambor al Norte, 2 notas de teclado al Este.",
+    "transformedIdeaTitle": "La Bóveda del Banco Central",
+    "transformedIdeaDescription": "Eres un experto en seguridad probando la bóveda definitiva. La combinación es espacial y sonora: Gira al Norte y da 3 golpes secos al Tambor. Luego gira al Este y toca 'Do-Re' en el Teclado. Si fallas un grado o una nota, la alarma sonará.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Heading==N AND Drum.hits==3 THEN Stage1=OK; IF Stage1 AND Heading==E AND Keyboard.notes=='C-D' THEN Unlock()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Cazador de Dinosaurios",
+    "originalIdeaDescription": "Rastrear con la brújula. El tambor simula los pasos del T-Rex acercándose. El teclado dispara la red de captura.",
+    "transformedIdeaTitle": "Parque Jurásico: Rastreo",
+    "transformedIdeaDescription": "El radar indica un T-Rex al Noroeste. Gira hacia allá (Compass). Golpea el Tambor suavemente para imitar pasos y atraerlo. Cuando esté cerca, ¡toca rápidamente el acorde de 'Disparo' en el Teclado para lanzar la red antes de que te coma!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = 'NW'; IF Compass.heading == Target THEN Lure = Drum.intensity; IF Lure > 50 AND Keyboard.chord() THEN Capture()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Constructor de Rascacielos",
+    "originalIdeaDescription": "La brújula rota la grúa. El tambor clava los pilotes. El teclado suelda las vigas.",
+    "transformedIdeaTitle": "Jefe de Obra",
+    "transformedIdeaDescription": "Construye la torre más alta. Gira la grúa (Compass) para llevar material. Al llegar al sitio, golpea el Tambor para clavar la viga con el martillo pilón. Luego, usa el Teclado para asegurar los remaches con precisión melódica.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "CranePos = Compass.heading; IF CranePos == DropZone AND Drum.hit() THEN BeamPlaced; IF BeamPlaced AND Keyboard.pressed() THEN Secure()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Simón Dice Instrumental",
+    "originalIdeaDescription": "Instrucciones: 'Norte', 'Tambor', 'Piano'. El usuario debe reaccionar.",
+    "transformedIdeaTitle": "Director de Orquesta Loco",
+    "transformedIdeaDescription": "El director grita instrucciones. Si aparece una flecha, gira la Brújula. Si aparece un tambor, golpéalo. Si aparece un piano, toca una tecla. ¡El ritmo se acelera! Coordina movimiento y música para no ser despedido de la orquesta.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Command = Random(['Turn', 'Beat', 'Melody']); CheckInput(Compass, Drum, Keyboard); UpdateScore()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Exploración de Cueva con Eco",
+    "originalIdeaDescription": "Navegar a oscuras (Compass). Golpear el tambor para 'sonar' el entorno. El teclado reproduce el eco si hay salida.",
+    "transformedIdeaTitle": "Ecolocalización Humana",
+    "transformedIdeaDescription": "Estás perdido en una cueva. Gira buscando la salida. Da un golpe fuerte al Tambor. Si el sistema responde con un sonido de teclado claro, vas bien. Si responde con un sonido grave y sordo, hay una pared en esa dirección.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Ping = Drum.hit(); IF Ping THEN Logic: IF Compass.heading == Exit THEN Keyboard.play('ClearEcho') ELSE Keyboard.play('DullThud')"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Duelo del Lejano Oeste",
+    "originalIdeaDescription": "Ponerse de espaldas. A la señal, girar 180 grados (Compass), desenfundar (Tambor) y disparar (Teclado).",
+    "transformedIdeaTitle": "El Sheriff Más Rápido",
+    "transformedIdeaDescription": "Es mediodía. Ponte de espaldas al objetivo. Espera la señal... ¡YA! Gira 180 grados rápidamente (Compass), golpea el Tambor (desenfundar) y toca la tecla más aguda (disparo). El sistema medirá tus reflejos en milisegundos.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "StartHeading = Compass.heading; WAIT_SIGNAL; IF Abs(Compass.heading - StartHeading) > 170 AND Drum.hit() AND Keyboard.pressed() THEN CalculateReactionTime()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo Musical",
+    "originalIdeaDescription": "Asignar pistas de aterrizaje (grados de brújula) a aviones con ritmos (tambor) o melodías (teclado) específicas.",
+    "transformedIdeaTitle": "Aeropuerto Melódico",
+    "transformedIdeaDescription": "Llegan aviones. El 'Vuelo Tambor' necesita aterrizar al Norte: gira al Norte y toca el Tambor. El 'Vuelo Piano' va al Sur: gira al Sur y toca el Teclado. No los mezcles o habrá un accidente musical.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "PlaneType = Random('Drum', 'Piano'); Target = Random('N', 'S'); IF PlaneType=='Drum' AND Compass=='N' AND Drum.hit() THEN Score++"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Juego de Pesca Rítmica",
+    "originalIdeaDescription": "Lanzar caña (dirección). El pez pica (ritmo en tambor). Recoger (teclado).",
+    "transformedIdeaTitle": "Pesca de Altura",
+    "transformedIdeaDescription": "Busca el banco de peces girando la Brújula. Cuando encuentres uno, el juego te pedirá un ritmo. Repite el patrón en el Tambor para enganchar al pez. Luego, mantén presionada una tecla del Teclado para subirlo al bote.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Compass.onFish(): PlayRhythm(); IF Drum.matchesRhythm() THEN Hooked=TRUE; IF Hooked AND Keyboard.held() THEN Catch()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Narrador de Historias de Terror",
+    "originalIdeaDescription": "El usuario crea ambiente. Brújula selecciona la escena (Bosque, Casa, Cementerio). Tambor hace pasos o latidos. Teclado hace gritos o viento.",
+    "transformedIdeaTitle": "Director de Cine de Terror",
+    "transformedIdeaDescription": "Crea una escena de miedo. Gira al Este para situarte en el 'Cementerio'. Toca el Tambor lento y constante para simular un corazón latiendo. Cuando llegue el susto, ¡aporrea el Teclado con acordes disonantes!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Scene = Map(Compass.heading); Soundscape.set(Scene); IF Drum.hit() THEN PlayHeartbeat(); IF Keyboard.pressed() THEN PlayScream()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Entrenador de Kung Fu",
+    "originalIdeaDescription": "Defenderse de ataques desde direcciones específicas. Tambor = Bloqueo, Teclado = Golpe.",
+    "transformedIdeaTitle": "Dojo del Dragón",
+    "transformedIdeaDescription": "¡Enemigo a la izquierda! Gira rápido (Compass). Bloquea su patada golpeando el Tambor. Ahora es vulnerable: realiza tu combo final tocando una escala rápida en el Teclado. Gana el cinturón negro.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "EnemyPos = RandomDir(); IF Compass.heading == EnemyPos AND Drum.hit() THEN BlockSuccess; IF BlockSuccess AND Keyboard.scale() THEN WinRound"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Simulador de Tren de Vapor",
+    "originalIdeaDescription": "La brújula es el cambio de vías. El tambor es el carbón (velocidad). El teclado es el silbato.",
+    "transformedIdeaTitle": "Expreso de Medianoche",
+    "transformedIdeaDescription": "Mantén el tren en marcha. Golpea el Tambor constantemente para mantener la presión de vapor. Llega un desvío: gira la Brújula a la derecha para cambiar la vía. ¡Cuidado con el cruce! Toca el silbato (Teclado) para avisar.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Speed = Drum.hitRate; Track = Compass.heading; IF Speed < Threshold THEN Stop(); IF Crossing AND NOT Keyboard.key('Whistle') THEN Crash()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Traductor de Señales Alienígenas",
+    "originalIdeaDescription": "Los aliens envían coordenadas (Brújula) y un código sonoro. El usuario debe replicarlo con Tambor (puntos) y Teclado (rayas).",
+    "transformedIdeaTitle": "Primer Contacto",
+    "transformedIdeaDescription": "Recibimos señal desde la estrella Vega (Norte). Orienta la antena (Compass). El mensaje está en código binario sonoro. Usa el Tambor para los ceros y el Teclado para los unos. Decodifica el mensaje de paz.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Compass.heading == 'Vega': Listen(); IF InputSequence(Drum, Keyboard) == AlienCode THEN DecryptMessage()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Escultor de Sonido 3D",
+    "originalIdeaDescription": "El usuario coloca sonidos en el espacio. Gira, toca tambor para poner una base ahí, gira, toca teclado para poner melodía allá.",
+    "transformedIdeaTitle": "Arquitecto Acústico",
+    "transformedIdeaDescription": "Decora tu habitación invisible. Mira a la pared Norte y golpea el Tambor para colgar un cuadro sonoro rítmico. Mira a la ventana Sur y toca el Teclado para poner cortinas musicales. Gira para escuchar tu obra completa.",
+    "minAge": 13,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "SpaceMap.add(Compass.heading, 'Drum', Drum.pattern); SpaceMap.add(Compass.heading, 'Piano', Keyboard.melody); PlayLoop(SpaceMap)"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Detector de Metales",
+    "originalIdeaDescription": "Barrido de terreno con Brújula. El tambor hace 'bips' lentos. Al encontrar tesoro, el tambor acelera. El teclado excava.",
+    "transformedIdeaTitle": "Buscatesoros en la Playa",
+    "transformedIdeaDescription": "Barre la arena moviendo el dispositivo de izquierda a derecha (Compass). Escucha el Tambor: si hace 'bip... bip...' no hay nada. Si hace 'bipbipbip' rápido, ¡hay oro! Detente y toca el Teclado repetidamente para cavar y sacarlo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Distance = Abs(Compass.heading - TreasureLoc); Drum.playRate(1/Distance); IF Distance < 5 AND Keyboard.mash() THEN Reward()"
+  },
+  {
+    "componentUsed": ["Compass", "Musical Drum", "Musical Keyboard"],
+    "originalIdeaTitle": "Torre de Defensa Giratoria",
+    "originalIdeaDescription": "Enemigos vienen de todos lados. Brújula apunta el cañón. Tambor dispara balas de cañón. Teclado dispara láser rápido.",
+    "transformedIdeaTitle": "Comandante del Fuerte",
+    "transformedIdeaDescription": "Estás rodeado. Gira la torreta (Compass) hacia los zombis. Si son grandes, usa el cañón pesado (Tambor). Si son rápidos y pequeños, usa la ametralladora láser (Teclado). No dejes que lleguen al centro.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Aim = Compass.heading; IF Enemy.type == 'Big' AND Drum.hit() THEN Kill(); ELSE IF Enemy.type == 'Small' AND Keyboard.key() THEN Kill()"
+  }
+]

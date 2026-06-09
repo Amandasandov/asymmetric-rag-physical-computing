@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Vela Virtual de Viento",
+    "originalIdeaDescription": "La lámpara simula una llama naranja. Si el usuario sopla al micrófono (Ruido), la llama parpadea o se apaga. Si inclina el dispositivo, la llama cambia de color (quemadura).",
+    "transformedIdeaTitle": "La Llama Olímpica",
+    "transformedIdeaDescription": "Lleva la antorcha olímpica. La lámpara brilla en naranja. Debes caminar con cuidado manteniéndola recta (Inclinación estable). Si sopla el viento o alguien te sopla (Ruido > 50), la llama se debilita (baja brillo). Si la inclinas mucho, se cae el fuego (Lámpara apagada).",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Flame = 100 - Noise.level; IF Abs(Inclination.roll) > 45 THEN Lamp.off() ELSE Lamp.set(Orange, Flame)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Semáforo de Ruido del Aula",
+    "originalIdeaDescription": "Monitor de ambiente. Si hay mucho ruido, la luz se pone roja. El profesor inclina el dispositivo para resetearlo a verde.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Programad un asistente para la biblioteca. Si todos están callados, la luz es Verde (Paz). Si empiezan a susurrar, se pone Amarilla. Si gritan (Ruido alto), se pone Roja. Para perdonar a la clase, el bibliotecario debe inclinar el dispositivo hacia abajo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 70 THEN Lamp.set(Red); IF Inclination.pitch < -30 THEN Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Dragón Escupefuego",
+    "originalIdeaDescription": "Inclinar el dispositivo para apuntar la cabeza del dragón. Gritar o soplar fuerte para que escupa fuego (lámpara roja parpadeante).",
+    "transformedIdeaTitle": "Entrenamiento de Dragones",
+    "transformedIdeaDescription": "Eres un dragón. Inclina el cuello (dispositivo) para apuntar a los objetivos. Cuando estés listo, ruge fuerte '¡GRAAA!' (Ruido) para lanzar una llamarada. La Lámpara parpadeará en rojo intenso simulando el fuego. Si no ruges, solo sale humo (Luz gris tenue).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Target = Inclination.heading; IF Noise.level > 80 THEN Lamp.strobe(Red) ELSE Lamp.set(Grey)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Silenciosa",
+    "originalIdeaDescription": "Para abrir, hay que inclinar a la izquierda y derecha en secuencia, pero manteniendo silencio absoluto. El ruido activa la alarma (Luz roja).",
+    "transformedIdeaTitle": "El Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Estás robando el museo. Gira el dial de la caja fuerte (inclinando el dispositivo). La Lámpara cambia de color mientras giras (Azul... Verde... ¡Amarillo es el número!). Pero cuidado: si haces el menor ruido (pasos, respiración), la alarma Roja se disparará.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Noise.level > 10 THEN Lamp.flash(Red, Alarm); IF Inclination.roll == SecretNumber THEN Lamp.set(Green)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Poción Mágica Explosiva",
+    "originalIdeaDescription": "Inclinar para verter ingredientes (cambia color de lámpara). Hacer ruido de burbujas para calentar. Si se calienta mucho, explota.",
+    "transformedIdeaTitle": "Clase de Pociones",
+    "transformedIdeaDescription": "Mezcla los ingredientes. Inclina a la izquierda para añadir baba de sapo (Luz Verde). Inclina a la derecha para sangre de dragón (Luz Roja). Ahora, sopla suavemente (Ruido) para calentar el caldero hasta que se ponga Púrpura. ¡Cuidado! Si soplas muy fuerte, explota (Flash Blanco).",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Color = Mix(Inclination.roll); Heat += Noise.level; IF Heat > Max THEN Lamp.flash(White) ELSE Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Mascota Virtual Dormilona",
+    "originalIdeaDescription": "La luz es tenue (Zzz). Se puede mecer (inclinación suave). Si hay ruido fuerte, se despierta (Luz blanca brillante) y se enfada.",
+    "transformedIdeaTitle": "No Despiertes al Bebé",
+    "transformedIdeaDescription": "El bebé duerme (Luz azul tenue). Mécelo suavemente de lado a lado (Inclinación rítmica). Mantén el silencio absoluto. Si alguien grita o aplaude (Ruido alto), el bebé se despierta llorando y la Lámpara se pone Roja parpadeante.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 60 THEN Lamp.strobe(Red); ELSE IF Inclination.rocking() THEN Lamp.breathe(Blue)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Nivel de Burbuja Activado por Voz",
+    "originalIdeaDescription": "Herramienta de construcción. La luz indica si está nivelado (verde). Para 'bloquear' la medida, el usuario grita '¡Marca!'.",
+    "transformedIdeaTitle": "El Constructor Jefe",
+    "transformedIdeaDescription": "Ayuda a construir la pirámide. Pon el dispositivo sobre la piedra. Si está inclinado, la luz es Amarilla. Ajusta hasta que esté plano y la luz sea Verde. Cuando esté perfecto, grita '¡LISTO!' (Noise) para que la luz parpadee confirmando la posición.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Abs(Inclination.pitch) < 5 THEN Lamp.set(Green); IF Lamp.isGreen AND Noise.shout() THEN Lamp.flash(White)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Espada de Energía Sensible",
+    "originalIdeaDescription": "La inclinación cambia el color del cristal. El ruido (zumbido hecho por el usuario) intensifica el brillo de la hoja.",
+    "transformedIdeaTitle": "Caballero Jedi",
+    "transformedIdeaDescription": "Personaliza tu sable. Apunta hacia abajo para color Rojo (Sith), o hacia arriba para Azul (Jedi). Para que la hoja tenga energía, tienes que hacer el sonido 'Vrooom' con la boca. Cuanto más fuerte hagas el ruido, más brillante será la Lámpara.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Color = (Inclination.pitch > 0) ? Blue : Red; Brightness = Noise.level; Lamp.set(Color, Brightness)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Detector de Mentiras",
+    "originalIdeaDescription": "El usuario hace una pregunta. El 'culpable' responde. La inclinación (controlada secretamente) decide el color (Verdad/Mentira) mientras el ruido activa la luz.",
+    "transformedIdeaTitle": "La Máquina de la Verdad",
+    "transformedIdeaDescription": "Interroga al sospechoso. Hazle hablar (Ruido). Tú, como operador, inclinas secretamente el dispositivo: Derecha = Verdad (Verde), Izquierda = Mentira (Rojo). La luz solo se enciende cuando el sospechoso habla alto.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.speechDetected(): IF Inclination.roll > 0 THEN Lamp.set(Green) ELSE Lamp.set(Red)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Luz de Discoteca Interactiva",
+    "originalIdeaDescription": "La inclinación selecciona la paleta de colores. El ruido (música) hace que la lámpara parpadee al ritmo.",
+    "transformedIdeaTitle": "DJ de Luces",
+    "transformedIdeaDescription": "Controla la fiesta. Pon música fuerte. El micrófono captará el ritmo (Noise) y hará parpadear la Lámpara. Tú controlas el ambiente inclinando el dispositivo: hacia adelante para colores fríos (Techno), hacia atrás para colores cálidos (Latino).",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Palette = Map(Inclination.pitch); IF Noise.beatDetected() THEN Lamp.set(Random(Palette))"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Submarino en Alerta Roja",
+    "originalIdeaDescription": "Inclinar para sumergirse (luz azul). Si hay mucho ruido (sonar enemigo o impacto), se activa la alarma roja.",
+    "transformedIdeaTitle": "Capitán de Submarino",
+    "transformedIdeaDescription": "Inmersión. Inclina el dispositivo hacia adelante para bajar a las profundidades (Luz Azul). Navega en silencio. Si golpeas la mesa o gritas (Ruido fuerte = Cargas de profundidad), el submarino entra en modo Emergencia: Luz Roja giratoria.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise.level > 80 THEN Lamp.rotate(Red); ELSE IF Inclination.pitch < -20 THEN Lamp.set(Blue)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Cohete de Despegue",
+    "originalIdeaDescription": "Inclinar para apuntar al cielo. Ruido de cuenta atrás. Al despegar, luz blanca intensa.",
+    "transformedIdeaTitle": "Misión a la Luna",
+    "transformedIdeaDescription": "Coloca el cohete en la rampa (vertical). Inclina para corregir la trayectoria hasta que la luz sea Amarilla (Listo). Haz la cuenta atrás: '3, 2, 1, ¡YA!'. Al detectar el grito final, la Lámpara se vuelve Blanca brillante simulando los motores.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.vertical() THEN Lamp.set(Yellow); IF Lamp.isYellow AND Noise.shout() THEN Lamp.set(White, 100)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Meditación",
+    "originalIdeaDescription": "El usuario debe estar quieto (nivelado) y callado. La lámpara pasa de rojo a azul a medida que se mantiene el estado zen.",
+    "transformedIdeaTitle": "Maestro Zen",
+    "transformedIdeaDescription": "Encuentra la paz. Siéntate con el dispositivo en la mano. Debe estar plano (Inclinación 0) y en silencio total. La Lámpara empezará en Rojo. Si aguantas 10 segundos así, cambiará gradualmente a Violeta y finalmente a Azul Celeste (Nirvana).",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "ZenScore += (IsLevel() AND IsQuiet()) ? 1 : -1; Color = Gradient(Red, Blue, ZenScore); Lamp.set(Color)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Detector de Derrumbes",
+    "originalIdeaDescription": "Para minería. Si la inclinación cambia bruscamente o hay un estruendo, la luz parpadea en modo SOS.",
+    "transformedIdeaTitle": "Seguridad en la Mina",
+    "transformedIdeaDescription": "Eres un minero. Tu casco tiene una luz blanca fija. Si el sensor detecta un cambio brusco de inclinación (caída) O un ruido muy fuerte (explosión/derrumbe), la Lámpara cambia automáticamente a modo S.O.S. para que te encuentren.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Delta(Inclination) > 45 OR Noise.level > 90 THEN Lamp.morse('SOS') ELSE Lamp.set(White)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Linterna Eólica Mágica",
+    "originalIdeaDescription": "Soplar (ruido) carga la linterna (aumenta brillo). Inclinar cambia el color del haz de luz.",
+    "transformedIdeaTitle": "Hechicero de la Luz",
+    "transformedIdeaDescription": "Tu varita necesita energía de viento. Sopla constantemente al micrófono para que la Lámpara brille con fuerza. Mientras soplas, gira la muñeca (inclinación) para cambiar el color del hechizo: Verde para curar, Rojo para atacar.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Brightness = Map(Noise.level); Hue = Map(Inclination.roll); Lamp.setHSV(Hue, 100, Brightness)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Francotirador de Aliento",
+    "originalIdeaDescription": "Inclinar para apuntar (luz tenue). Contener la respiración (silencio) para estabilizar y disparar (luz flash).",
+    "transformedIdeaTitle": "Tiro con Arco de Precisión",
+    "transformedIdeaDescription": "Apunta al blanco inclinando el dispositivo. La luz es tenue. Para tener precisión, debes contener la respiración (Ruido < 5). Si logras apuntar y estar en silencio por 2 segundos, la Lámpara hará un flash Verde indicando un tiro perfecto al centro.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Aimed() AND Noise.level < 5 THEN Timer++; IF Timer > 2s THEN Lamp.flash(Green)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Traductor Universal Alien",
+    "originalIdeaDescription": "Inclinar selecciona el 'idioma' (Color). Hablar (Ruido) hace que la lámpara pulse transmitiendo el mensaje.",
+    "transformedIdeaTitle": "Embajador Galáctico",
+    "transformedIdeaDescription": "Comunícate con los aliens. Inclina hacia la izquierda para idioma Marciano (Luz Roja), derecha para Venusiano (Luz Verde). Habla al micrófono: el dispositivo traducirá tu voz en pulsos de luz rítmicos para que los aliens te entiendan.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lang = (Tilt < 0) ? Red : Green; IF Noise.speaking() THEN Lamp.pulse(Lang, rate=Noise.freq)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Volcán a Punto de Estallar",
+    "originalIdeaDescription": "La inclinación mueve el magma. El ruido aumenta la presión. La luz pasa de naranja a rojo y blanco al estallar.",
+    "transformedIdeaTitle": "Experimento Geológico",
+    "transformedIdeaDescription": "Simula un volcán. Inclina el dispositivo para agitar el magma (Luz Naranja). Haz ruido de fondo 'Grrr' para subir la presión. Si el ruido es muy alto y lo inclinas boca abajo, el volcán entra en erupción (Luz Blanca estroboscópica).",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Pressure = Noise.level; Lamp.color(Gradient(Orange, Red, Pressure)); IF Pressure > 90 THEN Lamp.strobe(White)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "El Mimo Invisible",
+    "originalIdeaDescription": "El usuario actúa. Si se inclina (gestos) está bien. Si hace ruido (habla), pierde (Luz roja).",
+    "transformedIdeaTitle": "Escuela de Mimos",
+    "transformedIdeaDescription": "Estás en una caja invisible. Debes actuar inclinando el dispositivo para simular tocar paredes (Luz Blanca). La regla de oro: ¡Silencio total! Si se te escapa una palabra o risa (Ruido detectado), la Lámpara se pone Roja y pierdes el turno.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Noise.level > 20 THEN Lamp.set(Red) ELSE Lamp.set(White)"
+  },
+  {
+    "componentUsed": ["Inclination", "Lamp", "Noise Level"],
+    "originalIdeaTitle": "Medidor de Entusiasmo de Concierto",
+    "originalIdeaDescription": "El usuario salta (inclinación variable) y grita. La lámpara muestra el nivel de energía del fan.",
+    "transformedIdeaTitle": "Superfan en el Estadio",
+    "transformedIdeaDescription": "Anima a tu equipo. Salta y muévete (cambios de Inclinación) y grita (Ruido). El dispositivo mide tu pasión. Poca energía = Luz Azul. Energía media = Verde. ¡Energía máxima = Luz Multicolor parpadeante!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Energy = Variation(Inclination) + Noise.level; Color = Map(Energy); Lamp.set(Color)"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Farola Urbana Inteligente",
+    "originalIdeaDescription": "Sistema de iluminación para ciudades que ahorra energía. La lámpara se enciende solo cuando el sensor de luz detecta que es de noche. La matriz muestra el estado del sistema (Luna/Sol).",
+    "transformedIdeaTitle": "Ingeniero de Ciudad Sostenible",
+    "transformedIdeaDescription": "Programa el alumbrado público de tu ciudad. Si el sensor de luz detecta oscuridad (nivel < 30), la Lámpara debe encenderse en blanco para iluminar la calle y la Matriz debe mostrar una Luna. Si sale el sol (nivel > 30), todo debe apagarse para ahorrar energía.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 30 THEN Lamp.on(White) AND LED.showIcon('Moon') ELSE Lamp.off() AND LED.showIcon('Sun')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Alarma de Cajón Secreto",
+    "originalIdeaDescription": "Dispositivo de seguridad. Si se coloca en un cajón oscuro y este se abre (entra luz), la lámpara parpadea en rojo y la matriz muestra una señal de peligro.",
+    "transformedIdeaTitle": "La Trampa Anti-Curiosos",
+    "transformedIdeaDescription": "Protege tus tesoros. Esconde el dispositivo en un cajón. Cuando está oscuro, la Matriz muestra un candado cerrado. Si tu hermano abre el cajón y entra la luz, la Lámpara debe parpadear en rojo policial y la Matriz mostrar una calavera.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level > 20 THEN Lamp.strobe(Red) AND LED.showIcon('Skull') ELSE Lamp.off() AND LED.showIcon('Lock')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Mascota Planta Virtual",
+    "originalIdeaDescription": "Una planta en la matriz LED que necesita luz para crecer. La lámpara indica si está recibiendo suficiente 'alimento' (luz).",
+    "transformedIdeaTitle": "Botánico Espacial",
+    "transformedIdeaDescription": "Cultiva una flor alienígena. Acerca el dispositivo a una lámpara. La Matriz muestra la planta creciendo pixel a pixel. La Lámpara del dispositivo brillará en Verde si la luz es suficiente para la fotosíntesis, o en Rojo si la planta tiene hambre de luz.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 70 THEN Growth++ AND Lamp.color(Green); LED.showGrowth(Growth)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Luces Automáticas de Coche",
+    "originalIdeaDescription": "Simulador de coche. Al entrar en un túnel (oscuridad), se encienden los faros (Lámpara) y el tablero (Matriz) indica luces encendidas.",
+    "transformedIdeaTitle": "Piloto de Fórmula 1",
+    "transformedIdeaDescription": "Conduces a toda velocidad. Entras en un túnel oscuro: el sensor de luz detecta la bajada. Automáticamente debes encender los 'faros' (Lámpara Blanca) y mostrar el icono de luces en la Matriz LED. Al salir al sol, apágalas.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 40 THEN Lamp.on(White) AND LED.show('LightsOn') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Receptor de Código Morse Óptico",
+    "originalIdeaDescription": "El usuario envía señales con una linterna al sensor. La matriz muestra la letra decodificada y la lámpara hace un flash de confirmación.",
+    "transformedIdeaTitle": "Telégrafo de Espías",
+    "transformedIdeaDescription": "Comunícate en silencio. Usa una linterna para enviar pulsos de luz al sensor. Corto = Punto, Largo = Raya. La Matriz irá mostrando el código recibido y la Lámpara hará un parpadeo verde cada vez que entienda una letra completa.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Signal = ReadLightPulse(); Letter = DecodeMorse(Signal); LED.show(Letter); Lamp.flash(Green)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Panel Solar Inteligente",
+    "originalIdeaDescription": "Simula la carga de energía. Cuanta más luz recibe, más se llena la barra de carga en la matriz y la lámpara cambia de rojo a verde.",
+    "transformedIdeaTitle": "Estación de Energía Solar",
+    "transformedIdeaDescription": "Eres el ingeniero de energía. Orienta el dispositivo hacia el sol o una bombilla. La Matriz LED mostrará una barra de batería cargándose. Si la carga es baja, la Lámpara es Roja. Si llega al 100%, la Lámpara se pone Verde brillante.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Charge = Map(Light.level); LED.plotBar(Charge); Color = Map(Charge, RedToGreen); Lamp.color(Color)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Bote de Luciérnagas",
+    "originalIdeaDescription": "Simulación de insectos. En la oscuridad, la matriz muestra puntos aleatorios y la lámpara pulsa suavemente. Con luz, se esconden.",
+    "transformedIdeaTitle": "Coleccionista de Magia",
+    "transformedIdeaDescription": "Captura hadas de luz. Ve a un cuarto oscuro. La Lámpara empezará a pulsar suavemente en amarillo y la Matriz mostrará puntitos volando. Si enciendes la luz de la habitación, las hadas se asustan y el dispositivo se apaga.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level < 15 THEN Lamp.breathe(Yellow) AND LED.sparkle() ELSE Lamp.off() AND LED.clear()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Detector de Vampiros",
+    "originalIdeaDescription": "Un dispositivo que detecta si es seguro para un vampiro. Luz alta = Peligro (Lámpara Roja, Calavera). Luz baja = Seguro (Lámpara Verde, Murciélago).",
+    "transformedIdeaTitle": "Asistente de Drácula",
+    "transformedIdeaDescription": "Ayuda al Conde a salir de su ataúd. Chequea el sensor. Si hay luz solar, la Lámpara debe alertar en Rojo y la Matriz mostrar una Calavera. Si está oscuro, la Lámpara se pone Verde y la Matriz muestra un Murciélago feliz.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.level > 50 THEN Lamp.color(Red) AND LED.icon('Skull') ELSE Lamp.color(Green) AND LED.icon('Bat')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Cuarto Oscuro de Fotografía",
+    "originalIdeaDescription": "Simula el revelado. Debe haber luz roja (Lámpara) y oscuridad ambiental. La matriz actúa como temporizador. Si entra luz blanca, la foto se vela.",
+    "transformedIdeaTitle": "Revelado Fotográfico Secreto",
+    "transformedIdeaDescription": "Revela las fotos del espía. La habitación debe estar oscura. La Lámpara del dispositivo se pone Roja (luz de seguridad). La Matriz cuenta atrás el tiempo de revelado. Si alguien enciende la luz blanca (Sensor detecta subida), la Matriz muestra 'ERROR'.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Lamp.color(Red); Timer.start(); IF Light.level > SafeLimit THEN LED.show('Ruined') ELSE LED.show(Timer)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Camaleón de Entorno",
+    "originalIdeaDescription": "El dispositivo intenta igualar el brillo del entorno. La matriz muestra ojos que miran alrededor.",
+    "transformedIdeaTitle": "Robot de Camuflaje",
+    "transformedIdeaDescription": "Tu robot intenta esconderse. Si hay mucha luz en la sala, la Lámpara brilla fuerte para mezclarse. Si hay poca luz, brilla tenue. La Matriz muestra unos ojos que se abren o cierran según la intensidad de la luz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Brightness = Light.level; Lamp.setBrightness(Brightness); EyeSize = Map(Light.level); LED.showEyes(EyeSize)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Faro de Costa Automático",
+    "originalIdeaDescription": "Cuando anochece, la lámpara empieza a rotar (cambia colores simulando giro) y la matriz avisa a los barcos.",
+    "transformedIdeaTitle": "Guardián del Faro",
+    "transformedIdeaDescription": "Cae la noche en el mar. Cuando el sensor baje de cierto nivel, activa el mecanismo. La Lámpara debe hacer un efecto de rotación (cambiando intensidad o color cíclicamente) y la Matriz debe mostrar flechas indicando a los barcos que se alejen.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 40 THEN Lamp.rotateEffect() AND LED.show('Arrow') ELSE Lamp.off()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Juego de Puntería con Linterna",
+    "originalIdeaDescription": "La matriz muestra un objetivo. El usuario debe apuntar una linterna al sensor para alcanzar el nivel de luz 'blanco'. La lámpara indica frío/caliente.",
+    "transformedIdeaTitle": "Tiro al Blanco de Luz",
+    "transformedIdeaDescription": "Acierta la intensidad exacta. La Matriz te dice un número (ej. 80). Debes acercar o alejar tu linterna hasta que el sensor lea 80. La Lámpara te guía: Azul (muy lejos/oscuro), Rojo (te pasaste/muy brillante), Verde (¡Exacto!).",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Diff = Abs(Target - Light.level); Color = Map(Diff); Lamp.color(Color); IF Diff < 5 THEN LED.show('Win')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Bola de Cristal Adivina",
+    "originalIdeaDescription": "Se cubre el sensor (oscuridad) para 'concentrarse'. Al destapar, la lámpara brilla mística y la matriz da una respuesta.",
+    "transformedIdeaTitle": "El Oráculo Mágico",
+    "transformedIdeaDescription": "Haz una pregunta al futuro. Tapa el sensor con las manos para concentrar tu energía mágica (Luz baja). La Lámpara pulsa en morado. Al quitar las manos (Luz alta), la Matriz revela tu destino: 'SÍ', 'NO' o 'QUIZÁS'.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Wait(Light < 10); Lamp.pulse(Purple); Wait(Light > 50); LED.showRandomAnswer()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Criatura de las Profundidades",
+    "originalIdeaDescription": "Un pez abisal que vive en oscuridad. La lámpara es su señuelo. Si hay luz ambiental, se apaga.",
+    "transformedIdeaTitle": "Monstruo Marino Abisal",
+    "transformedIdeaDescription": "Vives en la Fosa de las Marianas. Todo está oscuro. Tu Lámpara azul atrae a las presas. La Matriz muestra tus dientes afilados. Pero si llega un submarino con focos potentes (Luz alta), apaga tu señuelo y cierra la boca (LED apagado) para esconderte.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 5 THEN Lamp.on(Cyan) AND LED.show('Teeth') ELSE Lamp.off() AND LED.clear()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Temporizador de Lavado de Dientes",
+    "originalIdeaDescription": "Se activa al encender la luz del baño (cambio brusco de luz). La lámpara cambia de verde a rojo mientras la matriz cuenta el tiempo.",
+    "transformedIdeaTitle": "Ayudante de Higiene Dental",
+    "transformedIdeaDescription": "Mantén tus dientes limpios. Deja el dispositivo en el baño. Cuando enciendas la luz por la mañana (subida rápida de Luz), el temporizador de 2 minutos comienza. La Matriz muestra una cuenta regresiva y la Lámpara pasa gradualmente de Verde a Rojo cuando acaba el tiempo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.riseDetected() THEN Timer.start(120s); Lamp.gradient(Green, Red, Time); LED.showTime(Time)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Candado de Secuencia de Luz",
+    "originalIdeaDescription": "Para abrir, hay que hacer una secuencia de flashes: 1 flash, esperar, 2 flashes. La matriz muestra el progreso y la lámpara confirma.",
+    "transformedIdeaTitle": "La Bóveda de Luz",
+    "transformedIdeaDescription": "La puerta está cerrada. La Matriz muestra un cerrojo. La llave es la luz. Haz un flash con tu linterna... espera... haz dos flashes rápidos. Si el ritmo es correcto, la Lámpara se pone Verde y la Matriz muestra 'ABIERTO'.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Pattern = RecordLightPulses(); IF Pattern == [1, 2] THEN Lamp.green() AND LED.show('Open') ELSE Lamp.red()"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Simulador de Eclipse",
+    "originalIdeaDescription": "El usuario debe pasar una sombra sobre el sensor lentamente. La lámpara simula la corona solar y la matriz el disco oscureciéndose.",
+    "transformedIdeaTitle": "Astrónomo Aficionado",
+    "transformedIdeaDescription": "Recrea un eclipse total. Apunta el sensor a una luz. Pasa tu mano lentamente para crear sombra. A medida que la luz baja, la Matriz dibuja la luna cubriendo el sol. En la oscuridad total, la Lámpara debe brillar tenue en blanco simulando la corona solar.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Phase = Map(Light.level); LED.drawEclipse(Phase); IF Phase == Total THEN Lamp.on(WhiteDim)"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Linterna de Lectura Adaptativa",
+    "originalIdeaDescription": "Ajusta el color de la lámpara según la oscuridad. Matriz muestra un icono de libro.",
+    "transformedIdeaTitle": "Luz de Lectura Nocturna",
+    "transformedIdeaDescription": "Lee sin cansar la vista. Si la habitación está medio oscura, la Lámpara brilla en blanco frío. Si está muy oscura, cambia a luz ámbar cálida (mejor para dormir). La Matriz muestra un librito feliz.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Light.level < 20 THEN Lamp.color(Amber) ELSE Lamp.color(White); LED.showIcon('Book')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Detector de Amanecer para Campamento",
+    "originalIdeaDescription": "Se cuelga en la tienda de campaña. Cuando sale el sol, la lámpara se enciende suavemente y la matriz da los buenos días.",
+    "transformedIdeaTitle": "Despertador de Camping",
+    "transformedIdeaDescription": "Estás de camping. Programa tu despertar. Cuando el primer rayo de sol toque la tienda (Luz sube gradualmente), la Lámpara debe encenderse en rosa suave simulando el amanecer y la Matriz desplazar el texto 'BUENOS DÍAS'.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Light.trend('Up') AND Light.level > Threshold THEN Lamp.fadeIn(Pink) AND LED.scroll('Buenos Dias')"
+  },
+  {
+    "componentUsed": ["LED Matrix", "Lamp", "Light Intensity"],
+    "originalIdeaTitle": "Medidor de Sombra de Árbol",
+    "originalIdeaDescription": "Ayuda a encontrar el mejor lugar para plantar. Mide la luz acumulada. La matriz muestra un gráfico y la lámpara indica si es apto.",
+    "transformedIdeaTitle": "Buscador de Sombra Perfecta",
+    "transformedIdeaDescription": "¿Dónde poner la hamaca? Camina por el jardín. El sensor mide la intensidad del sol. La Matriz muestra una barra de nivel. Si la luz es baja (buena sombra), la Lámpara se pone Azul (Fresco). Si es alta (mucho sol), se pone Roja (Calor).",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Bar = Map(Light.level); LED.plotBar(Bar); IF Light.level < 40 THEN Lamp.blue() ELSE Lamp.red()"
+  }
+]

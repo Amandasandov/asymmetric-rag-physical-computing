@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Pasos Sigilosos con Detección Acústica",
+    "originalIdeaDescription": "Un sistema que utiliza el acelerómetro para detectar cuando el usuario camina y reproduce un sonido de tambor suave por cada paso. Sin embargo, el micrófono monitorea el ruido ambiental; si el usuario hace ruido al caminar o habla, se dispara una alarma de percusión fuerte.",
+    "transformedIdeaTitle": "Entrenamiento Ninja: El Pasillo Silencioso",
+    "transformedIdeaDescription": "¡Conviértete en un ninja! Programa tu dispositivo para que detecte tus pasos al moverte. Cada paso debe sonar como un golpe suave de tambor. Pero cuidado, si el sensor de sonido detecta que tu respiración o pisadas son muy fuertes, ¡sonará la alarma y los guardias te atraparán!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake detected THEN { IF NoiseLevel < 20 THEN MusicalDrum.play('LowTom') ELSE MusicalDrum.play('CrashCymbal') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Batería de Aire Controlada por Voz",
+    "originalIdeaDescription": "Una aplicación de instrumento musical virtual donde agitar el dispositivo actúa como la baqueta golpeando el tambor. La intensidad o el volumen del golpe del tambor es modulado dinámicamente por el nivel de ruido (grito o canto) que el usuario emite simultáneamente.",
+    "transformedIdeaTitle": "Batería Aérea Biónica",
+    "transformedIdeaDescription": "Crea tu propio instrumento invisible. Programa el acelerómetro para que, al agitar el móvil en el aire, suene la batería. Añade un truco especial: cuanto más fuerte grites '¡ROCK!', más fuerte sonará el tambor. ¡Es hora de un concierto en tu habitación!",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.acceleration > threshold THEN { volume = map(NoiseLevel.value); MusicalDrum.play('Snare', volume) }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Terremotos con Alarma Sonora Variable",
+    "originalIdeaDescription": "El dispositivo se coloca sobre una superficie plana. Si detecta movimiento (vibración), activa una secuencia de tambores de advertencia. El nivel de ruido ambiental se utiliza para calibrar la sensibilidad o para detener la alarma si hay silencio total después del evento.",
+    "transformedIdeaTitle": "Sismógrafo Musical",
+    "transformedIdeaDescription": "Construye una estación de detección sísmica. Si la mesa se mueve, tu código debe disparar un redoble de tambores como alerta. Para apagar la alarma, todos en la clase deben quedarse completamente en silencio (nivel de ruido 0) y el movimiento debe detenerse.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.magnitude > 1.5 THEN MusicalDrum.loop('Roll'); IF NoiseLevel < 5 AND Motion.magnitude < 0.1 THEN MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mezclador de Ritmos por Agitación y Aplausos",
+    "originalIdeaDescription": "Una herramienta de DJ donde inclinar el dispositivo hacia diferentes ejes (X, Y) selecciona diferentes tipos de tambores, y un pico repentino en el nivel de ruido (como un aplauso) activa el sonido seleccionado.",
+    "transformedIdeaTitle": "DJ Gestual: El Mago del Ritmo",
+    "transformedIdeaDescription": "Eres el DJ del futuro. Programa tu app para que al inclinar el móvil a la izquierda elijas el bombo, y a la derecha la caja. Pero para que suene, ¡tienes que aplaudir! Combina inclinación y aplausos para crear el beat perfecto.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > clapThreshold THEN { IF Motion.tiltX < -10 THEN MusicalDrum.play('Kick') ELSE IF Motion.tiltX > 10 THEN MusicalDrum.play('Snare') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Reactiva al Miedo",
+    "originalIdeaDescription": "Simulación de una criatura en un huevo. El movimiento suave arrulla a la criatura (sonidos suaves de percusión). Los ruidos fuertes externos asustan a la criatura, causando que el dispositivo vibre o reproduzca sonidos de tambor rápidos y erráticos.",
+    "transformedIdeaTitle": "Huevo de Dragón Dormilón",
+    "transformedIdeaDescription": "Estás cuidando un huevo de dragón. Si lo meces suavemente (movimiento), escucharás los latidos de su corazón (bombo suave). Pero cuidado, si hay mucho ruido en el salón de clases, el dragón se asustará y su corazón latirá muy rápido (redoble rápido).",
+    "minAge": 7,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 60 THEN MusicalDrum.play('FastBeat') ELSE IF Motion.isShaking(gentle) THEN MusicalDrum.play('Heartbeat')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Sentadillas con Animación de Público",
+    "originalIdeaDescription": "Dispositivo montado en el cuerpo que detecta el movimiento vertical (eje Y) para contar repeticiones. Cada repetición exitosa suena un tambor. El micrófono detecta si el usuario está resoplando o gritando por esfuerzo para cambiar el ritmo de ánimo.",
+    "transformedIdeaTitle": "Entrenador Personal Robótico",
+    "transformedIdeaDescription": "¡A ponerse en forma! Programa tu dispositivo para contar tus sentadillas. Al bajar y subir (eje Y), suena un platillo. Si el sensor de ruido detecta que estás cansado (respiración fuerte), cambiará el ritmo a una marcha militar para motivarte.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Motion.accelY change detected THEN { count++; MusicalDrum.play('HiHat'); IF NoiseLevel > high THEN MusicalDrum.play('March') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Estatua Musical Inversa",
+    "originalIdeaDescription": "El juego reproduce un ritmo de batería constante. El jugador debe bailar (detectado por Motion). Si la música se detiene, el jugador debe congelarse. El micrófono penaliza si el jugador se ríe o habla durante la fase de congelación.",
+    "transformedIdeaTitle": "Estatuas Congeladas: Edición Espía",
+    "transformedIdeaDescription": "Baila mientras suene el tambor. Cuando el ritmo pare, ¡congélate! Tu código vigilará dos cosas: que no te muevas (sensor de movimiento) y que no te rías (sensor de ruido). Si fallas en cualquiera de las dos, ¡pierdes la ronda!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE gameActive: { IF drumPlaying IS false AND (Motion.movement > 0 OR NoiseLevel > 10) THEN gameOver() }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Tormenta Interactivo",
+    "originalIdeaDescription": "Usa el sensor de movimiento para simular el viento (agitar el dispositivo) y el micrófono para detectar soplidos. El movimiento genera sonidos de lluvia (tambores ligeros) y soplar fuerte en el micrófono activa truenos (tambores graves).",
+    "transformedIdeaTitle": "El Dios de la Tormenta",
+    "transformedIdeaDescription": "Controla el clima con tus manos. Agita el móvil suavemente para crear lluvia (sonidos de hi-hat). Para invocar un trueno poderoso (bombo fuerte), tendrás que soplar o rugir fuerte al micrófono. ¡Crea tu propia tormenta!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.shake THEN MusicalDrum.play('HiHat'); IF NoiseLevel > triggerPoint THEN MusicalDrum.play('BassDrum')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja Fuerte con Combinación Rítmica",
+    "originalIdeaDescription": "Para abrir una cerradura digital, el usuario debe rotar el dispositivo a un ángulo específico (Motion) y luego hacer un sonido corto (Noise) para 'confirmar' el número. Un sonido de tambor indica si la combinación es correcta o incorrecta.",
+    "transformedIdeaTitle": "El Ladrón de Cajas Fuertes",
+    "transformedIdeaDescription": "Diseña un mecanismo de seguridad. Gira el dispositivo como si fuera el dial de una caja fuerte. Cuando creas que tienes el ángulo correcto, chasquea los dedos (ruido) para probar. Si es correcto, escucharás un 'clic' (tambor), si no, ¡una alarma!",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > clickThreshold THEN { IF Motion.tiltX == secretCode THEN MusicalDrum.play('Click') ELSE MusicalDrum.play('Alarm') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Varita Mágica de Hechizos Sonoros",
+    "originalIdeaDescription": "El usuario realiza un patrón de movimiento específico (círculo o estocada). Al finalizar el movimiento, debe pronunciar una palabra mágica (Noise). Si ambos coinciden, se ejecuta un efecto de sonido de percusión mágica.",
+    "transformedIdeaTitle": "Academia de Magia: Varitas Arítmicas",
+    "transformedIdeaDescription": "Aprende a lanzar hechizos. Programa tu varita (móvil) para que reconozca un movimiento de 'latigazo'. Justo al terminar el movimiento, grita '¡Abracadabra!'. Si la coordinación es perfecta, sonará un efecto mágico de platillos.",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.gesture('swipe') AND NoiseLevel > magicWordThreshold THEN MusicalDrum.play('Chimes')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Asistente de Beatbox con Loop",
+    "originalIdeaDescription": "El usuario hace beatbox. El micrófono detecta los picos de volumen para marcar el tempo. El sensor de movimiento permite añadir capas de percusión (agitar para maracas) sobre el ritmo detectado por la voz.",
+    "transformedIdeaTitle": "La Banda de un Solo Hombre",
+    "transformedIdeaDescription": "Haz beatbox con tu boca y deja que el código te acompañe. El micrófono detectará tu ritmo base. Mientras haces beatbox, agita el móvil para añadir maracas o panderetas automáticamente sincronizadas con tus golpes de voz.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel.peak detected THEN setTempo(); IF Motion.shake THEN MusicalDrum.play('Maracas', tempo)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Escape de la Cueva de Murciélagos",
+    "originalIdeaDescription": "El jugador camina (Motion). El ruido ambiental representa murciélagos. Si hay mucho ruido, los murciélagos atacan (tambores rápidos). El jugador debe quedarse quieto y en silencio para que los tambores se detengan y pueda seguir avanzando.",
+    "transformedIdeaTitle": "Escape de la Cueva Oscura",
+    "transformedIdeaDescription": "Estás atrapado en una cueva llena de murciélagos ciegos pero con súper oído. Camina moviendo el móvil. Si haces ruido (hablar o pisar fuerte), los murciélagos despertarán (tambores de pánico). ¡Debes detenerte y guardar silencio absoluto para calmarlos!",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.active THEN score++; IF NoiseLevel > limit THEN { MusicalDrum.play('Panic'); score = 0; wait(silence) }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Medidor de Entusiasmo del Público",
+    "originalIdeaDescription": "Utilizado en eventos deportivos. Detecta cuánta gente está saltando (Motion, si se tiene en el bolsillo o mano) y cuánto gritan (Noise). Si ambos valores superan un umbral, se dispara un ritmo de celebración de estadio.",
+    "transformedIdeaTitle": "El Hincha Definitivo",
+    "transformedIdeaDescription": "Crea el dispositivo perfecto para el estadio. Tienes que saltar (movimiento vertical) y animar a tu equipo (ruido) al mismo tiempo. Si alcanzas el nivel máximo de fanatismo, tu app tocará el ritmo de 'We Will Rock You'.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.accelY > jumpLimit AND NoiseLevel > shoutLimit THEN MusicalDrum.play('StadiumBeat')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Controlador de Tráfico Aéreo Simulado",
+    "originalIdeaDescription": "El usuario extiende los brazos y se inclina como un avión (Motion). El ruido del motor se simula con la voz (Noise). Si el 'motor' se apaga (silencio) o el avión se inclina demasiado (caída), suena un tambor de impacto.",
+    "transformedIdeaTitle": "Piloto de Pruebas",
+    "transformedIdeaDescription": "Pilota tu avión inclinando el dispositivo. Debes hacer el sonido del motor con tu boca ('Brrrr'). Si dejas de hacer el sonido o inclinas demasiado el avión, el sistema detectará un fallo de motor y sonará un golpe de choque.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.tilt > 45 OR NoiseLevel < engineThreshold THEN MusicalDrum.play('Crash') ELSE maintainFlight()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Alarma de Bebé con Canción de Cuna Automática",
+    "originalIdeaDescription": "Detecta si una cuna se mueve (Motion) o si hay llanto (Noise Level). Si se detectan ambos (bebé despierto y llorando), reproduce un ritmo de tambor muy suave y rítmico para intentar calmarlo (efecto ruido blanco/latido).",
+    "transformedIdeaTitle": "La Niñera Inteligente",
+    "transformedIdeaDescription": "Diseña una cuna inteligente. Si el bebé se mueve mucho y llora fuerte (ruido alto), tu programa debe activar automáticamente un sonido relajante de tambor que imite el latido del corazón para volver a dormirlo.",
+    "minAge": 11,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shake AND NoiseLevel > cryLimit THEN MusicalDrum.loop('Heartbeat', lowVolume)"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Pesca Virtual",
+    "originalIdeaDescription": "El usuario hace un movimiento de lanzamiento (Motion). Espera en silencio. Un sonido de tambor indica que un pez picó. El usuario debe 'tirar' (Motion hacia atrás) mientras hace ruido de esfuerzo (Noise) para sacarlo.",
+    "transformedIdeaTitle": "Torneo de Pesca Digital",
+    "transformedIdeaDescription": "Lanza el anzuelo moviendo el móvil. Espera en silencio... ¡PUM! (Suena el tambor, picaron). Ahora tira hacia atrás rápido y haz ruido de fuerza con la voz para sacar al pez gigante del agua.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF fishBites (Random) THEN MusicalDrum.play('Hit'); IF Motion.pullBack AND NoiseLevel > effort THEN catchFish()"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Constructor de Edificios por Comandos",
+    "originalIdeaDescription": "Simula martillar (movimiento de golpeo vertical). Cada golpe suena un tambor. El usuario debe gritar '¡CLAVO!' o '¡TABLA!' (Noise) para cambiar el tipo de sonido de percusión (metálico vs madera).",
+    "transformedIdeaTitle": "Constructor Robótico",
+    "transformedIdeaDescription": "Convierte tu móvil en un martillo inteligente. Haz el gesto de martillar para que suene. Si hay silencio, suena como madera. Si gritas mientras martillas, sonará como si golpearas metal. ¡Construye una estructura rítmica!",
+    "minAge": 8,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Motion.impact THEN { IF NoiseLevel > high THEN MusicalDrum.play('Cowbell') ELSE MusicalDrum.play('WoodBlock') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas Paranormal",
+    "originalIdeaDescription": "Un 'radar' que escanea el entorno. Si el usuario camina despacio (Motion bajo) y hay silencio absoluto, ocurren 'eventos paranormales' aleatorios (golpes de tambor repentinos) para asustar al usuario.",
+    "transformedIdeaTitle": "Cazafantasmas: El Radar",
+    "transformedIdeaDescription": "Crea un detector de presencias. Tu programa debe esperar a que camines muy despacio y haya silencio total. En ese momento, generará sonidos de golpes misteriosos (tambores) al azar para indicar que hay un 'fantasma' cerca.",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.walking AND NoiseLevel < silenceLimit THEN { IF random(1,100) > 90 THEN MusicalDrum.play('SpookyKnock') }"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mezcladora de Cócteles Musical",
+    "originalIdeaDescription": "Simula una coctelera. El usuario debe agitar el dispositivo (Motion). El sonido de los hielos es representado por tambores agudos. Si el usuario agita demasiado fuerte y hay mucho ruido ambiente, suena un platillo 'roto' (copa rota).",
+    "transformedIdeaTitle": "Barman Musical",
+    "transformedIdeaDescription": "Prepara un batido musical. Agita el móvil como una coctelera para escuchar el ritmo. Pero cuidado, si agitas demasiado fuerte mientras hay ruido alrededor, ¡romperás el vaso! (sonido de platillo crash). Mantén el ritmo suave.",
+    "minAge": 9,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Motion.shakeIntensity > max AND NoiseLevel > 50 THEN MusicalDrum.play('Crash') ELSE IF Motion.shake THEN MusicalDrum.play('Shaker')"
+  },
+  {
+    "componentUsed": [
+      "Motion",
+      "Musical Drum",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Duelo del Viejo Oeste",
+    "originalIdeaDescription": "Dos usuarios se paran espalda con espalda. Caminan (Motion). Al escuchar un sonido aleatorio, deben girarse y 'disparar' (Motion brusco + Sonido 'Bang' detectado por Noise). El primero en hacerlo activa el tambor de victoria.",
+    "transformedIdeaTitle": "Duelo de Vaqueros Rápido",
+    "transformedIdeaDescription": "Pon el móvil en tu bolsillo. Camina 3 pasos. Cuando tu compañero grite '¡YA!' (sensor de ruido), desenfunda rápido el móvil y apúntalo al frente. El código medirá tus reflejos y tocará una fanfarria si fuiste lo bastante rápido.",
+    "minAge": 10,
+    "maxAge": 15,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF NoiseLevel > signalTrigger THEN { startTimer(); IF Motion.orientationChange THEN stopTimer() AND MusicalDrum.play('Fanfare') }"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Controlador de Ritmo Básico para Batería",
+    "originalIdeaDescription": "Un sistema simple donde al activar el interruptor se inicia un bucle de batería básico, y al desactivarlo se detiene el sonido, permitiendo al usuario controlar cuándo suena la música.",
+    "transformedIdeaTitle": "La Fiesta del Robot DJ",
+    "transformedIdeaDescription": "¡Eres el DJ de una fiesta de robots! Debes programar el sistema de sonido principal. Cuando el 'Interruptor Maestro' esté encendido, el robot debe tocar un ritmo de baile constante (bucle de bombo y caja) para que todos bailen. Si apagas el interruptor, la música debe parar inmediatamente para que los robots descansen.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('RockBeat') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Código Morse Percusivo",
+    "originalIdeaDescription": "Utilizar el interruptor como un manipulador telegráfico. Cada vez que se presiona el interruptor, suena un golpe seco de caja, permitiendo enviar mensajes en clave morse auditivo.",
+    "transformedIdeaTitle": "El Telégrafo Espía de la Jungla",
+    "transformedIdeaDescription": "Estás enviando mensajes secretos a través de la densa jungla. Configura el sistema para que cada vez que presiones el interruptor, suene un golpe fuerte de tambor (Caja). Usa pulsaciones cortas y largas para crear tu propio código secreto y comunicarte con la base aliada.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isPressed() THEN MusicalDrum.play('Snare') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Alarma de Despertador Rítmica",
+    "originalIdeaDescription": "Un dispositivo que reproduce un ritmo de batería fuerte y rápido de manera continua hasta que el usuario activa el interruptor para apagarlo, simulando un reloj despertador.",
+    "transformedIdeaTitle": "¡Despierta al Oso Dormilón!",
+    "transformedIdeaDescription": "Un oso está hibernando demasiado y necesita despertar. Crea un programa donde una batería ruidosa esté sonando en bucle infinito. El desafío es configurar el interruptor como el 'Botón de Snooze': solo cuando el interruptor se active, el ruido de la batería se detendrá y el oso podrá levantarse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.stop() ELSE MusicalDrum.playLoop('AlarmBeat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Metrónomo de Entrenamiento Musical",
+    "originalIdeaDescription": "Herramienta para músicos donde el interruptor activa un sonido de 'hi-hat' cerrado que se repite a un intervalo de tiempo regular para marcar el tempo.",
+    "transformedIdeaTitle": "El Corazón del Cyborg",
+    "transformedIdeaDescription": "Necesitamos calibrar el corazón de un nuevo Cyborg. Programa el sistema para que, al encender el interruptor de energía, el corazón (representado por un sonido de 'Hi-Hat' o 'Rimshot') lata a un ritmo constante y perfecto. Esto ayudará al Cyborg a mantener sus funciones vitales sincronizadas.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() { MusicalDrum.play('HiHat'); wait(1000ms); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Timbre de Puerta con Redoble",
+    "originalIdeaDescription": "Al activar el interruptor, se reproduce un efecto de sonido de redoble de tambores seguido de un platillo, funcionando como un timbre de puerta dramático.",
+    "transformedIdeaTitle": "Entrada Triunfal al Castillo",
+    "transformedIdeaDescription": "¡El Rey ha llegado! Diseña un timbre especial para la puerta del castillo. Cuando los visitantes presionen el interruptor, no debe sonar un simple 'ding-dong', sino un majestuoso redoble de tambores que anuncie su llegada con estilo.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.wasPressed() THEN MusicalDrum.play('DrumRoll')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Generador de Truenos y Tormentas",
+    "originalIdeaDescription": "Uso del interruptor para disparar un sonido de platillo crash o un tom grave con reverberación, simulando el sonido de un trueno en una obra de teatro.",
+    "transformedIdeaTitle": "El Mago del Clima",
+    "transformedIdeaDescription": "Eres el encargado de los efectos especiales en una obra escolar sobre una tormenta. Programa el interruptor para que, en el momento exacto en que el villano levante su vara, tú actives el interruptor y suene un estruendoso 'Crash' de platillos simulando un trueno aterrador.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.play('CrashCymbal')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Monitor de Latidos Cardíacos",
+    "originalIdeaDescription": "El sistema reproduce un sonido de bombo (kick) lento y profundo repetitivamente cuando el interruptor está encendido, imitando un latido del corazón.",
+    "transformedIdeaTitle": "Detector de Vida Alienígena",
+    "transformedIdeaDescription": "Has encontrado un huevo alienígena gigante. Usa el interruptor para activar el escáner de vida. Si el interruptor está encendido, el sistema debe reproducir un sonido de bombo profundo y lento ('Thump... Thump...') para indicar que la criatura dentro está viva y durmiendo.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playPattern('Heartbeat') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Líder de Banda de Marcha",
+    "originalIdeaDescription": "Al encender el interruptor, la batería comienza a reproducir un ritmo de marcha militar constante con énfasis en la caja.",
+    "transformedIdeaTitle": "Desfile de los Soldaditos de Juguete",
+    "transformedIdeaDescription": "¡Los soldaditos de juguete necesitan marchar en orden! Tú eres el capitán. Configura el interruptor para que, al activarlo, comience a sonar un ritmo de marcha militar. Los soldados solo marcharán mientras escuchen el tambor; si apagas el interruptor, deben detenerse.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('MarchingSnare') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Juego de las Estatuas Musicales",
+    "originalIdeaDescription": "Un juego donde la música suena mientras el interruptor está en una posición, y al cambiarlo, la música para abruptamente, indicando a los jugadores que se congelen.",
+    "transformedIdeaTitle": "El Árbitro de Congelados",
+    "transformedIdeaDescription": "Vamos a crear el juego de 'Congelados' automatizado. Programa la batería para tocar un ritmo funky mientras el interruptor esté en 'ON'. Tu tarea es apagar el interruptor aleatoriamente para detener la música. Quien se mueva cuando el tambor no suene, ¡pierde!",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('FunkyBeat') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cambio de Velocidad de Ritmo",
+    "originalIdeaDescription": "El interruptor alterna entre dos estados: encendido reproduce un ritmo rápido, apagado reproduce un ritmo lento.",
+    "transformedIdeaTitle": "Acelerador de Tren a Vapor",
+    "transformedIdeaDescription": "Eres el maquinista de un tren antiguo. El interruptor es tu palanca de velocidad. Si el interruptor está apagado, el tren hace un sonido rítmico lento (chug... chug...). Si enciendes el interruptor, el tren debe acelerar y el ritmo de la batería debe volverse mucho más rápido.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.setTempo(120) ELSE MusicalDrum.setTempo(60); MusicalDrum.playLoop('TrainBeat')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Selector de Kit de Batería",
+    "originalIdeaDescription": "Usar el interruptor para cambiar el tipo de sonido que se reproduce. Por ejemplo, cambiar de batería acústica a batería electrónica.",
+    "transformedIdeaTitle": "Batalla de Bandas: Rock vs. Techno",
+    "transformedIdeaDescription": "Estás diseñando un escenario inteligente. Cuando el interruptor está apagado, el escenario está configurado para una banda de Rock (suenan tambores acústicos). Cuando enciendes el interruptor, el escenario se transforma para una fiesta Techno (suenan tambores electrónicos sintéticos). ¡Cambia entre estilos!",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.setKit('Electronic') ELSE MusicalDrum.setKit('Acoustic'); MusicalDrum.playLoop('Basic')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Efecto de Sonido Cómico",
+    "originalIdeaDescription": "El interruptor activa un sonido de cencerro (cowbell) o un sonido gracioso de percusión para acentuar chistes.",
+    "transformedIdeaTitle": "La Máquina de Comedia",
+    "transformedIdeaDescription": "Ayuda a un payaso a mejorar su acto. Programa el interruptor para que funcione como un detonador de risas. Cada vez que el payaso termine un chiste y presione el interruptor, debe sonar un 'Cencerro' o un efecto de sonido gracioso para que el público sepa cuándo reír.",
+    "minAge": 7,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.wasPressed() THEN MusicalDrum.play('Cowbell')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Cuenta Regresiva de Lanzamiento",
+    "originalIdeaDescription": "El interruptor inicia una secuencia de golpes de aro (rimshots) con un segundo de diferencia, simulando una cuenta regresiva.",
+    "transformedIdeaTitle": "Despegue Espacial en T-Menos 10",
+    "transformedIdeaDescription": "El cohete está listo en la plataforma. Al activar el interruptor de 'Inicio de Secuencia', debes programar la batería para que toque un golpe seco (Rimshot) cada segundo, simulando los últimos momentos antes del despegue. ¡Haz que suene emocionante!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.wasPressed() THEN REPEAT 10 times { MusicalDrum.play('Rimshot'); wait(1s); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Sistema de Seguridad Auditiva",
+    "originalIdeaDescription": "Si el interruptor se activa (simulando una puerta abierta), suena una repetición rápida y molesta de caja y platillos como alarma.",
+    "transformedIdeaTitle": "Trampa para Ladrones de Galletas",
+    "transformedIdeaDescription": "Protege el tarro de galletas. Coloca el interruptor de manera que se active si alguien abre la tapa. Si el interruptor pasa a 'ON', tu programa debe disparar una alarma de batería frenética y ruidosa para asustar al ladrón y alertarte.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('FastAlarm') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Simulador de Lluvia",
+    "originalIdeaDescription": "El interruptor activa un sonido aleatorio y suave de toms y hi-hats para imitar el sonido de la lluvia cayendo sobre un techo.",
+    "transformedIdeaTitle": "Noche de Lluvia en la Cabaña",
+    "transformedIdeaDescription": "Crea una atmósfera relajante. Cuando enciendas el interruptor, el sistema debe reproducir sonidos suaves y aleatorios de percusión (como golpecitos en los toms) que suenen como gotas de lluvia cayendo sobre el techo de zinc de una cabaña.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 2,
+    "algorithmUsed": "WHILE Switch.isOn() { MusicalDrum.playRandomNote('SoftToms'); wait(randomTime); }"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Martillo Neumático de Construcción",
+    "originalIdeaDescription": "El interruptor activa un redoble de caja muy rápido y repetitivo, simulando el ruido de maquinaria de construcción.",
+    "transformedIdeaTitle": "Obras en la Ciudad",
+    "transformedIdeaDescription": "Estamos construyendo un rascacielos. Necesitamos simular el sonido de las herramientas. Configura el interruptor para que, mientras se mantenga presionado o encendido, la batería reproduzca un redoble de caja ultra-rápido que suene como un martillo neumático rompiendo el pavimento.",
+    "minAge": 8,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('JackhammerRoll') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Galope de Caballos",
+    "originalIdeaDescription": "El interruptor inicia un patrón rítmico específico que imita el galope de un caballo usando toms y caja.",
+    "transformedIdeaTitle": "Carrera de Caballos del Oeste",
+    "transformedIdeaDescription": "¡Yii-ha! Eres el jinete en una carrera del viejo oeste. Cuando bajes la palanca (interruptor), tu caballo debe salir disparado. Programa un ritmo de 'galope' (ta-ca-tá, ta-ca-tá) usando los tambores para simular el sonido de los cascos golpeando la tierra a toda velocidad.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('GallopRhythm') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Medidor de Aplausos (Simulado)",
+    "originalIdeaDescription": "El interruptor actúa como un botón de 'aplauso'. Al presionarlo, suena un efecto de múltiples golpes de caja desordenados simulando aplausos.",
+    "transformedIdeaTitle": "Público Virtual para Talentos",
+    "transformedIdeaDescription": "Tu amigo está cantando y no hay público. ¡Crea un público virtual! Configura el interruptor para que cada vez que lo presiones, suene una ráfaga de golpes de tambor que suenen como si muchas personas estuvieran aplaudiendo al mismo tiempo.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Switch.wasPressed() THEN MusicalDrum.play('ApplauseEffect')"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Acompañamiento de Jazz (Escobillas)",
+    "originalIdeaDescription": "El interruptor activa un sonido suave y continuo de escobillas sobre la caja, típico del jazz, para música de fondo.",
+    "transformedIdeaTitle": "Café Jazz Relajante",
+    "transformedIdeaDescription": "Eres el encargado del ambiente en una cafetería elegante. Los clientes quieren tranquilidad. Programa el interruptor para activar el modo 'Jazz'. Al encenderlo, la batería debe tocar un ritmo muy suave y arrastrado (usando sonidos de escobillas) para no molestar a los que leen.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('JazzBrushes') ELSE MusicalDrum.stop()"
+  },
+  {
+    "componentUsed": [
+      "Musical Drum",
+      "Switch"
+    ],
+    "originalIdeaTitle": "Práctica de Polirritmia Simple",
+    "originalIdeaDescription": "El interruptor añade una capa extra de sonido (ej. hi-hats a contratiempo) sobre un ritmo base que ya está sonando o que inicia el interruptor.",
+    "transformedIdeaTitle": "El Baterista de Cuatro Brazos",
+    "transformedIdeaDescription": "Imagina que eres un alienígena con cuatro brazos tocando la batería. Programa un ritmo base de bombo. Cuando actives el interruptor, tus 'otros dos brazos' deben entrar en acción añadiendo platillos rápidos al ritmo. Apaga el interruptor para volver al ritmo simple.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Switch.isOn() THEN MusicalDrum.playLoop('ComplexBeat') ELSE MusicalDrum.playLoop('SimpleBeat')"
+  }
+]

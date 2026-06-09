@@ -1,0 +1,302 @@
+[
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Nave Espacial Controlada por Voz",
+    "originalIdeaDescription": "Un juego arcade simple donde el usuario inclina el dispositivo para mover una nave espacial lateralmente en la matriz LED. Para disparar a los enemigos que caen, el usuario debe hacer un sonido fuerte o gritar '¡Fuego!', lo que activa un proyectil en la pantalla.",
+    "transformedIdeaTitle": "Defensores de la Galaxia: El Piloto",
+    "transformedIdeaDescription": "¡Eres el piloto de la última nave estelar! Usa la inclinación de tu tableta como el volante de la nave para esquivar asteroides. Cuando veas un enemigo bloqueando el camino, da una palmada fuerte para activar los láseres y despejar el camino. ¿Podrás sobrevivir al cinturón de asteroides?",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.X changes THEN Move_Ship(); IF NoiseLevel > 80 THEN Shoot_Laser()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Monitor de Silencio de Biblioteca",
+    "originalIdeaDescription": "Un dispositivo para mantener el orden. La matriz muestra una cara feliz si el ruido es bajo. Si el nivel de ruido supera un umbral, muestra una cara enojada. El dispositivo debe estar colocado plano (inclinación estable); si se mueve, se reinicia el sistema.",
+    "transformedIdeaTitle": "El Guardián del Silencio",
+    "transformedIdeaDescription": "Crea un guardián digital para tu fuerte de lectura. Mientras todos estén callados, el guardián sonríe en la pantalla. Si alguien hace ruido, ¡se enfada! Además, si alguien intenta mover o robar el guardián (detectando la inclinación), este parpadeará en alerta.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF NoiseLevel > 50 THEN Matrix.show('Angry') ELSE Matrix.show('Happy'); IF Inclination.isMoved THEN Matrix.blink()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Vela Virtual Interactiva",
+    "originalIdeaDescription": "La matriz LED muestra una llama oscilante. La inclinación del dispositivo hace que la llama se mueva hacia la izquierda o derecha simulando física. Si el sensor de ruido detecta un soplido fuerte (ruido alto y constante), la llama se apaga.",
+    "transformedIdeaTitle": "La Llama Eterna",
+    "transformedIdeaDescription": "Programa una vela mágica que nunca se derrite. Inclina tu dispositivo para ver cómo la llama reacciona a la 'gravedad'. Para apagarla, tendrás que soplar muy fuerte cerca del micrófono. ¡Perfecto para conciertos virtuales o historias de miedo!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Matrix.drawFlame(Inclination.X); IF NoiseLevel > 90 THEN Matrix.clear()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Laberinto con Trampa de Eco",
+    "originalIdeaDescription": "Un juego clásico de laberinto donde un punto (el jugador) se mueve por la matriz inclinando el dispositivo. La novedad es que si el jugador hace demasiado ruido, las paredes del laberinto cambian o el jugador es enviado al inicio debido a un 'derrumbe'.",
+    "transformedIdeaTitle": "Escape de la Cueva Inestable",
+    "transformedIdeaDescription": "Estás atrapado en una cueva muy frágil. Guía a tu personaje hacia la salida inclinando el tablero con mucho cuidado. ¡Pero shhh! Si hablas o gritas, las vibraciones causarán un derrumbe y tendrás que empezar de nuevo desde el principio.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Move_Player(Inclination.X, Inclination.Y); IF NoiseLevel > 40 THEN Restart_Level()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mascota Virtual Eclosionadora",
+    "originalIdeaDescription": "Se muestra un huevo en la matriz. El usuario debe mantener el huevo caliente (inclinación estable en cierto rango) y cantarle suavemente (nivel de ruido medio) para que la barra de progreso avance y el huevo eclosione revelando una criatura.",
+    "transformedIdeaTitle": "El Huevo de Dragón Misterioso",
+    "transformedIdeaDescription": "¡Has encontrado un huevo de dragón! Para que nazca, necesita cuidados muy específicos. Mantenlo en una posición cómoda (sin inclinarlo demasiado) y cántale suavemente para arrullarlo. Si lo haces bien, verás cómo se rompe el cascarón en la pantalla.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "IF Inclination.isStable AND (NoiseLevel > 20 AND NoiseLevel < 60) THEN Increment_Hatch_Counter()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Sistema de Alarma Antirrobo",
+    "originalIdeaDescription": "El dispositivo se coloca sobre un objeto valioso. Si detecta un cambio en la inclinación (alguien lo levanta) O un ruido fuerte cerca (alguien rompiendo un vidrio o hablando), la matriz parpadea con una 'X' y una señal de alerta.",
+    "transformedIdeaTitle": "Trampa para Espías: Misión Segura",
+    "transformedIdeaDescription": "Protege tu diario secreto o tus dulces. Configura este dispositivo encima de tus tesoros. Si un espía intenta levantarlo (inclinación) o hace ruido al acercarse sigilosamente, la pantalla parpadeará violentamente para alertarte del intruso.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Inclination.changed OR NoiseLevel > Threshold THEN Matrix.flash('ALARM')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Herramienta de Nivelación de Burbuja",
+    "originalIdeaDescription": "Una herramienta de nivel digital. La matriz muestra una 'burbuja' que se mueve opuesta a la inclinación. Si la superficie está perfectamente nivelada (X e Y cerca de 0), el dispositivo espera un aplauso (ruido) para 'bloquear' la medición y mostrar un check.",
+    "transformedIdeaTitle": "El Constructor Maestro",
+    "transformedIdeaDescription": "Ayuda a construir la torre perfecta. Usa tu dispositivo como un nivel de burbuja; inclínalo hasta que el punto de luz esté exactamente en el centro. Cuando lo logres, da una palmada seca para confirmar que el ladrillo está puesto correctamente.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Matrix.showBubble(Inclination); IF Inclination.isLevel AND NoiseLevel > 70 THEN Matrix.show('Check')"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Máscara de Emociones Reactiva",
+    "originalIdeaDescription": "El usuario sostiene el dispositivo frente a su cara. Inclinarlo hacia la izquierda muestra una cara triste, a la derecha una feliz. El nivel de ruido controla la apertura de la boca en la matriz (más ruido = boca más grande).",
+    "transformedIdeaTitle": "El Robot Actor",
+    "transformedIdeaDescription": "Conviértete en un cyborg. Coloca la pantalla frente a tu boca. Si inclinas la cabeza, cambias tu estado de ánimo (triste o feliz), y cuando hablas, ¡la boca digital se mueve al ritmo de tu voz! Ideal para una obra de teatro robótica.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Set_Face_Emotion(Inclination.X); Set_Mouth_Openness(NoiseLevel)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Caja Fuerte de Combinación Sensible",
+    "originalIdeaDescription": "Para abrir la cerradura, el usuario debe girar el dial (inclinando el dispositivo como un volante) hasta un número específico visualizado en la matriz. Sin embargo, el mecanismo es antiguo y oxidado: si hay algún ruido, la cerradura se atasca y reinicia.",
+    "transformedIdeaTitle": "Ladrón de Guante Blanco",
+    "transformedIdeaDescription": "Estás intentando abrir una caja fuerte antigua muy sensible. Gira la perilla inclinando suavemente tu dispositivo para encontrar la combinación. ¡Pero cuidado! Debes mantener un silencio absoluto; cualquier ruido hará que los pernos se cierren de nuevo.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Move_Dial(Inclination.Roll); IF Dial == SecretNum THEN Unlock(); IF NoiseLevel > 10 THEN Reset_Dial()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Entrenador de Yoga y Respiración",
+    "originalIdeaDescription": "Una aplicación para meditación. El usuario debe mantener una pose de equilibrio (inclinación estable) mientras respira suavemente. La matriz se llena lentamente como una barra de progreso. Si se pierde el equilibrio o la respiración es ruidosa, la barra baja.",
+    "transformedIdeaTitle": "El Maestro Zen",
+    "transformedIdeaDescription": "¿Puedes alcanzar la paz interior? Adopta una postura de equilibrio sosteniendo el dispositivo. La luz de la pantalla se llenará solo si te mantienes totalmente quieto y respiras tan suavemente que el sensor apenas te escuche. Un reto de control total.",
+    "minAge": 12,
+    "maxAge": 16,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Stable AND NoiseLevel < Low_Threshold THEN Matrix.fillLevel++ ELSE Matrix.fillLevel--"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Detector de Fantasmas",
+    "originalIdeaDescription": "Un radar lúdico. La inclinación mueve el escáner (una línea giratoria en la matriz). El nivel de ruido ambiental determina si aparece un 'fantasma' (un punto parpadeante) en el radar, simulando que los espíritus se manifiestan a través del sonido.",
+    "transformedIdeaTitle": "Cazafantasmas Junior",
+    "transformedIdeaDescription": "Explora tu casa embrujada en la oscuridad. Inclina el dispositivo para apuntar tu radar espectral. Si escuchas ruidos extraños, mira la pantalla: cuanto más fuerte sea el sonido ambiental, más cerca estará el fantasma en tu radar. ¡Encuéntralos a todos!",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Radar_Direction(Inclination); IF NoiseLevel > Ambient THEN Show_Ghost_Blip()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Pizarra Mágica Borrable",
+    "originalIdeaDescription": "Un juguete de dibujo estilo Etch-A-Sketch. La inclinación mueve un cursor iluminado que deja un rastro en la matriz. Para borrar la pantalla, en lugar de agitar, el usuario debe gritar o soplar fuerte.",
+    "transformedIdeaTitle": "Pizarra de Arte Sónico",
+    "transformedIdeaDescription": "Dibuja con la gravedad. Inclina tu tableta para mover el punto de luz y crear formas brillantes. ¿No te gusta tu dibujo? No busques la goma de borrar, simplemente da un grito fuerte o un soplido potente para limpiar la pantalla mágicamente.",
+    "minAge": 6,
+    "maxAge": 9,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Matrix.setPixel(Inclination.X, Inclination.Y); IF NoiseLevel > 85 THEN Matrix.clearAll()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Juego de Carrera y Salto",
+    "originalIdeaDescription": "Un juego de desplazamiento lateral. El personaje corre automáticamente. Inclinar el dispositivo hacia adelante aumenta la velocidad. Un sonido corto y fuerte (como '¡Hop!') hace que el personaje salte sobre obstáculos.",
+    "transformedIdeaTitle": "Olimpiadas de Bolsillo: Carrera de Vallas",
+    "transformedIdeaDescription": "Compite por la medalla de oro. Inclina tu dispositivo hacia adelante para que tu atleta corra más rápido. Cuando veas una valla en la pantalla, grita '¡YA!' o aplaude para saltar. Necesitarás reflejos rápidos y buena voz.",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Speed = Inclination.Y; IF NoiseLevel > Trigger THEN Jump()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Aterrizaje Lunar Apolo",
+    "originalIdeaDescription": "Simulador de aterrizaje. La matriz muestra la nave descendiendo. La inclinación controla la rotación de la nave. El usuario debe hacer un sonido constante (ruido de motor) para activar los propulsores y frenar la caída. Demasiado silencio = caída libre.",
+    "transformedIdeaTitle": "Misión Apolo: Alunizaje",
+    "transformedIdeaDescription": "Eres el comandante del módulo lunar. Debes aterrizar suavemente. Inclina el dispositivo para mantener la nave derecha. Lo más importante: haz un sonido de motor ('shhhhhhh') con tu boca para controlar la potencia de los cohetes y no estrellarte.",
+    "minAge": 11,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "Ship.Rotate(Inclination); Ship.Thrust = NoiseLevel; IF Speed > Safe THEN Crash()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Encantador de Serpientes Musical",
+    "originalIdeaDescription": "Una serpiente (línea de LEDs) crece hacia arriba desde la base de la matriz. La altura depende del volumen de la música o canto (Ruido). La inclinación controla hacia qué lado se balancea la cabeza de la serpiente.",
+    "transformedIdeaTitle": "La Cobra Hipnotizada",
+    "transformedIdeaDescription": "Conviértete en un encantador de serpientes. Toca una flauta (o tararea) para hacer que la cobra salga de su cesta; cuanto más fuerte suenes, más alto subirá. Inclina suavemente el dispositivo para que baile de un lado a otro sin morder.",
+    "minAge": 8,
+    "maxAge": 11,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Snake.Height = Map(NoiseLevel); Snake.Bend = Map(Inclination.X)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Aplausómetro Democrático",
+    "originalIdeaDescription": "Herramienta para votación. Inclinar a la izquierda selecciona la Opción A, a la derecha la Opción B. La matriz muestra la opción. El nivel de ruido detectado se suma a un contador para esa opción, midiendo qué opción recibe más aplausos.",
+    "transformedIdeaTitle": "El Juez de Talentos",
+    "transformedIdeaDescription": "¿Quién ganó el concurso de baile? Tú decides. Inclina el dispositivo para señalar al concursante A o al B. Luego, pide al público que aplauda. La pantalla se llenará de luz dependiendo de qué concursante reciba los aplausos más fuertes.",
+    "minAge": 10,
+    "maxAge": 13,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Selection = (Inclination.X < 0) ? A : B; VoteCount[Selection] += NoiseLevel"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Traductor de Frecuencias Alienígena",
+    "originalIdeaDescription": "Un juguete de ciencia ficción. La inclinación selecciona un 'canal' o patrón visual en la matriz. El ruido ambiental (voz humana) se visualiza como ondas que distorsionan ese patrón, simulando una traducción en proceso.",
+    "transformedIdeaTitle": "Comunicador Intergaláctico",
+    "transformedIdeaDescription": "Estás recibiendo una señal del espacio. Inclina el dispositivo buscando la frecuencia correcta (diferentes patrones en pantalla). Una vez sintonizado, habla al micrófono y observa cómo tu voz se transforma en extraños símbolos alienígenas en la matriz.",
+    "minAge": 7,
+    "maxAge": 10,
+    "difficultyLevel": 1,
+    "algorithmUsed": "Pattern_Type = Map(Inclination); Matrix.display(Pattern_Type + Noise_Distortion)"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Mezclador de DJ Gestual",
+    "originalIdeaDescription": "Interfaz de control musical abstracto. La inclinación controla qué luces se encienden (el ecualizador visual). El sensor de ruido actúa como un disparador: si el ritmo externo es fuerte, la matriz cambia de colores o invierte el patrón.",
+    "transformedIdeaTitle": "Super DJ de Luces",
+    "transformedIdeaDescription": "¡Monta tu propia discoteca! Usa la tableta para controlar el espectáculo de luces. Inclínala para mover los focos por la pista de baile. El sistema detectará el ritmo de la música que suena en tu habitación y hará parpadear las luces al compás.",
+    "minAge": 12,
+    "maxAge": 15,
+    "difficultyLevel": 2,
+    "algorithmUsed": "Light_Position = Inclination; IF NoiseLevel > Beat_Threshold THEN Invert_Colors()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Simulador de Pesca",
+    "originalIdeaDescription": "El usuario inclina el dispositivo hacia atrás para 'lanzar' la caña. Espera en silencio. La matriz muestra ondas. Si hace ruido, los peces se asustan. Cuando la matriz parpadea (pique), debe inclinar bruscamente hacia arriba para pescar.",
+    "transformedIdeaTitle": "Pesca en el Lago Silencioso",
+    "transformedIdeaDescription": "Lanza tu anzuelo inclinando el dispositivo hacia adelante. Ahora, paciencia y absoluto silencio, o los peces huirán. Cuando veas una luz parpadear en el agua (pantalla), ¡tira de la caña inclinando hacia atrás rápidamente para atrapar tu premio!",
+    "minAge": 9,
+    "maxAge": 12,
+    "difficultyLevel": 2,
+    "algorithmUsed": "IF Noise > Low THEN Scare_Fish(); IF Bite AND Inclination.PullUp THEN Catch_Fish()"
+  },
+  {
+    "componentUsed": [
+      "Inclination",
+      "LED Matrix",
+      "Noise Level"
+    ],
+    "originalIdeaTitle": "Contador de Pasos Furtivos",
+    "originalIdeaDescription": "Un podómetro gamificado para juegos de sigilo. Cuenta pasos detectando oscilaciones rítmicas en la inclinación (al caminar con el dispositivo en el bolsillo), pero pausa el conteo o penaliza si el sensor de ruido detecta que el usuario está haciendo ruido al caminar.",
+    "transformedIdeaTitle": "Entrenamiento Ninja",
+    "transformedIdeaDescription": "Los ninjas se mueven rápido pero en silencio. Ponte el dispositivo en el bolsillo y camina. El sistema contará tus pasos basándose en el movimiento, pero si tus pasos suenan demasiado fuerte o tu ropa cruje, el contador se pondrá en cero. ¿Cuántos pasos silenciosos puedes dar?",
+    "minAge": 10,
+    "maxAge": 14,
+    "difficultyLevel": 3,
+    "algorithmUsed": "IF Inclination.Oscillation THEN Steps++; IF NoiseLevel > Silence_Limit THEN Steps = 0"
+  }
+]
