@@ -186,7 +186,7 @@ def analyze_rubric_data(input_filepath, output_filepath, disagreement_threshold=
         print(f"Analysis complete! Cleaned results successfully written to '{output_filepath}'.")
 
 if __name__ == "__main__":
-    input_file = "data/raw_metrics/Activities_evaluation_results.xslx"
+    input_file = "data/03_processed_metrics/Activities_evaluation_results.xslx"
     output_file = "evaluation_metrics_results.txt"
     
     analyze_rubric_data(input_file, output_file, disagreement_threshold=0.90)

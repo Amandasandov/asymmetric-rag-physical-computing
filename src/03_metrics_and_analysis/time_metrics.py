@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 1. Load the data
-file_path = "data/raw_metrics/Generation_time_activities.xslx"
+file_path = "data/03_processed_metrics/Generation_time_activities.xslx"
 df = pd.read_excel(file_path)
 
 df['Time'] = pd.to_numeric(df['Time'], errors='coerce')

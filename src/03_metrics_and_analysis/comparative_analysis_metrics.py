@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1. Cargar datos
-df_comp = pd.read_excel('data/raw_metrics/Comaprative_questionnaire_results.xslx')
+df_comp = pd.read_excel('data/03_processed_metrics/Comaprative_questionnaire_results.xslx')
 
 preguntas_comp = df_comp.iloc[1:8, 0].tolist()
 user_cols = df_comp.columns[1:]
