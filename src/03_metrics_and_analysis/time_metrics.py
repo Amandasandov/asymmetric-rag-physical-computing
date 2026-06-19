@@ -1,56 +1,65 @@
 import pandas as pd
+import pingouin as pg
+import os
+import sys
 
-# 1. Load the data
-file_path = "data/03_processed_metrics/Generation_time_activities.xslx"
-df = pd.read_excel(file_path)
+directorio_actual = os.path.dirname(os.path.abspath(__file__))
+ruta_archivo = os.path.join("data", "03_processed_metrics", "Generation_time_activities.xlsx")
+ruta_salida = os.path.join(directorio_actual, "Time_analysis_results.txt")
 
-df['Time'] = pd.to_numeric(df['Time'], errors='coerce')
-df = df.dropna(subset=['Time'])
+df_tiempo = pd.read_excel(ruta_archivo)
+df_tiempo['Modality'] = df_tiempo['Modality'].replace({'Standard': 'Estandar'})
 
-# 2. Map the Modality names to the expected Methodology names
-name_mapping = {
-    'Standard': 'Standard AI',
-    'RAG': 'RAG AI',
-    'Human': 'Human'
-}
-df['Methodology'] = df['Modality'].map(name_mapping).fillna(df['Modality'])
-
-# 3. Calculate the metrics (N, Mean, SD, Median, Min, Max)
-summary_stats = df.groupby('Methodology')['Time'].agg(
-    N='count',
-    Mean='mean',
-    SD='std',
-    Median='median',
-    Min='min',
-    Max='max'
-).reset_index()
-
-# 4. Sort the rows to match the specific order: Standard AI, RAG AI, Human
-order = ['Standard AI', 'RAG AI', 'Human']
-summary_stats['Methodology'] = pd.Categorical(summary_stats['Methodology'], categories=order, ordered=True)
-summary_stats = summary_stats.sort_values('Methodology')
-
-# 5. Format the text output
-text_output = f"{'Methodology':<12} | {'N':<2} | {'Mean':<5} | {'SD':<4} | {'Median':<6} | {'Min':<3} | {'Max':<3}\n"
-text_output += "-" * 57 + "\n"
-
-for index, row in summary_stats.iterrows():
-    method = f"{row['Methodology']:<12}"
-    n = f"{int(row['N']):<2}"
-    mean = f"{row['Mean']:.2f}"
-    sd = f"{row['SD']:.2f}"
-    median = f"{row['Median']:.2f}"
-    min_val = f"{int(row['Min']):<3}"
-    max_val = f"{int(row['Max']):<3}"
+original_stdout = sys.stdout
+with open(ruta_salida, 'w', encoding='utf-8') as f:
+    sys.stdout = f
     
-    text_output += f"{method} | {n} | {mean} | {sd} | {median} | {min_val} | {max_val}\n"
+    print("="*80)
+    print("ANÁLISIS DE TIEMPOS DE GENERACIÓN")
+    print("="*80)
+    print("[NOTA METODOLÓGICA]: Los tiempos de 'Human' están censurados a la derecha")
+    print("a los 26 min (límite del round). Esto subestima la verdadera ventaja de la IA.\n")
+    
+    print("--- Estadísticas Descriptivas ---")
+    print(df_tiempo.groupby('Modality')['Time'].describe().round(2), "\n")
 
-text_output += "-" * 57 + "\n"
-text_output += "N: Sample Size. SD: Standard Deviation. Min/Max: Minimum and Maximum time recorded in minutes.\n"
+    kw_res = pg.kruskal(data=df_tiempo, dv='Time', between='Modality')
+    print("--- 4.3 Kruskal-Wallis Global ---")
+    print(kw_res, "\n")
 
-# 6. Save to txt file
-output_path = "generation_metrics.txt"
-with open(output_path, "w") as f:
-    f.write(text_output)
+    p_kw_col = [c for c in kw_res.columns if 'p' in c.lower() and 'unc' in c.lower()][0]
 
-print(f"Results successfully saved to {output_path}")
+    if kw_res[p_kw_col].values[0] < 0.05:
+        print("--- Análisis Post-Hoc (Mann-Whitney U) ---")
+        comparaciones = [('Human', 'Estandar'), ('Human', 'RAG'), ('Estandar', 'RAG')]
+        for g1, g2 in comparaciones:
+            t1 = df_tiempo[df_tiempo['Modality'] == g1]['Time'].dropna()
+            t2 = df_tiempo[df_tiempo['Modality'] == g2]['Time'].dropna()
+            
+            mwu = pg.mwu(t1, t2)
+            
+            # Extracción directa del tamaño de efecto no paramétrico (Rank-Biserial Correlation) devuelto por mwu
+            rbc = mwu['RBC'].values[0]
+            
+            print(f"\n{g1} vs {g2}:")
+            print(mwu.to_string(index=False))
+            print(f"Tamaño de Efecto (Rank-Biserial Correlation): {rbc:.3f}")
+
+    print("\n" + "-"*80)
+    print("--- 4.2 TEST DE EQUIVALENCIA (TOST) - RAG vs Estandar ---")
+    print("Margen de relevancia (SESOI): ±2.0 minutos\n")
+    
+    t1_rag = df_tiempo[df_tiempo['Modality'] == 'RAG']['Time'].dropna()
+    t2_std = df_tiempo[df_tiempo['Modality'] == 'Estandar']['Time'].dropna()
+    
+    tost_time = pg.tost(x=t1_rag, y=t2_std, bound=2.0)
+    print(tost_time.to_string(index=False))
+    
+    p_cols = [c for c in tost_time.columns if 'pval' in c.lower() or 'p-val' in c.lower() or 'p_val' in c.lower()]
+    if p_cols:
+        p_tost = tost_time[p_cols[0]].values[0]
+        estado = "Equivalencia Confirmada" if p_tost < 0.05 else "Inconcluso"
+        print(f"\n-> Conclusión: p-val = {p_tost:.4f} | {estado}")
+
+sys.stdout = original_stdout
+print(f"¡Listo! Resultados guardados en: {ruta_salida}")

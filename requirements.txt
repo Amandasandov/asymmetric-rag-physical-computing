@@ -6,3 +6,4 @@ scikit-posthocs
 pingouin
 matplotlib
 seaborn
+statsmodels

@@ -1,11 +1,10 @@
 import pandas as pd
 import numpy as np
 from scipy.stats import friedmanchisquare, wilcoxon, iqr
-import matplotlib.pyplot as plt
-import seaborn as sns
+from statsmodels.stats.multitest import multipletests 
 
 # 1. Cargar datos
-df_comp = pd.read_excel('data/03_processed_metrics/Comaprative_questionnaire_results.xslx')
+df_comp = pd.read_excel('data/03_processed_metrics/Comparative_questionnaire_results.xlsx')
 
 preguntas_comp = df_comp.iloc[1:8, 0].tolist()
 user_cols = df_comp.columns[1:]
@@ -57,15 +56,25 @@ for idx, pregunta in enumerate(preguntas_comp):
         stat_f, p_f = friedmanchisquare(hh_clean, norm_clean, rag_clean)
         kendall_w = stat_f / (N * (k - 1))
         
-        # Pruebas Post-Hoc de Wilcoxon
+        # Pruebas Post-Hoc de Wilcoxon (P-valores crudos)
         stat_hh_norm, p_hh_norm = wilcoxon(hh_clean, norm_clean)
         stat_norm_rag, p_norm_rag = wilcoxon(norm_clean, rag_clean)
         stat_hh_rag, p_hh_rag = wilcoxon(hh_clean, rag_clean)
+        
+        # --- CORRECCIÓN DE BONFERRONI ---
+        p_values = [p_hh_norm, p_norm_rag, p_hh_rag]
+        reject, p_values_adj, _, _ = multipletests(p_values, alpha=0.05, method='bonferroni')
+        
+        p_hh_norm_adj = p_values_adj[0]
+        p_norm_rag_adj = p_values_adj[1]
+        p_hh_rag_adj = p_values_adj[2]
+        
     except ValueError:
         stat_f, p_f, kendall_w = np.nan, np.nan, np.nan
         stat_hh_norm, p_hh_norm = np.nan, np.nan
         stat_norm_rag, p_norm_rag = np.nan, np.nan
         stat_hh_rag, p_hh_rag = np.nan, np.nan
+        p_hh_norm_adj, p_norm_rag_adj, p_hh_rag_adj = np.nan, np.nan, np.nan
         
     resultados_estadisticos_comp.append({
         'Question (ID)': f'P{idx+1}',
@@ -79,9 +88,9 @@ for idx, pregunta in enumerate(preguntas_comp):
         'Friedman X2': stat_f,
         'Friedman p-val': p_f,
         'Kendall W': kendall_w,
-        'Wilcoxon H-H vs Std (W, p)': f"W={stat_hh_norm}, p={p_hh_norm:.3f}" if not np.isnan(p_hh_norm) else "NaN",
-        'Wilcoxon Std vs RAG (W, p)': f"W={stat_norm_rag}, p={p_norm_rag:.3f}" if not np.isnan(p_norm_rag) else "NaN",
-        'Wilcoxon H-H vs RAG (W, p)': f"W={stat_hh_rag}, p={p_hh_rag:.3f}" if not np.isnan(p_hh_rag) else "NaN"
+        'Wilcoxon H-H vs Std (W, p_adj)': f"W={stat_hh_norm}, p_adj={p_hh_norm_adj:.3f}" if not np.isnan(p_hh_norm_adj) else "NaN",
+        'Wilcoxon Std vs RAG (W, p_adj)': f"W={stat_norm_rag}, p_adj={p_norm_rag_adj:.3f}" if not np.isnan(p_norm_rag_adj) else "NaN",
+        'Wilcoxon H-H vs RAG (W, p_adj)': f"W={stat_hh_rag}, p_adj={p_hh_rag_adj:.3f}" if not np.isnan(p_hh_rag_adj) else "NaN"
     })
 
 df_res = pd.DataFrame(resultados_estadisticos_comp)
