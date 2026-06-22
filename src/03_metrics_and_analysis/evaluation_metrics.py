@@ -34,6 +34,9 @@ dimensiones_dict = {
 for dim_name, cols in dimensiones_dict.items():
     df_rubrica[f'Score_{dim_name}'] = df_rubrica[cols].mean(axis=1)
 
+# Variable central para agrupar (usada en Fiabilidad y TOST)
+col_actividad = 'Actividad' 
+
 original_stdout = sys.stdout
 with open(ruta_salida, 'w', encoding='utf-8') as f:
     sys.stdout = f
@@ -49,36 +52,43 @@ with open(ruta_salida, 'w', encoding='utf-8') as f:
         alpha, ci = pg.cronbach_alpha(data=df_sub)
         print(f"   Modalidad '{mod}': Alfa = {alpha:.3f}")
 
-    print("\n-> Correlación Inter-ítem (Spearman) por Dimensión (k=2):")
-    for mod in df_rubrica['Modalidad'].unique():
-        print(f"\n   [ Modalidad: {mod} ]")
-        df_sub = df_rubrica[df_rubrica['Modalidad'] == mod]
+    print("\n-> Fiabilidad Inter-ítem (Spearman-Brown) por Dimensión (k=2):")
+    print("(Calculado sobre el promedio de calificaciones por Actividad en el dataset completo)")
+    
+    if col_actividad in df_rubrica.columns:
+        df_agg_fiabilidad = df_rubrica.groupby(col_actividad)[columnas_rubrica].mean().reset_index()
         
         for dim_name, (item1, item2) in dimensiones_dict.items():
-            if item1 in df_sub.columns and item2 in df_sub.columns:
-                corr = pg.corr(df_sub[item1], df_sub[item2], method='spearman')
+            if item1 in df_agg_fiabilidad.columns and item2 in df_agg_fiabilidad.columns:
+                # Correlación cruda sobre datos agregados
+                corr = pg.corr(df_agg_fiabilidad[item1], df_agg_fiabilidad[item2], method='spearman')
                 r_val = corr['r'].values[0]
                 
-                # BÚSQUEDA ROBUSTA DEL P-VALOR
-                # Buscamos cualquier columna que contenga la letra 'p' y que NO sea 'r' o 'n'
-                p_col_candidates = [c for c in corr.columns if 'p' in c.lower() and c.lower() not in ['r', 'n', 'ci95%']]
-                
-                if p_col_candidates:
-                    p_col = p_col_candidates[0]
-                    pval = corr[p_col].values[0]
-                    print(f"      {dim_name}: r = {r_val:.3f} (p={pval:.3f})")
+                # Corrección de Spearman-Brown para 2 ítems
+                if r_val != -1: 
+                    spearman_brown = (2 * r_val) / (1 + r_val)
                 else:
-                    # Si falla, imprimimos las columnas disponibles para depurar
-                    print(f"      {dim_name}: r = {r_val:.3f} (No se pudo extraer p-valor, cols: {list(corr.columns)})")
+                    spearman_brown = float('nan')
+                    
+                print(f"      {dim_name}: r_crudo = {r_val:.3f} | Spearman-Brown = {spearman_brown:.3f}")
+    else:
+        print(f"ADVERTENCIA: No se encontró la columna '{col_actividad}' para agrupar.")
 
     print("\n--- 4.2 TEST DE EQUIVALENCIA (TOST) - RAG vs Estandar ---")
     print("Margen de relevancia (SESOI): ±0.5 puntos")
     
     items_a_evaluar = ['Global_Score'] + [f'Score_{d}' for d in dimensiones_dict.keys()] + list(columnas_rubrica)
     
+    if col_actividad in df_rubrica.columns:
+        df_tost = df_rubrica.groupby(['Modalidad', col_actividad])[items_a_evaluar].mean().reset_index()
+        print(f"(Nota: Datos colapsados por '{col_actividad}' para evitar pseudo-replicación. N={len(df_tost)})")
+    else:
+        print(f"ADVERTENCIA: No se encontró la columna '{col_actividad}'. TOST se correrá con pseudo-replicación.")
+        df_tost = df_rubrica
+
     for item in items_a_evaluar:
-        rag_scores = df_rubrica[df_rubrica['Modalidad'] == 'RAG'][item].dropna()
-        std_scores = df_rubrica[df_rubrica['Modalidad'] == 'Estandar'][item].dropna()
+        rag_scores = df_tost[df_tost['Modalidad'] == 'RAG'][item].dropna()
+        std_scores = df_tost[df_tost['Modalidad'] == 'Estandar'][item].dropna()
         
         tost_res = pg.tost(x=rag_scores, y=std_scores, bound=0.5)
         p_cols = [c for c in tost_res.columns if 'pval' in c.lower() or 'p-val' in c.lower() or 'p_val' in c.lower()]
